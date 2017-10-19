@@ -1,6 +1,8 @@
 # aeternity aepp components
 aeternity aepp components aims to provide aepp developers with reusable Vue components. All elements are from our [styleguide](https://github.com/aeternity/aepp-prototypes). You need some kind of build process (webpack, browserify, ...) there is no bundled js file yet.
 
+**This project is in early development, please don't expect it to work yet :o)**
+
 ## installation and usage
 Install aeternity aepp components via npm
 ```
@@ -30,8 +32,8 @@ Vue.use(AeppComponents.AeButton)
 If you wrote a neat looking, reusable component matching our styleguide please fork this project and send us a merge request. Thanks!
 
 ## components
-* [aeButton](#aeButton)
-* [aeIdentity](#aeIdentity)
+* [aeButton](#aebutton)
+* [aeIdentity](#aeidentity)
 * ...
 
 ### aeButton
@@ -39,4 +41,4 @@ A Button...
 Insert description about props needed and so on, example code and also add an image probably
 
 ### aeIdentity
-A Button...
+An identity card...
