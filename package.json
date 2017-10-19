@@ -1,0 +1,25 @@
+{
+  "name": "aeternity-aepp-components",
+  "version": "0.0.1",
+  "description": "Reusable Vue components for aeternity aepp projects",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build/build.js"
+  },
+  "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
+  "license": "MIT",
+  "dependencies": {
+    "ethereum-blockies-png": "^0.1.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "vue-loader": "^13.3.0",
+    "vue-template-compiler": "^2.5.2",
+    "webpack": "^3.8.1"
+  }
+}
