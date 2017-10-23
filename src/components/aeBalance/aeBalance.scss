@@ -1,0 +1,36 @@
+div.balance {
+  text-align: right;
+  font-weight: 300;
+  &.grey {
+    color: $grey;
+    background-color: #fff;
+  }
+  &.dark {
+    color: #000;
+    background-color: #fff;
+  }
+  &.transparent {
+    color: #fff;
+    background: none;
+  }
+  &.white {
+    color: #fff;
+    background-color: #000;
+  }
+  &.med {
+    width: 180px;
+    font-size: 40px;
+    .unit {
+      display: inline;
+      font-size: 14px;
+    }
+  }
+  &.large {
+    width: 250px;
+    font-size: 60px;
+    .unit {
+      display: inline;
+      font-size: 20px;
+    }
+  }
+}
