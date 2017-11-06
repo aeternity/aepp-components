@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import AeCloseButton from './AeCloseButton.vue';
+  import AeCloseButton from '../aeCloseButton/aeCloseButton.vue';
 
   export default {
     props: {
@@ -48,7 +48,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "./variables";
+  @import "../variables";
 
   .ae-panel {
     border-radius: 10px;

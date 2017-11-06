@@ -10,7 +10,7 @@ npm install aeternity-aepp-components
 Import Vue and aeternity aepp components:
 ``` javascript
 import Vue from 'vue'
-import AeppComponents from 'aeternity-vue'
+import AeppComponents from 'aeternity-aepp-components'
 
 Vue.use(AeppComponents)
 

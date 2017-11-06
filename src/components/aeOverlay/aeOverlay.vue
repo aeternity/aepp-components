@@ -21,7 +21,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import './variables';
+  @import "../variables";
 
   .ae-overlay {
     position: fixed;

@@ -10,7 +10,9 @@
   "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
   "license": "MIT",
   "dependencies": {
-    "ethereum-blockies-png": "^0.1.2"
+    "ethereum-blockies-png": "^0.1.2",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "variables";
+  @import "../variables";
 
   .ae-close-button {
     border: 0;

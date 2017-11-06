@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "variables";
+  @import "../variables";
 
   .ae-filter-list {
     margin: 30px 0;

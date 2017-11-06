@@ -23,7 +23,7 @@
 </style>
 
 <style lang="scss">
-  @import "variables";
+  @import "../variables";
 
   html {
     height: 100%;

@@ -1,3 +1,5 @@
+@import '../variables';
+
 button.button {
   display: block;
   border: none;
@@ -23,7 +25,7 @@ button.button {
     background-color: $maegenta;
   }
   &.purple {
-    background-color: $eggplant;
+    background-color: $aubergine;
   }
   &.lightgrey {
     background-color: $silver;

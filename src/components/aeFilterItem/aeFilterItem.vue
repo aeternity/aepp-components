@@ -14,7 +14,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "./variables";
+  @import "../variables";
 
   .ae-filter-item {
     display: inline-block;

@@ -2,7 +2,7 @@
   <div class="ae-header">
     <header class="desktop">
       <router-link to="/">
-        <img :src="require('../assets/logo-small.png')" alt="Go to main page" />
+        <img :src="require('../../assets/logo-small.png')" alt="Go to main page" />
         {{name}}
       </router-link>
       <div>
@@ -32,7 +32,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "./variables";
+  @import "../variables";
 
   .ae-header {
     header {

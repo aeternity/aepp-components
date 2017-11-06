@@ -32,7 +32,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "./variables";
+  @import "../variables";
 
   .ae-header-button {
     height: 40px;

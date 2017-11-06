@@ -1,11 +1,10 @@
-<template>
   <span class="ae-category">
     <slot />
   </span>
 </template>
 
 <style lang="scss" scoped>
-  @import "./variables";
+  @import "../variables";
 
   .ae-category {
     display: inline-block;

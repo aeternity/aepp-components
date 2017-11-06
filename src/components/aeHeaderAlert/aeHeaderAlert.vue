@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import AeCloseButton from './AeCloseButton.vue';
+  import AeCloseButton from '../aeCloseButton/aeCloseButton.vue';
 
   export default {
     components: { AeCloseButton },
@@ -19,7 +19,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "./variables";
+  @import "../variables";
 
   .ae-header-alert {
     background-color: $maegenta;

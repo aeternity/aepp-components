@@ -7,8 +7,8 @@
 </template>
 
 <script>
-  import AeOverlay from './AeOverlay.vue';
-  import AePanel from './AePanel.vue';
+  import AeOverlay from '../aeOverlay/aeOverlay.vue';
+  import AePanel from '../aePanel/aePanel.vue';
 
   export default {
     props: {
@@ -24,7 +24,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import './variables';
+  @import "../variables";
 
   .ae-overlay {
     display: flex;
