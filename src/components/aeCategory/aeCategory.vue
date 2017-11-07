@@ -1,3 +1,4 @@
+<template>
   <span class="ae-category">
     <slot />
   </span>
