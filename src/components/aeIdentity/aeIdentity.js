@@ -1,46 +1,55 @@
 import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
-import aeIdentityInfo from './../aeIdentityInfo/aeIdentityInfo.vue'
+import helperMixin from './../../mixins/helper'
 export default {
 	name: 'ae-identity',
-	components : {
-    'ae-identity-avatar' : aeIdentityAvatar,
-    'ae-identity-info' : aeIdentityInfo
+	components: {
+		'ae-identity-avatar': aeIdentityAvatar
 	},
-	data : function() {
-		return {
-			showPaymentUi : false
-		};
+	data: function() {
+		return {}
 	},
-  props : [
-    'identity'
-  ],
-	//computed : {
-	//},
-	watch : {
-		paymentRequest : function(req) {
-			console.log(req);
-			if(req) {
-				this.showPaymentUi = true;
-			} else {
-				this.showPaymentUi = false;
-			}
+	props: {
+		balance: {
+			type: [String, Number],
+			default: 0,
+			required: true
+		},
+		address: {
+			type: [String],
+			default: '0x0',
+			required: true
+		},
+		active: {
+			type: Boolean,
+			required: false,
+			default: true
+		},
+		collapsed: {
+			type: Boolean,
+			default: false
 		}
 	},
-	methods: {
-		toggle : function() {
-			if(this.$store.state.appClass !== 'home') {
-				this.$store.commit('identityCollapsed', !this.$store.state.identityCollapsed);
+	mixins: [
+		helperMixin
+	],
+	computed: {
+		amount() {
+			return helperMixin.methods.readableEther(this.balance)
+		},
+		shortAddress() {
+			return this.address.substr(0, 6)
+		},
+		classObject: function() {
+			let classes = {
+				'ae-identity': true,
+				'collapsed': this.collapsed,
+				'_active_yes': this.active,
+				'_active_no': !this.active
 			}
+			return classes
 		},
-		pay : function() {
-			store.dispatch('approvePayment');
-			setTimeout(()=>{
-				this.showPaymentUi = false;
-			}, 200);
-		},
-		cancel : function() {
-			store.dispatch('cancelPayment');
-			this.showPaymentUi = false;
+		hasSlot() {
+			return this.$slots.default
 		}
 	}
-};
+}

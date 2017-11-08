@@ -12,7 +12,6 @@ import aeHeaderAlert from './components/aeHeaderAlert';
 import aeHeaderButton from './components/aeHeaderButton';
 import AeIdentity from './components/aeIdentity';
 import AeIdentityAvatar from './components/aeIdentityAvatar';
-import AeIdentityInfo from './components/aeIdentityInfo';
 import aeMain from './components/aeMain';
 import aeModal from './components/aeModal';
 import aeOverlay from './components/aeOverlay';
@@ -33,7 +32,6 @@ const options = {
 	aeHeaderButton,
 	AeIdentity,
 	AeIdentityAvatar,
-	AeIdentityInfo,
 	aeMain,
 	aeModal,
 	aeOverlay,
