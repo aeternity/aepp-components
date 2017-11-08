@@ -17,6 +17,8 @@ import aeModal from './components/aeModal';
 import aeOverlay from './components/aeOverlay';
 import aePanel from './components/aePanel';
 
+import aeHelperMixin from './mixins/helper';
+
 const options = {
 	AeAmount,
 	AeBalance,
@@ -49,3 +51,5 @@ options.install = (Vue) => {
 };
 
 export default options;
+
+export {aeHelperMixin};

@@ -27,13 +27,22 @@ Vue.use(AeppComponents.AeButton)
   </div>
 </template>
 ```
+use the helperMixin
+```javascript
+import { aeHelperMixin } from 'aeternity-aepp-components'
+
+{
+  ...
+  mixins: [aeHelperMixin],
+}
+```
 
 ## contributing
 If you wrote a neat looking, reusable component matching our styleguide please fork this project and send us a merge request. Thanks!
 
 ## example
 
-![example](https://i.imgur.com/342NMp1.png "Example")
+![example](https://i.imgur.com/VNAKrqX.png "Example")
 
 
 main.js
@@ -64,86 +73,113 @@ new Vue({
 app.vue
 ```javascript
 <template>
-<div id="app">
-  <ae-main>
-    <div class="example">
-      <ae-amount :value="1.337" :isFullWidth="true"></ae-amount>
-    </div>
+  <div id="app">
+    <ae-main>
+      <div class="example">
+        <ae-amount :value="1.337" :isFullWidth="true"></ae-amount>
+      </div>
 
-    <div class="example">
-      <ae-balance :value="1.337" :size="'large'" :color="'dark'"></ae-balance>
-    </div>
+      <div class="example">
+        <ae-balance :value="1.337" :size="'large'" :color="'dark'"></ae-balance>
+      </div>
 
-    <div class="example">
-      <ae-button :label="'button'" :size="'large'" :color="'pink'">Button</ae-button>
-    </div>
+      <div class="example">
+        <ae-button :label="'button'" :size="'large'" :color="'pink'">Button</ae-button>
+      </div>
 
-    <div class="example">
-      <ae-button2 @click="buttonPress('button2')" :secondary="false">Button2</ae-button2>
-    </div>
+      <div class="example">
+        <ae-button2 @click="buttonPress('button2')" :secondary="false">Button2</ae-button2>
+      </div>
 
-    <div class="example">
-      <ae-category>Category</ae-category>
-    </div>
+      <div class="example">
+        <ae-category>Category</ae-category>
+      </div>
 
-    <div class="example">
-      <ae-close-button @click="buttonPress('closeButton')"></ae-close-button>
-    </div>
+      <div class="example">
+        <ae-close-button @click="buttonPress('closeButton')"></ae-close-button>
+      </div>
 
-    <div class="example">
-      <ae-filter-list :active="false">
-        <ae-filter-item :active="false" :to="'/'">Filter Item in List</ae-filter-item>
-        <ae-filter-separator></ae-filter-separator>
-        <ae-filter-item :active="true" :to="'/'">Filter Item  in List</ae-filter-item>
-      </ae-filter-list>
-    </div>
+      <div class="example">
+        <ae-filter-list :active="false">
+          <ae-filter-item :active="false" :to="'/'">Filter Item in List</ae-filter-item>
+          <ae-filter-separator></ae-filter-separator>
+          <ae-filter-item :active="true" :to="'/'">Filter Item  in List</ae-filter-item>
+        </ae-filter-list>
+      </div>
 
-    <div class="example">
-      <ae-header :name="'Header'">
-        <ae-header-button @click="buttonPress('header button')" :icon="false" :secondary="false">Header Button</ae-header-button>
-        <ae-header-button @click="buttonPress('header button')" :icon="true" :secondary="true">X</ae-header-button>
-      </ae-header>
-    </div>
+      <div class="example">
+        <ae-header :name="'Header'">
+          <ae-header-button @click="buttonPress('header button')" :icon="false" :secondary="false">Header Button</ae-header-button>
+          <ae-header-button @click="buttonPress('header button')" :icon="true" :secondary="true">Æ</ae-header-button>
+        </ae-header>
+      </div>
 
-    <div class="example">
-      <ae-header-alert @close="buttonPress('alert close')">Alert</ae-header-alert>
-    </div>
+      <div class="example">
+        <ae-header-alert @close="buttonPress('alert close')">Alert</ae-header-alert>
+      </div>
 
-    <div class="example" v-if="showModal">
-      <ae-modal @close="showModal = false">Modal</ae-modal>
-    </div>
+      <div class="example" v-if="showModal">
+        <ae-modal @close="showModal = false">Modal</ae-modal>
+      </div>
 
-    <div class="example">
-      <ae-button2 @click="showModal = true" :secondary="false">
-        Modal
-      </ae-button2>
-    </div>
-  </ae-main>
-</div>
+      <div class="example">
+        <ae-button2 @click="showModal = true" :secondary="false">
+          Modal
+        </ae-button2>
+      </div>
+
+      <div class="example">
+        <ae-identity :active="true" :address="identity.address" :balance="identity.balance" :collapsed="false"></ae-identity>
+      </div>
+
+      <div class="example">
+        <ae-identity :active="false" :address="identity.address" :balance="identity.balance" :collapsed="true"></ae-identity>
+      </div>
+
+      <div class="example">
+        <ae-identity :active="true" :address="identity.address" :balance="identity.balance" :collapsed="false">
+          <ae-button2 @click="buttonPress('button2')" :secondary="false">Button2</ae-button2>
+          <ae-button2 @click="buttonPress('button2')" :secondary="false">Button2</ae-button2>
+        </ae-identity>
+      </div>
+
+      <div class="example">
+        Mixin Function readableEther: {{readableEther(identity.balance)}}
+      </div>
+    </ae-main>
+  </div>
 </template>
 
 <script>
+import { aeHelperMixin } from 'aeternity-aepp-components'
+
 export default {
-name: 'app',
-data () {
-  return {
-    showModal: false
+  name: 'app',
+  data () {
+    return {
+      showModal: false,
+      identity: {
+        balance: '1337210000000000000', // wei as string, int or BN
+        address: '0x1234567890987654321'
+      }
+    }
+  },
+  mixins: [
+    aeHelperMixin
+  ],
+  methods: {
+    buttonPress: function(what) {
+      console.log("button pressed", what);
+    }
   }
-},
-methods: {
-  buttonPress: function(what) {
-    console.log("button pressed", what);
-  }
-}
 }
 </script>
 
 <style>
-div.example {
-  margin-bottom: 40px;
-}
+  div.example {
+    margin-bottom: 40px;
+  }
 </style>
-
 ```
 
 ## components
