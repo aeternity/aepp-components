@@ -1,5 +1,5 @@
 {
-  "name": "aeternity-aepp-components",
+  "name": "@aeternity/aepp-components",
   "version": "0.0.1",
   "description": "Reusable Vue components for aeternity aepp projects",
   "main": "src/index.js",
@@ -12,18 +12,16 @@
   "dependencies": {
     "ethereum-blockies-png": "^0.1.2",
     "ethjs-unit": "^0.1.6",
-    "node-sass": "^4.5.3",
-    "numeral": "^2.0.6",
-    "sass-loader": "^6.0.6"
+    "numeral": "^2.0.6"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "css-loader": "^0.28.7",
-    "file-loader": "^1.1.5",
-    "vue-loader": "^13.3.0",
-    "vue-template-compiler": "^2.5.2",
-    "webpack": "^3.8.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeternity/aepp-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aeternity/aepp-components/issues"
+  },
+  "homepage": "https://github.com/aeternity/aepp-components#readme"
 }

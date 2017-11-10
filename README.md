@@ -11,7 +11,7 @@ Import Vue and aeternity aepp components:
 ``` javascript
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import AeppComponents from 'aeternity-aepp-components'
+import AeppComponents from '@aeternity/aepp-components'
 
 Vue.use(VueRouter)
 Vue.use(AeppComponents)
@@ -29,7 +29,7 @@ Vue.use(AeppComponents.AeButton)
 ```
 use the helperMixin
 ```javascript
-import { aeHelperMixin } from 'aeternity-aepp-components'
+import { aeHelperMixin } from '@aeternity/aepp-components'
 
 {
   ...
@@ -50,7 +50,7 @@ main.js
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
-import AeppComponents from 'aeternity-aepp-components'
+import AeppComponents from '@aeternity/aepp-components'
 
 Vue.use(VueRouter)
 Vue.use(AeppComponents)
@@ -151,7 +151,7 @@ app.vue
 </template>
 
 <script>
-import { aeHelperMixin } from 'aeternity-aepp-components'
+import { aeHelperMixin } from '@aeternity/aepp-components'
 
 export default {
   name: 'app',
