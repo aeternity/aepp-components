@@ -4,7 +4,7 @@ aeternity aepp components aims to provide aepp developers with reusable Vue comp
 ## installation and usage
 Install aeternity aepp components via npm
 ```
-npm install aeternity-aepp-components
+npm install @aeternity/aepp-components
 ```
 
 Import Vue and aeternity aepp components:
