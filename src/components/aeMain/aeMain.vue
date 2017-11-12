@@ -23,6 +23,7 @@
 </style>
 
 <style lang="scss">
+  @import "~normalize.css";
   @import "../variables";
 
   html {
