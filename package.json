@@ -4,7 +4,7 @@
   "description": "Reusable Vue components for aeternity aepp projects",
   "main": "dist/aepp-components.esm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
