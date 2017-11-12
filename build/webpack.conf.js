@@ -1,36 +1,31 @@
 var webpackConfig = {
   entry: {
-    app: './src/index.js'
+    app: './src/index.js',
   },
   output: {
     path: __dirname + '/../dist',
-    filename: "bundle.js"
+    filename: 'bundle.js',
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {
-          loaders: {}
-          // other vue-loader options go here
-        }
-      },
-      {
+      }, {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['env']
-        }
-      },
-      {
+          presets: ['env'],
+        },
+      }, {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]?[hash]'
-        }
-      }
-    ]
+          name: '[name].[ext]?[hash]',
+        },
+      },
+    ],
   },
 };
 
