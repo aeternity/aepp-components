@@ -20,36 +20,32 @@ import aePanel from './components/aePanel';
 import aeHelperMixin from './mixins/helper';
 
 const options = {
-	AeAmount,
-	AeBalance,
-	AeButton,
-	AeButton2,
-	AeCategory,
-	AeCloseButton,
-	aeFilterItem,
-	aeFilterList,
-	aeFilterSeparator,
-	aeHeader,
-	aeHeaderAlert,
-	aeHeaderButton,
-	AeIdentity,
-	AeIdentityAvatar,
-	aeMain,
-	aeModal,
-	aeOverlay,
-	aePanel
+  AeAmount,
+  AeBalance,
+  AeButton,
+  AeButton2,
+  AeCategory,
+  AeCloseButton,
+  aeFilterItem,
+  aeFilterList,
+  aeFilterSeparator,
+  aeHeader,
+  aeHeaderAlert,
+  aeHeaderButton,
+  AeIdentity,
+  AeIdentityAvatar,
+  aeMain,
+  aeModal,
+  aeOverlay,
+  aePanel,
 };
 
-options.install = (Vue) => {
-	for (let component in options) {
-		const componentInstaller = options[component];
-
-		if (componentInstaller && component !== 'install') {
-			Vue.use(componentInstaller);
-		}
-	}
-};
+options.install = Vue =>
+  Object.keys(options)
+    .filter(component => component !== 'install')
+    .map(component => options[component])
+    .forEach(Vue.use);
 
 export default options;
 
-export {aeHelperMixin};
+export { aeHelperMixin };

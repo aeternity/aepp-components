@@ -22,5 +22,5 @@
 </template>
 
 <script src='./aeIdentity.js'/>
-
+// eslint-disable-next-line no-unused-expressions, semi
 <style scoped src='./aeIdentity.css'/>

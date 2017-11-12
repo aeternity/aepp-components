@@ -1,4 +1,4 @@
 export default {
-  name : 'ae-balance',
+  name: 'ae-balance',
   props: ['value', 'size', 'color'],
-}
+};

@@ -21,7 +21,7 @@
           icon: this.icon,
           secondary: this.secondary,
         };
-      }
+      },
     },
     methods: {
       click(e) {

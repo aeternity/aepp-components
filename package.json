@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "lint": "eslint --ext .js,.vue src"
   },
   "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
   "license": "MIT",
@@ -15,6 +16,11 @@
     "numeral": "^2.0.6"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-html": "^3.2.2",
+    "eslint-plugin-import": "^2.8.0"
   },
   "repository": {
     "type": "git",
