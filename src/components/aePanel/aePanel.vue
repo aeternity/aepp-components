@@ -4,7 +4,7 @@
     <div class="content">
       <header v-if="title || closeHandler">
         <h1>{{title}}</h1>
-        <ae-close-button @click="close" />
+        <ae-close-button @click="closeHandler" />
       </header>
       <slot />
     </div>
@@ -90,15 +90,19 @@
       }
 
       header {
-        display: flex;
-        flex-direction: row;
+        position: relative;
 
         h1 {
           font-size: 28px;
           line-height: 50px;
-          flex-grow: 1;
           font-weight: 500;
           margin: 0;
+        }
+
+        .ae-close-button {
+          position: absolute;
+          top: 0;
+          right: 0;
         }
       }
     }
