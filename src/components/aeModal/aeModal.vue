@@ -33,9 +33,21 @@
 
     .ae-panel {
       margin: auto;
+
+      @media (max-width: $screen-phone) {
+        margin: 0;
+        width: 100%;
+        min-height: 100%;
+        border-radius: 0;
+      }
       @media (min-width: $screen-phone) {
         min-width: $screen-phone;
       }
+    }
+
+    @media (max-width: $screen-phone) {
+      display: block;
+      padding: 0;
     }
   }
 </style>
