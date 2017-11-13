@@ -11,7 +11,7 @@ Import Vue and aeternity aepp components:
 ``` javascript
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import AeppComponents from '@aeternity/aepp-components'
+import AeppComponents, { AeButton } from '@aeternity/aepp-components'
 
 Vue.use(VueRouter)
 Vue.use(AeppComponents)
@@ -19,6 +19,14 @@ Vue.use(AeppComponents)
 // OR single components
 
 Vue.use(AeppComponents.AeButton)
+
+// OR
+
+new Vue({
+  components: {
+    AeButton
+  }
+});
 ```
 ```
 <template>
