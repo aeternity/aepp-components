@@ -33,6 +33,9 @@
 
     .ae-panel {
       margin: auto;
+      @media (min-width: $screen-phone) {
+        min-width: $screen-phone;
+      }
     }
   }
 </style>
