@@ -49,6 +49,10 @@
   input, input[type=text] {
     appearance: none;
   }
+
+  textarea {
+    resize: vertical;
+  }
 </style>
 
 <style lang="scss" scoped>
