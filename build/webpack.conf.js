@@ -19,6 +19,12 @@ var commonConfig = {
       }, {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'url-loader',
+      }, {
+        test: /\.scss$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
       },
     ],
   },
@@ -33,7 +39,10 @@ var commonConfig = {
 
 module.exports = [
   merge(commonConfig, {
-    entry: './src/plugin.js',
+    entry: {
+      main: './src/plugin.js',
+      variables: './src/components/variables.scss',
+    },
     output: {
       filename: 'aepp-components.js',
       libraryTarget: 'window',
@@ -41,7 +50,10 @@ module.exports = [
     },
   }),
   merge(commonConfig, {
-    entry: './src/index.js',
+    entry: {
+      main: './src/index.js',
+      variables: './src/components/variables.scss',
+    },
     output: {
       filename: 'aepp-components.esm.js',
       libraryTarget: 'umd',
