@@ -1,3 +1,51 @@
+import AeAmount from './components/aeAmount';
+import AeBalance from './components/aeBalance';
+import AeButton from './components/aeButton';
+import AeButton2 from './components/aeButton2';
+import AeCategory from './components/aeCategory';
+import AeCloseButton from './components/aeCloseButton';
+import AeFilterItem from './components/aeFilterItem';
+import AeFilterList from './components/aeFilterList';
+import AeFilterSeparator from './components/aeFilterSeparator';
+import AeHeader from './components/aeHeader';
+import AeHeaderAlert from './components/aeHeaderAlert';
+import AeHeaderButton from './components/aeHeaderButton';
+import AeIdentity from './components/aeIdentity';
+import AeIdentityAvatar from './components/aeIdentityAvatar';
+import AeMain from './components/aeMain';
+import AeModal from './components/aeModal';
+import AeOverlay from './components/aeOverlay';
+import AePanel from './components/aePanel';
+
+const AeppComponents = {
+  AeAmount,
+  AeBalance,
+  AeButton,
+  AeButton2,
+  AeCategory,
+  AeCloseButton,
+  AeFilterItem,
+  AeFilterList,
+  AeFilterSeparator,
+  AeHeader,
+  AeHeaderAlert,
+  AeHeaderButton,
+  AeIdentity,
+  AeIdentityAvatar,
+  AeMain,
+  AeModal,
+  AeOverlay,
+  AePanel,
+};
+
+AeppComponents.install = Vue =>
+  Object.keys(AeppComponents)
+    .filter(component => component !== 'install')
+    .map(component => AeppComponents[component])
+    .forEach(Vue.use);
+
+export default AeppComponents;
+
 export { default as AeAmount } from './components/aeAmount/aeAmount.vue';
 export { default as AeBalance } from './components/aeBalance/aeBalance.vue';
 export { default as AeButton } from './components/aeButton/aeButton.vue';

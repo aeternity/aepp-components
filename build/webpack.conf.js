@@ -1,8 +1,14 @@
-var merge = require('webpack-merge');
-
-var commonConfig = {
+var webpackConfig = {
+  entry: {
+    main: './src/index.js',
+    variables: './src/components/variables.scss',
+  },
   output: {
     path: __dirname + '/../dist',
+    filename: 'aepp-components.js',
+    libraryTarget: 'umd',
+    library: '@aeternity/aepp-components',
+    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -37,28 +43,4 @@ var commonConfig = {
   },
 };
 
-module.exports = [
-  merge(commonConfig, {
-    entry: {
-      main: './src/plugin.js',
-      variables: './src/components/variables.scss',
-    },
-    output: {
-      filename: 'aepp-components.js',
-      libraryTarget: 'window',
-      library: 'AeppComponents',
-    },
-  }),
-  merge(commonConfig, {
-    entry: {
-      main: './src/index.js',
-      variables: './src/components/variables.scss',
-    },
-    output: {
-      filename: 'aepp-components.esm.js',
-      libraryTarget: 'umd',
-      library: '@aeternity/aepp-components',
-      umdNamedDefine: true,
-    },
-  }),
-];
+module.exports = webpackConfig;
