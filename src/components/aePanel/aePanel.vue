@@ -8,6 +8,7 @@
       </header>
       <slot />
     </div>
+    <div v-if="showUnderline" class="underline" />
   </router-link>
   <div v-else class="ae-panel">
     <div v-if="showProgressBar" class="progressbar" :style="progressbarStyle" />
@@ -18,6 +19,7 @@
       </header>
       <slot />
     </div>
+    <div v-if="showUnderline" class="underline" />
   </div>
 </template>
 
@@ -30,6 +32,7 @@
       ratio: { type: Number, required: false },
       title: { type: String, required: false },
       closeHandler: { type: Function, required: false },
+      showUnderline: { type: Boolean, default: false },
     },
     components: { AeCloseButton },
     computed: {
@@ -70,11 +73,14 @@
       margin-bottom: 10px;
     }
 
-    .progressbar {
+    .progressbar, .underline {
       content: "";
       display: block;
       width: 100%;
       height: 4px;
+    }
+    .underline {
+      background-color: $maegenta;
     }
 
     .content {
