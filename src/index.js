@@ -1,3 +1,4 @@
+import AeAddButton from './components/aeAddButton';
 import AeAmount from './components/aeAmount';
 import AeBalance from './components/aeBalance';
 import AeButton from './components/aeButton';
@@ -20,6 +21,7 @@ import AeOverlay from './components/aeOverlay';
 import AePanel from './components/aePanel';
 
 const AeppComponents = {
+  AeAddButton,
   AeAmount,
   AeBalance,
   AeButton,
@@ -50,6 +52,7 @@ AeppComponents.install = Vue =>
 
 export default AeppComponents;
 
+export { default as AeAddButton } from './components/aeAddButton/aeAddButton.vue';
 export { default as AeAmount } from './components/aeAmount/aeAmount.vue';
 export { default as AeBalance } from './components/aeBalance/aeBalance.vue';
 export { default as AeButton } from './components/aeButton/aeButton.vue';
