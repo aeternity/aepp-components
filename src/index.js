@@ -11,6 +11,7 @@ import AeHeader from './components/aeHeader';
 import AeHeaderAlert from './components/aeHeaderAlert';
 import AeHeaderButton from './components/aeHeaderButton';
 import AeHr from './components/aeHr';
+import AeHrButton from './components/aeHrButton';
 import AeIdentity from './components/aeIdentity';
 import AeIdentityAvatar from './components/aeIdentityAvatar';
 import AeMain from './components/aeMain';
@@ -32,6 +33,7 @@ const AeppComponents = {
   AeHeaderAlert,
   AeHeaderButton,
   AeHr,
+  AeHrButton,
   AeIdentity,
   AeIdentityAvatar,
   AeMain,
@@ -61,6 +63,7 @@ export { default as AeHeader } from './components/aeHeader/aeHeader.vue';
 export { default as AeHeaderAlert } from './components/aeHeaderAlert/aeHeaderAlert.vue';
 export { default as AeHeaderButton } from './components/aeHeaderButton/aeHeaderButton.vue';
 export { default as AeHr } from './components/aeHr/aeHr.vue';
+export { default as AeHrButton } from './components/aeHrButton/aeHrButton.vue';
 export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue';
 export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue';
 export { default as AeMain } from './components/aeMain/aeMain.vue';
