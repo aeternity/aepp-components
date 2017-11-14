@@ -1,9 +1,14 @@
 <template>
-  <button class="ae-close-button" @click="click" />
+  <ae-header-button class="ae-close-button" icon @click="click">
+    <div class="ae-close" />
+  </ae-header-button>
 </template>
 
 <script>
+  import AeHeaderButton from '../aeHeaderButton/aeHeaderButton.vue';
+
   export default {
+    components: { AeHeaderButton },
     methods: {
       click(e) {
         this.$emit('click', e);
@@ -15,13 +20,17 @@
 <style lang="scss" scoped>
   @import "../variables";
 
-  .ae-close-button {
-    border: 0;
-    padding: 0;
-    background: transparent;
-    width: 16px;
-    height: 16px;
+  .ae-header-button {
+    background-color: $smoke;
+    font-size: 0;
+  }
+
+  .ae-close {
+    width: 18px;
+    height: 18px;
     position: relative;
+    display: inline-block;
+    vertical-align: middle;
 
     &:before, &:after {
       content: '';
