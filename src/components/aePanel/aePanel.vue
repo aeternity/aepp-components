@@ -1,6 +1,6 @@
 <template>
   <router-link v-if="to" class="ae-panel" :to="to">
-    <div v-if="showProgressBar" class="progressbar" :style="progressbarStyle" />
+    <div class="progressbar" :style="progressbarStyle(ratioTop)" />
     <div class="content">
       <header v-if="title || closeHandler">
         <h1>{{title}}</h1>
@@ -8,10 +8,10 @@
       </header>
       <slot />
     </div>
-    <div v-if="showUnderline" class="underline" />
+    <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
   </router-link>
   <div v-else class="ae-panel">
-    <div v-if="showProgressBar" class="progressbar" :style="progressbarStyle" />
+    <div class="progressbar" :style="progressbarStyle(ratioTop)" />
     <div class="content">
       <header v-if="title || closeHandler">
         <h1>{{title}}</h1>
@@ -19,7 +19,7 @@
       </header>
       <slot />
     </div>
-    <div v-if="showUnderline" class="underline" />
+    <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
   </div>
 </template>
 
@@ -29,22 +29,20 @@
   export default {
     props: {
       to: [String, Object],
-      ratio: { type: Number, required: false },
+      ratioTop: { type: Number, required: false },
+      ratioBottom: { type: Number, required: false },
       title: { type: String, required: false },
       closeHandler: { type: Function, required: false },
-      showUnderline: { type: Boolean, default: false },
     },
     components: { AeCloseButton },
-    computed: {
-      progressbarStyle() {
-        const pc = this.ratio * 100;
+    methods: {
+      progressbarStyle(ratio) {
+        const pc = ratio * 100;
         return {
+          display: typeof ratio === 'number' ? 'block' : 'none',
           backgroundImage:
             `linear-gradient(to right, var(--maegenta) ${pc}%, var(--aubergine) ${pc}%)`,
         };
-      },
-      showProgressBar() {
-        return typeof this.ratio === 'number';
       },
     },
   };
