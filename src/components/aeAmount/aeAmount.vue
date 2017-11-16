@@ -14,7 +14,7 @@
       value: { type: Number, default: 0 },
       min: { type: Number, default: -Infinity },
       max: { type: Number, default: Infinity },
-      step: { type: Number, default: 0.5 },
+      step: { type: Number, default: 1 },
     },
     computed: {
       amount: {
