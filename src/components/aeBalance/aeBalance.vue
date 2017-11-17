@@ -6,4 +6,5 @@
 </template>
 
 <script src='./aeBalance.js'/>
+// eslint-disable-next-line no-unused-expressions, semi
 <style scoped src='./aeBalance.scss' lang='scss' />

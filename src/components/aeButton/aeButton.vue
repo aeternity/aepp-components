@@ -5,4 +5,5 @@
 </template>
 
 <script src='./aeButton.js'/>
+// eslint-disable-next-line no-unused-expressions, semi
 <style scoped src='./aeButton.scss' lang='scss' />

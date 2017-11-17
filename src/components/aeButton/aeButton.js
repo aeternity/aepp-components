@@ -1,4 +1,4 @@
 export default {
-  name : 'ae-button',
+  name: 'ae-button',
   props: ['color', 'size', 'label'],
-}
+};

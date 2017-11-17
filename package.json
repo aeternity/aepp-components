@@ -2,19 +2,39 @@
   "name": "@aeternity/aepp-components",
   "version": "0.0.1",
   "description": "Reusable Vue components for aeternity aepp projects",
-  "main": "src/index.js",
+  "main": "dist/aepp-components.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build/build.js"
+    "test": "npm run lint",
+    "build": "node build/build.js",
+    "lint": "eslint --ext .js,.vue src",
+    "prepublish": "npm test && npm run build"
   },
   "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
   "license": "MIT",
+  "files": ["dist"],
   "dependencies": {
     "ethereum-blockies-png": "^0.1.2",
     "ethjs-unit": "^0.1.6",
+    "normalize.css": "^7.0.0",
     "numeral": "^2.0.6"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-html": "^3.2.2",
+    "eslint-plugin-import": "^2.8.0",
+    "file-loader": "^1.1.5",
+    "node-sass": "^4.6.1",
+    "sass-loader": "^6.0.6",
+    "url-loader": "^0.6.2",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.3",
+    "webpack": "^3.8.1"
   },
   "repository": {
     "type": "git",

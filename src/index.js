@@ -4,52 +4,65 @@ import AeButton from './components/aeButton';
 import AeButton2 from './components/aeButton2';
 import AeCategory from './components/aeCategory';
 import AeCloseButton from './components/aeCloseButton';
-import aeFilterItem from './components/aeFilterItem';
-import aeFilterList from './components/aeFilterList';
-import aeFilterSeparator from './components/aeFilterSeparator';
-import aeHeader from './components/aeHeader';
-import aeHeaderAlert from './components/aeHeaderAlert';
-import aeHeaderButton from './components/aeHeaderButton';
+import AeFilterItem from './components/aeFilterItem';
+import AeFilterList from './components/aeFilterList';
+import AeFilterSeparator from './components/aeFilterSeparator';
+import AeHeader from './components/aeHeader';
+import AeHeaderAlert from './components/aeHeaderAlert';
+import AeHeaderButton from './components/aeHeaderButton';
 import AeIdentity from './components/aeIdentity';
 import AeIdentityAvatar from './components/aeIdentityAvatar';
-import aeMain from './components/aeMain';
-import aeModal from './components/aeModal';
-import aeOverlay from './components/aeOverlay';
-import aePanel from './components/aePanel';
+import AeMain from './components/aeMain';
+import AeModal from './components/aeModal';
+import AeOverlay from './components/aeOverlay';
+import AePanel from './components/aePanel';
 
-import aeHelperMixin from './mixins/helper';
-
-const options = {
-	AeAmount,
-	AeBalance,
-	AeButton,
-	AeButton2,
-	AeCategory,
-	AeCloseButton,
-	aeFilterItem,
-	aeFilterList,
-	aeFilterSeparator,
-	aeHeader,
-	aeHeaderAlert,
-	aeHeaderButton,
-	AeIdentity,
-	AeIdentityAvatar,
-	aeMain,
-	aeModal,
-	aeOverlay,
-	aePanel
+const AeppComponents = {
+  AeAmount,
+  AeBalance,
+  AeButton,
+  AeButton2,
+  AeCategory,
+  AeCloseButton,
+  AeFilterItem,
+  AeFilterList,
+  AeFilterSeparator,
+  AeHeader,
+  AeHeaderAlert,
+  AeHeaderButton,
+  AeIdentity,
+  AeIdentityAvatar,
+  AeMain,
+  AeModal,
+  AeOverlay,
+  AePanel,
 };
 
-options.install = (Vue) => {
-	for (let component in options) {
-		const componentInstaller = options[component];
+AeppComponents.install = Vue =>
+  Object.keys(AeppComponents)
+    .filter(component => component !== 'install')
+    .map(component => AeppComponents[component])
+    .forEach(Vue.use);
 
-		if (componentInstaller && component !== 'install') {
-			Vue.use(componentInstaller);
-		}
-	}
-};
+export default AeppComponents;
 
-export default options;
+export { default as AeAmount } from './components/aeAmount/aeAmount.vue';
+export { default as AeBalance } from './components/aeBalance/aeBalance.vue';
+export { default as AeButton } from './components/aeButton/aeButton.vue';
+export { default as AeButton2 } from './components/aeButton2/aeButton2.vue';
+export { default as AeCategory } from './components/aeCategory/aeCategory.vue';
+export { default as AeCloseButton } from './components/aeCloseButton/aeCloseButton.vue';
+export { default as AeFilterItem } from './components/aeFilterItem/aeFilterItem.vue';
+export { default as AeFilterList } from './components/aeFilterList/aeFilterList.vue';
+export { default as AeFilterSeparator } from './components/aeFilterSeparator/aeFilterSeparator.vue';
+export { default as AeHeader } from './components/aeHeader/aeHeader.vue';
+export { default as AeHeaderAlert } from './components/aeHeaderAlert/aeHeaderAlert.vue';
+export { default as AeHeaderButton } from './components/aeHeaderButton/aeHeaderButton.vue';
+export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue';
+export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue';
+export { default as AeMain } from './components/aeMain/aeMain.vue';
+export { default as AeModal } from './components/aeModal/aeModal.vue';
+export { default as AeOverlay } from './components/aeOverlay/aeOverlay.vue';
+export { default as AePanel } from './components/aePanel/aePanel.vue';
 
-export {aeHelperMixin};
+export { default as aeHelperMixin } from './mixins/helper';

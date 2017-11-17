@@ -42,7 +42,7 @@
       },
       showProgressBar() {
         return typeof this.ratio === 'number';
-      }
+      },
     },
   };
 </script>

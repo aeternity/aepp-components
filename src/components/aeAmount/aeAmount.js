@@ -1,4 +1,4 @@
 export default {
-  name : 'ae-amount',
+  name: 'ae-amount',
   props: ['isFullWidth', 'value'],
-}
+};

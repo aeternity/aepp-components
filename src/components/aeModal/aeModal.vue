@@ -16,7 +16,7 @@
     },
     components: { AeOverlay, AePanel },
     methods: {
-      close(e) {
+      close() {
         this.$emit('close');
       },
     },
