@@ -60,5 +60,7 @@
     background: fixed linear-gradient(to bottom, white, #f1f4f7);
     min-height: 100%;
     overflow: hidden;
+    box-sizing: border-box;
+    padding-bottom: 80px;
   }
 </style>
