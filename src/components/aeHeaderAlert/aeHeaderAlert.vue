@@ -22,10 +22,9 @@
   @import "../variables";
 
   .ae-header-alert {
-    background-color: $maegenta;
+    background-color: $silver;
     height: 65px;
     line-height: 25px;
-    color: $white;
     font-size: 18px;
     text-align: center;
     display: flex;
