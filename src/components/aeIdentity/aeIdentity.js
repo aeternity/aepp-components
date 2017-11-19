@@ -1,56 +1,61 @@
-import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue';
-import helperMixin from './../../mixins/helper';
-
+import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
+//import aeIdentityInfo from './../aeIdentityInfo/aeIdentityInfo.vue'
+import helperMixin from './../../mixins/helper'
 export default {
   name: 'ae-identity',
   components: {
     'ae-identity-avatar': aeIdentityAvatar,
+    //'ae-identity-info': aeIdentityInfo
   },
-  data() {
-    return {};
+  data: function () {
+    return {}
   },
   props: {
-    balance: {
-      type: [String, Number],
-      default: 0,
-      required: true,
-    },
-    address: {
-      type: [String],
-      default: '0x0',
-      required: true,
+    identity: {
+      type: Object,
+      required: true
     },
     active: {
       type: Boolean,
-      required: false,
-      default: true,
+      required: true
     },
     collapsed: {
       type: Boolean,
-      default: false,
+      default: false
     },
+    size: {
+      type: String,
+      default: 'small',
+      validator: function (size) {
+        return size === 'small' || size === 'big'
+      }
+    }
   },
   mixins: [
-    helperMixin,
+    helperMixin
   ],
   computed: {
-    amount() {
-      return helperMixin.methods.readableEther(this.balance);
+    amount () {
+      return this.identity ? helperMixin.methods.readableEther(this.identity.balance) : 0
     },
-    shortAddress() {
-      return this.address.substr(0, 6);
+    address () {
+      return this.identity.address
     },
-    classObject() {
-      const classes = {
+    shortAddress () {
+      return this.identity.address.substr(0, 6)
+    },
+    classObject: function () {
+      let classes = {
         'ae-identity': true,
-        collapsed: this.collapsed,
-        _active_yes: this.active,
-        _active_no: !this.active,
-      };
-      return classes;
+        'collapsed': this.collapsed,
+        '_active_yes': this.active,
+        '_active_no': !this.active
+      }
+      classes['size_' + this.size] = true
+      return classes
     },
-    hasSlot() {
-      return this.$slots.default;
-    },
-  },
-};
+    hasSlot () {
+      return this.$slots.default
+    }
+  }
+}
