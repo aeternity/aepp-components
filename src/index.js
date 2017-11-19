@@ -19,6 +19,7 @@ import AeMain from './components/aeMain';
 import AeModal from './components/aeModal';
 import AeOverlay from './components/aeOverlay';
 import AePanel from './components/aePanel';
+import AeSwitch from './components/aeSwitch';
 
 const AeppComponents = {
   AeAddButton,
@@ -42,6 +43,7 @@ const AeppComponents = {
   AeModal,
   AeOverlay,
   AePanel,
+  AeSwitch,
 };
 
 AeppComponents.install = Vue =>
@@ -73,5 +75,6 @@ export { default as AeMain } from './components/aeMain/aeMain.vue';
 export { default as AeModal } from './components/aeModal/aeModal.vue';
 export { default as AeOverlay } from './components/aeOverlay/aeOverlay.vue';
 export { default as AePanel } from './components/aePanel/aePanel.vue';
+export { default as AeSwitch } from './components/aeSwitch/aeSwitch.vue';
 
 export { default as aeHelperMixin } from './mixins/helper';
