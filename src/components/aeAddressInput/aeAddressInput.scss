@@ -1,0 +1,34 @@
+@import '../variables.scss';
+label {
+}
+.help {
+  font-size: 13px;
+  float: right;
+  text-transform: none;
+
+  &.danger {
+    color: $maegenta;
+  }
+}
+input {
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 26px;
+  border: solid 2px $smoke;
+  box-shadow: none;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+
+  ::placeholder {
+    color: $grey;
+  }
+
+  &.danger {
+    border-color: $maegenta;
+  }
+}
+input {
+  height: 44px;
+}
