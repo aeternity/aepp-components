@@ -9,6 +9,7 @@
   import AeCloseButton from '../aeCloseButton/aeCloseButton.vue';
 
   export default {
+    name: "ae-header-alert",
     components: { AeCloseButton },
     methods: {
       close(e) {

@@ -9,6 +9,7 @@
 
 <script>
   export default {
+    name: "ae-button2",
     props: {
       to: { type: [String, Object], required: false },
       secondary: { type: Boolean, default: false },

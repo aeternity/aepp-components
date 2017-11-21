@@ -6,6 +6,7 @@
 
 <script>
   export default {
+    name: "ae-overlay",
     mounted() {
       document.body.style.overflow = 'hidden';
     },

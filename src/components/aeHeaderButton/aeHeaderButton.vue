@@ -9,6 +9,7 @@
 
 <script>
   export default {
+    name: "ae-header-button",
     props: {
       to: { type: [String, Object], required: false },
       icon: { type: Boolean, default: false },

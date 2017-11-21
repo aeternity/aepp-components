@@ -11,6 +11,7 @@
   import AePanel from '../aePanel/aePanel.vue';
 
   export default {
+    name: "ae-modal",
     props: {
       title: String,
     },

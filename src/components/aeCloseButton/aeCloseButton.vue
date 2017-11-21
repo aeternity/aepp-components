@@ -4,6 +4,7 @@
 
 <script>
   export default {
+    name: "ae-close-button",
     methods: {
       click(e) {
         this.$emit('click', e);

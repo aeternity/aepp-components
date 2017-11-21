@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script>
+  export default {
+    name: "ae-main"
+  };
+</script>
+
 <style>
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 

@@ -2,6 +2,12 @@
   <span class="ae-filter-separator" />
 </template>
 
+<script>
+  export default {
+    name: "ae-filter-separator"
+  };
+</script>
+
 <style lang="scss" scoped>
   .ae-filter-separator {
     display: inline-block;

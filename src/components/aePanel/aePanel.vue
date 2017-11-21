@@ -25,6 +25,7 @@
   import AeCloseButton from '../aeCloseButton/aeCloseButton.vue';
 
   export default {
+    name: "ae-panel",
     props: {
       to: [String, Object],
       ratio: { type: Number, required: false },

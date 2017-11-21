@@ -4,6 +4,12 @@
   </span>
 </template>
 
+<script>
+  export default {
+    name: "ae-category"
+  };
+</script>
+
 <style lang="scss" scoped>
   @import "../variables";
 
