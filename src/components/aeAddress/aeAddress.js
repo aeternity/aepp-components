@@ -1,4 +1,4 @@
-import {AeIdentityAvatar} from '../aeIdentityAvatar/aeIdentityAvatar.vue'
+import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue'
 function start_and_end(str, start=6, end=6) {
   return str.substr(0, start+2)
     + '…'
