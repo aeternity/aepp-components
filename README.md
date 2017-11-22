@@ -1,6 +1,10 @@
 # aeternity aepp components
 aeternity aepp components aims to provide aepp developers with reusable Vue components. All elements are from our [styleguide](https://github.com/aeternity/aepp-prototypes). You need some kind of build process (webpack, browserify, ...) there is no bundled js file yet.
 
+## Documentation
+
+The docs can be found on [http://components.aepps.com](http://components.aepps.com)
+
 ## installation and usage
 Install aeternity aepp components via npm
 ```
@@ -48,15 +52,22 @@ import { aeHelperMixin } from '@aeternity/aepp-components'
 ## contributing
 If you wrote a neat looking, reusable component matching our styleguide please fork this project and send us a merge request. Thanks!
 
-What is a good component
+### What is a good component
 * ideally comes from our styleguide
-* Does not depend on your code, all states are handled via props
+* Is separated from the rest of your application code, all states are handled via props, logic is kept to a minimum, communicates via events
 * Has a descriptive name
-  * good:
-  * bad:
 * Does more than one thing
-  * good: An Icon-Button with different icons and backgrounds styled via props
+  * good: e.g. An Icon-Button with different icons and backgrounds styled via props
   * bad: one grey close button component with an X-Symbol and one magenta add Button with a + Symbol
+
+### How should the component be structured
+* has a camelcased folder in /src/components like `aeComponentName`
+* folder contains a `aeComponentName.vue` with template, script and style. Script and style may be separate files like `aeComponentName.js` and `aeComponentName.(s)css`
+* component must have the name property set
+* in the main folder should be an index.js which exports an install function
+* component should be registered in the `src/index.js` for easy usage with `Vue.use()`
+* component must be documented by jsdoc comments and a `aeComponentName.md`, readable by [vue-styleguidist](https://github.com/vue-styleguidist/vue-styleguidist/blob/master/docs/Documenting.md). [Markdown](https://github.com/vue-styleguidist/vue-styleguidist/blob/master/docs/Documenting.md#usage-examples-and-readme-files) should include a usage example. You can test the documentation by running `npm run styleguide`
+* all props should be described as thoroughly as possible, define the type and provide useful default values
 
 ## example
 
@@ -199,15 +210,3 @@ export default {
   }
 </style>
 ```
-
-## components
-* [aeButton](#aeButton)
-* [aeIdentity](#aeIdentity)
-* ...
-
-### aeButton
-A Button...
-Insert description about props needed and so on, example code and also add an image probably
-
-### aeIdentity
-A Button...
