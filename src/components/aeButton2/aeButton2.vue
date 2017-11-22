@@ -31,7 +31,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../variables';
+  @import "../variables";
 
   .ae-button {
     border: none;

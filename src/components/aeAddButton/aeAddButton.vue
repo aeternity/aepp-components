@@ -1,6 +1,6 @@
 <template>
-  <ae-header-button class="ae-close-button" icon @click="click">
-    <div class="ae-close" />
+  <ae-header-button class="ae-add-button" icon @click="click">
+    <div class="ae-add" />
   </ae-header-button>
 </template>
 
@@ -8,7 +8,6 @@
   import AeHeaderButton from '../aeHeaderButton/aeHeaderButton.vue';
 
   export default {
-    name: "ae-close-button",
     components: { AeHeaderButton },
     methods: {
       click(e) {
@@ -22,12 +21,11 @@
   @import "../variables";
 
   .ae-header-button {
-    background-color: $smoke;
     font-size: 0;
   }
 
-  .ae-close {
-    width: 18px;
+  .ae-add {
+    width: 20px;
     height: 18px;
     position: relative;
     display: inline-block;
@@ -36,7 +34,7 @@
     &:before, &:after {
       content: '';
       display: block;
-      background-color: $anthracite;
+      background-color: $white;
       position: absolute;
       $width: 2px;
       width: $width;
@@ -47,10 +45,7 @@
     }
 
     &:before {
-      transform: rotate(45deg);
-    }
-    &:after {
-      transform: rotate(-45deg);
+      transform: rotate(90deg);
     }
   }
 </style>

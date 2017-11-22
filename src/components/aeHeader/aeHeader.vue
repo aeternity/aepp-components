@@ -62,6 +62,14 @@
           margin-right: 15px;
         }
       }
+
+      .ae-header-button {
+        margin: 0 5px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
 
     @media (max-width: $screen-phone) {

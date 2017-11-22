@@ -1,13 +1,13 @@
 {
   "name": "@aeternity/aepp-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reusable Vue components for aeternity aepp projects",
   "main": "dist/aepp-components.js",
   "scripts": {
     "test": "npm run lint",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
-    "prepublish": "npm test && npm run build",
+    "prepublish": "npm run build",
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build"
   },
