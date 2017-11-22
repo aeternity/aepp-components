@@ -1,44 +1,36 @@
-@import '../variables';
+@import "../variables";
 
-div.amount {
-  width: 310px;
+.ae-amount {
+  display: flex;
   border-radius: 10px;
   border: solid 2px $smoke;
   height: 70px;
-  background-color: #fff;
-  display: block;
-  position: relative;
-  &.full-width {
-    width: 100%;
-  }
-  button {
-    position: absolute;
+  background-color: $white;
+
+  button, input {
     background: none;
     border: none;
-    width: 62px;
-    height: 70px;
-    float: left;
     font-size: 40px;
     font-weight: 300;
-    &.add {
-      right: 0;
-    }
-    &.subtract {
-      left: 0;
-    }
+    height: 100%;
+    line-height: 100%;
   }
-  div.value {
-    line-height: 70px;
-    float: left;
-    width: calc(100% - 124px);
-    font-size: 40px;
-    font-weight: 300;
-    text-align: center;
-    position: absolute;
-    left: 62px;
-    div.unit {
-      font-size: 14px;
-      display: inline;
-    }
+
+  button {
+    width: 62px;
+    flex-shrink: 0;
+  }
+
+  input {
+    text-align: right;
+    width: 1px;
+    flex-grow: 1;
+  }
+
+  span {
+    font-size: 14px;
+    flex-shrink: 0;
+    line-height: 100px;
+    margin: 0 5px;
   }
 }

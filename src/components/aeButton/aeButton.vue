@@ -1,6 +1,6 @@
 <template>
-  <button :class="`button${ this.size ? ' ' + this.size : '' }${ this.color ? ' ' + this.color : '' }`">
-    {{ this.label }}
+  <button class="button" :class="{ [size]: size, [color]: color }">
+    <slot />
   </button>
 </template>
 

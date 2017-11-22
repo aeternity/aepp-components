@@ -39,7 +39,7 @@
     min-width: 40px;
     line-height: 40px;
     border-radius: 25px;
-    margin: 0 5px;
+    margin: 0;
     padding: 0;
     border: none;
     box-sizing: border-box;
@@ -51,10 +51,6 @@
 
     &.secondary {
       background-color: $grey;
-    }
-
-    &:last-child {
-      margin-right: 0;
     }
 
     &:not(.icon) {

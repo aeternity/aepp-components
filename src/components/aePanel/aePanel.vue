@@ -1,16 +1,6 @@
 <template>
   <router-link v-if="to" class="ae-panel" :to="to">
-    <div v-if="showProgressBar" class="progressbar" :style="progressbarStyle" />
-    <div class="content">
-      <header v-if="title || closeHandler">
-        <h1>{{title}}</h1>
-        <ae-close-button @click="close" />
-      </header>
-      <slot />
-    </div>
-  </router-link>
-  <div v-else class="ae-panel">
-    <div v-if="showProgressBar" class="progressbar" :style="progressbarStyle" />
+    <div class="progressbar" :style="progressbarStyle(ratioTop)" />
     <div class="content">
       <header v-if="title || closeHandler">
         <h1>{{title}}</h1>
@@ -18,6 +8,18 @@
       </header>
       <slot />
     </div>
+    <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
+  </router-link>
+  <div v-else class="ae-panel">
+    <div class="progressbar" :style="progressbarStyle(ratioTop)" />
+    <div class="content">
+      <header v-if="title || closeHandler">
+        <h1>{{title}}</h1>
+        <ae-close-button @click="closeHandler" />
+      </header>
+      <slot />
+    </div>
+    <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
   </div>
 </template>
 
@@ -27,21 +29,20 @@
   export default {
     props: {
       to: [String, Object],
-      ratio: { type: Number, required: false },
+      ratioTop: { type: Number, required: false },
+      ratioBottom: { type: Number, required: false },
       title: { type: String, required: false },
       closeHandler: { type: Function, required: false },
     },
     components: { AeCloseButton },
-    computed: {
-      progressbarStyle() {
-        const pc = this.ratio * 100;
+    methods: {
+      progressbarStyle(ratio) {
+        const pc = ratio * 100;
         return {
+          display: typeof ratio === 'number' ? 'block' : 'none',
           backgroundImage:
             `linear-gradient(to right, var(--maegenta) ${pc}%, var(--aubergine) ${pc}%)`,
         };
-      },
-      showProgressBar() {
-        return typeof this.ratio === 'number';
       },
     },
   };
@@ -70,11 +71,14 @@
       margin-bottom: 10px;
     }
 
-    .progressbar {
+    .progressbar, .underline {
       content: "";
       display: block;
       width: 100%;
       height: 4px;
+    }
+    .underline {
+      background-color: $maegenta;
     }
 
     .content {
@@ -84,15 +88,19 @@
       }
 
       header {
-        display: flex;
-        flex-direction: row;
+        position: relative;
 
         h1 {
           font-size: 28px;
           line-height: 50px;
-          flex-grow: 1;
           font-weight: 500;
           margin: 0;
+        }
+
+        .ae-close-button {
+          position: absolute;
+          top: 0;
+          right: 0;
         }
       }
     }

@@ -5,7 +5,7 @@
 </template>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
   :root {
     --silver: #dcdcdc;
@@ -49,6 +49,10 @@
   input, input[type=text] {
     appearance: none;
   }
+
+  textarea {
+    resize: vertical;
+  }
 </style>
 
 <style lang="scss" scoped>
@@ -56,5 +60,7 @@
     background: fixed linear-gradient(to bottom, white, #f1f4f7);
     min-height: 100%;
     overflow: hidden;
+    box-sizing: border-box;
+    padding-bottom: 80px;
   }
 </style>
