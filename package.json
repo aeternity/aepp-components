@@ -7,7 +7,7 @@
     "test": "npm run lint",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
-    "prepublish": "npm test && npm run build"
+    "prepublish": "npm run build"
   },
   "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
   "license": "MIT",
