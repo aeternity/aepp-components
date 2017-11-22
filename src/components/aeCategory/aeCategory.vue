@@ -1,5 +1,6 @@
 <template>
   <span class="ae-category">
+     <!-- Use this slot header -->
     <slot />
   </span>
 </template>
