@@ -2,7 +2,7 @@
   <div class="ae-amount">
     <button type="button" @click="subtract">–</button>
     <input v-model.number="amount" />
-    <span>Æ</span>
+    <span>{{symbol}}</span>
     <button type="button" @click="add">+</button>
   </div>
 </template>
@@ -15,6 +15,7 @@
       min: { type: Number, default: -Infinity },
       max: { type: Number, default: Infinity },
       step: { type: Number, default: 1 },
+      symbol: { type: String, default: 'Æ' },
     },
     computed: {
       amount: {
@@ -22,7 +23,8 @@
           return this.value;
         },
         set(v) {
-          const amount = +v;
+          const roundval = 1/this.step
+          const amount = Math.round(+v * roundval)  / roundval
           if (Number.isNaN(amount) || v < this.min || v > this.max) return;
           this.$emit('input', amount);
         },

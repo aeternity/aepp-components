@@ -19,6 +19,12 @@ import AeMain from './components/aeMain';
 import AeModal from './components/aeModal';
 import AeOverlay from './components/aeOverlay';
 import AePanel from './components/aePanel';
+import AeSwitch from './components/aeSwitch';
+import AeMenu from './components/aeMenu';
+import AeMenuEntry from './components/aeMenuEntry';
+import AeAppIcon from './components/aeAppIcon';
+import AeAddress from './components/aeAddress';
+import AeAddressInput from './components/aeAddressInput';
 
 const AeppComponents = {
   AeAddButton,
@@ -42,6 +48,12 @@ const AeppComponents = {
   AeModal,
   AeOverlay,
   AePanel,
+  AeSwitch,
+  AeMenu,
+  AeMenuEntry,
+  AeAppIcon,
+  AeAddress,
+  AeAddressInput
 };
 
 AeppComponents.install = Vue =>
@@ -73,5 +85,11 @@ export { default as AeMain } from './components/aeMain/aeMain.vue';
 export { default as AeModal } from './components/aeModal/aeModal.vue';
 export { default as AeOverlay } from './components/aeOverlay/aeOverlay.vue';
 export { default as AePanel } from './components/aePanel/aePanel.vue';
+export { default as AeSwitch } from './components/aeSwitch/aeSwitch.vue';
+export { default as AeMenuEntry } from './components/aeMenuEntry/aeMenuEntry.vue';
+export { default as AeMenu } from './components/aeMenu/aeMenu.vue';
+export { default as AeAppIcon } from './components/aeAppIcon/aeAppIcon.vue';
+export { default as AeAddress } from './components/aeAddress/aeAddress.vue';
+export { default as AeAddressInput } from './components/aeAddressInput/aeAddressInput.vue';
 
 export { default as aeHelperMixin } from './mixins/helper';
