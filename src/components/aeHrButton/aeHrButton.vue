@@ -10,6 +10,7 @@
   import AeHr from '../aeHr/aeHr.vue';
 
   export default {
+    name: "ae-hr-button",
     components: { AeHr },
     props: {
       branded: { type: Boolean, default: false },

@@ -18,9 +18,21 @@
       * The amount of Æ to display
       */
       value: { type: Number, default: 0 },
+      /**
+      * the smallest value this component can display
+      */
       min: { type: Number, default: -Infinity },
+      /**
+      * the largest value this component can display
+      */
       max: { type: Number, default: Infinity },
+      /**
+      * value will get incremented/subtracted by this value
+      */
       step: { type: Number, default: 1 },
+      /**
+      * the currency symbol to display
+      */
       symbol: { type: String, default: 'Æ' },
     },
     computed: {

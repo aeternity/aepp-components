@@ -8,6 +8,7 @@
   import AeHeaderButton from '../aeHeaderButton/aeHeaderButton.vue';
 
   export default {
+    name: "ae-add-button",
     components: { AeHeaderButton },
     methods: {
       click(e) {

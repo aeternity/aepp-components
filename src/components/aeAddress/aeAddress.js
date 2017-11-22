@@ -8,6 +8,7 @@ function addressValid(address) {
   return /^0x[0-9a-fA-F]{40}$/i.test(address)
 }
 export default {
+  name: "ae-address",
   props : {
     'address' : {
       type : String,

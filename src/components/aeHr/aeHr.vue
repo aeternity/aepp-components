@@ -4,6 +4,7 @@
 
 <script>
   export default {
+    name: "ae-hr",
     props: {
       branded: { type: Boolean, default: false },
     },
