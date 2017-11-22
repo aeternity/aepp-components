@@ -1,7 +1,7 @@
 const blockies = require('ethereum-blockies-png');
 
 export default {
-  name: 'avatar',
+  name: 'ae-identity-avatar',
   props: [
     'address',
   ],
