@@ -48,6 +48,16 @@ import { aeHelperMixin } from '@aeternity/aepp-components'
 ## contributing
 If you wrote a neat looking, reusable component matching our styleguide please fork this project and send us a merge request. Thanks!
 
+What is a good component
+* ideally comes from our styleguide
+* Does not depend on your code, all states are handled via props
+* Has a descriptive name
+  * good:
+  * bad:
+* Does more than one thing
+  * good: An Icon-Button with different icons and backgrounds styled via props
+  * bad: one grey close button component with an X-Symbol and one magenta add Button with a + Symbol
+
 ## example
 
 ![example](https://i.imgur.com/VNAKrqX.png "Example")
