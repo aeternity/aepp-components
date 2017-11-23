@@ -4,6 +4,7 @@ node_js:
 install:
 - npm install
 script:
+- npm test
 - npm run styleguide:build
 deploy:
   provider: script
