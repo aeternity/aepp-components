@@ -1,13 +1,13 @@
 import { mount } from 'vue-test-utils'
 import AeAmount from './aeAmount.vue'
-import AeAmountPlugin from './index.js'
+import AeAmountPlugin from './index'
 
 describe('AeAmount', () => {
   // Now mount the component and you have the wrapper
   const wrapper = mount(AeAmount)
 
   it('has an install function', () => {
-    expect(AeAmountPlugin).toBeInstanceOf(Function);
+    expect(AeAmountPlugin).toBeInstanceOf(Function)
   })
 
   it('renders the correct markup', () => {

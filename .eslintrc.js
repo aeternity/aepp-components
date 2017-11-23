@@ -8,6 +8,7 @@ module.exports = {
   },
   env: {
     browser: true,
+    jest: true
   },
   extends: 'standard',
   // required to lint *.vue files
