@@ -53,7 +53,7 @@ const AeppComponents = {
   AeMenuEntry,
   AeAppIcon,
   AeAddress,
-  AeAddressInput
+  AeAddressInput,
 };
 
 AeppComponents.install = Vue =>
