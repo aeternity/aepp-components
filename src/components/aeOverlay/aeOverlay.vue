@@ -6,19 +6,19 @@
 
 <script>
   export default {
-    name: "ae-overlay",
-    mounted() {
-      document.body.style.overflow = 'hidden';
+    name: 'ae-overlay',
+    mounted () {
+      document.body.style.overflow = 'hidden'
     },
-    destroyed() {
-      document.body.style.overflow = '';
+    destroyed () {
+      document.body.style.overflow = ''
     },
     methods: {
-      click(e) {
-        this.$emit('click', e);
-      },
-    },
-  };
+      click (e) {
+        this.$emit('click', e)
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

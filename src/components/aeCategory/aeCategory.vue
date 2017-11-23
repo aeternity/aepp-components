@@ -7,8 +7,8 @@
 
 <script>
   export default {
-    name: "ae-category"
-  };
+    name: 'ae-category'
+  }
 </script>
 
 <style lang="scss" scoped>

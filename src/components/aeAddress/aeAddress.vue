@@ -5,4 +5,5 @@
   </div>
 </template>
 <script src='./aeAddress.js'/>
+/* eslint no-unused-expressions: "off" */
 <style src='./aeAddress.scss'/>

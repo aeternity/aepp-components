@@ -33,34 +33,34 @@
       /**
       * the currency symbol to display
       */
-      symbol: { type: String, default: 'Æ' },
+      symbol: { type: String, default: 'Æ' }
     },
     computed: {
       amount: {
-        get() {
-          return this.value;
+        get () {
+          return this.value
         },
-        set(v) {
-          const roundval = 1/this.step
-          const amount = Math.round(+v * roundval)  / roundval
-          if (Number.isNaN(amount) || v < this.min || v > this.max) return;
-          this.$emit('input', amount);
-        },
-      },
+        set (v) {
+          const roundval = 1 / this.step
+          const amount = Math.round(+v * roundval) / roundval
+          if (Number.isNaN(amount) || v < this.min || v > this.max) return
+          this.$emit('input', amount)
+        }
+      }
     },
     methods: {
-      subtract() {
-        const newAmount = this.amount - this.step;
-        if (newAmount < this.min) return;
-        this.amount = newAmount;
+      subtract () {
+        const newAmount = this.amount - this.step
+        if (newAmount < this.min) return
+        this.amount = newAmount
       },
-      add() {
-        const newAmount = this.amount + this.step;
-        if (newAmount > this.max) return;
-        this.amount = newAmount;
-      },
-    },
-  };
+      add () {
+        const newAmount = this.amount + this.step
+        if (newAmount > this.max) return
+        this.amount = newAmount
+      }
+    }
+  }
 </script>
 
 // eslint-disable-next-line no-unused-expressions, semi

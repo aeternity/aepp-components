@@ -5,4 +5,5 @@
   </div>
 </template>
 <script src='./aeAppIcon.js'/>
+/* eslint no-unused-expressions: "off" */
 <style src='./aeAppIcon.css'/>

@@ -1,24 +1,24 @@
 export default {
   name: 'ae-switch',
-  props : [
+  props: [
     'name',
     'choices',
-    'default',
+    'default'
   ],
-  data() {
+  data () {
     return {
-      selected: null,
+      selected: null
     }
   },
-  watch : {
-    selected(newSelected) {
+  watch: {
+    selected (newSelected) {
       this.$emit('input', newSelected)
     }
   },
-  mounted() {
-    if(this.default) {
+  mounted () {
+    if (this.default) {
       this.selected = this.default
-    } else if(this.choices.length) {
+    } else if (this.choices.length) {
       this.selected = this.choices[0].value
     }
   }

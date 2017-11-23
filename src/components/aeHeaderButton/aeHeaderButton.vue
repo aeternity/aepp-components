@@ -9,27 +9,27 @@
 
 <script>
   export default {
-    name: "ae-header-button",
+    name: 'ae-header-button',
     props: {
       to: { type: [String, Object], required: false },
       icon: { type: Boolean, default: false },
-      secondary: { type: Boolean, default: false },
+      secondary: { type: Boolean, default: false }
     },
     computed: {
-      className() {
+      className () {
         return {
           'ae-header-button': true,
           icon: this.icon,
-          secondary: this.secondary,
-        };
-      },
+          secondary: this.secondary
+        }
+      }
     },
     methods: {
-      click(e) {
-        this.$emit('click', e);
-      },
-    },
-  };
+      click (e) {
+        this.$emit('click', e)
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

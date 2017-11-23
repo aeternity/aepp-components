@@ -8,4 +8,5 @@
 </template>
 
 <script src="./aeSwitch.js"/>
-<style scoped src="./aeSwitch.css"/>
+/* eslint no-unused-expressions: "off" */
+<style src="./aeSwitch.css" scoped/>

@@ -1,5 +1,5 @@
-import aeFilterItem from './aeFilterItem.vue';
+import aeFilterItem from './aeFilterItem.vue'
 
-export default function install(Vue) {
-  Vue.component('ae-filter-item', aeFilterItem);
+export default function install (Vue) {
+  Vue.component('ae-filter-item', aeFilterItem)
 }

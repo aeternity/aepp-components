@@ -1,27 +1,27 @@
-const blockies = require('ethereum-blockies-png');
+const blockies = require('ethereum-blockies-png')
 
 export default {
   name: 'ae-identity-avatar',
   props: [
-    'address',
+    'address'
   ],
   methods: {
-    blockie(address) {
+    blockie (address) {
       return blockies.createDataURL({
-        seed: address,
-      });
-    },
+        seed: address
+      })
+    }
   },
   computed: {
-    style() {
+    style () {
       if (this.address) {
         return {
-          backgroundImage: `url('${this.blockie(this.address)}')`,
-        };
+          backgroundImage: `url('${this.blockie(this.address)}')`
+        }
       }
       return {
-        backgroundColor: '#d1d1d1',
-      };
-    },
-  },
-};
+        backgroundColor: '#d1d1d1'
+      }
+    }
+  }
+}

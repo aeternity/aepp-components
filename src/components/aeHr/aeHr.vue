@@ -4,11 +4,11 @@
 
 <script>
   export default {
-    name: "ae-hr",
+    name: 'ae-hr',
     props: {
-      branded: { type: Boolean, default: false },
-    },
-  };
+      branded: { type: Boolean, default: false }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

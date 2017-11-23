@@ -6,17 +6,17 @@
 </template>
 
 <script>
-  import AeCloseButton from '../aeCloseButton/aeCloseButton.vue';
+  import AeCloseButton from '../aeCloseButton/aeCloseButton.vue'
 
-  export default {
-    name: "ae-header-alert",
+export default {
+    name: 'ae-header-alert',
     components: { AeCloseButton },
     methods: {
-      close(e) {
-        this.$emit('close', e);
-      },
-    },
-  };
+      close (e) {
+        this.$emit('close', e)
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

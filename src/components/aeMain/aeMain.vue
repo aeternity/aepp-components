@@ -6,8 +6,8 @@
 
 <script>
   export default {
-    name: "ae-main"
-  };
+    name: 'ae-main'
+  }
 </script>
 
 <style>

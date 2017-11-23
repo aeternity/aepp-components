@@ -35,4 +35,5 @@
 </template>
 
 <script src='./aeMenu.js'/>
+/* eslint no-unused-expressions: "off" */
 <style src='./aeMenu.css'/>

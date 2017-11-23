@@ -6,12 +6,12 @@
 
 <script>
   export default {
-    name: "ae-filter-item",
+    name: 'ae-filter-item',
     props: {
       to: { type: [String, Object], required: false },
-      active: { type: Boolean, required: false },
-    },
-  };
+      active: { type: Boolean, required: false }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

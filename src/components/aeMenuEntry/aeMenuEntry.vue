@@ -14,5 +14,5 @@
 </template>
 
 <script src='./aeMenuEntry.js' />
-
+/* eslint no-unused-expressions: "off" */
 <style scoped src='./aeMenuEntry.css'/>
