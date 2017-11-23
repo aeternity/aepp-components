@@ -25,11 +25,11 @@
 
 <script>
   export default {
-    name: "ae-header",
+    name: 'ae-header',
     props: {
-      name: String,
-    },
-  };
+      name: String
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

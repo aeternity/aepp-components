@@ -5,17 +5,17 @@
 </template>
 
 <script>
-  import AeHeaderButton from '../aeHeaderButton/aeHeaderButton.vue';
+  import AeHeaderButton from '../aeHeaderButton/aeHeaderButton.vue'
 
-  export default {
-    name: "ae-close-button",
+export default {
+    name: 'ae-close-button',
     components: { AeHeaderButton },
     methods: {
-      click(e) {
-        this.$emit('click', e);
-      },
-    },
-  };
+      click (e) {
+        this.$emit('click', e)
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

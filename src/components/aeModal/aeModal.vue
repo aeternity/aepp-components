@@ -16,22 +16,22 @@
 </template>
 
 <script>
-  import AeOverlay from '../aeOverlay/aeOverlay.vue';
-  import AeHeader from '../aeHeader/aeHeader.vue';
-  import AeCloseButton from '../aeCloseButton/aeCloseButton.vue';
+  import AeOverlay from '../aeOverlay/aeOverlay.vue'
+import AeHeader from '../aeHeader/aeHeader.vue'
+import AeCloseButton from '../aeCloseButton/aeCloseButton.vue'
 
-  export default {
-    name: "ae-modal",
+export default {
+    name: 'ae-modal',
     props: {
-      title: String,
+      title: String
     },
     components: { AeOverlay, AeHeader, AeCloseButton },
     methods: {
-      close() {
-        this.$emit('close');
-      },
-    },
-  };
+      close () {
+        this.$emit('close')
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

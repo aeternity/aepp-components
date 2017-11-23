@@ -1,5 +1,5 @@
-import aeMain from './aeMain.vue';
+import aeMain from './aeMain.vue'
 
-export default function install(Vue) {
-  Vue.component('ae-main', aeMain);
+export default function install (Vue) {
+  Vue.component('ae-main', aeMain)
 }

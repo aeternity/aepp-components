@@ -28,4 +28,5 @@
   </div>
 </template>
 <script src='./aeAddressInput.js'/>
+/* eslint no-unused-expressions: "off" */
 <style src='./aeAddressInput.scss'/>

@@ -1,5 +1,5 @@
-import aeHeaderButton from './aeHeaderButton.vue';
+import aeHeaderButton from './aeHeaderButton.vue'
 
-export default function install(Vue) {
-  Vue.component('ae-header-button', aeHeaderButton);
+export default function install (Vue) {
+  Vue.component('ae-header-button', aeHeaderButton)
 }

@@ -24,29 +24,29 @@
 </template>
 
 <script>
-  import AeCloseButton from '../aeCloseButton/aeCloseButton.vue';
+  import AeCloseButton from '../aeCloseButton/aeCloseButton.vue'
 
-  export default {
-    name: "ae-panel",
+export default {
+    name: 'ae-panel',
     props: {
       to: [String, Object],
       ratioTop: { type: Number, required: false },
       ratioBottom: { type: Number, required: false },
       title: { type: String, required: false },
-      closeHandler: { type: Function, required: false },
+      closeHandler: { type: Function, required: false }
     },
     components: { AeCloseButton },
     methods: {
-      progressbarStyle(ratio) {
-        const pc = ratio * 100;
+      progressbarStyle (ratio) {
+        const pc = ratio * 100
         return {
           display: typeof ratio === 'number' ? 'block' : 'none',
           backgroundImage:
-            `linear-gradient(to right, var(--maegenta) ${pc}%, var(--aubergine) ${pc}%)`,
-        };
-      },
-    },
-  };
+            `linear-gradient(to right, var(--maegenta) ${pc}%, var(--aubergine) ${pc}%)`
+        }
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,5 @@
-import aeMenu from './aeMenu.vue';
+import aeMenu from './aeMenu.vue'
 
-export default function install(Vue) {
-	Vue.component('ae-menu', aeMenu);
+export default function install (Vue) {
+  Vue.component('ae-menu', aeMenu)
 }

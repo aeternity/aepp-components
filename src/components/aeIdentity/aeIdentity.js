@@ -1,11 +1,11 @@
 import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
-//import aeIdentityInfo from './../aeIdentityInfo/aeIdentityInfo.vue'
+// import aeIdentityInfo from './../aeIdentityInfo/aeIdentityInfo.vue'
 import helperMixin from './../../mixins/helper'
 export default {
   name: 'ae-identity',
   components: {
-    'ae-identity-avatar': aeIdentityAvatar,
-    //'ae-identity-info': aeIdentityInfo
+    'ae-identity-avatar': aeIdentityAvatar
+    // 'ae-identity-info': aeIdentityInfo
   },
   data: function () {
     return {}

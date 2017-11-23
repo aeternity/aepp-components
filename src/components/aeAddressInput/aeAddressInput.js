@@ -1,32 +1,31 @@
-function addressValid(address) {
+function addressValid (address) {
   return /^0x[0-9a-fA-F]{40}$/i.test(address)
 }
 export default {
-  name : 'ae-address-input',
-  data() {
+  name: 'ae-address-input',
+  data () {
     return {
-      address : ''
+      address: ''
     }
   },
-  computed : {
-    externalLink() {
-      if(!this.addressValid)
-        return ''
+  computed: {
+    externalLink () {
+      if (!this.addressValid) { return '' }
       return `https://kovan.etherscan.io/address/${this.address}`
     },
-    addressValid() {
+    addressValid () {
       return addressValid(this.address)
     }
   },
-  watch : {
-    address(newVal) {
+  watch: {
+    address (newVal) {
       this.$emit('input', newVal)
     }
   },
-  props : [
+  props: [
     'value'
   ],
-  mounted() {
+  mounted () {
     this.address = this.value
   }
 }

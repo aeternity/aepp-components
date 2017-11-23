@@ -7,20 +7,20 @@
 </template>
 
 <script>
-  import AeHr from '../aeHr/aeHr.vue';
+  import AeHr from '../aeHr/aeHr.vue'
 
-  export default {
-    name: "ae-hr-button",
+export default {
+    name: 'ae-hr-button',
     components: { AeHr },
     props: {
-      branded: { type: Boolean, default: false },
+      branded: { type: Boolean, default: false }
     },
     methods: {
-      click(e) {
-        this.$emit('click', e);
-      },
-    },
-  };
+      click (e) {
+        this.$emit('click', e)
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

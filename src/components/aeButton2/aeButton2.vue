@@ -9,25 +9,25 @@
 
 <script>
   export default {
-    name: "ae-button2",
+    name: 'ae-button2',
     props: {
       to: { type: [String, Object], required: false },
-      secondary: { type: Boolean, default: false },
+      secondary: { type: Boolean, default: false }
     },
     computed: {
-      className() {
+      className () {
         return {
           'ae-button': true,
-          secondary: this.secondary,
-        };
-      },
+          secondary: this.secondary
+        }
+      }
     },
     methods: {
-      click(e) {
-        this.$emit('click', e);
-      },
-    },
-  };
+      click (e) {
+        this.$emit('click', e)
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
