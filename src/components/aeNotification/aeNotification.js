@@ -1,4 +1,3 @@
-import AeCloseButton from '../aeCloseButton/aeCloseButton.vue'
 import AeButton from '../aeButton/aeButton.vue'
 import AeIcon from '../aeIcon/aeIcon.vue'
 
@@ -22,7 +21,6 @@ export default {
     }
   },
   components: {
-    AeCloseButton,
     AeButton,
     AeIcon
   },

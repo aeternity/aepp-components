@@ -4,7 +4,7 @@
     <div class="content">
       <header v-if="title || closeHandler">
         <h1>{{title}}</h1>
-        <ae-close-button @click="closeHandler" />
+        <ae-button @click="closeHandler" />
       </header>
       <!-- This is the Body of the Panel -->
       <slot />
@@ -16,7 +16,7 @@
     <div class="content">
       <header v-if="title || closeHandler">
         <h1>{{title}}</h1>
-        <ae-close-button @click="closeHandler" />
+        <ae-button @click="closeHandler" />
       </header>
       <!-- This is the Body of the Panel -->
       <slot />
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import AeCloseButton from '../aeCloseButton/aeCloseButton.vue'
+  import AeButton from '../aeButton/aeButton.vue'
   /**
    *
    */
@@ -58,7 +58,7 @@
        */
       closeHandler: { type: Function, required: false }
     },
-    components: { AeCloseButton },
+    components: { AeButton },
     methods: {
       progressbarStyle (ratio) {
         const pc = ratio * 100
@@ -121,7 +121,7 @@
           margin: 0;
         }
 
-        .ae-close-button {
+        .ae-button {
           position: absolute;
           top: 0;
           right: 0;
