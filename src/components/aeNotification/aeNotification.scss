@@ -39,7 +39,7 @@
     margin: 0 25px;
   }
 
-  .ae-close-button {
+  .ae-button {
     float: right;
     margin-right: 25px;
 
@@ -57,7 +57,7 @@
   }
 
   @media (min-width: $container-width) {
-    .ae-close-button {
+    .ae--button {
       position: absolute;
       right: 0;
     }
