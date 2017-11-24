@@ -1,10 +1,7 @@
 var webpackConfig = {
   entry: {
     main: './src/index.js',
-    index: './src/components/_index.scss',
-    variables: './src/components/_variables.scss',
-    extends: './src/components/_extends.scss',
-    mixins: './src/components/_mixins.scss',
+    variables: './src/components/variables.scss',
   },
   output: {
     path: __dirname + '/../dist',
