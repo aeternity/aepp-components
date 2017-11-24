@@ -1,5 +1,5 @@
 import { mount } from 'vue-test-utils'
-import AeAmount from './aeAmount.vue'
+import AeAmount from './aeAmountInput.vue'
 import AeAmountPlugin from './index'
 
 describe('AeAmount', () => {

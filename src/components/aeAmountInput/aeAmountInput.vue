@@ -64,4 +64,4 @@
 </script>
 
 // eslint-disable-next-line no-unused-expressions, semi
-<style scoped src='./aeAmount.scss' lang='scss' />
+<style scoped src='./aeAmountInput.scss' lang='scss' />
