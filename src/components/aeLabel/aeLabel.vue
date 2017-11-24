@@ -1,5 +1,5 @@
 <template>
-  <span class="ae-category">
+  <span class="ae-label">
      <!-- Use this slot header -->
     <slot />
   </span>
@@ -7,14 +7,14 @@
 
 <script>
   export default {
-    name: 'ae-category'
+    name: 'ae-label'
   }
 </script>
 
 <style lang="scss" scoped>
   @import "../variables";
 
-  .ae-category {
+  .ae-label {
     display: inline-block;
     min-width: 60px;
     height: 22px;
