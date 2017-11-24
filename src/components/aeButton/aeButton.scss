@@ -1,11 +1,65 @@
 @import "../variables";
 
 .ae-button {
-  display: block;
+  display: inline-block;
   border: none;
   border-radius: 100px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
   color: #fff;
+
+  &._has_label_false {
+    padding:0;
+  }
+  &._has_label_false._size{
+    &_smaller .ae-icon{
+      width:12px;
+      height:12px;
+      margin:4px;
+    }
+    &_small .ae-icon{
+      width:26px;
+      height:26px;
+      margin:4px;
+    }
+    &_medium .ae-icon{
+      width:34px;
+      height:34px;
+      margin:8px;
+    }
+    &_large .ae-icon{
+      width:56px;
+      height:56px;
+      margin:16px;
+    }
+  }
+
+  &._has_label_true._size{
+    &_smaller .label{
+      font-size: 14px;
+    }
+    &_small .label{
+      font-size: 14px;
+      padding:8px 20px;
+    }
+    &_medium .label{
+      font-size: 18px;
+      padding:14px 32px;
+    }
+    &_large .label{
+      padding:30px 45px;
+      font-size: 32px;
+    }
+  }
+  &._has_label_true {
+    .ae-icon {
+      margin-left:10px;
+    }
+  }
+
+  >.inner {
+    display:flex;
+    align-items:center;
+  }
   &._active_true{
     //opacity: 0.5;
     //cursor: not-allowed;
@@ -15,49 +69,27 @@
     cursor: not-allowed;
   }
 
-  &._size{
-    &_smaller {
-      font-size: 16px;
-      height: 40px;
-      width: 100px;
-    }
-    &_small {
-      font-size: 16px;
-      height: 40px;
-      width: 100px;
-    }
-    &_medium {
-      font-size: 16px;
-      height: 45px;
-      width: 141px;
-    }
-    &_large {
-      font-size: 17px;
-      height: 50px;
-      width: 305px;
-    }
-  }
 
   &._type{
     &_plain {
       background-color: transparent;
-      color: #000;
+      color: $black;
     }
     &_boring {
-      background-color: #fff;
-      color: #000;
+      background-color: $silver;
+      color: $black;
     }
     &_normal {
-      background-color: $silver;
-      color: #000;
+      background-color: $grey;
+      color: $black;
     }
     &_exciting {
-      background-color: $maegenta;
+      background-color: $aubergine;
+      color: $white;
     }
     &_dramatic {
-      background-color: $silver;
-      color: #F00;
-      border:1px solid #F00;
+      background-color: $maegenta;
+      color: $white;
     }
   }
 
