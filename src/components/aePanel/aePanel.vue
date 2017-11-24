@@ -6,6 +6,7 @@
         <h1>{{title}}</h1>
         <ae-close-button @click="closeHandler" />
       </header>
+      <!-- This is the Body of the Panel -->
       <slot />
     </div>
     <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
@@ -17,6 +18,7 @@
         <h1>{{title}}</h1>
         <ae-close-button @click="closeHandler" />
       </header>
+      <!-- This is the Body of the Panel -->
       <slot />
     </div>
     <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
@@ -25,14 +27,35 @@
 
 <script>
   import AeCloseButton from '../aeCloseButton/aeCloseButton.vue'
-
-export default {
+  /**
+   *
+   */
+  export default {
     name: 'ae-panel',
     props: {
+      /**
+       * Where does the Panel link to. its fed to a router-link.
+       */
       to: [String, Object],
+
+      /**
+       * The ratio of the progressbar on top between 0 and 1
+       */
       ratioTop: { type: Number, required: false },
+
+      /**
+       * The ratio of the progressbar on bottom between 0 and 1
+       */
       ratioBottom: { type: Number, required: false },
+
+      /**
+       * The title displayed in the panel
+       */
       title: { type: String, required: false },
+
+      /**
+       * This handler is called when the user presses the close button
+       */
       closeHandler: { type: Function, required: false }
     },
     components: { AeCloseButton },

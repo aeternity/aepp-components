@@ -1,7 +1,23 @@
+/**
+ * An entry in the menu with a label and a link
+ */
 export default {
-  name: 'menu-entry',
-  props: [
-    'link',
-    'label'
-  ]
+  name: 'ae-menu-entry',
+  props: {
+    /**
+     * Where does the menu link to (uses router-link)
+     */
+    link: {
+      type: String,
+      required: true
+    },
+
+    /**
+     * The title to display
+     */
+    label: {
+      type: String,
+      required: true
+    }
+  }
 }
