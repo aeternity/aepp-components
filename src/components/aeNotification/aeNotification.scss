@@ -14,23 +14,23 @@
   &._type{
     &_plain {
       background-color: transparent;
-      color: #000;
+      color: $black;
     }
     &_boring {
-      background-color: #fff;
-      color: #000;
+      background-color: $silver;
+      color: $black;
     }
     &_normal {
-      background-color: $silver;
-      color: #000;
+      background-color: $grey;
+      color: $black;
     }
     &_exciting {
-      background-color: $maegenta;
+      background-color: $aubergine;
+      color: $white;
     }
     &_dramatic {
-      background-color: $silver;
-      color: #F00;
-      border:1px solid #F00;
+      background-color: $maegenta;
+      color: $white;
     }
   }
 

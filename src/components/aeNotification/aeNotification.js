@@ -1,4 +1,6 @@
 import AeCloseButton from '../aeCloseButton/aeCloseButton.vue'
+import AeButton from '../aeButton/aeButton.vue'
+import AeIcon from '../aeIcon/aeIcon.vue'
 
 const aeNotificationTypes = [
   'plain',
@@ -19,7 +21,11 @@ export default {
       default: 'normal'
     },
   },
-  components: { AeCloseButton },
+  components: {
+    AeCloseButton,
+    AeButton,
+    AeIcon
+  },
   computed: {
     cssClass () {
       return [

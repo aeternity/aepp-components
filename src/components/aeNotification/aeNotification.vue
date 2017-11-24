@@ -4,7 +4,9 @@
       <slot />
     </content>
     <slot name='button'>
-      <ae-close-button @click="close" />
+      <ae-button @click="close" >
+        <ae-icon slot='icon' name='close'/>
+      </ae-button>
     </slot>
   </div>
 </template>
