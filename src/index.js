@@ -2,7 +2,7 @@ import AeAddButton from './components/aeAddButton'
 import AeAmount from './components/aeAmount'
 import AeAmountInput from './components/aeAmountInput'
 import AeButton from './components/aeButton'
-import AeCategory from './components/aeCategory'
+import AeLabel from './components/aeLabel'
 import AeCloseButton from './components/aeCloseButton'
 import AeFilterItem from './components/aeFilterItem'
 import AeFilterList from './components/aeFilterList'
@@ -31,7 +31,7 @@ const AeppComponents = {
   AeAmount,
   AeAmountInput,
   AeButton,
-  AeCategory,
+  AeLabel,
   AeCloseButton,
   AeFilterItem,
   AeFilterList,
@@ -68,7 +68,7 @@ export { default as AeAddButton } from './components/aeAddButton/aeAddButton.vue
 export { default as AeAmount } from './components/aeAmount/aeAmount.vue'
 export { default as AeAmountInput } from './components/aeAmountInput/aeAmountInput.vue'
 export { default as AeButton } from './components/aeButton/aeButton.vue'
-export { default as AeCategory } from './components/aeCategory/aeCategory.vue'
+export { default as AeLabel } from './components/aeLabel/aeLabel.vue'
 export { default as AeCloseButton } from './components/aeCloseButton/aeCloseButton.vue'
 export { default as AeFilterItem } from './components/aeFilterItem/aeFilterItem.vue'
 export { default as AeFilterList } from './components/aeFilterList/aeFilterList.vue'
