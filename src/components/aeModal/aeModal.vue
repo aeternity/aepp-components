@@ -2,12 +2,16 @@
   <ae-overlay @click="close">
     <div class="ae-modal">
       <ae-header class="phone" :name="title">
-        <ae-close-button slot="mobile-right" icon @click="close" />
+        <ae-button slot="mobile-right" @click="close">
+          <ae-icon slot='icon' name='close' />
+        </ae-button>
       </ae-header>
       <main>
         <header class="desktop">
           <h1>{{title}}</h1>
-          <ae-close-button @click="close" />
+          <ae-button @click="close">
+            <ae-icon slot='icon' name='close' />
+          </ae-button>
         </header>
         <slot />
       </main>
@@ -16,16 +20,22 @@
 </template>
 
 <script>
-  import AeOverlay from '../aeOverlay/aeOverlay.vue'
+import AeOverlay from '../aeOverlay/aeOverlay.vue'
 import AeHeader from '../aeHeader/aeHeader.vue'
-import AeCloseButton from '../aeCloseButton/aeCloseButton.vue'
+import AeButton from '../aeButton/aeButton.vue'
+import AeIcon from '../aeIcon/aeIcon.vue'
 
 export default {
     name: 'ae-modal',
     props: {
       title: String
     },
-    components: { AeOverlay, AeHeader, AeCloseButton },
+    components: {
+      AeOverlay,
+      AeHeader,
+      AeButton,
+      AeIcon,
+    },
     methods: {
       close () {
         this.$emit('close')
@@ -68,7 +78,7 @@ export default {
             margin: 0;
           }
 
-          .ae-close-button {
+          .ae-button {
             position: absolute;
             top: 0;
             right: 0;
