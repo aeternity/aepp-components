@@ -42,9 +42,8 @@ export default {
         `_size_${this.size}`,
         `_type_${this.type}`,
         `_active_${!this.inactive}`,
-        `_has_label_${this.hasDefaultSlot}`,
+        `_has_label_${this.hasDefaultSlot}`
       ]
-      //'_inactive': !this.active
     }
   }
 }

@@ -12,4 +12,5 @@
 </template>
 
 <script src='./aeNotification.js'/>
+/* eslint no-unused-expressions: "off" */
 <style scoped lang='scss' src='./aeNotification.scss'/>

@@ -15,14 +15,13 @@ export default {
       type: String
     }
   },
-  computed :{
-    iconUrl() {
-      return require('../../assets/icons/'+this.name+'.svg')
-      //return ''
+  computed: {
+    iconUrl () {
+      return require(`../../assets/icons/${this.name}.svg`)
     },
-    cssStyle() {
+    cssStyle () {
       return {
-        'background-image' : `url(${this.iconUrl})`
+        'background-image': `url(${this.iconUrl})`
       }
     }
 

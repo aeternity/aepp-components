@@ -26,22 +26,22 @@ import AeButton from '../aeButton/aeButton.vue'
 import AeIcon from '../aeIcon/aeIcon.vue'
 
 export default {
-    name: 'ae-modal',
-    props: {
-      title: String
-    },
-    components: {
-      AeOverlay,
-      AeHeader,
-      AeButton,
-      AeIcon,
-    },
-    methods: {
-      close () {
-        this.$emit('close')
-      }
+  name: 'ae-modal',
+  props: {
+    title: String
+  },
+  components: {
+    AeOverlay,
+    AeHeader,
+    AeButton,
+    AeIcon
+  },
+  methods: {
+    close () {
+      this.$emit('close')
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>

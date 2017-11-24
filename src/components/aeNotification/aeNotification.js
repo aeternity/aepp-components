@@ -12,14 +12,14 @@ const aeNotificationTypes = [
 
 export default {
   name: 'ae-notification',
-  props : {
+  props: {
     type: {
       type: String,
       validator: (value) => {
         return aeNotificationTypes.find(e => e === value)
       },
       default: 'normal'
-    },
+    }
   },
   components: {
     AeCloseButton,
@@ -29,7 +29,7 @@ export default {
   computed: {
     cssClass () {
       return [
-        `_type_${this.type}`,
+        `_type_${this.type}`
       ]
     }
   },
