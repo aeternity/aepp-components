@@ -13,7 +13,7 @@ export default {
     },
     'showBurger': {
       type: Boolean,
-      defaul: true
+      default: true
     },
     'navopen': {
       type: Boolean,
