@@ -28,7 +28,7 @@
 						{{identity.name}}
 					</div>
 				</div>
-				<ae-menu-entry v-for='entry in entries' :link='entry.link' :label='entry.label'></ae-menu-entry>
+				<ae-menu-entry v-for='(entry, index) in entries' :key="index" :link='entry.link' :label='entry.label'></ae-menu-entry>
 			</div>
 		</nav>
 	</div>

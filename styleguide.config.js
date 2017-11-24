@@ -18,21 +18,24 @@ module.exports = {
       baseBackground: '#fff',
       errorBackground: '#c00',
       codeBackground: '#f5f5f5', // #f5f5f5
-      sidebarBackground: '#f5f5f5', // #f5f5f5
+      sidebarBackground: '#f5f5f5' // #f5f5f5
     },
     fontFamily: {
       base: [
         '"Roboto"',
-        'sans-serif',
+        'sans-serif'
       ],
-      monospace: ['"RobotoMono"', 'monospace'],
-    },
+      monospace: ['"RobotoMono"', 'monospace']
+    }
   },
   styles: {
     Logo: {
       logo: {
         // animation: 'blink ease-in-out 300ms infinite'
-      },
-    },
+      }
+    }
   },
-};
+  mixins: [
+    'src/mixins/styleguide.js'
+  ]
+}
