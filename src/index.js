@@ -1,6 +1,6 @@
 import AeAddButton from './components/aeAddButton'
 import AeAmount from './components/aeAmount'
-import AeAmountInput from './components/aeAmount'
+import AeAmountInput from './components/aeAmountInput'
 import AeButton from './components/aeButton'
 import AeCategory from './components/aeCategory'
 import AeCloseButton from './components/aeCloseButton'

@@ -7,9 +7,16 @@ function startAndEnd (str, start = 6, end = 6) {
 function addressValid (address) {
   return /^0x[0-9a-fA-F]{40}$/i.test(address)
 }
+
+/**
+ * Displays an Ethereum Address and an optional blockie avatar
+ */
 export default {
   name: 'ae-address',
   props: {
+    /**
+     * The address to display. The validity is checked by a regex
+     */
     'address': {
       type: String,
       required: true,
@@ -17,10 +24,18 @@ export default {
         return addressValid(address)
       }
     },
+
+    /**
+     * Whether to show an avatar in front of the address
+     */
     'show-avatar': {
       type: Boolean,
       default: false
     },
+
+    /**
+     * Show the 'full' address or 'compact' (show first 6 and last 6 characters)
+     */
     'size': {
       type: String,
       default: 'full'
