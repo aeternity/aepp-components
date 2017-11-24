@@ -5,11 +5,16 @@ export default {
   name: 'ae-app-icon',
   props: {
     /**
-     * The app object, fot this component only the "icon" property is read
+     * src propery, location of the icon
      */
-    app: {
-      type: Object,
+    src: {
+      type: String,
       required: true
+    }
+  },
+  computed: {
+    cssStyle: {
+      'background-image': `url(${this.src})`
     }
   }
 }

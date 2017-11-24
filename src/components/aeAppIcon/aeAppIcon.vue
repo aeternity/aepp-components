@@ -1,6 +1,6 @@
 <template>
   <div class="app-icon">
-    <div :style='"background-image:url("+app.icon+")"' class="icon-image">
+    <div :style='cssStyle' class="icon-image">
     </div>
   </div>
 </template>
