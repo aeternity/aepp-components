@@ -22,6 +22,7 @@ import AeSwitch from './components/aeSwitch'
 import AeMenu from './components/aeMenu'
 import AeMenuEntry from './components/aeMenuEntry'
 import AeAppIcon from './components/aeAppIcon'
+import AeIcon from './components/aeIcon'
 import AeAddress from './components/aeAddress'
 import AeAddressInput from './components/aeAddressInput'
 
@@ -50,6 +51,7 @@ const AeppComponents = {
   AeMenu,
   AeMenuEntry,
   AeAppIcon,
+  AeIcon,
   AeAddress,
   AeAddressInput
 }
@@ -86,6 +88,7 @@ export { default as AeSwitch } from './components/aeSwitch/aeSwitch.vue'
 export { default as AeMenuEntry } from './components/aeMenuEntry/aeMenuEntry.vue'
 export { default as AeMenu } from './components/aeMenu/aeMenu.vue'
 export { default as AeAppIcon } from './components/aeAppIcon/aeAppIcon.vue'
+export { default as AeIcon } from './components/aeIcon/aeIcon.vue'
 export { default as AeAddress } from './components/aeAddress/aeAddress.vue'
 export { default as AeAddressInput } from './components/aeAddressInput/aeAddressInput.vue'
 
