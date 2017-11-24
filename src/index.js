@@ -8,7 +8,7 @@ import AeFilterItem from './components/aeFilterItem'
 import AeFilterList from './components/aeFilterList'
 import AeFilterSeparator from './components/aeFilterSeparator'
 import AeHeader from './components/aeHeader'
-import AeHeaderAlert from './components/aeHeaderAlert'
+import AeNotification from './components/aeNotification'
 import AeHeaderButton from './components/aeHeaderButton'
 import AeHr from './components/aeHr'
 import AeHrButton from './components/aeHrButton'
@@ -37,7 +37,7 @@ const AeppComponents = {
   AeFilterList,
   AeFilterSeparator,
   AeHeader,
-  AeHeaderAlert,
+  AeNotification,
   AeHeaderButton,
   AeHr,
   AeHrButton,
@@ -74,7 +74,7 @@ export { default as AeFilterItem } from './components/aeFilterItem/aeFilterItem.
 export { default as AeFilterList } from './components/aeFilterList/aeFilterList.vue'
 export { default as AeFilterSeparator } from './components/aeFilterSeparator/aeFilterSeparator.vue'
 export { default as AeHeader } from './components/aeHeader/aeHeader.vue'
-export { default as AeHeaderAlert } from './components/aeHeaderAlert/aeHeaderAlert.vue'
+export { default as AeNotification } from './components/AeNotification/AeNotification.vue'
 export { default as AeHeaderButton } from './components/aeHeaderButton/aeHeaderButton.vue'
 export { default as AeHr } from './components/aeHr/aeHr.vue'
 export { default as AeHrButton } from './components/aeHrButton/aeHrButton.vue'
