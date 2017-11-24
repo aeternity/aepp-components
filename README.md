@@ -1,6 +1,9 @@
 # Aeternity Aepp Components
 The aeternity aepp components are meant to provide aepp developers with reusable [Vue.js](https://vuejs.org) components that adhere to our [styleguide](https://github.com/aeternity/aepp-prototypes). Until the javascript comes bundled please use a build process such as [webpack](https://webpack.js.org/), [browserify](http://browserify.org/), [grunt](https://gruntjs.com/), [gulp](https://gulpjs.com/), etc.
 
+## Hackathon Notice
+We've rewritten and refactored the components for better usage in the hackathon (24.11.2017). Beware that the currently existing apps (like identity, aexistence/notary, wall, ...) still use older versions of this repository. In the near future we will update these repositories to use the latest aepp-components.
+
 ## Documentation
 
 Full documentation can be found at [http://components.aepps.com](http://components.aepps.com)
@@ -23,7 +26,7 @@ Vue.use(AeppComponents)
 
 // Method 2: global registration of single components
 Vue.use(AeppComponents.AeButton)
-// or 
+// or
 Vue.use(AeButton)
 
 // Method 3: local registration of single components
@@ -61,7 +64,7 @@ Contributions to the collection are welcome! If you wrote a cool component that 
 
 ### Things to Keep in Mind for Submissions
 * Check out the [styleguide](https://github.com/aeternity/aepp-prototypes)! Keeping the components in sync visually will make for a more unified aepp user experience.
-* Follow [Vue.js's Tips & Best Practices](https://012.vuejs.org/guide/best-practices.html). 
+* Follow [Vue.js's Tips & Best Practices](https://012.vuejs.org/guide/best-practices.html).
 ** Especially so that all states are handled via props, logic is kept to a minimum & communication takes place via events
 * Give it a descriptive name with "ae" as a prefix (ie. aeAddressInput, aeHeaderAlert, aeAppIcon)
 * Bonus: Make it do more than one thing
