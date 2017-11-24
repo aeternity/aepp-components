@@ -7,6 +7,7 @@
     "test": "npm run unit && npm run lint",
     "unit": "jest",
     "build": "node build/build.js",
+    "watch": "node build/watch.js",
     "lint": "eslint --ext .js,.vue src",
     "prepublish": "npm test && npm run build",
     "styleguide": "vue-styleguidist server",
