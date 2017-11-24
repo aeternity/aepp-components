@@ -3,4 +3,10 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-export default {}
+const router = new VueRouter({
+
+})
+
+export default {
+  router
+}

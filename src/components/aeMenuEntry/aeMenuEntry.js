@@ -8,7 +8,7 @@ export default {
      * Where does the menu link to (uses router-link)
      */
     link: {
-      type: String,
+      type: [String, Object],
       required: true
     },
 

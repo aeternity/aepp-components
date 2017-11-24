@@ -25,7 +25,7 @@ module.exports = {
         '"Roboto"',
         'sans-serif'
       ],
-      monospace: ['"RobotoMono"', 'monospace'],
+      monospace: ['"RobotoMono"', 'monospace']
     }
   },
   styles: {
@@ -38,4 +38,4 @@ module.exports = {
   mixins: [
     'src/mixins/styleguide.js'
   ]
-};
+}

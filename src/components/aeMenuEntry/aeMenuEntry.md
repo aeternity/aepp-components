@@ -1,6 +1,4 @@
-```js
-<ae-menu-entry :link="/content1" label="Content One"></ae-menu-entry>
-```
-```js
-<ae-hurr :link="/content1" label="Content One"></ae-hurr>
+With a Link to /foo
+```javascript
+<ae-menu-entry :link="/foo" :label="Foo"></ae-menu-entry>
 ```
