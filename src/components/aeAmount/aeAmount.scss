@@ -1,36 +1,38 @@
 @import "../variables";
 
 .ae-amount {
-  display: flex;
-  border-radius: 10px;
-  border: solid 2px $smoke;
-  height: 70px;
-  background-color: $white;
-
-  button, input {
+  text-align: right;
+  font-weight: 300;
+  &.grey {
+    color: $grey;
+    background-color: #fff;
+  }
+  &.dark {
+    color: #000;
+    background-color: #fff;
+  }
+  &.transparent {
+    color: #fff;
     background: none;
-    border: none;
+  }
+  &.white {
+    color: #fff;
+    background-color: #000;
+  }
+  &.med {
+    width: 180px;
     font-size: 40px;
-    font-weight: 300;
-    height: 100%;
-    line-height: 100%;
+    .unit {
+      display: inline;
+      font-size: 14px;
+    }
   }
-
-  button {
-    width: 62px;
-    flex-shrink: 0;
-  }
-
-  input {
-    text-align: right;
-    width: 1px;
-    flex-grow: 1;
-  }
-
-  span {
-    font-size: 14px;
-    flex-shrink: 0;
-    line-height: 100px;
-    margin: 0 5px;
+  &.large {
+    width: 250px;
+    font-size: 60px;
+    .unit {
+      display: inline;
+      font-size: 20px;
+    }
   }
 }

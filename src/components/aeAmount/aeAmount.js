@@ -1,4 +1,4 @@
 export default {
-  name: 'ae-balance',
+  name: 'ae-amount',
   props: ['value', 'size', 'color']
 }

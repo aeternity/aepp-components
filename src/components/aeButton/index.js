@@ -1,5 +1,5 @@
-import aeButton from './aeButton.vue'
+import AeButton from './aeButton.vue'
 
 export default function install (Vue) {
-  Vue.component('ae-button', aeButton)
+  Vue.component('ae-button', AeButton)
 }

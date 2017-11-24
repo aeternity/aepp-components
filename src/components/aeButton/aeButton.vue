@@ -1,6 +1,9 @@
 <template>
-  <button class="button" :class="{ [size]: size, [color]: color }">
-    <slot />
+  <button class="ae-button" :class="cssClass">
+    <div class="inner">
+      <slot>
+      </slot>
+    </div>
   </button>
 </template>
 

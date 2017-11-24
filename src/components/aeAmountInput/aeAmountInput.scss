@@ -1,0 +1,36 @@
+@import "../variables";
+
+.ae-amount-input {
+  display: flex;
+  border-radius: 10px;
+  border: solid 2px $smoke;
+  height: 70px;
+  background-color: $white;
+
+  button, input {
+    background: none;
+    border: none;
+    font-size: 40px;
+    font-weight: 300;
+    height: 100%;
+    line-height: 100%;
+  }
+
+  button {
+    width: 62px;
+    flex-shrink: 0;
+  }
+
+  input {
+    text-align: right;
+    width: 1px;
+    flex-grow: 1;
+  }
+
+  span {
+    font-size: 14px;
+    flex-shrink: 0;
+    line-height: 100px;
+    margin: 0 5px;
+  }
+}

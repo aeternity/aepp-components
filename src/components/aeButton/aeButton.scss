@@ -1,52 +1,64 @@
 @import "../variables";
 
-button.button {
+.ae-button {
   display: block;
   border: none;
   border-radius: 100px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
   color: #fff;
-  &.normal {
-    font-size: 16px;
-    height: 40px;
-    width: 100px;
+  &._active_true{
+    //opacity: 0.5;
+    //cursor: not-allowed;
   }
-  &.medium {
-    font-size: 16px;
-    height: 45px;
-    width: 141px;
-  }
-  &.large {
-    font-size: 17px;
-    height: 50px;
-    width: 305px;
-  }
-  &.pink {
-    background-color: $maegenta;
-  }
-  &.purple {
-    background-color: $aubergine;
-  }
-  &.lightgrey {
-    background-color: $silver;
-    color: #000;
-  }
-  &.white {
-    background-color: #fff;
-    color: #000;
-  }
-  &.grey {
-    background-color: $grey;
-  }
-  &.inactive {
+  &._active_false {
     opacity: 0.5;
     cursor: not-allowed;
   }
-  &.label {
-    width: 100px;
-    height: 30px;
-    font-size: 12px;
-    letter-spacing: 0.2px;
-    text-transform: uppercase;
+
+  &._size{
+    &_smaller {
+      font-size: 16px;
+      height: 40px;
+      width: 100px;
+    }
+    &_small {
+      font-size: 16px;
+      height: 40px;
+      width: 100px;
+    }
+    &_medium {
+      font-size: 16px;
+      height: 45px;
+      width: 141px;
+    }
+    &_large {
+      font-size: 17px;
+      height: 50px;
+      width: 305px;
+    }
   }
+
+  &._type{
+    &_plain {
+      background-color: transparent;
+      color: #000;
+    }
+    &_boring {
+      background-color: #fff;
+      color: #000;
+    }
+    &_normal {
+      background-color: $silver;
+      color: #000;
+    }
+    &_exciting {
+      background-color: $maegenta;
+    }
+    &_dramatic {
+      background-color: $silver;
+      color: #F00;
+      border:1px solid #F00;
+    }
+  }
+
 }

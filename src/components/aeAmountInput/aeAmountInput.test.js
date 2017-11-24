@@ -11,7 +11,7 @@ describe('AeAmount', () => {
   })
 
   it('renders the correct markup', () => {
-    expect(wrapper.html()).toContain('<div class="ae-amount">')
+    expect(wrapper.html()).toContain('<div class="ae-amount-input">')
     expect(wrapper.contains('input'))
     expect(wrapper.html()).toContain('<span>Æ</span>')
   })
