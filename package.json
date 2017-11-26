@@ -1,6 +1,6 @@
 {
   "name": "@aeternity/aepp-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable Vue components for aeternity aepp projects",
   "main": "dist/aepp-components.js",
   "scripts": {
