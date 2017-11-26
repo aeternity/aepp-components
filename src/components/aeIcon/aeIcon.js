@@ -12,7 +12,8 @@ export default {
   name: 'ae-icon',
   props: {
     name: {
-      type: String
+      type: String,
+      required: true
     }
   },
   computed: {
