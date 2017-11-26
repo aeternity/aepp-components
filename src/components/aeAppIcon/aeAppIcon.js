@@ -13,8 +13,10 @@ export default {
     }
   },
   computed: {
-    cssStyle: {
-      'background-image': `url(${this.src})`
+    cssStyle () {
+      return {
+        'background-image': `url(${this.src})`
+      }
     }
   }
 }
