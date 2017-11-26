@@ -5,11 +5,9 @@
   font-weight: 300;
   &.grey {
     color: $grey;
-    background-color: #fff;
   }
   &.dark {
     color: #000;
-    background-color: #fff;
   }
   &.transparent {
     color: #fff;
@@ -17,7 +15,6 @@
   }
   &.white {
     color: #fff;
-    background-color: #000;
   }
   &.med {
     width: 180px;
