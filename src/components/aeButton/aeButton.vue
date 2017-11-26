@@ -1,12 +1,11 @@
 <template>
-  <button class="ae-button" :class="cssClass">
+  <button class="ae-button" :class="cssClass" @click="$emit('click')">
     <div class="inner">
-      <slot name='icon'>
+      <slot name='icon' :class="['ae-button__icon', sizeModifier, hasLabelModifier]">
       </slot>
 
-      <div v-if='hasDefaultSlot' class="label">
-        <slot>
-        </slot>
+      <div v-if='hasLabel' :class="['label', sizeModifier, typeModifier]">
+        <slot></slot>
       </div>
     </div>
   </button>

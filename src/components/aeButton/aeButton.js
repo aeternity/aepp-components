@@ -37,12 +37,27 @@ export default {
     hasDefaultSlot () {
       return !!this.$slots.default
     },
+    hasLabel () {
+      return this.hasDefaultSlot
+    },
+    sizeModifier () {
+      return `_size_${this.size}`
+    },
+    typeModifier () {
+      return `_type_${this.type}`
+    },
+    activeModifier () {
+      return `_active_${!this.inactive}`
+    },
+    hasLabelModifier () {
+      return `_has-label_${this.hasLabel}`
+    },
     cssClass () {
       return [
-        `_size_${this.size}`,
-        `_type_${this.type}`,
-        `_active_${!this.inactive}`,
-        `_has_label_${this.hasDefaultSlot}`
+        this.sizeModifier,
+        this.typeModifier,
+        this.activeModifier,
+        this.hasLabelModifier
       ]
     }
   }
