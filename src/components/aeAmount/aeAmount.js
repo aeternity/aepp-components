@@ -8,8 +8,8 @@ export default {
     color: {
     },
     unit: {
-      type : [String, Boolean],
-      default : 'eth'
+      type: [String, Boolean],
+      default: 'eth'
     }
   },
   computed: {
@@ -19,10 +19,10 @@ export default {
     colorModifier () {
       return `_color_${this.color}`
     },
-    cssClass() {
+    cssClass () {
       return [
         this.sizeModifier,
-        this.colorModifier,
+        this.colorModifier
       ]
     }
   }
