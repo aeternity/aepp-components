@@ -22,7 +22,7 @@
 
   &:not(._size_smaller){/*_size_smaller is a special case*/
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
-    &_type{
+    &._type{
       &_plain {
         background-color: transparent;
         color: $black;
