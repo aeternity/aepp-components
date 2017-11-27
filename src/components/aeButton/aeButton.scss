@@ -80,11 +80,11 @@
       }
       &_small{
         font-size: 14px;
-        padding:8px 20px;
+        padding:5px 15px;
       }
       &_medium{
         font-size: 18px;
-        padding:14px 32px;
+        padding:10px 30px;
       }
       &_large{
         padding:30px 45px;
@@ -93,28 +93,35 @@
     }
   }
 
-  &__icon{
-    &._has-label_true{
+  &._has-label_true{
+    .ae-icon{
       margin-left:10px;
     }
-
-    &.size {
-      &_smaller{
+  }
+  &._has-label_false._size{
+    &_smaller{
+      .ae-icon {
         width: 12px;
         height: 12px;
         margin: 4px;
       }
-      &_small{
+    }
+    &_small{
+      .ae-icon {
         width: 26px;
         height: 26px;
         margin: 4px;
       }
-      &_medium{
+    }
+    &_medium{
+      .ae-icon {
         width: 34px;
         height: 34px;
         margin: 8px;
       }
-      &_large{
+    }
+    &_large{
+      .ae-icon {
         width: 56px;
         height: 56px;
         margin: 16px;
