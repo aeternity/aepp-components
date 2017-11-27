@@ -3,33 +3,38 @@
 .ae-amount {
   text-align: right;
   font-weight: 300;
-  &.grey {
-    color: $grey;
-  }
-  &.dark {
-    color: #000;
-  }
-  &.transparent {
-    color: #fff;
-    background: none;
-  }
-  &.white {
-    color: #fff;
-  }
-  &.med {
-    width: 180px;
-    font-size: 40px;
-    .unit {
-      display: inline;
-      font-size: 14px;
+  &._color{
+    &_grey {
+      color: $grey;
+    }
+    &_dark {
+      color: #000;
+    }
+    &_transparent {
+      color: #fff;
+      background: none;
+    }
+    &_white {
+      color: #fff;
     }
   }
-  &.large {
-    width: 250px;
-    font-size: 60px;
-    .unit {
-      display: inline;
-      font-size: 20px;
+  &._size{
+    &_med {
+      width: 180px;
+      font-size: 40px;
+      .unit {
+        display: inline;
+        font-size: 14px;
+      }
     }
+    &_large {
+      width: 250px;
+      font-size: 60px;
+      .unit {
+        display: inline;
+        font-size: 20px;
+      }
+    }
+
   }
 }

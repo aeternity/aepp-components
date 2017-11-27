@@ -1,7 +1,7 @@
 <template>
-  <div :class="`ae-amount${ this.size ? ' ' + this.size : ''}${ this.color ? ' ' + this.color : ''}`">
+  <div class="ae-amount" :class="cssClass">
     {{ this.value }}
-    <div class="unit">Æ</div>
+    <div v-if='unit' class="unit">{{unit}}</div>
   </div>
 </template>
 
