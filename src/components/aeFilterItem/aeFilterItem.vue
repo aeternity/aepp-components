@@ -1,5 +1,6 @@
 <template>
   <router-link :to="to" :class="{ 'ae-filter-item': true, active }">
+    <!-- Filter item content -->
     <slot />
   </router-link>
 </template>
@@ -8,7 +9,13 @@
   export default {
     name: 'ae-filter-item',
     props: {
+      /**
+       * Path, that will be passed to RouterLink
+       */
       to: { type: [String, Object], required: false },
+      /**
+       * Mark the filter item as active
+       */
       active: { type: Boolean, required: false }
     }
   }
