@@ -15,6 +15,12 @@
     },
     methods: {
       click (e) {
+        /**
+         * Click event
+         *
+         * @event click
+         * @type {MouseEvent}
+         */
         this.$emit('click', e)
       }
     }
