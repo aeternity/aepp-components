@@ -59,9 +59,7 @@ export default {
       return this.identity ? helperMixin.methods.readableEther(this.identity.balance) : 0
     },
     tokenAmount () {
-      return this.identity && this.identity.tokenBalance ?
-        helperMixin.methods.readableToken(this.identity.tokenBalance)
-        : '0'
+      return this.identity && this.identity.tokenBalance ? helperMixin.methods.readableToken(this.identity.tokenBalance) : '0'
     },
     address () {
       return this.identity.address
