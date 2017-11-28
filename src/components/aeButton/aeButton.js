@@ -14,6 +14,9 @@ const aeButtonSizes = [
 export default {
   name: 'ae-button',
   props: {
+    /**
+     * Type of button, possible values: 'plain', 'boring', 'normal', 'exciting', 'dramatic'
+     */
     type: {
       type: String,
       validator: (value) => {
@@ -21,6 +24,9 @@ export default {
       },
       default: 'normal'
     },
+    /**
+     * Size of button, possible values: 'smaller', 'small', 'medium', 'large'
+     */
     size: {
       type: String,
       validator: (value) => {
