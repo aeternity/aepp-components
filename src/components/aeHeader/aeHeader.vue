@@ -1,8 +1,10 @@
 <template>
   <div class="ae-header">
     <header class="desktop">
+      <router-link to="/">
         <img :src="require('../../assets/logo-small.png')" alt="Go to main page" />
         {{name}}
+      </router-link>
       <div>
         <slot />
       </div>
@@ -11,7 +13,9 @@
       <div>
         <slot name="mobile-left" />
       </div>
+      <router-link to="/">
         {{name}}
+      </router-link>
       <div>
         <slot name="mobile-right" />
       </div>
