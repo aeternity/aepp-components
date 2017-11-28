@@ -8,6 +8,9 @@ import AeFilterSeparator from './components/aeFilterSeparator'
 import AeHeader from './components/aeHeader'
 import AeNotification from './components/aeNotification'
 import AeHeaderButton from './components/aeHeaderButton'
+import AeHr from './components/aeHr'
+import AeHrButton from './components/aeHrButton'
+import AeHrProgressbar from './components/aeHrProgressbar'
 import AeIdentity from './components/aeIdentity'
 import AeIdentityAvatar from './components/aeIdentityAvatar'
 import AeMain from './components/aeMain'
@@ -31,6 +34,9 @@ const AeppComponents = {
   AeHeader,
   AeNotification,
   AeHeaderButton,
+  AeHr,
+  AeHrButton,
+  AeHrProgressbar,
   AeIdentity,
   AeIdentityAvatar,
   AeMain,
@@ -62,6 +68,9 @@ export { default as AeFilterSeparator } from './components/aeFilterSeparator/aeF
 export { default as AeHeader } from './components/aeHeader/aeHeader.vue'
 export { default as AeNotification } from './components/aeNotification/aeNotification.vue'
 export { default as AeHeaderButton } from './components/aeHeaderButton/aeHeaderButton.vue'
+export { default as AeHr } from './components/aeHr'
+export { default as AeHrButton } from './components/aeHrButton'
+export { default as AeHrProgressbar } from './components/aeHrProgressbar'
 export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue'
 export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue'
 export { default as AeMain } from './components/aeMain/aeMain.vue'
