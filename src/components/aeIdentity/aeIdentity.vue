@@ -5,9 +5,15 @@
         <ae-identity-avatar :address='identity ? identity.address : ""'/>
         <span class="identity-info _short" v-if="collapsed">{{shortAddress}}</span>
 
-        <div :class="{balance: true, '_small-font': collapsed}">
-          <span class="amount">{{amount}}</span>
-          <span class="currency-symbol">ETH</span>
+        <div>
+          <div v-if='tokenAmount' :class="{balance: true, '_small-font': collapsed}">
+            <span class="amount">{{tokenAmount}}</span>
+            <span class="currency-symbol">AE</span>
+          </div>
+          <div :class="{balance: true, '_small-font': tokenAmount}">
+            <span class="amount">{{amount}}</span>
+            <span class="currency-symbol">ETH</span>
+          </div>
         </div>
       </div>
       <div v-if="!collapsed">

@@ -15,12 +15,13 @@ export default {
   },
   props: {
     /**
-    * An object representing a identity. Must have a adress string and a balance BigNumber (bn.js)
+    * An object representing a identity. Must have a adress string a tokenBalance and a balance BigNumber (bn.js)
     */
     identity: {
       type: Object,
       default: {
         address: '0x0',
+        tokenBalance: new BN('0', 10),
         balance: new BN('0', 10)
       }
     },
@@ -56,6 +57,11 @@ export default {
   computed: {
     amount () {
       return this.identity ? helperMixin.methods.readableEther(this.identity.balance) : 0
+    },
+    tokenAmount () {
+      return this.identity && this.identity.tokenBalance ?
+        helperMixin.methods.readableToken(this.identity.tokenBalance)
+        : '0'
     },
     address () {
       return this.identity.address

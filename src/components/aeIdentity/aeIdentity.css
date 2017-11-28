@@ -61,13 +61,9 @@
   letter-spacing: 1px;
 }
 .collapsed .identity-info{
-  /*background-color:red;*/
   font-size:10px;
   align-self:flex-end;
   display:none;
-  /*position:absolute;*/
-  /*top:3px;*/
-  /*right:5px*/
 }
 
 .identity-info._long{
@@ -75,33 +71,41 @@
   overflow: hidden;
 }
 
+.balance {
+  font-weight:300;
+}
 
 .balance {
-}
-.balance .amount {
   font-family: Roboto;
-  font-weight:300;
-  font-size: 60px;
+  font-size: 40px;
   color: #FFFFFF;
   letter-spacing: 0;
+  text-align:right;
 }
 .collapsed .balance {
   align-self:flex-end;
 }
-.collapsed .balance .amount {
+.collapsed .balance {
   font-size: 36px;
 }
-.balance .currency-symbol {
-  font-size: 0.7em;
-  color: #FFFFFF;
-  letter-spacing: 2.4px;
+
+.balance._small-font {
+  font-size: 16px;
 }
-.ae-identity.collapsed .avatar {
+
+.balance .currency-symbol {
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0.12em;
+}
+.ae-identity.collapsed .ae-identity-avatar{
   width:40px;
   height:40px;
+  margin-bottom:0px;
 }
-.ae-identity .avatar {
+.ae-identity .ae-identity-avatar{
   margin-right:2px;
+  margin-bottom:10px;
 }
 
 .bottom-inserted-elements{
