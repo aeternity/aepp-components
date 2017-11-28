@@ -13,6 +13,7 @@
             <ae-icon slot='icon' name='close' />
           </ae-button>
         </header>
+        <!-- Modal content -->
         <slot />
       </main>
     </div>
@@ -28,6 +29,9 @@ import AeIcon from '../aeIcon/aeIcon.vue'
 export default {
   name: 'ae-modal',
   props: {
+    /**
+     * Modal title
+     */
     title: String
   },
   components: {
@@ -38,6 +42,12 @@ export default {
   },
   methods: {
     close () {
+      /**
+       * Close event
+       *
+       * @event close
+       * @type {undefined}
+       */
       this.$emit('close')
     }
   }
