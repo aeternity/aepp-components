@@ -1,5 +1,5 @@
 <template>
-  <div :style='style' class="avatar"></div>
+  <div :style='style' class="avatar ae-identity-avatar"></div>
 </template>
 
 <script src='./aeIdentityAvatar.js'/>
