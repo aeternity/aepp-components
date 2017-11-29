@@ -1,10 +1,10 @@
 export default {
   name: 'ae-switch',
-  props: [
-    'name',
-    'choices',
-    'default'
-  ],
+  props: {
+    name: String,
+    choices: Array,
+    default: {}
+  },
   data () {
     return {
       selected: null

@@ -1,8 +1,10 @@
 <template>
   <div class="ae-notification" :class='cssClass'>
     <content>
+      <!-- Notification content -->
       <slot />
     </content>
+    <!-- Notification button -->
     <slot name='button'>
       <ae-button @click="close" >
         <ae-icon slot='icon' name='close'/>

@@ -1,6 +1,6 @@
 <template>
   <span class="ae-label">
-     <!-- Use this slot header -->
+     <!-- Label content -->
     <slot />
   </span>
 </template>

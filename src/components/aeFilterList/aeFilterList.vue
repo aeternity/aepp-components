@@ -1,5 +1,6 @@
 <template>
   <nav class="ae-filter-list">
+    <!-- Filter list content -->
     <slot />
   </nav>
 </template>

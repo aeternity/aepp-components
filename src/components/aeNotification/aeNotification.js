@@ -12,6 +12,9 @@ const aeNotificationTypes = [
 export default {
   name: 'ae-notification',
   props: {
+    /**
+     * Type of notification, possible values: 'plain', 'boring', 'normal', 'exciting', 'dramatic'
+     */
     type: {
       type: String,
       validator: (value) => {
@@ -33,6 +36,12 @@ export default {
   },
   methods: {
     close (e) {
+      /**
+       * Close event
+       *
+       * @event close
+       * @type {MouseEvent}
+       */
       this.$emit('close', e)
     }
   }
