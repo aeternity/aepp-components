@@ -23,7 +23,10 @@ var webpackConfig = {
           presets: ['env'],
         },
       }, {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(svg)$/,
+        loader: 'string-loader',
+      }, {
+        test: /\.(png|jpg|gif)$/,
         loader: 'url-loader',
       }, {
         test: /\.scss$/,

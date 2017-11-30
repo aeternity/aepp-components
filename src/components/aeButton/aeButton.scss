@@ -22,7 +22,7 @@
 
   &:not(._size_smaller){/*_size_smaller is a special case*/
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
-    &._type{
+    &._invert_false._type{
       &_plain {
         background-color: transparent;
         color: $black;
@@ -42,6 +42,28 @@
       &_dramatic {
         background-color: $maegenta;
         color: $white;
+      }
+    }
+    &._invert_true._type{
+      &_plain {
+        background-color: transparent;
+        color: $black;
+      }
+      &_boring {
+        color: $silver;
+        background-color: $white;
+      }
+      &_normal {
+        color: $grey;
+        background-color: $white;
+      }
+      &_exciting {
+        color: $aubergine;
+        background-color: $white;
+      }
+      &_dramatic {
+        color: $maegenta;
+        background-color: $white;
       }
     }
   }
