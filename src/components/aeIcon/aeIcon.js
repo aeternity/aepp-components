@@ -1,13 +1,5 @@
-const aeIcons = [
-  'arrow',
-  'burger',
-  'check',
-  'chevron',
-  'close',
-  'error',
-  'info',
-  'plus'
-]
+import iconSvgStrings from '../../assets/icons'
+
 const aeIconTypes = [
   'plain',
   'boring',
@@ -15,7 +7,6 @@ const aeIconTypes = [
   'exciting',
   'dramatic'
 ]
-const iconSvgStrings = aeIcons.map(i => require(`../../assets/icons/${i}.svg`))
 export default {
   name: 'ae-icon',
   props: {
@@ -25,9 +16,7 @@ export default {
     name: {
       type: String,
       required: true,
-      validator: (value) => {
-        return aeIcons.find(e => e === value)
-      }
+      validator: value => !!iconSvgStrings[value]
     },
     /**
     * Type of icon, possible values: 'plain', 'boring', 'normal', 'exciting', 'dramatic'
@@ -53,7 +42,7 @@ export default {
       ]
     },
     iconSvg () {
-      return iconSvgStrings[aeIcons.indexOf(this.name)]
+      return iconSvgStrings[this.name]
     }
   }
 }
