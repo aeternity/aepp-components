@@ -23,3 +23,21 @@
   <ae-button inactive>Inactive</ae-button>
 </div>
 ```
+
+with aeIcon and label
+```js
+<div>
+  <ae-button type="normal">
+    <ae-icon slot="icon" name="error" />
+    Error
+  </ae-button>
+  <ae-button type="exciting">
+    <ae-icon type="exciting" invert slot="icon" name="check" />
+    Check
+  </ae-button>
+  <ae-button type="dramatic">
+    <ae-icon type="dramatic" invert slot="icon" name="close" />
+    Close
+  </ae-button>
+</div>
+```
