@@ -42,10 +42,6 @@
   .ae-button {
     float: right;
     margin-right: 25px;
-
-    &:before, &:after {
-      background-color: $white;
-    }
   }
 
   @media (max-width: $screen-phone) {
