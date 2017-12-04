@@ -1,30 +1,48 @@
-/*
- *arrow
- *burger
- *check
- *chevron
- *close
- *error
- *info
- */
+import iconSvgStrings from '../../assets/icons'
 
+const aeIconTypes = [
+  'plain',
+  'boring',
+  'normal',
+  'exciting',
+  'dramatic'
+]
 export default {
   name: 'ae-icon',
   props: {
+    /**
+    * Name of icon, possible values: 'arrow', 'burger', 'check', 'chevron', 'close', 'error', 'info', 'plus'
+    */
     name: {
       type: String,
-      required: true
+      required: true,
+      validator: value => !!iconSvgStrings[value]
+    },
+    /**
+    * Type of icon, possible values: 'plain', 'boring', 'normal', 'exciting', 'dramatic'
+    */
+    type: {
+      type: String,
+      validator: (value) => {
+        return aeIconTypes.find(e => e === value)
+      },
+      default: 'normal'
+    },
+    invert: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
-    iconUrl () {
-      return require(`../../assets/icons/${this.name}.svg`)
+    cssClass () {
+      return [
+        `_name_${this.name}`,
+        `_type_${this.type}`,
+        `_invert_${this.invert}`
+      ]
     },
-    cssStyle () {
-      return {
-        'background-image': `url(${this.iconUrl})`
-      }
+    iconSvg () {
+      return iconSvgStrings[this.name]
     }
-
   }
 }

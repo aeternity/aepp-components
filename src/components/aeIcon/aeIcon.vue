@@ -1,5 +1,5 @@
 <template>
-  <span class="ae-icon" :style='cssStyle'/>
+  <span class="ae-icon" :class='cssClass' v-html='iconSvg'/>
 </template>
 <script src="./aeIcon.js" />
 /* eslint no-unused-expressions: "off" */

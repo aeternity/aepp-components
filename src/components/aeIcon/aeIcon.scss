@@ -1,7 +1,33 @@
+@import "../variables";
 .ae-icon {
   display:inline-block;
   width:24px;
   height:24px;
-  background-size:contain;
-  background-repeat: no-repeat;
+  svg {
+    width:100%;
+    height:100%;
+  }
+  &._type{
+    &_plain {
+      fill: $white;
+    }
+    &_boring {
+      fill: $grey;
+    }
+    &_normal {
+      fill: $black;
+    }
+    &_exciting {
+      fill: $aubergine;
+    }
+    &_dramatic {
+      fill: $maegenta;
+    }
+  }
+  &._invert_true._type{
+    &_exciting ,
+    &_dramatic {
+      fill: $white;
+    }
+  }
 }

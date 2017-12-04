@@ -6,8 +6,8 @@
     </content>
     <!-- Notification button -->
     <slot name='button'>
-      <ae-button @click="close" >
-        <ae-icon slot='icon' name='close'/>
+      <ae-button :type='type' invert  @click="close" >
+        <ae-icon slot='icon' :type='type' name='close'/>
       </ae-button>
     </slot>
   </div>

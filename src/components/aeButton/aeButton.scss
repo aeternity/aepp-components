@@ -44,6 +44,24 @@
         color: $white;
       }
     }
+    &._invert_true._type{
+      &_boring {
+        color: $silver;
+        background-color: $white;
+      }
+      &_normal {
+        color: $grey;
+        background-color: $white;
+      }
+      &_exciting {
+        color: $aubergine;
+        background-color: $white;
+      }
+      &_dramatic {
+        color: $maegenta;
+        background-color: $white;
+      }
+    }
   }
 
   &._size_smaller{/*special case for _size_smaller*/

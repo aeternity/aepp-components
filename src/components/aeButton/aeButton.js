@@ -37,6 +37,10 @@ export default {
     inactive: {
       type: Boolean,
       default: false
+    },
+    invert: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -58,12 +62,16 @@ export default {
     hasLabelModifier () {
       return `_has-label_${this.hasLabel}`
     },
+    invertModifier () {
+      return `_invert_${this.invert}`
+    },
     cssClass () {
       return [
         this.sizeModifier,
         this.typeModifier,
         this.activeModifier,
-        this.hasLabelModifier
+        this.hasLabelModifier,
+        this.invertModifier
       ]
     }
   }
