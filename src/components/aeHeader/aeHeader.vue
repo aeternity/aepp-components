@@ -1,18 +1,25 @@
 <template>
   <div class="ae-header">
     <header class="desktop">
+      <router-link to="/">
         <img :src="require('../../assets/logo-small.png')" alt="Go to main page" />
         {{name}}
+      </router-link>
       <div>
+        <!-- The content of the right side on desktop -->
         <slot />
       </div>
     </header>
     <header class="phone">
       <div>
+        <!-- The content of the left side on mobile -->
         <slot name="mobile-left" />
       </div>
+      <router-link to="/">
         {{name}}
+      </router-link>
       <div>
+        <!-- The content of the right side on mobile -->
         <slot name="mobile-right" />
       </div>
     </header>
@@ -20,9 +27,15 @@
 </template>
 
 <script>
+  /**
+   * Header of aepplication
+   */
   export default {
     name: 'ae-header',
     props: {
+      /**
+       * Name of aepplication
+       */
       name: String
     }
   }
