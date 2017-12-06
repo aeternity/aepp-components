@@ -1,5 +1,5 @@
 <template>
-  <div class="app-icon">
+  <div class="ae-app-icon app-icon">
     <div :style='cssStyle' class="icon-image">
     </div>
   </div>
