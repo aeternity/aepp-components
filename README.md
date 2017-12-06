@@ -129,74 +129,200 @@ app.vue
 <template>
   <div id="app">
     <ae-main>
-      <div class="example">
-        <ae-amount :value="1.337" :isFullWidth="true"></ae-amount>
-      </div>
+      <ae-header name='AppName'>
+        <ae-button type='dramatic'>Button 1</ae-button>
+        <ae-button type='dramatic'>Button 2</ae-button>
+      </ae-header>
 
-      <div class="example">
-        <ae-balance :value="1.337" :size="'large'" :color="'dark'"></ae-balance>
-      </div>
+      <h1>aeIcon</h1>
+      <h2>type: normal, name: arrow, burger, check, chevron, close, error, info </h2>
 
-      <div class="example">
-        <ae-button :label="'button'" :size="'large'" :color="'pink'">Button</ae-button>
-      </div>
+      <ae-icon name="arrow"/>
+      <ae-icon name="burger"/>
+      <ae-icon name="check"/>
+      <ae-icon name="chevron"/>
+      <ae-icon name="close"/>
+      <ae-icon name="error"/>
+      <ae-icon name="info"/>
+      <h2>type: boring, exciting, dramatic</h2>
+      <ae-icon type='boring' name="arrow"/>
+      <ae-icon type='boring' name="burger"/>
+      <ae-icon type='exciting' name="check"/>
+      <ae-icon type='exciting' name="chevron"/>
+      <ae-icon type='dramatic' name="close"/>
+      <ae-icon type='dramatic' name="error"/>
 
-      <div class="example">
-        <ae-button2 @click="buttonPress('button2')" :secondary="false">Button2</ae-button2>
-      </div>
 
-      <div class="example">
-        <ae-category>Category</ae-category>
-      </div>
+      <h1>aeButton</h1>
+      <h2>type: plain, boring, exciting, dramatic</h2>
+      <ae-button type='plain'>Button</ae-button>
+      <ae-button type='boring'>Button</ae-button>
+      <ae-button type='normal'>Button</ae-button>
+      <ae-button type='exciting'>Button</ae-button>
+      <ae-button type='dramatic'>Button</ae-button>
+      <h2>size: smaller, small, medium, large</h2>
 
-      <div class="example">
-        <ae-close-button @click="buttonPress('closeButton')"></ae-close-button>
-      </div>
+      <ae-button size='smaller'>Button</ae-button>
+      <ae-button type='dramatic' size='smaller'>Button</ae-button>
+      <ae-button size='small' type='plain'>Button</ae-button>
+      <ae-button size='small'>Button</ae-button>
+      <ae-button size='medium'>Button</ae-button>
+      <ae-button size='medium' type='exciting'>Button</ae-button>
+      <ae-button size='large'>Button</ae-button>
+      <ae-button size='large' type='dramatic'>Button</ae-button>
 
-      <div class="example">
-        <ae-filter-list :active="false">
-          <ae-filter-item :active="false" :to="'/'">Filter Item in List</ae-filter-item>
-          <ae-filter-separator></ae-filter-separator>
-          <ae-filter-item :active="true" :to="'/'">Filter Item  in List</ae-filter-item>
-        </ae-filter-list>
-      </div>
 
-      <div class="example">
-        <ae-header :name="'Header'">
-          <ae-header-button @click="buttonPress('header button')" :icon="false" :secondary="false">Header Button</ae-header-button>
-          <ae-header-button @click="buttonPress('header button')" :icon="true" :secondary="true">Æ</ae-header-button>
-        </ae-header>
-      </div>
+      <h3>aeButton size small</h3>
+      <hr>
 
-      <div class="example">
-        <ae-header-alert @close="buttonPress('alert close')">Alert</ae-header-alert>
-      </div>
+      <h3>aeButton with aeIcon</h3>
+      <ae-button size='smaller' type='boring'>
+        <ae-icon slot='icon' type='boring' name="close"/>
+      </ae-button>
+      <ae-button size='smaller' type='normal'>
+        <ae-icon slot='icon' name="close"/>
+      </ae-button>
+      <ae-button size='smaller' type='exciting'>
+        <ae-icon slot='icon' type='exciting' name="close"/>
+      </ae-button>
+      <ae-button size='smaller' type='dramatic'>
+        <ae-icon slot='icon' type='dramatic' name="close"/>
+      </ae-button>
 
-      <div class="example" v-if="showModal">
-        <ae-modal @close="showModal = false">Modal</ae-modal>
-      </div>
+      <ae-button size='small' type='boring'>
+        <ae-icon slot='icon' invert type='boring' name="close"/>
+      </ae-button>
+      <ae-button size='medium' type='boring'>
+        <ae-icon slot='icon' invert type='boring' name="close"/>
+      </ae-button>
+      <ae-button size='large' type='boring'>
+        <ae-icon slot='icon' invert type='boring' name="close"/>
+      </ae-button>
 
-      <div class="example">
-        <ae-button2 @click="showModal = true" :secondary="false">
-          Modal
-        </ae-button2>
-      </div>
+      <ae-button size='medium' type='normal'>
+        <ae-icon slot='icon' name="arrow"/>
+      </ae-button>
 
-      <div class="example">
-        <ae-identity :active="true" :address="identity.address" :balance="identity.balance" :collapsed="false"></ae-identity>
-      </div>
+      <ae-button size='medium' type='exciting'>
+        <ae-icon slot='icon' invert type='exciting' name="check"/>
+      </ae-button>
 
-      <div class="example">
-        <ae-identity :active="false" :address="identity.address" :balance="identity.balance" :collapsed="true"></ae-identity>
-      </div>
+      <ae-button size='medium' type='dramatic'>
+        <ae-icon slot='icon' invert type='dramatic' name="chevron"/>
+      </ae-button>
 
-      <div class="example">
-        <ae-identity :active="true" :address="identity.address" :balance="identity.balance" :collapsed="false">
-          <ae-button2 @click="buttonPress('button2')" :secondary="false">Button2</ae-button2>
-          <ae-button2 @click="buttonPress('button2')" :secondary="false">Button2</ae-button2>
-        </ae-identity>
-      </div>
+      <h3>aeButton with aeIcon and label</h3>
 
+      <ae-button size='smaller' type='boring'>
+        <ae-icon type='boring' slot='icon' name="check"/>
+        Button
+      </ae-button>
+
+      <ae-button size='smaller' type='dramatic'>
+        <ae-icon type='dramatic' slot='icon' name="error"/>
+        Button
+      </ae-button>
+
+      <ae-button type='boring' size='small'>
+        <ae-icon type='boring' invert slot='icon' name="error"/>
+        Button
+      </ae-button>
+      <ae-button type='normal'>
+        <ae-icon slot='icon' name="info"/>
+        Button
+      </ae-button>
+
+      <ae-button type='exciting'>
+        <ae-icon type='exciting' invert slot='icon' name="arrow"/>
+        Button
+      </ae-button>
+
+      <ae-button size='large' type='dramatic'>
+        <ae-icon type='dramatic' invert slot='icon' name="error"/>
+        Button
+      </ae-button>
+
+
+      <h3>inactive</h3>
+      <ae-button inactive type='plain'>Button</ae-button>
+      <ae-button inactive type='boring'>Button</ae-button>
+      <ae-button inactive size='small' type='normal'>Button</ae-button>
+      <ae-button inactive type='exciting'>Button</ae-button>
+      <ae-button inactive size='large' type='dramatic'>Button</ae-button>
+
+      <ae-button inactive size='smaller' type='normal'>
+        <ae-icon slot='icon' name="check"/>
+      </ae-button>
+      <ae-button inactive size='medium' type='normal'>
+        <ae-icon slot='icon' name="close"/>
+      </ae-button>
+      <ae-button inactive size='large' type='exciting'>
+        <ae-icon slot='icon' invert type='exciting' name="burger"/>
+      </ae-button>
+
+      <h1>AeNotification</h1>
+      <ae-notification type='boring'>
+        Amet omnis tenetur minima voluptatum?
+      </ae-notification>
+      <ae-notification type='normal'>
+        Adipisicing minus ipsa omnis?
+      </ae-notification>
+      <ae-notification type='exciting'>
+        Amet omnis tenetur minima voluptatum?
+      </ae-notification>
+      <ae-notification type='dramatic'>
+        Adipisicing minus ipsa omnis?
+      </ae-notification>
+
+
+      <h1>AeAmount</h1>
+      <ae-amount value='12'/>
+
+      <h1>AeAmountInput</h1>
+      <ae-amount-input></ae-amount-input>
+
+      <h1>AeLabel</h1>
+      <ae-label>Label 1</ae-label>
+      <ae-label>Label 2</ae-label>
+      <ae-label>Label 3</ae-label>
+
+
+      <h1>AeIdentity</h1>
+      <ae-identity :active="true" :identity="{address:'0x1234567890987654321',balance:'1337210000000000000' }" :collapsed="false"></ae-identity>
+      <ae-identity :active="true" :identity="{address:'0x1234567890987654321',balance:'1337210000000000000' }" :collapsed="true"></ae-identity>
+
+      <ae-identity :active="false" :identity="{address:'0x1234567890987654321',balance:'1337210000000000000' }" :collapsed="false">
+        <ae-button size='small'>Button</ae-button>
+        <ae-button type='exciting' size='small'>Button</ae-button>
+      </ae-identity>
+
+      <h1>AePanel</h1>
+      <ae-panel>
+        <p>Lorem cum molestias non laudantium eos. Ad officia vel corrupti voluptatem eum Voluptas corporis debitis harum assumenda commodi suscipit sed. Corrupti error officia impedit eligendi corporis Ad labore nesciunt voluptates totam delectus Voluptatum</p>
+      </ae-panel>
+
+      <h1>AeSwitch</h1>
+      <ae-switch
+        name="example"
+        :choices="[
+          { label: 'Choice 1', value: 'choice1' },
+          { label: 'Choice 2', value: 'choice2' },
+          { label: 'Choice 3', value: 3 }
+        ]"
+        :default="3"
+      />
+
+      <h1>AeIdentityAvatar</h1>
+      <ae-identity-avatar address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
+
+      <h1>AeAddress</h1>
+      <ae-address address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
+      <ae-address size='short' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
+      <ae-address show-avatar address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
+      <ae-address show-avatar size='short' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
+
+      <h1>AeAddressInput</h1>
+      <ae-address-input></ae-address-input>
       <div class="example">
         Mixin Function readableEther: {{readableEther(identity.balance)}}
       </div>
