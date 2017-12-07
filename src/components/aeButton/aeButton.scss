@@ -20,10 +20,10 @@
     }
   }
 
-  &:not(._size_smaller):not(._type_plain) {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
-  }
   &:not(._size_smaller){/*_size_smaller is a special case*/
+    &:not(._type_plain) {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
+    }
     &._type{
       &_plain {
         background-color: transparent;
