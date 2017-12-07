@@ -74,26 +74,207 @@ import { aeHelperMixin } from '@aeternity/aepp-components'
 Contributions to the collection are welcome! If you wrote a cool component that adheres to our stylesguide and you think someone else could reuse it please fork this project and send us a pull request 💪 (Please note: This guide is as much for us as for you)
 
 ## Things to Keep in Mind for Submissions
+* Could your component be usefull to others? Ask yourself if it isn't too specific and narrow to your own use case.
 * Check out the [styleguide](https://github.com/aeternity/aepp-prototypes)! Keeping the components in sync visually will make for a more unified aepp user experience.
-* Follow [Vue.js's Tips & Best Practices](https://012.vuejs.org/guide/best-practices.html).
-** Especially so that all states are handled via props, logic is kept to a minimum & communication takes place via events
-* Give it a descriptive name with "ae" as a prefix (ie. aeAddressInput, aeHeaderAlert, aeAppIcon)
+* Follow [Vue.js's Tips & Best Practices](https://012.vuejs.org/guide/best-practices.html). **Especially so that all states are handled via props, logic is kept to a minimum & communication takes place via events**
+* Give it a descriptive name with "ae" as a prefix (ie. aeAddressInput)
 
-## Structuring the Component
-* Give the component a name property
-* Give it a camelcased directory inside `/src/components` like `/src/components/aeComponentName/`
-* Give the Folder a .vue file with the same name (ie. `aeComponentName.vue`) that includes template, script and style. Script and style may also be imported from separate files like `aeComponentName.js` and `aeComponentName.(s)css` (just add `/* eslint no-unused-expressions: "off" */` to keep the linter quiet)
-* Put an index.js file in the component directory which exports an install function. Ex:
+## New Component Submission Guidlines
+
+### Component Purpose
+
+The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<aeMenuEntry>` needs to be used inide of a `<aeMenu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not to specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it acually just a variant of a existing one?
+
+### Component Name
+
+Name it after what users will see, not what it represent in your application.
+#### good example
+```html
+<aeLabel>Category 1</aeLabel>
+```
+#### bad example
+```html
+<aeCategory>Category 1</aeCategory>
+```
+
+> Some developer might want to use the same visual element to display `tags` or `online statuses`. So she would end up writing `<aeCategory>Label 1</aeCategory>` or `<aeCategory>Offline</aeCategory>`🤦🏻‍♀️
+
+### Component file name and location
+Put the files in a camelcased directory inside `/src/components` like `/src/components/aeComponentName/`.
+Create a .vue file with the same name (ie. `aeComponentName.vue`) that includes template, script and style. Script and style may also be imported from separate files like `aeComponentName.js` and `aeComponentName.(s)css` (just add `/* eslint no-unused-expressions: "off" */` to keep the linter quiet)
 
 ```
-import aeMenuEntry from './aeMenuEntry.vue'
+aepp-components
+└── src
+    └── components
+        └── aeComponentName
+            ├── aeComponentName.js
+            ├── aeComponentName.md
+            ├── aeComponentName.scss
+            ├── aeComponentName.vue
+            └── index.js
+```
+
+Put an `index.js` file in the component directory which exports an install function. Ex:
+
+```
+import aeComponentName from './aeComponentName.vue'
 
 export default function install (Vue) {
-  Vue.component('ae-menu-entry', aeMenuEntry)
+  Vue.component('ae-component-name', aeComponentName)
 }
 ```
 
-* Add the component to the registry in `src/index.js` for easy usage with `Vue.use()`
+Add the component to the registry in `src/index.js` for easy usage with `Vue.use()`.
+
+### Component `name property`
+
+Give the component a name property
+
+```
+export default {
+  name: 'ae-component-name',
+  props: {
+  ...
+}
+
+```
+
+### Component complexity
+
+Components should be simple and function isolated from other components. Make them focus in a few simple things.
+Provide reasonable defaults that make use of simple functionality. Expand complex features with props.
+
+Try to avoid complex props objects, rather split your data into multiple props.
+
+Components should also not be too simple. No one needs a `<aeParagraph>` if it doesn't provide more value than a simple `<p>`.
+
+### Component dependency
+
+Your component should be **as _dumb_ as possible**. Complex data should always be passed via prop. Don't assme there will be a `router` or `store`.
+
+> every developer want's to be in charge of his own data and state managment, let them!
+
+Don't rely on external ressources (CDN content or APIs).
+
+> components that rely on external ressources can not be used offline or in a local intranet.
+>
+> Developers also can not choose if and when an application 'goes online' and exposes data.
+
+Sometimes there might be a good reason for exceptions though. If you provide a component that **has** to be tightly coupled to a API because of the intrinsic nature of the component, it might be ok.
+
+Always ask yourself, wouldn't it be better if you'd just provide an example, how to use the component with any external data source via prop?
+
+### Component composabilty
+
+Reuse other components inside your component. Design yours, so that other components can reuse it and create richer compositions.
+
+e.g:
+#### good example
+```html
+<template>
+  <div class="ae-notification" :class='cssClass'>
+    <content>
+      <!-- Notification content -->
+      <slot />
+    </content>
+    <!-- Notification button -->
+    <slot name='button'>
+      <ae-button :type='type' invert  @click="close" >
+        <ae-icon slot='icon' :type='type' name='close'/>
+      </ae-button>
+    </slot>
+  </div>
+</template>
+```
+> aeNotification is using a composition of aeButton and aeIcon to represent a close-button.
+
+### Component colors
+
+Use colors from `@import "../variables";`. Aeternity is moveing fast and the CI is being updated regularly. All component should use the same colors. 🤡
+
+### Component margins
+
+The wrapping main element of a component must not have margin or any kind or other properties that control position/offset relative to a parent element or component. It will be painfull to position your component in other apps otherwise.
+
+> If you'd adjust the margin later, it would probably break layouts in other applications as developers position relative to your margins. 😱
+
+### Component css-classes
+
+Give the wrapping main element a classname that corresponds to the component name `aeProgressIndicator` -> `.ae-progress-indicator`,
+
+Add all modifier classes (that represent type, state or simmilar things) of the component to the main wrapping element. Modifiers should start with a underscore `_`
+Defaults should always be included.
+
+
+#### good example
+```
+<template>
+ <div class='ae-progress-indicator _size_large _type_round _in-progress_true'>
+ 	<div class='progress-icon'></div>
+ 	<div class='progress-label'>{{ label }}</div>
+ <div>
+</template>
+...
+
+.ae-progress-indicator {
+	...
+	.progress-icon {...}
+	.progress-label {...}
+}
+.ae-progress-indicator._in-progress_true { ... }
+.ae-progress-indicator._in-progress_false { ... }
+
+.ae-progress-indicator._size_large {
+	.progress-icon {...}
+	.progress-label {...}
+}
+.ae-progress-indicator._type_round {
+	.progress-icon {...}
+	.progress-label {...}
+}
+```
+
+#### bad example
+
+```
+<template>
+ <div class='ae-progress-indicator'>
+ 	<div class='progress-icon round'></div>
+ 	<div class='progress-label size-large'>{{ label }}</div>
+ <div>
+</template>
+...
+
+// does red mean `in-progess`?, not clear
+.ae-progress-indicator {
+	background-color: red;
+}
+// bad class naming,
+.ae-progress-indicator.not-in-progress {
+	// overwriting 'default' (in progress) style
+	background-color: blue;
+}
+
+// not clear whether `round` is a type or state.
+// parent components can not query type of .ae-progress-indicator (e.g. `.xyz > .ae-progress-indicator.type_round {...}`)
+.ae-progress-indicator .progress-icon.round {
+	...
+}
+```
+
+### Component using Child components
+
+Don't interfer with the styling of internals of child components. Better pass props to children and expand functionality in these components directly. Your component will be less prone to break on changes in the children. Maintainers can see the intention isolated in the component.
+
+#### bad example
+```
+.ae-my-component .ae-button .ae-icon svg {
+ fill:green
+}
+```
+> You don't know if the tagname or classname of a internal propery in a component will change in the future. Maintainers also have no means to find out if somebody is relying on a specific tag/class.
+
 
 ## Add Documentation
 * We use [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) to generate documentation from well formatted and commented code.
@@ -103,7 +284,8 @@ export default function install (Vue) {
 * Make that markdown file include a usage example like seen [here](https://github.com/vue-styleguidist/vue-styleguidist/blob/master/docs/Documenting.md#usage-examples-and-readme-files)
 * You can test the documentation by running `npm run styleguide`
 
-# Examples
+# How to use components in your Aepp: Examples
+
 Below is example code and rendering of a project that throws all of our components onto the same page at once. Feel free to use this as a reference for what is available already.
 
 ## main.js
@@ -176,7 +358,7 @@ export default {
 ```
 
 ## aeIcon
-### type: normal, name: arrow, burger, check, chevron, close, error, info 
+### type: normal, name: arrow, burger, check, chevron, close, error, info
 
 ![example](https://i.imgur.com/Hdpt3Mc.png)
 
