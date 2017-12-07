@@ -1,46 +1,43 @@
 @import "../variables";
 
 .ae-switch {
-  display:flex;
+  display: flex;
   justify-content: center;
-}
-.ae-switch input {
-  position: absolute !important;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  width: 1px;
-  border: 0;
-  overflow: hidden;
-}
-.ae-switch label {
-  position:relative;
-  display: inline-block;
-  //width: 60px;
-  //background-color: #e4e4e4;
-  width:auto;
-  background-color: transparent;
-  color:$grey;
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight:bold;
-  text-align: center;
-  text-shadow: none;
-  padding: 6px 14px;
-  border-bottom: 2px solid #f0f0f0;
-  letter-spacing: 0.5px;
-}
-.ae-switch label:hover {
-  cursor: pointer;
-}
-.ae-switch input:checked + label {
-  //background-color: $maegenta;
-  color: $maegenta;
-}
-.ae-switch input:checked + label:after{
-  content:"";
-  display:block;
-  border-bottom:4px solid $maegenta;
-  position:absolute;
-  bottom:-3px;
-  width:calc(100% - 28px);
+
+  $padding-horizontal: 14px;
+
+  input {
+    display: none;
+
+    &:checked + label {
+      color: $maegenta;
+
+      &:after {
+        content: "";
+        display: block;
+        border-bottom: 4px solid $maegenta;
+        position: absolute;
+        bottom: -3px;
+        width: calc(100% - #{$padding-horizontal} * 2);
+      }
+    }
+  }
+
+  label {
+    position: relative;
+    display: inline-block;
+    color: $grey;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: none;
+    padding: 6px $padding-horizontal;
+    border-bottom: 2px solid #f0f0f0;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

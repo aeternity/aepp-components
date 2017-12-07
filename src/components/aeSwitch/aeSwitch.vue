@@ -9,4 +9,4 @@
 
 <script src="./aeSwitch.js"/>
 /* eslint no-unused-expressions: "off" */
-<style src='./aeSwitch.scss' lang='scss' />
+<style src="./aeSwitch.scss" scoped lang="scss" />
