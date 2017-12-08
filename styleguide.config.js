@@ -1,6 +1,6 @@
 module.exports = {
   // https://github.com/vue-styleguidist/vue-styleguidist/blob/master/docs/Configuration.md
-  webpackConfig: require('./build/webpack.conf.js'),
+  webpackConfig: require('./build/webpack.styleguide.conf.js'),
   // serverPort: 6066,
   showUsage: true,
   theme: {

@@ -1,0 +1,17 @@
+@import '../variables.scss';
+
+%top-label-font{
+  font-family: Roboto, Arial, Helvetica;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+label{
+  @extend %top-label-font;
+}
+
+.errorMessage{
+  @extend %top-label-font;
+  float: right;
+  color: $maegenta;
+}
