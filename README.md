@@ -142,7 +142,7 @@ export default {
 
 ### Component complexity
 
-Components should be simple and function isolated from other components. Make them focus in a few simple things.
+Components should be simple, function and isolated from other components. Make them focus on a few simple things.
 Provide reasonable defaults that make use of simple functionality. Expand complex features with props.
 
 Try to avoid complex props objects, rather split your data into multiple props.
@@ -151,19 +151,17 @@ Components should also not be too simple. No one needs a `<aeParagraph>` if it d
 
 ### Component dependency
 
-Your component should be **as _dumb_ as possible**. Complex data should always be passed via prop. Don't assme there will be a `router` or `store`.
+Your component should be **as _dumb_ as possible**. Complex data should always be passed via prop. Don't assume there will be a `router` or `store`.
 
-> every developer want's to be in charge of his own data and state managment, let them!
+> every developer wants to be in charge of his own data and state managment, let them!
 
 Don't rely on external ressources (CDN content or APIs).
 
 > components that rely on external ressources can not be used offline or in a local intranet.
 >
-> Developers also can not choose if and when an application 'goes online' and exposes data.
+> Developers also cannot choose if and when an application 'goes online' and exposes data.
 
-Sometimes there might be a good reason for exceptions though. If you provide a component that **has** to be tightly coupled to a API because of the intrinsic nature of the component, it might be ok.
-
-Always ask yourself, wouldn't it be better if you'd just provide an example, how to use the component with any external data source via prop?
+Sometimes there might be a good reason for exceptions. If you provide a component that **has** to be tightly coupled to an API because of the intrinsic nature of the component, it might be ok. But first ask yourself if it's possible to use the component with any external data source via prop.
 
 ### Component composabilty
 
@@ -191,11 +189,11 @@ e.g:
 
 ### Component colors
 
-Use colors from `@import "../variables";`. Aeternity is moveing fast and the CI is being updated regularly. All component should use the same colors. 🤡
+Use colors from `@import "../variables";`. Aeternity is moveing fast and the CI is being updated regularly. All components should use the same colors. 🤡
 
 ### Component margins
 
-The wrapping main element of a component must not have margin or any kind or other properties that control position/offset relative to a parent element or component. It will be painfull to position your component in other apps otherwise.
+The wrapping main element of a component must not have margin or any kind or other properties that control position/offset relative to a parent element or component. Otherwise it will be painful to position your component in other apps.
 
 > If you'd adjust the margin later, it would probably break layouts in other applications as developers position relative to your margins. 😱
 
@@ -203,7 +201,7 @@ The wrapping main element of a component must not have margin or any kind or oth
 
 Give the wrapping main element a classname that corresponds to the component name `aeProgressIndicator` -> `.ae-progress-indicator`,
 
-Add all modifier classes (that represent type, state or simmilar things) of the component to the main wrapping element. Modifiers should start with a underscore `_`
+Add all modifier classes (that represent type, state or simmilar things) of the component to the main wrapping element. Modifiers should start with an underscore `_`
 Defaults should always be included.
 
 
@@ -265,7 +263,7 @@ Defaults should always be included.
 
 ### Component using Child components
 
-Don't interfer with the styling of internals of child components. Better pass props to children and expand functionality in these components directly. Your component will be less prone to break on changes in the children. Maintainers can see the intention isolated in the component.
+Don't interfere with the styling of internals of child components. Better pass props to children and expand functionality in these components directly. Your component will be less prone to break on changes in the children. Maintainers can see the intention isolated in the component.
 
 #### bad example
 ```
@@ -286,7 +284,7 @@ Don't interfer with the styling of internals of child components. Better pass pr
 
 # How to use components in your Aepp: Examples
 
-Below is example code and rendering of a project that throws all of our components onto the same page at once. Feel free to use this as a reference for what is available already.
+Below is example code and renderings of different components.
 
 ## main.js
 
