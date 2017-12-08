@@ -83,7 +83,7 @@ Contributions to the collection are welcome! If you wrote a cool component that 
 
 ### Component Purpose
 
-The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<aeMenuEntry>` needs to be used inide of a `<aeMenu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not to specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it acually just a variant of a existing one?
+The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<aeMenuEntry>` needs to be used inide of a `<aeMenu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not too specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it acually just a variant of a existing one?
 
 ### Component Name
 
