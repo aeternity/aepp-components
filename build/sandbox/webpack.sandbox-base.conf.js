@@ -1,18 +1,20 @@
 'use strict'
 const path = require('path')
 const utils = require('./utils')
-const config = require('../config')
+const config = require('../../sandbox/config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
 function resolve (dir) {
-  return path.join(__dirname, '..', dir)
+  return path.join(__dirname, '..', '..', dir)
 }
+
+console.log(config.build.assetsRoot)
 
 const createLintingRule = () => ({
   test: /\.(js|vue)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
-  include: [resolve('src'), resolve('test')],
+  include: [resolve('src'), resolve('test'), resolve('sandbox/src')],
   options: {
     formatter: require('eslint-friendly-formatter'),
     emitWarning: !config.dev.showEslintErrorsInOverlay
@@ -20,9 +22,9 @@ const createLintingRule = () => ({
 })
 
 module.exports = {
-  context: path.resolve(__dirname, '../'),
+  context: path.resolve(__dirname, '../../'),
   entry: {
-    app: './src/main.js'
+    app: './sandbox/src/main.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -36,6 +38,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'sandbox': resolve('sandbox/src')
     }
   },
   module: {
@@ -48,7 +51,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [resolve('src'), resolve('test'), resolve('sandbox/src')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
