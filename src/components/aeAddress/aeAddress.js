@@ -20,6 +20,7 @@ export default {
     'address': {
       type: String,
       required: true,
+      default: '',
       validator: function (address) {
         return addressValid(address)
       }
