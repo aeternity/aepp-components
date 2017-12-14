@@ -1,21 +1,14 @@
 <template>
   <ae-overlay @click="close">
     <div class="ae-modal">
-      <ae-header class="phone" :name="title">
-        <ae-button slot="mobile-right" @click="close">
-          <ae-icon slot='icon' name='close' />
-        </ae-button>
-      </ae-header>
-      <main>
-        <header class="desktop">
-          <h1>{{title}}</h1>
-          <ae-button @click="close">
-            <ae-icon slot='icon' name='close' />
-          </ae-button>
-        </header>
+      <div class="close-btn" v-if="closeable" @click="close">
+        <ae-icon slot='icon' name='close' />
+      </div>
+      <h1 v-if="title">{{title}}</h1>
+      <section>
         <!-- Modal content -->
         <slot />
-      </main>
+      </section>
     </div>
   </ae-overlay>
 </template>
@@ -32,7 +25,14 @@ export default {
     /**
      * Modal title
      */
-    title: String
+    title: String,
+    /**
+     * Modal can be closed 
+     */
+    closeable: {
+      type: Boolean,
+      default: true
+    }
   },
   components: {
     AeOverlay,
@@ -48,7 +48,7 @@ export default {
        * @event close
        * @type {undefined}
        */
-      this.$emit('close')
+      if (this.closeable) return this.$emit('close')
     }
   }
 }
@@ -58,59 +58,42 @@ export default {
   @import "../variables";
 
   .ae-overlay {
-    .ae-modal {
-      background: linear-gradient(to bottom, white, #f1f4f7);
-    }
-
-    @media (min-width: $screen-phone) {
       display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 10px;
       box-sizing: border-box;
+  }     
 
-      .ae-modal {
-        margin: auto;
-        min-width: $screen-phone;
-        border-radius: 10px;
-      }
+  .ae-modal {
+    position: relative;
+    background: linear-gradient(to bottom, white, #f1f4f7);
+    width:100%;
+    max-width:$screen-phone;
+    max-height:calc(100vh - 20px);
+    overflow-y:scroll;
+    margin:0 auto;
+    padding:30px 20px;
+    border-radius: 10px;
+    text-align: center;
 
-      .phone {
-        display: none;
-      }
-
-      main {
-        header {
-          position: relative;
-
-          h1 {
-            font-size: 28px;
-            line-height: 50px;
-            font-weight: 500;
-            margin: 0;
-          }
-
-          .ae-button {
-            position: absolute;
-            top: 0;
-            right: 0;
-          }
-        }
-
-        padding: 30px;
-      }
+    h1 {
+      font-size: 24px;
+      font-weight: bolder;
+      line-height: 1.17;
+      margin:0 0 7px;
     }
 
-    @media (max-width: $screen-phone) {
-      .ae-modal {
-        min-height: 100%;
-      }
-
-      .desktop {
-        display: none;
-      }
-
-      main {
-        padding: 0 20px 20px 20px;
-      }
+    section{
+      line-height: 1.44;
+      font-size:16px;
     }
+  }
+
+  .close-btn{
+    position: absolute;
+    top:0; right:0;
+    padding: 10px;
+    cursor: pointer;
   }
 </style>
