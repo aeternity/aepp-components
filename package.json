@@ -45,6 +45,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "jest": "^21.2.1",
     "node-sass": "^4.6.1",
+    "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
     "url-loader": "^0.6.2",
     "vue-jest": "^1.1.0",
