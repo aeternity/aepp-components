@@ -36,6 +36,12 @@ export default {
     value: {
       type: String,
       default: ''
+    },
+    maxlength: {
+      type: Number,
+      validator: function (value) {
+        return value > 0 && parseInt(value) === value
+      }
     }
   },
   computed: {
@@ -74,14 +80,20 @@ export default {
       const validationResult = this.validateOnInput(value)
       const valid = !validationResult
       this.isValid = valid
-      this.$emit('validation', validationResult)
+      this.$emit(
+        'validation',
+        valid ? undefined : validationResult
+      )
     },
     validateBlured(){
       const value = this.internalValue
       const validationResult = this.validateOnBlur(value)
       const valid = !validationResult
       this.isValid = valid
-      this.$emit('validation', validationResult)
+      this.$emit(
+        'validation',
+        valid ? undefined : validationResult
+      )
     },
     validate() {
       if (this.hasFocus) {

@@ -32,6 +32,12 @@ export default {
     hasError: {
       type: Boolean,
       default: false
+    },
+    maxlength: {
+      type: Number,
+      validator: function (value) {
+        return value > 0 && parseInt(value) === value
+      }
     }
   },
   computed:{

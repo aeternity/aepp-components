@@ -11,6 +11,7 @@
     @keyup = "forwardEvent"
     @keypress = "forwardEvent"
     @clearRequest = "onClearRequest"
+    :maxlength="maxlength"
   />
 </template>
 <script src="./aeValidatedTextInput.js">

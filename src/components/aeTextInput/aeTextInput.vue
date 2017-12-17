@@ -5,6 +5,7 @@
       :placeholder="placeholder"
       v-model="internalValue"
       :class="['input', validModifier]"
+      :maxLength="maxlength"
       type="text"
       ref="input"
       @blur="onBlur"
