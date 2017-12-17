@@ -19,6 +19,7 @@ new Vue({
       :validateOnInput="validate"
       :errorMessages="errorMessages"
       :defaultErrorMessage="defaultErrorMessage"
+      validMessage="Value is valid"
     />
   `,
   methods: {

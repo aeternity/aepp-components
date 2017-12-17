@@ -77,10 +77,9 @@ describe('AeTextInputMolecule', () => {
       input.vm.$emit('validation', 'err')
       wrapper.vm.$nextTick(
         () => {
-          const errorMessageArr = wrapper.findAll('.errorMessage')
-          expect(errorMessageArr.length).toBe(1)
-          const errorMessage = wrapper.find('.errorMessage')
-          expect(errorMessage.text()).toEqual(message)
+          const errorMessage = wrapper.vm.$refs.errorMessage
+          expect(errorMessage).toBeTruthy()
+          expect(errorMessage.innerHTML.trim()).toEqual(message)
           done()
         }
       )
@@ -94,10 +93,65 @@ describe('AeTextInputMolecule', () => {
       input.vm.$emit('validation', 'err')
       wrapper.vm.$nextTick(
         () => {
-          const errorMessageArr = wrapper.findAll('.errorMessage')
-          expect(errorMessageArr.length).toBe(1)
-          const errorMessage = wrapper.find('.errorMessage')
-          expect(errorMessage.text()).toEqual(defaultErrorMessage)
+          const errorMessage = wrapper.vm.$refs.errorMessage;
+          expect(errorMessage).toBeTruthy()
+          expect(errorMessage.innerHTML.trim()).toEqual(defaultErrorMessage)
+          done()
+        }
+      )
+    })
+
+    it('does NOT render any error message when input is in a valid state', (done) => {
+      const defaultErrorMessage = 'lkdfjlkjdl'
+      const wrapper = createShallowWrapper({defaultErrorMessage})
+      const input = wrapper.find(AeValidatedTextInput)
+      input.vm.$emit('validation', undefined)
+      wrapper.vm.$nextTick(
+        () => {
+          const errorMessage = wrapper.vm.$refs.errorMessage
+          expect(errorMessage).toBeUndefined()
+          done()
+        }
+      )
+    })
+
+    it('renders valid message if one was provided through props and no validation error is present', (done) => {
+      const validMessage = 'lkdfjlkjdl'
+      const wrapper = createShallowWrapper({validMessage})
+      const input = wrapper.find(AeValidatedTextInput)
+      input.vm.$emit('validation', undefined)
+      wrapper.vm.$nextTick(
+        () => {
+          const validMessageElement = wrapper.vm.$refs.validMessage
+          expect(validMessageElement).toBeTruthy()
+          expect(validMessageElement.innerHTML.trim()).toEqual(validMessage)
+          done()
+        }
+      )
+    })
+
+    it('does NOT render valid message when an validation error is present', (done) => {
+      const validMessage = 'lkdfjlkjdl'
+      const wrapper = createShallowWrapper({validMessage})
+      const input = wrapper.find(AeValidatedTextInput)
+      input.vm.$emit('validation', 'some error')
+      wrapper.vm.$nextTick(
+        () => {
+          const validMessageElement = wrapper.vm.$refs.validMessage
+          expect(validMessageElement).toBeUndefined()
+          done()
+        }
+      )
+    })
+
+    it('does NOT render valid message when input is in valid state but a validMessage prop was not provided', (done) => {
+      const wrapper = createShallowWrapper()
+      const input = wrapper.find(AeValidatedTextInput)
+      input.vm.$emit('validation', undefined)
+      wrapper.vm.$nextTick(
+        () => {
+          const validMessageElement = wrapper.vm.$refs.validMessage
+          expect(validMessageElement).toBeUndefined()
           done()
         }
       )
@@ -110,7 +164,6 @@ describe('AeTextInputMolecule', () => {
       input.vm.$emit('input', value)
       const received = wrapper.emitted('input')
       expect(received).toBeTruthy()
-      expect(received.length).toBe(1)
       expect(received[0]).toEqual([value])
     })
 
@@ -184,7 +237,7 @@ describe('AeTextInputMolecule', () => {
     it('emit input event with empty value when clearRequest is recieved', () => {
       const wrapper = createShallowWrapper()
       const input = wrapper.find(AeValidatedTextInput)
-      input.vm.$emit('clearRequest');
+      input.vm.$emit('clearRequest')
       const receivedEvent = wrapper.emitted('input')
       expect(receivedEvent).toBeTruthy()
       expect(receivedEvent.length).toBe(1)

@@ -1,13 +1,20 @@
 <template>
   <div class="ae-text-input-molecule">
-    <div class="top-container" v-if="!!label || !!_errorMessage">
+    <div class="top-container">
       <label class="label" v-if="!!label" :for="internalInputId">{{label}}</label>
       <span
-        class="errorMessage"
+        class="top-message _type_error"
         v-if="!!_errorMessage"
         ref="errorMessage"
       >
         {{_errorMessage}}
+      </span>
+      <span
+        class="top-message _type_valid"
+        ref="validMessage"
+        v-if="!!_validMessage"
+      >
+        {{_validMessage}}
       </span>
     </div>
     <ae-validated-text-input

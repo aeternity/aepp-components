@@ -34,6 +34,9 @@ export default {
     placeholder: {
       type: String
     },
+    validMessage: {
+      type: String
+    },
     value: {
       type: String,
       default: ''
@@ -47,6 +50,11 @@ export default {
 
       const message = this.errorMessages[this.errorId] || this.defaultErrorMessage
       return message
+    },
+    _validMessage(){
+      if(!this.errorId){
+        return this.validMessage
+      }
     },
     internalInputId(){
       return 'ae-text-input-molecule/' + this.randomNumber

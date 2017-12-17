@@ -10,8 +10,18 @@ label{
   @extend %top-label-font;
 }
 
-.errorMessage{
+.top-message{
   @extend %top-label-font;
   float: right;
-  color: $maegenta;
+
+  &._type{
+    &_error{
+      color: $maegenta;
+    }
+
+    &_valid{
+      color: $grey;
+    }
+  }
+
 }
