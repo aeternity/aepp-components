@@ -1,4 +1,4 @@
-import iconSvgStrings from '../../assets/icons'
+import * as iconSvgStrings from '../../assets/icons'
 
 const aeIconTypes = [
   'plain',
