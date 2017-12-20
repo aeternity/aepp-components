@@ -1,10 +1,14 @@
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 var webpackConfig = {
   entry: {
     main: './src/index.js',
     variables: './src/components/variables.scss',
+    common: './src/components/common.scss',
   },
   output: {
-    path: __dirname + '/../dist',
+    path: path.resolve(__dirname, '../dist'),
     filename: 'aepp-components.js',
     libraryTarget: 'umd',
     library: '@aeternity/aepp-components',
@@ -29,11 +33,18 @@ var webpackConfig = {
         test: /\.(png|jpg|gif)$/,
         loader: 'url-loader',
       }, {
-        test: /\.scss$/,
+        include: [
+          path.resolve(__dirname, '../src/components/variables.scss'),
+        ],
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
         },
+      }, {
+        include: [
+          path.resolve(__dirname, '../src/components/common.scss'),
+        ],
+        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader']),
       },
     ],
   },
@@ -44,6 +55,9 @@ var webpackConfig = {
       'scss-loader': 'sass-loader',
     },
   },
+  plugins: [
+    new ExtractTextPlugin('common.css'),
+  ],
 };
 
 module.exports = webpackConfig;

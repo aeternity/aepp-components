@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   // https://github.com/vue-styleguidist/vue-styleguidist/blob/master/docs/Configuration.md
   webpackConfig: require('./build/webpack.conf.js'),
@@ -37,5 +39,8 @@ module.exports = {
   },
   mixins: [
     'src/mixins/styleguide.js'
+  ],
+  require: [
+    path.join(__dirname, 'src/components/common.scss')
   ]
 }
