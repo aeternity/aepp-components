@@ -7,7 +7,9 @@ new Vue({
       <ae-modal
         v-if="modalVisible"
         @close="modalVisible = false"
-        title="Modal title"
+        title="Modal title",
+        :showCloseButton="true",
+        :fullscreen="true"
       >
         Modal content
       </ae-modal>
