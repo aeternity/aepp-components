@@ -571,7 +571,7 @@ export default {
 ```
 
 ## AePanel
-![example](https://imgur.com/a/XT0kM)
+![example](https://i.imgur.com/5RtZucf.png)
 
 ```javascript
 let closeHandler = () => {
@@ -583,7 +583,7 @@ let closeHandler = () => {
 ```
 
 ## AeSwitch
-![example](https://imgur.com/a/ZEHqY)
+![example](https://i.imgur.com/ZrjW69k.png)
 
 ```javascript
 <ae-switch
