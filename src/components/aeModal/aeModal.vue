@@ -11,6 +11,15 @@
         <!-- Modal content -->
         <slot />
       </section>
+      <footer>
+        <!-- Modal buttons -->
+        <slot name="buttons" v-if="actionRequired">
+          <ul class="ae-modal__actions">
+            <li class="ae-modal__actions__item"><ae-button size="smaller" @click="close">{{cancelLabel}}</ae-button></li>
+            <li class="ae-modal__actions__item"><ae-button size="smaller" type="dramatic" @click="confirm">{{confirmLabel}}</ae-button></li>
+          </ul>
+        </slot>
+      </footer>
     </div>
   </ae-overlay>
 </template>
@@ -41,6 +50,27 @@ export default {
     fullscreen: {
       type: Boolean,
       default: true
+    },
+    /**
+     * Show Confirm and Cancel buttons
+     */
+    actionRequired: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * Label for Confirm button
+     */
+    confirmLabel: {
+      type: String,
+      default: 'CONFIRM'
+    },
+    /**
+     * Label for Cancel button
+     */
+    cancelLabel: {
+      type: String,
+      default: 'CANCEL'
     }
   },
   components: {
@@ -58,7 +88,16 @@ export default {
        * @type {undefined}
        */
       return this.$emit('close')
-    }
+    },
+    confirm () {
+      /**
+       * Confirm event
+       *
+       * @event confirm
+       * @type {undefined}
+       */
+      return this.$emit('confirm')
+    },
   }
 }
 </script>
@@ -98,6 +137,18 @@ export default {
     section{
       line-height: 1.44;
       font-size:16px;
+    }
+  }
+
+  ul.ae-modal__actions{
+    list-style-type: none;
+    padding:0;
+    display:flex;
+    align-items: center;
+    margin:29px 0 0;
+    > li{
+      flex:1 0 auto;
+      text-align: center;
     }
   }
 
