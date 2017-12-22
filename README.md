@@ -571,16 +571,19 @@ export default {
 ```
 
 ## AePanel
-![example](https://i.imgur.com/HaEgasd.png)
+![example](https://imgur.com/a/XT0kM)
 
 ```javascript
-<ae-panel>
-	<p>Lorem cum molestias non laudantium eos. Ad officia vel corrupti voluptatem eum Voluptas corporis debitis harum assumenda commodi suscipit sed. Corrupti error officia impedit eligendi corporis Ad labore nesciunt voluptates totam delectus Voluptatum</p>
+let closeHandler = () => {
+    alert('close pressed')
+}
+<ae-panel :title="'The Title'" :closeHandler="closeHandler" :ratioTop="0.4" :ratioBottom="0.6">
+    Hello World
 </ae-panel>
 ```
 
 ## AeSwitch
-![example](https://i.imgur.com/UUwQE9M.png)
+![example](https://imgur.com/a/ZEHqY)
 
 ```javascript
 <ae-switch
