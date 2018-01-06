@@ -2,6 +2,7 @@ import AeAmount from './components/aeAmount'
 import AeAmountInput from './components/aeAmountInput'
 import AeButton from './components/aeButton'
 import AeLabel from './components/aeLabel'
+import AeLoader from './components/aeLoader'
 import AeFilterItem from './components/aeFilterItem'
 import AeFilterList from './components/aeFilterList'
 import AeFilterSeparator from './components/aeFilterSeparator'
@@ -25,6 +26,7 @@ const AeppComponents = {
   AeAmountInput,
   AeButton,
   AeLabel,
+  AeLoader,
   AeFilterItem,
   AeFilterList,
   AeFilterSeparator,
@@ -56,6 +58,7 @@ export { default as AeAmount } from './components/aeAmount/aeAmount.vue'
 export { default as AeAmountInput } from './components/aeAmountInput/aeAmountInput.vue'
 export { default as AeButton } from './components/aeButton/aeButton.vue'
 export { default as AeLabel } from './components/aeLabel/aeLabel.vue'
+export { default as AeLoader } from './components/aeLoader/aeLoader.vue'
 export { default as AeFilterItem } from './components/aeFilterItem/aeFilterItem.vue'
 export { default as AeFilterList } from './components/aeFilterList/aeFilterList.vue'
 export { default as AeFilterSeparator } from './components/aeFilterSeparator/aeFilterSeparator.vue'
