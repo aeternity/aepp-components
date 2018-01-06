@@ -1,20 +1,20 @@
 <template>
-  <span class="ae-label">
-     <!-- Label content -->
+  <span class="ae-badge">
+     <!-- Badge content -->
     <slot />
   </span>
 </template>
 
 <script>
   export default {
-    name: 'ae-label'
+    name: 'ae-badge'
   }
 </script>
 
 <style lang="scss" scoped>
   @import "../variables";
 
-  .ae-label {
+  .ae-badge {
     display: inline-block;
     min-width: 60px;
     height: 22px;
