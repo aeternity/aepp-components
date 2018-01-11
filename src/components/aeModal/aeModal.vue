@@ -1,21 +1,25 @@
 <template>
-  <ae-overlay @click="close">
+  <ae-overlay @click="close" :class="{'ae-overlay--fullscreen-modal': fullscreen}">
     <div class="ae-modal">
-      <ae-header class="phone" :name="title">
-        <ae-button slot="mobile-right" @click="close">
+      <header>
+        <div class="close-btn" v-if="showCloseButton" @click="close">
           <ae-icon slot='icon' name='close' />
-        </ae-button>
-      </ae-header>
-      <main>
-        <header class="desktop">
-          <h1>{{title}}</h1>
-          <ae-button @click="close">
-            <ae-icon slot='icon' name='close' />
-          </ae-button>
-        </header>
+        </div>
+        <h1 v-if="title">{{title}}</h1>
+      </header>
+      <section>
         <!-- Modal content -->
         <slot />
-      </main>
+      </section>
+      <footer>
+        <!-- Modal buttons -->
+        <slot name="buttons" v-if="actionRequired">
+          <ul class="ae-modal__actions">
+            <li class="ae-modal__actions__item"><ae-button size="smaller" @click="close">{{cancelLabel}}</ae-button></li>
+            <li class="ae-modal__actions__item"><ae-button size="smaller" type="dramatic" @click="confirm">{{confirmLabel}}</ae-button></li>
+          </ul>
+        </slot>
+      </footer>
     </div>
   </ae-overlay>
 </template>
@@ -32,7 +36,42 @@ export default {
     /**
      * Modal title
      */
-    title: String
+    title: String,
+    /**
+     * Modal has close button
+     */
+    showCloseButton: {
+      type: Boolean,
+      default: true
+    },
+    /**
+     * Modal is fullscreen on mobile
+     */
+    fullscreen: {
+      type: Boolean,
+      default: true
+    },
+    /**
+     * Show Confirm and Cancel buttons
+     */
+    actionRequired: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * Label for Confirm button
+     */
+    confirmLabel: {
+      type: String,
+      default: 'CONFIRM'
+    },
+    /**
+     * Label for Cancel button
+     */
+    cancelLabel: {
+      type: String,
+      default: 'CANCEL'
+    }
   },
   components: {
     AeOverlay,
@@ -48,8 +87,17 @@ export default {
        * @event close
        * @type {undefined}
        */
-      this.$emit('close')
-    }
+      return this.$emit('close')
+    },
+    confirm () {
+      /**
+       * Confirm event
+       *
+       * @event confirm
+       * @type {undefined}
+       */
+      return this.$emit('confirm')
+    },
   }
 }
 </script>
@@ -58,58 +106,79 @@ export default {
   @import "../variables";
 
   .ae-overlay {
-    .ae-modal {
-      background: linear-gradient(to bottom, white, #f1f4f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }     
+
+  .ae-modal {
+    position: relative;
+    margin:auto; // important rule, allows flex-center without overflow
+    background: linear-gradient(to bottom, white, #f1f4f7);
+    width:100%;
+    max-width:$screen-phone;
+    padding:30px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+
+    header{
+      margin:0 0 7px;
     }
 
-    @media (min-width: $screen-phone) {
-      display: flex;
-      padding: 10px;
-      box-sizing: border-box;
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.17;
+    }
 
-      .ae-modal {
-        margin: auto;
-        min-width: $screen-phone;
-        border-radius: 10px;
-      }
+    section{
+      line-height: 1.44;
+      font-size:16px;
+    }
+  }
 
-      .phone {
-        display: none;
-      }
+  ul.ae-modal__actions{
+    list-style-type: none;
+    padding:0;
+    display:flex;
+    align-items: center;
+    margin:29px 0 0;
+    > li{
+      flex:1 0 auto;
+      text-align: center;
+    }
+  }
 
-      main {
-        header {
+  .close-btn{
+    position: absolute;
+    top:31px; right:23px;
+    cursor: pointer;
+    .ae-icon{
+      display: block;
+    }
+  }
+  
+  // full screen mode on mobile
+  @media (max-width:$screen-phone){
+    .ae-overlay.ae-overlay--fullscreen-modal{
+      padding:0;
+      display: block;
+
+      .ae-modal{
+        border-radius:0;
+        min-height:100vh;
+        padding:41px 20px 20px;
+
+        > header{
           position: relative;
-
-          h1 {
-            font-size: 28px;
-            line-height: 50px;
-            font-weight: 500;
-            margin: 0;
-          }
-
-          .ae-button {
-            position: absolute;
-            top: 0;
-            right: 0;
-          }
         }
-
-        padding: 30px;
-      }
-    }
-
-    @media (max-width: $screen-phone) {
-      .ae-modal {
-        min-height: 100%;
-      }
-
-      .desktop {
-        display: none;
-      }
-
-      main {
-        padding: 0 20px 20px 20px;
+        .close-btn{
+          top:1px;
+          right:3px;
+        }
       }
     }
   }

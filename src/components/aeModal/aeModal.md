@@ -8,6 +8,11 @@ new Vue({
         v-if="modalVisible"
         @close="modalVisible = false"
         title="Modal title"
+        :showCloseButton="true"
+        :fullscreen="true"
+        :actionRequied="false"
+        confirmLabel="CONFIRM"
+        cancelLabel="CANCEL"
       >
         Modal content
       </ae-modal>
