@@ -6,17 +6,20 @@
         {{name}}
       </ae-link>
       <div>
+        <!-- The content of the right side on desktop -->
         <slot />
       </div>
     </header>
     <header class="phone">
       <div>
+        <!-- The content of the left side on mobile -->
         <slot name="mobile-left" />
       </div>
       <ae-link to="/">
         {{name}}
       </ae-link>
       <div>
+        <!-- The content of the right side on mobile -->
         <slot name="mobile-right" />
       </div>
     </header>
@@ -26,10 +29,16 @@
 <script>
   import AeLink from '../aeLink/aeLink.vue'
 
+  /**
+   * Header of aepplication
+   */
   export default {
     name: 'ae-header',
     components: { AeLink },
     props: {
+      /**
+       * Name of aepplication
+       */
       name: String
     }
   }
