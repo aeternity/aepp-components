@@ -1,5 +1,5 @@
 <template>
-  <router-link v-if="to" class="ae-panel" :to="to">
+  <ae-link v-if="to" class="ae-panel" :to="to">
     <div class="progressbar" :style="progressbarStyle(ratioTop)" />
     <div class="content">
       <header v-if="title || closeHandler">
@@ -12,7 +12,7 @@
       <slot />
     </div>
     <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
-  </router-link>
+  </ae-link>
   <div v-else class="ae-panel">
     <div class="progressbar" :style="progressbarStyle(ratioTop)" />
     <div class="content">
@@ -32,6 +32,7 @@
 <script>
   import AeButton from '../aeButton/aeButton.vue'
   import AeIcon from '../aeIcon/aeIcon.vue'
+  import AeLink from '../aeLink/aeLink.vue'
   /**
    *
    */
@@ -39,7 +40,7 @@
     name: 'ae-panel',
     props: {
       /**
-       * Where does the Panel link to. its fed to a router-link.
+       * Where does the Panel link to. its fed to a ae-link.
        */
       to: [String, Object],
 
@@ -63,7 +64,7 @@
        */
       closeHandler: { type: Function, required: false }
     },
-    components: { AeButton, AeIcon },
+    components: { AeButton, AeIcon, AeLink },
     methods: {
       progressbarStyle (ratio) {
         const pc = ratio * 100
