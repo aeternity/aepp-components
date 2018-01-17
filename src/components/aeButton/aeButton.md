@@ -41,3 +41,10 @@ with aeIcon and label
   </ae-button>
 </div>
 ```
+
+```js
+<div>
+  <ae-button>Normal</ae-button>
+  <ae-button uppercase>Uppercase</ae-button>
+</div>
+```
