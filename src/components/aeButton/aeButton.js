@@ -41,6 +41,10 @@ export default {
     invert: {
       type: Boolean,
       default: false
+    },
+    uppercase: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -65,13 +69,17 @@ export default {
     invertModifier () {
       return `_invert_${this.invert}`
     },
+    uppercaseModifier () {
+      return this.uppercase ? '_uppercase' : ''
+    },
     cssClass () {
       return [
         this.sizeModifier,
         this.typeModifier,
         this.activeModifier,
         this.hasLabelModifier,
-        this.invertModifier
+        this.invertModifier,
+        this.uppercaseModifier
       ]
     }
   }
