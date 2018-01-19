@@ -45,6 +45,10 @@ export default {
     uppercase: {
       type: Boolean,
       default: false
+    },
+    block: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -72,6 +76,9 @@ export default {
     uppercaseModifier () {
       return this.uppercase ? '_uppercase' : ''
     },
+    blockModifier () {
+      return this.block ? '_block' : ''
+    },
     cssClass () {
       return [
         this.sizeModifier,
@@ -79,7 +86,8 @@ export default {
         this.activeModifier,
         this.hasLabelModifier,
         this.invertModifier,
-        this.uppercaseModifier
+        this.uppercaseModifier,
+        this.blockModifier
       ]
     }
   }

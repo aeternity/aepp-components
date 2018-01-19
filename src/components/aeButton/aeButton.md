@@ -48,3 +48,10 @@ with aeIcon and label
   <ae-button uppercase>Uppercase</ae-button>
 </div>
 ```
+
+```js
+<div>
+  <ae-button block uppercase>Block buttons that span full width uppercase</ae-button>
+  <ae-button block>Block buttons that span full width</ae-button>
+</div>
+```

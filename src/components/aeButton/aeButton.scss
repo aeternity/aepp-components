@@ -153,4 +153,13 @@
   &._uppercase {
     text-transform: uppercase;
   }
+
+  &._block {
+    display: block;
+    width: 100%;
+
+    .label {
+      margin: auto;
+    }
+  }
 }
