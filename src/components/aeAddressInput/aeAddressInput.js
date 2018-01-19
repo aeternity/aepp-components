@@ -1,6 +1,6 @@
 import AeValidatedTextInput from '../aeValidatedTextInput/aeValidatedTextInput.vue'
 
-function contentValid(address){
+function contentValid (address) {
   return typeof address === 'string' &&
    (
      address === '' ||
@@ -14,7 +14,7 @@ function _addressValid (address) {
   return contentValid(address) && address.length === 42
 }
 
-function validate(validator, value){
+function validate (validator, value) {
   const valid = validator(value)
   return valid ? undefined : 'INVALID_ADDR'
 }
@@ -30,7 +30,7 @@ export default {
     AeValidatedTextInput
   ],
   computed: {
-    addressValid(){
+    addressValid () {
       return _addressValid(this.address)
     },
     externalLink () {
@@ -51,11 +51,11 @@ export default {
   methods: {
     validateOnBlur: validate.bind(undefined, _addressValid),
     validateOnInput: validate.bind(undefined, contentValid),
-    onInput(value){
+    onInput (value) {
       this.address = value
       this.$emit('input', value)
     },
-    onClearRequest(){
+    onClearRequest () {
       this.address = ''
       this.$emit('input', '')
     }

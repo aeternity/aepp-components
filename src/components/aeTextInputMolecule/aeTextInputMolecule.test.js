@@ -2,7 +2,6 @@ import {shallow, mount} from 'vue-test-utils'
 import AeTextInputMolecule from './aeTextInputMolecule.vue'
 import AeTextInputMoleculePlugin from './index'
 import AeValidatedTextInput from '../aeValidatedTextInput/aeValidatedTextInput.vue'
-import Vue from 'vue'
 
 describe('AeTextInputMolecule', () => {
   const createShallowWrapper = (data = {}) => {
@@ -42,11 +41,11 @@ describe('AeTextInputMolecule', () => {
     })
 
     it('assigns input a radom id and assigns refers to it in the label\'s for attribute', () => {
-      const wrapper = createShallowWrapper({label:'ada'})
+      const wrapper = createShallowWrapper({label: 'ada'})
       const label = wrapper.find('label')
       const input = wrapper.find(AeValidatedTextInput)
       const forValue = label.element.getAttribute('for')
-      const id  = input.vm.$props.inputId
+      const id = input.vm.$props.inputId
       expect(forValue).toBe(id)
     })
 
@@ -93,7 +92,7 @@ describe('AeTextInputMolecule', () => {
       input.vm.$emit('validation', 'err')
       wrapper.vm.$nextTick(
         () => {
-          const errorMessage = wrapper.vm.$refs.errorMessage;
+          const errorMessage = wrapper.vm.$refs.errorMessage
           expect(errorMessage).toBeTruthy()
           expect(errorMessage.innerHTML.trim()).toEqual(defaultErrorMessage)
           done()
@@ -222,7 +221,7 @@ describe('AeTextInputMolecule', () => {
       testKeyEventForward('keypress')
     })
 
-    it('clears input when clearRequest is emitted', function(done){
+    it('clears input when clearRequest is emitted', (done) => {
       const value = 'not empty'
       const wrapper = createShallowWrapper({value})
       const input = wrapper.find(AeValidatedTextInput)

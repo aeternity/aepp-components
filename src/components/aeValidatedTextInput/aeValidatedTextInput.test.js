@@ -27,7 +27,7 @@ describe('AeValidatedTextInput', () => {
     })
 
     it('sets inputId property  for the aeTextInput', () => {
-      const id = 'asdfas';
+      const id = 'asdfas'
       const wrapper = createShallowWrapper({inputId: id})
       const input = wrapper.find(AeTextInput)
       const receivedId = input.vm.inputId
@@ -73,7 +73,7 @@ describe('AeValidatedTextInput', () => {
       expect(receivedEvent).toBeTruthy()
     })
 
-    it('forwards clearRequest event', function(){
+    it('forwards clearRequest event', () => {
       const onClearRequest = jest.fn()
       const value = 'adsfaddd'
       const wrapper = createShallowWrapper({onClearRequest})
@@ -156,7 +156,7 @@ describe('AeValidatedTextInput', () => {
       const initialEvent = wrapper.emitted('validation') || []
       const initialLength = initialEvent.length || 0
 
-      wrapper.setProps({value:'.kj;kj'})
+      wrapper.setProps({value: '.kj;kj'})
       const receivedEvent = wrapper.emitted('validation')
       expect(receivedEvent).toBeTruthy()
       expect(receivedEvent.length).toBe(initialLength + 1)

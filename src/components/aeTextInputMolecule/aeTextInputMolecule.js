@@ -5,7 +5,7 @@ export default {
   components: {
     AeValidatedTextInput
   },
-  data(){
+  data () {
     return {
       errorId: undefined,
       randomNumber: Math.ceil(Math.random() * 10000000000),
@@ -18,7 +18,7 @@ export default {
     },
     errorMessages: {
       type: Object,
-      default(){
+      default () {
         return {}
       }
     },
@@ -28,7 +28,7 @@ export default {
     validateOnBlur: {
       type: Function
     },
-    validateOnInput:{
+    validateOnInput: {
       type: Function
     },
     placeholder: {
@@ -43,47 +43,47 @@ export default {
     }
   },
   computed: {
-    _errorMessage(){
-      if(!this.errorId){
+    _errorMessage () {
+      if (!this.errorId) {
         return
       }
 
       const message = this.errorMessages[this.errorId] || this.defaultErrorMessage
       return message
     },
-    _validMessage(){
-      if(!this.errorId){
+    _validMessage () {
+      if (!this.errorId) {
         return this.validMessage
       }
     },
-    internalInputId(){
+    internalInputId () {
       return 'ae-text-input-molecule/' + this.randomNumber
     }
   },
   methods: {
-    onValidate(value){
+    onValidate (value) {
       this.errorId = value
       this.$emit('validation', value)
     },
-    onBlur(value){
+    onBlur (value) {
       this.$emit('blur', value)
     },
-    onFocus(){
+    onFocus () {
       this.$emit('focus')
     },
-    onInput(value){
+    onInput (value) {
       this.$emit('input', value)
     },
-    clearInput(){
+    clearInput () {
       this.internalValue = ''
       this.$emit('input', '')
     },
-    forwardKeyEvent(event){
+    forwardKeyEvent (event) {
       this.$emit(event.type, event)
     }
   },
-  watch:{
-    value(val){
+  watch: {
+    value (val) {
       this.internalValue = val
     }
   }

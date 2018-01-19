@@ -7,7 +7,7 @@ export default {
     AeButton,
     AeIcon
   },
-  data(){
+  data () {
     return {
       internalValue: this.value
     }
@@ -40,33 +40,33 @@ export default {
       }
     }
   },
-  computed:{
-    validModifier(){
+  computed: {
+    validModifier () {
       return this.hasError ? '_is-valid_false' : '_is-valid_true'
     }
   },
   methods: {
-    onClearRequest() {
+    onClearRequest () {
       const value = this.$refs.input.value
       this.$emit('clearRequest', value)
     },
-    onInput() {
+    onInput () {
       const value = this.$refs.input.value
       this.$emit('input', value)
     },
-    onFocus() {
+    onFocus () {
       this.$emit('focus')
     },
-    onBlur() {
+    onBlur () {
       const value = this.$refs.input.value
       this.$emit('blur', value)
     },
-    forwardKeyEvent(event){
+    forwardKeyEvent (event) {
       this.$emit(event.type, event)
     }
   },
-  watch:{
-    value(val){
+  watch: {
+    value (val) {
       this.internalValue = val
     }
   }
