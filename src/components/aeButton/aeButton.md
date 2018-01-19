@@ -49,9 +49,9 @@ with aeIcon and label
 </div>
 ```
 
+full width block button
 ```js
 <div>
-  <ae-button block uppercase>Block buttons that span full width uppercase</ae-button>
   <ae-button block>Block buttons that span full width</ae-button>
 </div>
 ```
