@@ -23,6 +23,7 @@ import AeAppIcon from './components/aeAppIcon'
 import AeIcon from './components/aeIcon'
 import AeAddress from './components/aeAddress'
 import AeAddressInput from './components/aeAddressInput'
+import AeBanner from './components/aeBanner'
 
 const AeppComponents = {
   AeAmount,
@@ -49,7 +50,8 @@ const AeppComponents = {
   AeAppIcon,
   AeIcon,
   AeAddress,
-  AeAddressInput
+  AeAddressInput,
+  AeBanner
 }
 
 AeppComponents.install = Vue =>
@@ -85,5 +87,6 @@ export { default as AeAppIcon } from './components/aeAppIcon/aeAppIcon.vue'
 export { default as AeIcon } from './components/aeIcon/aeIcon.vue'
 export { default as AeAddress } from './components/aeAddress/aeAddress.vue'
 export { default as AeAddressInput } from './components/aeAddressInput/aeAddressInput.vue'
+export { default as AeBanner } from './components/aeBanner/aeBanner.vue'
 
 export { default as aeHelperMixin } from './mixins/helper'
