@@ -1,18 +1,16 @@
 <template>
-  <div class="ae-banner" :class='cssClass'>
-    <content>
-      <!-- Banner content -->
-      <slot />
-    </content>
-    <!-- Banner button -->
-    <slot name='button'>
-      <ae-button :type='type' invert  @click="close" >
-        <ae-icon slot='icon' :type='type' name='close'/>
-      </ae-button>
-    </slot>
+  <div class="ae-banner">
+    <div>
+      <main>
+        <!-- Content -->
+        <slot />
+      </main>
+      <!-- Content of right side -->
+      <slot name="right" />
+    </div>
   </div>
 </template>
 
-<script src='./aeBanner.js'/>
+<script src="./aeBanner.js" />
 /* eslint no-unused-expressions: "off" */
-<style scoped lang='scss' src='./aeBanner.scss'/>
+<style scoped lang="scss" src="./aeBanner.scss" />

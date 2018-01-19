@@ -1,0 +1,7 @@
+@import "./../components/variables";
+
+@mixin desktop {
+  @media (min-width: $container-width) {
+    @content;
+  }
+}
