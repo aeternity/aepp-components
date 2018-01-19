@@ -1,20 +1,25 @@
 <template>
   <div class="ae-header">
     <header class="desktop">
-      <div>
-        <img class='logo' :src="require('../../assets/logo-small.png')" alt="Go to main page" />
+      <ae-link to="/">
+        <img :src="require('../../assets/logo-small.png')" alt="Go to main page" />
         {{name}}
-      </div>
+      </ae-link>
       <div>
+        <!-- The content of the right side on desktop -->
         <slot />
       </div>
     </header>
     <header class="phone">
       <div>
+        <!-- The content of the left side on mobile -->
         <slot name="mobile-left" />
       </div>
+      <ae-link to="/">
         {{name}}
+      </ae-link>
       <div>
+        <!-- The content of the right side on mobile -->
         <slot name="mobile-right" />
       </div>
     </header>
@@ -22,9 +27,18 @@
 </template>
 
 <script>
+  import AeLink from '../aeLink/aeLink.vue'
+
+  /**
+   * Header of aepplication
+   */
   export default {
     name: 'ae-header',
+    components: { AeLink },
     props: {
+      /**
+       * Name of aepplication
+       */
       name: String
     }
   }
@@ -47,11 +61,18 @@
         padding: 0 14px;
       }
 
-      .logo {
-        height: 24px;
-        display: inline-block;
-        vertical-align: bottom;
-        margin-right: 15px;
+      > .ae-link {
+        line-height: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+
+        img {
+          height: 24px;
+          display: inline-block;
+          vertical-align: bottom;
+          margin-right: 15px;
+        }
       }
 
       .ae-header-button {
@@ -71,7 +92,7 @@
           display: none;
         }
 
-        > a {
+        > .ae-link {
           color: $anthracite;
         }
       }
@@ -80,13 +101,16 @@
     @media (min-width: $screen-phone + 1) {
       background-image: linear-gradient(to bottom, $anthracite, $aubergine);
       box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
-      color:white;
 
       header {
         margin-bottom: 30px;
 
         &.phone {
           display: none;
+        }
+
+        > .ae-link {
+          color: $white;
         }
       }
     }

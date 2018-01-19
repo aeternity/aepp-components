@@ -48,7 +48,6 @@
     "url-loader": "^0.6.2",
     "vue-jest": "^1.1.0",
     "vue-loader": "^13.5.0",
-    "vue-router": "^3.0.1",
     "vue-styleguidist": "^1.3.5",
     "vue-template-compiler": "^2.5.8",
     "vue-test-utils": "^1.0.0-beta.6",
@@ -75,7 +74,8 @@
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
       ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     },
-    "mapCoverage": true
+    "mapCoverage": true,
+    "testURL": "http://example.aepps.com"
   },
   "homepage": "https://github.com/aeternity/aepp-components#readme"
 }

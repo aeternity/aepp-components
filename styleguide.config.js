@@ -37,9 +37,6 @@ module.exports = {
       }
     }
   },
-  mixins: [
-    'src/mixins/styleguide.js'
-  ],
   require: [
     path.join(__dirname, 'src/components/common.scss')
   ]

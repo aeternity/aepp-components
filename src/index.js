@@ -11,6 +11,7 @@ import AeHeaderButton from './components/aeHeaderButton'
 import AeIdentity from './components/aeIdentity'
 import AeIdentityAvatar from './components/aeIdentityAvatar'
 import AeLabel from './components/aeLabel'
+import AeLink from './components/aeLink'
 import AeLoader from './components/aeLoader'
 import AeMain from './components/aeMain'
 import AeModal from './components/aeModal'
@@ -37,6 +38,7 @@ const AeppComponents = {
   AeIdentity,
   AeIdentityAvatar,
   AeLabel,
+  AeLink,
   AeLoader,
   AeMain,
   AeModal,
@@ -71,6 +73,7 @@ export { default as AeHeaderButton } from './components/aeHeaderButton/aeHeaderB
 export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue'
 export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue'
 export { default as AeLabel } from './components/aeLabel/aeLabel.vue'
+export { default as AeLink } from './components/aeLink/aeLink.vue'
 export { default as AeLoader } from './components/aeLoader/aeLoader.vue'
 export { default as AeMain } from './components/aeMain/aeMain.vue'
 export { default as AeModal } from './components/aeModal/aeModal.vue'
