@@ -18,6 +18,11 @@ export default {
   mounted () {
   },
   methods: {
+    /**
+     * Show the banner
+     *
+     * @public
+     */
     showBanner () {
       if (this.show) {
         return
@@ -27,16 +32,18 @@ export default {
       if (this.allOptions.autoDestroy) {
         this._startLazyDestroy()
       }
-
-      return this
     },
+    /**
+     * Hide the banner
+     *
+     * @public
+     */
     hideBanner () {
       if (!this.show) {
         return
       }
       this._clearTimer()
       this.show = false
-      return this
     },
     _startLazyDestroy () {
       this.timers = setTimeout(() => {
