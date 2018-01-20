@@ -8,7 +8,7 @@ Basic banner component
 Banner component with button
 ```js
 <div>
-  <ae-banner>
+  <ae-banner :show=true>
     aeBanner
     <span slot="right">
       <ae-button uppercase size="smaller" type="exciting">Cancel</ae-button>
