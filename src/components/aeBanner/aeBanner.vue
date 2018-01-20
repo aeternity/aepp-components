@@ -10,4 +10,5 @@
 </template>
 
 <script src='./aeBanner.js' />
+/* eslint no-unused-expressions: "off" */
 <style src='./aeBanner.scss' lang='scss' />
