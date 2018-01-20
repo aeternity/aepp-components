@@ -4,6 +4,11 @@
   width: 355px;
   background-image: linear-gradient(to bottom, $white, #f1f4f7);
   border-radius: 10px;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 19000;
 
   > .inner {
     width: 355px;
