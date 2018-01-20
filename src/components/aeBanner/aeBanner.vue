@@ -1,8 +1,10 @@
 <template>
-  <div class="ae-banner">
+  <div class="ae-banner" v-if='visible'>
     <div class="inner">
       <slot />
-      <!-- <slot name="right" /> -->
+      <div v-if='hasRightItem' class="right">
+        <slot name="right" />
+      </div>
     </div>
   </div>
 </template>

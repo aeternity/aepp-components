@@ -5,12 +5,15 @@
   background-image: linear-gradient(to bottom, $white, #f1f4f7);
   border-radius: 10px;
 
-  .inner {
+  > .inner {
     width: 355px;
-    padding: 17px 0px;
-    padding-left: 22px;
+    padding: 17px 22px;
     border-radius: 10px;
     background-color: $white;
     box-shadow: 0 4px 8px 0 rgba(60, 60, 60, 0.1);
+
+    .right {
+      float: right;
+    }
   }
 }
