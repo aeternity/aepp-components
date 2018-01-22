@@ -1,6 +1,5 @@
 ```js
 <div>
-  <ae-button type="plain">Plain</ae-button>
   <ae-button type="boring">Boring</ae-button>
   <ae-button type="normal">Normal</ae-button>
   <ae-button type="exciting">Exciting</ae-button>
@@ -46,5 +45,14 @@ with aeIcon and label
 <div>
   <ae-button>Normal</ae-button>
   <ae-button uppercase>Uppercase</ae-button>
+</div>
+```
+
+```js
+<div>
+  <ae-button>Normal</ae-button>
+  <ae-button plain>Plain</ae-button>
+  <ae-button plain type="exciting">Plain exciting</ae-button>
+  <ae-button plain type="dramatic">Plain dramatic</ae-button>
 </div>
 ```
