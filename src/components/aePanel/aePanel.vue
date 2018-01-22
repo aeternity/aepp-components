@@ -4,7 +4,7 @@
     <div class="content">
       <header v-if="title || closeHandler">
         <h1>{{title}}</h1>
-        <ae-button @click="closeHandler">
+        <ae-button @click="closeHandler" plain size="small">
           <ae-icon slot='icon' name='close' />
         </ae-button>
       </header>
