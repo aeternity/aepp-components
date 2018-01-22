@@ -56,3 +56,7 @@ with aeIcon and label
   <ae-button plain type="dramatic">Plain dramatic</ae-button>
 </div>
 ```
+
+```js
+<ae-button to="//example.com">As link</ae-button>
+```
