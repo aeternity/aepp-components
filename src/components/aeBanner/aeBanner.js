@@ -1,8 +1,3 @@
-const defaultOptions = {
-  timeout: 2500,
-  autoDestroy: true
-}
-
 export default {
   name: 'ae-banner',
   data: function () {
@@ -11,11 +6,20 @@ export default {
     }
   },
   props: {
-    'options': {
-      type: Object
+    /*
+     * Set if the banner should automatically closed
+     */
+    'autoDestroy': {
+      type: Boolean,
+      default: true
+    },
+    /*
+     * Set the banner display timeout
+     */
+    'timeout': {
+      type: Number,
+      default: 2500
     }
-  },
-  mounted () {
   },
   methods: {
     /**
@@ -29,7 +33,7 @@ export default {
       }
       this.show = true
 
-      if (this.allOptions.autoDestroy) {
+      if (this.autoDestroy) {
         this._startLazyDestroy()
       }
     },
@@ -48,20 +52,12 @@ export default {
     _startLazyDestroy () {
       this.timers = setTimeout(() => {
         this.hideBanner()
-      }, this.allOptions.timeout)
+      }, this.timeout)
     },
     _clearTimer () {
       if (this.timers) {
         clearTimeout(this.timers)
       }
-    }
-  },
-  computed: {
-    hasRightItem () {
-      return !!this.$slots.right
-    },
-    allOptions () {
-      return Object.assign({}, defaultOptions, this.options)
     }
   }
 }

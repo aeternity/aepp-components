@@ -2,8 +2,8 @@
   <div v-if="show" class="ae-banner">
     <div class="inner">
       <slot />
-      <div v-if='hasRightItem' class="right">
-        <slot name="right" />
+      <div class="right">
+        <slot name="right"  class="right" />
       </div>
     </div>
   </div>
