@@ -1,3 +1,5 @@
+import AeLink from '../aeLink/aeLink.vue'
+
 const aeButtonTypes = [
   'boring',
   'normal',
@@ -12,6 +14,7 @@ const aeButtonSizes = [
 ]
 export default {
   name: 'ae-button',
+  components: { AeLink },
   props: {
     /**
      * Type of button, possible values: 'boring', 'normal', 'exciting', 'dramatic'
