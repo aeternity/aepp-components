@@ -48,7 +48,11 @@ export default {
     plain: {
       type: Boolean,
       default: false
-    }
+    },
+    /**
+     * Path to go to when clicked
+     */
+    to: [String, Object]
   },
   computed: {
     hasDefaultSlot () {
