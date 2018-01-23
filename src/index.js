@@ -7,7 +7,6 @@ import AeFilterList from './components/aeFilterList'
 import AeFilterSeparator from './components/aeFilterSeparator'
 import AeHeader from './components/aeHeader'
 import AeNotification from './components/aeNotification'
-import AeHeaderButton from './components/aeHeaderButton'
 import AeIdentity from './components/aeIdentity'
 import AeIdentityAvatar from './components/aeIdentityAvatar'
 import AeLabel from './components/aeLabel'
@@ -34,7 +33,6 @@ const AeppComponents = {
   AeFilterSeparator,
   AeHeader,
   AeNotification,
-  AeHeaderButton,
   AeIdentity,
   AeIdentityAvatar,
   AeLabel,
@@ -69,7 +67,6 @@ export { default as AeFilterList } from './components/aeFilterList/aeFilterList.
 export { default as AeFilterSeparator } from './components/aeFilterSeparator/aeFilterSeparator.vue'
 export { default as AeHeader } from './components/aeHeader/aeHeader.vue'
 export { default as AeNotification } from './components/aeNotification/aeNotification.vue'
-export { default as AeHeaderButton } from './components/aeHeaderButton/aeHeaderButton.vue'
 export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue'
 export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue'
 export { default as AeLabel } from './components/aeLabel/aeLabel.vue'

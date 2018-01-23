@@ -1,10 +1,10 @@
 <template>
-  <ae-link v-if="to" class="ae-panel" :to="to">
+  <component :is="to ? 'ae-link' : 'div'" class="ae-panel" :to="to">
     <div class="progressbar" :style="progressbarStyle(ratioTop)" />
     <div class="content">
       <header v-if="title || closeHandler">
         <h1>{{title}}</h1>
-        <ae-button @click="closeHandler">
+        <ae-button @click="closeHandler" plain size="small">
           <ae-icon slot='icon' name='close' />
         </ae-button>
       </header>
@@ -12,21 +12,7 @@
       <slot />
     </div>
     <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
-  </ae-link>
-  <div v-else class="ae-panel">
-    <div class="progressbar" :style="progressbarStyle(ratioTop)" />
-    <div class="content">
-      <header v-if="title || closeHandler">
-        <h1>{{title}}</h1>
-        <ae-button @click="closeHandler">
-          <ae-icon slot='icon' name='close' />
-        </ae-button>
-      </header>
-      <!-- This is the Body of the Panel -->
-      <slot />
-    </div>
-    <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
-  </div>
+  </component>
 </template>
 
 <script>
