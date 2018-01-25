@@ -1,6 +1,6 @@
 {
   "name": "@aeternity/aepp-components",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Reusable Vue components for aeternity aepp projects",
   "main": "dist/aepp-components.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "dist"
   ],
   "dependencies": {
-    "ethereum-blockies-png": "^0.1.2",
+    "ethereum-blockies-png": "git+https://github.com/acdbaykal/ethereum-blockies-png.git",
     "ethjs-unit": "^0.1.6",
     "normalize.css": "^7.0.0",
     "numeral": "^2.0.6",
