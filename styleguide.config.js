@@ -1,6 +1,18 @@
 const path = require('path')
 
 module.exports = {
+  title: 'Aeternity Aepp Components',
+  sections: [
+    {
+      name: 'Introduction',
+      content: 'docs/Introduction.md'
+    },
+    {
+      name: 'Components',
+      components: 'src/components/**/*.vue',
+      content: 'docs/Components.md',
+    }
+  ],
   // https://github.com/vue-styleguidist/vue-styleguidist/blob/master/docs/Configuration.md
   webpackConfig: require('./build/webpack.conf.js'),
   // serverPort: 6066,
