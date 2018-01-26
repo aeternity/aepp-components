@@ -1,5 +1,6 @@
+import AeLink from '../aeLink/aeLink.vue'
+
 const aeButtonTypes = [
-  'plain',
   'boring',
   'normal',
   'exciting',
@@ -13,9 +14,10 @@ const aeButtonSizes = [
 ]
 export default {
   name: 'ae-button',
+  components: { AeLink },
   props: {
     /**
-     * Type of button, possible values: 'plain', 'boring', 'normal', 'exciting', 'dramatic'
+     * Type of button, possible values: 'boring', 'normal', 'exciting', 'dramatic'
      */
     type: {
       type: String,
@@ -49,7 +51,15 @@ export default {
     block: {
       type: Boolean,
       default: false
-    }
+    },
+    plain: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * Path to go to when clicked
+     */
+    to: [String, Object]
   },
   computed: {
     hasDefaultSlot () {
@@ -79,6 +89,9 @@ export default {
     blockModifier () {
       return this.block ? '_block' : ''
     },
+    plainModifier () {
+      return this.plain || this.size === 'smaller' ? '_plain' : ''
+    },
     cssClass () {
       return [
         this.sizeModifier,
@@ -87,7 +100,8 @@ export default {
         this.hasLabelModifier,
         this.invertModifier,
         this.uppercaseModifier,
-        this.blockModifier
+        this.blockModifier,
+        this.plainModifier
       ]
     }
   }
