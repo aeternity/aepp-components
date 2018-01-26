@@ -46,7 +46,7 @@ describe('AeTextInputMolecule', () => {
       const input = wrapper.find(AeValidatedTextInput)
       const forValue = label.element.getAttribute('for')
       const id = input.vm.$props.inputId
-      expect(forValue).toBe(id)
+      expect(forValue).toBe(id + '')
     })
 
     it('forwards validateOnInput property to input', () => {

@@ -8,7 +8,6 @@ export default {
   data () {
     return {
       errorId: undefined,
-      randomNumber: Math.ceil(Math.random() * 10000000000),
       internalValue: this.value
     }
   },
@@ -57,7 +56,7 @@ export default {
       }
     },
     internalInputId () {
-      return 'ae-text-input-molecule/' + this.randomNumber
+      return this._uid
     }
   },
   methods: {
