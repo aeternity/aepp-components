@@ -1,6 +1,5 @@
 ```js
 <div>
-  <ae-button type="plain">Plain</ae-button>
   <ae-button type="boring">Boring</ae-button>
   <ae-button type="normal">Normal</ae-button>
   <ae-button type="exciting">Exciting</ae-button>
@@ -89,7 +88,7 @@ with aeIcon and label
 inactive
 ```js
 <div>
-  <ae-button inactive type='plain'>Button</ae-button>
+
   <ae-button inactive type='boring'>Button</ae-button>
   <ae-button inactive size='small' type='normal'>Button</ae-button>
   <ae-button inactive type='exciting'>Button</ae-button>
@@ -104,5 +103,14 @@ inactive
   <ae-button inactive size='large' type='exciting'>
     <ae-icon slot='icon' invert type='exciting' name="burger"/>
   </ae-button>
+  
+  <ae-button>Normal</ae-button>
+  <ae-button plain>Plain</ae-button>
+  <ae-button plain type="exciting">Plain exciting</ae-button>
+  <ae-button plain type="dramatic">Plain dramatic</ae-button>
 </div>
+```
+
+```js
+  <ae-button to="//example.com">As link</ae-button>
 ```
