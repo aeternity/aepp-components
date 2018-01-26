@@ -27,7 +27,10 @@
 				<div class="buttons">
           <ae-button type="boring" size="small" @click="editIdentityCardAddress" uppercase>Edit</ae-button>
           <ae-button type="boring" size="small" @click="copyIdentityCardAddress" uppercase>Copy</ae-button>
-          <ae-button type="dramatic" size="small" @click="toggleActiveIdentityCard" uppercase>Active</ae-button>
+          <ae-button type="dramatic" size="small" @click="toggleActiveIdentityCard" uppercase :inactive="active">
+            <span v-if="active">Active</span>
+            <span v-else>Activate</span>
+          </ae-button>
         </div>
 			</div>
 		</div>
