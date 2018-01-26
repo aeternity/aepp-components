@@ -1,0 +1,5 @@
+Divider
+
+```js
+<ae-divider />
+```
