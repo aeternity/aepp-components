@@ -1,4 +1,6 @@
 import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
+import aeDivider from './../aeDivider/aeDivider.vue'
+import aeButton from './../aeButton/aeButton.vue'
 import helperMixin from './../../mixins/helper'
 import BN from 'bn.js'
 
@@ -8,7 +10,9 @@ import BN from 'bn.js'
 export default {
   name: 'ae-identity',
   components: {
-    'ae-identity-avatar': aeIdentityAvatar
+    'ae-identity-avatar': aeIdentityAvatar,
+    'ae-divider': aeDivider,
+    'ae-button': aeButton
   },
   data: function () {
     return {}
@@ -25,12 +29,16 @@ export default {
         balance: new BN('0', 10)
       }
     },
+    showButtons: {
+      type: Boolean,
+      default: false
+    },
     /**
     * Is this an identity activated/selected (magenta) or not (grey)?
     */
     active: {
       type: Boolean,
-      default: true
+      default: false
     },
     /**
     * Is this the full size identity card or the collapsed one for displaying at the bottom of the screen?
@@ -38,22 +46,55 @@ export default {
     collapsed: {
       type: Boolean,
       default: false
-    },
-    /**
-    * Whats the size of the component? "small" or "big"
-    * @deprecated use collapsed instead
-    */
-    size: {
-      type: String,
-      default: 'small',
-      validator: function (size) {
-        return size === 'small' || size === 'big'
-      }
     }
   },
   mixins: [
     helperMixin
   ],
+  methods: {
+    /**
+     * Make card active event
+     *
+     * @event activate
+     * @type {undefined}
+     */
+    toggleActiveIdentityCard () {
+      this.$emit('toggleActive')
+    },
+    /**
+     * Edit current Identity card
+     *
+     * @event activate
+     * @type {undefined}
+     */
+    editIdentityCardAddress () {
+      this.$emit('edit')
+    },
+    /**
+     * Copy address
+     *
+     * @event copyAddress
+     * @type {undefined}
+     */
+    copyIdentityCardAddress () {
+      try {
+        this.copyToClipboard(this.address)
+        this.$emit('copyAddress')
+      } catch (err) {
+        console.log('err', err)
+      }
+    },
+    copyToClipboard (val) {
+      var dummy = document.createElement('input')
+      dummy.style.displya = 'none'
+      document.body.appendChild(dummy)
+      dummy.setAttribute('id', 'dummy_id')
+      document.getElementById('dummy_id').value = val
+      dummy.select()
+      document.execCommand('copy')
+      document.body.removeChild(dummy)
+    }
+  },
   computed: {
     amount () {
       return this.identity ? helperMixin.methods.readableEther(this.identity.balance) : 0
@@ -67,15 +108,16 @@ export default {
     shortAddress () {
       return this.identity.address.substr(0, 6)
     },
-    classObject: function () {
-      let classes = {
+    chunkAddress () {
+      return this.identity.address.match(/.{1,7}/g)
+    },
+    classObject () {
+      return {
         'ae-identity': true,
         'collapsed': this.collapsed,
-        '_active_yes': this.active,
-        '_active_no': !this.active
+        'active': this.active,
+        'buttons': this.hasSlot
       }
-      classes['size_' + this.size] = true
-      return classes
     },
     hasSlot () {
       return this.$slots.default
