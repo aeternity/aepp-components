@@ -83,6 +83,7 @@ export { default as AeSwitch } from './components/aeSwitch/aeSwitch.vue'
 export { default as AeAppIcon } from './components/aeAppIcon/aeAppIcon.vue'
 export { default as AeIcon } from './components/aeIcon/aeIcon.vue'
 export { default as AeAddress } from './components/aeAddress/aeAddress.vue'
+export { default as AeAddressInput } from './components/aeAddressInput/aeAddressInput.vue'
 export { default as AeDivider } from './components/aeDivider/aeDivider.vue'
 
 export { default as aeHelperMixin } from './mixins/helper'

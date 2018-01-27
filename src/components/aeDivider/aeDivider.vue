@@ -1,5 +1,5 @@
 <template>
-  <div :class="cssClass">
+  <div class='ae-divider' :class={ type } />
   </div>
 </template>
 <script src='./aeDivider.js'/>
