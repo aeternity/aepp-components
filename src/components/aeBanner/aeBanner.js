@@ -22,33 +22,6 @@ export default {
     }
   },
   methods: {
-    /**
-     * Show the banner
-     *
-     * @public
-     */
-    showBanner () {
-      if (this.show) {
-        return
-      }
-      this.show = true
-
-      if (this.autoDestroy) {
-        this._startLazyDestroy()
-      }
-    },
-    /**
-     * Hide the banner
-     *
-     * @public
-     */
-    hideBanner () {
-      if (!this.show) {
-        return
-      }
-      this._clearTimer()
-      this.show = false
-    },
     _startLazyDestroy () {
       this.timers = setTimeout(() => {
         this.hideBanner()
