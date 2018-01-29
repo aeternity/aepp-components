@@ -1,11 +1,8 @@
 .ae-divider {
-  margin: 8px 0px;
+  margin: 8px 0;
   height: 2px;
   opacity: 0.32;
-
-  &.normal {
-    background-color: #989898;
-  }
+  background-color: #989898;
 
   &.dramatic {
     background-color: #f03c6e;
@@ -18,5 +15,4 @@
   &.boring {
     background-color: #f0f0f0;
   }
-
 }
