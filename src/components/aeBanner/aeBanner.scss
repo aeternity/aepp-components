@@ -12,10 +12,6 @@
   transform: translate(-50%, -50%);
   z-index: 19000;
 
-  @include tablet {
-    width: 748px;
-  }
-
   @include desktop {
     width: 880px;
   }
