@@ -40,7 +40,17 @@ let identity = {
 	balance: new BN('1337000000000000000', 10)
 }
 
-<ae-identity :identity="identity" active showButtons />
+<ae-identity :identity="identity" active>
+  <ae-divider type="boring"/>
+  <div class="buttons">
+    <ae-button type="boring" size="small" uppercase>Edit</ae-button>
+    <ae-button type="boring" size="small" uppercase>Copy</ae-button>
+    <ae-button type="dramatic" size="small" uppercase :inactive="active">
+      <span v-if="active">Active</span>
+      <span v-else>Activate</span>
+    </ae-button>
+  </div>
+</ae-identity>
 ```
 
 Collapsed identity card with buttons.
@@ -51,4 +61,9 @@ let identity = {
 	balance: new BN('1337000000000000000', 10)
 }
 <ae-identity :identity="identity" collapsed showButtons />
+```
+
+Blank identity card
+```js
+<ae-identity blank active />
 ```

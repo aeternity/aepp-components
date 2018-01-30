@@ -9,14 +9,7 @@ import BN from 'bn.js'
  */
 export default {
   name: 'ae-identity',
-  components: {
-    'ae-identity-avatar': aeIdentityAvatar,
-    'ae-divider': aeDivider,
-    'ae-button': aeButton
-  },
-  data: function () {
-    return {}
-  },
+  components: { aeIdentityAvatar, aeDivider, aeButton },
   props: {
     /**
     * An object representing a identity. Must have a adress string a tokenBalance and a balance BigNumber (bn.js)
@@ -29,10 +22,6 @@ export default {
         balance: new BN('0', 10)
       }
     },
-    showButtons: {
-      type: Boolean,
-      default: false
-    },
     /**
     * Is this an identity activated/selected (magenta) or not (grey)?
     */
@@ -44,6 +33,13 @@ export default {
     * Is this the full size identity card or the collapsed one for displaying at the bottom of the screen?
     */
     collapsed: {
+      type: Boolean,
+      default: false
+    },
+    /**
+    * Have a blank identity card
+    */
+    blank: {
       type: Boolean,
       default: false
     }
@@ -60,39 +56,6 @@ export default {
      */
     toggleActiveIdentityCard () {
       this.$emit('toggleActive')
-    },
-    /**
-     * Edit current Identity card
-     *
-     * @event activate
-     * @type {undefined}
-     */
-    editIdentityCardAddress () {
-      this.$emit('edit')
-    },
-    /**
-     * Copy address
-     *
-     * @event copyAddress
-     * @type {undefined}
-     */
-    copyIdentityCardAddress () {
-      try {
-        this.copyToClipboard(this.address)
-        this.$emit('copyAddress')
-      } catch (err) {
-        console.log('err', err)
-      }
-    },
-    copyToClipboard (val) {
-      var dummy = document.createElement('input')
-      dummy.style.displya = 'none'
-      document.body.appendChild(dummy)
-      dummy.setAttribute('id', 'dummy_id')
-      document.getElementById('dummy_id').value = val
-      dummy.select()
-      document.execCommand('copy')
-      document.body.removeChild(dummy)
     }
   },
   computed: {
@@ -115,12 +78,8 @@ export default {
       return {
         'ae-identity': true,
         'collapsed': this.collapsed,
-        'active': this.active,
-        'buttons': this.hasSlot
+        'active': this.active
       }
-    },
-    hasSlot () {
-      return this.$slots.default
     }
   }
 }
