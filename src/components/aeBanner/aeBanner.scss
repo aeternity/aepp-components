@@ -13,7 +13,7 @@
   z-index: 19000;
 
   @include desktop {
-    width: 880px;
+    width: $container-width;
   }
 
   > .inner {
