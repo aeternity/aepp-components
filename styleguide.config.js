@@ -10,7 +10,7 @@ module.exports = {
     {
       name: 'Components',
       components: 'src/components/**/*.vue',
-      content: 'docs/Components.md',
+      content: 'docs/Components.md'
     }
   ],
   // https://github.com/vue-styleguidist/vue-styleguidist/blob/master/docs/Configuration.md
