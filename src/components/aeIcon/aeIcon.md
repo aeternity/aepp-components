@@ -7,6 +7,8 @@
   <ae-icon name="close" />
   <ae-icon name="error" />
   <ae-icon name="info" />
+  <ae-icon name="plus" />
+  <ae-icon name="refresh" />
   <br />
   boring: <ae-icon type="boring" name="arrow" /><br />
   exciting: <ae-icon type="exciting" name="arrow" /><br />
