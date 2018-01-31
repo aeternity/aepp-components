@@ -48,6 +48,10 @@ export default {
       type: Boolean,
       default: false
     },
+    block: {
+      type: Boolean,
+      default: false
+    },
     plain: {
       type: Boolean,
       default: false
@@ -82,6 +86,9 @@ export default {
     uppercaseModifier () {
       return this.uppercase ? '_uppercase' : ''
     },
+    blockModifier () {
+      return this.block ? '_block' : ''
+    },
     plainModifier () {
       return this.plain || this.size === 'smaller' ? '_plain' : ''
     },
@@ -93,6 +100,7 @@ export default {
         this.hasLabelModifier,
         this.invertModifier,
         this.uppercaseModifier,
+        this.blockModifier,
         this.plainModifier
       ]
     }

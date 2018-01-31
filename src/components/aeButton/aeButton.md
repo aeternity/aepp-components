@@ -85,6 +85,15 @@ with aeIcon and label
   <ae-button uppercase>Uppercase</ae-button>
 </div>
 ```
+
+
+full width block button
+```js
+<div>
+  <ae-button block>Block buttons that span full width</ae-button>
+</div>
+```
+
 inactive
 ```js
 <div>
