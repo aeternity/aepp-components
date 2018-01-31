@@ -1,7 +1,13 @@
 ```js
-<ae-address :address="'0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9'"></ae-address>
+<ae-address address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
 ```
 
 ```js
-<ae-address :address="'0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9'" :show-avatar="true" :size="'compact'"></ae-address>
+<ae-address size='short' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
+```
+```js
+<ae-address show-avatar address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>\
+```
+```js
+<ae-address show-avatar size='short' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
 ```
