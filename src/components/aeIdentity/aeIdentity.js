@@ -1,6 +1,5 @@
 import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
 import aeDivider from './../aeDivider/aeDivider.vue'
-import aeButton from './../aeButton/aeButton.vue'
 import helperMixin from './../../mixins/helper'
 import BN from 'bn.js'
 
@@ -9,7 +8,7 @@ import BN from 'bn.js'
  */
 export default {
   name: 'ae-identity',
-  components: { aeIdentityAvatar, aeDivider, aeButton },
+  components: { aeIdentityAvatar, aeDivider },
   props: {
     /**
     * An object representing a identity. Must have a adress string a tokenBalance and a balance BigNumber (bn.js)
