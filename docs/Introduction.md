@@ -2,4 +2,4 @@ The aeternity aepp components are meant to provide aepp developers with reusable
 
 ## Documentation
 
-Full documentation can be found at [http://components.aepps.com](http://components.aepps.com)
+Full documentation can be found at [https://components.aepps.com](http://components.aepps.com)
