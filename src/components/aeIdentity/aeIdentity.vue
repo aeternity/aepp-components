@@ -18,7 +18,6 @@
           </div>
         </div>
         <div v-if="!collapsed" class="chunked-address">
-          <!-- <div class="identity-info _long">{{address}}</div> -->
           <div v-for="chunk in chunkAddress" class="chunk">
             {{chunk}}
           </div>
