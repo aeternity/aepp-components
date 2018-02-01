@@ -42,7 +42,7 @@ let identity = {
 
 <ae-identity :identity="identity" active>
   <ae-divider type="boring"/>
-  <div class="buttons">
+  <div>
     <ae-button type="boring" size="small" uppercase>Edit</ae-button>
     <ae-button type="boring" size="small" uppercase>Copy</ae-button>
     <ae-button type="dramatic" size="small" uppercase :inactive="active">
