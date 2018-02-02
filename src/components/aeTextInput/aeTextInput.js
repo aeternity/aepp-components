@@ -14,7 +14,7 @@ export default {
   },
   props: {
     inputId: {
-      type: [String],
+      type: [String, Number],
       default: null
     },
     placeholder: {
