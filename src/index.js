@@ -8,6 +8,7 @@ import AeFilterSeparator from './components/aeFilterSeparator'
 import AeHeader from './components/aeHeader'
 import AeIdentity from './components/aeIdentity'
 import AeIdentityAvatar from './components/aeIdentityAvatar'
+import AeInput from './components/aeInput'
 import AeLabel from './components/aeLabel'
 import AeLink from './components/aeLink'
 import AeLoader from './components/aeLoader'
@@ -21,6 +22,7 @@ import AeAppIcon from './components/aeAppIcon'
 import AeIcon from './components/aeIcon'
 import AeAddress from './components/aeAddress'
 import AeAddressInput from './components/aeAddressInput'
+import AeDivider from './components/aeDivider'
 import AeBanner from './components/aeBanner'
 
 const AeppComponents = {
@@ -34,6 +36,7 @@ const AeppComponents = {
   AeHeader,
   AeIdentity,
   AeIdentityAvatar,
+  AeInput,
   AeLabel,
   AeLink,
   AeLoader,
@@ -47,6 +50,7 @@ const AeppComponents = {
   AeIcon,
   AeAddress,
   AeAddressInput,
+  AeDivider,
   AeBanner
 }
 
@@ -68,6 +72,7 @@ export { default as AeFilterSeparator } from './components/aeFilterSeparator/aeF
 export { default as AeHeader } from './components/aeHeader/aeHeader.vue'
 export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue'
 export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue'
+export { default as AeInput } from './components/aeInput/aeInput.vue'
 export { default as AeLabel } from './components/aeLabel/aeLabel.vue'
 export { default as AeLink } from './components/aeLink/aeLink.vue'
 export { default as AeLoader } from './components/aeLoader/aeLoader.vue'
@@ -81,6 +86,7 @@ export { default as AeAppIcon } from './components/aeAppIcon/aeAppIcon.vue'
 export { default as AeIcon } from './components/aeIcon/aeIcon.vue'
 export { default as AeAddress } from './components/aeAddress/aeAddress.vue'
 export { default as AeAddressInput } from './components/aeAddressInput/aeAddressInput.vue'
+export { default as AeDivider } from './components/aeDivider/aeDivider.vue'
 export { default as AeBanner } from './components/aeBanner/aeBanner.vue'
 
 export { default as aeHelperMixin } from './mixins/helper'
