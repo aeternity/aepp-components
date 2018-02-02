@@ -30,6 +30,13 @@ describe('AeTextInputMolecule', () => {
       ).toBe(label)
     })
 
+    it('forwards placeholder prop onto ae-validated-text-input element', () => {
+      const placeholder = 'plchldr'
+      const wrapper = createShallowWrapper({placeholder})
+      const input = wrapper.find(AeValidatedTextInput)
+      expect(input.vm.$props.placeholder).toBe(placeholder)
+    })
+
     it('does NOT render a label element when label is not provided', () => {
       const wrapper = createShallowWrapper()
       expect(wrapper.contains('label')).toBe(false)

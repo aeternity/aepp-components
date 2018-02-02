@@ -4,6 +4,7 @@
     :value="internalValue"
     :inputId="inputId"
     :hasError="hasError"
+    :placeholder="placeholder"
     @input="onInput"
     @blur="onBlur"
     @focus="onFocus"

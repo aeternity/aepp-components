@@ -22,6 +22,7 @@
       :validateOnBlur="validateOnBlur"
       :validateOnInput="validateOnInput"
       :value="internalValue"
+      :placeholder="placeholder"
       @blur="onBlur"
       @clearRequest="clearInput"
       @input="onInput"

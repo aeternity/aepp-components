@@ -26,6 +26,13 @@ describe('AeValidatedTextInput', () => {
       expect(wrapper.contains(AeTextInput)).toBe(true)
     })
 
+    it('forwards placeholder prop onto ae-text-input element', () => {
+      const placeholder = 'plchldr'
+      const wrapper = createShallowWrapper({placeholder})
+      const input = wrapper.find(AeTextInput)
+      expect(input.vm.$props.placeholder).toBe(placeholder)
+    })
+
     it('sets inputId property  for the aeTextInput', () => {
       const id = 'asdfas'
       const wrapper = createShallowWrapper({inputId: id})
