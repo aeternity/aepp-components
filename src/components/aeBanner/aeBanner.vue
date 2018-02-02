@@ -2,9 +2,18 @@
   <div class="ae-banner">
     <div class="inner">
       <slot />
-      <div class="right">
-        <slot name="right"  class="right" />
-      </div>
+      <slot name="right">
+        <div class="right">
+          <ae-button
+            uppercase
+            size="smaller"
+            type="exciting"
+            @click="hideBanner"
+          >
+            Cancel
+          </ae-button>
+        </div>
+      </slot>
     </div>
   </div>
 </template>
