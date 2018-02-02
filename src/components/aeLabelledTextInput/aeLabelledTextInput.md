@@ -8,7 +8,7 @@ new Vue({
     }
   },
  template: `
-    <ae-text-input-molecule
+    <ae-labelled-text-input
       label="Number input"
       placeholder="Test input"
       :value="inputValue"

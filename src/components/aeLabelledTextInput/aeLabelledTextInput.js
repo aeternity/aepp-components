@@ -1,7 +1,7 @@
 import AeValidatedTextInput from '../aeValidatedTextInput/aeValidatedTextInput.vue'
 
 export default {
-  name: 'ae-text-input-molecule',
+  name: 'ae-labelled-text-input',
   components: {
     AeValidatedTextInput
   },

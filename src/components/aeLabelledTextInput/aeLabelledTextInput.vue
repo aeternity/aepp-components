@@ -1,5 +1,5 @@
 <template>
-  <div class="ae-text-input-molecule">
+  <div class="ae-labelled-text-input">
     <div class="top-container">
       <label class="label" v-if="!!label" :for="internalInputId">{{label}}</label>
       <span
@@ -33,7 +33,7 @@
     />
   </div>
 </template>
-<script src="./aeTextInputMolecule.js">
-  export {default} from './aeTextInputMolecule'
+<script src="./aeLabelledTextInput.js">
+  export {default} from './aeLabelledTextInput'
 </script>
-<style scoped lang="scss" src="./aeTextInputMolecule.scss"/>
+<style scoped lang="scss" src="./aeLabelledTextInput.scss"/>

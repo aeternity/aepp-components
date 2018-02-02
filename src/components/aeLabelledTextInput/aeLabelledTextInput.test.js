@@ -1,5 +1,5 @@
 import {shallow, mount} from 'vue-test-utils'
-import AeTextInputMolecule from './aeTextInputMolecule.vue'
+import AeTextInputMolecule from './aeLabelledTextInput.vue'
 import AeTextInputMoleculePlugin from './index'
 import AeValidatedTextInput from '../aeValidatedTextInput/aeValidatedTextInput.vue'
 
