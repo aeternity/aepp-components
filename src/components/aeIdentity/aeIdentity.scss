@@ -89,8 +89,11 @@
   overflow: hidden;
 }
 
+.balances {
+  width: calc(100% - 23px);
+}
+
 .balance {
-  width: 150px;
   height: 14px;
   font-family: 'Roboto Mono', monospace;
   font-size: 12px;

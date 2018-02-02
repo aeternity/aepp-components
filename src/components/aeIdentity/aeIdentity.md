@@ -29,7 +29,9 @@ let identity = {
 	balance: new BN('1337000000000000000', 10)
 }
 
-<ae-identity :identity="identity" active collapsed></ae-identity>
+<ae-identity :identity="identity" active collapsed>
+  <ae-icon name="chevron" type="plain" slot="header-right"/>
+</ae-identity>
 ```
 
 Identity card with button
