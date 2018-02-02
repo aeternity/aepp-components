@@ -1,10 +1,12 @@
 <template>
   <label class="ae-label">
-    <!-- Label content -->
-    <slot />
-    <span class="help" :class="helpType">
+    <div class="content">
+      <!-- Label content -->
+      <slot />
+    </div>
+    <div class="help" :class="helpType">
       {{helpText}}
-    </span>
+    </div>
   </label>
 </template>
 
@@ -33,16 +35,25 @@
   @import "../variables";
 
   .ae-label {
-    display: block;
+    display: flex;
     text-transform: uppercase;
     font-weight: 500;
     margin-top: 25px;
+    margin-bottom: 10px;
+    align-items: center;
+    line-height: 28px;
+
+    .content {
+      flex-grow: 1;
+    }
 
     .help {
       font-size: 13px;
-      float: right;
+      text-align: right;
       text-transform: none;
       color: $grey;
+      margin-left: 5px;
+      line-height: 14px;
 
       &.danger {
         color: $maegenta;

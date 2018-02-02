@@ -1,5 +1,3 @@
-Divider
-
 ```js
 <ae-divider />
 ```

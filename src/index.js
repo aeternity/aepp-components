@@ -9,6 +9,7 @@ import AeHeader from './components/aeHeader'
 import AeNotification from './components/aeNotification'
 import AeIdentity from './components/aeIdentity'
 import AeIdentityAvatar from './components/aeIdentityAvatar'
+import AeInput from './components/aeInput'
 import AeLabel from './components/aeLabel'
 import AeLink from './components/aeLink'
 import AeLoader from './components/aeLoader'
@@ -36,6 +37,7 @@ const AeppComponents = {
   AeNotification,
   AeIdentity,
   AeIdentityAvatar,
+  AeInput,
   AeLabel,
   AeLink,
   AeLoader,
@@ -71,6 +73,7 @@ export { default as AeHeader } from './components/aeHeader/aeHeader.vue'
 export { default as AeNotification } from './components/aeNotification/aeNotification.vue'
 export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue'
 export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue'
+export { default as AeInput } from './components/aeInput/aeInput.vue'
 export { default as AeLabel } from './components/aeLabel/aeLabel.vue'
 export { default as AeLink } from './components/aeLink/aeLink.vue'
 export { default as AeLoader } from './components/aeLoader/aeLoader.vue'
@@ -83,6 +86,7 @@ export { default as AeSwitch } from './components/aeSwitch/aeSwitch.vue'
 export { default as AeAppIcon } from './components/aeAppIcon/aeAppIcon.vue'
 export { default as AeIcon } from './components/aeIcon/aeIcon.vue'
 export { default as AeAddress } from './components/aeAddress/aeAddress.vue'
+export { default as AeAddressInput } from './components/aeAddressInput/aeAddressInput.vue'
 export { default as AeDivider } from './components/aeDivider/aeDivider.vue'
 
 export { default as aeHelperMixin } from './mixins/helper'
