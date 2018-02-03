@@ -3,15 +3,6 @@
     <div class="inner">
       <slot />
       <slot name="right">
-        <ae-button
-          uppercase
-          size="smaller"
-          type="exciting"
-          @click="hideBanner"
-          class="right"
-          >
-          Cancel
-        </ae-button>
       </slot>
     </div>
   </div>
