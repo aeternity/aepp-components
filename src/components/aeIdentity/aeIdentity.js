@@ -63,7 +63,6 @@ export default {
       return this.identity.address.match(/.{1,7}/g)
     },
     classObject () {
-      console.log('size_' + this.size)
       return {
         'ae-identity': true,
         'collapsed': this.collapsed,
