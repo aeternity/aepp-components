@@ -66,6 +66,7 @@
 
 <style lang="scss" scoped>
   @import "../variables";
+  @import "../mixins";
 
   .ae-panel {
     border-radius: 10px;
@@ -78,11 +79,11 @@
     text-decoration: none;
     background-color: $white;
     color: inherit;
-    @media (max-width: $container-width) {
+    @include belowDesktop {
       margin-left: 10px;
       margin-right: 10px;
     }
-    @media (max-width: $screen-phone) {
+    @include phone {
       margin-top: 10px;
       margin-bottom: 10px;
     }
@@ -99,7 +100,7 @@
 
     .content {
       padding: 30px;
-      @media (max-width: $screen-phone) {
+      @include phone {
         padding: 20px;
       }
 

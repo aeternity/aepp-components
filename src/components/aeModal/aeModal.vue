@@ -56,13 +56,14 @@ export default {
 
 <style lang="scss" scoped>
   @import "../variables";
+  @import "../mixins";
 
   .ae-overlay {
     .ae-modal {
       background: linear-gradient(to bottom, white, #f1f4f7);
     }
 
-    @media (min-width: $screen-phone) {
+    @include abovePhone {
       display: flex;
       padding: 10px;
       box-sizing: border-box;
@@ -99,7 +100,7 @@ export default {
       }
     }
 
-    @media (max-width: $screen-phone) {
+    @include phone {
       .ae-modal {
         min-height: 100%;
       }
