@@ -46,17 +46,6 @@ export default {
   mixins: [
     helperMixin
   ],
-  methods: {
-    /**
-     * Make card active event
-     *
-     * @event activate
-     * @type {undefined}
-     */
-    toggleActiveIdentityCard () {
-      this.$emit('toggleActive')
-    }
-  },
   computed: {
     amount () {
       return this.identity ? helperMixin.methods.readableEther(this.identity.balance) : 0
@@ -74,6 +63,7 @@ export default {
       return this.identity.address.match(/.{1,7}/g)
     },
     classObject () {
+      console.log('size_' + this.size)
       return {
         'ae-identity': true,
         'collapsed': this.collapsed,
