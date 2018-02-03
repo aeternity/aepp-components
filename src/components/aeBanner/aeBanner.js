@@ -1,7 +1,7 @@
 import AeButton from '../aeButton/aeButton.vue'
 import AeIcon from '../aeIcon/aeIcon.vue'
 
-const aeNotificationTypes = [
+const aeBannerTypes = [
   'plain',
   'boring',
   'normal',
@@ -10,15 +10,15 @@ const aeNotificationTypes = [
 ]
 
 export default {
-  name: 'ae-notification',
+  name: 'ae-banner',
   props: {
     /**
-     * Type of notification, possible values: 'plain', 'boring', 'normal', 'exciting', 'dramatic'
+     * Type of banner, possible values: 'plain', 'boring', 'normal', 'exciting', 'dramatic'
      */
     type: {
       type: String,
       validator: (value) => {
-        return aeNotificationTypes.find(e => e === value)
+        return aeBannerTypes.find(e => e === value)
       },
       default: 'normal'
     }

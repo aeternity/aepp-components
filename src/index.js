@@ -1,12 +1,12 @@
 import AeAmount from './components/aeAmount'
 import AeAmountInput from './components/aeAmountInput'
 import AeBadge from './components/aeBadge'
+import AeBanner from './components/aeBanner'
 import AeButton from './components/aeButton'
 import AeFilterItem from './components/aeFilterItem'
 import AeFilterList from './components/aeFilterList'
 import AeFilterSeparator from './components/aeFilterSeparator'
 import AeHeader from './components/aeHeader'
-import AeNotification from './components/aeNotification'
 import AeIdentity from './components/aeIdentity'
 import AeIdentityAvatar from './components/aeIdentityAvatar'
 import AeInput from './components/aeInput'
@@ -29,12 +29,12 @@ const AeppComponents = {
   AeAmount,
   AeAmountInput,
   AeBadge,
+  AeBanner,
   AeButton,
   AeFilterItem,
   AeFilterList,
   AeFilterSeparator,
   AeHeader,
-  AeNotification,
   AeIdentity,
   AeIdentityAvatar,
   AeInput,
@@ -65,12 +65,12 @@ export default AeppComponents
 export { default as AeAmount } from './components/aeAmount/aeAmount.vue'
 export { default as AeAmountInput } from './components/aeAmountInput/aeAmountInput.vue'
 export { default as AeBadge } from './components/aeBadge/aeBadge.vue'
+export { default as AeBanner } from './components/aeBanner/aeBanner.vue'
 export { default as AeButton } from './components/aeButton/aeButton.vue'
 export { default as AeFilterItem } from './components/aeFilterItem/aeFilterItem.vue'
 export { default as AeFilterList } from './components/aeFilterList/aeFilterList.vue'
 export { default as AeFilterSeparator } from './components/aeFilterSeparator/aeFilterSeparator.vue'
 export { default as AeHeader } from './components/aeHeader/aeHeader.vue'
-export { default as AeNotification } from './components/aeNotification/aeNotification.vue'
 export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue'
 export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue'
 export { default as AeInput } from './components/aeInput/aeInput.vue'
