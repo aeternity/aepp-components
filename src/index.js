@@ -6,7 +6,6 @@ import AeFilterItem from './components/aeFilterItem'
 import AeFilterList from './components/aeFilterList'
 import AeFilterSeparator from './components/aeFilterSeparator'
 import AeHeader from './components/aeHeader'
-import AeNotification from './components/aeNotification'
 import AeIdentity from './components/aeIdentity'
 import AeIdentityAvatar from './components/aeIdentityAvatar'
 import AeInput from './components/aeInput'
@@ -24,6 +23,7 @@ import AeIcon from './components/aeIcon'
 import AeAddress from './components/aeAddress'
 import AeAddressInput from './components/aeAddressInput'
 import AeDivider from './components/aeDivider'
+import AeBanner from './components/aeBanner'
 
 const AeppComponents = {
   AeAmount,
@@ -34,7 +34,6 @@ const AeppComponents = {
   AeFilterList,
   AeFilterSeparator,
   AeHeader,
-  AeNotification,
   AeIdentity,
   AeIdentityAvatar,
   AeInput,
@@ -51,7 +50,8 @@ const AeppComponents = {
   AeIcon,
   AeAddress,
   AeAddressInput,
-  AeDivider
+  AeDivider,
+  AeBanner
 }
 
 AeppComponents.install = Vue =>
@@ -70,7 +70,6 @@ export { default as AeFilterItem } from './components/aeFilterItem/aeFilterItem.
 export { default as AeFilterList } from './components/aeFilterList/aeFilterList.vue'
 export { default as AeFilterSeparator } from './components/aeFilterSeparator/aeFilterSeparator.vue'
 export { default as AeHeader } from './components/aeHeader/aeHeader.vue'
-export { default as AeNotification } from './components/aeNotification/aeNotification.vue'
 export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue'
 export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue'
 export { default as AeInput } from './components/aeInput/aeInput.vue'
@@ -88,5 +87,6 @@ export { default as AeIcon } from './components/aeIcon/aeIcon.vue'
 export { default as AeAddress } from './components/aeAddress/aeAddress.vue'
 export { default as AeAddressInput } from './components/aeAddressInput/aeAddressInput.vue'
 export { default as AeDivider } from './components/aeDivider/aeDivider.vue'
+export { default as AeBanner } from './components/aeBanner/aeBanner.vue'
 
 export { default as aeHelperMixin } from './mixins/helper'

@@ -1,0 +1,12 @@
+@import "../variables";
+
+.ae-banner {
+  z-index: 19000;
+
+  > .inner {
+    padding: 17px 22px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, $white, #f1f4f7);
+    box-shadow: 0 4px 8px 0 rgba(60, 60, 60, 0.1);
+  }
+}
