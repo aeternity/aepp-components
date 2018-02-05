@@ -10,14 +10,13 @@
     display: flex;
     align-items: center;
     min-height: 64px;
-    box-sizing:border-box;
-    padding: 17px 22px;
+    box-sizing: border-box;
     max-width: $container-width;
     margin: 0 auto;
-    padding-left: 22px;
     border-radius: 10px;
     background: linear-gradient(to bottom, $white, #f1f4f7);
     box-shadow: 0 4px 8px 0 rgba($dark, 0.1);
+    padding: 17px 22px;
 
     @include desktop {
       padding-left: 30px;
