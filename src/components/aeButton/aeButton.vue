@@ -10,7 +10,6 @@
       <!-- Button icon -->
       <slot name='icon' :class="['ae-button__icon', sizeModifier, hasLabelModifier]">
       </slot>
-
       <div v-if='hasLabel' :class="['label', sizeModifier, typeModifier]">
         <!-- Button content -->
         <slot></slot>
