@@ -22,7 +22,7 @@
           {{chunk}}
         </div>
       </div>
-      <div class="footer" v-if="'hasDefaultSlot'">
+      <div class="footer" v-if="hasSlot">
         <slot></slot>
       </div>
     </div>
