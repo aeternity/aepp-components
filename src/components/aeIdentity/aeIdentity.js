@@ -34,13 +34,6 @@ export default {
     collapsed: {
       type: Boolean,
       default: false
-    },
-    /**
-    * Have a blank identity card
-    */
-    blank: {
-      type: Boolean,
-      default: false
     }
   },
   mixins: [
