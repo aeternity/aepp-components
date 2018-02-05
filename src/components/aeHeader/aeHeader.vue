@@ -48,6 +48,7 @@
 
 <style lang="scss" scoped>
   @import "../variables";
+  @import "../mixins";
 
   $height: 65px;
 
@@ -61,7 +62,7 @@
       justify-content: space-between;
       align-items: center;
 
-      @media (max-width: $container-width) {
+      @include belowDesktop {
         padding: 0 14px;
       }
 
@@ -88,7 +89,7 @@
       }
     }
 
-    @media (max-width: $screen-phone) {
+    @include phone {
       header {
         margin-bottom: 20px;
         position: relative;
@@ -117,7 +118,7 @@
       }
     }
 
-    @media (min-width: $screen-phone + 1) {
+    @include abovePhone {
       background-image: linear-gradient(to bottom, $anthracite, $aubergine);
       box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
 
