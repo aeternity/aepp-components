@@ -9,7 +9,9 @@
   > div {
     display: flex;
     align-items: center;
-    height: 64px;
+    min-height: 64px;
+    box-sizing:border-box;
+    padding: 17px 22px;
     max-width: $container-width;
     margin: 0 auto;
     padding-left: 22px;
