@@ -2,7 +2,8 @@
 new Vue({
   data() {
     return {
-      value: 1337
+      value: '1337',
+      receivedValue: undefined
     }
   },
   template: `

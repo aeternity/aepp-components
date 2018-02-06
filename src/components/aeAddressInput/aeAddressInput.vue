@@ -9,24 +9,22 @@
             Show Info
           </a>
         </span>
-        <span v-else='addressValid'>
-          Invalid
+        <span v-else>
+          {{errorMessage}}
         </span>
       </span>
     </label>
-    <input
-      :class="{ danger: !addressValid }"
-      v-model='address'
-      type="text"
-      pattern="/^0x[0-9a-fA-F]{40}$/i"
-      placeholder="recipient ethereum address"
-      maxlength=42
+    <ae-validated-text-input
+      :validateOnBlur="validateOnBlur"
+      :validateOnInput="validateOnInput"
+      :defaultErrorMessage="errorMessage"
+      :value="address"
+      :maxlength="42"
+      @input="onInput"
+      @clearRequest="onClearRequest"
     />
-    <!--<text-muted :style="{ visibility: message.length <= 300 ? 'visible' : 'hidden' }" small>-->
-    <!--Characters left: {{300 - message.length}}-->
-    <!--</text-muted>-->
   </div>
 </template>
 <script src='./aeAddressInput.js'/>
 /* eslint no-unused-expressions: "off" */
-<style src='./aeAddressInput.scss'/>
+<style lang="scss" src='./aeAddressInput.scss'/>

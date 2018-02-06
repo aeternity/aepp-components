@@ -1,0 +1,64 @@
+@import '../variables.scss';
+@import '../_extendables.scss';
+
+$clear-btn-height: 20px;
+$clear-btn-width: $clear-btn-height;
+$clear-btn-right-margin: 12px;
+
+$clear-icon-height: 12px;
+$clear-icon-width: 12px;
+
+
+$icon-top-distance: ($clear-btn-height - $clear-icon-height) / 2;
+$icon-left-distance: ($clear-btn-width - $clear-icon-width) / 2;
+
+%inner-text{
+  font-family: Roboto, Arial, Helvetica;
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+.ae-text-input{
+  position: relative;
+}
+
+.input{
+  @extend %input;
+  @extend %inner-text;
+  padding-right: $clear-btn-width + $clear-btn-right-margin;
+  box-sizing: border-box;
+  border: solid 2px;
+
+  &._is-valid{
+    &_true{
+      border-color: $silver;
+    }
+    &_false{
+      border-color: $maegenta;
+    }
+  }
+
+  ::placeholder{
+    @extend %inner-text;
+  }
+}
+
+.ae-text-input__clear-icon{
+  height: $clear-icon-height!important;
+  width: $clear-icon-width !important;
+  left:$icon-left-distance;
+  top: $icon-top-distance;
+  position: absolute;
+  margin: 0 !important;
+}
+
+.ae-text-input__clear-btn{
+ height: $clear-btn-height;
+  position: absolute;
+  right: $clear-btn-right-margin;
+  top:50%;
+  transform: translateY(-50%);
+  width: $clear-btn-width;
+  cursor: pointer;
+  outline: none;
+}
