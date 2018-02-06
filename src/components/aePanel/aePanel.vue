@@ -1,10 +1,10 @@
 <template>
-  <router-link v-if="to" class="ae-panel" :to="to">
+  <component :is="to ? 'ae-link' : 'div'" class="ae-panel" :to="to">
     <div class="progressbar" :style="progressbarStyle(ratioTop)" />
     <div class="content">
       <header v-if="title || closeHandler">
         <h1>{{title}}</h1>
-        <ae-button @click="closeHandler">
+        <ae-button @click="closeHandler" plain size="small">
           <ae-icon slot='icon' name='close' />
         </ae-button>
       </header>
@@ -12,26 +12,13 @@
       <slot />
     </div>
     <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
-  </router-link>
-  <div v-else class="ae-panel">
-    <div class="progressbar" :style="progressbarStyle(ratioTop)" />
-    <div class="content">
-      <header v-if="title || closeHandler">
-        <h1>{{title}}</h1>
-        <ae-button @click="closeHandler">
-          <ae-icon slot='icon' name='close' />
-        </ae-button>
-      </header>
-      <!-- This is the Body of the Panel -->
-      <slot />
-    </div>
-    <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
-  </div>
+  </component>
 </template>
 
 <script>
   import AeButton from '../aeButton/aeButton.vue'
   import AeIcon from '../aeIcon/aeIcon.vue'
+  import AeLink from '../aeLink/aeLink.vue'
   /**
    *
    */
@@ -39,7 +26,7 @@
     name: 'ae-panel',
     props: {
       /**
-       * Where does the Panel link to. its fed to a router-link.
+       * Where does the Panel link to. its fed to a ae-link.
        */
       to: [String, Object],
 
@@ -63,7 +50,7 @@
        */
       closeHandler: { type: Function, required: false }
     },
-    components: { AeButton, AeIcon },
+    components: { AeButton, AeIcon, AeLink },
     methods: {
       progressbarStyle (ratio) {
         const pc = ratio * 100
@@ -79,6 +66,7 @@
 
 <style lang="scss" scoped>
   @import "../variables";
+  @import "../mixins";
 
   .ae-panel {
     border-radius: 10px;
@@ -91,11 +79,11 @@
     text-decoration: none;
     background-color: $white;
     color: inherit;
-    @media (max-width: $container-width) {
+    @include belowDesktop {
       margin-left: 10px;
       margin-right: 10px;
     }
-    @media (max-width: $screen-phone) {
+    @include phone {
       margin-top: 10px;
       margin-bottom: 10px;
     }
@@ -112,7 +100,7 @@
 
     .content {
       padding: 30px;
-      @media (max-width: $screen-phone) {
+      @include phone {
         padding: 20px;
       }
 

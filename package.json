@@ -1,6 +1,6 @@
 {
   "name": "@aeternity/aepp-components",
-  "version": "1.0.7",
+  "version": "2.0.1",
   "description": "Reusable Vue components for aeternity aepp projects",
   "main": "dist/aepp-components.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "dist"
   ],
   "dependencies": {
-    "ethereum-blockies-png": "^0.1.2",
+    "ethereum-blockies-png": "git+https://github.com/acdbaykal/ethereum-blockies-png.git",
     "ethjs-unit": "^0.1.6",
     "normalize.css": "^7.0.0",
     "numeral": "^2.0.6",
@@ -41,6 +41,7 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "jest": "^21.2.1",
     "node-sass": "^4.6.1",
@@ -48,7 +49,6 @@
     "url-loader": "^0.6.2",
     "vue-jest": "^1.1.0",
     "vue-loader": "^13.5.0",
-    "vue-router": "^3.0.1",
     "vue-styleguidist": "^1.3.5",
     "vue-template-compiler": "^2.5.8",
     "vue-test-utils": "^1.0.0-beta.7",
@@ -69,13 +69,15 @@
       "vue"
     ],
     "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "^@/(.*)$": "<rootDir>/src/$1"
     },
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
       ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     },
-    "mapCoverage": true
+    "mapCoverage": true,
+    "testURL": "http://example.aepps.com"
   },
   "homepage": "https://github.com/aeternity/aepp-components#readme"
 }

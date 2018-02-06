@@ -1,13 +1,33 @@
 <template>
-  <span class="ae-label">
-     <!-- Label content -->
-    <slot />
-  </span>
+  <label class="ae-label">
+    <div class="content">
+      <!-- Label content -->
+      <slot />
+    </div>
+    <div class="help" :class="helpType">
+      {{helpText}}
+    </div>
+  </label>
 </template>
 
 <script>
   export default {
-    name: 'ae-label'
+    name: 'ae-label',
+    props: {
+      /**
+       * Text of help field
+       */
+      'help-text': String,
+      /**
+       * Type of help field, possible values: 'danger'
+       */
+      'help-type': {
+        type: String,
+        validator: (value) => {
+          return ['danger'].find(e => e === value)
+        }
+      }
+    }
   }
 </script>
 
@@ -15,17 +35,29 @@
   @import "../variables";
 
   .ae-label {
-    display: inline-block;
-    min-width: 60px;
-    height: 22px;
-    line-height: 22px;
-    border-radius: 5px;
-    background-color: $aubergine;
-    color: $white;
-    text-align: center;
-    font-size: 9px;
+    display: flex;
     text-transform: uppercase;
     font-weight: 500;
-    vertical-align: bottom;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    align-items: center;
+    line-height: 28px;
+
+    .content {
+      flex-grow: 1;
+    }
+
+    .help {
+      font-size: 13px;
+      text-align: right;
+      text-transform: none;
+      color: $grey;
+      margin-left: 5px;
+      line-height: 14px;
+
+      &.danger {
+        color: $maegenta;
+      }
+    }
   }
 </style>

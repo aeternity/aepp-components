@@ -1,16 +1,19 @@
 <template>
-  <router-link :to="to" :class="{ 'ae-filter-item': true, active }">
+  <ae-link :to="to" :class="{ 'ae-filter-item': true, active }">
     <!-- Filter item content -->
     <slot />
-  </router-link>
+  </ae-link>
 </template>
 
 <script>
+  import AeLink from '../aeLink/aeLink.vue'
+
   export default {
     name: 'ae-filter-item',
+    components: { AeLink },
     props: {
       /**
-       * Path, that will be passed to RouterLink
+       * Path, that will be passed to ae-link
        */
       to: { type: [String, Object], required: false },
       /**

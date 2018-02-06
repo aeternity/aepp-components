@@ -2,14 +2,14 @@
   <ae-overlay @click="close">
     <div class="ae-modal">
       <ae-header class="phone" :name="title">
-        <ae-button slot="mobile-right" @click="close">
+        <ae-button slot="mobile-right" @click="close" plain size="small">
           <ae-icon slot='icon' name='close' />
         </ae-button>
       </ae-header>
       <main>
         <header class="desktop">
           <h1>{{title}}</h1>
-          <ae-button @click="close">
+          <ae-button @click="close" plain>
             <ae-icon slot='icon' name='close' />
           </ae-button>
         </header>
@@ -56,13 +56,14 @@ export default {
 
 <style lang="scss" scoped>
   @import "../variables";
+  @import "../mixins";
 
   .ae-overlay {
     .ae-modal {
       background: linear-gradient(to bottom, white, #f1f4f7);
     }
 
-    @media (min-width: $screen-phone) {
+    @include abovePhone {
       display: flex;
       padding: 10px;
       box-sizing: border-box;
@@ -99,7 +100,7 @@ export default {
       }
     }
 
-    @media (max-width: $screen-phone) {
+    @include phone {
       .ae-modal {
         min-height: 100%;
       }

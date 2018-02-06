@@ -1,4 +1,4 @@
-import iconSvgStrings from '../../assets/icons'
+import * as iconSvgStrings from '../../assets/icons'
 
 const aeIconTypes = [
   'plain',
@@ -11,7 +11,7 @@ export default {
   name: 'ae-icon',
   props: {
     /**
-    * Name of icon, possible values: 'arrow', 'burger', 'check', 'chevron', 'close', 'error', 'info', 'plus'
+    * Name of icon, possible values: 'arrow', 'burger', 'check', 'chevron', 'close', 'error', 'info', 'plus', 'refresh'
     */
     name: {
       type: String,

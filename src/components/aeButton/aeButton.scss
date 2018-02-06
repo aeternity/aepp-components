@@ -5,6 +5,8 @@
   border: none;
   border-radius: 100px;
   color: #fff;
+  font-weight: 500;
+  text-decoration: none;
 
   &._has-label_false {
     padding:0;
@@ -20,64 +22,48 @@
     }
   }
 
-  &:not(._size_smaller){/*_size_smaller is a special case*/
-    &:not(._type_plain) {
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
+  &._type{
+    &_boring {
+      background-color: $silver;
+      color: $black;
     }
-    &._type{
-      &_plain {
-        background-color: transparent;
-        color: $black;
-      }
-      &_boring {
-        background-color: $silver;
-        color: $black;
-      }
-      &_normal {
-        background-color: $grey;
-        color: $black;
-      }
-      &_exciting {
-        background-color: $aubergine;
-        color: $white;
-      }
-      &_dramatic {
-        background-color: $maegenta;
-        color: $white;
-      }
+    &_normal {
+      background-color: $grey;
+      color: $black;
     }
-    &._invert_true._type{
-      &_boring {
-        color: $silver;
-        background-color: $white;
-      }
-      &_normal {
-        color: $grey;
-        background-color: $white;
-      }
-      &_exciting {
-        color: $aubergine;
-        background-color: $white;
-      }
-      &_dramatic {
-        color: $maegenta;
-        background-color: $white;
-      }
+    &_exciting {
+      background-color: $aubergine;
+      color: $white;
+    }
+    &_dramatic {
+      background-color: $maegenta;
+      color: $white;
+    }
+  }
+  &._invert_true._type{
+    &_boring {
+      color: $silver;
+      background-color: $white;
+    }
+    &_normal {
+      color: $grey;
+      background-color: $white;
+    }
+    &_exciting {
+      color: $aubergine;
+      background-color: $white;
+    }
+    &_dramatic {
+      color: $maegenta;
+      background-color: $white;
     }
   }
 
-  &._size_smaller{/*special case for _size_smaller*/
+  &._plain {
     background-color: transparent;
-    &._type{
-      &_plain {
-        color: $black;
-      }
-      &_boring {
-        color: $black;
-      }
-      &_normal {
-        color: $black;
-      }
+    color: $black;
+
+    &._type {
       &_exciting {
         color: $aubergine;
       }
@@ -85,6 +71,9 @@
         color: $maegenta;
       }
     }
+  }
+  &:not(._plain) {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
   }
 
   /*children*/
@@ -149,4 +138,16 @@
     }
   }
 
+  &._uppercase {
+    text-transform: uppercase;
+  }
+
+  &._block {
+    display: block;
+    width: 100%;
+
+    .label {
+      margin: auto;
+    }
+  }
 }

@@ -1,20 +1,27 @@
 <template>
   <div class="ae-header">
     <header class="desktop">
-      <div>
-        <img class='logo' :src="require('../../assets/logo-small.png')" alt="Go to main page" />
+      <ae-link class="title" to="/">
+        <img :src="require('../../assets/logo-small.png')" alt="Go to main page" />
         {{name}}
-      </div>
+      </ae-link>
       <div>
+        <!-- The content of the right side on desktop -->
         <slot />
       </div>
     </header>
     <header class="phone">
       <div>
+        <!-- The content of the left side on mobile -->
         <slot name="mobile-left" />
       </div>
-        {{name}}
+      <div class="title-wrapper">
+        <ae-link class="title" to="/">
+          {{name}}
+        </ae-link>
+      </div>
       <div>
+        <!-- The content of the right side on mobile -->
         <slot name="mobile-right" />
       </div>
     </header>
@@ -22,9 +29,18 @@
 </template>
 
 <script>
+  import AeLink from '../aeLink/aeLink.vue'
+
+  /**
+   * Header of aepplication
+   */
   export default {
     name: 'ae-header',
+    components: { AeLink },
     props: {
+      /**
+       * Name of aepplication
+       */
       name: String
     }
   }
@@ -32,10 +48,13 @@
 
 <style lang="scss" scoped>
   @import "../variables";
+  @import "../mixins";
+
+  $height: 65px;
 
   .ae-header {
     header {
-      height: 65px;
+      height: $height;
       max-width: $container-width;
       margin: 0 auto;
       display: flex;
@@ -43,15 +62,22 @@
       justify-content: space-between;
       align-items: center;
 
-      @media (max-width: $container-width) {
+      @include belowDesktop {
         padding: 0 14px;
       }
 
-      .logo {
-        height: 24px;
-        display: inline-block;
-        vertical-align: bottom;
-        margin-right: 15px;
+      .title {
+        line-height: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+
+        img {
+          height: 24px;
+          display: inline-block;
+          vertical-align: bottom;
+          margin-right: 15px;
+        }
       }
 
       .ae-header-button {
@@ -63,30 +89,48 @@
       }
     }
 
-    @media (max-width: $screen-phone) {
+    @include phone {
       header {
         margin-bottom: 20px;
+        position: relative;
 
         &.desktop {
           display: none;
         }
 
-        > a {
-          color: $anthracite;
+        :nth-child(odd) {
+          z-index: 1;
+        }
+
+        .title-wrapper {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          line-height: $height;
+          text-align: center;
+
+          .title {
+            color: $anthracite;
+          }
         }
       }
     }
 
-    @media (min-width: $screen-phone + 1) {
+    @include abovePhone {
       background-image: linear-gradient(to bottom, $anthracite, $aubergine);
       box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
-      color:white;
 
       header {
         margin-bottom: 30px;
 
         &.phone {
           display: none;
+        }
+
+        .title {
+          color: $white;
         }
       }
     }

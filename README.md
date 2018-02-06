@@ -171,12 +171,12 @@ e.g:
 #### good example
 ```html
 <template>
-  <div class="ae-notification" :class='cssClass'>
+  <div class="ae-banner" :class='cssClass'>
     <content>
-      <!-- Notification content -->
+      <!-- Banner content -->
       <slot />
     </content>
-    <!-- Notification button -->
+    <!-- Banner button -->
     <slot name='button'>
       <ae-button :type='type' invert  @click="close" >
         <ae-icon slot='icon' :type='type' name='close'/>
@@ -185,7 +185,7 @@ e.g:
   </div>
 </template>
 ```
-> aeNotification is using a composition of aeButton and aeIcon to represent a close-button.
+> aeBanner is using a composition of aeButton and aeIcon to represent a close-button.
 
 ### Component colors
 
@@ -284,7 +284,7 @@ Don't interfere with the styling of internals of child components. Better pass p
 
 # How to use components in your Aepp: Examples
 
-Below is example code and renderings of different components.
+Below is example code.
 
 ## main.js
 
@@ -354,269 +354,4 @@ export default {
   }
 </style>
 ```
-
-## aeIcon
-### type: normal, name: arrow, burger, check, chevron, close, error, info
-
-![example](https://i.imgur.com/Hdpt3Mc.png)
-
-```javascript
-<ae-icon name="arrow"/>
-<ae-icon name="burger"/>
-<ae-icon name="check"/>
-<ae-icon name="chevron"/>
-<ae-icon name="close"/>
-<ae-icon name="error"/>
-<ae-icon name="info"/>
-```
-
-### type: boring, exciting, dramatic
-![example](https://i.imgur.com/a2vChyM.png)
-
-```javascript
-<ae-icon type='boring' name="arrow"/>
-<ae-icon type='boring' name="burger"/>
-<ae-icon type='exciting' name="check"/>
-<ae-icon type='exciting' name="chevron"/>
-<ae-icon type='dramatic' name="close"/>
-<ae-icon type='dramatic' name="error"/>
-```
-
-## aeButton
-### type: plain, boring, exciting, dramatic
-![example](https://i.imgur.com/EqHz4wv.png)
-
-```javascript
-<ae-button type='plain'>Button</ae-button>
-<ae-button type='boring'>Button</ae-button>
-<ae-button type='normal'>Button</ae-button>
-<ae-button type='exciting'>Button</ae-button>
-<ae-button type='dramatic'>Button</ae-button>
-```
-
-### size: smaller, small, medium, large
-
-![example](https://i.imgur.com/ExX8qUp.png)
-
-```javascript
-<ae-button size='smaller'>Button</ae-button>
-<ae-button type='dramatic' size='smaller'>Button</ae-button>
-<ae-button size='small' type='plain'>Button</ae-button>
-<ae-button size='small'>Button</ae-button>
-<ae-button size='medium'>Button</ae-button>
-<ae-button size='medium' type='exciting'>Button</ae-button>
-<ae-button size='large'>Button</ae-button>
-<ae-button size='large' type='dramatic'>Button</ae-button>
-```
-
-### aeButton with aeIcon
-![example](https://i.imgur.com/Y1uGYHk.png)
-
-```javascript
-<ae-button size='smaller' type='boring'>
-	<ae-icon slot='icon' type='boring' name="close"/>
-</ae-button>
-<ae-button size='smaller' type='normal'>
-	<ae-icon slot='icon' name="close"/>
-</ae-button>
-<ae-button size='smaller' type='exciting'>
-	<ae-icon slot='icon' type='exciting' name="close"/>
-</ae-button>
-<ae-button size='smaller' type='dramatic'>
-	<ae-icon slot='icon' type='dramatic' name="close"/>
-</ae-button>
-
-<ae-button size='small' type='boring'>
-	<ae-icon slot='icon' invert type='boring' name="close"/>
-</ae-button>
-<ae-button size='medium' type='boring'>
-	<ae-icon slot='icon' invert type='boring' name="close"/>
-</ae-button>
-<ae-button size='large' type='boring'>
-	<ae-icon slot='icon' invert type='boring' name="close"/>
-</ae-button>
-
-<ae-button size='medium' type='normal'>
-	<ae-icon slot='icon' name="arrow"/>
-</ae-button>
-
-<ae-button size='medium' type='exciting'>
-	<ae-icon slot='icon' invert type='exciting' name="check"/>
-</ae-button>
-
-<ae-button size='medium' type='dramatic'>
-	<ae-icon slot='icon' invert type='dramatic' name="chevron"/>
-</ae-button>
-```
-
-### aeButton with aeIcon and label
-![example](https://i.imgur.com/9vdcDMw.png)
-
-```javascript
-<ae-button size='smaller' type='boring'>
-	<ae-icon type='boring' slot='icon' name="check"/>
-	Button
-</ae-button>
-
-<ae-button size='smaller' type='dramatic'>
-	<ae-icon type='dramatic' slot='icon' name="error"/>
-	Button
-</ae-button>
-
-<ae-button type='boring' size='small'>
-	<ae-icon type='boring' invert slot='icon' name="error"/>
-	Button
-</ae-button>
-<ae-button type='normal'>
-	<ae-icon slot='icon' name="info"/>
-	Button
-</ae-button>
-
-<ae-button type='exciting'>
-	<ae-icon type='exciting' invert slot='icon' name="arrow"/>
-	Button
-</ae-button>
-
-<ae-button size='large' type='dramatic'>
-	<ae-icon type='dramatic' invert slot='icon' name="error"/>
-	Button
-</ae-button>
-```
-
-### inactive
-![example](https://i.imgur.com/VGfePCV.png)
-
-```javascript
-<ae-button inactive type='plain'>Button</ae-button>
-<ae-button inactive type='boring'>Button</ae-button>
-<ae-button inactive size='small' type='normal'>Button</ae-button>
-<ae-button inactive type='exciting'>Button</ae-button>
-<ae-button inactive size='large' type='dramatic'>Button</ae-button>
-
-<ae-button inactive size='smaller' type='normal'>
-	<ae-icon slot='icon' name="check"/>
-</ae-button>
-<ae-button inactive size='medium' type='normal'>
-	<ae-icon slot='icon' name="close"/>
-</ae-button>
-<ae-button inactive size='large' type='exciting'>
-	<ae-icon slot='icon' invert type='exciting' name="burger"/>
-</ae-button>
-```
-
-## aeHeder
-![example](https://i.imgur.com/9dAR8j3.png)
-
-```javascript
-<ae-header name='AppName'>
-	<ae-button type='dramatic'>Button 1</ae-button>
-	<ae-button type='dramatic'>Button 2</ae-button>
-</ae-header>
-```
-
-## AeNotification
-![example](https://i.imgur.com/CjN5rAP.png)
-
-```javascript
-<ae-notification type='boring'>
-	Amet omnis tenetur minima voluptatum?
-</ae-notification>
-<ae-notification type='normal'>
-	Adipisicing minus ipsa omnis?
-</ae-notification>
-<ae-notification type='exciting'>
-	Amet omnis tenetur minima voluptatum?
-</ae-notification>
-<ae-notification type='dramatic'>
-	Adipisicing minus ipsa omnis?
-</ae-notification>
-```
-
-
-## AeAmount
-![example]()
-
-```javascript
-<ae-amount value='12'/>
-```
-
-## AeAmountInput
-![example](https://i.imgur.com/USJCKOL.png)
-
-```javascript
-<ae-amount-input></ae-amount-input>
-```
-
-## AeLabel
-![example](https://i.imgur.com/FJRgcK0.png)
-
-```javascript
-<ae-label>Label 1</ae-label>
-<ae-label>Label 2</ae-label>
-<ae-label>Label 3</ae-label>
-```
-
-
-## AeIdentity
-![example](https://i.imgur.com/uCee7Oh.png)
-
-```javascript
-<ae-identity :active="true" :identity="{address:'0x1234567890987654321',balance:'1337210000000000000' }" :collapsed="false"></ae-identity>
-<ae-identity :active="true" :identity="{address:'0x1234567890987654321',balance:'1337210000000000000' }" :collapsed="true"></ae-identity>
-
-<ae-identity :active="false" :identity="{address:'0x1234567890987654321',balance:'1337210000000000000' }" :collapsed="false">
-	<ae-button size='small'>Button</ae-button>
-	<ae-button type='exciting' size='small'>Button</ae-button>
-</ae-identity>
-```
-
-## AePanel
-![example](https://i.imgur.com/HaEgasd.png)
-
-```javascript
-<ae-panel>
-	<p>Lorem cum molestias non laudantium eos. Ad officia vel corrupti voluptatem eum Voluptas corporis debitis harum assumenda commodi suscipit sed. Corrupti error officia impedit eligendi corporis Ad labore nesciunt voluptates totam delectus Voluptatum</p>
-</ae-panel>
-```
-
-## AeSwitch
-![example](https://i.imgur.com/UUwQE9M.png)
-
-```javascript
-<ae-switch
-	name="example"
-	:choices="[
-		{ label: 'Choice 1', value: 'choice1' },
-		{ label: 'Choice 2', value: 'choice2' },
-		{ label: 'Choice 3', value: 3 }
-	]"
-	:default="3"
-/>
-```
-
-## AeIdentityAvatar
-![example](https://i.imgur.com/gOdn8Ks.png)
-
-```javascript
-<ae-identity-avatar address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
-```
-
-## AeAddress
-![example](https://i.imgur.com/fA5LbFp.png)
-
-```javascript
-<ae-address address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
-<ae-address size='short' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
-<ae-address show-avatar address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
-<ae-address show-avatar size='short' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
-```
-
-## AeAddressInput
-![example](https://i.imgur.com/cVZcLML.png)
-
-```javascript
-<ae-address-input></ae-address-input>
-<div class="example">
-	Mixin Function readableEther: {{readableEther(identity.balance)}}
-</div>
-```
+Further documentation on the components can be found at [our style guide page](https://components.aepps.com/).

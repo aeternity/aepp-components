@@ -13,6 +13,7 @@
 
 <style lang="scss" scoped>
   @import "../variables";
+  @import "../mixins";
 
   .ae-filter-list {
     margin: 30px 0;
@@ -20,7 +21,7 @@
     text-align: center;
     white-space: nowrap;
     overflow-x: auto;
-    @media (max-width: $screen-phone) {
+    @include phone {
       margin: 20px 0;
     }
   }
