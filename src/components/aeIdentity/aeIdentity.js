@@ -26,7 +26,7 @@ export default {
     */
     active: {
       type: Boolean,
-      default: false
+      default: true
     },
     /**
     * Is this the full size identity card or the collapsed one for displaying at the bottom of the screen?
