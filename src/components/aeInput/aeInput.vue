@@ -3,12 +3,14 @@
     v-if="type === 'textarea'"
     :class="className"
     @input="handleInput"
+    @copy="handleCopy"
   >{{value}}</textarea>
   <input
     v-else
     :type="type"
     :class="className"
     @input="handleInput"
+    @copy="handleCopy"
     :value="value"
   />
 </template>
@@ -43,6 +45,9 @@
     methods: {
       handleInput (inputEvent) {
         this.$emit('input', inputEvent.target.value)
+      },
+      handleCopy (clipboardEvent) {
+        this.$emit('copy', clipboardEvent)
       }
     }
   }
