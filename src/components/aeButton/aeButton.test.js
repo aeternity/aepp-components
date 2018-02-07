@@ -73,7 +73,6 @@ describe('AeButton', () => {
         const wrapper = renderLabel()
 
         wrapper.vm.$nextTick().then(() => {
-          console.log(wrapper.html())
           const icon = wrapper.find(LABEL_SELECTOR)
           icon.trigger('click')
           expect(wrapper.emitted().click).toBeTruthy()
