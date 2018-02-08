@@ -6,6 +6,10 @@
   <ae-input type="password" value="1234" />
 ```
 
+```jsx
+  <ae-input type="number" value="1234" />
+```
+
 ```js 
   new Vue({ 
     data () { return { value: '' } }, 

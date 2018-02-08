@@ -6,6 +6,7 @@
       :id="id"
       :placeholder="placeholder"
       :type="type"
+      :step="type === 'number' && 'any'"
       :class="{ monospace }"
       @input="handleInput"
       :value="value"
@@ -23,12 +24,12 @@
       id: String,
       placeholder: String,
       /**
-       * Type of input, possible values: 'password'
+       * Type of input, possible values: 'password', 'number'
        */
       type: {
         type: String,
         validator: (value) => {
-          return ['password'].includes(value)
+          return ['password', 'number'].includes(value)
         }
       },
       /**
@@ -76,6 +77,15 @@
 
       &.monospace, &[type=password] {
         font-family: 'Roboto Mono', monospace;
+      }
+
+      &[type=number] {
+        -moz-appearance: textfield;
+
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
       }
     }
   }
