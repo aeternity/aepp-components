@@ -2,7 +2,7 @@
 @import "../mixins.scss";
 
 .ae-banner {
-  background: linear-gradient(to bottom, rgba($aubergine, 0.65), transparent);
+  background: linear-gradient(to bottom, rgba($exciting, 0.65), transparent);
   z-index: 1;
   padding: 10px 10px 25px 10px;
 
@@ -14,7 +14,7 @@
     max-width: $container-width;
     margin: 0 auto;
     border-radius: 10px;
-    background: linear-gradient(to bottom, $white, #f1f4f7);
+    background: linear-gradient(to bottom, $plain, #f1f4f7);
     box-shadow: 0 4px 8px 0 rgba($dark, 0.1);
     padding: 17px 22px;
 
@@ -26,7 +26,7 @@
       flex-grow: 1;
       font-weight: 500;
       line-height: 1.38;
-      color: $aubergine;
+      color: $exciting;
     }
   }
 }

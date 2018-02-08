@@ -56,14 +56,14 @@
     width: 100%;
     box-sizing: border-box;
     border-radius: 10px;
-    border: solid 2px $silver;
+    border: solid 2px $normal;
     padding: 14px 26px;
     margin: 10px 0 30px 0;
 
     font-weight: 500;
     line-height: 1.63;
     letter-spacing: 0.2px;
-    color: $anthracite;
+    color: $darker;
 
     ::placeholder {
       color: $grey;

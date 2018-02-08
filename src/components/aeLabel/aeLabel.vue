@@ -56,7 +56,7 @@
       line-height: 14px;
 
       &.danger {
-        color: $maegenta;
+        color: $dramatic;
       }
     }
   }

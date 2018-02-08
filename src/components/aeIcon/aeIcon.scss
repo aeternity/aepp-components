@@ -9,25 +9,25 @@
   }
   &._type{
     &_plain {
-      fill: $white;
+      fill: $plain;
     }
     &_boring {
       fill: $grey;
     }
     &_normal {
-      fill: $black;
+      fill: $darkest;
     }
     &_exciting {
-      fill: $aubergine;
+      fill: $exciting;
     }
     &_dramatic {
-      fill: $maegenta;
+      fill: $dramatic;
     }
   }
   &._invert_true._type{
     &_exciting ,
     &_dramatic {
-      fill: $white;
+      fill: $plain;
     }
   }
 }

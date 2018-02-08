@@ -20,8 +20,8 @@
     height: 22px;
     line-height: 22px;
     border-radius: 5px;
-    background-color: $aubergine;
-    color: $white;
+    background-color: $exciting;
+    color: $plain;
     text-align: center;
     font-size: 9px;
     text-transform: uppercase;

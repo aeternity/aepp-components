@@ -24,51 +24,51 @@
 
   &._type{
     &_boring {
-      background-color: $silver;
-      color: $black;
+      background-color: $normal;
+      color: $darkest;
     }
     &_normal {
       background-color: $grey;
-      color: $black;
+      color: $darkest;
     }
     &_exciting {
-      background-color: $aubergine;
-      color: $white;
+      background-color: $exciting;
+      color: $plain;
     }
     &_dramatic {
-      background-color: $maegenta;
-      color: $white;
+      background-color: $dramatic;
+      color: $plain;
     }
   }
   &._invert_true._type{
     &_boring {
-      color: $silver;
-      background-color: $white;
+      color: $normal;
+      background-color: $plain;
     }
     &_normal {
       color: $grey;
-      background-color: $white;
+      background-color: $plain;
     }
     &_exciting {
-      color: $aubergine;
-      background-color: $white;
+      color: $exciting;
+      background-color: $plain;
     }
     &_dramatic {
-      color: $maegenta;
-      background-color: $white;
+      color: $dramatic;
+      background-color: $plain;
     }
   }
 
   &._plain {
     background-color: transparent;
-    color: $black;
+    color: $darkest;
 
     &._type {
       &_exciting {
-        color: $aubergine;
+        color: $exciting;
       }
       &_dramatic {
-        color: $maegenta;
+        color: $dramatic;
       }
     }
   }
