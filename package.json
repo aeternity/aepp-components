@@ -24,7 +24,8 @@
     "ethjs-unit": "^0.1.6",
     "normalize.css": "^7.0.0",
     "numeral": "^2.0.6",
-    "string-loader": "0.0.1"
+    "string-loader": "0.0.1",
+    "vue-clickaway": "^2.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
