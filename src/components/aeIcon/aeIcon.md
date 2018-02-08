@@ -4,6 +4,7 @@
   <ae-icon name="burger" />
   <ae-icon name="check" />
   <ae-icon name="chevron" />
+  <ae-icon name="chevron-down" />
   <ae-icon name="close" />
   <ae-icon name="error" />
   <ae-icon name="info" />
