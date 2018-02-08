@@ -119,7 +119,7 @@
     }
 
     @include abovePhone {
-      background-image: linear-gradient(to bottom, $anthracite, $aubergine);
+      background-color: $aubergine;
       box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
 
       header {
