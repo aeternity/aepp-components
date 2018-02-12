@@ -31,10 +31,10 @@ $icon-left-distance: ($clear-btn-width - $clear-icon-width) / 2;
 
   &._is-valid{
     &_true{
-      border-color: $silver;
+      border-color: $normal;
     }
     &_false{
-      border-color: $maegenta;
+      border-color: $dramatic;
     }
   }
 

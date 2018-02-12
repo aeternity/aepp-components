@@ -10,12 +10,12 @@
     display: none;
 
     &:checked + label {
-      color: $maegenta;
+      color: $dramatic;
 
       &:after {
         content: "";
         display: block;
-        border-bottom: 4px solid $maegenta;
+        border-bottom: 4px solid $dramatic;
         position: absolute;
         bottom: -3px;
         width: calc(100% - #{$padding-horizontal} * 2);

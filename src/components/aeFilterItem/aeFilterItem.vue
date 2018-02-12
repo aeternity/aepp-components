@@ -44,8 +44,8 @@
     text-transform: uppercase;
 
     &.active, &:hover {
-      background-color: $aubergine;
-      color: $white;
+      background-color: $exciting;
+      color: $plain;
     }
   }
 </style>

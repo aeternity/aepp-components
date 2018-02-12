@@ -77,7 +77,7 @@
     overflow: hidden;
     display: block;
     text-decoration: none;
-    background-color: $white;
+    background-color: $plain;
     color: inherit;
     @include belowDesktop {
       margin-left: 10px;
@@ -95,7 +95,7 @@
       height: 4px;
     }
     .underline {
-      background-color: $maegenta;
+      background-color: $dramatic;
     }
 
     .content {

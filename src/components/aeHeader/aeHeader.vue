@@ -112,14 +112,14 @@
           text-align: center;
 
           .title {
-            color: $anthracite;
+            color: $darker;
           }
         }
       }
     }
 
     @include abovePhone {
-      background-image: linear-gradient(to bottom, $anthracite, $aubergine);
+      background-color: $exciting;
       box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
 
       header {
@@ -130,7 +130,7 @@
         }
 
         .title {
-          color: $white;
+          color: $plain;
         }
       }
     }

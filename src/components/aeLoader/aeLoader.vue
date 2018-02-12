@@ -21,7 +21,7 @@
     width: 1em;
     height: 1em;
     border-radius: 1em;
-    border: .2em solid $maegenta;
+    border: .2em solid $dramatic;
     vertical-align: middle;
     border-left-color: transparent;
     border-right-color: transparent;
