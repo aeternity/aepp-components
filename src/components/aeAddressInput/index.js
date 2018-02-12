@@ -1,5 +1,5 @@
-import AeAddressInpunt from './aeAddressInput.vue'
+import AeAddressInput from './aeAddressInput.vue'
 
 export default function install (Vue) {
-  Vue.component('ae-address-input', AeAddressInpunt)
+  Vue.component('ae-address-input', AeAddressInput)
 }
