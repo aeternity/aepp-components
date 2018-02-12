@@ -121,6 +121,7 @@
       width: 100%;
       overflow: hidden;
       margin-top: -30px;
+      z-index: 1;
 
       button {
         width: 100%;
