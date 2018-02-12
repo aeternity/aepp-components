@@ -11,7 +11,7 @@
   export default {
     name: 'ae-textarea',
     props: {
-      value: String,
+      value: undefined,
       /**
        * Enables monospace font
        */

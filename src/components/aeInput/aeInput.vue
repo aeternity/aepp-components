@@ -20,9 +20,9 @@
   export default {
     name: 'ae-input',
     props: {
-      value: String,
-      id: String,
-      placeholder: String,
+      value: undefined,
+      id: undefined,
+      placeholder: undefined,
       /**
        * Type of input, possible values: 'password', 'number'
        */

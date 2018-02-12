@@ -47,12 +47,9 @@
        */
       value: {
         type: Object,
-        default: () => ({ symbol: 'AE' }),
-        validator: ({ amount, symbol }) =>
-          [amount, symbol].reduce(
-            (p, n) => p && ['string', 'undefined'].includes(typeof n), true)
+        default: () => ({ symbol: 'AE' })
       },
-      placeholder: String,
+      placeholder: undefined,
       /**
        * Array of available tokens, every token is object containing `symbol` and `name` keys
        */
