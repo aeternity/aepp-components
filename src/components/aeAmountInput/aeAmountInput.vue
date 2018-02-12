@@ -1,67 +1,140 @@
 <template>
   <div class="ae-amount-input">
-    <button type="button" @click="subtract">–</button>
-    <input v-model.number="amount" />
-    <span>{{symbol}}</span>
-    <button type="button" @click="add">+</button>
+    <ae-input
+      type="number"
+      monospace
+      :value="value.amount"
+      :placeholder="placeholder"
+      @input="amount => handleInput({ amount })"
+    >
+      <div slot="left" class="side" />
+      <button
+        slot="right"
+        class="side"
+        @click="dropDownVisible = !dropDownVisible">
+        {{value.symbol}} <ae-icon name="chevron-down" />
+      </button>
+    </ae-input>
+    <div
+      v-if="dropDownVisible"
+      class="drop-down"
+      @click="dropDownVisible = false"
+      v-on-click-away="() => dropDownVisible = false"
+    >
+      <button
+        v-for="t in tokens"
+        @click="handleInput({ symbol: t.symbol })"
+      >
+        {{t.symbol}} ({{t.name}})
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
+  import { directive as onClickAway } from 'vue-clickaway'
+  import AeInput from '../aeInput/aeInput.vue'
+  import AeIcon from '../aeIcon/aeIcon.vue'
+
   /**
-   * Displays an Æ-Amount with buttons to increase and decrease the value
+   * Input of amount of tokens
    */
   export default {
     name: 'ae-amount-input',
     props: {
       /**
-      * The amount of Æ to display
-      */
-      value: { type: Number, default: 0 },
+       * Current value, object containing `amount` and `symbol` keys
+       */
+      value: {
+        type: Object,
+        default: () => ({ symbol: 'AE' })
+      },
+      placeholder: undefined,
       /**
-      * the smallest value this component can display
-      */
-      min: { type: Number, default: -Infinity },
-      /**
-      * the largest value this component can display
-      */
-      max: { type: Number, default: Infinity },
-      /**
-      * value will get incremented/subtracted by this value
-      */
-      step: { type: Number, default: 1 },
-      /**
-      * the currency symbol to display
-      */
-      symbol: { type: String, default: 'Æ' }
-    },
-    computed: {
-      amount: {
-        get () {
-          return this.value
-        },
-        set (v) {
-          const roundval = 1 / this.step
-          const amount = Math.round(+v * roundval) / roundval
-          if (Number.isNaN(amount) || v < this.min || v > this.max) return
-          this.$emit('input', amount)
-        }
+       * Array of available tokens, every token is object containing `symbol` and `name` keys
+       */
+      tokens: {
+        type: Array,
+        default: () => [
+          { symbol: 'AE', name: 'æternity' },
+          { symbol: 'ETH', name: 'Ethereum' }
+        ]
       }
     },
+    data: () => ({
+      dropDownVisible: false
+    }),
+    directives: { onClickAway },
+    components: { AeInput, AeIcon },
     methods: {
-      subtract () {
-        const newAmount = this.amount - this.step
-        if (newAmount < this.min) return
-        this.amount = newAmount
-      },
-      add () {
-        const newAmount = this.amount + this.step
-        if (newAmount > this.max) return
-        this.amount = newAmount
+      handleInput (value) {
+        this.$emit('input', { ...this.value, ...value })
       }
     }
   }
 </script>
 
-// eslint-disable-next-line no-unused-expressions, semi
-<style scoped src='./aeAmountInput.scss' lang='scss' />
+<style lang="scss">
+  @import "../variables";
+
+  .ae-amount-input {
+    position: relative;
+
+    button {
+      display: block;
+      border: none;
+      background: transparent;
+      padding: 0;
+    }
+
+    .ae-input {
+      input.monospace {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 300;
+        line-height: normal;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+
+      .side {
+        width: 55px;
+        flex-shrink: 0;
+      }
+
+      button.side {
+        font-size: 14px;
+
+        .ae-icon {
+          vertical-align: middle;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .drop-down {
+      border-radius: 10px;
+      background-color: $white;
+      box-shadow: 0 2px 8px 0 rgba($dark, 0.1);
+      position: absolute;
+      width: 100%;
+      overflow: hidden;
+      margin-top: -30px;
+      z-index: 1;
+
+      button {
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        color: $black;
+
+        &:hover {
+          background-color: $smoke;
+        }
+      }
+    }
+  }
+</style>

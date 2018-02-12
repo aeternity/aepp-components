@@ -1,5 +1,5 @@
 <template>
-  <ae-input
+  <ae-textarea
     class="ae-address-input"
     type="textarea"
     monospace
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import AeInput from '../aeInput/aeInput.vue'
+  import AeTextarea from '../aeTextarea/aeTextarea.vue'
 
   export default {
     name: 'ae-address-input',
@@ -20,7 +20,7 @@
         default: ''
       }
     },
-    components: { AeInput },
+    components: { AeTextarea },
     computed: {
       formattedValue () {
         return this.formatAddress(this.value).address
@@ -84,7 +84,7 @@
 </script>
 
 <style scoped lang="scss">
-  .ae-address-input.ae-input {
+  .ae-address-input.ae-textarea {
     resize: none;
     text-align: center;
     min-height: 0;

@@ -7,11 +7,14 @@ const aeIconTypes = [
   'exciting',
   'dramatic'
 ]
+
+iconSvgStrings['chevron-down'] = iconSvgStrings['chevronDown']
+
 export default {
   name: 'ae-icon',
   props: {
     /**
-    * Name of icon, possible values: 'arrow', 'burger', 'check', 'chevron', 'close', 'error', 'info', 'plus', 'refresh'
+    * Name of icon, possible values: 'arrow', 'burger', 'check', 'chevron', 'chevron-down', 'close', 'error', 'info', 'plus', 'refresh'
     */
     name: {
       type: String,

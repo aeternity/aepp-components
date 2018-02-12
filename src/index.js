@@ -19,6 +19,7 @@ import AeModalLight from './components/aeModalLight'
 import AeOverlay from './components/aeOverlay'
 import AePanel from './components/aePanel'
 import AeSwitch from './components/aeSwitch'
+import AeTextarea from './components/aeTextarea'
 import AeAppIcon from './components/aeAppIcon'
 import AeIcon from './components/aeIcon'
 import AeAddress from './components/aeAddress'
@@ -48,6 +49,7 @@ const AeppComponents = {
   AeOverlay,
   AePanel,
   AeSwitch,
+  AeTextarea,
   AeAppIcon,
   AeIcon,
   AeAddress,
@@ -85,6 +87,7 @@ export { default as AeModalLight } from './components/aeModalLight/aeModalLight.
 export { default as AeOverlay } from './components/aeOverlay/aeOverlay.vue'
 export { default as AePanel } from './components/aePanel/aePanel.vue'
 export { default as AeSwitch } from './components/aeSwitch/aeSwitch.vue'
+export { default as AeTextarea } from './components/aeTextarea/aeTextarea.vue'
 export { default as AeAppIcon } from './components/aeAppIcon/aeAppIcon.vue'
 export { default as AeIcon } from './components/aeIcon/aeIcon.vue'
 export { default as AeAddress } from './components/aeAddress/aeAddress.vue'
