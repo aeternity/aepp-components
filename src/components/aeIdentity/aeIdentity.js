@@ -1,4 +1,5 @@
 import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
+import aeDivider from './../aeDivider/aeDivider.vue'
 import helperMixin from './../../mixins/helper'
 import BN from 'bn.js'
 
@@ -7,12 +8,7 @@ import BN from 'bn.js'
  */
 export default {
   name: 'ae-identity',
-  components: {
-    'ae-identity-avatar': aeIdentityAvatar
-  },
-  data: function () {
-    return {}
-  },
+  components: { aeIdentityAvatar, aeDivider },
   props: {
     /**
     * An object representing a identity. Must have a adress string a tokenBalance and a balance BigNumber (bn.js)
@@ -38,17 +34,6 @@ export default {
     collapsed: {
       type: Boolean,
       default: false
-    },
-    /**
-    * Whats the size of the component? "small" or "big"
-    * @deprecated use collapsed instead
-    */
-    size: {
-      type: String,
-      default: 'small',
-      validator: function (size) {
-        return size === 'small' || size === 'big'
-      }
     }
   },
   mixins: [
@@ -67,18 +52,18 @@ export default {
     shortAddress () {
       return this.identity.address.substr(0, 6)
     },
-    classObject: function () {
-      let classes = {
-        'ae-identity': true,
-        'collapsed': this.collapsed,
-        '_active_yes': this.active,
-        '_active_no': !this.active
-      }
-      classes['size_' + this.size] = true
-      return classes
+    chunkAddress () {
+      return this.identity.address.match(/.{1,7}/g)
     },
     hasSlot () {
       return this.$slots.default
+    },
+    classObject () {
+      return {
+        'ae-identity': true,
+        'collapsed': this.collapsed,
+        'active': this.active
+      }
     }
   }
 }
