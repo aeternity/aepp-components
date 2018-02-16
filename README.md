@@ -171,12 +171,12 @@ e.g:
 #### good example
 ```html
 <template>
-  <div class="ae-notification" :class='cssClass'>
+  <div class="ae-banner" :class='cssClass'>
     <content>
-      <!-- Notification content -->
+      <!-- Banner content -->
       <slot />
     </content>
-    <!-- Notification button -->
+    <!-- Banner button -->
     <slot name='button'>
       <ae-button :type='type' invert  @click="close" >
         <ae-icon slot='icon' :type='type' name='close'/>
@@ -185,7 +185,7 @@ e.g:
   </div>
 </template>
 ```
-> aeNotification is using a composition of aeButton and aeIcon to represent a close-button.
+> aeBanner is using a composition of aeButton and aeIcon to represent a close-button.
 
 ### Component colors
 
