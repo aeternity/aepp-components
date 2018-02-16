@@ -22,10 +22,10 @@
       v-on-click-away="() => dropDownVisible = false"
     >
       <button
-        v-for="t in tokens"
-        @click="handleInput({ symbol: t.symbol })"
+        v-for="u in units"
+        @click="handleInput({ symbol: u.symbol })"
       >
-        {{t.symbol}} ({{t.name}})
+        {{u.symbol}} ({{u.name}})
       </button>
     </div>
   </div>
@@ -37,7 +37,7 @@
   import AeIcon from '../aeIcon/aeIcon.vue'
 
   /**
-   * Input of amount of tokens
+   * Input of amount with units drop down
    */
   export default {
     name: 'ae-amount-input',
@@ -51,9 +51,9 @@
       },
       placeholder: undefined,
       /**
-       * Array of available tokens, every token is object containing `symbol` and `name` keys
+       * Array of available units, every unit is object containing `symbol` and `name` keys
        */
-      tokens: {
+      units: {
         type: Array,
         default: () => [
           { symbol: 'AE', name: 'æternity' },
