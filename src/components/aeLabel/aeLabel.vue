@@ -19,13 +19,11 @@
        */
       'help-text': String,
       /**
-       * Type of help field, possible values: 'danger'
+       * Type of help field, possible values: 'exciting', 'dramatic'
        */
       'help-type': {
         type: String,
-        validator: (value) => {
-          return ['danger'].find(e => e === value)
-        }
+        validator: value => ['exciting', 'dramatic'].includes(value)
       }
     }
   }
@@ -55,7 +53,11 @@
       margin-left: 5px;
       line-height: 14px;
 
-      &.danger {
+      &.exciting {
+        color: $aubergine;
+      }
+
+      &.dramatic {
         color: $maegenta;
       }
     }
