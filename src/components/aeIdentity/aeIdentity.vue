@@ -2,6 +2,7 @@
   <div class="identity-wrap">
     <div @click="$emit('click', $event)" :class="classObject">
       <div class="flex-row">
+        <slot name="header-left"></slot>
         <ae-identity-avatar :address='identity ? identity.address : ""'/>
         <span class="identity-info _short" v-if="collapsed">{{shortAddress}}</span>
 
