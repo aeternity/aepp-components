@@ -1,20 +1,14 @@
-```javascript
-new Vue({
-  data() {
-    return {
-      value: 1337
-    }
-  },
-  template: `
-    <div>
-      <ae-address-input :value="value" @input='changeInput' />
-      <p v-if="!!receivedValue">Input event value: {{receivedValue}}<p>
-    </div>
-  `,
-    methods: {
-        changeInput: function(newAmount) {
-            this.value = newAmount
-            this.receivedValue = newAmount
-        }
-    }
-})
+```js
+  new Vue({
+    data () { return { address: '' } },
+    template: `
+      <div>
+        <ae-address-input
+          placeholder="0x00000 0000000 0000000\n0000000 0000000 0000000"
+          v-model="address"
+        />
+        Address: {{address}}
+      </div>
+    `
+  })
+```

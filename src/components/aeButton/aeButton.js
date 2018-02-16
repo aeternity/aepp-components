@@ -22,7 +22,7 @@ export default {
     type: {
       type: String,
       validator: (value) => {
-        return aeButtonTypes.find(e => e === value)
+        return typeof (aeButtonTypes.find(e => e === value)) === 'string'
       },
       default: 'normal'
     },

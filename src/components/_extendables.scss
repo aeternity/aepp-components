@@ -1,16 +1,5 @@
-@import '../variables.scss';
-label {
-}
-.help {
-  font-size: 13px;
-  float: right;
-  text-transform: none;
-
-  &.danger {
-    color: $maegenta;
-  }
-}
-input {
+@import './variables.scss';
+%input {
   padding: 12px;
   border-radius: 10px;
   font-size: 13px;
@@ -20,15 +9,10 @@ input {
   width: 100%;
   box-sizing: border-box;
   margin: 10px 0;
+  outline: none;
+
 
   ::placeholder {
     color: $grey;
   }
-
-  &.danger {
-    border-color: $maegenta;
-  }
-}
-input {
-  height: 44px;
 }

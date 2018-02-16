@@ -1,56 +1,41 @@
 import { mount } from 'vue-test-utils'
-import AeAmount from './aeAmountInput.vue'
-import AeAmountPlugin from './index'
+import AeAmountInput from './aeAmountInput.vue'
+import AeAmountInputPlugin from './index'
 
-describe('AeAmount', () => {
-  // Now mount the component and you have the wrapper
-  const wrapper = mount(AeAmount)
-
+describe('AeAmountInput', () => {
   it('has an install function', () => {
-    expect(AeAmountPlugin).toBeInstanceOf(Function)
+    expect(AeAmountInputPlugin).toBeInstanceOf(Function)
   })
 
   it('renders the correct markup', () => {
-    expect(wrapper.html()).toContain('<div class="ae-amount-input">')
+    const wrapper = mount(AeAmountInput, { propsData: { value: { symbol: 'TEST' } } })
+    const html = wrapper.html()
+    expect(html).toContain('<div class="ae-amount-input">')
+    expect(html).toContain('TEST')
+    expect(html).not.toContain('<div class="drop-down">')
     expect(wrapper.contains('input'))
-    expect(wrapper.html()).toContain('<span>Æ</span>')
+    expect(wrapper.contains('button'))
   })
 
   it('lets you change symbols', () => {
-    let newSymbol = 'ETH'
-    wrapper.setProps({ symbol: newSymbol })
-    expect(wrapper.html()).toContain('<span>' + newSymbol + '</span>')
+    const wrapper = mount(AeAmountInput)
+    const symbol = 'TEST'
+    wrapper.setProps({ value: { symbol } })
+    expect(wrapper.html()).toContain(symbol)
   })
 
-  it('has a button', () => {
-    expect(wrapper.contains('button')).toBe(true)
+  it('button should toggle drop down', () => {
+    const wrapper = mount(AeAmountInput)
+    expect(wrapper.vm.dropDownVisible).toBe(false)
+    wrapper.find('button').trigger('click')
+    expect(wrapper.vm.dropDownVisible).toBe(true)
+    expect(wrapper.html()).toContain('<div class="drop-down">')
   })
 
-  // it('can add values', () => {
-  //   let oldAmount = wrapper.vm.amount
-  //   let stepSize = wrapper.vm.step
-  //   wrapper.vm.add()
-  //   expect(wrapper.vm.amount).toBe(oldAmount + stepSize)
-  // })
-  //
-  // it('can subtract values', () => {
-  //   let oldAmount = wrapper.vm.amount
-  //   let stepSize = wrapper.vm.step
-  //   wrapper.vm.subtract()
-  //   expect(wrapper.vm.amount).toBe(oldAmount - stepSize)
-  // })
-
-  // it('button should increment the count', () => {
-  //   expect(wrapper.vm.amount).toBe(0)
-  //   const button = wrapper.find('button')
-  //   button.trigger('click')
-  //   expect(wrapper.vm.amount).toBe(1)
-  // })
-
-  it('should fire an event on incrementing', () => {
-    const button = wrapper.find('button')
-    button.trigger('click')
+  it('should fire an event on token changing', () => {
+    const wrapper = mount(AeAmountInput)
+    wrapper.find('button').trigger('click')
+    wrapper.find('.drop-down button').trigger('click')
     expect(wrapper.emitted('input')).toBeTruthy()
-    // expect(wrapper.emitted('input')).toBe(wrapper.vm.amount)
   })
 })
