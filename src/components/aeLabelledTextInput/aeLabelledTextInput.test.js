@@ -1,18 +1,18 @@
 import {shallow, mount} from 'vue-test-utils'
-import AeTextInputMolecule from './aeLabelledTextInput.vue'
+import AeLabelledTextInput from './aeLabelledTextInput.vue'
 import AeTextInputMoleculePlugin from './index'
 import AeValidatedTextInput from '../aeValidatedTextInput/aeValidatedTextInput.vue'
 
-describe('AeTextInputMolecule', () => {
+describe('AeLabelledTextInput', () => {
   const createShallowWrapper = (data = {}) => {
-    return shallow(AeTextInputMolecule, {
+    return shallow(AeLabelledTextInput, {
       propsData: data,
       attachToDocument: true
     })
   }
 
   const createWrapper = (data = {}) => {
-    return mount(AeTextInputMolecule, {
+    return mount(AeLabelledTextInput, {
       propsData: data
     })
   }
