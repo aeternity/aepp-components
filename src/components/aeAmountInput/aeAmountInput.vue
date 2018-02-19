@@ -12,7 +12,7 @@
         slot="right"
         class="side"
         @click="dropDownVisible = !dropDownVisible">
-        {{value.symbol}} <ae-icon name="chevron-down" />
+        {{value.symbol}} <ae-icon name="chevron" rotate="90" />
       </button>
     </ae-input>
     <div
