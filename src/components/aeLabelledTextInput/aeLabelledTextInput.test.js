@@ -1,23 +1,28 @@
 import {shallow, mount} from 'vue-test-utils'
-import AeTextInputMolecule from './aeLabelledTextInput.vue'
+import AeLabelledTextInput from './aeLabelledTextInput.vue'
 import AeTextInputMoleculePlugin from './index'
 import AeValidatedTextInput from '../aeValidatedTextInput/aeValidatedTextInput.vue'
+import * as exported from '../../index'
 
-describe('AeTextInputMolecule', () => {
+describe('AeLabelledTextInput', () => {
   const createShallowWrapper = (data = {}) => {
-    return shallow(AeTextInputMolecule, {
+    return shallow(AeLabelledTextInput, {
       propsData: data,
       attachToDocument: true
     })
   }
 
   const createWrapper = (data = {}) => {
-    return mount(AeTextInputMolecule, {
+    return mount(AeLabelledTextInput, {
       propsData: data
     })
   }
   it('has an install function', () => {
     expect(AeTextInputMoleculePlugin).toBeInstanceOf(Function)
+  })
+
+  it('is being exported as AeLabelledTextInput', () => {
+    expect(exported.AeLabelledTextInput).toBeTruthy()
   })
 
   describe('basic rendering', () => {

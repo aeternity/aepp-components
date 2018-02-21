@@ -26,6 +26,7 @@ import AeAddress from './components/aeAddress'
 import AeAddressInput from './components/aeAddressInput'
 import AeTextInput from './components/aeTextInput'
 import AeDivider from './components/aeDivider'
+import AeLabelledTextInput from './components/aeLabelledTextInput'
 
 const AeppComponents = {
   AeAmount,
@@ -55,7 +56,8 @@ const AeppComponents = {
   AeAddress,
   AeAddressInput,
   AeTextInput,
-  AeDivider
+  AeDivider,
+  AeLabelledTextInput
 }
 
 AeppComponents.install = Vue =>
@@ -94,5 +96,6 @@ export { default as AeAddress } from './components/aeAddress/aeAddress.vue'
 export { default as AeAddressInput } from './components/aeAddressInput/aeAddressInput.vue'
 export { default as AeTextInput } from './components/aeTextInput/aeTextInput.vue'
 export { default as AeDivider } from './components/aeDivider/aeDivider.vue'
+export { default as AeLabelledTextInput } from './components/aeLabelledTextInput/aeLabelledTextInput'
 
 export { default as aeHelperMixin } from './mixins/helper'
