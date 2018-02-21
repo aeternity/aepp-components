@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Components
-navigation: 2
+navigation: 3
 ---
 
 # Aeternity Aepp Components
