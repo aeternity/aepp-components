@@ -4,13 +4,15 @@
       <!-- Label content -->
       <slot />
     </div>
-    <div class="help" :class="helpType">
+    <div :class="['help', typeModifier]">
       {{helpText}}
     </div>
   </label>
 </template>
 
 <script>
+  import {TYPE_PROPERTY_VALUES as types} from '../../constants'
+
   export default {
     name: 'ae-label',
     props: {
@@ -19,13 +21,17 @@
        */
       'help-text': String,
       /**
-       * Type of help field, possible values: 'danger'
+       * Type of help field, possible values: 'boring', 'normal', 'exciting', 'dramatic'
        */
       'help-type': {
         type: String,
-        validator: (value) => {
-          return ['danger'].find(e => e === value)
-        }
+        default: 'normal',
+        validator: value => types.includes(value)
+      }
+    },
+    computed: {
+      typeModifier () {
+        return `_type_${this.helpType}`
       }
     }
   }
@@ -51,12 +57,15 @@
       font-size: 13px;
       text-align: right;
       text-transform: none;
-      color: $grey;
       margin-left: 5px;
       line-height: 14px;
 
-      &.danger {
-        color: $maegenta;
+      &._type {
+        @each $type in map_keys($type-color-map){
+          &_#{$type}{
+            color: map_get($type-color-map, $type);
+          }
+        }
       }
     }
   }

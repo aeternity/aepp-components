@@ -10,5 +10,12 @@ $black: #000000;
 $maegenta: #f03c6e;
 $plum: #c69cd0;
 
+$type-color-map: (
+  'boring': $silver,
+  'normal': $grey,
+  'exciting': $aubergine,
+  'dramatic': $maegenta
+);
+
 $container-width: 880px;
 $screen-phone: 480px;
