@@ -9,7 +9,7 @@
 ```
 
 ```js
-<ae-label help-text="this field is required" help-type="danger">
+<ae-label help-text="this field is required" help-type="dramatic">
    account
 </ae-label>
 ```
