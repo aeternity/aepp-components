@@ -90,7 +90,8 @@
 }
 
 .balances {
-  width: calc(100% - 23px);
+  width: auto;
+  flex-grow: 1;
 }
 
 .balance {

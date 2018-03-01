@@ -4,7 +4,6 @@
   <ae-icon name="burger" />
   <ae-icon name="check" />
   <ae-icon name="chevron" />
-  <ae-icon name="chevron-down" />
   <ae-icon name="close" />
   <ae-icon name="error" />
   <ae-icon name="info" />
@@ -14,5 +13,26 @@
   boring: <ae-icon type="boring" name="arrow" /><br />
   exciting: <ae-icon type="exciting" name="arrow" /><br />
   dramatic: <ae-icon type="dramatic" name="arrow" />
+</div>
+```
+
+Rotated
+```jsx
+<div>
+  <ae-icon name="chevron" />
+  <ae-icon name="chevron" rotate="90" />
+  <ae-icon name="chevron" rotate="180" />
+  <ae-icon name="chevron" rotate="270" />
+</div>
+```
+
+Different sizes
+```jsx
+<div>
+  <ae-icon name="plus" />
+  <ae-icon name="plus" size="small" />
+  <br />
+  <ae-icon name="close" />
+  <ae-icon name="close" size="small" />
 </div>
 ```

@@ -6,7 +6,7 @@
         <ae-amount-input
           placeholder="0.00"
           v-model="value"
-          :tokens="[
+          :units="[
             { symbol: 'AE', name: 'æternity' },
             { symbol: 'ETH', name: 'Ethereum' },
             { symbol: 'EX', name: 'Example' }
