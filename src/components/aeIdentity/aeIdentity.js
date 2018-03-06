@@ -15,11 +15,11 @@ export default {
     */
     identity: {
       type: Object,
-      default: {
+      default: () => ({
         address: '0x0',
         tokenBalance: new BN('0', 10),
         balance: new BN('0', 10)
-      }
+      })
     },
     /**
     * Is this an identity activated/selected (magenta) or not (grey)?
