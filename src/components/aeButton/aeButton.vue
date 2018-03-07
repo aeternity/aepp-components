@@ -3,7 +3,7 @@
     :is="to ? 'ae-link' : 'button'"
     class="ae-button"
     :class="cssClass"
-    @click="$emit('click')"
+    @click="$emit('click', $event)"
     :to="to"
   >
     <div class="inner">
