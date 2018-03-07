@@ -9,6 +9,9 @@ export default {
         seed: address
       })
     },
+    forwardEvent (event) {
+      this.$emit(event.type, event)
+    },
     readableToken (balance) {
       return numeral(unit.fromWei(balance.toString(10), 'ether')).format('0,0.[000]')
     },

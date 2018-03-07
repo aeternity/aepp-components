@@ -1,15 +1,18 @@
+import mixin from '../../mixins/helper'
+
 /**
  * Displays an App Icon
  */
 export default {
   name: 'ae-app-icon',
+  mixins: [mixin],
   props: {
     /**
-     * src propery, location of the icon
+     * src property, location of the icon
      */
     src: {
-      type: String,
-      required: true
+      required: true,
+      type: String
     }
   },
   computed: {
@@ -18,5 +21,8 @@ export default {
         'background-image': `url(${this.src})`
       }
     }
+  },
+  methods: {
+
   }
 }
