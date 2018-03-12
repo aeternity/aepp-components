@@ -61,21 +61,28 @@ describe('AeButton', () => {
 
   describe('events', () => {
     describe('click', () => {
+      const testEmittedClick = emittedClick => {
+        expect(emittedClick.length).toBe(1)
+        expect(emittedClick[0][0]).toBeTruthy()
+        const event = emittedClick[0][0]
+        expect(event.type).toBe('click')
+      }
+
       it('clicking on icon emits click', () => {
         const wrapper = renderIcon()
-
-        const icon = wrapper.find('[data-slot="icon"]')
+        const icon = wrapper.find(ICON_SELECTOR)
         icon.trigger('click')
-        expect(wrapper.emitted().click).toBeTruthy()
+        return wrapper.vm.$nextTick().then(() => {
+          testEmittedClick(wrapper.emitted().click)
+        })
       })
 
       it('clicking on label emits click', () => {
         const wrapper = renderLabel()
-
-        wrapper.vm.$nextTick().then(() => {
+        return wrapper.vm.$nextTick().then(() => {
           const icon = wrapper.find(LABEL_SELECTOR)
           icon.trigger('click')
-          expect(wrapper.emitted().click).toBeTruthy()
+          testEmittedClick(wrapper.emitted().click)
         })
       })
     })
