@@ -32,4 +32,4 @@
 </template>
 <script src='./aeAmountInput.js'/>
 /* eslint no-unused-expressions: "off" */
-<style src='./aeAmountInput.scss'/>
+<style src='./aeAmountInput.scss' lang='scss'/>
