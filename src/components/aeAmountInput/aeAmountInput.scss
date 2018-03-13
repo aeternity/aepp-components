@@ -1,0 +1,62 @@
+@import '../variables';
+
+.ae-amount-input {
+  position: relative;
+
+  button {
+    display: block;
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  .ae-input {
+    input.monospace {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: normal;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .side {
+      width: 55px;
+      flex-shrink: 0;
+    }
+
+    button.side {
+      font-size: 14px;
+
+      .ae-icon {
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .drop-down {
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0 2px 8px 0 rgba($dark, 0.1);
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -30px;
+    z-index: 1;
+
+    button {
+      width: 100%;
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+      font-size: 14px;
+      color: $black;
+
+      &:hover {
+        background-color: $smoke;
+      }
+    }
+  }
+}
