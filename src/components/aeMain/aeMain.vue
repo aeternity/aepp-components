@@ -4,34 +4,6 @@
   </div>
 </template>
 
-<script>
-  /**
-   * Displays app background, preserves free space for Identity manager UI,
-   * sets common styles for child components
-   */
-  export default {
-    name: 'ae-main'
-  }
-</script>
-
-<style lang="scss">
-  @import "../common";
-
-  html {
-    height: 100%;
-  }
-  body {
-    min-height: 100%;
-    height: 1px;
-  }
-</style>
-
-<style lang="scss" scoped>
-  .ae-main {
-    background: fixed linear-gradient(to bottom, white, #f1f4f7);
-    min-height: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    padding-bottom: 80px;
-  }
-</style>
+<script src='./aeMain.js'/>
+/* eslint no-unused-expressions: "off" */
+<style src='./aeMain.scss' lang='scss'/>

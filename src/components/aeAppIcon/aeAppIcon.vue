@@ -9,8 +9,6 @@
     </div>
   </div>
 </template>
-<script src='./aeAppIcon.js'>
-  export {default} from './aeAppIcon'
-</script>
+<script src='./aeAppIcon.js'/>
 /* eslint no-unused-expressions: "off" */
-<style src='./aeAppIcon.css'/>
+<style src='./aeAppIcon.scss'/>
