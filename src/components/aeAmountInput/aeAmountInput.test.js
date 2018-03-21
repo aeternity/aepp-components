@@ -11,7 +11,6 @@ describe('AeAmountInput', () => {
     const wrapper = mount(AeAmountInput, { propsData: { value: { symbol: 'TEST' } } })
     const html = wrapper.html()
     expect(html).toContain('<div class="ae-amount-input">')
-    expect(html).toContain('TEST')
     expect(html).not.toContain('<div class="drop-down">')
     expect(wrapper.contains('input'))
     expect(wrapper.contains('button'))
@@ -22,6 +21,12 @@ describe('AeAmountInput', () => {
     const symbol = 'TEST'
     wrapper.setProps({ value: { symbol } })
     expect(wrapper.html()).toContain(symbol)
+  })
+
+  it('should block drop down if !cond', () => {
+    const wrapper = mount(AeAmountInput)
+    wrapper.find('button').trigger('click')
+    expect(wrapper.html()).toContain('<div class="drop-down">')
   })
 
   it('button should toggle drop down', () => {

@@ -73,7 +73,7 @@
       },
       toggleDropDown () {
         if (this.unitsCount > 1) {
-          this.dropDownVisible = !this.dropDownVisible  
+          this.dropDownVisible = !this.dropDownVisible
         }
       }
     },
