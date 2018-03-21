@@ -24,10 +24,10 @@ describe('AeAmountInput', () => {
     expect(wrapper.html()).toContain(symbol)
   })
 
-  it('should block drop down if !cond', () => {
-    const wrapper = mount(AeAmountInput)
+  it('should hide chevron if unit is equal to 1', () => {
+    const wrapper = mount(AeAmountInput, { propsData: { units: [{ symbol: 'TEST', name: 'test' }] } })
     wrapper.find('button').trigger('click')
-    expect(wrapper.html()).toContain('<div class="drop-down">')
+    expect(wrapper.html()).not.toContain('<ae-icon name="chevron" />')
   })
 
   it('button should toggle drop down', () => {
