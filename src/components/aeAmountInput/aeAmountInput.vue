@@ -11,8 +11,8 @@
       <button
         slot="right"
         class="side"
-        @click="dropDownVisible = !dropDownVisible">
-        {{value.symbol}} <ae-icon name="chevron" rotate="90" />
+        @click="toggleDropDown() ">
+        {{value.symbol}} <ae-icon name="chevron" rotate="90" v-if="unitsCount > 1" />
       </button>
     </ae-input>
     <div
@@ -62,14 +62,24 @@
       }
     },
     data: () => ({
-      dropDownVisible: false
+      dropDownVisible: false,
+      unitsCount: null
     }),
     directives: { onClickAway },
     components: { AeInput, AeIcon },
     methods: {
       handleInput (value) {
         this.$emit('input', { ...this.value, ...value })
+      },
+      toggleDropDown () {
+        if (this.unitsCount > 1) {
+          this.dropDownVisible = !this.dropDownVisible  
+        }
       }
+    },
+    beforeMount () {
+      this.value.symbol = this.units[0].symbol
+      this.unitsCount = this.units.length
     }
   }
 </script>
