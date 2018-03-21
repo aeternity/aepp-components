@@ -11,6 +11,7 @@ describe('AeAmountInput', () => {
     const wrapper = mount(AeAmountInput, { propsData: { value: { symbol: 'TEST' } } })
     const html = wrapper.html()
     expect(html).toContain('<div class="ae-amount-input">')
+    expect(html).toContain('TEST')
     expect(html).not.toContain('<div class="drop-down">')
     expect(wrapper.contains('input'))
     expect(wrapper.contains('button'))

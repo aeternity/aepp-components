@@ -77,7 +77,7 @@
         }
       }
     },
-    beforeMount () {
+    mounted () {
       this.value.symbol = this.units[0].symbol
       this.unitsCount = this.units.length
     }
