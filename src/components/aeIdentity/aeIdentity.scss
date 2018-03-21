@@ -15,7 +15,7 @@
 .chunk-row {
   font-family: 'Roboto Mono', monospace;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 300;
   font-style: normal;
   line-height: 1.53;
   letter-spacing: 3.1px;
@@ -83,9 +83,9 @@
 }
 
 .ae-identity__avatar {
-  border-width: 1px;
-  width: 23px;
-  height: 23px;
+  border-width: 1px !important;
+  width: 23px !important;
+  height: 23px !important;
 }
 
 .identity-name-position {

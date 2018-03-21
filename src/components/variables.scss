@@ -1,6 +1,8 @@
 $silver: #dcdcdc;
 $smoke: #f5f5f5;
-$dark: #3c3c3c;
+$dark: #383838;
+$darker: #1e1e1e;
+$darkest: #000000;
 $anthracite: #1e1e1e;
 $white: #ffffff;
 $apricot: #ff96a0;
@@ -14,7 +16,10 @@ $type-color-map: (
   'boring': $silver,
   'normal': $grey,
   'exciting': $aubergine,
-  'dramatic': $maegenta
+  'dramatic': $maegenta,
+  'dark': $dark,
+  'darker': $darker,
+  'darkest': $darkest
 );
 
 $container-width: 880px;
