@@ -47,7 +47,7 @@
        */
       value: {
         type: Object,
-        default: () => ({ symbol: this.valueComputed})
+        default: () => ({ symbol: this.getUnits })
       },
       placeholder: undefined,
       /**
@@ -83,11 +83,9 @@
       unitsCount: function () {
         let count = this.units.length
         return count
-      }
-    },
-    watch: {
-      valueComputed: function () {
-        return this.value.symbol = this.units[0].symbol
+      },
+      getUnits: function () {
+        return this.units[0].symbol
       }
     }
   }
