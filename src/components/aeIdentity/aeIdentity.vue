@@ -1,10 +1,8 @@
   <template>
   <div @click="$emit('click', $event)" :class="classObject">
     <div class="flex-row">
-      <slot name="header-left"></slot>
       <ae-identity-avatar :address='identity ? identity.address : ""'/>
       <span class="identity-info _short" v-if="collapsed">{{shortAddress}}</span>
-
       <div class="balances">
         <div v-if='tokenAmount' class="balance">
           <span class="amount">{{tokenAmount}}</span>
@@ -15,7 +13,6 @@
           <span class="currency-symbol">ETH</span>
         </div>
       </div>
-      <slot name="header-right"></slot>
     </div>
     <div v-if="!collapsed" v-for="chunk in chunkAddress" class="chunk">
       <div v-for="data in chunk" class="chunk-row">
