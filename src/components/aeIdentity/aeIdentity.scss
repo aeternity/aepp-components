@@ -1,64 +1,60 @@
-@import "./../variables";
+@import './../variables';
 
 .ae-identity {
   width: 100%;
   zoom: 1.1;
   color: $white;
+}
 
-  .footer {
-    margin-top: 18px;
-  }
+.footer {
+  margin-top: 18px;
+}
 
-  .avatar {
-    width: 23px;
-    height: 23px;
+.avatar {
+  width: 23px;
+  height: 23px;
 
-    &.ae-identity-avatar {
-      margin-bottom: 0px;
-    }
-  }
-
-  .flex-row{
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .chunked-address {
-    margin-top: 10px;
-  }
-
-  .chunked-address .chunk {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 17px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 1.53;
-    letter-spacing: 3.1px;
-    font-stretch: normal;
-    text-align: left;
-  }
-
-  .chunked-address .chunk .row {
-    display: inline-block;
-    width: calc(100% / 3);
-
-    &:nth-child(2n) {
-      text-align: center;
-    }
-
-    &:nth-child(3n) {
-      text-align: right;
-    }
+  &.ae-identity-avatar {
+    margin-bottom: 0px;
   }
 }
 
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
 
-.ae-identity ,
+.chunk {
+  margin-top: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: 3.1px;
+  font-stretch: normal;
+  text-align: left;
+}
+
+.chunk-row {
+  display: inline-block;
+  width: calc(100% / 3);
+
+  &:nth-child(2n) {
+    text-align: center;
+  }
+
+  &:nth-child(3n) {
+    text-align: right;
+  }
+}
+
+.ae-identity,
 .ae-identity * {
-  transition:0.4s;
+  transition: 0.4s;
 }
 
-.identity-info{
+.identity-info {
   text-overflow: ellipsis;
   text-transform: uppercase;
   font-family: Roboto Mono;
@@ -66,13 +62,13 @@
   letter-spacing: 1px;
 }
 
-.collapsed .identity-info{
-  font-size:10px;
-  align-self:flex-end;
-  display:none;
+.collapsed .identity-info {
+  font-size: 10px;
+  align-self: flex-end;
+  display: none;
 }
 
-.identity-info._long{
+.identity-info._long {
   width: calc(100% - 65px);
   overflow: hidden;
 }
@@ -90,13 +86,13 @@
   font-stretch: normal;
   line-height: normal;
   text-align: right;
-
-  .currency-symbol {
-    letter-spacing: 0.12em;
-  }
 }
 
-.ae-identity .ae-identity-avatar{
-  margin-right:2px;
-  margin-bottom:10px;
+.currency-symbol {
+  letter-spacing: 0.12em;
+}
+
+.ae-identity .ae-identity-avatar {
+  margin-right: 2px;
+  margin-bottom: 10px;
 }

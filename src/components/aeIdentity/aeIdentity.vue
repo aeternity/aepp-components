@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div @click="$emit('click', $event)" :class="classObject">
     <div class="flex-row">
       <slot name="header-left"></slot>
@@ -6,26 +6,21 @@
       <span class="identity-info _short" v-if="collapsed">{{shortAddress}}</span>
 
       <div class="balances">
-        <div v-if='tokenAmount' :class="{balance: true}">
+        <div v-if='tokenAmount' class="balance">
           <span class="amount">{{tokenAmount}}</span>
           <span class="currency-symbol">AE</span>
         </div>
-        <div :class="{balance: true}">
+        <div class="balance">
           <span class="amount">{{amount}}</span>
           <span class="currency-symbol">ETH</span>
         </div>
       </div>
       <slot name="header-right"></slot>
     </div>
-    <div v-if="!collapsed" class="chunked-address">
-      <div v-for="chunk in chunkAddress" class="chunk">
-        <div v-for="data in chunk" class="row">
-          {{data}}
-        </div>
+    <div v-if="!collapsed" v-for="chunk in chunkAddress" class="chunk">
+      <div v-for="data in chunk" class="chunk-row">
+        {{data}}
       </div>
-    </div>
-    <div class="footer" v-if="hasSlot">
-      <slot></slot>
     </div>
   </div>
 </template>

@@ -48,9 +48,6 @@ export default {
       const chunks = this.identity.address.match(/.{1,7}/g)
       return [chunks.slice(0, 3), chunks.slice(3)]
     },
-    hasSlot () {
-      return this.$slots.default
-    },
     classObject () {
       return {
         'ae-identity': true,
