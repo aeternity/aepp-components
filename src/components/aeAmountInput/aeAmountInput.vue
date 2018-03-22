@@ -47,7 +47,7 @@
        */
       value: {
         type: Object,
-        default: () => ({ symbol: 'AE' })
+        default: () => ({ symbol: this.valueComputed})
       },
       placeholder: undefined,
       /**
@@ -62,8 +62,7 @@
       }
     },
     data: () => ({
-      dropDownVisible: false,
-      unitsCount: null
+      dropDownVisible: false
     }),
     directives: { onClickAway },
     components: { AeInput, AeIcon },
@@ -79,7 +78,17 @@
     },
     mounted () {
       this.value.symbol = this.units[0].symbol
-      this.unitsCount = this.units.length
+    },
+    computed: {
+      unitsCount: function () {
+        let count = this.units.length
+        return count
+      }
+    },
+    watch: {
+      valueComputed: function () {
+        return this.value.symbol = this.units[0].symbol
+      }
     }
   }
 </script>
