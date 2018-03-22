@@ -18,10 +18,10 @@
 .flex-row {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
-.chunk {
-  margin-top: 10px;
+.chunk-row {
   font-family: 'Roboto Mono', monospace;
   font-size: 17px;
   font-weight: 500;
@@ -30,9 +30,13 @@
   letter-spacing: 3.1px;
   font-stretch: normal;
   text-align: left;
+
+  &:first-of-type {
+    margin-top: 14px;
+  }
 }
 
-.chunk-row {
+.chunk {
   display: inline-block;
   width: calc(100% / 3);
 
@@ -43,6 +47,10 @@
   &:nth-child(3n) {
     text-align: right;
   }
+}
+
+.flex-row + .chunk-row{
+  margin-top: 16px;
 }
 
 .ae-identity,
@@ -75,20 +83,29 @@
 }
 
 .balance {
-  height: 14px;
   font-family: 'Roboto Mono', monospace;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 300;
   font-stretch: normal;
-  line-height: normal;
+  line-height: 12px;
   text-align: right;
+  margin-top: 2px;
+
+  &:first-of-type {
+      margin-top: 0px;
+  }
+
+  &._bold {
+    font-weight: 400;
+  }
 }
 
 .currency-symbol {
   letter-spacing: 0.12em;
+  padding-right: 3px;
 }
 
-.ae-identity .ae-identity-avatar {
+.ae-identity__avatar {
   margin-right: 2px;
-  margin-bottom: 10px;
+  border-width: 1px;
 }
