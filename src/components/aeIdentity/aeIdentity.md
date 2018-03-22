@@ -23,7 +23,7 @@ let identity = {
 }
 
 <div style="background: black">
-  <ae-identity :identity="identity" active collapsed/>
+  <ae-identity :identity="identity" collapsed/>
 </div>
 
 ```
@@ -31,6 +31,6 @@ let identity = {
 Blank identity information
 ```js
 <div style="background: black">
-  <ae-identity blank active />
+  <ae-identity/>
 </div>
 ```
