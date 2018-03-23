@@ -44,6 +44,9 @@ export default {
     shortAddress () {
       return this.identity.address.substr(0, 6)
     },
+    identityName () {
+      return this.identity.name
+    },
     chunkAddress () {
       const chunks = this.identity.address.match(/.{1,7}/g)
       return [chunks.slice(0, 3), chunks.slice(3)]

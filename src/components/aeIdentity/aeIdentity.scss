@@ -18,7 +18,7 @@
 .flex-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .chunk-row {
@@ -49,7 +49,7 @@
   }
 }
 
-.flex-row + .chunk-row{
+.flex-row + .chunk-row {
   margin-top: 16px;
 }
 
@@ -92,7 +92,7 @@
   margin-top: 2px;
 
   &:first-of-type {
-      margin-top: 0px;
+    margin-top: 0px;
   }
 
   &._bold {
@@ -108,4 +108,19 @@
 .ae-identity__avatar {
   margin-right: 2px;
   border-width: 1px;
+}
+
+.identity-name {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.identity-name h3 {
+  font-size: 12px;
+  margin: 0px;
+}
+
+.identity-name small {
+  letter-spacing: 0.25em;
+  font-size: 90%;
 }

@@ -2,6 +2,10 @@
   <div @click="$emit('click', $event)" :class="classObject">
     <div class="flex-row">
       <ae-identity-avatar class="ae-identity__avatar" :address='identity ? identity.address : ""'/>
+      <span class="identity-name">
+        <h3>{{identityName}}</h3>
+        <small v-if="collapsed">{{shortAddress}}  ••••••</small>
+      </span>
       <span class="identity-info _short" v-if="collapsed">{{shortAddress}}</span>
       <div class="balances">
         <div v-if='tokenAmount' class="balance _bold">
