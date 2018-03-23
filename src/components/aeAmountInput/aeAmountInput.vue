@@ -11,8 +11,8 @@
       <button
         slot="right"
         class="side"
-        @click="dropDownVisible = !dropDownVisible">
-        {{value.symbol}} <ae-icon name="chevron" rotate="90" />
+        @click="toggleDropDown() ">
+        {{value.symbol}} <ae-icon name="chevron" rotate="90" v-if="unitsCount > 1" />
       </button>
     </ae-input>
     <div
@@ -47,7 +47,7 @@
        */
       value: {
         type: Object,
-        default: () => ({ symbol: 'AE' })
+        default: () => ({ symbol: this.getUnits })
       },
       placeholder: undefined,
       /**
@@ -69,6 +69,23 @@
     methods: {
       handleInput (value) {
         this.$emit('input', { ...this.value, ...value })
+      },
+      toggleDropDown () {
+        if (this.unitsCount > 1) {
+          this.dropDownVisible = !this.dropDownVisible
+        }
+      }
+    },
+    mounted () {
+      this.value.symbol = this.units[0].symbol
+    },
+    computed: {
+      unitsCount: function () {
+        let count = this.units.length
+        return count
+      },
+      getUnits: function () {
+        return this.units[0].symbol
       }
     }
   }
