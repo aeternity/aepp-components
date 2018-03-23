@@ -5,7 +5,7 @@ function startAndEnd (str, start = 6, end = 6) {
     str.substr(str.length - end, str.length)
 }
 function addressValid (address) {
-  return /^0x[0-9a-fA-F]{40}$/i.test(address)
+  return /^((0x[0-9a-fA-F]{40})|([ao]k\$[0-9a-zA-Z]{94}))$/.test(address)
 }
 
 /**
