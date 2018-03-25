@@ -42,7 +42,7 @@ export default {
       return this.identity.address
     },
     shortAddress () {
-      return this.identity.address.substr(0, 6)
+      return this.identity.address.substr(0, 8)
     },
     identityName () {
       return this.identity.name
@@ -52,10 +52,13 @@ export default {
       return [chunks.slice(0, 3), chunks.slice(3)]
     },
     classObject () {
-      return {
-        'ae-identity': true,
-        'collapsed': this.collapsed
-      }
+      return [
+        'ae-identity',
+        this.collapsedModifier
+      ]
+    },
+    collapsedModifier () {
+      return `_collapsed_${this.collapsed}`
     }
   }
 }

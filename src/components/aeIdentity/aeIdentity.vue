@@ -2,11 +2,10 @@
   <div @click="$emit('click', $event)" :class="classObject">
     <div class="flex-row">
       <ae-identity-avatar class="ae-identity__avatar" :address='identity ? identity.address : ""'/>
-      <span class="identity-name">
-        <h3>{{identityName}}</h3>
-        <small v-if="collapsed">{{shortAddress}}  ••••••</small>
+      <span :class="['identity-name-position', collapsedModifier]">
+        <header :class="['identity-name', collapsedModifier]">{{identityName}}</header>
+        <small class="truncated-address" v-if="collapsed">{{shortAddress}}  ••••••</small>
       </span>
-      <span class="identity-info _short" v-if="collapsed">{{shortAddress}}</span>
       <div class="balances">
         <div v-if='tokenAmount' class="balance _bold">
           <span class="amount">{{tokenAmount}}</span>

@@ -6,15 +6,6 @@
   color: $white;
 }
 
-.avatar {
-  width: 23px;
-  height: 23px;
-
-  &.ae-identity-avatar {
-    margin-bottom: 0px;
-  }
-}
-
 .flex-row {
   display: flex;
   justify-content: space-between;
@@ -58,20 +49,6 @@
   transition: 0.4s;
 }
 
-.identity-info {
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-  font-family: Roboto Mono;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-.collapsed .identity-info {
-  font-size: 10px;
-  align-self: flex-end;
-  display: none;
-}
-
 .identity-info._long {
   width: calc(100% - 65px);
   overflow: hidden;
@@ -92,7 +69,7 @@
   margin-top: 2px;
 
   &:first-of-type {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   &._bold {
@@ -106,21 +83,48 @@
 }
 
 .ae-identity__avatar {
-  margin-right: 2px;
   border-width: 1px;
+  width: 23px;
+  height: 23px;
+}
+
+.identity-name-position {
+  &._collapsed {
+    &_true {
+      margin-left: 9px;
+    }
+    &_false {
+      margin-left: 10px;
+    }
+  }
 }
 
 .identity-name {
-  font-size: 12px;
-  margin-left: 5px;
+  margin: 0;
+
+  &._collapsed {
+    &_true {
+      font-size: 12px;
+      font-weight: 300;
+      margin-top: -2px;
+    }
+
+    &_false {
+      font-size: 17px;
+      font-weight: 400;
+      margin-top: 0;
+    }
+  }
 }
 
-.identity-name h3 {
-  font-size: 12px;
-  margin: 0px;
+.truncated-address {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  font-weight: 300;
+  opacity: 0.67;
+  display: block;
 }
 
-.identity-name small {
-  letter-spacing: 0.25em;
-  font-size: 90%;
+.identity-name + .truncated-address {
+  margin-top: 1px;
 }
