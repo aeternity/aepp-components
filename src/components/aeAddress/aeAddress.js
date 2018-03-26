@@ -39,7 +39,15 @@ export default {
     'size': {
       type: String,
       default: 'full'
-    }
+    },
+    /**
+     * The mnemonic name to display
+     */
+     'name': {
+      type: String,
+      required: false,
+      default: 'test'
+     }
   },
   computed: {
     cssClass () {
@@ -48,8 +56,12 @@ export default {
       }
     },
     displayAddress () {
-      if (this.size === 'full') { return this.address }
+      if (this.size === 'full') { return this.address.match(/.{1,7}/g) }
       return startAndEnd(this.address)
+    },
+    displayName () {
+      console.log(this.name)
+      return this.name
     }
   },
   components: {

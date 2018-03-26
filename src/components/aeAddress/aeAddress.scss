@@ -1,0 +1,25 @@
+.chunked-address {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+  }
+
+  .chunked-address .chunk {
+    display: inline-block;
+    margin: 5px 0 0 10px;
+    flex-grow: 1;
+    width: calc(100% * (1/3) - 10px - 1px);
+    justify-content: space-between;
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    color: $white;
+    font-stretch: normal;
+    text-align: left;
+  }
+  .size-full {
+    display: flex;
+    align-items:center;
+  }
