@@ -64,13 +64,15 @@ export default {
     }
 
     @include abovePhone {
+      $overlay-padding: 10px;
+
       display: flex;
-      padding: 10px;
+      padding: $overlay-padding;
       box-sizing: border-box;
 
       .ae-modal {
         margin: auto;
-        min-width: $screen-phone;
+        min-width: $screen-phone - 2 * $overlay-padding;
         border-radius: 10px;
       }
 
