@@ -55,9 +55,6 @@ export default {
     chunkAddress () {
       return this.identity.address.match(/.{1,7}/g)
     },
-    hasSlot () {
-      return this.$slots.default
-    },
     classObject () {
       return {
         'ae-identity': true,
