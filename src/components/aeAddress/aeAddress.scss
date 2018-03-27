@@ -1,25 +1,43 @@
+@import "/../mixins";
+
+.aeAddressWrapper {
+  display: flex;
+  align-items:center;
+  font-family: 'Roboto Mono', monospace;
+}
+.name {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  text-overflow: ellipsis;
+}
+.avatar {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
 .chunked-address {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  max-width: 320px;
+}
+.chunked-address .chunk {
+  margin: 5px 0 0 10px;
+  width: calc(100% * (1/3) - 10px - 1px);
+  justify-content: space-between;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  color: $white;
+  font-stretch: normal;
+  text-align: left;
+  letter-spacing: 1.2px;
+}
+@include phone {
+  .chunk {
+    letter-spacing: 0;
   }
+}
 
-  .chunked-address .chunk {
-    display: inline-block;
-    margin: 5px 0 0 10px;
-    flex-grow: 1;
-    width: calc(100% * (1/3) - 10px - 1px);
-    justify-content: space-between;
-
-    font-family: 'Roboto Mono', monospace;
-    font-size: 17px;
-    font-weight: 500;
-    font-style: normal;
-    color: $white;
-    font-stretch: normal;
-    text-align: left;
-  }
-  .size-full {
-    display: flex;
-    align-items:center;
-  }

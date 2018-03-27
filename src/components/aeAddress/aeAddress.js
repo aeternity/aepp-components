@@ -1,4 +1,5 @@
 import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue'
+import aeIcon from './../aeIcon/aeIcon.vue'
 function startAndEnd (str, start = 6, end = 6) {
   return str.substr(0, start + 2) +
     '…' +
@@ -47,6 +48,11 @@ export default {
       type: String,
       required: false,
       default: 'test'
+     },
+     'verified': {
+      type: Boolean,
+      required: false,
+      default: false
      }
   },
   computed: {

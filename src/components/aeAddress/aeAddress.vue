@@ -1,12 +1,18 @@
 <template>
-  <div :class='cssClass'>
+  <div :class='cssClass' class="aeAddressWrapper">
     <ae-identity-avatar v-if='showAvatar' 
     :address='address' 
     :name='name'
+    class="avatar"
     />
     <div>
-      <span class='name'>{{displayName}}</span>
-      <span class='address' v-if="size !== 'full'">{{displayAddress}}</span>
+      <div class='name'>
+        {{displayName}}
+        <ae-icon name='check'
+            type='dramatic'
+            v-if='verified' />
+      </div>
+      <div class='address' v-if="size !== 'full'">{{displayAddress}}</div>
       <div v-if="size === 'full'" class="chunked-address">
           <div v-for="chunk of displayAddress" class="chunk">
               {{chunk}}
