@@ -1,6 +1,5 @@
 import { mount } from 'vue-test-utils'
 import AeAddress from './aeAddress.vue'
-import aeIcon from './../aeIcon/aeIcon.vue'
 import AeAddressPlugin from './index'
 
 describe('AeAddress', () => {
