@@ -10,8 +10,9 @@
   align-items: center;
   font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 2.5px;
+  letter-spacing: 1.4px;
   text-overflow: ellipsis;
+  text-transform: capitalize;
 }
 .avatar {
   flex-shrink: 0;
@@ -27,11 +28,7 @@
   margin: 5px 0 0 10px;
   width: calc(100% * (1/3) - 10px - 1px);
   justify-content: space-between;
-  font-size: 17px;
   font-weight: 500;
-  font-style: normal;
-  color: $white;
-  font-stretch: normal;
   text-align: left;
   letter-spacing: 1.2px;
 }

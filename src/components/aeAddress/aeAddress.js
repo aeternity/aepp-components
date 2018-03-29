@@ -44,16 +44,19 @@ export default {
     /**
      * The mnemonic name to display
      */
-     'name': {
+    'name': {
       type: String,
       required: false,
-      default: 'test'
-     },
-     'verified': {
+      default: ''
+    },
+    /**
+     * show verified checkmark if name or address is recognized/registered
+     */
+    'verified': {
       type: Boolean,
       required: false,
-      default: false
-     }
+      default: true
+    }
   },
   computed: {
     cssClass () {
@@ -71,6 +74,7 @@ export default {
     }
   },
   components: {
-    AeIdentityAvatar
+    AeIdentityAvatar,
+    aeIcon
   }
 }
