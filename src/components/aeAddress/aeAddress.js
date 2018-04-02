@@ -42,12 +42,12 @@ export default {
       default: 'full'
     },
     /**
-     * The mnemonic name to display
+     * Show the account name
      */
     'name': {
       type: String,
       required: false,
-      default: ''
+      default: 'account'
     },
     /**
      * show verified checkmark if name or address is recognized/registered
@@ -61,7 +61,7 @@ export default {
   computed: {
     cssClass () {
       return {
-        ['size-' + this.size]: true
+        [`size-${this.size}`]: true
       }
     },
     displayAddress () {
@@ -69,7 +69,6 @@ export default {
       return startAndEnd(this.address)
     },
     displayName () {
-      console.log(this.name)
       return this.name
     }
   },
