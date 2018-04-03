@@ -35,7 +35,7 @@ export default {
     },
 
     /**
-     * Show the 'full' address or 'compact' (show first 6 and last 6 characters)
+     * Show the 'full' address (full address grouped by chunks ), 'long' or 'short' (show first 6 and last 6 characters)
      */
     'size': {
       type: String,
@@ -65,6 +65,7 @@ export default {
       }
     },
     displayAddress () {
+      if (this.size === 'long') { return this.address }
       if (this.size === 'full') { return this.address.match(/.{1,7}/g) }
       return startAndEnd(this.address)
     },
