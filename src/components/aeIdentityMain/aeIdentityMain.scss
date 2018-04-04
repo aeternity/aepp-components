@@ -1,0 +1,115 @@
+@import './../variables';
+
+.ae-identity-main {
+  width: 100%;
+  color: $white;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chunk-row {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 17px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: 3.1px;
+  font-stretch: normal;
+  text-align: left;
+
+  &:first-of-type {
+    margin-top: 14px;
+  }
+}
+
+.chunk {
+  display: inline-block;
+  width: calc(100% / 3);
+
+  &:nth-child(2n) {
+    text-align: center;
+  }
+
+  &:nth-child(3n) {
+    text-align: right;
+  }
+}
+
+.flex-row + .chunk-row {
+  margin-top: 16px;
+}
+
+.identity-info._long {
+  width: calc(100% - 65px);
+  overflow: hidden;
+}
+
+.balances {
+  width: auto;
+  flex-grow: 1;
+}
+
+.balance {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  line-height: 12px;
+  text-align: right;
+  margin-top: 2px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &._bold {
+    font-weight: 400;
+  }
+}
+
+.currency-symbol {
+  letter-spacing: 0.12em;
+  padding-right: 3px;
+}
+
+.ae-identity-main .avatar {
+  border-width: 1px;
+  width: 23px;
+  height: 23px;
+}
+
+.identity-name-position {
+  margin-left: 10px;
+
+  &._collapsed {
+    margin-left: 9px;
+  }
+}
+
+.identity-name {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 400;
+
+  &._collapsed {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: -2px;
+  }
+}
+
+.truncated-address {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  font-weight: 300;
+  opacity: 0.67;
+  display: block;
+}
+
+.identity-name + .truncated-address {
+  margin-top: 1px;
+}
