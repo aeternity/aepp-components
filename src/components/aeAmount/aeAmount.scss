@@ -21,18 +21,22 @@
   &._size{
     &_med {
       font-size: 40px;
-      .unit {
-        display: inline;
-        font-size: 14px;
-      }
     }
     &_large {
       font-size: 60px;
-      .unit {
-        display: inline;
-        font-size: 20px;
-      }
+    }
+  }
+}
+
+.unit {
+  display: inline;
+  &._size {
+    &_med {
+      font-size: 14px;
     }
 
+    &_large {
+      font-size: 20px;
+    }
   }
 }
