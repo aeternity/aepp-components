@@ -1,5 +1,5 @@
-import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
-import aeDivider from './../aeDivider/aeDivider.vue'
+import aeIdentityMain from '../aeIdentityMain/aeIdentityMain.vue'
+import aeAccountBackground from '../aeAccountBackground/aeAccountBackground.vue'
 import helperMixin from './../../mixins/helper'
 import BN from 'bn.js'
 
@@ -8,7 +8,7 @@ import BN from 'bn.js'
  */
 export default {
   name: 'ae-identity',
-  components: { aeIdentityAvatar, aeDivider },
+  components: { aeIdentityMain, aeAccountBackground },
   props: {
     /**
     * An object representing a identity. Must have a adress string a tokenBalance and a balance BigNumber (bn.js)
@@ -22,11 +22,11 @@ export default {
       })
     },
     /**
-    * Is this an identity activated/selected (magenta) or not (grey)?
+    * Is this an identity activated/selected (magenta) or not (purple)?
     */
     active: {
       type: Boolean,
-      default: true
+      default: false
     },
     /**
     * Is this the full size identity card or the collapsed one for displaying at the bottom of the screen?
@@ -55,12 +55,8 @@ export default {
     chunkAddress () {
       return this.identity.address.match(/.{1,7}/g)
     },
-    classObject () {
-      return {
-        'ae-identity': true,
-        'collapsed': this.collapsed,
-        'active': this.active
-      }
+    backgroundType () {
+      return this.active ? 'dramatic' : 'exciting'
     }
   }
 }
