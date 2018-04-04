@@ -2,17 +2,26 @@
 new Vue({
   data() {
     return {
-      amount: 1.337,
+      amount: 1.337865765437,
       unit: 'Æ'
     }
   },
   template: `
-    <ae-amount :value="amount" :unit="unit"/>
-  `,
-    methods: {
-        changeInput: function(newAmount) {
-            this.amount = newAmount
-        }
+    <ae-amount :value="amount" :unit="unit" size="med" color="black"/>
+  `
+})
+```
+
+```javascript
+new Vue({
+  data() {
+    return {
+      amount: 1.337865765437,
+      unit: 'Æ'
     }
+  },
+  template: `
+    <ae-amount :value="amount" :unit="unit" size="large" color="black"/>
+  `
 })
 ```
