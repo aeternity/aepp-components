@@ -1,7 +1,7 @@
 <template>
   <div :class='cssClass' class="aeAddressWrapper">
-    <ae-identity-avatar v-if='showAvatar' 
-    :address='address' 
+    <ae-identity-avatar v-if='showAvatar'
+    :address='address'
     class="avatar"
     />
     <div>
@@ -10,7 +10,9 @@
         <ae-icon name='check'
             type='dramatic'
             v-if='verified'
-            class='checkmark' />
+            class='checkmark'
+            data-checkmark
+        />
       </div>
       <div class='address' v-if="size !== 'full'">{{displayAddress}}</div>
       <div v-if="size === 'full'" class="chunked-address">
@@ -18,7 +20,7 @@
           {{chunk}}
         </div>
       </div>
-    </div>  
+    </div>
   </div>
 </template>
 <script src='./aeAddress.js'/>
