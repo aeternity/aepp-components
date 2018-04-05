@@ -1,26 +1,26 @@
 <template>
-  <div :class='cssClass' class="aeAddressWrapper">
-    <ae-identity-avatar v-if='showAvatar' 
-    :address='address' 
+  <div class="aeAddressWrapper">
+    <ae-identity-avatar v-if='showAvatar'
+    :address='address'
     class="avatar"
     />
     <div>
-      <div class='name' v-if='name'>
+      <div :class="['name', textIndentModifier]" v-if='name'>
         {{displayName}}
         <ae-icon name='check'
             type='dramatic'
             v-if='verified'
-            class='checkmark' />
+            :class="['checkmark', textIndentModifier]" />
       </div>
-      <div class='address' v-if="size !== 'full'">{{displayAddress}}</div>
-      <div v-if="size === 'full'" class="chunked-address">
+      <div :class="['address', textIndentModifier]" v-if="size !== 'full'">{{displayAddress}}</div>
+      <div v-if="size === 'full'" :class="['chunked-address', textIndentModifier]">
         <div v-for="chunk of displayAddress" class="chunk">
           {{chunk}}
         </div>
       </div>
-    </div>  
+    </div>
   </div>
 </template>
 <script src='./aeAddress.js'/>
 /* eslint no-unused-expressions: "off" */
-<style scoped="scoped" src='./aeAddress.scss'/>
+<style scoped src='./aeAddress.scss' lang="scss"/>

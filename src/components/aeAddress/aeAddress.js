@@ -59,11 +59,6 @@ export default {
     }
   },
   computed: {
-    cssClass () {
-      return {
-        [`size-${this.size}`]: true
-      }
-    },
     displayAddress () {
       if (this.size === 'long') { return this.address }
       if (this.size === 'full') { return this.address.match(/.{1,7}/g) }
@@ -71,6 +66,9 @@ export default {
     },
     displayName () {
       return this.name
+    },
+    textIndentModifier () {
+      return `_text-indent_${this.showAvatar}`
     }
   },
   components: {
