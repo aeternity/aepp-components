@@ -10,7 +10,9 @@
         <ae-icon name='check'
             type='dramatic'
             v-if='verified'
-            :class="['checkmark', textIndentModifier]" />
+            :class="['checkmark', textIndentModifier]"
+            data-checkmark
+        />
       </div>
       <div :class="['address', textIndentModifier]" v-if="size !== 'full'">{{displayAddress}}</div>
       <div v-if="size === 'full'" :class="['chunked-address', textIndentModifier]">
