@@ -1,7 +1,7 @@
 <template>
   <div class="ae-amount" :class="cssClass">
-    {{value}}
-    <div v-if='unit' class="unit">{{unit}}</div>
+    <span :class="['value', sizeModifier]">{{value}}</span>
+    <span v-if='unit' :class="['unit', sizeModifier]">{{unit}}</span>
   </div>
 </template>
 

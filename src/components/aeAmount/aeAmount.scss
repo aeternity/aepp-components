@@ -1,8 +1,10 @@
 @import "../variables";
 
 .ae-amount {
-  text-align: right;
   font-weight: 300;
+  display: flex;
+  align-items: baseline;
+
   &._color{
     &_grey {
       color: $grey;
@@ -18,23 +20,45 @@
       color: #fff;
     }
   }
+
   &._size{
     &_med {
-      width: 180px;
       font-size: 40px;
-      .unit {
-        display: inline;
-        font-size: 14px;
-      }
     }
     &_large {
-      width: 250px;
       font-size: 60px;
-      .unit {
-        display: inline;
-        font-size: 20px;
-      }
+    }
+  }
+}
+
+.value {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  text-overflow: ellipsis;
+  text-align: right;
+
+  &._size {
+    &_med {
+      line-height: 1.15em;
+    }
+    &_large {
+      line-height: 1em;
+    }
+  }
+}
+
+.unit {
+  display: inline;
+  margin-left: 1em;
+
+  &._size {
+    &_med {
+      font-size: 14px;
     }
 
+    &_large {
+      font-size: 20px;
+    }
   }
 }
