@@ -61,7 +61,7 @@ export default {
   computed: {
     displayAddress () {
       if (this.size === 'full') { return this.address }
-      else if (this.size === 'chunked') { return this.address.match(/.{1,7}/g) }
+      if (this.size === 'chunked') { return this.address.match(/.{1,7}/g) }
       return startAndEnd(this.address)
     },
     displayName () {
