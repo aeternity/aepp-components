@@ -35,7 +35,7 @@ export default {
     },
 
     /**
-     * Show the 'full' address (full address grouped by chunks ), 'long' or 'short' (show first 6 and last 6 characters)
+     * Show the 'full' address, 'chunked' (full address grouped by chunks ) or 'short' (show first 6 and last 6 characters)
      */
     'size': {
       type: String,
@@ -60,8 +60,8 @@ export default {
   },
   computed: {
     displayAddress () {
-      if (this.size === 'long') { return this.address }
-      if (this.size === 'full') { return this.address.match(/.{1,7}/g) }
+      if (this.size === 'full') { return this.address }
+      else if (this.size === 'chunked') { return this.address.match(/.{1,7}/g) }
       return startAndEnd(this.address)
     },
     displayName () {

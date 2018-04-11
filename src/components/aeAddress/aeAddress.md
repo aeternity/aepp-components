@@ -2,7 +2,7 @@
 <ae-address verified address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
 ```
 ```js
-<ae-address size='long' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
+<ae-address size='chunked' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
 ```
 ```js
 <ae-address name='account' verified size='short' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
@@ -12,7 +12,7 @@
 <ae-address name='account' verified show-avatar address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
 ```
 ```js
-<ae-address name='account' verified show-avatar size='long' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
+<ae-address name='account' verified show-avatar size='chunked' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
 ```
 ```js
 <ae-address name='account' show-avatar size='short' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
