@@ -46,8 +46,7 @@ export default {
      */
     'name': {
       type: String,
-      required: false,
-      default: 'account'
+      required: false
     },
     /**
      * show verified checkmark if name or address is recognized/registered
