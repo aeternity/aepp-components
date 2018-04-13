@@ -56,6 +56,9 @@ export default {
       required: false,
       default: false
     },
+    /**
+     * show full address splitted into 2 colums
+     */
     'chunkHalf': {
       type: Boolean,
       required: false,
