@@ -55,6 +55,11 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    'chunkHalf': {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
   computed: {
@@ -68,6 +73,9 @@ export default {
     },
     textIndentModifier () {
       return `_text-indent_${this.showAvatar}`
+    },
+    chunkModifier () {
+      return `_chunk-half_${this.chunkHalf}`
     }
   },
   components: {
