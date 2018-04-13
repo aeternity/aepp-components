@@ -66,4 +66,7 @@ $text-indent: 14px;
     letter-spacing: 0;
   }
 }
+._chunk-half_true .chunk {
+  width: calc(100% * (1/3));
+}
 
