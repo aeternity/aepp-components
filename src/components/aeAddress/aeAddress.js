@@ -1,4 +1,5 @@
 import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue'
+import aeIcon from './../aeIcon/aeIcon.vue'
 function startAndEnd (str, start = 6, end = 6) {
   return str.substr(0, start + 2) +
     '…' +
@@ -34,25 +35,54 @@ export default {
     },
 
     /**
-     * Show the 'full' address or 'compact' (show first 6 and last 6 characters)
+     * Show the 'full' address, 'chunked' (full address grouped by chunks ) or 'short' (show first 6 and last 6 characters)
      */
     'size': {
       type: String,
       default: 'full'
+    },
+    /**
+     * Show the account name
+     */
+    'name': {
+      type: String,
+      required: false
+    },
+    /**
+     * show verified checkmark if name or address is recognized/registered
+     */
+    'verified': {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    /**
+     * show full address splitted into 2 colums
+     */
+    'chunkHalf': {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
   computed: {
-    cssClass () {
-      return {
-        ['size-' + this.size]: true
-      }
-    },
     displayAddress () {
       if (this.size === 'full') { return this.address }
+      if (this.size === 'chunked') { return this.address.match(/.{1,7}/g) }
       return startAndEnd(this.address)
+    },
+    displayName () {
+      return this.name
+    },
+    textIndentModifier () {
+      return `_text-indent_${this.showAvatar}`
+    },
+    chunkModifier () {
+      return `_chunk-half_${this.chunkHalf}`
     }
   },
   components: {
-    AeIdentityAvatar
+    AeIdentityAvatar,
+    aeIcon
   }
 }
