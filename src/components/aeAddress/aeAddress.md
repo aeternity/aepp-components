@@ -16,6 +16,21 @@
 />
 ```
 
+With another font size:
+```vue
+<template>
+  <ae-address size='short' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
+</template>
+<script>
+export default {}
+</script>
+<style scoped>
+  .ae-address {
+    font-size: 20px;
+  }
+</style>
+```
+
 ```jsx
 <ae-address
   name='account'

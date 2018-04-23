@@ -1,5 +1,5 @@
 <template>
-  <div class="aeAddressWrapper">
+  <div class="ae-address">
     <ae-identity-avatar
       v-if='showAvatar'
       :address='address'
