@@ -3,7 +3,7 @@
     <div class="ae-modal-light">
       <h1>{{title}}</h1>
       <main>
-        <!-- Modal content -->
+        <!-- @slot Modal content -->
         <slot />
       </main>
       <div class="buttons">

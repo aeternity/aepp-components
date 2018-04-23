@@ -181,10 +181,10 @@ e.g:
 <template>
   <div class="ae-banner" :class='cssClass'>
     <content>
-      <!-- Banner content -->
+      <!-- @slot Banner content -->
       <slot />
     </content>
-    <!-- Banner button -->
+    <!-- @slot Banner button -->
     <slot name='button'>
       <ae-button :type='type' invert  @click="close" >
         <ae-icon slot='icon' :type='type' name='close'/>

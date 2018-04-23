@@ -1,6 +1,6 @@
 <template>
   <ae-link :to="to" :class="{ 'ae-filter-item': true, active }">
-    <!-- Filter item content -->
+    <!-- @slot Filter item content -->
     <slot />
   </ae-link>
 </template>

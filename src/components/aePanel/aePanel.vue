@@ -8,7 +8,7 @@
           <ae-icon slot='icon' name='close' />
         </ae-button>
       </header>
-      <!-- This is the Body of the Panel -->
+      <!-- @slot This is the Body of the Panel -->
       <slot />
     </div>
     <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
