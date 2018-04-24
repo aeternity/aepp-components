@@ -319,11 +319,9 @@ new Vue({
 ## app.vue
 ```javascript
 <template>
-  <div id="app">
-    <ae-main>
+  <ae-main id="app">
     <!-- add components here -->
-    </ae-main>
-  </div>
+  </ae-main>
 </template>
 
 <script>
