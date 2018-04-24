@@ -24,5 +24,4 @@
   </div>
 </template>
 <script src='./aeAddress.js'/>
-/* eslint no-unused-expressions: "off" */
 <style scoped src='./aeAddress.scss' lang="scss"/>

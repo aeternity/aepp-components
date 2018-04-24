@@ -4,5 +4,4 @@
 <script src="./aeIcon.js">
   export { default } from './aeIcon'
 </script>
-/* eslint no-unused-expressions: "off" */
 <style lang='scss' src="./aeIcon.scss" />

@@ -113,7 +113,7 @@ html
 
 ### Component file name and location
 Put the files in a camelcased directory inside `/src/components` like `/src/components/aeComponentName/`.
-Create a .vue file with the same name (ie. `aeComponentName.vue`) that includes template, script and style. Script and style may also be imported from separate files like `aeComponentName.js` and `aeComponentName.(s)css` (just add `/* eslint no-unused-expressions: "off" */` to keep the linter quiet)
+Create a .vue file with the same name (ie. `aeComponentName.vue`) that includes template, script and style. Script and style may also be imported from separate files like `aeComponentName.js` and `aeComponentName.(s)css`
 
 ```
 aepp-components

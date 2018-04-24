@@ -12,5 +12,4 @@
 <script src='./aeAppIcon.js'>
   export {default} from './aeAppIcon'
 </script>
-/* eslint no-unused-expressions: "off" */
 <style src='./aeAppIcon.css'/>
