@@ -1,6 +1,6 @@
 <template>
   <span class="ae-badge">
-     <!-- Badge content -->
+    <!-- @slot Badge content -->
     <slot />
   </span>
 </template>

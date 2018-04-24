@@ -13,7 +13,7 @@
             <ae-icon slot='icon' name='close' />
           </ae-button>
         </header>
-        <!-- Modal content -->
+        <!-- @slot Modal content -->
         <slot />
       </main>
     </div>

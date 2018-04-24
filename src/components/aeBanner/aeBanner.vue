@@ -2,10 +2,10 @@
   <div class="ae-banner">
     <div>
       <main>
-        <!-- Content -->
+        <!-- @slot Content -->
         <slot />
       </main>
-      <!-- Content of right side -->
+      <!-- @slot Content of right side -->
       <slot name="right" />
     </div>
   </div>

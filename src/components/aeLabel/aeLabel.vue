@@ -1,7 +1,7 @@
 <template>
   <label class="ae-label">
     <div class="content">
-      <!-- Label content -->
+      <!-- @slot Label content -->
       <slot />
     </div>
     <div :class="['help', typeModifier]">

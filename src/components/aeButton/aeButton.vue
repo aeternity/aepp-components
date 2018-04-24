@@ -7,12 +7,11 @@
     :to="to"
   >
     <div class="inner">
-      <!-- Button icon -->
-      <slot name='icon' :class="['ae-button__icon', sizeModifier, hasLabelModifier]">
-      </slot>
+      <!-- @slot Button icon -->
+      <slot name='icon' :class="['ae-button__icon', sizeModifier, hasLabelModifier]" />
       <div v-if='hasLabel' :class="['label', sizeModifier, typeModifier]">
-        <!-- Button content -->
-        <slot></slot>
+        <!-- @slot Button content -->
+        <slot />
       </div>
     </div>
   </component>

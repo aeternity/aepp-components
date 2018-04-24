@@ -1,6 +1,6 @@
 <template>
   <div class="ae-input">
-    <!-- The content of the left side -->
+    <!-- @slot The content of the left side -->
     <slot name="left" />
     <input
       :id="id"
@@ -11,7 +11,7 @@
       @input="handleInput"
       :value="value"
     />
-    <!-- The content of the right side -->
+    <!-- @slot The content of the right side -->
     <slot name="right" />
   </div>
 </template>
