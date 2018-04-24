@@ -222,20 +222,20 @@ Defaults should always be included.
 […]
 
 .ae-progress-indicator {
-	[…]
-	.progress-icon { […] }
-	.progress-label { […] }
+  […]
+  .progress-icon { […] }
+  .progress-label { […] }
 }
 .ae-progress-indicator._in-progress_true { […] }
 .ae-progress-indicator._in-progress_false { […] }
 
 .ae-progress-indicator._size_large {
-	.progress-icon { […] }
-	.progress-label { […] }
+  .progress-icon { […] }
+  .progress-label { […] }
 }
 .ae-progress-indicator._type_round {
-	.progress-icon { […] }
-	.progress-label { […] }
+  .progress-icon { […] }
+  .progress-label { […] }
 }
 ```
 
