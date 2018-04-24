@@ -9,8 +9,8 @@
 const BN = require('bn.js')
 const identity = {
   name: 'My identity',
-	address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
-	balance: new BN('1337000000000000000', 10)
+  address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
+  balance: new BN('1337000000000000000', 10)
 }
 
 <ae-account-background type="dramatic" style="width:335px">
@@ -22,8 +22,8 @@ const identity = {
 const BN = require('bn.js')
 const identity = {
   name: 'My collapsed identity',
-	address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
-	balance: new BN('1337000000000000000', 10)
+  address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
+  balance: new BN('1337000000000000000', 10)
 }
 
 <ae-account-background type="darker" style="width:335px">
