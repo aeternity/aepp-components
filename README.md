@@ -93,7 +93,7 @@ Contributions to the collection are welcome! If you wrote a cool component that 
 ## New Component Submission Guidlines
 
 ### Component Purpose
-The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<aeMenuEntry>` needs to be used inide of a `<aeMenu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not too specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it acually just a variant of a existing one?
+The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<aeMenuEntry>` needs to be used inide of a `<aeMenu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not too specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it actually just a variant of a existing one?
 
 ### Component Name
 Name it after what users will see, not what it represent in your application.
@@ -113,7 +113,7 @@ html
 
 ### Component file name and location
 Put the files in a camelcased directory inside `/src/components` like `/src/components/aeComponentName/`.
-Create a .vue file with the same name (ie. `aeComponentName.vue`) that includes template, script and style. Script and style may also be imported from separate files like `aeComponentName.js` and `aeComponentName.(s)css` (just add `/* eslint no-unused-expressions: "off" */` to keep the linter quiet)
+Create a .vue file with the same name (ie. `aeComponentName.vue`) that includes template, script and style. Script and style may also be imported from separate files like `aeComponentName.js` and `aeComponentName.(s)css`
 
 ```
 aepp-components
@@ -222,20 +222,20 @@ Defaults should always be included.
 […]
 
 .ae-progress-indicator {
-	[…]
-	.progress-icon { […] }
-	.progress-label { […] }
+  […]
+  .progress-icon { […] }
+  .progress-label { […] }
 }
 .ae-progress-indicator._in-progress_true { […] }
 .ae-progress-indicator._in-progress_false { […] }
 
 .ae-progress-indicator._size_large {
-	.progress-icon { […] }
-	.progress-label { […] }
+  .progress-icon { […] }
+  .progress-label { […] }
 }
 .ae-progress-indicator._type_round {
-	.progress-icon { […] }
-	.progress-label { […] }
+  .progress-icon { […] }
+  .progress-label { […] }
 }
 ```
 
@@ -319,11 +319,9 @@ new Vue({
 ## app.vue
 ```javascript
 <template>
-  <div id="app">
-    <ae-main>
+  <ae-main id="app">
     <!-- add components here -->
-    </ae-main>
-  </div>
+  </ae-main>
 </template>
 
 <script>

@@ -1,6 +1,7 @@
 import { shallow } from 'vue-test-utils'
 import AeButton from './aeButton.vue'
 import AeButtonPlugin from './index'
+import AeLink from '../aeLink/aeLink.vue'
 
 describe('AeButton', () => {
   const ICON_SELECTOR = '[data-slot="icon"]'
@@ -43,7 +44,7 @@ describe('AeButton', () => {
     it('is ae-link when to prop is set', () => {
       const wrapper = shallow(AeButton)
       wrapper.setProps({ to: 'http://example.com' })
-      expect(wrapper.is('ae-link')).toBe(true)
+      expect(wrapper.contains(AeLink)).toBe(true)
     })
 
     it('renders a "icon" slot', () => {
