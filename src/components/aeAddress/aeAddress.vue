@@ -11,7 +11,6 @@
             type='dramatic'
             v-if='verified'
             :class="['checkmark', textIndentModifier]"
-            data-checkmark
         />
       </div>
       <div :class="['address', textIndentModifier]" v-if="size !== 'chunked'">{{displayAddress}}</div>
