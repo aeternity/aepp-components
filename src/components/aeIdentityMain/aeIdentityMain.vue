@@ -21,16 +21,14 @@
         </div>
       </div>
     </div>
-    <div v-if="!collapsed" v-for="chunk in chunkAddress" class="chunk-row">
-      <div v-for="data in chunk" class="chunk" data-chunk>
+    <div v-if="!collapsed" v-for="(chunk, idx) in chunkAddress" :key="idx" class="chunk-row">
+      <div v-for="(data, idx) in chunk" :key="idx" class="chunk" data-chunk>
         {{data}}
       </div>
     </div>
   </div>
 </template>
 
-<script src='./aeIdentityMain.js'>
-  export {default} from './aeIdentityMain'
-</script>
+<script src='./aeIdentityMain.js'/>
 
 <style scoped src='./aeIdentityMain.scss' lang='scss'/>
