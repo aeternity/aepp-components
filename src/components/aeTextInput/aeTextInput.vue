@@ -20,7 +20,5 @@
     </ae-button>
   </div>
 </template>
-<script src='./aeTextInput.js'>
-  export {default} from './aeTextInput'
-</script>
+<script src='./aeTextInput.js'/>
 <style scoped lang="scss" src="./aeTextInput.scss"/>
