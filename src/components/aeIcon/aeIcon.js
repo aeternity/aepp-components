@@ -12,7 +12,7 @@ export default {
   name: 'ae-icon',
   props: {
     /**
-    * Name of icon, possible values: 'arrow', 'burger', 'check', 'chevron', 'close', 'error', 'info', 'plus', 'refresh'
+    * Name of icon, possible values: 'arrow', 'burger', 'check', 'chevron', 'close', 'copy', 'error', 'info', 'plus', 'refresh', 'view'
     */
     name: {
       type: String,
