@@ -19,7 +19,7 @@
         <slot name="header-right"></slot>
       </div>
       <div v-if="!collapsed" class="chunked-address">
-        <div v-for="chunk in chunkAddress" class="chunk">
+        <div v-for="(chunk, idx) in chunkAddress" :key="idx" class="chunk">
           {{chunk}}
         </div>
       </div>

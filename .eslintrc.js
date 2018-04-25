@@ -13,7 +13,7 @@ module.exports = {
   },
   extends: [
     'standard',
-    'plugin:vue/base'
+    'plugin:vue/essential'
   ],
   // add your custom rules here
   'rules': {

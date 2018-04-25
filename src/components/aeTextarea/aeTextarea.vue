@@ -2,9 +2,10 @@
   <textarea
     class="ae-textarea"
     :class="{ monospace }"
+    :value="value"
     @input="$emit('input', $event.target.value)"
     @copy="$emit('copy', $event)"
-  >{{value}}</textarea>
+  />
 </template>
 
 <script>

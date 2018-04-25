@@ -23,6 +23,7 @@
     >
       <button
         v-for="u in units"
+        :key="u.symbol"
         @click="handleInput({ symbol: u.symbol })"
       >
         {{u.symbol}} ({{u.name}})
