@@ -4,7 +4,7 @@
     class="ae-identity"
     @click="$emit('click', $event)"
   >
-    <ae-identity-main :identity="identity" :collapsed="collapsed" @click.stop="$emit('click', $event)"/>
+    <ae-identity-main :identity="identity" :collapsed="collapsed"/>
     <div class="footer" v-if="$slots.default">
       <slot></slot>
     </div>

@@ -72,13 +72,9 @@ describe('aeIdentity', () => {
         })
 
         const main = wrapper.find(AeIdentityMain)
-        const stopPropagation = jest.fn()
-        const event = { type: 'click', stopPropagation }
-        main.vm.$emit('click', event)
+        main.trigger('click')
         const emittedClick = wrapper.emitted('click')
         expect(emittedClick.length).toBe(1)
-        expect(emittedClick[0][0]).toBe(event)
-        expect(stopPropagation.mock.calls.length).toBe(1)
       })
     })
   })
