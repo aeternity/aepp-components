@@ -13,7 +13,6 @@
           type='dramatic'
           v-if='verified'
           :class="['checkmark', textIndentModifier]"
-          data-checkmark
         />
       </div>
       <div
