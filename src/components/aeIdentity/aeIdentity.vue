@@ -4,7 +4,7 @@
     class="ae-identity"
     @click="forwardEvent"
   >
-    <ae-identity-main :identity="identity" :collapsed="collapsed"/>
+    <ae-identity-main :identity="identity" :collapsed="collapsed" invert/>
     <div class="footer" v-if="$slots.default">
       <slot></slot>
     </div>

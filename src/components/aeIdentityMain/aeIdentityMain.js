@@ -23,6 +23,10 @@ export default {
     collapsed: {
       type: Boolean,
       default: false
+    },
+    invert: {
+      type: Boolean,
+      default: false
     }
   },
   mixins: [
@@ -38,7 +42,8 @@ export default {
     classObject () {
       return [
         'ae-identity-main',
-        this.collapsedModifier
+        this.collapsedModifier,
+        this.invert ? '_invert' : ''
       ]
     },
     chunkAddress () {
