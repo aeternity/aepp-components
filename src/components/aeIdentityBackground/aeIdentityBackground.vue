@@ -1,7 +1,7 @@
 <template>
-  <span :class="cssClasses" @click="$emit('click', $event)">
+  <div :class="cssClasses" @click="$emit('click', $event)">
     <slot/>
-  </span>
+  </div>
 </template>
 
 <script src="./aeIdentityBackground.js"/>
