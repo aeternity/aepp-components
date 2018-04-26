@@ -13,7 +13,7 @@
 .chunk-row {
   font-family: 'Roboto Mono', monospace;
   font-size: 17px;
-  font-weight: 300;
+  font-weight: 500;
   font-style: normal;
   line-height: 1.53;
   letter-spacing: 3.1px;
@@ -55,7 +55,6 @@
 .balance {
   font-family: 'Roboto Mono', monospace;
   font-size: 12px;
-  font-weight: 300;
   font-stretch: normal;
   line-height: 12px;
   text-align: right;
@@ -66,7 +65,7 @@
   }
 
   &.token {
-    font-weight: 400;
+    font-weight: bold;
   }
 }
 
@@ -83,6 +82,7 @@
 
 .identity-name-position {
   margin-left: 10px;
+  font-weight: 500;
 
   &._collapsed {
     margin-left: 9px;
@@ -93,11 +93,9 @@
 .identity-name {
   margin: 0;
   font-size: 17px;
-  font-weight: 400;
 
   &._collapsed {
     font-size: 12px;
-    font-weight: 300;
     margin-top: -2px;
   }
 }
@@ -105,7 +103,6 @@
 .truncated-address {
   font-family: 'Roboto Mono', monospace;
   font-size: 11px;
-  font-weight: 300;
   opacity: 0.67;
   display: block;
 }
