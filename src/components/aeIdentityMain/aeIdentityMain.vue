@@ -4,7 +4,6 @@
       <ae-identity-avatar
         class="avatar"
         :address='identity.address'
-        @click="forwardEvent"
       />
       <span :class="['identity-name-position', collapsedModifier]">
         <span role="heading" :class="['identity-name', collapsedModifier]">{{identity.name}}</span>

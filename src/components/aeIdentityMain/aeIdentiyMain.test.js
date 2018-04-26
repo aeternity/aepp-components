@@ -195,8 +195,7 @@ describe('AeIdentityMain', () => {
     it('forwards click when identity avatar emits click', () => {
       const wrapper = _shallow({ collapsed: false })
       const avatar = wrapper.find(AeIdentityAvatar)
-      const event = { type: 'click' }
-      avatar.vm.$emit('click', event)
+      avatar.trigger('click')
       const emittedClick = wrapper.emitted('click')
       expect(emittedClick.length).toBe(1)
       expect(emittedClick[0][0].type).toBe('click')
