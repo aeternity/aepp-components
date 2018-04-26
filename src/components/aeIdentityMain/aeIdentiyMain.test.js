@@ -42,7 +42,7 @@ describe('AeIdentityMain', () => {
 
         wrapper.update()
         return wrapper.vm.$nextTick().then(() => {
-          const balanceWrapper = wrapper.find('[data-amount]')
+          const balanceWrapper = wrapper.find('.balance:not(.token) .amount')
           expect(balanceWrapper.text()).toBe('500,000,000,000')
         })
       }
@@ -69,7 +69,7 @@ describe('AeIdentityMain', () => {
             tokenBalance: balance
           }
         })
-        const balanceWrapper = wrapper.find('[data-token-amount]')
+        const balanceWrapper = wrapper.find('.balance.token .amount')
         expect(balanceWrapper.text()).toBe('500,000,000,000')
       })
 
@@ -81,7 +81,7 @@ describe('AeIdentityMain', () => {
             balance: new BN('0', 10)
           }
         })
-        const balanceWrapper = wrapper.find('[data-token-amount]')
+        const balanceWrapper = wrapper.find('.balance.token .amount')
         expect(balanceWrapper.text()).toBe('0')
       })
     })
@@ -96,7 +96,7 @@ describe('AeIdentityMain', () => {
             tokenBalance: new BN('0', 10)
           }
         })
-        const chunks = wrapper.findAll('[data-chunk]')
+        const chunks = wrapper.findAll('.chunk')
         expect(chunks.length).toBe(collapsed ? 0 : 6)
       }
 
@@ -119,7 +119,7 @@ describe('AeIdentityMain', () => {
             balance: new BN('0', 10)
           }
         })
-        const truncatedAddress = wrapper.find('[data-truncated-address]')
+        const truncatedAddress = wrapper.find('.truncated-address')
         const expected = address.substr(0, 8)
         expect(truncatedAddress.text().includes(expected)).toBe(true)
       })
@@ -133,7 +133,7 @@ describe('AeIdentityMain', () => {
             balance: new BN('0', 10)
           }
         })
-        const truncatedAddress = wrapper.find('[data-truncated-address]')
+        const truncatedAddress = wrapper.find('.truncated-address')
         expect(truncatedAddress.exists()).toBe(false)
       })
     })
@@ -166,7 +166,7 @@ describe('AeIdentityMain', () => {
           }
         })
 
-        const tokenValue = wrapper.find('[data-token-amount]')
+        const tokenValue = wrapper.find('.balance.token .amount')
         tokenValue.trigger('click')
         const emittedClick = wrapper.emitted('click')
         expect(emittedClick.length).toBe(1)
@@ -184,7 +184,7 @@ describe('AeIdentityMain', () => {
         }
       })
 
-      const chunkList = wrapper.findAll('[data-chunk]')
+      const chunkList = wrapper.findAll('.chunk')
       const ramdomChunk = chunkList.at(Math.floor(Math.random() * chunkList.length))
       ramdomChunk.trigger('click')
       const emittedClick = wrapper.emitted('click')
