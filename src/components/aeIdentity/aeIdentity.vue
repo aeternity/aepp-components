@@ -2,7 +2,7 @@
   <ae-account-background
     :type="backgroundType"
     class="ae-identity"
-    @click="$emit('click', $event)"
+    @click="forwardEvent"
   >
     <ae-identity-main :identity="identity" :collapsed="collapsed"/>
     <div class="footer" v-if="$slots.default">
