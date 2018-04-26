@@ -28,6 +28,6 @@
   </div>
 </template>
 
-<script src='./aeIdentityMain.js'/>
+<script src='./aeIdentityLight.js'/>
 
-<style scoped src='./aeIdentityMain.scss' lang='scss'/>
+<style scoped src='./aeIdentityLight.scss' lang='scss'/>

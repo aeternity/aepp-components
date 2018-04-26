@@ -6,7 +6,7 @@ import BN from 'bn.js'
  * Displays an Identity with an avatar blockie, the address and an amount of ether
  */
 export default {
-  name: 'ae-identity-main',
+  name: 'ae-identity-light',
   components: { aeIdentityAvatar },
   props: {
     /**
@@ -41,7 +41,7 @@ export default {
     },
     classObject () {
       return [
-        'ae-identity-main',
+        'ae-identity-light',
         this.collapsedModifier,
         this.invert ? '_invert' : ''
       ]

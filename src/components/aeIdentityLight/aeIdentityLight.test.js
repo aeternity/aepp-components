@@ -1,11 +1,11 @@
 import {shallow} from 'vue-test-utils'
-import AeIndentityMain from './aeIdentityMain.vue'
+import AeIdentityLight from './aeIdentityLight.vue'
 import BN from 'bn.js'
 import AeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
 
-describe('AeIdentityMain', () => {
+describe('AeIdentityLight', () => {
   const _shallow = props => {
-    return shallow(AeIndentityMain, {
+    return shallow(AeIdentityLight, {
       propsData: props
     })
   }

@@ -1,6 +1,6 @@
 import { shallow, mount } from 'vue-test-utils'
 import AeIdentity from './aeIdentity.vue'
-import AeIdentityMain from '../aeIdentityMain/aeIdentityMain.vue'
+import AeIdentityLight from '../aeIdentityLight/aeIdentityLight.vue'
 import AeIdentityBackground from '../aeIdentityBackground/aeIdentityBackground.vue'
 import BN from 'bn.js'
 
@@ -11,12 +11,12 @@ describe('aeIdentity', () => {
       expect(wrapper.contains(AeIdentityBackground)).toBe(true)
     })
 
-    it('contains a aeIdentityMain', () => {
+    it('contains a aeIdentityLight', () => {
       const wrapper = mount(AeIdentity)
-      expect(wrapper.contains(AeIdentityMain)).toBe(true)
+      expect(wrapper.contains(AeIdentityLight)).toBe(true)
     })
 
-    it('forwards identity prop to aeIdentityMain component', async () => {
+    it('forwards identity prop to aeIdentityLight component', async () => {
       const identity = {
         address: '0x03489768758974698',
         tokenBalance: new BN('0', 10),
@@ -27,11 +27,11 @@ describe('aeIdentity', () => {
         propsData: { identity }
       })
 
-      const main = wrapper.find(AeIdentityMain)
+      const main = wrapper.find(AeIdentityLight)
       expect(main.props().identity).toBe(identity)
     })
 
-    it('forwards collapsed prop to aeIdentityMain component', async () => {
+    it('forwards collapsed prop to aeIdentityLight component', async () => {
       const test = collapsed => {
         const wrapper = mount(AeIdentity, {
           propsData: {
@@ -39,7 +39,7 @@ describe('aeIdentity', () => {
           }
         })
 
-        const main = wrapper.find(AeIdentityMain)
+        const main = wrapper.find(AeIdentityLight)
         expect(main.props().collapsed).toBe(collapsed)
       }
 
@@ -59,7 +59,7 @@ describe('aeIdentity', () => {
 
   describe('events', () => {
     describe('click', () => {
-      it('forwards click on aeIdentityMain', () => {
+      it('forwards click on aeIdentityLight', () => {
         const wrapper = mount(AeIdentity, {
           propsData: {
             identity: {
@@ -71,7 +71,7 @@ describe('aeIdentity', () => {
           }
         })
 
-        const main = wrapper.find(AeIdentityMain)
+        const main = wrapper.find(AeIdentityLight)
         main.trigger('click')
         const emittedClick = wrapper.emitted('click')
         expect(emittedClick.length).toBe(1)

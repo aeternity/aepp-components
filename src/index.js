@@ -9,7 +9,7 @@ import AeFilterSeparator from './components/aeFilterSeparator'
 import AeHeader from './components/aeHeader'
 import AeIdentity from './components/aeIdentity'
 import AeIdentityAvatar from './components/aeIdentityAvatar'
-import AeIdentityMain from './components/aeIdentityMain'
+import AeIdentityLight from './components/aeIdentityLight'
 import AeIdentityBackground from './components/aeIdentityBackground'
 import AeInput from './components/aeInput'
 import AeLabel from './components/aeLabel'
@@ -42,7 +42,7 @@ const AeppComponents = {
   AeHeader,
   AeIdentity,
   AeIdentityAvatar,
-  AeIdentityMain,
+  AeIdentityLight,
   AeIdentityBackground,
   AeInput,
   AeLabel,
@@ -82,7 +82,7 @@ export { default as AeFilterList } from './components/aeFilterList/aeFilterList.
 export { default as AeFilterSeparator } from './components/aeFilterSeparator/aeFilterSeparator.vue'
 export { default as AeHeader } from './components/aeHeader/aeHeader.vue'
 export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue'
-export { default as AeIdentityMain } from './components/aeIdentityMain/aeIdentityMain.vue'
+export { default as AeIdentityLight } from './components/aeIdentityLight/aeIdentityLight.vue'
 export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue'
 export { default as AeIdentityBackground } from './components/aeIdentityBackground/aeIdentityBackground.vue'
 export { default as AeInput } from './components/aeInput/aeInput.vue'
