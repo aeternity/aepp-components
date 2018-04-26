@@ -10,7 +10,7 @@ import AeHeader from './components/aeHeader'
 import AeIdentity from './components/aeIdentity'
 import AeIdentityAvatar from './components/aeIdentityAvatar'
 import AeIdentityMain from './components/aeIdentityMain'
-import AeAccountBackground from './components/aeAccountBackground'
+import AeIdentityBackground from './components/aeIdentityBackground'
 import AeInput from './components/aeInput'
 import AeLabel from './components/aeLabel'
 import AeLink from './components/aeLink'
@@ -43,7 +43,7 @@ const AeppComponents = {
   AeIdentity,
   AeIdentityAvatar,
   AeIdentityMain,
-  AeAccountBackground,
+  AeIdentityBackground,
   AeInput,
   AeLabel,
   AeLink,
@@ -84,7 +84,7 @@ export { default as AeHeader } from './components/aeHeader/aeHeader.vue'
 export { default as AeIdentity } from './components/aeIdentity/aeIdentity.vue'
 export { default as AeIdentityMain } from './components/aeIdentityMain/aeIdentityMain.vue'
 export { default as AeIdentityAvatar } from './components/aeIdentityAvatar/aeIdentityAvatar.vue'
-export { default as AeAccountBackground } from './components/aeAccountBackground/aeAccountBackground.vue'
+export { default as AeIdentityBackground } from './components/aeIdentityBackground/aeIdentityBackground.vue'
 export { default as AeInput } from './components/aeInput/aeInput.vue'
 export { default as AeLabel } from './components/aeLabel/aeLabel.vue'
 export { default as AeLink } from './components/aeLink/aeLink.vue'

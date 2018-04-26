@@ -1,14 +1,14 @@
 import { shallow, mount } from 'vue-test-utils'
 import AeIdentity from './aeIdentity.vue'
 import AeIdentityMain from '../aeIdentityMain/aeIdentityMain.vue'
-import AeAccountBackground from '../aeAccountBackground/aeAccountBackground.vue'
+import AeIdentityBackground from '../aeIdentityBackground/aeIdentityBackground.vue'
 import BN from 'bn.js'
 
 describe('aeIdentity', () => {
   describe('rendering', () => {
-    it('renders a aeAccountBackground as root element', () => {
+    it('renders a aeIdentityBackground as root element', () => {
       const wrapper = shallow(AeIdentity)
-      expect(wrapper.contains(AeAccountBackground)).toBe(true)
+      expect(wrapper.contains(AeIdentityBackground)).toBe(true)
     })
 
     it('contains a aeIdentityMain', () => {

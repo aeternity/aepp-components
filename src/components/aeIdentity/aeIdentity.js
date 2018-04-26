@@ -1,5 +1,5 @@
 import aeIdentityMain from '../aeIdentityMain/aeIdentityMain.vue'
-import aeAccountBackground from '../aeAccountBackground/aeAccountBackground.vue'
+import aeIdentityBackground from '../aeIdentityBackground/aeIdentityBackground.vue'
 import helperMixin from './../../mixins/helper'
 import BN from 'bn.js'
 
@@ -8,7 +8,7 @@ import BN from 'bn.js'
  */
 export default {
   name: 'ae-identity',
-  components: { aeIdentityMain, aeAccountBackground },
+  components: { aeIdentityMain, aeIdentityBackground },
   props: {
     /**
     * An object representing a identity. Must have a adress string a tokenBalance and a balance BigNumber (bn.js)

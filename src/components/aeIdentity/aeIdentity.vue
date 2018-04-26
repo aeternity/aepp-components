@@ -1,5 +1,5 @@
 <template>
-  <ae-account-background
+  <ae-identity-background
     :type="backgroundType"
     class="ae-identity"
     @click="forwardEvent"
@@ -8,7 +8,7 @@
     <div class="footer" v-if="$slots.default">
       <slot></slot>
     </div>
-  </ae-account-background>
+  </ae-identity-background>
 </template>
 
 <script src='./aeIdentity.js'/>

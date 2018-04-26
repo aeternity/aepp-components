@@ -1,7 +1,7 @@
 import {TYPE_PROPERTY_VALUES as types} from '../../constants'
 
 export default {
-  name: 'ae-account-background',
+  name: 'ae-identity-background',
   props: {
     type: {
       type: String,
@@ -15,7 +15,7 @@ export default {
     },
     cssClasses () {
       return [
-        'ae-account-background',
+        'ae-identity-background',
         this.typeModifier
       ]
     }

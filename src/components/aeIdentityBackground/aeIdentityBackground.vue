@@ -4,5 +4,5 @@
   </span>
 </template>
 
-<script src="./aeAccountBackground.js"/>
-<style scoped src="./aeAccountBackground.scss" lang="scss"/>
+<script src="./aeIdentityBackground.js"/>
+<style scoped src="./aeIdentityBackground.scss" lang="scss"/>
