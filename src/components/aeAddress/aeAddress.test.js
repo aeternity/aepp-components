@@ -1,6 +1,10 @@
-import { shallow } from 'vue-test-utils'
+import { shallow, mount } from 'vue-test-utils'
 import AeAddress from './aeAddress.vue'
 import AeAddressPlugin from './index'
+import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue'
+import AeIcon from '../aeIcon/aeIcon.vue'
+
+const address = '0xfa617481af59ebec80e8d529f1e2d1b3751468f3'
 
 describe('AeAddress', () => {
   it('has an install function', () => {
@@ -9,52 +13,53 @@ describe('AeAddress', () => {
 
   describe('rendering', () => {
     it('renders a aeIdentityAvatar when showAvatar prop is true', () => {
-      const wrapper = shallow(AeAddress)
-
-      wrapper.setProps({
-        showAvatar: true
+      const wrapper = shallow(AeAddress, {
+        propsData: {
+          address,
+          showAvatar: true
+        }
       })
 
-      expect(wrapper.contains('ae-identity-avatar')).toBe(true)
+      expect(wrapper.contains(AeIdentityAvatar)).toBe(true)
     })
 
     it('does NOT render a aeIdentityAvatar when showAvatar prop is false', () => {
-      const wrapper = shallow(AeAddress)
-
-      wrapper.setProps({
-        showAvatar: false
+      const wrapper = shallow(AeAddress, {
+        propsData: {
+          address,
+          showAvatar: false
+        }
       })
 
-      expect(wrapper.contains('ae-identity-avatar')).toBe(false)
+      expect(wrapper.contains(AeIdentityAvatar)).toBe(false)
     })
 
     it('forwards address prop to ae-identity-avatar', () => {
-      const wrapper = shallow(AeAddress)
-      const address = '0x392845763248468'
-
-      wrapper.setProps({
-        showAvatar: true,
-        address
+      const wrapper = shallow(AeAddress, {
+        propsData: {
+          address,
+          showAvatar: true
+        }
       })
 
-      const avatar = wrapper.find('ae-identity-avatar')
-      expect(avatar.element.getAttribute('address')).toBe(address)
+      const avatar = wrapper.find(AeIdentityAvatar)
+      expect(avatar.props().address).toBe(address)
     })
 
     it('renders a checkmark sign if verified prop is true', () => {
-      const wrapper = shallow(AeAddress)
-
-      wrapper.setProps({
-        verified: true,
-        name: 'Test'
+      const wrapper = mount(AeAddress, {
+        propsData: {
+          address,
+          verified: true,
+          name: 'Test'
+        }
       })
 
-      return wrapper.vm.$nextTick().then(() => {
-        const checkMark = wrapper.find('[data-checkmark]')
-        expect(checkMark.is('ae-icon')).toBe(true)
-        expect(checkMark.element.getAttribute('name')).toBe('check')
-        expect(checkMark.element.getAttribute('type')).toBe('dramatic')
-      })
+      const checkMark = wrapper.find(AeIcon)
+      expect(checkMark.classes()[0].contains('checkmark')).toBe(true)
+      const { name, type } = checkMark.props()
+      expect(name).toBe('check')
+      expect(type).toBe('dramatic')
     })
   })
 })

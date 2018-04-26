@@ -15,7 +15,5 @@
     :maxlength="maxlength"
   />
 </template>
-<script src="./aeValidatedTextInput.js">
-  export {default} from './aeValidatedTextInput'
-</script>
+<script src="./aeValidatedTextInput.js"/>
 <style scoped lang='scss' src='./aeValidatedTextInput.scss'/>

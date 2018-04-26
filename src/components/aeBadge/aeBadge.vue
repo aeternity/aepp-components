@@ -1,14 +1,14 @@
 <template>
   <span class="ae-badge">
-     <!-- Badge content -->
+    <!-- @slot Badge content -->
     <slot />
   </span>
 </template>
 
 <script>
-  export default {
-    name: 'ae-badge'
-  }
+export default {
+  name: 'ae-badge'
+}
 </script>
 
 <style lang="scss" scoped>

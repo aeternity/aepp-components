@@ -1,14 +1,14 @@
 <template>
   <nav class="ae-filter-list">
-    <!-- Filter list content -->
+    <!-- @slot Filter list content -->
     <slot />
   </nav>
 </template>
 
 <script>
-  export default {
-    name: 'ae-filter-list'
-  }
+export default {
+  name: 'ae-filter-list'
+}
 </script>
 
 <style lang="scss" scoped>

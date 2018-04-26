@@ -34,7 +34,5 @@
     />
   </div>
 </template>
-<script src="./aeLabelledTextInput.js">
-  export {default} from './aeLabelledTextInput'
-</script>
+<script src="./aeLabelledTextInput.js"/>
 <style scoped lang="scss" src="./aeLabelledTextInput.scss"/>
