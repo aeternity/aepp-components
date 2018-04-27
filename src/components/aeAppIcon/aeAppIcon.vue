@@ -1,5 +1,9 @@
 <template>
-  <div class="ae-app-icon app-icon" @click="forwardEvent">
+  <div
+    class="ae-app-icon app-icon"
+    :class="{ 'full-size': fullSize }"
+    @click="forwardEvent"
+  >
     <div
       :style="cssStyle"
       class="icon-image"

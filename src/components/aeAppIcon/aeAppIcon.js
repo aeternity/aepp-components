@@ -13,6 +13,13 @@ export default {
     src: {
       required: true,
       type: String
+    },
+    /**
+     * removes space between icon and component
+     */
+    'full-size': {
+      type: Boolean,
+      default: false
     }
   },
   computed: {

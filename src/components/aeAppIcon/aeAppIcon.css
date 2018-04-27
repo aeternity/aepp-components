@@ -2,9 +2,13 @@
   background: #FFFFFF;
   box-shadow: 0 0 6px 0 rgba(0,0,0,0.20);
   border-radius: 12px;
+  box-sizing: border-box;
   padding: 7px;
-  width: 57px;
-  height: 57px;
+  width: 71px;
+  height: 71px;
+}
+.app-icon.full-size {
+  padding: 0;
 }
 .icon-image {
   background-size: contain;
