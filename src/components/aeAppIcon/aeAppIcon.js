@@ -21,8 +21,5 @@ export default {
         'background-image': `url(${this.src})`
       }
     }
-  },
-  methods: {
-
   }
 }

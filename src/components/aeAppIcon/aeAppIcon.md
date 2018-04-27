@@ -1,6 +1,3 @@
-```js
-let app = {
-  icon: "http://identity.aepps.com/static/icons/notary.svg"
-}
-<ae-app-icon :app="app"></ae-app-icon>
+```jsx
+<ae-app-icon src="http://identity.aepps.com/static/icons/notary.svg" />
 ```

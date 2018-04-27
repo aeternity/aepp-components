@@ -3,10 +3,7 @@
     <div
       :style="cssStyle"
       class="icon-image"
-      ref="iconImage"
-      @click="forwardEvent"
-    >
-    </div>
+    />
   </div>
 </template>
 <script src='./aeAppIcon.js'/>

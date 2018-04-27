@@ -9,9 +9,9 @@ describe('aeAppIcon', () => {
         propsData: { src }
       })
 
-      const image = wrapper.vm.$refs.iconImage
+      const image = wrapper.find('.icon-image').element
       const bgImage = image.style.backgroundImage
-      expect(bgImage.indexOf(src)).toBeGreaterThan(-1)
+      expect(bgImage).toContain(src)
     })
   })
 
@@ -21,8 +21,7 @@ describe('aeAppIcon', () => {
         const wrapper = shallow(AeAppIcon, {
           propsData: { src: '' }
         })
-        const clickEvent = new Event('click')
-        wrapper.element.dispatchEvent(clickEvent)
+        wrapper.trigger('click')
         const emittedClick = wrapper.emitted().click
         expect(emittedClick.length).toBe(1)
         const eventArg = emittedClick[0][0]
@@ -33,9 +32,7 @@ describe('aeAppIcon', () => {
         const wrapper = shallow(AeAppIcon, {
           propsData: { src: '' }
         })
-        const iconElement = wrapper.vm.$refs.iconImage
-        const clickEvent = new Event('click')
-        iconElement.dispatchEvent(clickEvent)
+        wrapper.find('.icon-image').trigger('click')
         const emittedClick = wrapper.emitted().click
         expect(emittedClick.length).toBe(1)
         const eventArg = emittedClick[0][0]
