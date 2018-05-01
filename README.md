@@ -75,8 +75,8 @@ There's also a helper mixin available for handy utilities like generating [block
 ```js
 import { aeHelperMixin } from '@aeternity/aepp-components'
 
-{
-  […]
+export default {
+  /* … */
   mixins: [aeHelperMixin],
 }
 ```
@@ -145,7 +145,9 @@ Give the component a name property
 export default {
   name: 'ae-component-name',
   props: {
-  […]
+    /* … */
+  }
+  /* … */
 }
 ```
 
@@ -215,27 +217,27 @@ Defaults should always be included.
   <div class='ae-progress-indicator _size_large _type_round _in-progress_true'>
     <div class='progress-icon'></div>
     <div class='progress-label'>{{ label }}</div>
-  <div>
+  </div>
 </template>
 
-[…]
-
+<style lang="scss">
 .ae-progress-indicator {
-  […]
-  .progress-icon { […] }
-  .progress-label { […] }
+  /* … */
+  .progress-icon { /* … */ }
+  .progress-label { /* … */ }
 }
-.ae-progress-indicator._in-progress_true { […] }
-.ae-progress-indicator._in-progress_false { […] }
+.ae-progress-indicator._in-progress_true { /* … */ }
+.ae-progress-indicator._in-progress_false { /* … */ }
 
 .ae-progress-indicator._size_large {
-  .progress-icon { […] }
-  .progress-label { […] }
+  .progress-icon { /* … */ }
+  .progress-label { /* … */ }
 }
 .ae-progress-indicator._type_round {
-  .progress-icon { […] }
-  .progress-label { […] }
+  .progress-icon { /* … */ }
+  .progress-label { /* … */ }
 }
+</style>
 ```
 
 #### bad example
@@ -244,27 +246,27 @@ Defaults should always be included.
   <div class='ae-progress-indicator'>
     <div class='progress-icon round'></div>
     <div class='progress-label size-large'>{{ label }}</div>
-  <div>
+  </div>
 </template>
 
-[…]
-
-// does red mean `in-progess`?, not clear
+<style>
+/* does red mean `in-progess`?, not clear */
 .ae-progress-indicator {
   background-color: red;
 }
 
-// bad class naming,
+/* bad class naming, */
 .ae-progress-indicator.not-in-progress {
   // overwriting 'default' (in progress) style
   background-color: blue;
 }
 
-// not clear whether `round` is a type or state.
-// parent components can not query type of .ae-progress-indicator (e.g. `.xyz > .ae-progress-indicator.type_round { […] }`)
+/* not clear whether `round` is a type or state.
+parent components can not query type of .ae-progress-indicator (e.g. `.xyz > .ae-progress-indicator.type_round { … }`) */
 .ae-progress-indicator .progress-icon.round {
-  […]
+  /* … */
 }
+</style>
 ```
 
 ### Component using Child components
