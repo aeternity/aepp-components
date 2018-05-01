@@ -25,7 +25,7 @@
         v-if="size === 'chunked'"
         :class="['chunked-address', textIndentModifier, chunkModifier]"
       >
-        <div v-for="chunk of displayAddress" class="chunk">
+        <div v-for="(chunk, idx) of displayAddress" :key="idx" class="chunk">
           {{chunk}}
         </div>
       </div>

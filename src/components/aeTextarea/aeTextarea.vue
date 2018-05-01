@@ -2,30 +2,23 @@
   <textarea
     class="ae-textarea"
     :class="{ monospace }"
-    @input="handleInput"
-    @copy="handleCopy"
-  >{{value}}</textarea>
+    :value="value"
+    @input="$emit('input', $event.target.value)"
+    @copy="$emit('copy', $event)"
+  />
 </template>
 
 <script>
-  export default {
-    name: 'ae-textarea',
-    props: {
-      value: undefined,
-      /**
-       * Enables monospace font
-       */
-      monospace: Boolean
-    },
-    methods: {
-      handleInput (inputEvent) {
-        this.$emit('input', inputEvent.target.value)
-      },
-      handleCopy (clipboardEvent) {
-        this.$emit('copy', clipboardEvent)
-      }
-    }
+export default {
+  name: 'ae-textarea',
+  props: {
+    value: undefined,
+    /**
+     * Enables monospace font
+     */
+    monospace: Boolean
   }
+}
 </script>
 
 <style scoped lang="scss">

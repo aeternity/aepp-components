@@ -3,9 +3,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'ae-loader'
-  }
+export default {
+  name: 'ae-loader'
+}
 </script>
 
 <style lang="scss" scoped>

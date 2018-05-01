@@ -29,21 +29,21 @@
 </template>
 
 <script>
-  import AeLink from '../aeLink/aeLink.vue'
+import AeLink from '../aeLink/aeLink.vue'
 
-  /**
-   * Header of aepplication
-   */
-  export default {
-    name: 'ae-header',
-    components: { AeLink },
-    props: {
-      /**
-       * Name of aepplication
-       */
-      name: String
-    }
+/**
+ * Header of aepplication
+ */
+export default {
+  name: 'ae-header',
+  components: { AeLink },
+  props: {
+    /**
+     * Name of aepplication
+     */
+    name: String
   }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -13,7 +13,7 @@ module.exports = {
   },
   extends: [
     'standard',
-    'plugin:vue/base'
+    'plugin:vue/essential'
   ],
   // add your custom rules here
   'rules': {
@@ -23,7 +23,6 @@ module.exports = {
       'vue': 'never'
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    indent: 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
 };

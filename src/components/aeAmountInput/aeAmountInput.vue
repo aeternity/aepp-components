@@ -23,6 +23,7 @@
     >
       <button
         v-for="u in units"
+        :key="u.symbol"
         @click="handleInput({ symbol: u.symbol })"
       >
         {{u.symbol}} ({{u.name}})
@@ -32,63 +33,63 @@
 </template>
 
 <script>
-  import { directive as onClickAway } from 'vue-clickaway'
-  import AeInput from '../aeInput/aeInput.vue'
-  import AeIcon from '../aeIcon/aeIcon.vue'
+import { directive as onClickAway } from 'vue-clickaway'
+import AeInput from '../aeInput/aeInput.vue'
+import AeIcon from '../aeIcon/aeIcon.vue'
 
-  /**
-   * Input of amount with units drop down
-   */
-  export default {
-    name: 'ae-amount-input',
-    props: {
-      /**
-       * Current value, object containing `amount` and `symbol` keys
-       */
-      value: {
-        type: Object,
-        default: () => ({ symbol: this.getUnits })
-      },
-      placeholder: undefined,
-      /**
-       * Array of available units, every unit is object containing `symbol` and `name` keys
-       */
-      units: {
-        type: Array,
-        default: () => [
-          { symbol: 'AE', name: 'æternity' },
-          { symbol: 'ETH', name: 'Ethereum' }
-        ]
-      }
+/**
+ * Input of amount with units drop down
+ */
+export default {
+  name: 'ae-amount-input',
+  props: {
+    /**
+     * Current value, object containing `amount` and `symbol` keys
+     */
+    value: {
+      type: Object,
+      default: () => ({ symbol: this.getUnits })
     },
-    data: () => ({
-      dropDownVisible: false
-    }),
-    directives: { onClickAway },
-    components: { AeInput, AeIcon },
-    methods: {
-      handleInput (value) {
-        this.$emit('input', { ...this.value, ...value })
-      },
-      toggleDropDown () {
-        if (this.unitsCount > 1) {
-          this.dropDownVisible = !this.dropDownVisible
-        }
-      }
+    placeholder: undefined,
+    /**
+     * Array of available units, every unit is object containing `symbol` and `name` keys
+     */
+    units: {
+      type: Array,
+      default: () => [
+        { symbol: 'AE', name: 'æternity' },
+        { symbol: 'ETH', name: 'Ethereum' }
+      ]
+    }
+  },
+  data: () => ({
+    dropDownVisible: false
+  }),
+  directives: { onClickAway },
+  components: { AeInput, AeIcon },
+  methods: {
+    handleInput (value) {
+      this.$emit('input', { ...this.value, ...value })
     },
-    mounted () {
-      this.value.symbol = this.units[0].symbol
-    },
-    computed: {
-      unitsCount: function () {
-        let count = this.units.length
-        return count
-      },
-      getUnits: function () {
-        return this.units[0].symbol
+    toggleDropDown () {
+      if (this.unitsCount > 1) {
+        this.dropDownVisible = !this.dropDownVisible
       }
     }
+  },
+  mounted () {
+    this.value.symbol = this.units[0].symbol
+  },
+  computed: {
+    unitsCount: function () {
+      let count = this.units.length
+      return count
+    },
+    getUnits: function () {
+      return this.units[0].symbol
+    }
   }
+}
 </script>
 
 <style lang="scss">
