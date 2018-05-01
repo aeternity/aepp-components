@@ -27,7 +27,7 @@ npm install @aeternity/aepp-components
 
 Import the æternity æpp components and Vue.js (for vue-cli this happens in `/main.js`:
 
-```javascript
+```js
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import AeppComponents, { AeButton } from '@aeternity/aepp-components'
@@ -35,14 +35,14 @@ import AeppComponents, { AeButton } from '@aeternity/aepp-components'
 
 ### Method 1: global registration of all components
 
-```
+```js
 Vue.use(VueRouter)
 Vue.use(AeppComponents)
 ```
 
 ### Method 2: global registration of single components
 
-```
+```js
 Vue.use(AeppComponents.AeButton)
 // or
 Vue.use(AeButton)
@@ -50,7 +50,7 @@ Vue.use(AeButton)
 
 ### Method 3: local registration of single components
 
-```
+```js
 new Vue({
   components: {
     AeButton
@@ -62,7 +62,7 @@ Global registration (Method 1 & 2) will make the æternity æpp components avail
 
 Here's an example of a component usage:
 
-```
+```vue
 <template>
   <div id="app">
     <ae-button @click="buttonPress()">My Button</ae-button>
@@ -72,7 +72,7 @@ Here's an example of a component usage:
 
 There's also a helper mixin available for handy utilities like generating [blockies](https://github.com/petejkim/ethereum-blockies-png) and converting between Ether denominations.
 
-```javascript
+```js
 import { aeHelperMixin } from '@aeternity/aepp-components'
 
 {
@@ -99,13 +99,12 @@ The purpose of the component should be as wide as possible. Avoid to make compon
 Name it after what users will see, not what it represent in your application.
 
 #### good example
-```
-html
+```vue
 <ae-label>Category 1</ae-label>
 ```
 
 #### bad example
-```html
+```vue
 <ae-category>Category 1</ae-category>
 ```
 
@@ -129,7 +128,7 @@ aepp-components
 
 Put an `index.js` file in the component directory which exports an install function. Ex:
 
-```
+```js
 import aeComponentName from './aeComponentName.vue'
 
 export default function install (Vue) {
@@ -142,7 +141,7 @@ Add the component to the registry in `src/index.js` for easy usage with `Vue.use
 ### Component `name property`
 Give the component a name property
 
-```
+```js
 export default {
   name: 'ae-component-name',
   props: {
@@ -177,7 +176,7 @@ Reuse other components inside your component. Design yours, so that other compon
 e.g:
 
 #### good example
-```html
+```vue
 <template>
   <div class="ae-banner" :class='cssClass'>
     <content>
@@ -211,7 +210,7 @@ Add all modifier classes (that represent type, state or simmilar things) of the 
 Defaults should always be included.
 
 #### good example
-```
+```vue
 <template>
   <div class='ae-progress-indicator _size_large _type_round _in-progress_true'>
     <div class='progress-icon'></div>
@@ -240,7 +239,7 @@ Defaults should always be included.
 ```
 
 #### bad example
-```
+```vue
 <template>
   <div class='ae-progress-indicator'>
     <div class='progress-icon round'></div>
@@ -272,7 +271,7 @@ Defaults should always be included.
 Don't interfere with the styling of internals of child components. Better pass props to children and expand functionality in these components directly. Your component will be less prone to break on changes in the children. Maintainers can see the intention isolated in the component.
 
 #### bad example
-```
+```css
 .ae-my-component .ae-button .ae-icon svg {
   fill:green
 }
@@ -292,7 +291,7 @@ Don't interfere with the styling of internals of child components. Better pass p
 Below is example code.
 
 ## main.js
-```javascript
+```js
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
@@ -317,7 +316,7 @@ new Vue({
 ```
 
 ## app.vue
-```javascript
+```vue
 <template>
   <ae-main id="app">
     <!-- add components here -->
