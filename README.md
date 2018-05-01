@@ -93,7 +93,7 @@ Contributions to the collection are welcome! If you wrote a cool component that 
 ## New Component Submission Guidlines
 
 ### Component Purpose
-The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<aeMenuEntry>` needs to be used inide of a `<aeMenu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not too specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it actually just a variant of a existing one?
+The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<ae-menu-entry>` needs to be used inide of a `<ae-menu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not too specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it actually just a variant of a existing one?
 
 ### Component Name
 Name it after what users will see, not what it represent in your application.
@@ -101,15 +101,15 @@ Name it after what users will see, not what it represent in your application.
 #### good example
 ```
 html
-<aeLabel>Category 1</aeLabel>
+<ae-label>Category 1</ae-label>
 ```
 
 #### bad example
 ```html
-<aeCategory>Category 1</aeCategory>
+<ae-category>Category 1</ae-category>
 ```
 
-> Some developer might want to use the same visual element to display `tags` or `online statuses`. So she would end up writing `<aeCategory>Label 1</aeCategory>` or `<aeCategory>Offline</aeCategory>`🤦🏻‍♀️
+> Some developer might want to use the same visual element to display `tags` or `online statuses`. So she would end up writing `<ae-category>Label 1</ae-category>` or `<ae-category>Offline</ae-category>`🤦🏻‍♀️
 
 ### Component file name and location
 Put the files in a camelcased directory inside `/src/components` like `/src/components/aeComponentName/`.
@@ -156,7 +156,7 @@ Provide reasonable defaults that make use of simple functionality. Expand comple
 
 Try to avoid complex props objects, rather split your data into multiple props.
 
-Components should also not be too simple. No one needs a `<aeParagraph>` if it doesn't provide more value than a simple `<p>`.
+Components should also not be too simple. No one needs a `<ae-paragraph>` if it doesn't provide more value than a simple `<p>`.
 
 ### Component dependency
 Your component should be **as _dumb_ as possible**. Complex data should always be passed via prop. Don't assume there will be a `router` or `store`.
