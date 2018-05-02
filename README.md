@@ -29,14 +29,12 @@ Import the æternity æpp components and Vue.js (for vue-cli this happens in `/m
 
 ```js
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 import AeppComponents, { AeButton } from '@aeternity/aepp-components'
 ```
 
 ### Method 1: global registration of all components
 
 ```js
-Vue.use(VueRouter)
 Vue.use(AeppComponents)
 ```
 
@@ -296,23 +294,12 @@ Below is example code.
 ```js
 import Vue from 'vue'
 import App from './App.vue'
-import VueRouter from 'vue-router'
 import AeppComponents from '@aeternity/aepp-components'
 
-Vue.use(VueRouter)
 Vue.use(AeppComponents)
-
-const routes = [
-  // { path: '/foo', component: Foo },
-]
-
-const router = new VueRouter({
-  routes // short for `routes: routes`
-})
 
 new Vue({
   el: '#app',
-  router,
   render: h => h(App)
 })
 ```
