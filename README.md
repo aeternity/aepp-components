@@ -273,7 +273,7 @@ Don't interfere with the styling of internals of child components. Better pass p
 #### bad example
 ```css
 .ae-my-component .ae-button .ae-icon svg {
-  fill:green
+  fill: green;
 }
 ```
 
@@ -330,8 +330,8 @@ export default {
     aeHelperMixin
   ],
   methods: {
-    buttonPress: function(what) {
-      console.log("button pressed", what);
+    buttonPress (what) {
+      console.log("button pressed", what)
     }
   }
 }
