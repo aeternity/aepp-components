@@ -43,7 +43,7 @@ Vue.use(AeppComponents)
 ```js
 Vue.use(AeppComponents.AeButton)
 // or
-Vue.use(AeButton)
+Vue.component('ae-button', AeButton)
 ```
 
 ### Method 3: local registration of single components
