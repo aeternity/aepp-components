@@ -313,10 +313,13 @@ new Vue({
 </template>
 
 <script>
-import { aeHelperMixin } from '@aeternity/aepp-components'
+import { AeMain, aeHelperMixin } from '@aeternity/aepp-components'
 
 export default {
   name: 'app',
+  components: {
+    AeMain
+  },
   data () {
     return {
       showModal: false,
