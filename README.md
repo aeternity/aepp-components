@@ -304,7 +304,7 @@ new Vue({
 })
 ```
 
-## app.vue
+## App.vue
 ```vue
 <template>
   <ae-main id="app">
