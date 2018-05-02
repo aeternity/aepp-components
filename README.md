@@ -178,15 +178,15 @@ e.g:
 #### good example
 ```vue
 <template>
-  <div class="ae-banner" :class='cssClass'>
+  <div class="ae-banner" :class="cssClass">
     <content>
       <!-- @slot Banner content -->
       <slot />
     </content>
     <!-- @slot Banner button -->
-    <slot name='button'>
-      <ae-button :type='type' invert  @click="close" >
-        <ae-icon slot='icon' :type='type' name='close'/>
+    <slot name="button">
+      <ae-button :type="type" invert  @click="close" >
+        <ae-icon slot="icon" :type="type" name="close"/>
       </ae-button>
     </slot>
   </div>
@@ -212,9 +212,9 @@ Defaults should always be included.
 #### good example
 ```vue
 <template>
-  <div class='ae-progress-indicator _size_large _type_round _in-progress_true'>
-    <div class='progress-icon'></div>
-    <div class='progress-label'>{{ label }}</div>
+  <div class="ae-progress-indicator _size_large _type_round _in-progress_true">
+    <div class="progress-icon"></div>
+    <div class="progress-label">{{ label }}</div>
   </div>
 </template>
 
