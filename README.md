@@ -85,7 +85,7 @@ export default {
 Contributions to the collection are welcome! If you wrote a cool component that adheres to our stylesguide and you think someone else could reuse it please fork this project and send us a pull request 💪 (Please note: This guide is as much for us as for you)
 
 ## Things to Keep in Mind for Submissions
-* Could your component be usefull to others? Ask yourself if it isn't too specific and narrow to your own use case.
+* Could your component be useful to others? Ask yourself if it isn't too specific and narrow to your own use case.
 * Check out the [styleguide](https://github.com/aeternity/aepp-prototypes)! Keeping the components in sync visually will make for a more unified æpp user experience.
 * Follow [Vue.js's Tips & Best Practices](https://012.vuejs.org/guide/best-practices.html). **Especially so that all states are handled via props, logic is kept to a minimum & communication takes place via events**
 * Give it a descriptive name with "ae" as a prefix (ie. aeAddressInput)
@@ -93,7 +93,7 @@ Contributions to the collection are welcome! If you wrote a cool component that 
 ## New Component Submission Guidlines
 
 ### Component Purpose
-The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<ae-menu-entry>` needs to be used inide of a `<ae-menu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not too specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it actually just a variant of a existing one?
+The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<ae-menu-entry>` needs to be used inside of a `<ae-menu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not too specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it actually just a variant of a existing one?
 
 ### Component Name
 Name it after what users will see, not what it represent in your application.
@@ -162,17 +162,17 @@ Components should also not be too simple. No one needs a `<ae-paragraph>` if it 
 ### Component dependency
 Your component should be **as _dumb_ as possible**. Complex data should always be passed via prop. Don't assume there will be a `router` or `store`.
 
-> every developer wants to be in charge of his own data and state managment, let them!
+> every developer wants to be in charge of his own data and state management, let them!
 
-Don't rely on external ressources (CDN content or APIs).
+Don't rely on external resources (CDN content or APIs).
 
-> components that rely on external ressources can not be used offline or in a local intranet.
+> components that rely on external resources can not be used offline or in a local intranet.
 >
 > Developers also cannot choose if and when an application 'goes online' and exposes data.
 
 Sometimes there might be a good reason for exceptions. If you provide a component that **has** to be tightly coupled to an API because of the intrinsic nature of the component, it might be ok. But first ask yourself if it's possible to use the component with any external data source via prop.
 
-### Component composabilty
+### Component composability
 Reuse other components inside your component. Design yours, so that other components can reuse it and create richer compositions.
 
 e.g:
@@ -198,7 +198,7 @@ e.g:
 > aeBanner is using a composition of aeButton and aeIcon to represent a close-button.
 
 ### Component colors
-Use colors from `@import "../variables";`. æternity is moveing fast and the CI is being updated regularly. All components should use the same colors. 🤡
+Use colors from `@import "../variables";`. æternity is moving fast and the CI is being updated regularly. All components should use the same colors. 🤡
 
 ### Component margins
 The wrapping main element of a component must not have margin or any kind or other properties that control position/offset relative to a parent element or component. Otherwise it will be painful to position your component in other apps.
@@ -208,7 +208,7 @@ The wrapping main element of a component must not have margin or any kind or oth
 ### Component css-classes
 Give the wrapping main element a classname that corresponds to the component name `aeProgressIndicator` -> `.ae-progress-indicator`,
 
-Add all modifier classes (that represent type, state or simmilar things) of the component to the main wrapping element. Modifiers should start with an underscore `_`
+Add all modifier classes (that represent type, state or similar things) of the component to the main wrapping element. Modifiers should start with an underscore `_`
 Defaults should always be included.
 
 #### good example
@@ -250,7 +250,7 @@ Defaults should always be included.
 </template>
 
 <style>
-/* does red mean `in-progess`?, not clear */
+/* does red mean `in-progress`?, not clear */
 .ae-progress-indicator {
   background-color: red;
 }
@@ -279,7 +279,7 @@ Don't interfere with the styling of internals of child components. Better pass p
 }
 ```
 
-> You don't know if the tagname or classname of a internal propery in a component will change in the future. Maintainers also have no means to find out if somebody is relying on a specific tag/class.
+> You don't know if the tagname or classname of a internal property in a component will change in the future. Maintainers also have no means to find out if somebody is relying on a specific tag/class.
 
 ## Add Documentation
 * We use [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) to generate documentation from well formatted and commented code.
