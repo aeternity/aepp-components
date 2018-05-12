@@ -1,4 +1,4 @@
-@import "./../components/variables";
+@import "./variables";
 
 @mixin phone {
   @media (max-width: $screen-phone - 1px) {
