@@ -5,6 +5,7 @@ var webpackConfig = {
   entry: {
     main: './src/index.js',
     variables: './src/components/variables.scss',
+    mixins: './src/components/mixins.scss',
     common: './src/components/common.scss',
   },
   output: {
@@ -35,6 +36,7 @@ var webpackConfig = {
       }, {
         include: [
           path.resolve(__dirname, '../src/components/variables.scss'),
+          path.resolve(__dirname, '../src/components/mixins.scss'),
         ],
         loader: 'file-loader',
         options: {
