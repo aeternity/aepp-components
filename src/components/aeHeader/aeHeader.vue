@@ -15,11 +15,9 @@
         <!-- @slot The content of the left side on mobile -->
         <slot name="mobile-left" />
       </div>
-      <div class="title-wrapper">
-        <ae-link class="title" to="/">
-          {{name}}
-        </ae-link>
-      </div>
+      <ae-link class="title" to="/">
+        {{name}}
+      </ae-link>
       <div>
         <!-- @slot The content of the right side on mobile -->
         <slot name="mobile-right" />
@@ -50,11 +48,9 @@ export default {
   @import "../variables";
   @import "../mixins";
 
-  $height: 65px;
-
   .ae-header {
     header {
-      height: $height;
+      height: 65px;
       max-width: $container-width;
       margin: 0 auto;
       display: flex;
@@ -90,22 +86,11 @@ export default {
           display: none;
         }
 
-        :nth-child(odd) {
-          z-index: 1;
-        }
-
-        .title-wrapper {
+        .title {
           position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          line-height: $height;
-          text-align: center;
-
-          .title {
-            color: $anthracite;
-          }
+          left: 50%;
+          transform: translate(-50%, 0);
+          color: $anthracite;
         }
       }
     }
