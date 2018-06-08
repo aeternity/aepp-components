@@ -11,11 +11,11 @@
       </span>
       <div class="balances">
         <div class="balance token">
-          <span class="amount">{{tokenAmount}}</span>
+          <span class="amount">{{identity.tokenBalance | readableToken}}</span>
           <span class="currency-symbol">AE</span>
         </div>
         <div class="balance">
-          <span class="amount">{{amount}}</span>
+          <span class="amount">{{identity.balance | readableToken}}</span>
           <span class="currency-symbol">ETH</span>
         </div>
       </div>

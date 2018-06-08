@@ -1,6 +1,8 @@
 import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
 import helperMixin from './../../mixins/helper'
 import BN from 'bn.js'
+import unit from 'ethjs-unit'
+import numeral from 'numeral'
 
 /**
  * Displays an Identity with an avatar blockie, the address and an amount of ether
@@ -33,12 +35,6 @@ export default {
     helperMixin
   ],
   computed: {
-    amount () {
-      return this.identity ? helperMixin.methods.readableEther(this.identity.balance) : 0
-    },
-    tokenAmount () {
-      return this.identity && this.identity.tokenBalance ? helperMixin.methods.readableToken(this.identity.tokenBalance) : '0'
-    },
     classObject () {
       return [
         'ae-identity-light',
@@ -55,6 +51,8 @@ export default {
     }
   },
   filters: {
+    readableToken: balance =>
+      numeral(unit.fromWei(balance.toString(10), 'ether')).format('0,0.[000]'),
     shorten: value => value.substr(0, 8)
   }
 }
