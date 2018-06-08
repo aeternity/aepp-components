@@ -10,7 +10,7 @@ export default {
   components: { aeIdentityLight, aeIdentityBackground },
   props: {
     /**
-    * An object representing a identity. Must have a adress string a tokenBalance and a balance BigNumber (bn.js)
+    * An object representing a identity. Must have a address string a tokenBalance and a balance BigNumber (bn.js)
     */
     identity: {
       type: Object
