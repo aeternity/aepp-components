@@ -1,6 +1,7 @@
 <template>
   <div class="ae-amount-input">
     <ae-input
+      :id="id"
       type="number"
       monospace
       :value="value.amount"
@@ -51,6 +52,7 @@ export default {
       type: Object,
       default: () => ({ symbol: this.getUnits })
     },
+    id: undefined,
     placeholder: undefined,
     /**
      * Array of available units, every unit is object containing `symbol` and `name` keys
