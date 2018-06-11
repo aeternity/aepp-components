@@ -3,19 +3,19 @@
     <div class="flex-row">
       <ae-identity-avatar
         class="avatar"
-        :address='identity.address'
+        :address='address'
       />
       <span :class="['identity-name-position', collapsedModifier]">
-        <span role="heading" :class="['identity-name', collapsedModifier]">{{identity.name}}</span>
-        <small class="truncated-address" v-if="collapsed">{{identity.address | shorten}}  ••••••</small>
+        <span role="heading" :class="['identity-name', collapsedModifier]">{{name}}</span>
+        <small class="truncated-address" v-if="collapsed">{{address | shorten}}  ••••••</small>
       </span>
       <div class="balances">
         <div class="balance token">
-          <span class="amount">{{identity.tokenBalance | readableToken}}</span>
+          <span class="amount">{{tokenBalance | readableToken}}</span>
           <span class="currency-symbol">AE</span>
         </div>
         <div class="balance">
-          <span class="amount">{{identity.balance | readableToken}}</span>
+          <span class="amount">{{balance | readableToken}}</span>
           <span class="currency-symbol">ETH</span>
         </div>
       </div>

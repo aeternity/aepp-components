@@ -18,17 +18,18 @@ describe('aeIdentity', () => {
 
     it('forwards identity prop to aeIdentityLight component', () => {
       const identity = {
+        name: 'test',
         address: '0x03489768758974698',
         tokenBalance: new BN('0', 10),
         balance: new BN('0', 10)
       }
 
       const wrapper = mount(AeIdentity, {
-        propsData: { identity }
+        propsData: identity
       })
 
       const main = wrapper.find(AeIdentityLight)
-      expect(main.props().identity).toBe(identity)
+      expect(main.props()).toEqual(expect.objectContaining(identity))
     })
 
     it('forwards collapsed prop to aeIdentityLight component', () => {

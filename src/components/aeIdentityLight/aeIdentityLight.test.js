@@ -31,11 +31,9 @@ describe('AeIdentityLight', () => {
       const genTest = collapsed => () => {
         const wrapper = _shallow({
           collapsed,
-          identity: {
-            address: '0x0',
-            balance: new BN('500000000000000000000000000000', 10),
-            tokenBalance: new BN('600000000000000000000000000000', 10)
-          }
+          address: '0x0',
+          balance: new BN('500000000000000000000000000000', 10),
+          tokenBalance: new BN('600000000000000000000000000000', 10)
         })
 
         expect(wrapper.find('.balance:not(.token) .amount').text())
@@ -52,7 +50,7 @@ describe('AeIdentityLight', () => {
       const genTest = collapsed => () => {
         const wrapper = _shallow({
           collapsed,
-          identity: testIdentity()
+          ...testIdentity()
         })
         const chunks = wrapper.findAll('.chunk')
         expect(chunks.length).toBe(collapsed ? 0 : 6)
@@ -67,7 +65,7 @@ describe('AeIdentityLight', () => {
         const identity = testIdentity()
         const wrapper = _shallow({
           collapsed: true,
-          identity
+          ...identity
         })
         const truncatedAddress = wrapper.find('.truncated-address')
         const expected = identity.address.substr(0, 8)
@@ -75,9 +73,7 @@ describe('AeIdentityLight', () => {
       })
 
       it('does NOT render a truncated address when not collapsed', () => {
-        const wrapper = _shallow({
-          identity: testIdentity()
-        })
+        const wrapper = _shallow(testIdentity())
         const truncatedAddress = wrapper.find('.truncated-address')
         expect(truncatedAddress.exists()).toBe(false)
       })
@@ -107,9 +103,7 @@ describe('AeIdentityLight', () => {
     })
 
     it('emits click when address chunk is clicked', () => {
-      const wrapper = _shallow({
-        identity: testIdentity()
-      })
+      const wrapper = _shallow(testIdentity())
 
       const chunkList = wrapper.findAll('.chunk')
       const ramdomChunk = chunkList.at(Math.floor(Math.random() * chunkList.length))

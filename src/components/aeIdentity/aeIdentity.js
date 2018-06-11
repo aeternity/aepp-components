@@ -10,10 +10,32 @@ export default {
   components: { aeIdentityLight, aeIdentityBackground },
   props: {
     /**
-    * An object representing a identity. Must have a address string a tokenBalance and a balance BigNumber (bn.js)
-    */
-    identity: {
-      type: Object
+     * An identity name
+     */
+    name: {
+      type: String,
+      required: false
+    },
+    /**
+     * An identity address
+     */
+    address: {
+      type: String,
+      required: false
+    },
+    /**
+     * An identity balance in Aeternity tokens as BN instance
+     */
+    tokenBalance: {
+      type: Object,
+      required: false
+    },
+    /**
+     * An identity balance in Ether as BN instance
+     */
+    balance: {
+      type: Object,
+      required: false
     },
     /**
     * Is this an identity activated/selected (magenta) or not (purple)?

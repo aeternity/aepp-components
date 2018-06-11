@@ -7,7 +7,7 @@ const identity = {
   balance: new BN('1337000000000000000', 10)
 }
 
-<ae-identity-light :identity="identity" :collapsed="false" />
+<ae-identity-light v-bind="identity" :collapsed="false" />
 ```
 
 
@@ -19,7 +19,7 @@ const identity = {
   balance: new BN('1337000000000000000', 10)
 }
 
-<ae-identity-light :identity="identity" collapsed />
+<ae-identity-light v-bind="identity" collapsed />
 ```
 
 ```js
@@ -30,7 +30,7 @@ const identity = {
   name: 'My identity'
 }
 
-<ae-identity-light :identity="identity" collapsed />
+<ae-identity-light v-bind="identity" collapsed />
 ```
 
 Blank identity information

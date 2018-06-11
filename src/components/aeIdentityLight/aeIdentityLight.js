@@ -12,15 +12,32 @@ export default {
   components: { aeIdentityAvatar },
   props: {
     /**
-    * An object representing a identity. Must have a address string a tokenBalance and a balance BigNumber (bn.js)
-    */
-    identity: {
+     * An identity name
+     */
+    name: {
+      type: String,
+      default: ''
+    },
+    /**
+     * An identity address
+     */
+    address: {
+      type: String,
+      default: '0x0'
+    },
+    /**
+     * An identity balance in Aeternity tokens as BN instance
+     */
+    tokenBalance: {
       type: Object,
-      default: () => ({
-        address: '0x0',
-        tokenBalance: new BN('0', 10),
-        balance: new BN('0', 10)
-      })
+      default: () => new BN('0', 10)
+    },
+    /**
+     * An identity balance in Ether as BN instance
+     */
+    balance: {
+      type: Object,
+      default: () => new BN('0', 10)
     },
     collapsed: {
       type: Boolean,
@@ -43,7 +60,7 @@ export default {
       ]
     },
     chunkAddress () {
-      const chunks = this.identity.address.match(/.{1,7}/g)
+      const chunks = this.address.match(/.{1,7}/g)
       return [chunks.slice(0, 3), chunks.slice(3)]
     },
     collapsedModifier () {
