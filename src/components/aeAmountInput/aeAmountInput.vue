@@ -11,6 +11,7 @@
       <button
         slot="right"
         class="side"
+        type="button"
         @click="toggleDropDown() ">
         {{value.symbol}} <ae-icon name="chevron" rotate="90" v-if="unitsCount > 1" />
       </button>
