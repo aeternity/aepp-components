@@ -27,30 +27,28 @@ npm install @aeternity/aepp-components
 
 Import the æternity æpp components and Vue.js (for vue-cli this happens in `/main.js`:
 
-```javascript
+```js
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 import AeppComponents, { AeButton } from '@aeternity/aepp-components'
 ```
 
 ### Method 1: global registration of all components
 
-```
-Vue.use(VueRouter)
+```js
 Vue.use(AeppComponents)
 ```
 
 ### Method 2: global registration of single components
 
-```
+```js
 Vue.use(AeppComponents.AeButton)
 // or
-Vue.use(AeButton)
+Vue.component('ae-button', AeButton)
 ```
 
 ### Method 3: local registration of single components
 
-```
+```js
 new Vue({
   components: {
     AeButton
@@ -62,7 +60,7 @@ Global registration (Method 1 & 2) will make the æternity æpp components avail
 
 Here's an example of a component usage:
 
-```
+```vue
 <template>
   <div id="app">
     <ae-button @click="buttonPress()">My Button</ae-button>
@@ -72,11 +70,11 @@ Here's an example of a component usage:
 
 There's also a helper mixin available for handy utilities like generating [blockies](https://github.com/petejkim/ethereum-blockies-png) and converting between Ether denominations.
 
-```javascript
+```js
 import { aeHelperMixin } from '@aeternity/aepp-components'
 
-{
-  […]
+export default {
+  /* … */
   mixins: [aeHelperMixin],
 }
 ```
@@ -85,7 +83,7 @@ import { aeHelperMixin } from '@aeternity/aepp-components'
 Contributions to the collection are welcome! If you wrote a cool component that adheres to our stylesguide and you think someone else could reuse it please fork this project and send us a pull request 💪 (Please note: This guide is as much for us as for you)
 
 ## Things to Keep in Mind for Submissions
-* Could your component be usefull to others? Ask yourself if it isn't too specific and narrow to your own use case.
+* Could your component be useful to others? Ask yourself if it isn't too specific and narrow to your own use case.
 * Check out the [styleguide](https://github.com/aeternity/aepp-prototypes)! Keeping the components in sync visually will make for a more unified æpp user experience.
 * Follow [Vue.js's Tips & Best Practices](https://012.vuejs.org/guide/best-practices.html). **Especially so that all states are handled via props, logic is kept to a minimum & communication takes place via events**
 * Give it a descriptive name with "ae" as a prefix (ie. aeAddressInput)
@@ -93,23 +91,22 @@ Contributions to the collection are welcome! If you wrote a cool component that 
 ## New Component Submission Guidlines
 
 ### Component Purpose
-The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<aeMenuEntry>` needs to be used inide of a `<aeMenu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not too specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it actually just a variant of a existing one?
+The purpose of the component should be as wide as possible. Avoid to make components that only work in a specific context. Sure, sometimes you can not avoid that a `<ae-menu-entry>` needs to be used inside of a `<ae-menu>`. Pause for a thought and ask yourself, if the component could be refactored to be of more use in different contexts. Think about, if the component is not too specific to your application? Does it need a new name maybe? Can it be split into multiple components? Or is it actually just a variant of a existing one?
 
 ### Component Name
 Name it after what users will see, not what it represent in your application.
 
 #### good example
-```
-html
-<aeLabel>Category 1</aeLabel>
+```vue
+<ae-label>Category 1</ae-label>
 ```
 
 #### bad example
-```html
-<aeCategory>Category 1</aeCategory>
+```vue
+<ae-category>Category 1</ae-category>
 ```
 
-> Some developer might want to use the same visual element to display `tags` or `online statuses`. So she would end up writing `<aeCategory>Label 1</aeCategory>` or `<aeCategory>Offline</aeCategory>`🤦🏻‍♀️
+> Some developer might want to use the same visual element to display `tags` or `online statuses`. So she would end up writing `<ae-category>Label 1</ae-category>` or `<ae-category>Offline</ae-category>`🤦🏻‍♀️
 
 ### Component file name and location
 Put the files in a camelcased directory inside `/src/components` like `/src/components/aeComponentName/`.
@@ -129,7 +126,7 @@ aepp-components
 
 Put an `index.js` file in the component directory which exports an install function. Ex:
 
-```
+```js
 import aeComponentName from './aeComponentName.vue'
 
 export default function install (Vue) {
@@ -142,11 +139,13 @@ Add the component to the registry in `src/index.js` for easy usage with `Vue.use
 ### Component `name property`
 Give the component a name property
 
-```
+```js
 export default {
   name: 'ae-component-name',
   props: {
-  […]
+    /* … */
+  }
+  /* … */
 }
 ```
 
@@ -156,38 +155,38 @@ Provide reasonable defaults that make use of simple functionality. Expand comple
 
 Try to avoid complex props objects, rather split your data into multiple props.
 
-Components should also not be too simple. No one needs a `<aeParagraph>` if it doesn't provide more value than a simple `<p>`.
+Components should also not be too simple. No one needs a `<ae-paragraph>` if it doesn't provide more value than a simple `<p>`.
 
 ### Component dependency
 Your component should be **as _dumb_ as possible**. Complex data should always be passed via prop. Don't assume there will be a `router` or `store`.
 
-> every developer wants to be in charge of his own data and state managment, let them!
+> every developer wants to be in charge of his own data and state management, let them!
 
-Don't rely on external ressources (CDN content or APIs).
+Don't rely on external resources (CDN content or APIs).
 
-> components that rely on external ressources can not be used offline or in a local intranet.
+> components that rely on external resources can not be used offline or in a local intranet.
 >
 > Developers also cannot choose if and when an application 'goes online' and exposes data.
 
 Sometimes there might be a good reason for exceptions. If you provide a component that **has** to be tightly coupled to an API because of the intrinsic nature of the component, it might be ok. But first ask yourself if it's possible to use the component with any external data source via prop.
 
-### Component composabilty
+### Component composability
 Reuse other components inside your component. Design yours, so that other components can reuse it and create richer compositions.
 
 e.g:
 
 #### good example
-```html
+```vue
 <template>
-  <div class="ae-banner" :class='cssClass'>
+  <div class="ae-banner" :class="cssClass">
     <content>
       <!-- @slot Banner content -->
       <slot />
     </content>
     <!-- @slot Banner button -->
-    <slot name='button'>
-      <ae-button :type='type' invert  @click="close" >
-        <ae-icon slot='icon' :type='type' name='close'/>
+    <slot name="button">
+      <ae-button :type="type" invert  @click="close" >
+        <ae-icon slot="icon" :type="type" name="close"/>
       </ae-button>
     </slot>
   </div>
@@ -197,7 +196,7 @@ e.g:
 > aeBanner is using a composition of aeButton and aeIcon to represent a close-button.
 
 ### Component colors
-Use colors from `@import "../variables";`. æternity is moveing fast and the CI is being updated regularly. All components should use the same colors. 🤡
+Use colors from `@import "../variables";`. æternity is moving fast and the CI is being updated regularly. All components should use the same colors. 🤡
 
 ### Component margins
 The wrapping main element of a component must not have margin or any kind or other properties that control position/offset relative to a parent element or component. Otherwise it will be painful to position your component in other apps.
@@ -207,78 +206,78 @@ The wrapping main element of a component must not have margin or any kind or oth
 ### Component css-classes
 Give the wrapping main element a classname that corresponds to the component name `aeProgressIndicator` -> `.ae-progress-indicator`,
 
-Add all modifier classes (that represent type, state or simmilar things) of the component to the main wrapping element. Modifiers should start with an underscore `_`
+Add all modifier classes (that represent type, state or similar things) of the component to the main wrapping element. Modifiers should start with an underscore `_`
 Defaults should always be included.
 
 #### good example
-```
+```vue
 <template>
-  <div class='ae-progress-indicator _size_large _type_round _in-progress_true'>
-    <div class='progress-icon'></div>
-    <div class='progress-label'>{{ label }}</div>
-  <div>
+  <div class="ae-progress-indicator _size_large _type_round _in-progress_true">
+    <div class="progress-icon"></div>
+    <div class="progress-label">{{ label }}</div>
+  </div>
 </template>
 
-[…]
-
+<style lang="scss">
 .ae-progress-indicator {
-  […]
-  .progress-icon { […] }
-  .progress-label { […] }
+  /* … */
+  .progress-icon { /* … */ }
+  .progress-label { /* … */ }
 }
-.ae-progress-indicator._in-progress_true { […] }
-.ae-progress-indicator._in-progress_false { […] }
+.ae-progress-indicator._in-progress_true { /* … */ }
+.ae-progress-indicator._in-progress_false { /* … */ }
 
 .ae-progress-indicator._size_large {
-  .progress-icon { […] }
-  .progress-label { […] }
+  .progress-icon { /* … */ }
+  .progress-label { /* … */ }
 }
 .ae-progress-indicator._type_round {
-  .progress-icon { […] }
-  .progress-label { […] }
+  .progress-icon { /* … */ }
+  .progress-label { /* … */ }
 }
+</style>
 ```
 
 #### bad example
-```
+```vue
 <template>
   <div class='ae-progress-indicator'>
     <div class='progress-icon round'></div>
     <div class='progress-label size-large'>{{ label }}</div>
-  <div>
+  </div>
 </template>
 
-[…]
-
-// does red mean `in-progess`?, not clear
+<style>
+/* does red mean `in-progress`?, not clear */
 .ae-progress-indicator {
   background-color: red;
 }
 
-// bad class naming,
+/* bad class naming, */
 .ae-progress-indicator.not-in-progress {
   // overwriting 'default' (in progress) style
   background-color: blue;
 }
 
-// not clear whether `round` is a type or state.
-// parent components can not query type of .ae-progress-indicator (e.g. `.xyz > .ae-progress-indicator.type_round { […] }`)
+/* not clear whether `round` is a type or state.
+parent components can not query type of .ae-progress-indicator (e.g. `.xyz > .ae-progress-indicator.type_round { … }`) */
 .ae-progress-indicator .progress-icon.round {
-  […]
+  /* … */
 }
+</style>
 ```
 
 ### Component using Child components
 Don't interfere with the styling of internals of child components. Better pass props to children and expand functionality in these components directly. Your component will be less prone to break on changes in the children. Maintainers can see the intention isolated in the component.
 
 #### bad example
-```
+```css
 .ae-my-component .ae-button .ae-icon svg {
-  fill:green
+  fill: green;
 }
 ```
 
-> You don't know if the tagname or classname of a internal propery in a component will change in the future. Maintainers also have no means to find out if somebody is relying on a specific tag/class.
+> You don't know if the tagname or classname of a internal property in a component will change in the future. Maintainers also have no means to find out if somebody is relying on a specific tag/class.
 
 ## Add Documentation
 * We use [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) to generate documentation from well formatted and commented code.
@@ -292,32 +291,21 @@ Don't interfere with the styling of internals of child components. Better pass p
 Below is example code.
 
 ## main.js
-```javascript
+```js
 import Vue from 'vue'
 import App from './App.vue'
-import VueRouter from 'vue-router'
 import AeppComponents from '@aeternity/aepp-components'
 
-Vue.use(VueRouter)
 Vue.use(AeppComponents)
-
-const routes = [
-  // { path: '/foo', component: Foo },
-]
-
-const router = new VueRouter({
-  routes // short for `routes: routes`
-})
 
 new Vue({
   el: '#app',
-  router,
   render: h => h(App)
 })
 ```
 
-## app.vue
-```javascript
+## App.vue
+```vue
 <template>
   <ae-main id="app">
     <!-- add components here -->
@@ -325,10 +313,13 @@ new Vue({
 </template>
 
 <script>
-import { aeHelperMixin } from '@aeternity/aepp-components'
+import { AeMain, aeHelperMixin } from '@aeternity/aepp-components'
 
 export default {
   name: 'app',
+  components: {
+    AeMain
+  },
   data () {
     return {
       showModal: false,
@@ -342,8 +333,8 @@ export default {
     aeHelperMixin
   ],
   methods: {
-    buttonPress: function(what) {
-      console.log("button pressed", what);
+    buttonPress (what) {
+      console.log("button pressed", what)
     }
   }
 }
