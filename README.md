@@ -11,9 +11,6 @@ The æternity æpp components are meant to provide æpp developers with reusable
 
 The github repository is [here](https://github.com/aeternity/aepp-components).
 
-## Hackathon Notice
-We've rewritten and refactored the components for better usage in the hackathon (24.11.2017). Beware that the currently existing apps (like identity, aexistence/notary, wall, et cetera) still use older versions of this repository. In the near future we will update these repositories to use the latest aepp-components.
-
 ## Documentation
 
 Full documentation can be found at [components.aepps.com](http://components.aepps.com)
