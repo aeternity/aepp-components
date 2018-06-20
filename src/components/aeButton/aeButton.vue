@@ -5,6 +5,7 @@
     :class="cssClass"
     @click="$emit('click', $event)"
     :to="to"
+    :disabled="disabled"
   >
     <div v-if="$slots.icon" class="icon">
       <!-- @slot Button icon -->
@@ -53,7 +54,7 @@ export default {
       validator: value => aeButtonSizes.includes(value),
       default: 'medium'
     },
-    inactive: { type: Boolean, default: false },
+    disabled: { type: Boolean, default: false },
     invert: { type: Boolean, default: false },
     uppercase: { type: Boolean, default: false },
     plain: { type: Boolean, default: false },
@@ -70,7 +71,7 @@ export default {
       ]
       if (this.uppercase) classes.push('_uppercase')
       if (this.invert) classes.push('_invert')
-      if (this.inactive) classes.push('_inactive')
+      if (this.disabled) classes.push('_disabled')
       if (this.plain) classes.push('_plain')
       if (this.$slots.default) classes.push('_has-label')
       return classes
@@ -94,7 +95,7 @@ export default {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
   padding: 0;
 
-  &._inactive{
+  &._disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
