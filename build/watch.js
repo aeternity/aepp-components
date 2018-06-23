@@ -1,14 +1,26 @@
-var webpack = require('webpack');
-var webpackConfig = require('./webpack.conf.js')
+/**
+ * Webpack modules
+ */
+const webpack = require('webpack')
 
-var compiler = webpack(webpackConfig);
+/**
+ * Bundles
+ */
+const bundle = require('./bundle.conf.js')
 
-console.log(' build started');
+/**
+ * Webpack compiler
+ */
+const compiler = webpack(bundle)
+
+/**
+ * Compile and watch
+ */
 compiler.watch({ // watch options:
   aggregateTimeout: 300, // wait so long for more changes
   poll: true // use polling instead of native watchers
   // pass a number to set the polling interval
-}, function(err, stats) {
+}, function (err, stats) {
   // ...
   console.log('watch build finished');
   if(err) {

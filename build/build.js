@@ -1,10 +1,23 @@
-var webpack = require('webpack');
-var webpackConfig = require('./webpack.conf.js')
+/**
+ * Webpack modules
+ */
+const webpack = require('webpack')
 
-process.env.NODE_ENV = 'production';
+/**
+ * Bundles
+ */
+const bundle = require('./bundle.conf.js')
+const components = require('./components.conf.js')
 
-webpack(webpackConfig, function (err, stats) {
-  if (err) throw err;
-  // console.log(stats);
-  console.log('it worked');
-});
+/**
+ * ENV
+ */
+process.env.NODE_ENV = 'production'
+
+/**
+ * Webpack
+ */
+webpack([bundle].concat(components), function (err, stats) {
+  if (err) throw err
+  // console.log(stats)
+})
