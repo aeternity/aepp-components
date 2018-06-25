@@ -82,19 +82,14 @@ export default {
 
       main {
         header {
-          position: relative;
+          display: flex;
+          justify-content: space-between;
 
           h1 {
             font-size: 28px;
             line-height: 50px;
             font-weight: 500;
             margin: 0;
-          }
-
-          .ae-button {
-            position: absolute;
-            top: 0;
-            right: 0;
           }
         }
 
