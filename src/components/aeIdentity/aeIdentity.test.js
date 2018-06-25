@@ -16,22 +16,23 @@ describe('aeIdentity', () => {
       expect(wrapper.contains(AeIdentityLight)).toBe(true)
     })
 
-    it('forwards identity prop to aeIdentityLight component', async () => {
+    it('forwards identity prop to aeIdentityLight component', () => {
       const identity = {
+        name: 'test',
         address: '0x03489768758974698',
         tokenBalance: new BN('0', 10),
         balance: new BN('0', 10)
       }
 
       const wrapper = mount(AeIdentity, {
-        propsData: { identity }
+        propsData: identity
       })
 
       const main = wrapper.find(AeIdentityLight)
-      expect(main.props().identity).toBe(identity)
+      expect(main.props()).toEqual(expect.objectContaining(identity))
     })
 
-    it('forwards collapsed prop to aeIdentityLight component', async () => {
+    it('forwards collapsed prop to aeIdentityLight component', () => {
       const test = collapsed => {
         const wrapper = mount(AeIdentity, {
           propsData: {
@@ -60,16 +61,7 @@ describe('aeIdentity', () => {
   describe('events', () => {
     describe('click', () => {
       it('forwards click on aeIdentityLight', () => {
-        const wrapper = mount(AeIdentity, {
-          propsData: {
-            identity: {
-              address: '0x0',
-              tokenBalance: new BN('0', 10),
-              balance: new BN('0', 10)
-            },
-            collapsed: false
-          }
-        })
+        const wrapper = mount(AeIdentity)
 
         const main = wrapper.find(AeIdentityLight)
         main.trigger('click')
