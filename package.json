@@ -23,9 +23,11 @@
   "dependencies": {
     "ethereum-blockies-png": "git+https://github.com/acdbaykal/ethereum-blockies-png.git",
     "ethjs-unit": "^0.1.6",
+    "normalize-scss": "^7.0.1",
     "normalize.css": "^7.0.0",
     "numeral": "^2.0.6",
     "string-loader": "0.0.1",
+    "susy": "^3.0.5",
     "vue-clickaway": "^2.1.0"
   },
   "devDependencies": {

@@ -1,0 +1,40 @@
+//------------------------------
+// *****************************
+// Rules
+// *****************************
+//------------------------------
+
+@include normalize;
+@include border-box-sizing;
+
+::-moz-selection {
+  color: $color-neutral-negative-3;
+  background-color: $color-neutral-positive-1;
+}
+
+::selection {
+  color: $color-neutral-negative-3;
+  background-color: $color-neutral-positive-1;
+}
+
+* {
+  outline: none;
+  outline: 0;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    outline: 0;
+  }
+}
+
+html, body {
+  font-weight: normal;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -48,6 +48,24 @@ var webpackConfig = {
         ],
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader']),
       },
+      {
+        // Match woff2 in addition to patterns like .woff?v=1.1.1.
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            // Limit at 50k. Above that it emits separate files
+            limit: 100000,
+
+            // url-loader sets mimetype if it's passed.
+            // Without this it derives it from the file extension
+            mimetype: "application/font-woff",
+
+            // Output below fonts directory
+            name: "./fonts/[name].[ext]",
+          }
+        },
+      },
     ],
   },
   resolveLoader: {
@@ -55,7 +73,13 @@ var webpackConfig = {
       // necessary to to make lang="scss" work in test when using vue-loader's ?inject option
       // see discussion at https://github.com/vuejs/vue-loader/issues/724
       'scss-loader': 'sass-loader',
-    },
+    }
+  },
+  resolve: {
+    alias: {
+      // Public assets folder
+      public: path.resolve(__dirname, '../public')
+    }
   },
   plugins: [
     new ExtractTextPlugin('common.css'),

@@ -1,0 +1,38 @@
+//------------------------------
+// *****************************
+// Index
+// *****************************
+//------------------------------
+
+@import "variables/index";
+@import "globals/index";
+@import "fonts";
+
+body {
+  color: #000;
+}
+
+h1 {
+  font-family: $font-inter-ui;
+}
+
+h2 {
+  font-family: $font-ibm-plex-mono;
+}
+
+h3 {
+  font-family: $font-inter-ui;
+  font-weight: 700;
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}

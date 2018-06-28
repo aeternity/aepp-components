@@ -1,0 +1,131 @@
+//------------------------------
+// *****************************
+// Typography
+// *****************************
+//------------------------------
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.5;
+  color: $color-primary;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 10px;
+}
+
+p {
+  line-height: 1.5;
+  margin: 20px 0;
+  font-size: $base-font-size;
+}
+
+a {
+  @include transition($base-transition-time);
+
+  text-decoration: none;
+  color: $color-ui-primary;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.typography {
+  color: $color-white;
+  line-height: 1.5;
+}
+
+.typography.primary {
+  color: $color-primary;
+
+  &.white {
+    padding: 4px;
+    background: $color-primary;
+    color: $color-white;
+  }
+}
+
+.typography.secondary {
+  color: $color-tertiary;
+}
+
+.typography.accent {
+  color: $color-info;
+}
+
+.typography.positive {
+  color: $color-success;
+}
+
+.typography.negative {
+  color: $color-error;
+}
+
+.typography.disabled {
+  color: $color-quaternary;
+}
+
+.typography.bold {
+  font-weight: bold;
+}
+
+.typography.italic {
+  font-style: italic;
+}
+
+.typography.small {
+  font-size: 14px;
+}
+
+.typography.left {
+  text-align: left;
+}
+
+.typography.center {
+  text-align: center;
+}
+
+.typography.right {
+  text-align: right;
+}
+
+.typography.block {
+  display: block;
+}
+
+.typography.inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.typography.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.typography.marginless {
+  margin: 0;
+}
