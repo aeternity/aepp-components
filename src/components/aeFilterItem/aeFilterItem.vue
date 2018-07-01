@@ -25,7 +25,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../variables";
 
   .ae-filter-item {
     display: inline-block;

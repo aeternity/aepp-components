@@ -1,5 +1,3 @@
-@import '../variables.scss';
-@import '../_extendables.scss';
 
 $clear-btn-height: 20px;
 $clear-btn-width: $clear-btn-height;
@@ -23,8 +21,6 @@ $icon-left-distance: ($clear-btn-width - $clear-icon-width) / 2;
 }
 
 .input{
-  @extend %input;
-  @extend %inner-text;
   padding-right: $clear-btn-width + $clear-btn-right-margin;
   box-sizing: border-box;
   border: solid 2px;
@@ -38,9 +34,6 @@ $icon-left-distance: ($clear-btn-width - $clear-icon-width) / 2;
     }
   }
 
-  ::placeholder{
-    @extend %inner-text;
-  }
 }
 
 .ae-text-input__clear-icon{

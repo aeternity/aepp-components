@@ -28,8 +28,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../variables";
-
   .ae-overlay {
     position: fixed;
     width: 100%;

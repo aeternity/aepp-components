@@ -55,8 +55,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../variables";
-  @import "../mixins";
 
   .ae-overlay {
     .ae-modal {

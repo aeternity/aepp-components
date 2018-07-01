@@ -22,7 +22,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "../variables";
 
   .ae-textarea {
     display: block;

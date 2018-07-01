@@ -38,8 +38,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../variables";
-
   .ae-label {
     display: flex;
     text-transform: uppercase;

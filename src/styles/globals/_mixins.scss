@@ -212,13 +212,17 @@
 /// @param {String} $style [normal] - Font style
 /// @example scss - Usage
 ///   @include font-face('gotham', '/fonts/gotham');
-@mixin font-face($font-name, $file-path, $weight: 400, $style: normal, $extra: "") {
+@mixin font-face($font-name, $file-path, $weight: 400, $style: normal, $range: false) {
   @font-face {
     font-family: quote($font-name);
-    src: url($file-path + ".woff2" + $extra) format("woff2"),
-         url($file-path + ".woff" + $extra) format("woff");
+    src: url($file-path + ".woff2") format("woff2"),
+         url($file-path + ".woff") format("woff");
     font-style: $style;
     font-weight: $weight;
+
+    @if $range {
+      unicode-range: $range;
+    }
   }
 }
 

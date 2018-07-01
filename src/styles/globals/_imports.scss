@@ -4,12 +4,12 @@
 // *****************************
 //------------------------------
 
-/// Susy SASS Grid system
-/// @website http://oddbird.net/susy/
-/// @docs http://oddbird.net/susy/docs/
-@import "~susy/sass/susy";
-
 /// SASS version of normalize.scss
 /// @website https://github.com/JohnAlbin/normalize-scss
 /// @docs https://github.com/JohnAlbin/normalize-scss#how-to-use-it
 @import "~normalize-scss/sass/_normalize.scss";
+
+/// Susy SASS Grid system
+/// @website http://oddbird.net/susy/
+/// @docs http://oddbird.net/susy/docs/
+@import "~susy/sass/susy";

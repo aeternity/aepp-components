@@ -6,7 +6,7 @@
 
 h1, h2, h3, h4, h5, h6, p {
   line-height: 1.5;
-  color: $color-primary;
+  color: $color-neutral-neutral;
   font-weight: normal;
 }
 
@@ -36,96 +36,17 @@ h6 {
 
 p {
   line-height: 1.5;
-  margin: 20px 0;
+  margin: 18px 0;
   font-size: $base-font-size;
 }
 
 a {
-  @include transition($base-transition-time);
-
-  text-decoration: none;
-  color: $color-ui-primary;
+  transition: all $base-transition-time;
+  color: $color-neutral-neutral;
 
   &:hover,
   &:focus {
     text-decoration: underline;
+    color: $color-neutral-positive-1;
   }
-}
-
-.typography {
-  color: $color-white;
-  line-height: 1.5;
-}
-
-.typography.primary {
-  color: $color-primary;
-
-  &.white {
-    padding: 4px;
-    background: $color-primary;
-    color: $color-white;
-  }
-}
-
-.typography.secondary {
-  color: $color-tertiary;
-}
-
-.typography.accent {
-  color: $color-info;
-}
-
-.typography.positive {
-  color: $color-success;
-}
-
-.typography.negative {
-  color: $color-error;
-}
-
-.typography.disabled {
-  color: $color-quaternary;
-}
-
-.typography.bold {
-  font-weight: bold;
-}
-
-.typography.italic {
-  font-style: italic;
-}
-
-.typography.small {
-  font-size: 14px;
-}
-
-.typography.left {
-  text-align: left;
-}
-
-.typography.center {
-  text-align: center;
-}
-
-.typography.right {
-  text-align: right;
-}
-
-.typography.block {
-  display: block;
-}
-
-.typography.inline {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.typography.truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.typography.marginless {
-  margin: 0;
 }

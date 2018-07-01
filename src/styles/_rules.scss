@@ -5,7 +5,6 @@
 //------------------------------
 
 @include normalize;
-@include border-box-sizing;
 
 ::-moz-selection {
   color: $color-neutral-negative-3;
@@ -17,9 +16,21 @@
   background-color: $color-neutral-positive-1;
 }
 
+html, body {
+  font-size: $base-font-size;
+  font-weight: normal;
+  line-height: $base-line-height;
+  box-sizing: border-box;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 * {
   outline: none;
   outline: 0;
+  box-sizing: inherit;
 
   &:hover,
   &:focus,
@@ -27,14 +38,9 @@
     outline: none;
     outline: 0;
   }
-}
 
-html, body {
-  font-weight: normal;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
 }

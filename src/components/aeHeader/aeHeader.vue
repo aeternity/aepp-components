@@ -2,7 +2,7 @@
   <div class="ae-header">
     <header class="desktop">
       <ae-link class="title" to="/">
-        <img :src="require('public/images/logo-small.png')" alt="Go to main page" />
+        <img :src="require('@public/images/logo-small.png')" alt="Go to main page" />
         {{name}}
       </ae-link>
       <div>
@@ -47,8 +47,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../variables";
-  @import "../mixins";
 
   $height: 65px;
 

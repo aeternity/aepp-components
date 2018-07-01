@@ -65,8 +65,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../variables";
-  @import "../mixins";
 
   .ae-panel {
     border-radius: 10px;
