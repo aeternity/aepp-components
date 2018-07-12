@@ -1,5 +1,5 @@
 {
-  "version": "2.0.11",
+  "version": "3.0.0",
   "name": "@aeternity/aepp-components",
   "main": "build/aepp-components.js",
   "description": "Reusable Vue Components for aeternity aepp projects",
@@ -29,7 +29,6 @@
     "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.0",
     "numeral": "^2.0.6",
-    "string-loader": "0.0.1",
     "vue-clickaway": "^2.1.0"
   },
   "devDependencies": {
@@ -58,6 +57,7 @@
     "node-sass": "^4.9.2",
     "sass-loader": "^6.0.6",
     "sass-resources-loader": "^1.3.3",
+    "string-loader": "0.0.1",
     "url-loader": "^0.6.2",
     "vue-eslint-parser": "^2.0.3",
     "vue-jest": "^2.6.0",

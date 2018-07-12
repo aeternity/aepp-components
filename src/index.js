@@ -6,7 +6,7 @@ import './base/_index.scss'
 /**
  * Helper functions
  */
-export { constants, helpers } from '@source/core'
+export { constants, helper } from '@source/core'
 
 /**
  * Exporting default component list

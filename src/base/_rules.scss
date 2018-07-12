@@ -4,6 +4,11 @@
 // *****************************
 //------------------------------
 
+/// SASS version of normalize.scss
+/// @website https://github.com/JohnAlbin/normalize-scss
+/// @docs https://github.com/JohnAlbin/normalize-scss#how-to-use-it
+@import "~normalize.css/normalize.css";
+
 ::-moz-selection {
   color: $color-neutral-negative-3;
   background-color: $color-neutral-positive-1;
