@@ -1,5 +1,14 @@
-import './styles/_index.scss'
+/**
+ * Importing SCSS
+ */
+import './base/_index.scss'
 
-export { default as default } from './components'
-export { TYPE_PROPERTY_VALUES as aeConstants } from './constants'
-export { default as aeHelperMixin } from './mixins/helper'
+/**
+ * Helper functions
+ */
+export { constants, helpers } from '@source/core'
+
+/**
+ * Exporting default component list
+ */
+export { default } from '@source/components'

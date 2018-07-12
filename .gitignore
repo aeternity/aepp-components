@@ -1,17 +1,23 @@
-.DS_Store
-node_modules/
-dist/
-styleguide/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-test/unit/coverage
-test/e2e/reports
-selenium-debug.log
-
 # Editor directories and files
-.idea
+/.idea
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+
+## General System Files
+.DS_Store
+Thumbs.db
+log.txt
+npm-debug.log
+npm-debug.log*
+yarn-error.log
+yarn-debug.log*
+test/unit/coverage
+test/e2e/reports
+selenium-debug.log
+
+## General Folders
+/node_modules
+/build
+/styleguide

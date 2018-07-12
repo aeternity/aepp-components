@@ -1,5 +1,5 @@
 import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
-import helperMixin from './../../mixins/helper'
+import helperMixin from '@source/core/mixins/helper'
 import BN from 'bn.js'
 
 /**

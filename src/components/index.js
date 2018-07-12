@@ -65,10 +65,11 @@ const AeppComponents = {
 }
 
 AeppComponents.install = Vue =>
-  Object.keys(AeppComponents)
-    .filter(component => component !== 'install')
-    .map(component => AeppComponents[component])
-    .forEach(Vue.use)
+  Object
+  .keys(AeppComponents)
+  .filter(component => component !== 'install')
+  .map(component => AeppComponents[component])
+  .forEach(Vue.use)
 
 export default AeppComponents
 

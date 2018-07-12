@@ -1,43 +1,50 @@
 {
-  "name": "@aeternity/aepp-components",
   "version": "2.0.11",
-  "description": "Reusable Vue components for aeternity aepp projects",
-  "main": "dist/aepp-components.js",
-  "scripts": {
-    "test": "npm run unit && npm run lint",
-    "unit": "jest",
-    "watch-unit": "jest --watch",
-    "build": "node build/build.js",
-    "watch": "node build/watch.js",
-    "lint": "eslint --ext .js,.vue src",
-    "prepublish": "npm test",
-    "prepare": "npm run build",
-    "styleguide": "vue-styleguidist server",
-    "styleguide:build": "vue-styleguidist build"
-  },
+  "name": "@aeternity/aepp-components",
+  "main": "build/aepp-components.js",
+  "description": "Reusable Vue Components for aeternity aepp projects",
+  "homepage": "https://github.com/aeternity/aepp-components#readme",
   "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
-  "license": "MIT",
+  "license": "ISC",
+  "repository": "https://github.com/aeternity/aepp-components.git",
+  "bugs": "https://github.com/aeternity/aepp-components/issues",
   "files": [
-    "dist"
+    "build"
   ],
+  "scripts": {
+    "unit": "jest --config config/jest.config.js",
+    "unit:watch": "jest --watch",
+    "lint": "eslint --ext .js,.vue src",
+    "test": "npm run unit && npm run lint",
+    "build": "node config/build.js",
+    "watch": "node config/watch.js",
+    "docs": "vue-styleguidist server --verbose --config config/styleguidist.config.js",
+    "docs:build": "vue-styleguidist build --verbose --config config/styleguidist.config.js",
+    "prepublish": "npm test",
+    "prepare": "npm run build"
+  },
   "dependencies": {
     "ethereum-blockies-png": "git+https://github.com/acdbaykal/ethereum-blockies-png.git",
     "ethjs-unit": "^0.1.6",
     "normalize-scss": "^7.0.1",
-    "normalize.css": "^7.0.0",
+    "normalize.css": "^8.0.0",
     "numeral": "^2.0.6",
     "string-loader": "0.0.1",
-    "susy": "^3.0.5",
     "vue-clickaway": "^2.1.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.0.2",
     "babel-jest": "^21.2.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-dynamic-import-node": "^1.2.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.7",
+    "dotenv": "^6.0.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.11.0",
@@ -48,43 +55,18 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "jest": "^21.2.1",
-    "node-sass": "^4.6.1",
+    "node-sass": "^4.9.2",
     "sass-loader": "^6.0.6",
     "sass-resources-loader": "^1.3.3",
     "url-loader": "^0.6.2",
     "vue-eslint-parser": "^2.0.3",
-    "vue-jest": "^2.5.0",
+    "vue-jest": "^2.6.0",
     "vue-loader": "^13.5.0",
-    "vue-styleguidist": "^1.7.4",
+    "vue-styleguidist": "^1.7.12",
     "vue-template-compiler": "^2.5.16",
     "vue-test-utils": "^1.0.0-beta.7",
     "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-merge": "^4.1.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aeternity/aepp-components.git"
-  },
-  "bugs": {
-    "url": "https://github.com/aeternity/aepp-components/issues"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "vue"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "^@/(.*)$": "<rootDir>/src/$1"
-    },
-    "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
-    },
-    "mapCoverage": true,
-    "testURL": "http://example.aepps.com"
-  },
-  "homepage": "https://github.com/aeternity/aepp-components#readme"
+  }
 }
