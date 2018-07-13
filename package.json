@@ -53,6 +53,7 @@
     "eslint-plugin-vue": "^4.5.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
+    "githooks": "^1.1.1",
     "jest": "^21.2.1",
     "node-sass": "^4.9.2",
     "sass-loader": "^6.0.6",

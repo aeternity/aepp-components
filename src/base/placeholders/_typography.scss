@@ -1,0 +1,83 @@
+//------------------------------
+// *****************************
+// Typography Placeholders
+// *****************************
+//------------------------------
+
+/// Typography Sans
+%typo-sans-l {
+  font-family: $font-inter-ui;
+  font-size: rem(23px);
+  letter-spacing: em(-0.32px);
+  line-height: rem(28px);
+}
+
+%typo-sans-base {
+  font-family: $font-inter-ui;
+  font-size: rem(17px);
+  line-height: rem(24px);
+}
+
+%typo-sans-s {
+  font-family: $font-inter-ui;
+  font-size: rem(15px);
+  line-height: rem(20px);
+}
+
+%typo-sans-xs {
+  font-family: $font-inter-ui;
+  font-size: rem(13px);
+  letter-spacing: em(0.32px);
+  line-height: rem(16px);
+}
+
+/// Typography Mono
+%typo-mono-xl {
+  font-family: $font-ibm-plex-mono;
+  font-size: rem(52px);
+  letter-spacing: em(-0.8px);
+  line-height: rem(48px);
+}
+
+%typo-mono-base {
+  font-family: $font-ibm-plex-mono;
+  font-size: rem(17px);
+  line-height: rem(24px);
+}
+
+%typo-mono-s {
+  font-family: $font-ibm-plex-mono;
+  font-size: rem(15px);
+  line-height: rem(20px);
+}
+
+%typo-mono-xs {
+  font-family: $font-ibm-plex-mono;
+  font-size: rem(13px);
+  letter-spacing: em(0.32px);
+  line-height: rem(16px);
+}
+
+/// Extras
+%typo-tracked-base {
+  font-family: $font-ibm-plex-mono;
+  font-size: rem(17px);
+  letter-spacing: em(1.76px);
+  line-height: rem(24px);
+}
+
+%typo-uppercase-base {
+  font-family: $font-inter-ui;
+  font-size: rem(13px);
+  letter-spacing: em(1.6px);
+  line-height: rem(16px);
+  text-transform: uppercase;
+}
+
+%typo-uppercase-xs {
+  font-family: $font-inter-ui;
+  font-size: rem(11px);
+  letter-spacing: em(1.6px);
+  line-height: rem(12px);
+  text-transform: uppercase;
+}
