@@ -1,17 +1,114 @@
+### component
 ```jsx
-  <ae-toolbar />
+  <ae-toolbar>
+    Hello world!
+  </ae-toolbar>
 ``` 
 
-
+### fill
 ```jsx
-  <ae-toolbar align="right" />
+  <ae-toolbar fill="neutral">
+    neutral fill
+  </ae-toolbar>
 ``` 
 
 ```jsx
-  <ae-toolbar align="center" />
+  <ae-toolbar fill="default">
+    default fill
+  </ae-toolbar>
+```
+
+```jsx
+  <ae-toolbar fill="emphasis">
+    emphasis fill
+  </ae-toolbar>
+```
+
+```jsx
+  <ae-toolbar fill="alternative">
+    alternative fill
+  </ae-toolbar>
+```
+
+### align & slots
+```jsx
+  <ae-toolbar>
+    <span slot="left">Left</span>
+    center
+    <span slot="right">Right</span>
+  </ae-toolbar>
 ``` 
 
 ```jsx
-  <ae-toolbar align="justify" />
+  <ae-toolbar align="left">
+    <span slot="left">Left</span>
+    center
+    <span slot="right">Right</span>
+  </ae-toolbar>
 ``` 
 
+```jsx
+  <ae-toolbar align="center">
+    <span slot="left">Left</span>
+    center
+    <span slot="right">Right</span>
+  </ae-toolbar>
+``` 
+
+```jsx
+  <ae-toolbar align="right">
+    <span slot="left">Left</span>
+    center
+    <span slot="right">Right</span>
+  </ae-toolbar>
+``` 
+
+```jsx
+  <ae-toolbar align="justify">
+    <span slot="left">Left</span>
+    center
+    <span slot="right">Right</span>
+  </ae-toolbar>
+``` 
+
+### disabled
+```jsx
+  <ae-toolbar disabled>
+    disabled
+  </ae-toolbar>
+``` 
+
+```jsx
+  <ae-toolbar fill="neutral" disabled>
+    neutral fill
+  </ae-toolbar>
+``` 
+
+```jsx
+  <ae-toolbar fill="default" disabled>
+    default fill
+  </ae-toolbar>
+```
+
+```jsx
+  <ae-toolbar fill="emphasis" disabled>
+    emphasis fill
+  </ae-toolbar>
+```
+
+```jsx
+  <ae-toolbar fill="alternative" disabled>
+    alternative fill
+  </ae-toolbar>
+```
+
+### icons
+```jsx
+  <ae-toolbar>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+  </ae-toolbar>
+``` 

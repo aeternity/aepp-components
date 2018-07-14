@@ -12,47 +12,20 @@ export default {
    */
   props: {
     /**
-     * Select
+     * Fill property changes the color state of the toolbar
+     * select something between: `neutral, default, emphasis, alternative`
      */
-    mode: {
-      type: String,
-      validator: function (value) {
-        return [
-          'primary',
-          'secondary'
-        ].indexOf(value) !== -1
-      }
-    },
+    fill: String,
 
     /**
      * Arranges the flow of the buttons inside the toolbar.
      * Available options are: `left, center, right, justify`
      */
-    align: {
-      type: String,
-      validator: function (value) {
-        return [
-          'left',
-          'center',
-          'right',
-          'justify'
-        ].indexOf(value) !== -1
-      }
-    },
+    align: String,
 
     /**
      * Is Active or Inactive
      */
-    disabled: Boolean,
-
-    /**
-     * Minimalistic view
-     */
-    minimal: Boolean
-  },
-
-  /**
-   * Component Methods
-   */
-  methods: {}
+    disabled: Boolean
+  }
 }

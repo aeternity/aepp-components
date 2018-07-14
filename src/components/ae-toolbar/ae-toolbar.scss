@@ -5,21 +5,55 @@
 //------------------------------
 
 .ae-toolbar {
+  // Extend font-type
+  @extend %typo-uppercase-xs;
+
+  // include border mixin
+  @include border-radius-separate(0, 0, 4px, 4px);
+
   display: flex;
   flex-direction: row;
   height: rem(32px);
+  background: $color-neutral-positive-2;
+  align-items: center;
+  padding: 0 rem(16px);
+  font-weight: 500;
+  color: $color-neutral-negative-1;
 }
 
-.ae-toolbar:disabled {
-
+.ae-toolbar.disabled {
+  cursor: not-allowed;
+  color: rgba($color-neutral-negative-1, 0.5);
 }
 
-.ae-toolbar.primary {
-
+.ae-toolbar.neutral {
+  background: $color-neutral-minimum;
 }
 
-.ae-toolbar.secondary {
+.ae-toolbar.default {
+  background: $color-default-negative-2;
+}
 
+.ae-toolbar.emphasis {
+  background: $color-emphasis-negative-2;
+}
+
+.ae-toolbar.alternative {
+  background: $color-alternative-negative-2;
+}
+
+.ae-toolbar.neutral,
+.ae-toolbar.default,
+.ae-toolbar.emphasis,
+.ae-toolbar.alternative {
+  color: $color-white;
+}
+
+.ae-toolbar.neutral.disabled,
+.ae-toolbar.default.disabled,
+.ae-toolbar.emphasis.disabled,
+.ae-toolbar.alternative.disabled {
+  color: rgba($color-white, 0.5);
 }
 
 .ae-toolbar.left {
@@ -36,8 +70,4 @@
 
 .ae-toolbar.justify {
   justify-content: space-between;
-}
-
-.ae-toolbar.minimal {
-
 }

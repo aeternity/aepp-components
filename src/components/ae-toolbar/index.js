@@ -1,8 +1,12 @@
 /**
- * aeInput instance
- * @param {Vue} Vue
- * @param {{}} options
+ * ae-toolbar
  */
-export const install = function (Vue, options) {
-  Vue.component('ae-toolbar', require('./ae-toolbar.vue').default)
+import AeToolbar from './ae-toolbar'
+
+/**
+ * ae-toolbar instance
+ * @param {Vue} Vue
+ */
+export const install = function (Vue) {
+  Vue.component('ae-toolbar', AeToolbar)
 }

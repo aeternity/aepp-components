@@ -1,9 +1,9 @@
 /**
  * Importing Tools
  */
-import AeToolbar from './ae-toolbar.vue'
+// import AeToolbar from './ae-toolbar.vue'
 import install from './index'
-import { shallow } from 'vue-test-utils'
+// import { shallow } from 'vue-test-utils'
 
 /**
  * Test Cases
