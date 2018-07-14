@@ -1,0 +1,54 @@
+//------------------------------
+// *****************************
+// ae-card
+// *****************************
+//------------------------------
+
+.ae-card {
+  @extend %typo-sans-base;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  // height: 192px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: $color-neutral-positive-3;
+  color: $color-neutral-neutral;
+  box-shadow: 0 0 16px rgba(#1B4479, 0.15);
+}
+
+.ae-card.neutral {
+  background: $color-neutral-minimum;
+}
+
+.ae-card.default {
+  background: $color-default-default;
+}
+
+.ae-card.emphasis {
+  background: $color-emphasis-emphasis;
+}
+
+.ae-card.alternative {
+  background: $color-alternative-alternative;
+}
+
+.ae-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(16px) rem(16px) 0 rem(16px);
+  margin-bottom: rem(16px);
+}
+
+.ae-card-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(16px);
+}
+
+.ae-card-footer {}
