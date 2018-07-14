@@ -143,7 +143,7 @@ module.exports = {
   },
   plugins: [
     // Bundle Analyzer
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: false }),
     // Define global environment variables
     new webpack.EnvironmentPlugin(process.env),
     // Extract CSS
@@ -183,10 +183,6 @@ module.exports = {
       commonjs: 'numeral',
       commonjs2: 'numeral',
     },
-    'string-loader': {
-      commonjs: 'string-loader',
-      commonjs2: 'string-loader',
-    },
     'vue-clickaway': {
       commonjs: 'vue-clickaway',
       commonjs2: 'vue-clickaway',
@@ -194,6 +190,9 @@ module.exports = {
     'bn.js': {
       commonjs: 'bn.js',
       commonjs2: 'bn.js'
+    },
+    'qrious': {
+      amd: 'qrious'
     }
   },
   performance: { hints: false },

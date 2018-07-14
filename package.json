@@ -21,14 +21,14 @@
     "docs": "vue-styleguidist server --verbose --config config/styleguidist.config.js",
     "docs:build": "vue-styleguidist build --verbose --config config/styleguidist.config.js",
     "prepublish": "npm test",
-    "prepare": "npm run build"
+    "prepare": "NODE_ENV=production npm run build"
   },
   "dependencies": {
     "ethereum-blockies-png": "git+https://github.com/acdbaykal/ethereum-blockies-png.git",
     "ethjs-unit": "^0.1.6",
-    "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.0",
     "numeral": "^2.0.6",
+    "qrious": "^4.0.2",
     "vue-clickaway": "^2.1.0"
   },
   "devDependencies": {
@@ -53,7 +53,7 @@
     "eslint-plugin-vue": "^4.5.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
-    "githooks": "^1.1.1",
+    "git-hooks": "^1.1.10",
     "jest": "^21.2.1",
     "node-sass": "^4.9.2",
     "sass-loader": "^6.0.6",

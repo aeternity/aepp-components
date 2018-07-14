@@ -19,8 +19,9 @@ module.exports = {
 
   /**
    * Components folder
+   * TODO: later remove '-' for folder recognition
    */
-  components: path.resolve(__dirname, '../src/components/**/*.vue'),
+  components: path.resolve(__dirname, '../src/components/**/*-*.vue'),
 
   /**
    * Assets directory
