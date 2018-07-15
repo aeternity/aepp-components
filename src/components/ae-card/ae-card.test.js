@@ -1,7 +1,7 @@
 /**
  * Importing Tools
  */
-// import AeToolbar from './ae-card.vue'
+// import AeCard from './ae-card.vue'
 import install from './index'
 // import { shallow } from 'vue-test-utils'
 

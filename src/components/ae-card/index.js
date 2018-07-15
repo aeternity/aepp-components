@@ -1,10 +1,10 @@
 /**
- * ae-toolbar
+ * ae-card
  */
 import AeCard from './ae-card'
 
 /**
- * aeInput instance
+ * ae-card instance
  * @param {Vue} Vue
  */
 export const install = function (Vue) {

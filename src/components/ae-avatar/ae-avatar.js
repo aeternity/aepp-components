@@ -18,7 +18,8 @@ export default {
   props: {
     /**
      * Address of the wallet for which
-     * the avatar is going to represent
+     * the avatar is going to generate
+     * a blockie from.
      */
     address: {
       type: String,

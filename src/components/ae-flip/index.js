@@ -1,10 +1,10 @@
 /**
- * ae-address
+ * ae-flip
  */
 import AeFlip from './ae-flip'
 
 /**
- * ae-address instance
+ * ae-flip instance
  * @param {Vue} Vue
  */
 export const install = function (Vue) {

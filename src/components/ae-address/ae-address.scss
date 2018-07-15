@@ -8,11 +8,11 @@
   @extend %typo-mono-base;
 
   display: grid;
-  grid-gap: rem(8px);
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
   align-items: center;
   justify-items: center;
+  grid-gap: rem(4px);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   font-weight: 500;
   width: 100%;
   height: 100%;

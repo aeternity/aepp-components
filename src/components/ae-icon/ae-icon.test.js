@@ -1,7 +1,7 @@
 /**
  * Importing Tools
  */
-// import AeToolbar from './ae-icon.vue'
+// import AeIcon from './ae-icon.vue'
 import install from './index'
 // import { shallow } from 'vue-test-utils'
 

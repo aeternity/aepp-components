@@ -15,19 +15,6 @@ export default {
      * Fill property changes the color state of the toolbar
      * select something between: `neutral, default, emphasis, alternative`
      */
-    fill: String,
-
-    /**
-     * Address of the account
-     */
-    address: {
-      type: String,
-      default: ''
-    }
-  },
-
-  /**
-   * Component Methods
-   */
-  methods: {}
+    fill: String
+  }
 }

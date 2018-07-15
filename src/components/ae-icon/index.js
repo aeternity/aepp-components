@@ -4,7 +4,7 @@
 import AeIcon from 'ae-icon'
 
 /**
- * aeInput instance
+ * ae-icon instance
  * @param {Vue} Vue
  */
 export const install = function (Vue) {
