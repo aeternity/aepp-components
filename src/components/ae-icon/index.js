@@ -1,7 +1,7 @@
 /**
  * ae-icon
  */
-import AeIcon from 'ae-icon'
+import AeIcon from './ae-icon'
 
 /**
  * ae-icon instance

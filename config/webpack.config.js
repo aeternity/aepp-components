@@ -192,7 +192,9 @@ module.exports = {
       commonjs2: 'bn.js'
     },
     'qrious': {
-      amd: 'qrious'
+      amd: 'qrious',
+      commonjs: 'qrious',
+      commonjs2: 'qrious'
     }
   },
   performance: { hints: false },
