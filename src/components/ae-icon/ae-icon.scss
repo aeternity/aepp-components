@@ -4,4 +4,14 @@
 // *****************************
 //------------------------------
 
-.ae-icon {}
+.ae-icon:before {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
