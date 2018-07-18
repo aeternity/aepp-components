@@ -23,7 +23,12 @@ export default {
     length: {
       type: String,
       default: 'full'
-    }
+    },
+
+    /**
+     * Set the grid gab between elements, either px's or rem's
+     */
+    gap: String
   },
 
   /**

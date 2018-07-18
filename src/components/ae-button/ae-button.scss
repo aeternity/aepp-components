@@ -1,0 +1,62 @@
+//------------------------------
+// *****************************
+// ae-button
+// *****************************
+//------------------------------
+
+.ae-button {
+  @include user-select;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: auto;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  > i {
+    margin: 0 rem(4px);
+  }
+}
+
+.ae-button.primary {
+  @extend %face-uppercase-base;
+
+  background: $color-neutral-neutral;
+  letter-spacing: em(1.3px);
+  height: 56px;
+  border-radius: 32px;
+  box-shadow: 0 0 16px rgba(27, 68, 121, 0.15);
+  color: $color-white;
+}
+
+.ae-button.secondary {
+
+}
+
+.ae-button.icon {
+
+}
+
+.ae-button.toolbar {
+  @extend %face-uppercase-xs;
+
+  padding: 0 rem(8px);
+  background: transparent;
+  letter-spacing: em(1.1px);
+  height: 16px;
+  font-weight: 500;
+
+  > i {
+    font-size: rem(14px);
+  }
+}

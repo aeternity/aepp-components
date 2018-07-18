@@ -20,14 +20,14 @@
     line-height: 1.63;
     letter-spacing: 0.2px;
     color: $anthracite;
-    font-family: $font-ibm-plex-mono;
+    font-family: $font-mono;
 
     ::placeholder {
       color: $grey;
     }
 
     &.monospace, &[type=password] {
-      font-family: $font-ibm-plex-mono;
+      font-family: $font-mono;
     }
 
     &[type=number] {

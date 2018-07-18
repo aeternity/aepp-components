@@ -91,6 +91,28 @@ module.exports = {
         })
       },
       {
+        // https://github.com/jeerbl/webfonts-loader#readme
+        test: /\.font\.js/,
+        loader: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true
+              }
+            }, {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
+            },
+            {
+              loader: 'webfonts-loader'
+            }
+          ]
+        })
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/

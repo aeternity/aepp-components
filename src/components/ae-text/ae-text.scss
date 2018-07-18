@@ -1,0 +1,117 @@
+//------------------------------
+// *****************************
+// ae-text
+// *****************************
+//------------------------------
+
+.ae-text {
+  @extend %face-sans-base;
+
+  transition: $base-transition-time;
+  outline: none;
+  border-bottom: 1px solid transparent;
+  color: $color-black;
+
+  &.focus, &:focus {
+    border-color: $color-black;
+  }
+
+  &.disabled {
+    opacity: 0.15;
+    cursor: not-allowed;
+  }
+}
+
+.ae-text.inherit {
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+
+  &:focus {
+    border-color: inherit;
+  }
+}
+
+.ae-text.white {
+  color: $color-white;
+
+  &:focus {
+    border-color: $color-white;
+  }
+}
+
+.ae-text.neutral {
+  color: $color-white;
+
+  &:focus {
+    border-color: $color-white;
+  }
+}
+
+.ae-text.default {
+  color: $color-white;
+
+  &:focus {
+    border-color: $color-white;
+  }
+}
+
+.ae-text.emphasis {
+  color: $color-white;
+
+  &:focus {
+    border-color: $color-white;
+  }
+}
+
+.ae-text.alternative {
+  color: $color-white;
+
+  &:focus {
+    border-color: $color-white;
+  }
+}
+
+.ae-text.sans-l {
+  @extend %face-sans-l;
+}
+
+.ae-text.sans-base {
+  @extend %face-sans-base;
+}
+
+.ae-text.sans-s {
+  @extend %face-sans-s;
+}
+
+.ae-text.sans-xs {
+  @extend %face-sans-xs;
+}
+
+.ae-text.mono-xl {
+  @extend %face-mono-xl;
+}
+
+.ae-text.mono-base {
+  @extend %face-mono-base;
+}
+
+.ae-text.mono-s {
+  @extend %face-mono-s;
+}
+
+.ae-text.mono-xs {
+  @extend %face-mono-xs;
+}
+
+.ae-text.tracked-base {
+  @extend %face-tracked-base;
+}
+
+.ae-text.uppercase-base {
+  @extend %face-uppercase-base;
+}
+
+.ae-text.uppercase-xs {
+  @extend %face-uppercase-xs;
+}

@@ -104,11 +104,54 @@
 
 ### icons
 ```jsx
-  <ae-toolbar>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
+  <ae-toolbar align="right">
+    <ae-button face="toolbar">
+      <ae-icon name="eye" />
+      Details
+    </ae-button>
+    <ae-button face="toolbar">
+      <ae-icon name="copy" />
+      Copy
+    </ae-button>
+    <ae-button face="toolbar">
+      <ae-icon name="share" />
+      Share
+    </ae-button>
+  </ae-toolbar>
+``` 
+
+```jsx
+  <ae-toolbar align="justify">
+    <ae-button slot="left" face="toolbar">
+      <ae-icon name="eye" />
+      Details
+    </ae-button>
+    <div slot="right">
+     <ae-button face="toolbar">
+       <ae-icon name="copy" />
+       Copy
+     </ae-button>
+     <ae-button face="toolbar">
+       <ae-icon name="share" />
+       Share
+     </ae-button>
+    </div>
+  </ae-toolbar>
+``` 
+
+```jsx
+  <ae-toolbar align="justify">
+    <ae-button face="toolbar">
+      <ae-icon name="eye" />
+      Details
+    </ae-button>
+    <ae-button face="toolbar">
+      <ae-icon name="copy" />
+      Copy
+    </ae-button>
+    <ae-button face="toolbar">
+      <ae-icon name="share" />
+      Share
+    </ae-button>
   </ae-toolbar>
 ``` 

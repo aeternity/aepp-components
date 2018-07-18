@@ -6,7 +6,7 @@
 
 .ae-toolbar {
   // Extend font-type
-  @extend %typo-uppercase-xs;
+  @extend %face-uppercase-xs;
 
   // include border mixin
   @include border-radius-separate(0, 0, 4px, 4px);

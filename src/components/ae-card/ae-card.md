@@ -17,6 +17,7 @@
   <ae-card>
     <template slot="header">
       <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+      <ae-text contenteditable>Main Account</ae-text>
     </template>
     <ae-qrcode slot="left" />
     <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" />

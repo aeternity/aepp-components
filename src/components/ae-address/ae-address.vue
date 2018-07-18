@@ -1,5 +1,5 @@
 <template>
-  <ul class="ae-address">
+  <ul class="ae-address" :style="{ gridGap: gap }">
     <template v-if="length === 'full'">
       <li v-for="chunk in chunked" :key="chunk">
         {{ chunk }}

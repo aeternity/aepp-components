@@ -29,7 +29,8 @@
     "normalize.css": "^8.0.0",
     "numeral": "^2.0.6",
     "qrious": "^4.0.2",
-    "vue-clickaway": "^2.1.0"
+    "vue-clickaway": "^2.1.0",
+    "webfonts-loader": "^4.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
