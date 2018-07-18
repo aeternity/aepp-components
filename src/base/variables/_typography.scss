@@ -5,13 +5,13 @@
 //------------------------------
 
 // Base Settings
-$base-font-size: 16px;
-$base-line-height: 1.5rem;
+$base-font-size: 16px !default;
+$base-line-height: 1.5rem !default;
 
 /// Inter UI variables
 /// @website: https://rsms.me/inter/
-$font-inter-ui: "Inter UI", sans-serif;
+$font-sans: "Inter UI", sans-serif !default;
 
 /// Inter UI variables
 /// @website: https://rsms.me/inter/
-$font-ibm-plex-mono: "IBM Plex Mono", sans-serif;
+$font-mono: "IBM Plex Mono", monospace !default;

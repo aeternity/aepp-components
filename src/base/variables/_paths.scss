@@ -4,6 +4,6 @@
 // *****************************
 //------------------------------
 
-$path-fonts: "~@public/fonts/";
-$path-images: "~@public/images/";
-$path-icons: "~@public/icons/";
+$path-fonts: "~@public/fonts/" !default;
+$path-images: "~@public/images/" !default;
+$path-icons: "~@public/icons/" !default;

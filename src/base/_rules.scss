@@ -9,16 +9,8 @@
 /// @docs https://github.com/JohnAlbin/normalize-scss#how-to-use-it
 @import "~normalize.css/normalize.css";
 
-::-moz-selection {
-  color: $color-neutral-negative-3;
-  background-color: $color-neutral-positive-1;
-}
-
-::selection {
-  color: $color-neutral-negative-3;
-  background-color: $color-neutral-positive-1;
-}
-
+/// General HTML/Body styles
+/// border-boxing fix
 html, body {
   font-size: $base-font-size;
   font-weight: normal;
