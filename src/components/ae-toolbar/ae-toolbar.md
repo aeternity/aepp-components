@@ -155,3 +155,17 @@
     </ae-button>
   </ae-toolbar>
 ``` 
+
+```jsx
+  <ae-toolbar align="right">
+    <ae-button face="toolbar">
+      <ae-icon name="eye" />
+    </ae-button>
+    <ae-button face="toolbar">
+      <ae-icon name="copy" />
+    </ae-button>
+    <ae-button face="toolbar">
+      <ae-icon name="share" />
+    </ae-button>
+  </ae-toolbar>
+``` 

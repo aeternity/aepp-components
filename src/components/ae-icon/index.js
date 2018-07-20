@@ -1,12 +1,16 @@
 /**
- * ae-icon
+ * Importing Components
  */
 import AeIcon from './ae-icon'
 
 /**
- * ae-icon instance
- * @param {Vue} Vue
+ * Exporting Install function for Vue
  */
 export const install = function (Vue) {
   Vue.component('ae-icon', AeIcon)
 }
+
+/**
+ * Exporting only component
+ */
+export default AeIcon

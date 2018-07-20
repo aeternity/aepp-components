@@ -12,18 +12,18 @@ export default {
    */
   props: {
     /**
-     * Address Value
+     * ae address value to be displayed
      */
-    value: String,
+    value: {
+      type: String,
+      required: true
+    },
 
     /**
-     * Set the length
-     * of the address
+     * Set the length of the address
+     * valid properties: `medium, short`
      */
-    length: {
-      type: String,
-      default: 'full'
-    },
+    length: String,
 
     /**
      * Set the grid gab between elements, either px's or rem's

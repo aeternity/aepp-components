@@ -54,6 +54,20 @@ export default {
     },
 
     /**
+     * Aligns the text `left, center, right`
+     */
+    align: {
+      type: String,
+      validator: function (value) {
+        return [
+          'left',
+          'right',
+          'center'
+        ].indexOf(value) !== 1
+      }
+    },
+
+    /**
      * Sets the Font weight of the text
      */
     weight: Number,

@@ -30,7 +30,7 @@
     "numeral": "^2.0.6",
     "qrious": "^4.0.2",
     "vue-clickaway": "^2.1.0",
-    "webfonts-loader": "^4.1.0"
+    "vue-touch": "^2.0.0-beta.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -61,12 +61,14 @@
     "sass-resources-loader": "^1.3.3",
     "string-loader": "0.0.1",
     "url-loader": "^0.6.2",
+    "vue": "^2.5.16",
     "vue-eslint-parser": "^2.0.3",
     "vue-jest": "^2.6.0",
     "vue-loader": "^13.5.0",
     "vue-styleguidist": "^1.7.12",
     "vue-template-compiler": "^2.5.16",
     "vue-test-utils": "^1.0.0-beta.7",
+    "webfonts-loader": "^4.1.0",
     "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-merge": "^4.1.1"

@@ -10,7 +10,8 @@
   transition: $base-transition-time;
   outline: none;
   border-bottom: 1px solid transparent;
-  color: $color-black;
+  margin: 0;
+  padding: 0;
 
   &.focus, &:focus {
     border-color: $color-black;
@@ -23,9 +24,7 @@
 }
 
 .ae-text.inherit {
-  font-size: inherit;
   color: inherit;
-  font-weight: inherit;
 
   &:focus {
     border-color: inherit;
@@ -35,40 +34,48 @@
 .ae-text.white {
   color: $color-white;
 
-  &:focus {
+  &.focus, &:focus {
     border-color: $color-white;
+  }
+}
+
+.ae-text.black {
+  color: $color-black;
+
+  &.focus, &:focus {
+    border-color: $color-black;
   }
 }
 
 .ae-text.neutral {
-  color: $color-white;
+  color: $color-neutral-minimum;
 
-  &:focus {
-    border-color: $color-white;
+  &.focus, &:focus {
+    border-color: $color-neutral-minimum;
   }
 }
 
 .ae-text.default {
-  color: $color-white;
+  color: $color-default-negative-3;
 
-  &:focus {
-    border-color: $color-white;
+  &.focus, &:focus {
+    border-color: $color-default-negative-3;
   }
 }
 
 .ae-text.emphasis {
-  color: $color-white;
+  color: $color-emphasis-negative-3;
 
-  &:focus {
-    border-color: $color-white;
+  &.focus, &:focus {
+    border-color: $color-emphasis-negative-3;
   }
 }
 
 .ae-text.alternative {
-  color: $color-white;
+  color: $color-alternative-negative-3;
 
-  &:focus {
-    border-color: $color-white;
+  &.focus, &:focus {
+    border-color: $color-alternative-negative-3;
   }
 }
 
@@ -114,4 +121,16 @@
 
 .ae-text.uppercase-xs {
   @extend %face-uppercase-xs;
+}
+
+.ae-toolbar.left {
+  text-align: left;
+}
+
+.ae-toolbar.center {
+  text-align: center;
+}
+
+.ae-toolbar.right {
+  text-align: right;
 }

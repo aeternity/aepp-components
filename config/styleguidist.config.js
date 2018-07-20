@@ -71,6 +71,11 @@ module.exports = {
   },
 
   /**
+   * Vue required library
+   */
+  require: [path.join(__dirname, 'global.requires.js')],
+
+  /**
    * Webpack configuration
    *
    * https://github.com/vue-styleguidist/vue-styleguidist/blob/master/docs/Configuration.md

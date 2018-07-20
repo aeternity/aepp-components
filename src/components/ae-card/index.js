@@ -1,12 +1,16 @@
 /**
- * ae-card
+ * Importing Components
  */
 import AeCard from './ae-card'
 
 /**
- * ae-card instance
- * @param {Vue} Vue
+ * Exporting Install function for Vue
  */
 export const install = function (Vue) {
   Vue.component('ae-card', AeCard)
 }
+
+/**
+ * Exporting only component
+ */
+export default AeCard

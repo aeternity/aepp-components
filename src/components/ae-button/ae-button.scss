@@ -55,6 +55,14 @@
   letter-spacing: em(1.1px);
   height: 16px;
   font-weight: 500;
+  color: inherit;
+
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
 
   > i {
     font-size: rem(14px);

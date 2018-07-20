@@ -217,6 +217,10 @@ module.exports = {
       amd: 'qrious',
       commonjs: 'qrious',
       commonjs2: 'qrious'
+    },
+    'vue-touch': {
+      commonjs: 'vue-touch',
+      commonjs2: 'vue-touch'
     }
   },
   performance: { hints: false },

@@ -19,11 +19,11 @@ export default {
     /**
      * Address of the wallet for which
      * the avatar is going to generate
-     * a blockie from.
+     * a blockies from.
      */
     address: {
       type: String,
-      default: ''
+      required: true
     }
   },
 

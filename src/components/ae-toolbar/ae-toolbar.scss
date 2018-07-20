@@ -14,10 +14,10 @@
   display: flex;
   flex-direction: row;
   height: rem(32px);
-  background: $color-neutral-positive-2;
   align-items: center;
   padding: 0 rem(16px);
   font-weight: 500;
+  background: $color-neutral-positive-2;
   color: $color-neutral-negative-1;
 }
 
@@ -28,18 +28,22 @@
 
 .ae-toolbar.neutral {
   background: $color-neutral-minimum;
+  color: $color-white;
 }
 
 .ae-toolbar.default {
   background: $color-default-negative-2;
+  color: $color-white;
 }
 
 .ae-toolbar.emphasis {
   background: $color-emphasis-negative-2;
+  color: $color-white;
 }
 
 .ae-toolbar.alternative {
   background: $color-alternative-negative-2;
+  color: $color-white;
 }
 
 .ae-toolbar.neutral,

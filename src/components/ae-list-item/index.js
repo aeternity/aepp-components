@@ -1,16 +1,16 @@
 /**
  * Importing Components
  */
-import AeToolbar from './ae-toolbar'
+import AeListItem from './ae-list-item'
 
 /**
  * Exporting Install function for Vue
  */
 export const install = function (Vue) {
-  Vue.component('ae-toolbar', AeToolbar)
+  Vue.component('ae-list-item', AeListItem)
 }
 
 /**
  * Exporting only component
  */
-export default AeToolbar
+export default AeListItem

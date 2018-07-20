@@ -20,6 +20,11 @@ export default {
      * Name of the icon, please check list of icons in
      * the ./icons folder inside the component
      */
-    name: String
+    name: String,
+
+    /**
+     * Set manually the size of the font icon
+     */
+    size: String
   }
 }

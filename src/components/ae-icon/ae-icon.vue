@@ -1,5 +1,5 @@
 <template>
-  <i class="ae-icon" :class="{ [`ae-icon-${name}`]: Boolean(name) }" />
+  <i class="ae-icon" :class="{ [`ae-icon-${name}`]: Boolean(name) }" :style="{ fontSize: size }" />
 </template>
 <style src="./ae-icon.scss" lang="scss" scoped />
 <script src="./ae-icon.js" />

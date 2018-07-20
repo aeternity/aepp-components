@@ -1,5 +1,5 @@
 ```jsx
-  <ae-icon />
+  <ae-icon name="active" size="24px" />
 ``` 
 
 ### name

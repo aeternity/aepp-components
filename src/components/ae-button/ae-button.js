@@ -1,5 +1,5 @@
 /**
- * ae-text component
+ * ae-button component
  */
 export default {
   /**

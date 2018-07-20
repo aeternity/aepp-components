@@ -12,7 +12,6 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  // height: 192px;
   border-radius: 4px;
   overflow: hidden;
   background: $color-neutral-positive-3;
@@ -21,19 +20,23 @@
 }
 
 .ae-card.neutral {
-  background: $color-neutral-minimum;
+  background: $color-neutral-negative-3;
+  color: $color-white;
 }
 
 .ae-card.default {
   background: $color-default-default;
+  color: $color-default-negative-3;
 }
 
 .ae-card.emphasis {
   background: $color-emphasis-emphasis;
+  color: $color-emphasis-negative-3;
 }
 
 .ae-card.alternative {
   background: $color-alternative-alternative;
+  color: $color-alternative-negative-3;
 }
 
 .ae-card-header {
@@ -44,11 +47,34 @@
   margin-bottom: rem(16px);
 }
 
+.ae-card-header-avatar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+
+  > .ae-avatar {
+    margin-right: rem(8px);
+  }
+}
+
 .ae-card-main {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: rem(16px);
+}
+
+.ae-card-main.top {
+  align-items: flex-start;
+}
+
+.ae-card-main.center {
+  align-items: center;
+}
+
+.ae-card-main.bottom {
+  align-items: flex-end;
 }
 
 .ae-card-footer {}
