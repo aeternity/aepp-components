@@ -15,7 +15,7 @@ module.exports = {
   /**
    * Documentation page Title
    */
-  title: require('../package.json').name,
+  title: require('../package.json').name + ' \n ' + 'Version: ' + require('../package.json').version,
 
   /**
    * Components folder
