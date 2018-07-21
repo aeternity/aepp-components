@@ -1,5 +1,7 @@
 <template>
-  <button class="ae-button" :class="{ [fill]: Boolean(fill), [face]: Boolean(face), disabled }">
+  <button class="ae-button"
+          :class="{ [fill]: Boolean(fill), [face]: Boolean(face), extend }"
+          @click="propagate">
     <slot />
   </button>
 </template>

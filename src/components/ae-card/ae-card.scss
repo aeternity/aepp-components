@@ -5,6 +5,7 @@
 //------------------------------
 
 .ae-card {
+  @include user-select;
   @extend %face-sans-base;
 
   position: relative;
