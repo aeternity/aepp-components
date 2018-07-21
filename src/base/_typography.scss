@@ -6,7 +6,6 @@
 
 h1, h2, h3, h4, h5, h6, p {
   line-height: $base-line-height;
-  color: $color-neutral-neutral;
   font-weight: normal;
 }
 
@@ -16,12 +15,15 @@ p {
 }
 
 a {
+  color: inherit;
   transition: all $base-transition-time;
-  color: $color-neutral-neutral;
+  opacity: 0.75;
+  font-weight: bold;
 
   &:hover,
   &:focus {
+    opacity: 1;
     text-decoration: underline;
-    color: $color-neutral-positive-1;
+    color: inherit;
   }
 }

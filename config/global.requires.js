@@ -1,4 +1,9 @@
 /**
+ * Importing SCSS
+ */
+import '@source/base/_index.scss'
+
+/**
  * Importing Libraries
  */
 import Vue from 'vue'

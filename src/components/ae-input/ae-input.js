@@ -10,7 +10,7 @@ export default {
   /**
    * Component Name
    */
-  name: 'ae-button',
+  name: 'ae-input',
 
   /**
    * Component Mixins
@@ -18,9 +18,32 @@ export default {
   mixins: [ events ],
 
   /**
+   * Component Data
+   */
+  data: function () {
+    return { focus: false }
+  },
+
+  /**
    * Component Props
    */
   props: {
+    /**
+     * ID of the component/input
+     */
+    id: String,
+
+    /**
+     * Temporary text appearing in the input box
+     */
+    placeholder: String,
+
+    /**
+     * Property to define label of input, used to set
+     * label
+     */
+    label: String,
+
     /**
      * Fill property changes the color state of the toolbar
      * select something between: `['neutral', 'default', 'emphasis', 'alternative]`
@@ -47,12 +70,15 @@ export default {
       validator: function (value) {
         return [
           'primary',
-          'secondary',
-          'icon',
-          'toolbar'
+          'secondary'
         ].indexOf(value) !== 1
       }
     },
+
+    /**
+     * Is there an error on input?
+     */
+    error: Boolean,
 
     /**
      * Extend the button full width

@@ -18,7 +18,7 @@ import AeIdentity from './aeIdentity'
 import AeIdentityAvatar from './aeIdentityAvatar'
 import AeIdentityLight from './aeIdentityLight'
 import AeIdentityBackground from './aeIdentityBackground'
-import AeInput from './aeInput'
+// import AeInput from './aeInput'
 import AeLabel from './aeLabel'
 import AeLink from './aeLink'
 import AeLoader from './aeLoader'
@@ -58,7 +58,7 @@ const AeppComponents = {
   AeIdentityAvatar,
   AeIdentityLight,
   AeIdentityBackground,
-  AeInput,
+  // AeInput,
   AeLabel,
   AeLink,
   AeLoader,
