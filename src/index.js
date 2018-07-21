@@ -1,7 +1,14 @@
 /**
  * Importing SCSS
  */
-import './base/_index.scss'
+import '@source/base/_index.scss'
+
+/**
+ * Vue Helpers
+ */
+export * as mixins from '@source/mixins'
+export * as directives from '@source/directives'
+export * as filters from '@source/filters'
 
 /**
  * Helper functions
