@@ -19,8 +19,12 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+
   &.focus {
     border-left: 2px solid $color-focus;
+  }
+  &.focus .ae-input-label {
+    color: $color-focus;
   }
   &.error {
     border-left: 2px solid $color-error;
@@ -28,8 +32,10 @@
   &.error .ae-input-label {
     color: $color-error;
   }
+
+  &.focus .ae-input-label:after,
   &.error .ae-input-label:after {
-    content: ' *';
+    content: '*';
   }
 }
 
@@ -71,4 +77,11 @@
   background: transparent;
   border: none;
   outline: none;
+}
+
+.ae-input.aemount {
+  @extend %face-mono-xl;
+
+  text-align: center;
+  font-weight: 300;
 }

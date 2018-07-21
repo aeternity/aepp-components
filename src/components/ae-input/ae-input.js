@@ -39,50 +39,32 @@ export default {
     placeholder: String,
 
     /**
+     * Define the type of the input
+     */
+    type: {
+      type: String,
+      default: 'text'
+    },
+
+    /**
      * Property to define label of input, used to set
      * label
      */
     label: String,
 
     /**
-     * Fill property changes the color state of the toolbar
-     * select something between: `['neutral', 'default', 'emphasis', 'alternative]`
+     * Activates the amount state of the component
      */
-    fill: {
-      type: String,
-      validator: function (value) {
-        return [
-          'neutral',
-          'default',
-          'emphasis',
-          'alternative'
-        ].indexOf(value) !== 1
-      }
-    },
+    aemount: Boolean,
 
     /**
-     * Face applies a shape/form to
-     * the current button, available options:
-     * `primary, secondary, icon, toolbar`
+     * Activates the Address state of the component
      */
-    face: {
-      type: String,
-      validator: function (value) {
-        return [
-          'primary',
-          'secondary'
-        ].indexOf(value) !== 1
-      }
-    },
+    aeddress: Boolean,
 
     /**
-     * Is there an error on input?
+     * Activates error state of the input field
      */
-    error: Boolean,
-
-    /**
-     * Extend the button full width
-     */
-    extend: Boolean
+    error: Boolean
   }
 }

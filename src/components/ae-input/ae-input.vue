@@ -13,6 +13,7 @@
              :type="type"
              :placeholder="placeholder"
              class="ae-input"
+             :class="{ aemount }"
              @focus="focus = true"
              @blur="focus = false"
              @keyup.enter="propagate"
