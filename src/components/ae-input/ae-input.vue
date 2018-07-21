@@ -16,7 +16,6 @@
              :class="{ aemount }"
              @focus="focus = true"
              @blur="focus = false"
-             @keyup.enter="propagate"
              @input="propagate" />
     </div>
     <!-- @slot footer slot, used for adding elements below the input -->
