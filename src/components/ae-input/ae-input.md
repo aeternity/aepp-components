@@ -42,11 +42,14 @@
 ``` 
 
 ```jsx
-  <ae-input label="Component" placeholder="0.0" aemount />
+  <ae-input label="Component" placeholder="0.0" aemount>
+    <ae-text slot="header" fill="black">AE</ae-text>
+  </ae-input>
 ``` 
 
 ```jsx
   <ae-input label="Component" placeholder="0.0" aemount error>
+    <ae-text slot="header" fill="black">AE</ae-text>
     <ae-toolbar slot="footer">
       0.05AE is the minimum amount to send!
     </ae-toolbar>

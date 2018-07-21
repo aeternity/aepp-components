@@ -13,7 +13,8 @@ export default {
   props: {
     /**
      * Fill property changes the color state of the toolbar
-     * select something between: `['neutral', 'default', 'emphasis', 'alternative]`
+     * select something between:
+     * `neutral, default, emphasis, alternative, white, black, inherit`
      */
     fill: String,
 

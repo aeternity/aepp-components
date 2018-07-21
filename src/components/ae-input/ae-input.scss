@@ -22,12 +22,14 @@
 
   &.focus {
     border-left: 2px solid $color-focus;
+    caret-color: $color-focus;
   }
   &.focus .ae-input-label {
     color: $color-focus;
   }
   &.error {
     border-left: 2px solid $color-error;
+    caret-color: $color-error;
   }
   &.error .ae-input-label {
     color: $color-error;

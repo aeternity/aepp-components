@@ -16,6 +16,7 @@ html, body {
   font-weight: normal;
   line-height: $base-line-height;
   box-sizing: border-box;
+  caret-color: $color-error;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;

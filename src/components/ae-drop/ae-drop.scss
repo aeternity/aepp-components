@@ -1,0 +1,99 @@
+//------------------------------
+// *****************************
+// ae-drop
+// *****************************
+//------------------------------
+
+.ae-drop {
+  position: relative;
+  display: inline-block;
+
+  &.active > .ae-drop-menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000;
+  }
+}
+
+.ae-drop-button {
+  @include user-select;
+  @include size(48px);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  transition: all $base-transition-time;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.65;
+  }
+}
+
+.ae-drop-menu {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1000;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: $color-white;
+  box-shadow: 0 0 16px rgba(#1B4479, 0.15);
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 160px;
+  transition: all $base-transition-time;
+
+  > li {
+    @extend %face-sans-s;
+
+    font-weight: 500;
+    list-style: none;
+    color: $color-neutral-negative-3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    padding: 0 rem(16px);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  > li .ae-icon {
+    margin-right: rem(8px);
+  }
+
+  > li .ae-button, > li a {
+    font-weight: 500;
+    color: $color-neutral-negative-3;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+  }
+
+  &.left {
+    top: 0;
+    left: 0;
+  }
+
+  &.right {
+    top: 0;
+    right: 0;
+  }
+}
