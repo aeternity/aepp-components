@@ -2,21 +2,21 @@
   <ae-text>Hello World</ae-text>
 ``` 
 
-### contenteditable
+### prop: contenteditable
 ```jsx
   <ae-text contenteditable>
     Hello World
   </ae-text>
 ``` 
 
-### fill
+### prop: fill
 ```jsx
   <ae-text>
     Hello World
   </ae-text>
 ``` 
 
-### face
+### prop: face
 ```jsx
   <ae-text face="sans-l">
     sans-l
@@ -83,7 +83,7 @@
   </ae-text>
 ``` 
 
-### weight
+### prop: weight
 ```jsx
   <ae-text weight=400>
     weight: 400
@@ -102,21 +102,21 @@
   </ae-text>
 ``` 
 
-### focus
+### prop: focus
 ```jsx
   <ae-text focus>
     focused state
   </ae-text>
 ``` 
 
-### disabled
+### prop: disabled
 ```jsx
   <ae-text disabled>
     disabled state
   </ae-text>
 ``` 
 
-### disabled & focused
+### prop: disabled & focused
 ```jsx
   <ae-text focus disabled>
     disabled state

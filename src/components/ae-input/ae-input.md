@@ -1,7 +1,8 @@
 ```jsx
-  <ae-input placeholder="Plain" />
+  <ae-input />
 ``` 
 
+### prop: label
 ```jsx
   <ae-input label="With Header">
     <template slot="header">
@@ -10,15 +11,12 @@
    </ae-input>
 ``` 
 
+### prop: placeholder
 ```jsx
-  <ae-input placeholder="component">
-    <ae-toolbar slot="footer">
-      This field is mandatory
-    </ae-toolbar>
-  </ae-input>
+  <ae-input placeholder="component" />
 ``` 
 
-
+### slot: footer
 ```jsx
   <ae-input label="Component" placeholder="...">
     <template slot="header">
@@ -30,6 +28,7 @@
   </ae-input>
 ``` 
 
+### prop: error
 ```jsx
   <ae-input label="Component" placeholder="..." error>
     <template slot="header">
@@ -41,6 +40,7 @@
   </ae-input>
 ``` 
 
+### prop: aemount
 ```jsx
   <ae-input label="Component" placeholder="0.0" aemount>
     <ae-text slot="header" fill="black">AE</ae-text>

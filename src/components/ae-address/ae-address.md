@@ -1,4 +1,3 @@
-### default 
 ```jsx
   <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
 ``` 

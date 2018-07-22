@@ -2,7 +2,7 @@
   <ae-button>Hello World</ae-button>
 ``` 
 
-### face
+### prop: face
 
 #### **primary**
 ```jsx
@@ -148,7 +148,7 @@
   <ae-button face="toolbar">Hello World</ae-button>
 ``` 
 
-### fill
+### prop: fill
 ```jsx
   <ae-button fill="neutral">Hello World</ae-button>
 ``` 
@@ -163,4 +163,9 @@
 
 ```jsx
   <ae-button fill="emphasis">Hello World</ae-button>
+``` 
+
+### prop: extend
+```jsx
+  <ae-button extend>Hello World</ae-button>
 ``` 

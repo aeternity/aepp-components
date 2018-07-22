@@ -2,7 +2,7 @@
   <ae-icon name="active"/>
 ``` 
 
-### name
+### prop: name
 ```jsx
   <div>
     <ae-icon name="active" />
@@ -32,10 +32,11 @@
     <ae-icon name="share" />
     <ae-icon name="shield" />
     <ae-icon name="shield-fill" />
+    <ae-icon name="more" />
   </div>
 ``` 
 
-### fill
+### prop: fill
 ```jsx
   <div>
     <ae-icon fill="neutral" name="active" />
@@ -54,14 +55,14 @@
   </div>
 ``` 
 
-### face
+### prop: face
 ```jsx
   <div>
     <ae-icon face="round" name="save" />
   </div>
 ``` 
 
-### size
+### prop: size
 ```jsx
   <ae-icon name="active" size="48px" />
 ``` 

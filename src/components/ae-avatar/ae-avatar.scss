@@ -12,6 +12,14 @@
   overflow: hidden;
   box-shadow: 0 0 8px $color-shadow-alpha-15;
   border-radius: 50%;
-  min-width: 32px;
-  min-height: 32px;
+
+  > img {
+    @include center-both;
+
+    max-width: 100%;
+  }
+}
+
+.ae-avatar.small {
+  @include size(20px);
 }

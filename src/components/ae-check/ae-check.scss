@@ -1,0 +1,197 @@
+//------------------------------
+// *****************************
+// ae-check
+// TODO: This here
+// *****************************
+//------------------------------
+
+.ae-check {
+  @include user-select;
+
+  cursor: pointer;
+  position: relative;
+  line-height: 1;
+
+  > span {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-family: $font-sans;
+    font-weight: normal;
+    font-size: rem(14px);
+  }
+
+  > input[type="radio"],
+  > input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+  }
+
+  > input[type="radio"]:checked + span,
+  > input[type="checkbox"]:checked + span {
+    color: $color-neutral-neutral;
+  }
+
+  > input[type="radio"]:disabled + span,
+  > input[type="checkbox"]:disabled + span {
+    cursor: not-allowed;
+  }
+}
+
+.ae-check.primary {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+
+  > span {
+    display: inline-block;
+    white-space: nowrap;
+    color: $color-neutral-neutral;
+    padding-left: 45px;
+    vertical-align: top;
+    transition: all $base-transition-time;
+  }
+
+  > span:before,
+  > span:after {
+    transition: all $base-transition-time;
+    content: ' ';
+    position: absolute;
+    display: inline-block;
+  }
+
+  > span:before {
+    @include size(38px, 20px);
+
+    left: 0;
+    border-radius: 20px;
+    background: $color-neutral-neutral;
+    box-shadow: inset 1px 1px 3px 0 rgba($color-black, 0.1),
+    inset -3px 3px 4px 0 rgba($color-black, 0.1);
+  }
+
+  > span:after {
+    @include size(16px);
+
+    top: 2px;
+    left: 2px;
+    background: $color-white;
+    border-radius: 50%;
+  }
+
+  &:hover > span {
+    color: $color-neutral-neutral;
+  }
+
+  > input[type="radio"]:checked + span,
+  > input[type="checkbox"]:checked + span {
+    color: $color-neutral-neutral;
+  }
+
+  > input[type="radio"]:checked + span:before,
+  > input[type="checkbox"]:checked + span:before {
+      background: $color-neutral-neutral;
+  }
+
+  > input[type="radio"]:disabled + span:before,
+  > input[type="checkbox"]:disabled + span:before {
+    box-shadow: none;
+    background: $color-neutral-neutral;
+  }
+
+  > input[type="radio"]:checked + span:after,
+  > input[type="checkbox"]:checked + span:after {
+    left: 20px;
+  }
+}
+
+.ae-check.primary.right {
+  > span {
+    padding-left: 0;
+    padding-right: 45px;
+  }
+
+  > span:before {
+    left: auto;
+    right: 0;
+  }
+
+  > span:after {
+    left: auto;
+    right: 20px;
+  }
+
+  > input[type="radio"]:checked + span:after,
+  > input[type="checkbox"]:checked + span:after {
+    left: auto;
+    right: 2px;
+  }
+}
+
+.ae-check.secondary {
+  display: inline-block;
+
+  > span {
+    transition: all $base-transition-time;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 25px;
+    white-space: nowrap;
+    color: $color-neutral-neutral;
+    font-weight: bold;
+  }
+
+  > span:before,
+  > span:after {
+    transition: all $base-transition-time;
+    position: absolute;
+    content: ' ';
+    display: inline-block;
+  }
+
+  > span:before {
+    @include size(20px);
+
+    left: 0;
+    background: $color-neutral-neutral;
+    border-radius: 50%;
+    vertical-align: top;
+  }
+
+  > span:after {
+    @include size(18px);
+
+    top: 1px;
+    left: 1px;
+    border-radius: 50%;
+    background: $color-white;
+  }
+
+  &:hover > span {
+    color: $color-neutral-neutral;
+  }
+
+  &:hover > span:before {
+    background: $color-neutral-neutral;
+  }
+
+  > input[type="radio"]:checked + span:before,
+  > input[type="checkbox"]:checked + span:before {
+    background: $color-neutral-neutral;
+  }
+
+  > input[type="radio"]:checked + span:after,
+  > input[type="checkbox"]:checked + span:after {
+    @include size(10px);
+
+    top: 5px;
+    left: 5px;
+  }
+
+  & > input[type="radio"]:disabled + span:before,
+  & > input[type="radio"]:disabled + span:after,
+  & > input[type="checkbox"]:disabled + span:before,
+  & > input[type="checkbox"]:disabled + span:after {
+    background: $color-neutral-neutral;
+  }
+}

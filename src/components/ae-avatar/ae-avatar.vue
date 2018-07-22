@@ -1,5 +1,5 @@
 <template>
-  <div class="ae-avatar">
+  <div class="ae-avatar" :class="{ [size]: Boolean(size) }">
     <img :src="blockieDataURL" :alt="address">
   </div>
 </template>

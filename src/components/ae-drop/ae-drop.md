@@ -14,6 +14,7 @@
 </ae-drop>
 ```
 
+### prop: direction
 ```jsx
 <ae-drop direction="left">
   <ae-icon name="list" size="20px" slot="button" />

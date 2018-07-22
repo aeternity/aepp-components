@@ -12,14 +12,25 @@ export default {
    */
   props: {
     /**
-     * Fill property changes the color state of the toolbar
-     * select something between: `neutral, default, emphasis, alternative`
+     * Fill property changes the color state
+     * of the card select something between:
+     * `neutral, default, emphasis, alternative`
      */
-    fill: String,
+    fill: {
+      type: String,
+      validator: function (value) {
+        return [
+          'neutral',
+          'default',
+          'alternative',
+          'emphasis'
+        ].indexOf(value) !== 1
+      }
+    },
 
     /**
-     * Aligns the items in the main container, available values:
-     * `top, center, bottom`
+     * Aligns the items in the main container,
+     * available values: `top, center, bottom`
      */
     align: {
       type: String,

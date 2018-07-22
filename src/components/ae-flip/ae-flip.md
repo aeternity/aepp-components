@@ -1,4 +1,3 @@
-### component
 ```jsx
   <div style="height: 230px">
     <ae-flip>

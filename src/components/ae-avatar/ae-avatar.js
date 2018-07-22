@@ -24,6 +24,17 @@ export default {
     address: {
       type: String,
       required: true
+    },
+
+    /**
+     * Set the avatar size, valid sizes:
+     * `small`
+     */
+    size: {
+      type: String,
+      validator: function (value) {
+        return ['small'].indexOf(value) !== -1
+      }
     }
   },
 

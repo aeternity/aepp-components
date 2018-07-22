@@ -5,7 +5,7 @@
   </ae-toolbar>
 ``` 
 
-### fill
+### prop: fill
 ```jsx
   <ae-toolbar fill="neutral">
     neutral fill
@@ -30,7 +30,7 @@
   </ae-toolbar>
 ```
 
-### align & slots
+### slot: left, right
 ```jsx
   <ae-toolbar>
     <span slot="left">Left</span>
@@ -71,7 +71,7 @@
   </ae-toolbar>
 ``` 
 
-### disabled
+### prop: disabled
 ```jsx
   <ae-toolbar disabled>
     disabled
@@ -102,7 +102,7 @@
   </ae-toolbar>
 ```
 
-### icons
+### buttons
 ```jsx
   <ae-toolbar align="right">
     <ae-button face="toolbar">

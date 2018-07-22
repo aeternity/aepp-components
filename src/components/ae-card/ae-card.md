@@ -1,9 +1,8 @@
-### component
 ```jsx
   <ae-card>Hello world!</ae-card>
 ``` 
 
-### front
+### prop: fill
 ```jsx
 <ae-card>
   <template slot="avatar">
@@ -33,7 +32,7 @@
 ``` 
 
 ```jsx
-<ae-card fill=default>
+<ae-card fill="default">
   <template slot="avatar">
     <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
     <ae-text fill="white" contenteditable>My Account</ae-text>
@@ -119,7 +118,6 @@
 </ae-card>
 ``` 
 
-### back
 ```jsx
   <ae-card fill="neutral" align="center">
     <ae-qrcode slot="left" :options="{ size: 136 }" />
