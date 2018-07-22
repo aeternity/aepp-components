@@ -13,7 +13,7 @@
   align-items: center;
   font-family: $font-sans;
   border: none;
-  height: auto;
+  height: 32px;
   padding: 0;
   cursor: pointer;
   outline: none;
@@ -46,7 +46,7 @@
   font-weight: bold;
   height: 56px;
   border-radius: 32px;
-  box-shadow: 0 0 16px rgba(27, 68, 121, 0.15);
+  box-shadow: 0 0 16px $color-shadow-alpha-15;
   color: $color-white;
   padding: 0 rem(16px);
 
@@ -130,7 +130,7 @@
   background: $color-neutral-neutral;
   font-size: rem(20px);
   border-radius: 50%;
-  box-shadow: 0 0 16px rgba(27, 68, 121, 0.15);
+  box-shadow: 0 0 16px $color-shadow-alpha-15;
   color: $color-white;
   padding: 0 rem(16px);
 

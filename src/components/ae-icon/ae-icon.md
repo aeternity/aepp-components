@@ -1,9 +1,8 @@
 ```jsx
-  <ae-icon name="active" size="24px" />
+  <ae-icon name="active"/>
 ``` 
 
 ### name
-
 ```jsx
   <div>
     <ae-icon name="active" />
@@ -34,4 +33,35 @@
     <ae-icon name="shield" />
     <ae-icon name="shield-fill" />
   </div>
+``` 
+
+### fill
+```jsx
+  <div>
+    <ae-icon fill="neutral" name="active" />
+    <ae-icon fill="default" name="back" />
+    <ae-icon fill="alternative" name="copy" />
+    <ae-icon fill="emphasis" name="delete" />
+  </div>
+``` 
+
+```jsx
+  <div>
+    <ae-icon fill="neutral" face="round" name="active" />
+    <ae-icon fill="default" face="round" name="device" />
+    <ae-icon fill="alternative" face="round" name="shield-fill" />
+    <ae-icon fill="emphasis" face="round" name="edit" />
+  </div>
+``` 
+
+### face
+```jsx
+  <div>
+    <ae-icon face="round" name="save" />
+  </div>
+``` 
+
+### size
+```jsx
+  <ae-icon name="active" size="48px" />
 ``` 

@@ -9,8 +9,8 @@
         <slot name="header" />
       </div>
       <!-- Input tag -->
-      <input :id="id"
-             :type="type"
+      <input :type="type"
+             :id="id"
              :placeholder="placeholder"
              class="ae-input"
              :class="{ aemount }"

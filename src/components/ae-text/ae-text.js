@@ -21,19 +21,9 @@ export default {
     /**
      * Face applies a font-style to the current text
      * expects one of the following values:
-     * `[
-          'sans-l',
-          'sans-base',
-          'sans-s',
-          'sans-xs',
-          'mono-xl',
-          'mono-base',
-          'mono-s',
-          'mono-xs',
-          'tracked-base',
-          'uppercase-base',
-          'uppercase-xs'
-        ]`
+     * `sans-l, sans-base, sans-s, sans-xs`
+     * `mono-xl, mono-base, mono-s, mono-xs`
+     * `tracked-base, uppercase-base, uppercase-xs`
      */
     face: {
       type: String,

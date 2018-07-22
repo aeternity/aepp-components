@@ -5,7 +5,9 @@
           <slot name="button" />
         </button>
       </v-touch>
-      <ul class="ae-drop-menu" :class="{ [direction]: Boolean(direction) }">
+      <ul class="ae-drop-menu"
+          :class="{ [direction]: Boolean(direction) }"
+          @click.capture="deactivate">
         <slot />
       </ul>
     </div>

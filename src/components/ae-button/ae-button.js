@@ -22,8 +22,8 @@ export default {
    */
   props: {
     /**
-     * Fill property changes the color state of the toolbar
-     * select something between: `['neutral', 'default', 'emphasis', 'alternative]`
+     * Fill property changes the color state of the button
+     * select something between: `neutral, default, emphasis, alternative`
      */
     fill: {
       type: String,

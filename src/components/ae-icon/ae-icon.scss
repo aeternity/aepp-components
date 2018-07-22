@@ -4,6 +4,25 @@
 // *****************************
 //------------------------------
 
+.ae-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &.neutral {
+    color: $color-neutral-minimum;
+  }
+  &.default {
+    color: $color-default-default;
+  }
+  &.alternative {
+    color: $color-alternative-alternative;
+  }
+  &.emphasis {
+    color: $color-emphasis-emphasis;
+  }
+}
+
 .ae-icon:before {
   font-style: normal;
   font-weight: normal;
@@ -11,8 +30,33 @@
   text-transform: none;
   speak: none;
 
-
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.ae-icon.round {
+  @include size(32px);
+
+  color: $color-white;
+  background: $color-neutral-neutral;
+  border-radius: 50%;
+  box-shadow: 0 0 16px $color-shadow-alpha-15;
+
+  &.neutral {
+    background: $color-neutral-maximum;
+    color: $color-neutral-minimum;
+  }
+  &.default {
+    background: $color-default-default;
+    color: $color-white;
+  }
+  &.alternative {
+    background: $color-alternative-alternative;
+    color: $color-white;
+  }
+  &.emphasis {
+    background: $color-emphasis-emphasis;
+    color: $color-white;
+  }
 }
