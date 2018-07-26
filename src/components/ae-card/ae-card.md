@@ -7,7 +7,7 @@
 <ae-card>
   <template slot="avatar">
     <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
-    <ae-text fill="white" contenteditable>My Account</ae-text>
+    <ae-text contenteditable>My Account</ae-text>
   </template>
   <template slot="header">
     <ae-text fill="white" face="mono-base">20.65 AE</ae-text>
