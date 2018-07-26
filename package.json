@@ -21,7 +21,7 @@
     "docs": "vue-styleguidist server --verbose --config config/styleguidist.config.js",
     "docs:build": "vue-styleguidist build --verbose --config config/styleguidist.config.js",
     "prepublish": "npm test",
-    "prepare": "NODE_ENV=production npm run build"
+    "prepare": "npm run build"
   },
   "dependencies": {
     "ethereum-blockies-png": "git+https://github.com/acdbaykal/ethereum-blockies-png.git",
