@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeListItem from './ae-list-item'
+import AeListItem from './ae-list-item.vue'
 
 /**
  * Exporting Install function for Vue

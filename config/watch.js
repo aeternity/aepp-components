@@ -7,7 +7,7 @@ var webpack = require('webpack');
 /**
  * Running Webpack Build Process
  */
-webpack(require('./webpack.config.js')).watch({ // watch options:
+webpack(Object.assign(require('./webpack.config.js'), require('./webpack.bundle.js')).watch({ // watch options:
   aggregateTimeout: 300, // wait so long for more changes
   poll: true // use polling instead of native watchers
   // pass a number to set the polling interval

@@ -6,7 +6,7 @@ import VueTouch from 'vue-touch'
 /**
  * Importing Components
  */
-import AeDrop from './ae-drop'
+import AeDrop from './ae-drop.vue'
 
 /**
  * Exporting Install function for Vue

@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeCheck from './ae-check'
+import AeCheck from './ae-check.vue'
 
 /**
  * Exporting Install function for Vue

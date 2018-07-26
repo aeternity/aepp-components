@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeAvatar from './ae-avatar'
+import AeAvatar from './ae-avatar.vue'
 
 /**
  * Exporting Install function for Vue

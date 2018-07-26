@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeAddress from './ae-address'
+import AeAddress from './ae-address.vue'
 
 /**
  * Exporting Install function for Vue

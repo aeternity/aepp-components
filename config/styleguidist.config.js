@@ -9,6 +9,12 @@ require('dotenv').config()
 const path = require('path')
 
 /**
+ * Importing Webpack related libraries
+ * @type {webpack}
+ */
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+/**
  * Exporting
  */
 module.exports = {
@@ -80,7 +86,15 @@ module.exports = {
    *
    * https://github.com/vue-styleguidist/vue-styleguidist/blob/master/docs/Configuration.md
    */
-  webpackConfig: Object.assign(require('./webpack.config'), {
+  webpackConfig: Object.assign(require('./webpack.config.js'), {
+    plugins: [
+      // Extract CSS
+      new ExtractTextPlugin({
+        filename: '[name].css',
+        disable: false,
+        allChunks: true
+      })
+    ],
     devtool: 'source-map'
   })
 }

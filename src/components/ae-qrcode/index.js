@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeQRCode from './ae-qrcode'
+import AeQRCode from './ae-qrcode.vue'
 
 /**
  * Exporting Install function for Vue

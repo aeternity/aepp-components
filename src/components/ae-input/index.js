@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeInput from './ae-input'
+import AeInput from './ae-input.vue'
 
 /**
  * Exporting Install function for Vue

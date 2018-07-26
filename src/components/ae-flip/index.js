@@ -6,7 +6,7 @@ import VueTouch from 'vue-touch'
 /**
  * Importing Components
  */
-import AeFlip from './ae-flip'
+import AeFlip from './ae-flip.vue'
 
 /**
  * Exporting Install function for Vue

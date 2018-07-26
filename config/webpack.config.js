@@ -13,25 +13,12 @@ const path = require('path')
  * @type {webpack}
  */
 const webpack = require('webpack')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 /**
  * Exporting Webpack config object
  */
 module.exports = {
-  entry: {
-    'aepp.base': './src/base/_index.scss',
-    'aepp.components': './src/index.js'
-  },
-  output: {
-    path: path.resolve(__dirname, '../build'),
-    filename: '[name].js',
-    libraryTarget: 'umd',
-    library: '@aeternity/aepp-components',
-    umdNamedDefine: true
-  },
   module: {
     rules: [
       {
@@ -164,25 +151,10 @@ module.exports = {
     }
   },
   plugins: [
-    // Bundle Analyzer
-    new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: false }),
     // Define global environment variables
     new webpack.EnvironmentPlugin(process.env),
-    // Extract CSS
-    new ExtractTextPlugin({
-      filename: '[name].css',
-      disable: false,
-      allChunks: true
-    }),
     // https://webpack.js.org/plugins/module-concatenation-plugin/
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    // https://github.com/johnagan/clean-webpack-plugin
-    new CleanWebpackPlugin(['build'], {
-      root: path.resolve(__dirname, '..'),
-      exclude: [],
-      verbose: true,
-      dry: false
-    })
+    new webpack.optimize.ModuleConcatenationPlugin()
   ],
   resolve: {
     alias: {

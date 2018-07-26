@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeIcon from './ae-icon'
+import AeIcon from './ae-icon.vue'
 
 /**
  * Exporting Install function for Vue

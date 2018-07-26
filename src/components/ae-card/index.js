@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeCard from './ae-card'
+import AeCard from './ae-card.vue'
 
 /**
  * Exporting Install function for Vue

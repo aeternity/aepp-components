@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeButton from './ae-button'
+import AeButton from './ae-button.vue'
 
 /**
  * Exporting Install function for Vue

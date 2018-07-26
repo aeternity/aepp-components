@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeToolbar from './ae-toolbar'
+import AeToolbar from './ae-toolbar.vue'
 
 /**
  * Exporting Install function for Vue

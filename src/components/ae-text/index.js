@@ -1,7 +1,7 @@
 /**
  * Importing Components
  */
-import AeText from './ae-text'
+import AeText from './ae-text.vue'
 
 /**
  * Exporting Install function for Vue
