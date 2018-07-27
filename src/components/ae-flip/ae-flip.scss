@@ -49,7 +49,7 @@
 }
 
 .ae-flip-front {
-  z-index: 2;
+  z-index: $stack-1;
   transform: rotateY(0deg);
 }
 

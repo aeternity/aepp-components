@@ -1,88 +1,55 @@
+/**
+ * Importing all components
+ */
 import AeAddress from './ae-address'
 import AeAvatar from './ae-avatar'
+import AeButton from './ae-button'
 import AeCard from './ae-card'
+import AeCheck from './ae-check'
+import AeDrop from './ae-drop'
 import AeFlip from './ae-flip'
 import AeIcon from './ae-icon'
+import AeInput from './ae-input'
+import AeList from './ae-list'
+import AeListItem from './ae-list-item'
 import AeQRCode from './ae-qrcode'
+import AeText from './ae-text'
 import AeToolbar from './ae-toolbar'
-import AeAmount from './aeAmount'
-import AeAmountInput from './aeAmountInput'
-import AeBadge from './aeBadge'
-import AeBanner from './aeBanner'
-import AeButton from './aeButton'
-import AeFilterItem from './aeFilterItem'
-import AeFilterList from './aeFilterList'
-import AeFilterSeparator from './aeFilterSeparator'
-import AeHeader from './aeHeader'
-import AeIdentity from './aeIdentity'
-import AeIdentityAvatar from './aeIdentityAvatar'
-import AeIdentityLight from './aeIdentityLight'
-import AeIdentityBackground from './aeIdentityBackground'
-// import AeInput from './aeInput'
-import AeLabel from './aeLabel'
-import AeLink from './aeLink'
-import AeLoader from './aeLoader'
-import AeMain from './aeMain'
-import AeModal from './aeModal'
-import AeModalLight from './aeModalLight'
-import AeOverlay from './aeOverlay'
-import AePanel from './aePanel'
-import AeSwitch from './aeSwitch'
-import AeTextarea from './aeTextarea'
-import AeAppIcon from './aeAppIcon'
-// import AeIcon from './aeIcon'
-// import AeAddress from './aeAddress'
-import AeAddressInput from './aeAddressInput'
-import AeTextInput from './aeTextInput'
-import AeDivider from './aeDivider'
-import AeLabelledTextInput from './aeLabelledTextInput'
 
-const AeppComponents = {
+/**
+ * Generating an object with references
+ * to the components
+ */
+const components = {
   AeAddress,
   AeAvatar,
+  AeButton,
   AeCard,
+  AeCheck,
+  AeDrop,
   AeFlip,
   AeIcon,
+  AeInput,
+  AeList,
+  AeListItem,
   AeQRCode,
-  AeToolbar,
-  AeAmount,
-  AeAmountInput,
-  AeBadge,
-  AeBanner,
-  AeButton,
-  AeFilterItem,
-  AeFilterList,
-  AeFilterSeparator,
-  AeHeader,
-  AeIdentity,
-  AeIdentityAvatar,
-  AeIdentityLight,
-  AeIdentityBackground,
-  // AeInput,
-  AeLabel,
-  AeLink,
-  AeLoader,
-  AeMain,
-  AeModal,
-  AeModalLight,
-  AeOverlay,
-  AePanel,
-  AeSwitch,
-  AeTextarea,
-  AeAppIcon,
-  // AeIcon,
-  // AeAddress,
-  AeAddressInput,
-  AeTextInput,
-  AeDivider,
-  AeLabelledTextInput
+  AeText,
+  AeToolbar
 }
 
-AeppComponents.install = Vue =>
-  Object
-  .keys(AeppComponents)
+/**
+ * Generating install function
+ * @param Vue
+ */
+components.install = function (Vue) {
+  return Object
+  .keys(components)
   .filter(component => component !== 'install')
-  .map(component => AeppComponents[component])
-  .forEach(Vue.use)
+  .map(component => components[component])
+  .forEach(Vue.use.bind(Vue))
+}
 
-export default AeppComponents
+/**
+ * Exporting reference list
+ */
+export default components

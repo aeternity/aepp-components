@@ -11,7 +11,7 @@
   &.active > .ae-drop-menu {
     opacity: 1;
     visibility: visible;
-    z-index: 1000;
+    z-index: $stack-4;
   }
 }
 
@@ -43,7 +43,7 @@
 .ae-drop-menu {
   opacity: 0;
   visibility: hidden;
-  z-index: -1000;
+  z-index: $stack-4;
   padding: 0;
   margin: 0;
   position: absolute;
