@@ -31,8 +31,24 @@ export default {
         return [
           'neutral',
           'default',
-          'emphasis',
-          'alternative'
+          'alternative',
+          'emphasis'
+        ].indexOf(value) !== 1
+      }
+    },
+
+    /**
+     * color property changes the text color of the button
+     * select something between: `neutral, default, emphasis, alternative`
+     */
+    color: {
+      type: String,
+      validator: function (value) {
+        return [
+          'neutral',
+          'default',
+          'alternative',
+          'emphasis'
         ].indexOf(value) !== 1
       }
     },

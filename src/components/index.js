@@ -3,6 +3,8 @@
  */
 import AeAddress from './ae-address'
 import AeAvatar from './ae-avatar'
+import AeBackdrop from './ae-backdrop'
+import AeBadge from './ae-badge'
 import AeButton from './ae-button'
 import AeCard from './ae-card'
 import AeCheck from './ae-check'
@@ -23,6 +25,8 @@ import AeToolbar from './ae-toolbar'
 const components = {
   AeAddress,
   AeAvatar,
+  AeBackdrop,
+  AeBadge,
   AeButton,
   AeCard,
   AeCheck,

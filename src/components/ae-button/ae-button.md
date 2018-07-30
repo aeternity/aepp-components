@@ -143,6 +143,24 @@
   </div>
 ``` 
 
+### prop: color
+```jsx
+  <ae-button color="neutral">Hello World</ae-button>
+``` 
+
+```jsx
+  <ae-button color="default">Hello World</ae-button>
+``` 
+
+```jsx
+  <ae-button color="alternative">Hello World</ae-button>
+``` 
+
+```jsx
+  <ae-button color="emphasis">Hello World</ae-button>
+``` 
+
+
 #### **toolbar**
 ```jsx
   <ae-button face="toolbar">Hello World</ae-button>

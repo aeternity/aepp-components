@@ -31,7 +31,15 @@
   <ae-badge>
     Hello world
     <ae-button face="toolbar">
-      <ae-icon name="close" />
+      <ae-icon name="close" size="12px" />
     </ae-button>
+  </ae-badge>
+``` 
+
+### prop: disabled
+
+```jsx
+  <ae-badge disabled>
+    Disabled
   </ae-badge>
 ``` 
