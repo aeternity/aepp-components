@@ -35,44 +35,29 @@ export default {
     },
 
     /**
-     * Fill property changes the color state of the button
-     * select something between: `neutral, default, emphasis, alternative`
+     * Align the content slot:
+     * `left`
      */
-    fill: {
+    align: {
       type: String,
       validator: function (value) {
         return [
-          'primary'
+          'left'
         ].indexOf(value) !== 1
       }
     },
 
     /**
-     * Face applies a shape/form to
-     * the current button, available options:
-     * `primary, secondary, icon, toolbar`
+     * Extend the check component full width
      */
-    face: {
-      type: String,
-      validator: function (value) {
-        return [
-          'primary',
-          'secondary'
-        ].indexOf(value) !== 1
-      }
-    },
+    extend: Boolean,
 
     /**
-     * Direction of the text
+     * Puts the component in disabled state
      */
-    direction: {
-      type: String,
-      validator: function (value) {
-        return [
-          'left',
-          'right'
-        ].indexOf(value) !== 1
-      }
+    disabled: {
+      type: Boolean,
+      default: false
     }
   }
 }
