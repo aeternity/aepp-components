@@ -1,5 +1,5 @@
 <template>
-  <div class="ae-badge" :class="{}">
+  <div class="ae-badge">
     <slot />
   </div>
 </template>

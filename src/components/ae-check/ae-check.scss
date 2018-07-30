@@ -47,9 +47,9 @@
 
   position: relative;
   display: inline-block;
-  padding-left: 32px;
-  min-width: 32px;
-  min-height: 24px;
+  padding-left: rem(32px);
+  min-width: rem(32px);
+  min-height: rem(24px);
   transition: all $base-transition-time;
 
   &:before, &:after {
@@ -75,7 +75,7 @@
     @include size(24px);
 
     background: url("./images/check.svg") no-repeat center;
-    background-size: 12px;
+    background-size: rem(12px);
     opacity: 0;
   }
 }
