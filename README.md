@@ -7,12 +7,18 @@ navigation: 3
 # æternity æpp Components
 
 ## Overview
-The æternity æpp components are meant to provide æpp developers with reusable [Vue.js](https://vuejs.org) components that adhere to our [styleguide](https://github.com/aeternity/aepp-prototypes). Until the javascript comes bundled please use a build process such as [webpack](https://webpack.js.org/), [browserify](http://browserify.org/), [grunt](https://gruntjs.com/), [gulp](https://gulpjs.com/), etc.
+The æternity æpp components are meant to provide æpp developers with reusable [Vue.js](https://vuejs.org) components 
+that adhere to our [styleguide](https://github.com/aeternity/aepp-prototypes). The javascript comes unbundled so
+please use a build process such as [webpack](https://webpack.js.org/), [browserify](http://browserify.org/), 
+[grunt](https://gruntjs.com/), [gulp](https://gulpjs.com/), etc.
 
 The github repository is [here](https://github.com/aeternity/aepp-components).
 
 ## Hackathon Notice
-We've rewritten and refactored the components for better usage in the hackathon (24.11.2017). Beware that the currently existing apps (like identity, aexistence/notary, wall, et cetera) still use older versions of this repository. In the near future we will update these repositories to use the latest aepp-components.
+We've rewritten and refactored the components for better usage in the hackathon (24.11.2017). 
+Beware that the currently existing apps (like identity, aexistence/notary, wall, et cetera) 
+still use older versions of this repository. In the near future we will update these repositories 
+to use the latest aepp-components.
 
 ## Documentation
 
@@ -35,22 +41,23 @@ import AeppComponents, { AeButton } from '@aeternity/aepp-components'
 
 ### Method 1: global registration of all components
 
-```
+```javascript
 Vue.use(VueRouter)
 Vue.use(AeppComponents)
 ```
 
 ### Method 2: global registration of single components
 
-```
+```javascript
 Vue.use(AeppComponents.AeButton)
+
 // or
 Vue.use(AeButton)
 ```
 
 ### Method 3: local registration of single components
 
-```
+```javascript
 new Vue({
   components: {
     AeButton
@@ -62,7 +69,7 @@ Global registration (Method 1 & 2) will make the æternity æpp components avail
 
 Here's an example of a component usage:
 
-```
+```html
 <template>
   <div id="app">
     <ae-button @click="buttonPress()">My Button</ae-button>
