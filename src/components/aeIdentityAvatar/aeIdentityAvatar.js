@@ -1,8 +1,8 @@
-const blockies = require('ethereum-blockies-png')
+import { render } from 'ethereum-blockies'
 
 /**
  * Displays the representation of an ethereum address as an avatar
- * @see https://github.com/petejkim/ethereum-blockies-png
+ * @see https://github.com/ethereum/blockies
  */
 export default {
   name: 'ae-identity-avatar',
@@ -15,23 +15,17 @@ export default {
       default: '0x0'
     }
   },
-  methods: {
-    blockie (address) {
-      return blockies.createDataURL({
-        seed: address
-      })
+  watch: {
+    address () {
+      this.renderBlockie()
     }
   },
-  computed: {
-    style () {
-      if (this.address) {
-        return {
-          backgroundImage: `url('${this.blockie(this.address)}')`
-        }
-      }
-      return {
-        backgroundColor: '#d1d1d1'
-      }
+  mounted () {
+    this.renderBlockie()
+  },
+  methods: {
+    renderBlockie () {
+      render({ seed: this.address }, this.$refs.blockie)
     }
   }
 }

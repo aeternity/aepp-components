@@ -1,5 +1,5 @@
 <template>
-  <div :style='style' class="avatar ae-identity-avatar"></div>
+  <canvas ref="blockie" class="ae-identity-avatar" />
 </template>
 
 <script src='./aeIdentityAvatar.js'/>
