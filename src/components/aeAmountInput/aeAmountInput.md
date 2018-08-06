@@ -17,3 +17,15 @@
     `
   })
 ```
+
+```vue
+<template>
+<div>
+  <ae-label for="example-amount-input">Label for amount input</ae-label>
+  <ae-amount-input id="example-amount-input" />
+</div>
+</template>
+<script>
+export default {}
+</script>
+```

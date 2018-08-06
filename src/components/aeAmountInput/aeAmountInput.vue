@@ -1,6 +1,7 @@
 <template>
   <div class="ae-amount-input">
     <ae-input
+      :id="id"
       type="number"
       monospace
       :value="value.amount"
@@ -11,6 +12,7 @@
       <button
         slot="right"
         class="side"
+        type="button"
         @click="toggleDropDown() ">
         {{value.symbol}} <ae-icon name="chevron" rotate="90" v-if="unitsCount > 1" />
       </button>
@@ -50,6 +52,7 @@ export default {
       type: Object,
       default: () => ({ symbol: this.getUnits })
     },
+    id: undefined,
     placeholder: undefined,
     /**
      * Array of available units, every unit is object containing `symbol` and `name` keys

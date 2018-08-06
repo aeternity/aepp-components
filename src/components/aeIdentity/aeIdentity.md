@@ -6,7 +6,7 @@ const identity = {
   balance: new BN('1337000000000000000', 10)
 }
 
-<ae-identity :identity="identity" />
+<ae-identity v-bind="identity" />
 ```
 
 Basic active identity card
@@ -17,7 +17,7 @@ const identity = {
   balance: new BN('1337000000000000000', 10)
 }
 
-<ae-identity :identity="identity" active />
+<ae-identity v-bind="identity" active />
 ```
 
 Named basic Identity card
@@ -29,7 +29,7 @@ const identity = {
   balance: new BN('1337000000000000000', 10)
 }
 
-<ae-identity :identity="identity" />
+<ae-identity v-bind="identity" />
 ```
 
 Identity card with buttons
@@ -40,7 +40,7 @@ const identity = {
   balance: new BN('1337000000000000000', 10)
 }
 
-<ae-identity :identity="identity" active >
+<ae-identity v-bind="identity" active >
   <ae-divider type="boring" />
   <div>
     <ae-button type="boring" size="small" uppercase>Edit</ae-button>
@@ -57,7 +57,7 @@ const identity = {
   address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
   balance: new BN('1337000000000000000', 10)
 }
-<ae-identity :identity="identity" collapsed />
+<ae-identity v-bind="identity" collapsed />
 ```
 
 Collapsed identity card with buttons
@@ -68,7 +68,7 @@ const identity = {
   address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
   balance: new BN('1337000000000000000', 10)
 }
-<ae-identity :identity="identity" collapsed >
+<ae-identity v-bind="identity" collapsed >
   <ae-divider type="boring" />
   <div>
     <ae-button type="boring" size="small" uppercase>Edit</ae-button>

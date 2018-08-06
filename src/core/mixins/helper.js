@@ -1,14 +1,11 @@
-const blockies = require('ethereum-blockies-png')
-const unit = require('ethjs-unit')
-const numeral = require('numeral')
+/**
+ * Importing Libraries
+ */
+import unit from 'ethjs-unit'
+import numeral from 'numeral'
 
 export default {
   methods: {
-    blockie (address) {
-      return blockies.createDataURL({
-        seed: address
-      })
-    },
     forwardEvent (event) {
       this.$emit(event.type, event)
     },
