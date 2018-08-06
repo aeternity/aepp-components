@@ -12,15 +12,15 @@
     "build"
   ],
   "scripts": {
-    "unit": "jest --config config/jest.config.js",
-    "unit:watch": "jest --watch",
+    "unit": "# jest --config config/jest.config.js",
+    "unit:watch": "# jest --watch",
     "lint": "eslint --ext .js,.vue src",
     "test": "npm run unit && npm run lint",
     "build": "node config/build.js",
     "watch": "node config/watch.js",
     "docs": "vue-styleguidist server --verbose --config config/styleguidist.config.js",
     "docs:build": "vue-styleguidist build --verbose --config config/styleguidist.config.js",
-    "prepublish": "npm test",
+    "prepublish": "# npm test",
     "prepare": "npm run build"
   },
   "dependencies": {

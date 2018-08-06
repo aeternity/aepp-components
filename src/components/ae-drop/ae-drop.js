@@ -35,6 +35,9 @@ export default {
     direction: String
   },
 
+  /**
+   * Component Methods
+   */
   methods: {
     /**
      * Activate Drop
