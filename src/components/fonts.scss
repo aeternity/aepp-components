@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Mono:300,500');
+
+@mixin font-face($font-name, $file-path, $weight, $style) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-path + '.woff2') format('woff2'), url($file-path + '.woff') format('woff');
+    font-style: $style;
+    font-weight: $weight;
+    unicode-range: U+00-FF;
+  }
+}
+
+$font-name: 'Inter UI';
+$path: '/src/assets/fonts/interui/inter-ui-';
+@include font-face($font-name, $path + 'regular', 400, normal);
+@include font-face($font-name, $path + 'medium', 500, normal);
+@include font-face($font-name, $path + 'bold', 700, normal);
+@include font-face($font-name, $path + 'mediumitalic', 500, italic);
+@include font-face($font-name, $path + 'bolditalic', 700, italic);
+
+$font-name: 'IBM Plex Mono';
+$path: '/src/assets/fonts/ibmplex/ibmplexmono-';
+@include font-face($font-name, $path + 'light', 300, normal);
+@include font-face($font-name, $path + 'regular', 400, normal);
+@include font-face($font-name, $path + 'text', 400, normal);
+@include font-face($font-name, $path + 'medium', 500, normal);
+@include font-face($font-name, $path + 'lightitalic', 300, italic);
+@include font-face($font-name, $path + 'textitalic', 400, italic);
+@include font-face($font-name, $path + 'mediumitalic', 500, italic);
