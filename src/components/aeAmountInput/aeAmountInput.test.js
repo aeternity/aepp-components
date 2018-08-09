@@ -1,12 +1,7 @@
 import { mount } from 'vue-test-utils'
 import AeAmountInput from './aeAmountInput.vue'
-import AeAmountInputPlugin from './index'
 
 describe('AeAmountInput', () => {
-  it('has an install function', () => {
-    expect(AeAmountInputPlugin).toBeInstanceOf(Function)
-  })
-
   it('renders the correct markup', () => {
     const wrapper = mount(AeAmountInput, { propsData: { value: { symbol: 'TEST' } } })
     const html = wrapper.html()
