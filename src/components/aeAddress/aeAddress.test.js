@@ -56,7 +56,7 @@ describe('AeAddress', () => {
       })
 
       const checkMark = wrapper.find(AeIcon)
-      expect(checkMark.classes()[0].contains('checkmark')).toBe(true)
+      expect(checkMark.classes().includes('checkmark')).toBe(true)
       const { name, type } = checkMark.props()
       expect(name).toBe('check')
       expect(type).toBe('dramatic')
