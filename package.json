@@ -9,7 +9,8 @@
   "repository": "https://github.com/aeternity/aepp-components.git",
   "bugs": "https://github.com/aeternity/aepp-components/issues",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "unit": "jest",
