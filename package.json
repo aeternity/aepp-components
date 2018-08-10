@@ -16,7 +16,7 @@
     "styleguide:build": "vue-styleguidist build"
   },
   "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
-  "license": "MIT",
+  "license": "ISC",
   "files": [
     "dist"
   ],
