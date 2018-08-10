@@ -18,7 +18,8 @@
   "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
   "license": "ISC",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "dependencies": {
     "ethereum-blockies": "^0.1.1",
