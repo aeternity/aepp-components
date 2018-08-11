@@ -62,5 +62,10 @@
   "bugs": {
     "url": "https://github.com/aeternity/aepp-components/issues"
   },
-  "homepage": "https://github.com/aeternity/aepp-components#readme"
+  "homepage": "https://github.com/aeternity/aepp-components#readme",
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "*.vue"
+  ]
 }
