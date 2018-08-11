@@ -1,9 +1,8 @@
 Basic identity card
 ```js
-const BN = require('bn.js')
 const identity = {
   address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
-  balance: new BN('1337000000000000000', 10)
+  balance: 1.337
 }
 
 <ae-identity v-bind="identity" />
@@ -11,10 +10,9 @@ const identity = {
 
 Basic active identity card
 ```js
-const BN = require('bn.js')
 const identity = {
   address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
-  balance: new BN('1337000000000000000', 10)
+  balance: 1.337
 }
 
 <ae-identity v-bind="identity" active />
@@ -22,11 +20,10 @@ const identity = {
 
 Named basic Identity card
 ```js
-const BN = require('bn.js')
 const identity = {
   name: "My Id", 
   address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
-  balance: new BN('1337000000000000000', 10)
+  balance: 1.337
 }
 
 <ae-identity v-bind="identity" />
@@ -34,10 +31,9 @@ const identity = {
 
 Identity card with buttons
 ```js
-const BN = require('bn.js')
 const identity = {
   address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
-  balance: new BN('1337000000000000000', 10)
+  balance: 1.337
 }
 
 <ae-identity v-bind="identity" active >
@@ -52,21 +48,19 @@ const identity = {
 
 Collapsed identity card
 ```js
-const BN = require('bn.js')
 const identity = {
   address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
-  balance: new BN('1337000000000000000', 10)
+  balance: 1.337
 }
 <ae-identity v-bind="identity" collapsed />
 ```
 
 Collapsed identity card with buttons
 ```js
-const BN = require('bn.js')
 const identity = {
   name: 'My Id',
   address: '0x35d8830ea35e6Df033eEdb6d5045334A4e34f9f9',
-  balance: new BN('1337000000000000000', 10)
+  balance: 1.337
 }
 <ae-identity v-bind="identity" collapsed >
   <ae-divider type="boring" />

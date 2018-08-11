@@ -1,6 +1,5 @@
 import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
 import helperMixin from './../../mixins/helper'
-import BN from 'bn.js'
 
 /**
  * Displays an Identity with an avatar blockie, the address and an amount of ether
@@ -24,11 +23,11 @@ export default {
       default: '0x0'
     },
     /**
-     * An identity balance in Ether as BN instance
+     * An identity balance in AE
      */
     balance: {
-      type: Object,
-      default: () => new BN('0', 10)
+      type: Number,
+      default: 0
     },
     collapsed: {
       type: Boolean,
@@ -59,7 +58,6 @@ export default {
     }
   },
   filters: {
-    readableToken: balance => balance.toString(10),
     shorten: value => value.substr(0, 8)
   }
 }

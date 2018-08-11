@@ -24,10 +24,10 @@ export default {
       required: false
     },
     /**
-     * An identity balance in Ether as BN instance
+     * An identity balance in AE
      */
     balance: {
-      type: Object,
+      type: Number,
       required: false
     },
     /**
