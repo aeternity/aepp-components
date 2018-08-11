@@ -45,14 +45,14 @@ export default {
       event.preventDefault()
     },
     formatAddress (address, cursor = address.length) {
-      if (['', '0'].includes(address)) return { address, cursor }
+      if (['', 'a', 'ak'].includes(address)) return { address, cursor }
 
-      let [begin, end] = [[address.startsWith('0x') ? 2 : 0, cursor], [cursor]]
-        .map(args => address.slice(...args).replace(/[^A-Fa-f0-9]/g, ''))
+      let [begin, end] = [[address.startsWith('ak$') ? 3 : 0, cursor], [cursor]]
+        .map(args => address.slice(...args).replace(/[^1-9A-HJ-NP-Za-km-z]/g, ''))
 
-      begin = `0x${begin}`
+      begin = `ak$${begin}`
 
-      const splitBy = 7
+      const splitBy = 3
       const addSpaces = (address, firstLength) => {
         const fl = firstLength || splitBy
         const res = []
@@ -71,11 +71,7 @@ export default {
       [begin, lastLength] = addSpaces(begin);
       [end] = addSpaces(end, splitBy - lastLength)
 
-      let res = `${begin}${lastLength === splitBy ? ' ' : ''}${end}`.slice(0, 47)
-      const lineBreakPos = (splitBy + 1) * 3 - 1
-      res = res[lineBreakPos]
-        ? `${res.slice(0, lineBreakPos)}\n${res.slice(lineBreakPos + 1)}`
-        : res
+      let res = `${begin}${end && lastLength === splitBy ? ' ' : ''}${end}`.slice(0, 70)
 
       return { address: res, cursor: begin.length }
     }
