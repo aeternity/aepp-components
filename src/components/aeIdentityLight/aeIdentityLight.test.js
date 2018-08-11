@@ -11,8 +11,7 @@ describe('AeIdentityLight', () => {
   }
   const testIdentity = () => ({
     address: '0x1234' + '123456'.repeat(5),
-    balance: new BN('0', 10),
-    tokenBalance: new BN('0', 10)
+    balance: new BN('0', 10)
   })
 
   describe('rendering', () => {
@@ -32,12 +31,9 @@ describe('AeIdentityLight', () => {
         const wrapper = _shallow({
           collapsed,
           address: '0x0',
-          balance: new BN('500000000000000000000000000000', 10),
-          tokenBalance: new BN('600000000000000000000000000000', 10)
+          balance: new BN('600000000000000000000000000000', 10)
         })
 
-        expect(wrapper.find('.balance:not(.token) .amount').text())
-          .toBe('500,000,000,000')
         expect(wrapper.find('.balance.token .amount').text())
           .toBe('600,000,000,000')
       }

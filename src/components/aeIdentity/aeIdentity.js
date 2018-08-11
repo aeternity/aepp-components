@@ -24,13 +24,6 @@ export default {
       required: false
     },
     /**
-     * An identity balance in Aeternity tokens as BN instance
-     */
-    tokenBalance: {
-      type: Object,
-      required: false
-    },
-    /**
      * An identity balance in Ether as BN instance
      */
     balance: {

@@ -20,7 +20,6 @@ describe('aeIdentity', () => {
       const identity = {
         name: 'test',
         address: '0x03489768758974698',
-        tokenBalance: new BN('0', 10),
         balance: new BN('0', 10)
       }
 

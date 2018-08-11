@@ -26,13 +26,6 @@ export default {
       default: '0x0'
     },
     /**
-     * An identity balance in Aeternity tokens as BN instance
-     */
-    tokenBalance: {
-      type: Object,
-      default: () => new BN('0', 10)
-    },
-    /**
      * An identity balance in Ether as BN instance
      */
     balance: {
