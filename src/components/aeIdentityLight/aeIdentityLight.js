@@ -1,8 +1,6 @@
 import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
 import helperMixin from './../../mixins/helper'
 import BN from 'bn.js'
-import unit from 'ethjs-unit'
-import numeral from 'numeral'
 
 /**
  * Displays an Identity with an avatar blockie, the address and an amount of ether
@@ -61,8 +59,7 @@ export default {
     }
   },
   filters: {
-    readableToken: balance =>
-      numeral(unit.fromWei(balance.toString(10), 'ether')).format('0,0.[000]'),
+    readableToken: balance => balance.toString(10),
     shorten: value => value.substr(0, 8)
   }
 }
