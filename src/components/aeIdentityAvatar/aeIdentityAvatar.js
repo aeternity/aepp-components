@@ -1,4 +1,4 @@
-import { render } from 'ethereum-blockies'
+import { renderIcon } from '@download/blockies'
 
 /**
  * Displays the representation of an ethereum address as an avatar
@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     renderBlockie () {
-      render({ seed: this.address }, this.$refs.blockie)
+      renderIcon({ seed: this.address }, this.$refs.blockie)
     }
   }
 }
