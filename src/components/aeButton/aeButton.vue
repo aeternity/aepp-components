@@ -73,6 +73,7 @@ export default {
       if (this.invert) classes.push('_invert')
       if (this.disabled) classes.push('_disabled')
       if (this.plain) classes.push('_plain')
+      if (this.$slots.icon) classes.push('_has-icon')
       if (this.$slots.default) classes.push('_has-label')
       return classes
     }
@@ -140,6 +141,18 @@ export default {
 
       .label {
         padding: 0 $labelGap;
+      }
+
+      &._plain {
+        .label {
+          padding: 0 ($buttonHeight - $fontSize) / 2;
+        }
+
+        &._has-icon {
+          .label {
+            padding-left: $buttonHeight;
+          }
+        }
       }
     }
 
