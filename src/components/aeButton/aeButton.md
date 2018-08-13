@@ -16,7 +16,7 @@
 ```
 
 ```vue
-<ae-button inactive>Inactive</ae-button>
+<ae-button disabled>Disabled</ae-button>
 ```
 
 aeButton with aeIcon
@@ -43,11 +43,6 @@ full width block button
 <ae-button :style="{ width: '100%' }">
   Block buttons that span full width
 </ae-button>
-```
-
-inactive
-```vue
-<ae-button inactive>Inactive</ae-button>
 ```
 
 ```vue
