@@ -118,23 +118,29 @@ export default {
   }
 
   &._size {
-    @mixin size ($size) {
+    @mixin size ($size, $iconSize) {
       height: $size;
       line-height: $size;
 
       .icon {
         width: $size;
+
+        /deep/ {
+          .ae-icon, img {
+            width: $iconSize;
+            height: $iconSize;
+          }
+
+          img {
+            vertical-align: middle;
+          }
+        }
       }
     }
 
     &_small {
-      @include size(30px);
+      @include size(30px, 16px);
       font-size: 14px;
-
-      .icon /deep/ .ae-icon {
-        width: 16px;
-        height: 16px;
-      }
 
       .label {
         padding: 0 50px;
@@ -142,13 +148,8 @@ export default {
     }
 
     &_medium {
-      @include size(50px);
+      @include size(50px, 24px);
       font-size: 18px;
-
-      .icon /deep/ .ae-icon {
-        width: 24px;
-        height: 24px;
-      }
 
       .label {
         padding: 0 55px;
@@ -156,13 +157,8 @@ export default {
     }
 
     &_large {
-      @include size(80px);
+      @include size(80px, 35px);
       font-size: 24px;
-
-      .icon /deep/ .ae-icon {
-        width: 35px;
-        height: 35px;
-      }
 
       .label {
         padding: 0 105px;
