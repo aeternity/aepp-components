@@ -118,12 +118,13 @@ export default {
   }
 
   &._size {
-    @mixin size ($size, $iconSize) {
-      height: $size;
-      line-height: $size;
+    @mixin size ($buttonHeight, $fontSize, $iconSize, $labelGap) {
+      height: $buttonHeight;
+      line-height: $buttonHeight;
+      font-size: $fontSize;
 
       .icon {
-        width: $size;
+        width: $buttonHeight;
 
         /deep/ {
           .ae-icon, img {
@@ -136,33 +137,22 @@ export default {
           }
         }
       }
+
+      .label {
+        padding: 0 $labelGap;
+      }
     }
 
     &_small {
-      @include size(30px, 16px);
-      font-size: 14px;
-
-      .label {
-        padding: 0 50px;
-      }
+      @include size(30px, 14px, 16px, 50px);
     }
 
     &_medium {
-      @include size(50px, 24px);
-      font-size: 18px;
-
-      .label {
-        padding: 0 55px;
-      }
+      @include size(50px, 18px, 24px, 55px);
     }
 
     &_large {
-      @include size(80px, 35px);
-      font-size: 24px;
-
-      .label {
-        padding: 0 105px;
-      }
+      @include size(80px, 24px, 35px, 105px);
     }
   }
 
