@@ -1,28 +1,23 @@
-// https://eslint.org/docs/user-guide/configuring
-
 module.exports = {
   root: true,
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    parser: 'babel-eslint',
-    sourceType: 'module'
-  },
   env: {
-    browser: true,
-    jest: true
+    node: true
   },
-  extends: [
-    'standard',
-    'plugin:vue/essential'
+  'extends': [
+    'plugin:vue/essential',
+    '@vue/standard'
   ],
-  // add your custom rules here
-  'rules': {
-    // don't require .vue extension when importing
-    'import/extensions': ['error', 'always', {
-      'js': 'never',
-      'vue': 'never'
-    }],
-    // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
-  }
-};
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+  },
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
+  overrides: [{
+    files: ['**/__tests__/*', '*.test.js'],
+    env: {
+      jest: true
+    }
+  }]
+}

@@ -1,8 +1,6 @@
 import {shallow, mount} from 'vue-test-utils'
 import AeLabelledTextInput from './aeLabelledTextInput.vue'
-import AeTextInputMoleculePlugin from './index'
 import AeValidatedTextInput from '../aeValidatedTextInput/aeValidatedTextInput.vue'
-import * as exported from '../../index'
 
 describe('AeLabelledTextInput', () => {
   const createShallowWrapper = (data = {}) => {
@@ -17,13 +15,6 @@ describe('AeLabelledTextInput', () => {
       propsData: data
     })
   }
-  it('has an install function', () => {
-    expect(AeTextInputMoleculePlugin).toBeInstanceOf(Function)
-  })
-
-  it('is being exported as AeLabelledTextInput', () => {
-    expect(exported.AeLabelledTextInput).toBeTruthy()
-  })
 
   describe('basic rendering', () => {
     it('renders a label element containing the label property value', () => {

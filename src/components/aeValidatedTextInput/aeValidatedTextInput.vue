@@ -16,4 +16,3 @@
   />
 </template>
 <script src="./aeValidatedTextInput.js"/>
-<style scoped lang='scss' src='./aeValidatedTextInput.scss'/>

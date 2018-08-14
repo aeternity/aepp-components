@@ -1,12 +1,7 @@
 import AeInput from './aeInput.vue'
-import install from './index'
 import {shallow} from 'vue-test-utils'
 
 describe('AeInput', () => {
-  it('provides an install function', () => {
-    expect(typeof install).toBe('function')
-  })
-
   describe('rendering', () => {
     it('renders an inp[ut element', () => {
       const wrapper = shallow(AeInput)

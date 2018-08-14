@@ -1,7 +1,6 @@
 import {shallow, mount} from 'vue-test-utils'
 import AeTextInput from '../aeTextInput/aeTextInput.vue'
 import AeValidatedTextInput from './aeValidatedTextInput.vue'
-import AeTextValidatedInputPlugin from './index'
 
 describe('AeValidatedTextInput', () => {
   const createShallowWrapper = (data = {}) => {
@@ -15,10 +14,6 @@ describe('AeValidatedTextInput', () => {
       propsData: data
     })
   }
-
-  it('has an install function', () => {
-    expect(AeTextValidatedInputPlugin).toBeInstanceOf(Function)
-  })
 
   describe('basic rendering', () => {
     it('renders a aeTextInput', () => {

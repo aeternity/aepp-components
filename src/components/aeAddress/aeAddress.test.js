@@ -1,16 +1,11 @@
 import { shallow, mount } from 'vue-test-utils'
 import AeAddress from './aeAddress.vue'
-import AeAddressPlugin from './index'
 import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue'
 import AeIcon from '../aeIcon/aeIcon.vue'
 
 const address = '0xfa617481af59ebec80e8d529f1e2d1b3751468f3'
 
 describe('AeAddress', () => {
-  it('has an install function', () => {
-    expect(AeAddressPlugin).toBeInstanceOf(Function)
-  })
-
   describe('rendering', () => {
     it('renders a aeIdentityAvatar when showAvatar prop is true', () => {
       const wrapper = shallow(AeAddress, {
@@ -56,7 +51,7 @@ describe('AeAddress', () => {
       })
 
       const checkMark = wrapper.find(AeIcon)
-      expect(checkMark.classes()[0].contains('checkmark')).toBe(true)
+      expect(checkMark.classes().includes('checkmark')).toBe(true)
       const { name, type } = checkMark.props()
       expect(name).toBe('check')
       expect(type).toBe('dramatic')

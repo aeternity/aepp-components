@@ -1,6 +1,5 @@
 import { mount } from 'vue-test-utils'
 import AeTextInput from './aeTextInput.vue'
-import AeTextInputPlugin from './index'
 
 describe('AeTextInput', () => {
   const createWrapper = (props = {}) => {
@@ -9,10 +8,6 @@ describe('AeTextInput', () => {
     }
     return mount(AeTextInput, mountOptions)
   }
-
-  it('has an install function', () => {
-    expect(AeTextInputPlugin).toBeInstanceOf(Function)
-  })
 
   describe('rendering', () => {
     it('renders a single input element', () => {

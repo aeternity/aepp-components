@@ -50,7 +50,9 @@ export default {
      */
     value: {
       type: Object,
-      default: () => ({ symbol: this.getUnits })
+      default () {
+        return { symbol: this.getUnits }
+      }
     },
     id: undefined,
     placeholder: undefined,
