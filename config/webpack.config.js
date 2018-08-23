@@ -165,9 +165,9 @@ module.exports = {
     extensions: ['.js', '.vue', '.json']
   },
   externals : {
-    'ethereum-blockies-png': {
-      commonjs: 'ethereum-blockies-png',
-      commonjs2: 'ethereum-blockies-png'
+    '@download/blockies': {
+      commonjs: '@download/blockies',
+      commonjs2: '@download/blockies'
     },
     'ethjs-unit': {
       commonjs: 'ethjs-unit',
