@@ -8,7 +8,6 @@
       :name="name"
       :address="address"
       :balance="balance"
-      :token-balance="tokenBalance"
       :collapsed="collapsed"
       invert
     />
