@@ -24,7 +24,7 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "ethereum-blockies-png": "git+https://github.com/acdbaykal/ethereum-blockies-png.git",
+    "@download/blockies": "^1.0.3",
     "ethjs-unit": "^0.1.6",
     "normalize.css": "^8.0.0",
     "numeral": "^2.0.6",
@@ -66,7 +66,7 @@
     "vue-jest": "^2.6.0",
     "vue-loader": "^13.5.0",
     "vue-styleguidist": "^1.7.12",
-    "vue-template-compiler": "^2.5.16",
+    "vue-template-compiler": "^2.5.17",
     "vue-test-utils": "^1.0.0-beta.7",
     "webfonts-loader": "^4.1.0",
     "webpack": "^3.8.1",
