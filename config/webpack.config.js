@@ -164,37 +164,19 @@ module.exports = {
     },
     extensions: ['.js', '.vue', '.json']
   },
-  externals : {
-    'ethereum-blockies-png': {
-      commonjs: 'ethereum-blockies-png',
-      commonjs2: 'ethereum-blockies-png'
-    },
-    'ethjs-unit': {
-      commonjs: 'ethjs-unit',
-      commonjs2: 'ethjs-unit',
-    },
-    numeral: {
-      commonjs: 'numeral',
-      commonjs2: 'numeral',
-    },
-    'vue-clickaway': {
-      commonjs: 'vue-clickaway',
-      commonjs2: 'vue-clickaway',
-    },
-    'bn.js': {
-      commonjs: 'bn.js',
-      commonjs2: 'bn.js'
-    },
-    'qrious': {
-      amd: 'qrious',
-      commonjs: 'qrious',
-      commonjs2: 'qrious'
-    },
-    'vue-touch': {
-      commonjs: 'vue-touch',
-      commonjs2: 'vue-touch'
+  // Fetching all dependencies and
+  // creates an object assigned to externals
+  // which bypasses the dependencies
+  // (doesn't included it in the final bundle)
+  externals: Object
+  .keys(require('../package').dependencies)
+  .reduce((p, dependency) => ({
+    ...p,
+    [dependency]: {
+      commonjs: dependency,
+      commonjs2: dependency
     }
-  },
+  }), {}),
   performance: { hints: false },
   devtool: 'source-map'
 }
