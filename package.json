@@ -21,7 +21,7 @@
     "dist"
   ],
   "dependencies": {
-    "ethereum-blockies": "^0.1.1",
+    "@download/blockies": "^1.0.3",
     "normalize.css": "^7.0.0",
     "string-loader": "0.0.1",
     "vue-clickaway": "^2.1.0"
