@@ -1,11 +1,11 @@
 /**
  * Importing Libraries
  */
-import numeral from 'numeral'
+import unit from 'ethjs-unit';
 
 /**
  * Exporting Filter
  */
 export default function (value) {
-  return numeral(value).format('0,0.[000]')
+  return unit.fromWei(value.toString(10), 'ether');
 }

@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module"
+  },
+  "globals": {
+    "module": true
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "plugin:vue/essential"
+  ],
+  "plugins": [
+    "vue"
+  ],
+  "rules": {
+    "quotes": ["error", "single"],
+    "max-len": ["error", 120],
+    "comma-dangle": "off",
+    "key-spacing": "off",
+    "object-curly-spacing": "off",
+    "space-before-function-paren": "off",
+    "valid-jsdoc": "warn",
+    "require-jsdoc": "off",
+    "no-console": "warn",
+    "no-unused-vars": "warn",
+    "no-invalid-this": "off",
+    "no-multi-spaces": "off",
+    "new-cap": "off",
+    "camelcase": "warn"
+  }
+}
