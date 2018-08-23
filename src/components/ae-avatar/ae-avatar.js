@@ -1,7 +1,7 @@
 /**
  * Importing Libraries
  */
-import { renderIcon } from '@download/blockies'
+import { renderIcon } from '@download/blockies';
 
 /**
  * ae-avatar component
@@ -34,15 +34,16 @@ export default {
     size: {
       type: String,
       validator: function (value) {
-        return ['small'].indexOf(value) !== -1
+        return ['small'].indexOf(value) !== -1;
       }
     }
   },
 
   /**
    * TODO: Needs size fix
+   * @return {HTMLCanvasElement}
    */
   mounted: function () {
-    return renderIcon({ seed: this.address }, this.$refs.blockies)
+    return renderIcon({ seed: this.address }, this.$refs.blockies);
   }
-}
+};

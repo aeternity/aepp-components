@@ -1,7 +1,7 @@
 /**
  * Importing Libraries
  */
-import { directive as clickaway } from 'vue-clickaway'
+import { directive as clickaway } from 'vue-clickaway';
 
 /**
  * ae-drop component
@@ -19,9 +19,10 @@ export default {
 
   /**
    * Component Data
+   * @return {Object}
    */
   data: function () {
-    return { active: false }
+    return { active: false };
   },
 
   /**
@@ -43,14 +44,14 @@ export default {
      * Activate Drop
      */
     activate: function () {
-      this.active = true
+      this.active = true;
     },
 
     /**
      * Deactivate Drop
      */
     deactivate: function () {
-      this.active = false
+      this.active = false;
     }
   }
-}
+};

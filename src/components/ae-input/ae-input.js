@@ -1,7 +1,7 @@
 /**
  * Importing Libraries
  */
-import { events } from '@source/mixins'
+import { events } from '@source/mixins';
 
 /**
  * ae-button component
@@ -15,13 +15,14 @@ export default {
   /**
    * Component Mixins
    */
-  mixins: [ events ],
+  mixins: [events],
 
   /**
    * Component Data
+   * @return {Object}
    */
   data: function () {
-    return { focus: false }
+    return { focus: false };
   },
 
   /**
@@ -67,4 +68,4 @@ export default {
      */
     error: Boolean
   }
-}
+};

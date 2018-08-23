@@ -8,7 +8,7 @@
 <script>
 export default {
   name: 'ae-badge'
-}
+};
 </script>
 
 <style lang="scss" scoped>

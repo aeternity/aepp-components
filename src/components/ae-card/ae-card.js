@@ -24,7 +24,7 @@ export default {
           'default',
           'alternative',
           'emphasis'
-        ].indexOf(value) !== 1
+        ].indexOf(value) !== 1;
       }
     },
 
@@ -39,8 +39,8 @@ export default {
           'top',
           'center',
           'bottom'
-        ].indexOf(value) !== -1
+        ].indexOf(value) !== -1;
       }
     }
   }
-}
+};

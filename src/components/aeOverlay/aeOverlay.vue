@@ -8,10 +8,10 @@
 export default {
   name: 'ae-overlay',
   mounted () {
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden';
   },
   destroyed () {
-    document.body.style.overflow = ''
+    document.body.style.overflow = '';
   },
   methods: {
     click (e) {
@@ -21,10 +21,10 @@ export default {
        * @event click
        * @type {MouseEvent}
        */
-      this.$emit('click', e)
+      this.$emit('click', e);
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

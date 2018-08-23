@@ -18,7 +18,7 @@ export default {
      */
     monospace: Boolean
   }
-}
+};
 </script>
 
 <style scoped lang="scss">

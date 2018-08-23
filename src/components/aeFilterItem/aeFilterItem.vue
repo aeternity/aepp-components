@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import AeLink from '../aeLink/aeLink.vue'
+import AeLink from '../aeLink/aeLink.vue';
 
 export default {
   name: 'ae-filter-item',
@@ -21,7 +21,7 @@ export default {
      */
     active: { type: Boolean, required: false }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,6 @@
 /**
  * Exporting Directive
+ * @return {Object}
  */
 export default {
   /**
@@ -9,9 +10,7 @@ export default {
    * @param {{}} binding
    * @param {{}} vnode
    */
-  bind: function (el, binding, vnode) {
-    console.log(el)
-  },
+  bind: function (el, binding, vnode) {},
 
   /**
    * Called when the bound element has been inserted into its
@@ -21,9 +20,7 @@ export default {
    * @param {{}} binding
    * @param {{}} vnode
    */
-  inserted: function (el, binding, vnode) {
-    console.log(el)
-  },
+  inserted: function (el, binding, vnode) {},
 
   /**
    * Called after the containing component’s VNode has updated,
@@ -34,9 +31,7 @@ export default {
    * @param {{}} binding
    * @param {{}} vnode
    */
-  update: function (el, binding, vnode) {
-    console.log(el)
-  },
+  update: function (el, binding, vnode) {},
 
   /**
    * Called after the containing component’s VNode
@@ -45,9 +40,7 @@ export default {
    * @param {{}} binding
    * @param {{}} vnode
    */
-  componentUpdated: function (el, binding, vnode) {
-    console.log(el)
-  },
+  componentUpdated: function (el, binding, vnode) {},
 
   /**
    * Called only once, when the directive is unbound from the element.
@@ -55,7 +48,5 @@ export default {
    * @param {{}} binding
    * @param {{}} vnode
    */
-  unbind: function (el, binding, vnode) {
-    console.log(el)
-  }
-}
+  unbind: function (el, binding, vnode) {}
+};

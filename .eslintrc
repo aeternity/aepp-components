@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module"
+  },
+  "globals": {
+    "module": true
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "standard",
+    "plugin:vue/essential"
+  ],
+  "plugins": [
+    "vue"
+  ],
+  "rules": {
+    "quotes": ["error", "single"],
+    "max-len": ["error", 120],
+    "indent": [2, 2],
+    "camelcase": "warn",
+    "semi": "off"
+  }
+}

@@ -11,7 +11,7 @@
  */
 export default {
   name: 'ae-main'
-}
+};
 </script>
 
 <style lang="scss">

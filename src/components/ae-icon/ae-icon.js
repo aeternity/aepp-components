@@ -1,7 +1,7 @@
 /**
  * Importing Fonts
  */
-import './icons/icons.font'
+import './icons/icons.font';
 
 /**
  * ae-icon component
@@ -34,7 +34,7 @@ export default {
           'default',
           'alternative',
           'emphasis'
-        ].indexOf(value) !== 1
+        ].indexOf(value) !== 1;
       }
     },
 
@@ -46,7 +46,7 @@ export default {
     face: {
       type: String,
       validator: function (value) {
-        return ['round'].indexOf(value) !== 1
+        return ['round'].indexOf(value) !== 1;
       }
     },
 
@@ -55,4 +55,4 @@ export default {
      */
     size: String
   }
-}
+};

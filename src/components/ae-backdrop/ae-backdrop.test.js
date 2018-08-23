@@ -2,7 +2,7 @@
  * Importing Tools
  */
 // import AeBackdrop from './ae-backdrop.vue'
-import install from './index'
+import install from './index';
 // import { shallow } from 'vue-test-utils'
 
 /**
@@ -10,6 +10,6 @@ import install from './index'
  */
 describe('ae-backdrop', () => {
   it('provides an install function', () => {
-    expect(typeof install).toBe('function')
-  })
-})
+    expect(typeof install).toBe('function');
+  });
+});

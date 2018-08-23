@@ -29,7 +29,7 @@ export default {
     type: {
       type: String,
       validator: (value) => {
-        return ['password', 'number'].includes(value)
+        return ['password', 'number'].includes(value);
       }
     },
 
@@ -44,7 +44,7 @@ export default {
    */
   methods: {
     handleInput (inputEvent) {
-      this.$emit('input', inputEvent.target.value)
+      this.$emit('input', inputEvent.target.value);
     }
   }
-}
+};

@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import AeButton from '../aeButton/aeButton.vue'
-import AeIcon from '../aeIcon/aeIcon.vue'
-import AeLink from '../aeLink/aeLink.vue'
+import AeButton from '../aeButton/aeButton.vue';
+import AeIcon from '../aeIcon/aeIcon.vue';
+import AeLink from '../aeLink/aeLink.vue';
 /**
  *
  */
@@ -53,15 +53,15 @@ export default {
   components: { AeButton, AeIcon, AeLink },
   methods: {
     progressbarStyle (ratio) {
-      const pc = ratio * 100
+      const pc = ratio * 100;
       return {
         display: typeof ratio === 'number' ? 'block' : 'none',
         backgroundImage:
             `linear-gradient(to right, var(--maegenta) ${pc}%, var(--aubergine) ${pc}%)`
-      }
+      };
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

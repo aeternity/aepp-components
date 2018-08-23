@@ -1,4 +1,4 @@
-import mixin from '@source/core/mixins/helper'
+import mixin from '@source/core/mixins/helper';
 
 /**
  * Displays an App Icon
@@ -10,7 +10,7 @@ export default {
     /**
      * src property, location of the icon
      */
-    src: {
+    'src': {
       required: true,
       type: String
     },
@@ -26,7 +26,7 @@ export default {
     cssStyle () {
       return {
         'background-image': `url(${this.src})`
-      }
+      };
     }
   }
-}
+};

@@ -40,7 +40,7 @@ export default {
           'tracked-base',
           'uppercase-base',
           'uppercase-xs'
-        ].indexOf(value) !== -1
+        ].indexOf(value) !== -1;
       }
     },
 
@@ -54,7 +54,7 @@ export default {
           'left',
           'right',
           'center'
-        ].indexOf(value) !== 1
+        ].indexOf(value) !== 1;
       }
     },
 
@@ -73,4 +73,4 @@ export default {
      */
     disabled: Boolean
   }
-}
+};

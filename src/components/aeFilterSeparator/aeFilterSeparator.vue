@@ -5,7 +5,7 @@
 <script>
 export default {
   name: 'ae-filter-separator'
-}
+};
 </script>
 
 <style lang="scss" scoped>

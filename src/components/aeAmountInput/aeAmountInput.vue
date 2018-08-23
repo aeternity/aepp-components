@@ -35,9 +35,9 @@
 </template>
 
 <script>
-import { directive as onClickAway } from 'vue-clickaway'
-import AeInput from '../aeInput/aeInput.vue'
-import AeIcon from '../aeIcon/aeIcon.vue'
+import { directive as onClickAway } from 'vue-clickaway';
+import AeInput from '../aeInput/aeInput.vue';
+import AeIcon from '../aeIcon/aeIcon.vue';
 
 /**
  * Input of amount with units drop down
@@ -72,27 +72,27 @@ export default {
   components: { AeInput, AeIcon },
   methods: {
     handleInput (value) {
-      this.$emit('input', { ...this.value, ...value })
+      this.$emit('input', { ...this.value, ...value });
     },
     toggleDropDown () {
       if (this.unitsCount > 1) {
-        this.dropDownVisible = !this.dropDownVisible
+        this.dropDownVisible = !this.dropDownVisible;
       }
     }
   },
   mounted () {
-    this.value.symbol = this.units[0].symbol
+    this.value.symbol = this.units[0].symbol;
   },
   computed: {
     unitsCount: function () {
-      let count = this.units.length
-      return count
+      let count = this.units.length;
+      return count;
     },
     getUnits: function () {
-      return this.units[0].symbol
+      return this.units[0].symbol;
     }
   }
-}
+};
 </script>
 
 <style lang="scss">

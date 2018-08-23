@@ -1,5 +1,5 @@
-import aeDivider from './aeDivider.vue'
+import aeDivider from './aeDivider.vue';
 
 export default function install (Vue) {
-  Vue.component('ae-divider', aeDivider)
+  Vue.component('ae-divider', aeDivider);
 }

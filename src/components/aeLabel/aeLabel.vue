@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import {TYPE_PROPERTY_VALUES as types} from '@source/core/constants'
+import {TYPE_PROPERTY_VALUES as types} from '@source/core/constants';
 
 export default {
   name: 'ae-label',
@@ -26,15 +26,15 @@ export default {
     'help-type': {
       type: String,
       default: 'normal',
-      validator: value => types.includes(value)
+      validator: (value) => types.includes(value)
     }
   },
   computed: {
     typeModifier () {
-      return `_type_${this.helpType}`
+      return `_type_${this.helpType}`;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

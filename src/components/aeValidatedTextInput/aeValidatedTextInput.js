@@ -1,7 +1,7 @@
-import AeButton from '../aeButton/aeButton.vue'
-import AeTextInput from '../aeTextInput/aeTextInput.vue'
+import AeButton from '../aeButton/aeButton.vue';
+import AeTextInput from '../aeTextInput/aeTextInput.vue';
 
-const alwaysValid = () => undefined
+const alwaysValid = () => undefined;
 
 export default {
   name: 'ae-validated-text-input',
@@ -14,7 +14,7 @@ export default {
       isValid: undefined,
       hasFocus: false,
       internalValue: this.value
-    }
+    };
   },
   props: {
     inputId: {
@@ -40,82 +40,82 @@ export default {
     maxlength: {
       type: Number,
       validator: function (value) {
-        return value > 0 && parseInt(value) === value
+        return value > 0 && parseInt(value) === value;
       }
     }
   },
   computed: {
     errorMessage () {
-      const errorId = this.errorId
+      const errorId = this.errorId;
 
       if (!errorId) {
-        return undefined
+        return undefined;
       }
 
-      return this.errorMessageMap[errorId] || this.errorDefaultMessage
+      return this.errorMessageMap[errorId] || this.errorDefaultMessage;
     },
     hasError () {
-      return !this.isValid
+      return !this.isValid;
     }
   },
   methods: {
     onBlur (value) {
-      this.hasFocus = false
-      this.validateBlured()
-      this.$emit('blur', value)
+      this.hasFocus = false;
+      this.validateBlured();
+      this.$emit('blur', value);
     },
     onInput (value) {
-      this.hasFocus = true
-      this.internalValue = value
-      this.validateFocused()
-      this.$emit('input', value)
+      this.hasFocus = true;
+      this.internalValue = value;
+      this.validateFocused();
+      this.$emit('input', value);
     },
     onFocus () {
-      this.hasFocus = true
-      this.validateFocused()
-      this.$emit('focus')
+      this.hasFocus = true;
+      this.validateFocused();
+      this.$emit('focus');
     },
     validateFocused () {
-      const value = this.internalValue
-      const validationResult = this.validateOnInput(value)
-      const valid = !validationResult
-      this.isValid = valid
+      const value = this.internalValue;
+      const validationResult = this.validateOnInput(value);
+      const valid = !validationResult;
+      this.isValid = valid;
       this.$emit(
         'validation',
         valid ? undefined : validationResult
-      )
+      );
     },
     validateBlured () {
-      const value = this.internalValue
-      const validationResult = this.validateOnBlur(value)
-      const valid = !validationResult
-      this.isValid = valid
+      const value = this.internalValue;
+      const validationResult = this.validateOnBlur(value);
+      const valid = !validationResult;
+      this.isValid = valid;
       this.$emit(
         'validation',
         valid ? undefined : validationResult
-      )
+      );
     },
     validate () {
       if (this.hasFocus) {
-        this.validateFocused()
+        this.validateFocused();
       } else {
-        this.validateBlured()
+        this.validateBlured();
       }
     },
     forwardEvent (event) {
-      this.$emit(event.type, event)
+      this.$emit(event.type, event);
     },
     onClearRequest (value) {
-      this.$emit('clearRequest', value)
+      this.$emit('clearRequest', value);
     }
   },
   mounted () {
-    this.isValid = this.validate()
+    this.isValid = this.validate();
   },
   watch: {
     value (val) {
-      this.internalValue = val
-      this.validate()
+      this.internalValue = val;
+      this.validate();
     }
   }
-}
+};

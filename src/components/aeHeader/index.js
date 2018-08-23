@@ -1,5 +1,5 @@
-import aeHeader from './aeHeader.vue'
+import aeHeader from './aeHeader.vue';
 
 export default function install (Vue) {
-  Vue.component('ae-header', aeHeader)
+  Vue.component('ae-header', aeHeader);
 }

@@ -6,4 +6,4 @@ export default {
    * Component Name
    */
   name: 'ae-list-item'
-}
+};

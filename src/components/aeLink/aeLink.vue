@@ -19,11 +19,11 @@ export default {
   computed: {
     isLinkOnSameHost () {
       return typeof this.to === 'object' ||
-          (new URL(this.to, window.location)).host === window.location.host
+          (new URL(this.to, window.location)).host === window.location.host;
     },
     useRouterLink () {
-      return this.$options.components['router-link'] && this.isLinkOnSameHost
+      return this.$options.components['router-link'] && this.isLinkOnSameHost;
     }
   }
-}
+};
 </script>

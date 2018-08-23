@@ -1,5 +1,5 @@
-import aeIdentityLight from './aeIdentityLight.vue'
+import aeIdentityLight from './aeIdentityLight.vue';
 
 export default function install (Vue) {
-  Vue.component('ae-identity-light', aeIdentityLight)
+  Vue.component('ae-identity-light', aeIdentityLight);
 }

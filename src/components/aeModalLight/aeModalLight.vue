@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import AeOverlay from '../aeOverlay/aeOverlay.vue'
-import AeButton from '../aeButton/aeButton.vue'
-import AeIcon from '../aeIcon/aeIcon.vue'
+import AeOverlay from '../aeOverlay/aeOverlay.vue';
+import AeButton from '../aeButton/aeButton.vue';
+import AeIcon from '../aeIcon/aeIcon.vue';
 
 export default {
   name: 'ae-modal-light',
@@ -37,10 +37,10 @@ export default {
        * @event close
        * @type {undefined}
        */
-      this.$emit('close')
+      this.$emit('close');
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
