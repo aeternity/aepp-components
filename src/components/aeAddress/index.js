@@ -1,5 +1,5 @@
-import AeAddress from './aeAddress.vue'
+import AeAddress from './aeAddress.vue';
 
 export default function install (Vue) {
-  Vue.component('ae-address', AeAddress)
+  Vue.component('ae-address', AeAddress);
 }

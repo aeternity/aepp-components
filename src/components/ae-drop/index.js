@@ -1,29 +1,30 @@
 /**
  * Importing Libraries
  */
-import VueTouch from 'vue-touch'
+import VueTouch from 'vue-touch';
 
 /**
  * Importing Components
  */
-import AeDrop from './ae-drop.vue'
+import AeDrop from './ae-drop.vue';
 
 /**
  * Exporting Install function for Vue
+ * @param {Vue} Vue
  */
 export const install = function (Vue) {
   /**
    * Installing Libraries
    */
-  Vue.use(VueTouch)
+  Vue.use(VueTouch);
 
   /**
    * Installing Components
    */
-  Vue.component('ae-drop', AeDrop)
-}
+  Vue.component('ae-drop', AeDrop);
+};
 
 /**
  * Exporting only component
  */
-export default AeDrop
+export default AeDrop;

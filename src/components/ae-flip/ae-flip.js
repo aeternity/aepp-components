@@ -9,9 +9,10 @@ export default {
 
   /**
    * Component Data
+   * @return {Object}
    */
   data: function () {
-    return { rotation: 0 }
+    return { rotation: 0 };
   },
 
   /**
@@ -20,14 +21,15 @@ export default {
   computed: {
     /**
      * Compute the direction of the card
+     * @return {String}
      */
     direction: function () {
       if (this.rotation === 0) {
-        return false
+        return false;
       } else if (this.rotation > 0) {
-        return 'left'
+        return 'left';
       } else {
-        return 'right'
+        return 'right';
       }
     }
   },
@@ -39,21 +41,25 @@ export default {
     /**
      * Called when the user swipes left
      * it also throws an event on swipe
+     * @param {{}} ev
+     * @return {*|default.methods}
      */
     left: function (ev) {
-      if (this.rotation === 180) return
-      this.rotation += 180
-      return this.$emit('swipeleft')
+      if (this.rotation === 180) return;
+      this.rotation += 180;
+      return this.$emit('swipeleft');
     },
 
     /**
      * Called when the user swipes right
      * it also throws an event on swipe
+     * @param {{}} ev
+     * @return {*|default.methods}
      */
     right: function (ev) {
-      if (this.rotation === 0) return
-      this.rotation -= 180
-      return this.$emit('swiperight')
+      if (this.rotation === 0) return;
+      this.rotation -= 180;
+      return this.$emit('swiperight');
     }
   }
-}
+};

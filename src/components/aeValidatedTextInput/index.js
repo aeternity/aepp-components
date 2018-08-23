@@ -1,5 +1,5 @@
-import aeValidatedTextInput from './aeValidatedTextInput.vue'
+import aeValidatedTextInput from './aeValidatedTextInput.vue';
 
 export default function install (Vue) {
-  Vue.component('ae-validated-text-input', aeValidatedTextInput)
+  Vue.component('ae-validated-text-input', aeValidatedTextInput);
 }

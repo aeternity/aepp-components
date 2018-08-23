@@ -1,5 +1,5 @@
-import aeIcon from './aeIcon.vue'
+import aeIcon from './aeIcon.vue';
 
 export default function install (Vue) {
-  Vue.component('ae-icon', aeIcon)
+  Vue.component('ae-icon', aeIcon);
 }

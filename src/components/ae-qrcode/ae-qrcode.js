@@ -1,7 +1,7 @@
 /**
  * Importing Libraries
  */
-import QRious from 'qrious'
+import QRious from 'qrious';
 
 /**
  * ae-qrcode component
@@ -37,16 +37,18 @@ export default {
   watch: {
     /**
      * Update QR code when options change.
+     * @return {*}
      */
     options: function () {
-      return this.generate()
+      return this.generate();
     },
 
     /**
      * Update QR code when value change.
+     * @return {*}
      */
     value: function () {
-      return this.generate()
+      return this.generate();
     }
   },
 
@@ -56,20 +58,22 @@ export default {
   methods: {
     /**
      * Generate QR code
+     * @return {QRious}
      */
     generate: function () {
       return new QRious({
         value: String(this.value),
         element: this.$el.querySelector('#code'),
         ...this.options
-      })
+      });
     }
   },
 
   /**
    * Component mounted
+   * @return {*}
    */
   mounted: function () {
-    return this.generate()
+    return this.generate();
   }
-}
+};

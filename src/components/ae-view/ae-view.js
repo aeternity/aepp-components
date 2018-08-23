@@ -21,7 +21,7 @@ export default {
         return [
           'base',
           'frame'
-        ].indexOf(value) !== -1
+        ].indexOf(value) !== -1;
       }
     },
 
@@ -30,4 +30,4 @@ export default {
      */
     visible: Boolean
   }
-}
+};

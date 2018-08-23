@@ -2,7 +2,7 @@ const aeDividerTypes = [
   'boring',
   'exciting',
   'dramatic'
-]
+];
 
 export default {
   name: 'ae-divider',
@@ -12,7 +12,7 @@ export default {
      */
     type: {
       type: String,
-      validator: value => aeDividerTypes.includes(value)
+      validator: (value) => aeDividerTypes.includes(value)
     }
   }
-}
+};

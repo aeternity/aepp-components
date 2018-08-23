@@ -1,4 +1,4 @@
-import * as iconSvgStrings from '@public/icons'
+import * as iconSvgStrings from '@public/icons';
 
 const aeIconTypes = [
   'plain',
@@ -6,18 +6,19 @@ const aeIconTypes = [
   'normal',
   'exciting',
   'dramatic'
-]
+];
 
 export default {
   name: 'ae-icon',
   props: {
     /**
-    * Name of icon, possible values: 'arrow', 'burger', 'check', 'chevron', 'close', 'copy', 'error', 'info', 'plus', 'refresh', 'view'
+    * Name of icon, possible values: 'arrow', 'burger', 'check', 'chevron',
+     * 'close', 'copy', 'error', 'info', 'plus', 'refresh', 'view'
     */
     name: {
       type: String,
       required: true,
-      validator: value => !!iconSvgStrings[value]
+      validator: (value) => !!iconSvgStrings[value]
     },
     /**
     * Type of icon, possible values: 'plain', 'boring', 'normal', 'exciting', 'dramatic'
@@ -25,7 +26,7 @@ export default {
     type: {
       type: String,
       validator: (value) => {
-        return aeIconTypes.find(e => e === value)
+        return aeIconTypes.find((e) => e === value);
       },
       default: 'normal'
     },
@@ -44,7 +45,7 @@ export default {
      */
     size: {
       type: String,
-      validator: value => ['small'].includes(value)
+      validator: (value) => ['small'].includes(value)
     }
   },
   computed: {
@@ -54,15 +55,15 @@ export default {
         `_type_${this.type}`,
         `_invert_${this.invert}`,
         `_size_${this.size}`
-      ]
+      ];
     },
     style () {
       return {
         ...this.rotate && { transform: `rotate(${this.rotate}deg)` }
-      }
+      };
     },
     iconSvg () {
-      return iconSvgStrings[this.name]
+      return iconSvgStrings[this.name];
     }
   }
-}
+};

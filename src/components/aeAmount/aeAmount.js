@@ -14,16 +14,16 @@ export default {
   },
   computed: {
     sizeModifier () {
-      return `_size_${this.size}`
+      return `_size_${this.size}`;
     },
     colorModifier () {
-      return `_color_${this.color}`
+      return `_color_${this.color}`;
     },
     cssClass () {
       return [
         this.sizeModifier,
         this.colorModifier
-      ]
+      ];
     }
   }
-}
+};

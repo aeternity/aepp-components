@@ -1,15 +1,15 @@
-import { shallow, mount } from 'vue-test-utils'
-import AeAddress from './aeAddress.vue'
-import AeAddressPlugin from './index'
-import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue'
-import AeIcon from '../aeIcon/aeIcon.vue'
+import { shallow, mount } from 'vue-test-utils';
+import AeAddress from './aeAddress.vue';
+import AeAddressPlugin from './index';
+import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
+import AeIcon from '../aeIcon/aeIcon.vue';
 
-const address = '0xfa617481af59ebec80e8d529f1e2d1b3751468f3'
+const address = '0xfa617481af59ebec80e8d529f1e2d1b3751468f3';
 
 describe('AeAddress', () => {
   it('has an install function', () => {
-    expect(AeAddressPlugin).toBeInstanceOf(Function)
-  })
+    expect(AeAddressPlugin).toBeInstanceOf(Function);
+  });
 
   describe('rendering', () => {
     it('renders a aeIdentityAvatar when showAvatar prop is true', () => {
@@ -18,10 +18,10 @@ describe('AeAddress', () => {
           address,
           showAvatar: true
         }
-      })
+      });
 
-      expect(wrapper.contains(AeIdentityAvatar)).toBe(true)
-    })
+      expect(wrapper.contains(AeIdentityAvatar)).toBe(true);
+    });
 
     it('does NOT render a aeIdentityAvatar when showAvatar prop is false', () => {
       const wrapper = shallow(AeAddress, {
@@ -29,10 +29,10 @@ describe('AeAddress', () => {
           address,
           showAvatar: false
         }
-      })
+      });
 
-      expect(wrapper.contains(AeIdentityAvatar)).toBe(false)
-    })
+      expect(wrapper.contains(AeIdentityAvatar)).toBe(false);
+    });
 
     it('forwards address prop to ae-identity-avatar', () => {
       const wrapper = shallow(AeAddress, {
@@ -40,11 +40,11 @@ describe('AeAddress', () => {
           address,
           showAvatar: true
         }
-      })
+      });
 
-      const avatar = wrapper.find(AeIdentityAvatar)
-      expect(avatar.props().address).toBe(address)
-    })
+      const avatar = wrapper.find(AeIdentityAvatar);
+      expect(avatar.props().address).toBe(address);
+    });
 
     it('renders a checkmark sign if verified prop is true', () => {
       const wrapper = mount(AeAddress, {
@@ -53,13 +53,13 @@ describe('AeAddress', () => {
           verified: true,
           name: 'Test'
         }
-      })
+      });
 
-      const checkMark = wrapper.find(AeIcon)
-      expect(checkMark.classes()[0].contains('checkmark')).toBe(true)
-      const { name, type } = checkMark.props()
-      expect(name).toBe('check')
-      expect(type).toBe('dramatic')
-    })
-  })
-})
+      const checkMark = wrapper.find(AeIcon);
+      expect(checkMark.classes()[0].contains('checkmark')).toBe(true);
+      const { name, type } = checkMark.props();
+      expect(name).toBe('check');
+      expect(type).toBe('dramatic');
+    });
+  });
+});

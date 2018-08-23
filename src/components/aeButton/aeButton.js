@@ -1,12 +1,12 @@
-import AeLink from '../aeLink/aeLink.vue'
-import {TYPE_PROPERTY_VALUES as aeButtonTypes} from '@source/core/constants'
+import AeLink from '../aeLink/aeLink.vue';
+import {TYPE_PROPERTY_VALUES as aeButtonTypes} from '@source/core/constants';
 
 const aeButtonSizes = [
   'smaller',
   'small',
   'medium',
   'large'
-]
+];
 export default {
   name: 'ae-button',
   components: { AeLink },
@@ -17,7 +17,7 @@ export default {
     type: {
       type: String,
       validator: (value) => {
-        return typeof (aeButtonTypes.find(e => e === value)) === 'string'
+        return typeof (aeButtonTypes.find((e) => e === value)) === 'string';
       },
       default: 'normal'
     },
@@ -27,7 +27,7 @@ export default {
     size: {
       type: String,
       validator: (value) => {
-        return aeButtonSizes.find(e => e === value)
+        return aeButtonSizes.find((e) => e === value);
       },
       default: 'medium'
     },
@@ -58,34 +58,34 @@ export default {
   },
   computed: {
     hasDefaultSlot () {
-      return !!this.$slots.default
+      return !!this.$slots.default;
     },
     hasLabel () {
-      return this.hasDefaultSlot
+      return this.hasDefaultSlot;
     },
     sizeModifier () {
-      return `_size_${this.size}`
+      return `_size_${this.size}`;
     },
     typeModifier () {
-      return `_type_${this.type}`
+      return `_type_${this.type}`;
     },
     activeModifier () {
-      return `_active_${!this.inactive}`
+      return `_active_${!this.inactive}`;
     },
     hasLabelModifier () {
-      return `_has-label_${this.hasLabel}`
+      return `_has-label_${this.hasLabel}`;
     },
     invertModifier () {
-      return `_invert_${this.invert}`
+      return `_invert_${this.invert}`;
     },
     uppercaseModifier () {
-      return this.uppercase ? '_uppercase' : ''
+      return this.uppercase ? '_uppercase' : '';
     },
     blockModifier () {
-      return this.block ? '_block' : ''
+      return this.block ? '_block' : '';
     },
     plainModifier () {
-      return this.plain || this.size === 'smaller' ? '_plain' : ''
+      return this.plain || this.size === 'smaller' ? '_plain' : '';
     },
     cssClass () {
       return [
@@ -97,7 +97,7 @@ export default {
         this.uppercaseModifier,
         this.blockModifier,
         this.plainModifier
-      ]
+      ];
     }
   }
-}
+};

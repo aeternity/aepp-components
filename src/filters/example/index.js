@@ -1,11 +1,8 @@
 /**
- * Importing Libraries
- */
-import unit from 'ethjs-unit';
-
-/**
- * Exporting Filter
+ * Filter returns value of the input
+ * @param {*} value
+ * @return {*}
  */
 export default function (value) {
-  return unit.fromWei(value.toString(10), 'ether');
+  return value;
 }

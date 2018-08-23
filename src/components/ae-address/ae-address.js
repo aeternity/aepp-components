@@ -38,9 +38,10 @@ export default {
     /**
      * This will chunk the address
      * into values of 3 and return array
+     * @return {[]}
      */
     chunked: function () {
-      return this.value.match(/.{1,3}/g)
+      return this.value.match(/.{1,3}/g);
     }
   }
-}
+};

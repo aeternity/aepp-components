@@ -1,5 +1,5 @@
-import AeButton from '../aeButton/aeButton.vue'
-import AeIcon from '../aeIcon/aeIcon.vue'
+import AeButton from '../aeButton/aeButton.vue';
+import AeIcon from '../aeIcon/aeIcon.vue';
 
 export default {
   name: 'ae-text-input',
@@ -10,7 +10,7 @@ export default {
   data () {
     return {
       internalValue: this.value
-    }
+    };
   },
   props: {
     inputId: {
@@ -36,38 +36,38 @@ export default {
     maxlength: {
       type: Number,
       validator: function (value) {
-        return value > 0 && parseInt(value) === value
+        return value > 0 && parseInt(value) === value;
       }
     }
   },
   computed: {
     validModifier () {
-      return this.hasError ? '_is-valid_false' : '_is-valid_true'
+      return this.hasError ? '_is-valid_false' : '_is-valid_true';
     }
   },
   methods: {
     onClearRequest () {
-      const value = this.$refs.input.value
-      this.$emit('clearRequest', value)
+      const value = this.$refs.input.value;
+      this.$emit('clearRequest', value);
     },
     onInput () {
-      const value = this.$refs.input.value
-      this.$emit('input', value)
+      const value = this.$refs.input.value;
+      this.$emit('input', value);
     },
     onFocus () {
-      this.$emit('focus')
+      this.$emit('focus');
     },
     onBlur () {
-      const value = this.$refs.input.value
-      this.$emit('blur', value)
+      const value = this.$refs.input.value;
+      this.$emit('blur', value);
     },
     forwardKeyEvent (event) {
-      this.$emit(event.type, event)
+      this.$emit(event.type, event);
     }
   },
   watch: {
     value (val) {
-      this.internalValue = val
+      this.internalValue = val;
     }
   }
-}
+};

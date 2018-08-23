@@ -1,4 +1,4 @@
-import AeValidatedTextInput from '../aeValidatedTextInput/aeValidatedTextInput.vue'
+import AeValidatedTextInput from '../aeValidatedTextInput/aeValidatedTextInput.vue';
 
 export default {
   name: 'ae-labelled-text-input',
@@ -9,7 +9,7 @@ export default {
     return {
       errorId: undefined,
       internalValue: this.value
-    }
+    };
   },
   props: {
     defaultErrorMessage: {
@@ -18,7 +18,7 @@ export default {
     errorMessages: {
       type: Object,
       default () {
-        return {}
+        return {};
       }
     },
     label: {
@@ -44,46 +44,46 @@ export default {
   computed: {
     _errorMessage () {
       if (!this.errorId) {
-        return
+        return;
       }
 
-      const message = this.errorMessages[this.errorId] || this.defaultErrorMessage
-      return message
+      const message = this.errorMessages[this.errorId] || this.defaultErrorMessage;
+      return message;
     },
     _validMessage () {
       if (!this.errorId) {
-        return this.validMessage
+        return this.validMessage;
       }
     },
     internalInputId () {
-      return this._uid
+      return this._uid;
     }
   },
   methods: {
     onValidate (value) {
-      this.errorId = value
-      this.$emit('validation', value)
+      this.errorId = value;
+      this.$emit('validation', value);
     },
     onBlur (value) {
-      this.$emit('blur', value)
+      this.$emit('blur', value);
     },
     onFocus () {
-      this.$emit('focus')
+      this.$emit('focus');
     },
     onInput (value) {
-      this.$emit('input', value)
+      this.$emit('input', value);
     },
     clearInput () {
-      this.internalValue = ''
-      this.$emit('input', '')
+      this.internalValue = '';
+      this.$emit('input', '');
     },
     forwardKeyEvent (event) {
-      this.$emit(event.type, event)
+      this.$emit(event.type, event);
     }
   },
   watch: {
     value (val) {
-      this.internalValue = val
+      this.internalValue = val;
     }
   }
-}
+};

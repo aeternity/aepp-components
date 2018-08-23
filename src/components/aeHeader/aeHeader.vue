@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import AeLink from '../aeLink/aeLink.vue'
+import AeLink from '../aeLink/aeLink.vue';
 
 /**
  * Header of aepplication
@@ -36,7 +36,7 @@ export default {
      */
     name: String
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

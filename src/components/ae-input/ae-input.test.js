@@ -2,7 +2,7 @@
  * Importing Tools
  */
 // import AeInput from './ae-input.vue'
-import install from './index'
+import install from './index';
 // import { shallow } from 'vue-test-utils'
 
 /**
@@ -10,6 +10,6 @@ import install from './index'
  */
 describe('ae-input', () => {
   it('provides an install function', () => {
-    expect(typeof install).toBe('function')
-  })
-})
+    expect(typeof install).toBe('function');
+  });
+});

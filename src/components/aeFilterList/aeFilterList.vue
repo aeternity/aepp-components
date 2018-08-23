@@ -8,7 +8,7 @@
 <script>
 export default {
   name: 'ae-filter-list'
-}
+};
 </script>
 
 <style lang="scss" scoped>

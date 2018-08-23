@@ -1,7 +1,7 @@
 /**
  * Importing Libraries
  */
-import { events } from '@source/mixins'
+import { events } from '@source/mixins';
 
 /**
  * ae-button component
@@ -15,7 +15,7 @@ export default {
   /**
    * Component Mixins
    */
-  mixins: [ events ],
+  mixins: [events],
 
   /**
    * Component Props
@@ -33,7 +33,7 @@ export default {
           'default',
           'alternative',
           'emphasis'
-        ].indexOf(value) !== 1
+        ].indexOf(value) !== 1;
       }
     },
 
@@ -49,7 +49,7 @@ export default {
           'default',
           'alternative',
           'emphasis'
-        ].indexOf(value) !== 1
+        ].indexOf(value) !== 1;
       }
     },
 
@@ -66,7 +66,7 @@ export default {
           'secondary',
           'icon',
           'toolbar'
-        ].indexOf(value) !== 1
+        ].indexOf(value) !== 1;
       }
     },
 
@@ -75,4 +75,4 @@ export default {
      */
     extend: Boolean
   }
-}
+};

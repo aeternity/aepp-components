@@ -11,4 +11,4 @@ export default {
    * Component Properties
    */
   props: {}
-}
+};

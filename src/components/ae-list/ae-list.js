@@ -20,9 +20,9 @@ export default {
         return [
           'normal',
           'tight'
-        ].indexOf(value) !== -1
+        ].indexOf(value) !== -1;
       },
       default: 'normal'
     }
   }
-}
+};

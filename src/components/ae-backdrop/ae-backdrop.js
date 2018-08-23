@@ -22,7 +22,7 @@ export default {
           'default',
           'alternative',
           'emphasis'
-        ].indexOf(value) !== -1
+        ].indexOf(value) !== -1;
       }
     },
 
@@ -36,7 +36,7 @@ export default {
         return [
           'top',
           'bottom'
-        ].indexOf(value) !== -1
+        ].indexOf(value) !== -1;
       }
     },
 
@@ -48,4 +48,4 @@ export default {
       default: false
     }
   }
-}
+};

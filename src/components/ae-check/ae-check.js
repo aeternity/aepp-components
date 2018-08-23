@@ -43,7 +43,7 @@ export default {
       validator: function (value) {
         return [
           'left'
-        ].indexOf(value) !== 1
+        ].indexOf(value) !== 1;
       }
     },
 
@@ -60,4 +60,4 @@ export default {
       default: false
     }
   }
-}
+};
