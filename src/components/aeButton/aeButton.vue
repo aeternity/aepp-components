@@ -73,6 +73,7 @@ export default {
       if (this.invert) classes.push('_invert')
       if (this.disabled) classes.push('_disabled')
       if (this.plain) classes.push('_plain')
+      if (this.$slots.icon) classes.push('_has-icon')
       if (this.$slots.default) classes.push('_has-label')
       return classes
     }
@@ -118,55 +119,53 @@ export default {
   }
 
   &._size {
-    @mixin size ($size) {
-      height: $size;
-      line-height: $size;
+    @mixin size ($buttonHeight, $fontSize, $iconSize, $labelGap) {
+      height: $buttonHeight;
+      line-height: $buttonHeight;
+      font-size: $fontSize;
 
       .icon {
-        width: $size;
+        width: $buttonHeight;
+
+        /deep/ {
+          .ae-icon, img {
+            width: $iconSize;
+            height: $iconSize;
+          }
+
+          img {
+            vertical-align: middle;
+          }
+        }
+      }
+
+      .label {
+        padding: 0 $labelGap;
+      }
+
+      &._plain {
+        .label {
+          padding: 0 ($buttonHeight - $fontSize) / 2;
+        }
+
+        &._has-icon {
+          .label {
+            padding-left: $buttonHeight;
+          }
+        }
       }
     }
 
     &_small {
-      @include size(30px);
-      font-size: 14px;
-
-      .icon /deep/ .ae-icon {
-        width: 16px;
-        height: 16px;
-      }
-
-      .label {
-        padding: 0 50px;
-      }
+      @include size(30px, 14px, 16px, 50px);
     }
 
     &_medium {
-      @include size(50px);
-      font-size: 18px;
-
-      .icon /deep/ .ae-icon {
-        width: 24px;
-        height: 24px;
-      }
-
-      .label {
-        padding: 0 55px;
-      }
+      @include size(50px, 18px, 24px, 55px);
     }
 
     &_large {
-      @include size(80px);
-      font-size: 24px;
-
-      .icon /deep/ .ae-icon {
-        width: 35px;
-        height: 35px;
-      }
-
-      .label {
-        padding: 0 105px;
-      }
+      @include size(80px, 24px, 35px, 105px);
     }
   }
 
