@@ -48,10 +48,10 @@ const components = {
  */
 components.install = function (Vue) {
   return Object
-  .keys(components)
-  .filter((component) => component !== 'install')
-  .map((component) => components[component])
-  .forEach(Vue.use.bind(Vue));
+    .keys(components)
+    .filter((component) => component !== 'install')
+    .map((component) => components[component])
+    .forEach(Vue.use.bind(Vue));
 };
 
 /**

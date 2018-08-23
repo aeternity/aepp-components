@@ -69,11 +69,11 @@ export default {
   computed: {
     displayAddress () {
       if (this.size === 'full') {
- return this.address;
-}
+        return this.address;
+      }
       if (this.size === 'chunked') {
- return this.address.match(/.{1,7}/g);
-}
+        return this.address.match(/.{1,7}/g);
+      }
       return startAndEnd(this.address);
     },
     displayName () {

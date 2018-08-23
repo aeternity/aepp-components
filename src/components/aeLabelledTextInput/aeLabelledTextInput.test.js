@@ -157,17 +157,17 @@ describe('AeLabelledTextInput', () => {
 
     it('does NOT render valid message when input is in valid state but a validMessage prop was not provided',
       (done) => {
-      const wrapper = createShallowWrapper();
-      const input = wrapper.find(AeValidatedTextInput);
-      input.vm.$emit('validation', undefined);
-      wrapper.vm.$nextTick(
-        () => {
-          const validMessageElement = wrapper.vm.$refs.validMessage;
-          expect(validMessageElement).toBeUndefined();
-          done();
-        }
-      );
-    });
+        const wrapper = createShallowWrapper();
+        const input = wrapper.find(AeValidatedTextInput);
+        input.vm.$emit('validation', undefined);
+        wrapper.vm.$nextTick(
+          () => {
+            const validMessageElement = wrapper.vm.$refs.validMessage;
+            expect(validMessageElement).toBeUndefined();
+            done();
+          }
+        );
+      });
 
     it('passes input event', () => {
       const value = 'afca';

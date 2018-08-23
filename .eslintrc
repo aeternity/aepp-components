@@ -15,7 +15,7 @@
   },
   "extends": [
     "eslint:recommended",
-    "google",
+    "standard",
     "plugin:vue/essential"
   ],
   "plugins": [
@@ -24,17 +24,8 @@
   "rules": {
     "quotes": ["error", "single"],
     "max-len": ["error", 120],
-    "comma-dangle": "off",
-    "key-spacing": "off",
-    "object-curly-spacing": "off",
-    "space-before-function-paren": "off",
-    "valid-jsdoc": "warn",
-    "require-jsdoc": "off",
-    "no-console": "warn",
-    "no-unused-vars": "warn",
-    "no-invalid-this": "off",
-    "no-multi-spaces": "off",
-    "new-cap": "off",
-    "camelcase": "warn"
+    "indent": [2, 2],
+    "camelcase": "warn",
+    "semi": "off"
   }
 }
