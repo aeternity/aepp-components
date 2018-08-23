@@ -15,8 +15,6 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../common";
-
   html {
     height: 100%;
   }

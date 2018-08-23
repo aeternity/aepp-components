@@ -12,7 +12,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../variables";
 
   .ae-badge {
     display: inline-block;

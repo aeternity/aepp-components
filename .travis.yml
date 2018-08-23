@@ -5,11 +5,11 @@ install:
 - npm install
 script:
 - npm test
-- npm run styleguide:build
+- npm run docs:build
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after -v $TRAVIS_BUILD_DIR/styleguide/* deploy@139.59.142.164:/var/www/html/components.aepps.com/
+  script: rsync -r --delete-after -v $TRAVIS_BUILD_DIR/docs/* deploy@139.59.142.164:/var/www/html/components.aepps.com/
   on:
     branch: master
 before_deploy:

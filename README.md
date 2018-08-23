@@ -7,9 +7,18 @@ navigation: 3
 # æternity æpp Components
 
 ## Overview
-The æternity æpp components are meant to provide æpp developers with reusable [Vue.js](https://vuejs.org) components that adhere to our [styleguide](https://github.com/aeternity/aepp-prototypes). Until the javascript comes bundled please use a build process such as [webpack](https://webpack.js.org/), [browserify](http://browserify.org/), [grunt](https://gruntjs.com/), [gulp](https://gulpjs.com/), etc.
+The æternity æpp components are meant to provide æpp developers with reusable [Vue.js](https://vuejs.org) components 
+that adhere to our [styleguide](https://github.com/aeternity/aepp-prototypes). The javascript comes unbundled so
+please use a build process such as [webpack](https://webpack.js.org/), [browserify](http://browserify.org/), 
+[grunt](https://gruntjs.com/), [gulp](https://gulpjs.com/), etc.
 
 The github repository is [here](https://github.com/aeternity/aepp-components).
+
+## Hackathon Notice
+We've rewritten and refactored the components for better usage in the hackathon (24.11.2017). 
+Beware that the currently existing apps (like identity, aexistence/notary, wall, et cetera) 
+still use older versions of this repository. In the near future we will update these repositories 
+to use the latest aepp-components.
 
 ## Documentation
 
@@ -39,6 +48,7 @@ Vue.use(AeppComponents)
 
 ```js
 Vue.use(AeppComponents.AeButton)
+
 // or
 Vue.component('ae-button', AeButton)
 ```

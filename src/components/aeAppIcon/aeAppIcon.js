@@ -1,4 +1,4 @@
-import mixin from '../../mixins/helper'
+import mixin from '@source/core/mixins/helper'
 
 /**
  * Displays an App Icon

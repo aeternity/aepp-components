@@ -1,0 +1,21 @@
+//------------------------------
+// *****************************
+// ae-list
+// *****************************
+//------------------------------
+
+.ae-list {
+  margin: 0;
+  padding: 8px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  list-style: none;
+}
+
+.ae-list.normal > li {
+  padding: 8px 0;
+}
+
+.ae-list.tight > li {
+  padding: 2px 0;
+}

@@ -1,0 +1,55 @@
+//------------------------------
+// *****************************
+// Colors
+// *****************************
+//------------------------------
+
+// Neutral Palette
+$color-neutral-minimum:    #001833;
+$color-neutral-negative-3: #203040;
+$color-neutral-negative-2: #4E5A66;
+$color-neutral-negative-1: #76818C;
+$color-neutral-neutral:    #929CA6;
+$color-neutral-positive-1: #D3DCE6;
+$color-neutral-positive-2: #EDF3F7;
+$color-neutral-positive-3: #F7FAFC;
+$color-neutral-maximum:    #FFFFFF;
+
+// Default Palette
+$color-default-negative-3: #442873;
+$color-default-negative-2: #513482;
+$color-default-negative-1: #5F4191;
+$color-default-default:    #6948A1;
+$color-default-positive-1: #8974B3;
+$color-default-positive-2: #A18FBF;
+$color-default-positive-3: #B2A3CC;
+
+// Emphasis Palette
+$color-emphasis-negative-3: #BD2A67;
+$color-emphasis-negative-2: #D12869;
+$color-emphasis-negative-1: #E72B6E;
+$color-emphasis-emphasis:   #FF0D6A;
+$color-emphasis-positive-1: #F279A8;
+$color-emphasis-positive-2: #FA96B7;
+$color-emphasis-positive-3: #FFBFD7;
+
+// Emphasis Alternative Palette
+$color-alternative-negative-3:  #099C9D;
+$color-alternative-negative-2:  #05ADA8;
+$color-alternative-negative-1:  #02BDAA;
+$color-alternative-alternative: #14CCB7;
+$color-alternative-positive-1:  #62D9CB;
+$color-alternative-positive-2:  #95E6DC;
+$color-alternative-positive-3:  #CEF2EE;
+
+// Utilities Palette
+$color-error:           #FF0D6A;
+$color-focus:           #B300FF;
+$color-focus-alt:       #00E8CC;
+$color-shadow-alpha-25: rgba(0, 33, 87, 0.25);
+$color-shadow-alpha-15: rgba(0, 33, 87, 0.15);
+$color-shadow-alpha-10: rgba(0, 33, 87, 0.15);
+
+// General Colors
+$color-black: #000000 !default;
+$color-white: #ffffff !default;

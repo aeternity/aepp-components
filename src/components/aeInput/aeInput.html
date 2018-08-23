@@ -1,0 +1,15 @@
+<div class="ae-input">
+  <!-- @slot The content of the left side -->
+  <slot name="left" />
+  <input
+    :id="id"
+    :placeholder="placeholder"
+    :type="type"
+    :step="type === 'number' && 'any'"
+    :class="{ monospace }"
+    @input="handleInput"
+    :value="value"
+  />
+  <!-- @slot The content of the right side -->
+  <slot name="right" />
+</div>

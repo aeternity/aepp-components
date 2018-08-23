@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import {TYPE_PROPERTY_VALUES as types} from '../../constants'
+import {TYPE_PROPERTY_VALUES as types} from '@source/core/constants'
 
 export default {
   name: 'ae-label',
@@ -38,8 +38,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../variables";
-
   .ae-label {
     display: flex;
     text-transform: uppercase;

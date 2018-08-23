@@ -1,0 +1,29 @@
+//------------------------------
+// *****************************
+// Typography
+// *****************************
+//------------------------------
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: $base-line-height;
+  font-weight: normal;
+}
+
+p {
+  line-height: $base-line-height;
+  font-size: $base-font-size;
+}
+
+a {
+  color: inherit;
+  transition: all $base-transition-time;
+  opacity: 0.75;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    text-decoration: underline;
+    color: inherit;
+  }
+}

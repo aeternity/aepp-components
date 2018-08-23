@@ -12,8 +12,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../variables";
-  @import "../mixins";
 
   .ae-filter-list {
     margin: 30px 0;
