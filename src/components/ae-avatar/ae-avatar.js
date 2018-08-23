@@ -1,7 +1,7 @@
 /**
  * Importing Libraries
  */
-import blockies from 'ethereum-blockies-png'
+import { renderIcon } from '@download/blockies'
 
 /**
  * ae-avatar component
@@ -22,6 +22,7 @@ export default {
      * a blockies from.
      */
     address: {
+      default: '0x0',
       type: String,
       required: true
     },
@@ -39,13 +40,9 @@ export default {
   },
 
   /**
-   * Computed Properties
+   * TODO: Needs size fix
    */
-  computed: {
-    blockieDataURL: function () {
-      return blockies.createDataURL({
-        seed: this.address
-      })
-    }
+  mounted: function () {
+    return renderIcon({ seed: this.address }, this.$refs.blockies)
   }
 }
