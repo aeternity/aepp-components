@@ -5,12 +5,9 @@ function startAndEnd (str, start = 6, end = 6) {
     '…' +
     str.substr(str.length - end, str.length)
 }
-function addressValid (address) {
-  return /^((0x[0-9a-fA-F]{40})|([ao]k\$[0-9a-zA-Z]{94}))$/.test(address)
-}
 
 /**
- * Displays an Ethereum Address and an optional blockie avatar
+ * Displays an Address and an optional blockie avatar
  */
 export default {
   name: 'ae-address',
@@ -20,10 +17,7 @@ export default {
      */
     'address': {
       type: String,
-      required: true,
-      validator: function (address) {
-        return addressValid(address)
-      }
+      required: true
     },
 
     /**
