@@ -1,20 +1,7 @@
-/**
- * Importing Libraries
- */
 import QRious from 'qrious';
 
-/**
- * ae-qrcode component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-qrcode',
-
-  /**
-   * Component Props
-   */
   props: {
     /**
      * The value of the QR code.
@@ -30,10 +17,6 @@ export default {
      */
     options: Object
   },
-
-  /**
-   * Component watch properties
-   */
   watch: {
     /**
      * Update QR code when options change.
@@ -51,10 +34,6 @@ export default {
       return this.generate();
     }
   },
-
-  /**
-   * Component Methods
-   */
   methods: {
     /**
      * Generate QR code
@@ -68,11 +47,6 @@ export default {
       });
     }
   },
-
-  /**
-   * Component mounted
-   * @return {*}
-   */
   mounted: function () {
     return this.generate();
   }

@@ -1,15 +1,5 @@
-/**
- * ae-check component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-check',
-
-  /**
-   * Component Props
-   */
   props: {
     /**
      * ID of the component/input

@@ -1,20 +1,7 @@
-/**
- * Importing Libraries
- */
 import { renderIcon } from '@download/blockies';
 
-/**
- * ae-avatar component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-avatar',
-
-  /**
-   * Component Props
-   */
   props: {
     /**
      * Address of the wallet for which
@@ -40,7 +27,7 @@ export default {
   },
 
   /**
-   * TODO: Needs size fix
+   * TODO: ae-avatar canvas size: Canvas needs to be rendered depending on user selected size
    * @return {HTMLCanvasElement}
    */
   mounted: function () {

@@ -1,15 +1,5 @@
-/**
- * ae-toolbar component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-toolbar',
-
-  /**
-   * Component Props
-   */
   props: {
     /**
      * Fill property changes the color state of the toolbar
