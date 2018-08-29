@@ -19,14 +19,6 @@
   @return $string;
 }
 
-/// Disable user Select
-@mixin user-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 /// Placeholder Color
 /// @param {Hex} $color - Placeholder Color
 @mixin placeholder-color($color) {

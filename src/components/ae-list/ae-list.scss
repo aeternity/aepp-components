@@ -5,17 +5,21 @@
 //------------------------------
 
 .ae-list {
+  padding: 0;
   margin: 0;
-  padding: 8px 0;
-  display: flex;
-  flex-flow: column nowrap;
-  list-style: none;
 }
 
-.ae-list.normal > li {
-  padding: 8px 0;
-}
+.ae-list.primary {
+  border-radius: 4px;
+  background: $color-white;
+  box-shadow: 0 0 8px $color-shadow-alpha-15;
+  padding: rem(15px);
+  overflow: hidden;
 
-.ae-list.tight > li {
-  padding: 2px 0;
+  > li:first-child {
+    border-top: 0;
+  }
+  > li:last-child {
+    border-bottom: 0;
+  }
 }

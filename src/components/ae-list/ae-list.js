@@ -2,17 +2,14 @@ export default {
   name: 'ae-list',
   props: {
     /**
-     * Space between each item, possible values: 'normal', 'tight'
+     * Face applies a shape/form to the current
+     * list container, available options: `primary`
      */
-    packing: {
+    face: {
       type: String,
-      validator: (value) => {
-        return [
-          'normal',
-          'tight'
-        ].indexOf(value) !== -1;
-      },
-      default: 'normal'
+      validator: function (value) {
+        return ['primary'].indexOf(value) !== 1;
+      }
     }
   }
 };
