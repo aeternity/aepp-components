@@ -1,7 +1,7 @@
 <template>
-    <div class="ae-overscreen" :class="{ shadow, [align]: Boolean(align) }">
-      <slot />
-    </div>
+  <div class="ae-overscreen" :class="[align, { shadow }]">
+    <slot />
+  </div>
 </template>
 <script>
 export default {
@@ -22,36 +22,35 @@ export default {
         'left',
         'right',
       ].includes(value),
-      default: 'center',
     },
   },
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals/functions';
 
-  .ae-overscreen {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: rem(20px) rem(32px);
-    z-index: $stack-infinite;
-  }
+.ae-overscreen {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem 2rem;
+  z-index: 99999;
+}
 
-  .ae-overscreen.left {
-    justify-content: flex-start;
-  }
+.ae-overscreen.left {
+  justify-content: flex-start;
+}
 
-  .ae-overscreen.right {
-    justify-content: flex-end;
-  }
+.ae-overscreen.right {
+  justify-content: flex-end;
+}
 
-  .ae-overscreen.shadow {
-    background: rgb(237,243,247);
-    background: linear-gradient(0deg, rgba(237,243,247,1) 40%, rgba(237,243,247,0) 95%);
-  }
+.ae-overscreen.shadow {
+  background: rgb(237,243,247);
+  background: linear-gradient(0deg, rgba(237,243,247,1) 40%, rgba(237,243,247,0) 95%);
+}
 </style>

@@ -13,6 +13,7 @@ export { default as AeInput } from './ae-input/ae-input.vue';
 export { default as AeInputPlain } from './ae-input-plain/ae-input-plain.vue';
 export { default as AeList } from './ae-list/ae-list.vue';
 export { default as AeListItem } from './ae-list-item/ae-list-item.vue';
+export { default as AeOverScreen } from './ae-overscreen/ae-overscreen.vue';
 export { default as AePhraser } from './ae-phraser/ae-phraser.vue';
 export { default as AeQRCode } from './ae-qrcode/ae-qrcode.vue';
 export { default as AeSlider } from './ae-slider/ae-slider.vue';
