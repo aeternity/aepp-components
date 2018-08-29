@@ -1,6 +1,3 @@
-/**
- * Importing Components
- */
 import AePhraser from './ae-phraser.vue';
 
 /**
@@ -11,7 +8,4 @@ export const install = function (Vue) {
   Vue.component('ae-phraser', AePhraser);
 };
 
-/**
- * Exporting only component
- */
 export default AePhraser;

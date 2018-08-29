@@ -1,6 +1,3 @@
-/**
- * Importing Components
- */
 import AeView from './ae-view.vue';
 
 /**
@@ -11,7 +8,4 @@ export const install = function (Vue) {
   Vue.component('ae-view', AeView);
 };
 
-/**
- * Exporting only component
- */
 export default AeView;

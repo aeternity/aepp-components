@@ -1,20 +1,7 @@
-/**
- * Importing Fonts
- */
 import './icons/icons.font';
 
-/**
- * ae-icon component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-icon',
-
-  /**
-   * Component Properties
-   */
   props: {
     /**
      * Name of the icon, please check list of icons in

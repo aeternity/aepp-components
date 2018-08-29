@@ -1,33 +1,11 @@
-/**
- * Importing Libraries
- */
 import { directive as clickaway } from 'vue-clickaway';
 
-/**
- * ae-drop component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-drop',
-
-  /**
-   * Component Directives
-   */
   directives: { clickaway },
-
-  /**
-   * Component Data
-   * @return {Object}
-   */
   data: function () {
     return { active: false };
   },
-
-  /**
-   * Component Props
-   */
   props: {
     /**
      * Direction of the dropped menu
@@ -35,10 +13,6 @@ export default {
      */
     direction: String
   },
-
-  /**
-   * Component Methods
-   */
   methods: {
     /**
      * Activate Drop

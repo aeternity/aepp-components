@@ -1,23 +1,8 @@
-/**
- * ae-flip component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-flip',
-
-  /**
-   * Component Data
-   * @return {Object}
-   */
   data: function () {
     return { rotation: 0 };
   },
-
-  /**
-   * Computed Properties
-   */
   computed: {
     /**
      * Compute the direction of the card
@@ -33,10 +18,6 @@ export default {
       }
     }
   },
-
-  /**
-   * Component Methods
-   */
   methods: {
     /**
      * Called when the user swipes left

@@ -1,15 +1,5 @@
-/**
- * ae-address component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-address',
-
-  /**
-   * Component Props
-   */
   props: {
     /**
      * ae address value to be displayed
@@ -30,14 +20,10 @@ export default {
      */
     gap: String
   },
-
-  /**
-   * Computed Properties
-   */
   computed: {
     /**
      * This will chunk the address
-     * into values of 3 and return array
+     * into values of 3 and return an array
      * @return {[]}
      */
     chunked: function () {

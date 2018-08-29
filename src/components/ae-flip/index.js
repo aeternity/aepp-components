@@ -1,11 +1,4 @@
-/**
- * Importing Libraries
- */
 import VueTouch from 'vue-touch';
-
-/**
- * Importing Components
- */
 import AeFlip from './ae-flip.vue';
 
 /**
@@ -24,7 +17,4 @@ export const install = function (Vue) {
   Vue.component('ae-flip', AeFlip);
 };
 
-/**
- * Exporting only component
- */
 export default AeFlip;

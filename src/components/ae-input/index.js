@@ -1,6 +1,3 @@
-/**
- * Importing Components
- */
 import AeInput from './ae-input.vue';
 
 /**
@@ -11,7 +8,4 @@ export const install = function (Vue) {
   Vue.component('ae-input', AeInput);
 };
 
-/**
- * Exporting only component
- */
 export default AeInput;
