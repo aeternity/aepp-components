@@ -1,5 +1,5 @@
 import aeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
-import helperMixin from '../../core/mixins/helper';
+import helperMixin from '../../mixins/helper';
 
 /**
  * Displays an Identity with an avatar blockie, the address and an amount of ether

@@ -12,7 +12,7 @@
   </button>
 </template>
 <script>
-import helper from '../../core/mixins/helper';
+import helper from '../../mixins/helper';
 
 export default {
   name: 'ae-button',

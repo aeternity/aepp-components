@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { TYPE_PROPERTY_VALUES as types } from '../../core/constants';
+import { TYPE_PROPERTY_VALUES as types } from '../../constants';
 
 export default {
   name: 'ae-label',

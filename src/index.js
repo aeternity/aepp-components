@@ -1,5 +1,5 @@
 import './styles/index.scss';
 
-export { constants, helper } from './core';
+export { default as aeHelperMixin } from './mixins/helper';
 
 export { default } from './components';
