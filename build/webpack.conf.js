@@ -31,7 +31,7 @@ var webpackConfig = {
         test: /\.(svg)$/,
         loader: 'string-loader',
       }, {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|woff|woff2)$/,
         loader: 'url-loader',
       }, {
         include: [
