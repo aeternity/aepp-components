@@ -1,5 +1,5 @@
 import AeInput from './aeInput.vue';
-import install from './index';
+import { install } from './index';
 import {shallow} from 'vue-test-utils';
 
 describe('AeInput', () => {

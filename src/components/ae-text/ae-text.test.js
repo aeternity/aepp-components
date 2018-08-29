@@ -1,4 +1,4 @@
-import install from './index';
+import { install } from './index';
 
 describe('ae-text', () => {
   it('provides an install function', () => {
