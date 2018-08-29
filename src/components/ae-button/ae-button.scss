@@ -5,8 +5,7 @@
 //------------------------------
 
 .ae-button {
-  @include user-select;
-
+  user-select: none;
   position: relative;
   display: inline-flex;
   justify-content: center;

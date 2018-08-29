@@ -5,9 +5,9 @@
 //------------------------------
 
 .ae-badge {
-  @include user-select;
   @extend %face-mono-s;
 
+  user-select: none;
   display: inline-flex;
   padding: 0 rem(8px);
   height: 32px;

@@ -5,8 +5,7 @@
 //------------------------------
 
 .ae-input-container {
-  @include user-select;
-
+  user-select: none;
   position: relative;
   display: flex;
   flex-direction: column;

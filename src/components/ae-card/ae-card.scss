@@ -5,9 +5,9 @@
 //------------------------------
 
 .ae-card {
-  @include user-select;
   @extend %face-sans-base;
 
+  user-select: none;
   position: relative;
   display: flex;
   flex-direction: column;

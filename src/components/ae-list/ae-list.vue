@@ -1,5 +1,5 @@
 <template>
-    <ul class="ae-list" :class="{ [packing]: Boolean(packing) }">
+    <ul class="ae-list" :class="{ [face]: Boolean(face) }">
       <slot />
     </ul>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <li class="ae-list-item">
+    <li class="ae-list-item" :class="{ [fill]: Boolean(fill) }">
       <slot />
     </li>
 </template>

@@ -5,8 +5,7 @@
 //------------------------------
 
 .ae-check {
-  @include user-select;
-
+  user-select: none;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
