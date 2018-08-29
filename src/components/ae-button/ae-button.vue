@@ -7,16 +7,16 @@
             [face]: Boolean(face),
             extend
           }"
-          @click="propagate">
+          @click="forwardEvent">
     <slot />
   </button>
 </template>
 <script>
-import { events } from '../../mixins';
+import helper from '../../core/mixins/helper';
 
 export default {
   name: 'ae-button',
-  mixins: [events],
+  mixins: [helper],
   props: {
     /**
      * Fill property changes the color state of the button

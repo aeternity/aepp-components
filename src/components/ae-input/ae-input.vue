@@ -16,18 +16,18 @@
              :class="{ aemount }"
              @focus="focus = true"
              @blur="focus = false"
-             @input="propagate" />
+             @input="forwardEvent" />
     </div>
     <!-- @slot footer slot, used for adding elements below the input -->
     <slot name="footer" />
   </div>
 </template>
 <script>
-import { events } from '../../mixins';
+import helper from '../../core/mixins/helper';
 
 export default {
   name: 'ae-input',
-  mixins: [events],
+  mixins: [helper],
   data() {
     return { focus: false };
   },
