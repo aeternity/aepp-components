@@ -1,33 +1,11 @@
-/**
- * Importing Libraries
- */
 import { events } from '@source/mixins';
 
-/**
- * ae-button component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-input',
-
-  /**
-   * Component Mixins
-   */
   mixins: [events],
-
-  /**
-   * Component Data
-   * @return {Object}
-   */
   data: function () {
     return { focus: false };
   },
-
-  /**
-   * Component Props
-   */
   props: {
     /**
      * ID of the component/input

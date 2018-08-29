@@ -1,15 +1,5 @@
-/**
- * ae-card component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-card',
-
-  /**
-   * Component Props
-   */
   props: {
     /**
      * Fill property changes the color state

@@ -1,15 +1,5 @@
-/**
- * ae-backdrop component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-backdrop',
-
-  /**
-   * Component Props
-   */
   props: {
     /**
      * Select the fill color of the backdrop
@@ -41,7 +31,7 @@ export default {
     },
 
     /**
-     * Is the backdrop visible
+     * Hides or shows the backdrop depending on the value {Boolean}
      */
     visible: {
       type: Boolean,

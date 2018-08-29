@@ -1,15 +1,5 @@
-/**
- * ae-list component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-list',
-
-  /**
-   * Component Properties
-   */
   props: {
     /**
      * Space between each item, possible values: 'normal', 'tight'

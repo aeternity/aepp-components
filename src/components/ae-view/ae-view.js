@@ -1,15 +1,5 @@
-/**
- * ae-view component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-view',
-
-  /**
-   * Component Properties
-   */
   props: {
     /**
      * The layout and type of the ae-view,

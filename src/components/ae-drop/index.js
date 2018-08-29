@@ -1,11 +1,4 @@
-/**
- * Importing Libraries
- */
 import VueTouch from 'vue-touch';
-
-/**
- * Importing Components
- */
 import AeDrop from './ae-drop.vue';
 
 /**
@@ -24,7 +17,4 @@ export const install = function (Vue) {
   Vue.component('ae-drop', AeDrop);
 };
 
-/**
- * Exporting only component
- */
 export default AeDrop;

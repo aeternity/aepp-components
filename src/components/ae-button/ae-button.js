@@ -1,25 +1,8 @@
-/**
- * Importing Libraries
- */
 import { events } from '@source/mixins';
 
-/**
- * ae-button component
- */
 export default {
-  /**
-   * Component Name
-   */
   name: 'ae-button',
-
-  /**
-   * Component Mixins
-   */
   mixins: [events],
-
-  /**
-   * Component Props
-   */
   props: {
     /**
      * Fill property changes the color state of the button
