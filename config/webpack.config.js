@@ -49,7 +49,7 @@ module.exports = {
               }, {
                 loader: 'sass-resources-loader',
                 options: {
-                  resources: path.join(__dirname, '../src/base/_globals.scss')
+                  resources: path.join(__dirname, '../src/styles/_globals.scss')
                 }
               }],
               fallback: 'vue-style-loader'
@@ -72,7 +72,7 @@ module.exports = {
             }
           }, {
             loader: 'sass-resources-loader',
-            options: { resources: path.join(__dirname, '../src/base/_globals.scss') }
+            options: { resources: path.join(__dirname, '../src/styles/_globals.scss') }
           }],
           fallback: 'css-loader'
         })

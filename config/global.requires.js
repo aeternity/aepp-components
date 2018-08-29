@@ -1,7 +1,7 @@
 /**
  * Importing SCSS
  */
-import '../src/base/_index.scss'
+import '../src/styles/_index.scss'
 
 /**
  * Importing Libraries
