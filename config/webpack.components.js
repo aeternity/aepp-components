@@ -32,7 +32,7 @@ const components = fs.readdirSync(
 module.exports = components.map((name) => merge(require('./webpack.config'), {
   entry: path.resolve(__dirname, '../src/components', name, 'index.js'),
   output: {
-    path: path.resolve(__dirname, '../build', name),
+    path: path.resolve(__dirname, '../dist', name),
     filename: 'index.js',
     libraryTarget: 'umd',
     library: '@aeternity/aepp-components/' + name,

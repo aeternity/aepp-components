@@ -18,7 +18,7 @@ selenium-debug.log
 
 ## General Folders
 /node_modules
-/build
+/dist
 /docs
 /test/unit/coverage
 /test/e2e/reports
