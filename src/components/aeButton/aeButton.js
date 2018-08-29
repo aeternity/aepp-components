@@ -1,5 +1,5 @@
 import AeLink from '../aeLink/aeLink.vue';
-import {TYPE_PROPERTY_VALUES as aeButtonTypes} from '@source/core/constants';
+import {TYPE_PROPERTY_VALUES as aeButtonTypes} from '../../core/constants';
 
 const aeButtonSizes = [
   'smaller',

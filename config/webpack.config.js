@@ -156,14 +156,6 @@ module.exports = {
     // https://webpack.js.org/plugins/module-concatenation-plugin/
     new webpack.optimize.ModuleConcatenationPlugin()
   ],
-  resolve: {
-    alias: {
-      // Global paths
-      '@source': path.resolve(__dirname, '../src'),
-      '@public': path.resolve(__dirname, '../public'),
-    },
-    extensions: ['.js', '.vue', '.json']
-  },
   // Fetching all dependencies and
   // creates an object assigned to externals
   // which bypasses the dependencies
