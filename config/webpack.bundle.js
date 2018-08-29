@@ -17,7 +17,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
  */
 module.exports = merge(require('./webpack.config.js'), {
   entry: {
-    'aepp.base': './src/styles/_index.scss',
+    'aepp.base': './src/styles/index.scss',
     'aepp.components': './src/index.js'
   },
   output: {

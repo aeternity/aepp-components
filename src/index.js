@@ -1,7 +1,7 @@
 /**
  * Importing SCSS
  */
-import './styles/_index.scss';
+import './styles/index.scss';
 
 /**
  * Vue Helpers
