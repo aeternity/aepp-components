@@ -19,8 +19,8 @@
 
   > input[type="radio"]:checked + .ae-check-button:before,
   > input[type="checkbox"]:checked + .ae-check-button:before {
-    background: $color-emphasis-emphasis;
-    border-color: $color-emphasis-emphasis;
+    background: $color-emphasis;
+    border-color: $color-emphasis;
   }
 
   > input[type="radio"]:checked + .ae-check-button:after,

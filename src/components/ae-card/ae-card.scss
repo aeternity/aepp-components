@@ -16,7 +16,7 @@
   border-radius: 4px;
   overflow: hidden;
   background: $color-neutral-positive-3;
-  color: $color-neutral-neutral;
+  color: $color-neutral;
   box-shadow: 0 0 16px $color-shadow-alpha-15;
 }
 
@@ -26,17 +26,17 @@
 }
 
 .ae-card.default {
-  background: $color-default-default;
+  background: $color-default;
   color: $color-default-negative-3;
 }
 
 .ae-card.emphasis {
-  background: $color-emphasis-emphasis;
+  background: $color-emphasis;
   color: $color-emphasis-negative-3;
 }
 
 .ae-card.alternative {
-  background: $color-alternative-alternative;
+  background: $color-alternative;
   color: $color-alternative-negative-3;
 }
 

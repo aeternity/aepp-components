@@ -70,13 +70,13 @@
 
     list-style: none;
     border-radius: 50%;
-    background: $color-neutral-neutral;
+    background: $color-neutral;
     margin: 0 rem(2px);
     transition: all $base-transition-time;
     cursor: pointer;
 
     &.active {
-      background: $color-emphasis-emphasis;
+      background: $color-emphasis;
     }
   }
 }

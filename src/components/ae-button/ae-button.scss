@@ -41,7 +41,7 @@
 .ae-button.primary {
   @extend %face-uppercase-base;
 
-  background: $color-neutral-neutral;
+  background: $color-neutral;
   letter-spacing: em(1.3px);
   font-weight: bold;
   height: 56px;
@@ -95,7 +95,7 @@
     border-color: $color-neutral-positive-2;
 
     &:disabled {
-      color: $color-neutral-neutral;
+      color: $color-neutral;
     }
   }
   &.default {
@@ -127,7 +127,7 @@
 .ae-button.icon {
   @include size(56px);
 
-  background: $color-neutral-neutral;
+  background: $color-neutral;
   font-size: rem(20px);
   border-radius: 50%;
   box-shadow: 0 0 16px $color-shadow-alpha-15;
@@ -168,19 +168,19 @@
 // *****************************
 
 .ae-button.color-neutral {
-  color: $color-neutral-neutral;
+  color: $color-neutral;
 }
 
 .ae-button.color-default {
-  color: $color-default-default;
+  color: $color-default;
 }
 
 .ae-button.color-alternative {
-  color: $color-alternative-alternative;
+  color: $color-alternative;
 }
 
 .ae-button.color-emphasis {
-  color: $color-emphasis-emphasis;
+  color: $color-emphasis;
 }
 
 // *****************************
@@ -198,7 +198,7 @@
 }
 
 .ae-button.default {
-  background: $color-default-default;
+  background: $color-default;
   color: $color-white;
 
   &:disabled {
@@ -208,7 +208,7 @@
 }
 
 .ae-button.alternative {
-  background: $color-alternative-alternative;
+  background: $color-alternative;
   color: $color-white;
 
   &:disabled {
@@ -218,7 +218,7 @@
 }
 
 .ae-button.emphasis {
-  background: $color-emphasis-emphasis;
+  background: $color-emphasis;
   color: $color-white;
 
   &:disabled {
