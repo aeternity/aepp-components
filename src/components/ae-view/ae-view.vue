@@ -16,12 +16,7 @@ export default {
      */
     face: {
       type: String,
-      validator(value) {
-        return [
-          'base',
-          'frame',
-        ].indexOf(value) !== -1;
-      },
+      validator: value => ['base', 'frame'].includes(value),
     },
 
     /**

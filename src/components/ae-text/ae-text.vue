@@ -26,21 +26,19 @@ export default {
      */
     face: {
       type: String,
-      validator(value) {
-        return [
-          'sans-l',
-          'sans-base',
-          'sans-s',
-          'sans-xs',
-          'mono-xl',
-          'mono-base',
-          'mono-s',
-          'mono-xs',
-          'tracked-base',
-          'uppercase-base',
-          'uppercase-xs',
-        ].indexOf(value) !== -1;
-      },
+      validator: value => [
+        'sans-l',
+        'sans-base',
+        'sans-s',
+        'sans-xs',
+        'mono-xl',
+        'mono-base',
+        'mono-s',
+        'mono-xs',
+        'tracked-base',
+        'uppercase-base',
+        'uppercase-xs',
+      ].includes(value),
     },
 
     /**
@@ -48,13 +46,11 @@ export default {
      */
     align: {
       type: String,
-      validator(value) {
-        return [
-          'left',
-          'right',
-          'center',
-        ].indexOf(value) !== 1;
-      },
+      validator: value => [
+        'left',
+        'right',
+        'center',
+      ].includes(value),
     },
 
     /**

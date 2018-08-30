@@ -13,9 +13,7 @@ export default {
      */
     face: {
       type: String,
-      validator(value) {
-        return ['primary'].indexOf(value) !== 1;
-      },
+      validator: value => ['primary'].includes(value),
     },
   },
 };
