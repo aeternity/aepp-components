@@ -13,11 +13,11 @@
           <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
           <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
           <ae-toolbar fill="emphasis" align="justify" slot="footer">
-            <ae-button slot="left" face="toolbar">
+            <ae-button face="toolbar">
               <ae-icon name="edit" />
               Rename
             </ae-button>
-            <div slot="right">
+            <div>
               <ae-button face="toolbar">
                 <ae-icon name="copy" />
                 Copy
