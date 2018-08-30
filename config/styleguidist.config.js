@@ -30,11 +30,6 @@ module.exports = {
   components: path.resolve(__dirname, '../src/components/**/*-*.vue'),
 
   /**
-   * Assets directory
-   */
-  assetsDir: path.resolve(__dirname, '../public'),
-
-  /**
    * Folder for static HTML style guide generated with styleguidist build command.
    */
   styleguideDir: path.resolve(__dirname, '../docs'),

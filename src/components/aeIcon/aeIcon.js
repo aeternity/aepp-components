@@ -1,4 +1,4 @@
-import * as iconSvgStrings from '../../../public/icons';
+import * as iconSvgStrings from '../../assets/icons';
 
 const aeIconTypes = [
   'plain',
