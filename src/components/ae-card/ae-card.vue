@@ -9,12 +9,8 @@
       <slot name="header" />
     </header>
     <main class="ae-card-main" :class="{ [align]: Boolean(align) }">
-      <!-- @slot left side of the main slot -->
-      <slot name="left" />
       <!-- @slot default main slot -->
       <slot />
-      <!-- @slot right side of the main slot -->
-      <slot name="right" />
     </main>
     <footer class="ae-card-footer"  v-if="$slots.footer">
       <!-- @slot Full width slot footer of the card -->

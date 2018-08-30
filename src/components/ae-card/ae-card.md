@@ -96,7 +96,7 @@
   <template slot="header">
     <ae-text fill="white" face="mono-base">20.65 AE</ae-text>
   </template>
-  <div slot="left">
+  <div>
     <ae-icon name="shield" />
     <ae-text face="uppercase-xs" weight=600 style="margin: 0">Maximum Secured</ae-text>
   </div>
@@ -120,7 +120,7 @@
 
 ```jsx
   <ae-card fill="neutral" align="center">
-    <ae-qrcode slot="left" :options="{ size: 136 }" />
+    <ae-qrcode :options="{ size: 136 }" />
     <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" gap=0 />
     <ae-toolbar fill="neutral" align="right" slot="footer">
       <ae-button face="toolbar">
