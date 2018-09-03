@@ -4,17 +4,46 @@
 
 ### prop: type
 ```vue
-<div>
-  <label>
-    <ae-check name="example" type="radio" />
-    radio 1
-  </label>
-  <br>
-  <label>
-    <ae-check name="example" type="radio" />
-    radio 2
-  </label>
-</div>
+<template>
+  <div>
+    <h2>Radio</h2>
+    <label>
+      <ae-check v-model="singleChoice" value="1" type="radio" />
+      Radio button 1
+    </label>
+    <label>
+      <ae-check v-model="singleChoice" value="2" type="radio" />
+      Radio button 2
+    </label>
+    <label>value: {{ singleChoice }}</label>
+
+    <h2>Checkbox</h2>
+    <label>
+      <ae-check v-model="multipleChoices" value="1" type="checkbox" />
+      Checkbox 1
+    </label>
+    <label>
+      <ae-check v-model="multipleChoices" value="2" type="checkbox" />
+      Checkbox 2
+    </label>
+    <label>value: {{ multipleChoices }}</label>
+  </div>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    singleChoice: undefined,
+    multipleChoices: ['2'],
+  })
+}
+</script>
+
+<style scoped>
+label:not(.ae-check) {
+  display: block;
+}
+</style>
 ``` 
 
 ### prop: disabled

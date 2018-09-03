@@ -1,7 +1,14 @@
 <template>
   <label class="ae-check">
-    <input :type="type" :name="name" :value="value" :disabled="disabled">
+    <input
       :id="id"
+      :type="type"
+      :name="name"
+      :value="value"
+      :checked="isChecked"
+      :disabled="disabled"
+      @change="change"
+    >
     <span class="indicator">
       ✓
     </span>
@@ -10,6 +17,10 @@
 <script>
 export default {
   name: 'ae-check',
+  model: {
+    prop: 'checked',
+    event: 'change',
+  },
   props: {
     /**
      * ID of the component/input
@@ -24,7 +35,9 @@ export default {
     /**
      * value of component
      */
-    value: Boolean,
+    value: { type: [String, Number, Boolean], default: undefined },
+
+    checked: { type: [Array, String, Number, Boolean], default: false },
 
     /**
      * Define the type of the input
@@ -40,6 +53,26 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+  },
+  computed: {
+    isChecked() {
+      return Array.isArray(this.checked)
+        ? this.checked.includes(this.value)
+        : this.checked === this.value || this.checked === true;
+    },
+  },
+  methods: {
+    change(event) {
+      let newValue;
+      if (this.value === undefined) newValue = event.target.checked;
+      else if (this.type === 'radio' || !Array.isArray(this.checked)) newValue = this.value;
+      else {
+        newValue = event.target.checked
+          ? [...this.checked, this.value]
+          : this.checked.filter(c => c !== this.value);
+      }
+      this.$emit('change', newValue);
     },
   },
 };
