@@ -1,57 +1,89 @@
 <template>
-    <li class="ae-list-item" :class="{ [fill]: Boolean(fill) }">
-      <slot />
-    </li>
+  <component
+    :is="renderAs"
+    :to="to"
+    :class="[fill, inactive && 'inactive']"
+    class="ae-list-item"
+    @click="$emit('click', $event)"
+  >
+    <!-- @slot List item content -->
+    <slot />
+    <div class="space" />
+    <!-- @slot List item content on the right side -->
+    <slot name="right" />
+  </component>
 </template>
+
 <script>
+import AeLink from '../aeLink/aeLink.vue';
+
 export default {
   name: 'ae-list-item',
   props: {
     /**
-     * Fill property changes the color of the borders.
-     * Select something between: `primary, secondary, neutral, alternative`
-     * fallback: `neutral`
+     * Path to go to when clicked
+     */
+    to: { type: [Object, String], default: undefined },
+    /**
+     * The color of the text.
+     * Select something between: `primary, secondary, alternative`
      */
     fill: {
       type: String,
-      secondary: 'neutral',
-      validator(value) {
-        return [
-          'primary',
-          'secondary',
-          'neutral',
-          'alternative',
-        ].indexOf(value) !== 1;
-      },
+      validator: value => ['', 'primary', 'secondary', 'alternative'].includes(value),
+      default: '',
+    },
+    /**
+     * Disables any reaction to the cursor
+     */
+    inactive: { type: Boolean, default: false },
+  },
+  computed: {
+    renderAs() {
+      if (this.to) return AeLink;
+      if (this.inactive) return 'div';
+      return 'label';
     },
   },
 };
 </script>
+
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/placeholders/typography';
+@import '../../styles/variables/colors';
 
-  .ae-list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    border-top: 2px solid transparent;
-    padding: rem(12px) 0;
+.ae-list-item {
+  @extend %face-sans-base;
+  height: rem(60px);
+  display: flex;
+  align-items: center;
+  border-top: 2px solid $color-neutral-positive-2;
+  padding: 0 rem(20px);
+  text-decoration: none;
+  color: $color-black;
+
+  &.primary {
+    color: $color-primary;
   }
 
-  .ae-list-item.primary {
-    border-color: $color-primary-positive-2;
+  &.secondary {
+    color: $color-secondary;
   }
 
-  .ae-list-item.secondary {
-    border-color: $color-secondary-positive-2;
+  &.alternative {
+    color: $color-alternative;
   }
 
-  .ae-list-item.neutral {
-    border-color: $color-neutral-positive-2;
+  &:not(.inactive) {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-neutral-positive-3;
+    }
   }
 
-  .ae-list-item.alternative {
-    border-color: $color-alternative-positive-2;
+  .space {
+    flex-grow: 1;
   }
+}
 </style>

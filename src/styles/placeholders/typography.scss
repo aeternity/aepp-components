@@ -4,6 +4,9 @@
 // *****************************
 //------------------------------
 
+@import '../variables/typography';
+@import '../globals/functions';
+
 /// Typography Sans
 %face-sans-l {
   font-family: $font-sans;

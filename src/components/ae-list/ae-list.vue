@@ -1,7 +1,7 @@
 <template>
-    <ul class="ae-list" :class="{ [face]: Boolean(face) }">
+    <div class="ae-list" :class="{ [face]: Boolean(face) }">
       <slot />
-    </ul>
+    </div>
 </template>
 <script>
 export default {
@@ -23,11 +23,6 @@ export default {
 <style lang="scss" scoped>
   @import '../../styles/globals';
 
-  .ae-list {
-    padding: 0;
-    margin: 0;
-  }
-
   .ae-list.primary {
     border-radius: 4px;
     background: $color-white;
@@ -35,11 +30,14 @@ export default {
     padding: rem(15px);
     overflow: hidden;
 
-    > li:first-child {
-      border-top: 0;
-    }
-    > li:last-child {
-      border-bottom: 0;
+    > .ae-list-item {
+      &:first-child {
+        border-top: 0;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
     }
   }
 </style>
