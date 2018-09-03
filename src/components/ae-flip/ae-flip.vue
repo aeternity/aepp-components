@@ -19,8 +19,11 @@
   </v-touch>
 </template>
 <script>
+import { component } from 'vue-touch';
+
 export default {
   name: 'ae-flip',
+  components: { VTouch: component },
   data() {
     return { rotation: 0 };
   },
