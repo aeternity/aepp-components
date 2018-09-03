@@ -1,7 +1,10 @@
 <template>
   <label class="ae-check">
     <input :type="type" :name="name" :value="value" :disabled="disabled">
-    <span class="ae-check-button" />
+      :id="id"
+    <span class="indicator">
+      ✓
+    </span>
   </label>
 </template>
 <script>
@@ -42,7 +45,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/animations';
+@import '../../styles/variables/typography';
+@import '../../styles/globals/functions';
 
 .ae-check {
   user-select: none;
@@ -117,23 +123,5 @@ export default {
     background-size: rem(12px);
     opacity: 0;
   }
-}
-
-.ae-check-content {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.ae-check.left > .ae-check-button {
-  order: 2;
-}
-
-.ae-check.left > .ae-check-content {
-  order: 1;
-}
-
-.ae-check.extend {
-  width: 100%;
 }
 </style>
