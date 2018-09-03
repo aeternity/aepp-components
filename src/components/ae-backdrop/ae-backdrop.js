@@ -28,14 +28,6 @@ export default {
           'bottom'
         ].indexOf(value) !== -1;
       }
-    },
-
-    /**
-     * Hides or shows the backdrop depending on the value {Boolean}
-     */
-    visible: {
-      type: Boolean,
-      default: false
     }
   }
 };

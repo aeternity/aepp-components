@@ -19,9 +19,7 @@
   background: rgba($color-neutral-positive-2, 0.5);
   overflow-x: hidden;
   overflow-y: auto;
-  transition: all ease-in-out $base-transition-time;
-  opacity: 0;
-  z-index: $stack-negative;
+  z-index: $stack-5;
 
   &.neutral {
     background: rgba($color-neutral-minimum, 0.5);
@@ -36,9 +34,12 @@
     background: rgba($color-emphasis-emphasis, 0.5);
   }
 
-  &.visible {
-    opacity: 1;
-    z-index: $stack-5;
+  &.v-enter-active, &.v-leave-active {
+    transition: opacity ease-in-out $base-transition-time;
+  }
+
+  &.v-enter, &.v-leave-to {
+    opacity: 0;
   }
 }
 
