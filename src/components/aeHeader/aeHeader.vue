@@ -6,7 +6,7 @@
         <slot name="mobile-left" />
       </div>
       <ae-link class="title" to="/">
-        <img :src="require('../../../public/images/logo-small.png')" alt="Go to main page" />
+        <img :src="require('../../assets/images/logo-small.png')" alt="Go to main page" />
         {{name}}
       </ae-link>
       <div class="desktop-right">
