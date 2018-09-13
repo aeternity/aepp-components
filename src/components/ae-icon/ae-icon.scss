@@ -13,13 +13,13 @@
     color: $color-neutral-minimum;
   }
   &.default {
-    color: $color-default-default;
+    color: $color-default;
   }
   &.alternative {
-    color: $color-alternative-alternative;
+    color: $color-alternative;
   }
   &.emphasis {
-    color: $color-emphasis-emphasis;
+    color: $color-emphasis;
   }
 }
 
@@ -39,7 +39,7 @@
   @include size(32px);
 
   color: $color-white;
-  background: $color-neutral-neutral;
+  background: $color-neutral;
   border-radius: 50%;
   box-shadow: 0 0 16px $color-shadow-alpha-15;
 
@@ -48,15 +48,15 @@
     color: $color-neutral-minimum;
   }
   &.default {
-    background: $color-default-default;
+    background: $color-default;
     color: $color-white;
   }
   &.alternative {
-    background: $color-alternative-alternative;
+    background: $color-alternative;
     color: $color-white;
   }
   &.emphasis {
-    background: $color-emphasis-emphasis;
+    background: $color-emphasis;
     color: $color-white;
   }
 }
