@@ -25,13 +25,13 @@
         </ae-button>
       </ae-toolbar>
     </ae-card>
-    <ae-backdrop visible>
+    <ae-backdrop>
         <ae-text> This text lives inside the backdrop area</ae-text>
       </ae-backdrop>
   </div>
 ``` 
 
-### prop: visible
+### enter and leave transitions
 ```vue
 <template>
   <div>
@@ -63,7 +63,7 @@
       </ae-card>
       <br />  
       <ae-button @click="showBackdrop" face="primary" extend>Show Backdrop</ae-button>
-      <ae-backdrop align="top" :visible="backDropVisible" @click.native.capture="showBackdrop">
+      <ae-backdrop align="top" v-if="backDropVisible" @click.native.capture="showBackdrop">
         <ae-text>This text lives inside the backdrop area</ae-text>
       </ae-backdrop>
     </div>
@@ -112,7 +112,7 @@
         </ae-button>
       </ae-toolbar>
     </ae-card>
-    <ae-backdrop align="top" visible>
+    <ae-backdrop align="top">
         <ae-text> This text lives inside the backdrop area</ae-text>
       </ae-backdrop>
   </div>
@@ -145,7 +145,7 @@
         </ae-button>
       </ae-toolbar>
     </ae-card>
-    <ae-backdrop align="bottom" visible>
+    <ae-backdrop align="bottom">
         <ae-text> This text lives inside the backdrop area</ae-text>
       </ae-backdrop>
   </div>
@@ -179,7 +179,7 @@
         </ae-button>
       </ae-toolbar>
     </ae-card>
-    <ae-backdrop fill="neutral" visible>
+    <ae-backdrop fill="neutral">
         <ae-text> This text lives inside the backdrop area</ae-text>
       </ae-backdrop>
   </div>
@@ -212,7 +212,7 @@
         </ae-button>
       </ae-toolbar>
     </ae-card>
-    <ae-backdrop fill="default" visible>
+    <ae-backdrop fill="default">
         <ae-text> This text lives inside the backdrop area</ae-text>
       </ae-backdrop>
   </div>
@@ -245,7 +245,7 @@
         </ae-button>
       </ae-toolbar>
     </ae-card>
-    <ae-backdrop fill="alternative" visible>
+    <ae-backdrop fill="alternative">
         <ae-text> This text lives inside the backdrop area</ae-text>
       </ae-backdrop>
   </div>
@@ -278,7 +278,7 @@
         </ae-button>
       </ae-toolbar>
     </ae-card>
-    <ae-backdrop fill="emphasis" visible>
+    <ae-backdrop fill="emphasis">
         <ae-text> This text lives inside the backdrop area</ae-text>
       </ae-backdrop>
   </div>
