@@ -8,7 +8,7 @@
       </main>
       <div class="buttons">
         <slot name="buttons">
-          <ae-button size="smaller" uppercase @click="close">close</ae-button>
+          <ae-button size="small" plain uppercase @click="close">close</ae-button>
         </slot>
       </div>
     </div>

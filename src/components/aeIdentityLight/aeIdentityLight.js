@@ -1,8 +1,5 @@
-import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue';
-import helperMixin from '../../core/mixins/helper';
-import BN from 'bn.js';
-import unit from 'ethjs-unit';
-import numeral from 'numeral';
+import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
+import helperMixin from './../../core/mixins/helper'
 
 /**
  * Displays an Identity with an avatar blockie, the address and an amount of ether
@@ -26,18 +23,11 @@ export default {
       default: '0x0'
     },
     /**
-     * An identity balance in Aeternity tokens as BN instance
-     */
-    tokenBalance: {
-      type: Object,
-      default: () => new BN('0', 10)
-    },
-    /**
-     * An identity balance in Ether as BN instance
+     * An identity balance in AE
      */
     balance: {
-      type: Object,
-      default: () => new BN('0', 10)
+      type: Number,
+      default: 0
     },
     collapsed: {
       type: Boolean,
@@ -68,8 +58,6 @@ export default {
     }
   },
   filters: {
-    readableToken: (balance) =>
-      numeral(unit.fromWei(balance.toString(10), 'ether')).format('0,0.[000]'),
-    shorten: (value) => value.substr(0, 8)
+    shorten: value => value.substr(0, 8)
   }
 };
