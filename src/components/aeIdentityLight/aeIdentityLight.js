@@ -1,5 +1,5 @@
 import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue';
-import helperMixin from '@source/core/mixins/helper';
+import helperMixin from '../../core/mixins/helper';
 import BN from 'bn.js';
 import unit from 'ethjs-unit';
 import numeral from 'numeral';

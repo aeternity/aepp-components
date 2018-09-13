@@ -1,21 +1,21 @@
 /**
  * Importing SCSS
  */
-import '@source/base/_index.scss';
+import './base/_index.scss';
 
 /**
  * Vue Helpers
  */
-export * as mixins from '@source/mixins';
-export * as directives from '@source/directives';
-export * as filters from '@source/filters';
+export * as mixins from './mixins';
+export * as directives from './directives';
+export * as filters from './filters';
 
 /**
  * Helper functions
  */
-export { constants, helper } from '@source/core';
+export { constants, helper } from './core';
 
 /**
  * Exporting default component list
  */
-export { default } from '@source/components';
+export { default } from './components';

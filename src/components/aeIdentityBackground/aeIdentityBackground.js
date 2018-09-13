@@ -1,4 +1,4 @@
-import {TYPE_PROPERTY_VALUES as types} from '@source/core/constants';
+import {TYPE_PROPERTY_VALUES as types} from '../../core/constants';
 
 export default {
   name: 'ae-identity-background',

@@ -1,4 +1,4 @@
-import { events } from '@source/mixins';
+import { events } from '../../mixins';
 
 export default {
   name: 'ae-button',
