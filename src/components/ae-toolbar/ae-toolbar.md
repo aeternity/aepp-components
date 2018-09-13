@@ -33,41 +33,41 @@
 ### slot: left, right
 ```jsx
   <ae-toolbar>
-    <span slot="left">Left</span>
+    <span>Left</span>
     center
-    <span slot="right">Right</span>
+    <span>Right</span>
   </ae-toolbar>
 ``` 
 
 ```jsx
   <ae-toolbar align="left">
-    <span slot="left">Left</span>
+    <span>Left</span>
     center
-    <span slot="right">Right</span>
+    <span>Right</span>
   </ae-toolbar>
 ``` 
 
 ```jsx
   <ae-toolbar align="center">
-    <span slot="left">Left</span>
+    <span>Left</span>
     center
-    <span slot="right">Right</span>
+    <span>Right</span>
   </ae-toolbar>
 ``` 
 
 ```jsx
   <ae-toolbar align="right">
-    <span slot="left">Left</span>
+    <span>Left</span>
     center
-    <span slot="right">Right</span>
+    <span>Right</span>
   </ae-toolbar>
 ``` 
 
 ```jsx
   <ae-toolbar align="justify">
-    <span slot="left">Left</span>
+    <span>Left</span>
     center
-    <span slot="right">Right</span>
+    <span>Right</span>
   </ae-toolbar>
 ``` 
 
@@ -122,11 +122,11 @@
 
 ```jsx
   <ae-toolbar align="justify">
-    <ae-button slot="left" face="toolbar">
+    <ae-button face="toolbar">
       <ae-icon name="eye" />
       Details
     </ae-button>
-    <div slot="right">
+    <div>
      <ae-button face="toolbar">
        <ae-icon name="copy" />
        Copy
