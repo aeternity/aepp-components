@@ -6,5 +6,88 @@
     </div>
   </transition>
 </template>
-<style src="./ae-backdrop.scss" lang="scss" scoped />
-<script src="./ae-backdrop.js" />
+<script>
+export default {
+  name: 'ae-backdrop',
+  props: {
+    /**
+     * Select the fill color of the backdrop
+     */
+    fill: {
+      type: String,
+      validator: function (value) {
+        return [
+          'neutral',
+          'default',
+          'alternative',
+          'emphasis'
+        ].indexOf(value) !== -1;
+      }
+    },
+
+    /**
+     * Align content inside the backdrop, available values are:
+     * `top, bottom, left, right`
+     */
+    align: {
+      type: String,
+      validator: function (value) {
+        return [
+          'top',
+          'bottom'
+        ].indexOf(value) !== -1;
+      }
+    }
+  }
+};
+</script>
+<style lang="scss" scoped>
+  .ae-backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($color-neutral-positive-2, 0.5);
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: $stack-5;
+
+    &.neutral {
+      background: rgba($color-neutral-minimum, 0.5);
+    }
+    &.default {
+      background: rgba($color-default, 0.5);
+    }
+    &.alternative {
+      background: rgba($color-alternative, 0.5);
+    }
+    &.emphasis {
+      background: rgba($color-emphasis, 0.5);
+    }
+
+    &.v-enter-active, &.v-leave-active {
+      transition: opacity ease-in-out $base-transition-time;
+    }
+
+    &.v-enter, &.v-leave-to {
+      opacity: 0;
+    }
+  }
+
+  .ae-backdrop.top {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .ae-backdrop.bottom {
+    align-items: center;
+    justify-content: flex-end;
+  }
+</style>
