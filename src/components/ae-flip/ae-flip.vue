@@ -32,11 +32,11 @@ export default {
     direction: function () {
       if (this.rotation === 0) {
         return false;
-      } else if (this.rotation > 0) {
-        return 'left';
-      } else {
-        return 'right';
       }
+      if (this.rotation > 0) {
+        return 'left';
+      }
+      return 'right';
     }
   },
   methods: {

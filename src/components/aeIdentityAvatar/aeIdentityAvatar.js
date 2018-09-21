@@ -16,15 +16,15 @@ export default {
     }
   },
   watch: {
-    address () {
+    address() {
       this.renderBlockie();
     }
   },
-  mounted () {
+  mounted() {
     this.renderBlockie();
   },
   methods: {
-    renderBlockie () {
+    renderBlockie() {
       renderIcon({ seed: this.address }, this.$refs.blockie);
     }
   }

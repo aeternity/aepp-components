@@ -17,11 +17,11 @@ export default {
     to: { type: [String, Object] }
   },
   computed: {
-    isLinkOnSameHost () {
-      return typeof this.to === 'object' ||
-          (new URL(this.to, window.location)).host === window.location.host;
+    isLinkOnSameHost() {
+      return typeof this.to === 'object'
+          || (new URL(this.to, window.location)).host === window.location.host;
     },
-    useRouterLink () {
+    useRouterLink() {
       return this.$options.components['router-link'] && this.isLinkOnSameHost;
     }
   }

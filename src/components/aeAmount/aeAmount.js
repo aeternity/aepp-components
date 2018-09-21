@@ -13,13 +13,13 @@ export default {
     }
   },
   computed: {
-    sizeModifier () {
+    sizeModifier() {
       return `_size_${this.size}`;
     },
-    colorModifier () {
+    colorModifier() {
       return `_color_${this.color}`;
     },
-    cssClass () {
+    cssClass() {
       return [
         this.sizeModifier,
         this.colorModifier

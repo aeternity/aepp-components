@@ -1,6 +1,6 @@
 export default {
   methods: {
-    forwardEvent (event) {
+    forwardEvent(event) {
       this.$emit(event.type, event);
     }
   }

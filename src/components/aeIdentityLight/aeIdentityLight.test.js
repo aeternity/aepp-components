@@ -1,6 +1,6 @@
-import {shallow} from 'vue-test-utils'
-import AeIdentityLight from './aeIdentityLight.vue'
-import AeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
+import { shallow } from 'vue-test-utils';
+import AeIdentityLight from './aeIdentityLight.vue';
+import AeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue';
 
 describe('AeIdentityLight', () => {
   const _shallow = (props) => {
@@ -11,7 +11,7 @@ describe('AeIdentityLight', () => {
   const testIdentity = () => ({
     address: '0x1234' + '123456'.repeat(5),
     balance: 0
-  })
+  });
 
   describe('rendering', () => {
     describe('avatar', () => {
@@ -31,15 +31,15 @@ describe('AeIdentityLight', () => {
           collapsed,
           address: '0x0',
           balance: 600000000000
-        })
+        });
 
         expect(wrapper.find('.balance.token .amount').text())
-          .toBe('600000000000')
-      }
+          .toBe('600000000000');
+      };
 
-      it('renders the given balance when not collapsed', genTest(false))
-      it('renders the given balance when collapsed', genTest(true))
-    })
+      it('renders the given balance when not collapsed', genTest(false));
+      it('renders the given balance when collapsed', genTest(true));
+    });
 
     describe('chunked address', () => {
       const genTest = (collapsed) => () => {

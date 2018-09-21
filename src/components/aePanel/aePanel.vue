@@ -52,7 +52,7 @@ export default {
   },
   components: { AeButton, AeIcon, AeLink },
   methods: {
-    progressbarStyle (ratio) {
+    progressbarStyle(ratio) {
       const pc = ratio * 100;
       return {
         display: typeof ratio === 'number' ? 'block' : 'none',

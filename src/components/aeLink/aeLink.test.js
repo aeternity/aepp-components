@@ -15,7 +15,7 @@ describe('AeLink', () => {
   });
 
   const testRouterLink = {
-    render (createElement) {
+    render(createElement) {
       return createElement('test-router-link');
     }
   };

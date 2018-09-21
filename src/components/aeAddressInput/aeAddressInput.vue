@@ -22,12 +22,12 @@ export default {
   },
   components: { AeTextarea },
   computed: {
-    formattedValue () {
+    formattedValue() {
       return this.formatAddress(this.value).address;
     }
   },
   methods: {
-    handleInput () {
+    handleInput() {
       const { selectionStart, value } = this.$el;
       const { address, cursor } = this.formatAddress(value, selectionStart);
       if (address !== value) {
@@ -38,21 +38,21 @@ export default {
       }
       this.$emit('input', address.replace(/[ \n]/g, ''));
     },
-    handleCopy (event) {
+    handleCopy(event) {
       const { selectionStart: s1, selectionEnd: s2, value } = event.target;
       event.clipboardData.setData('text/plain',
         value.slice(Math.min(s1, s2), Math.max(s1, s2)).replace(/[ \n]/g, ''));
       event.preventDefault();
     },
-    formatAddress (address, cursor = address.length) {
-      if (['', 'a', 'ak'].includes(address)) return { address, cursor }
+    formatAddress(address, cursor = address.length) {
+      if (['', 'a', 'ak'].includes(address)) return { address, cursor };
 
       let [begin, end] = [[address.startsWith('ak$') ? 3 : 0, cursor], [cursor]]
-        .map(args => address.slice(...args).replace(/[^1-9A-HJ-NP-Za-km-z]/g, ''))
+        .map(args => address.slice(...args).replace(/[^1-9A-HJ-NP-Za-km-z]/g, ''));
 
-      begin = `ak$${begin}`
+      begin = `ak$${begin}`;
 
-      const splitBy = 3
+      const splitBy = 3;
       const addSpaces = (address, firstLength) => {
         const fl = firstLength || splitBy;
         const res = [];
@@ -71,7 +71,7 @@ export default {
       [begin, lastLength] = addSpaces(begin);
       [end] = addSpaces(end, splitBy - lastLength);
 
-      let res = `${begin}${end && lastLength === splitBy ? ' ' : ''}${end}`.slice(0, 70)
+      let res = `${begin}${end && lastLength === splitBy ? ' ' : ''}${end}`.slice(0, 70);
 
       return { address: res, cursor: begin.length };
     }

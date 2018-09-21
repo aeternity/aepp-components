@@ -11,7 +11,7 @@ import { events } from '../../mixins';
 
 export default {
   name: 'ae-button',
-  mixins: [ events ],
+  mixins: [events],
   props: {
     /**
      * Fill property changes the color state of the button

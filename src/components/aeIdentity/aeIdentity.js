@@ -49,7 +49,7 @@ export default {
     helperMixin
   ],
   computed: {
-    backgroundType () {
+    backgroundType() {
       return this.active ? 'dramatic' : 'exciting';
     }
   }

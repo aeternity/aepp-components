@@ -10,7 +10,7 @@ export default {
     /**
      * src property, location of the icon
      */
-    'src': {
+    src: {
       required: true,
       type: String
     },
@@ -23,7 +23,7 @@ export default {
     }
   },
   computed: {
-    cssStyle () {
+    cssStyle() {
       return {
         'background-image': `url(${this.src})`
       };

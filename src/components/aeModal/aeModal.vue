@@ -41,7 +41,7 @@ export default {
     AeIcon
   },
   methods: {
-    close () {
+    close() {
       /**
        * Close event
        *

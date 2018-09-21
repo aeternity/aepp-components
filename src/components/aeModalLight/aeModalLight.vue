@@ -30,7 +30,7 @@ export default {
   },
   components: { AeOverlay, AeButton, AeIcon },
   methods: {
-    close () {
+    close() {
       /**
        * Close event
        *

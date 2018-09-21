@@ -49,7 +49,7 @@ export default {
     }
   },
   computed: {
-    cssClass () {
+    cssClass() {
       return [
         `_name_${this.name}`,
         `_type_${this.type}`,
@@ -57,12 +57,12 @@ export default {
         `_size_${this.size}`
       ];
     },
-    style () {
+    style() {
       return {
         ...this.rotate && { transform: `rotate(${this.rotate}deg)` }
       };
     },
-    iconSvg () {
+    iconSvg() {
       return iconSvgStrings[this.name];
     }
   }

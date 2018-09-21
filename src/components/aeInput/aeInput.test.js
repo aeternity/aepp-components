@@ -1,6 +1,6 @@
 import AeInput from './aeInput.vue';
 import { install } from './index';
-import {shallow} from 'vue-test-utils';
+import { shallow } from 'vue-test-utils';
 
 describe('AeInput', () => {
   it('provides an install function', () => {
@@ -34,7 +34,7 @@ describe('AeInput', () => {
     it('forwards the id property to the input', () => {
       const id = 'adsfada';
       const wrapper = shallow(AeInput, {
-        propsData: {id}
+        propsData: { id }
       });
       const input = wrapper.find('input');
       expect(input.element.id).toBe(id);
@@ -43,7 +43,7 @@ describe('AeInput', () => {
     it('forwards the placeholder property to the input', () => {
       const placeholder = 'zdffa';
       const wrapper = shallow(AeInput, {
-        propsData: {placeholder}
+        propsData: { placeholder }
       });
       const input = wrapper.find('input');
       expect(input.element.getAttribute('placeholder')).toBe(placeholder);
@@ -52,7 +52,7 @@ describe('AeInput', () => {
     it('forwards the type property to the input', () => {
       const type = 'zdffa';
       const wrapper = shallow(AeInput, {
-        propsData: {type}
+        propsData: { type }
       });
       const input = wrapper.find('input');
       expect(input.element.type).toBe(type);
@@ -61,7 +61,7 @@ describe('AeInput', () => {
     it('forwards the value property to the input', () => {
       const value = 'zdffa';
       const wrapper = shallow(AeInput, {
-        propsData: {value}
+        propsData: { value }
       });
       const input = wrapper.find('input');
       expect(input.element.value).toBe(value);
@@ -70,7 +70,7 @@ describe('AeInput', () => {
     describe('input\'s step attribute', () => {
       const testStep = (type, expected) => {
         const wrapper = shallow(AeInput, {
-          propsData: {type}
+          propsData: { type }
         });
         const input = wrapper.find('input');
         expect(input.element.getAttribute('step')).toBe(expected);

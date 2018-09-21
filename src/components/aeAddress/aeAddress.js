@@ -1,9 +1,9 @@
 import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
 import aeIcon from './../aeIcon/aeIcon.vue';
-function startAndEnd (str, start = 6, end = 6) {
-  return str.substr(0, start + 2) +
-    '…' +
-    str.substr(str.length - end, str.length);
+function startAndEnd(str, start = 6, end = 6) {
+  return str.substr(0, start + 2)
+    + '…'
+    + str.substr(str.length - end, str.length);
 }
 
 /**
@@ -15,7 +15,7 @@ export default {
     /**
      * The address to display. The validity is checked by a regex
      */
-    'address': {
+    address: {
       type: String,
       required: true
     },
@@ -32,21 +32,21 @@ export default {
      * Show the 'full' address, 'chunked' (full address grouped by chunks )
      * or 'short' (show first 6 and last 6 characters)
      */
-    'size': {
+    size: {
       type: String,
       default: 'full'
     },
     /**
      * Show the account name
      */
-    'name': {
+    name: {
       type: String,
       required: false
     },
     /**
      * show verified checkmark if name or address is recognized/registered
      */
-    'verified': {
+    verified: {
       type: Boolean,
       required: false,
       default: false
@@ -54,14 +54,14 @@ export default {
     /**
      * show full address splitted into 2 colums
      */
-    'chunkHalf': {
+    chunkHalf: {
       type: Boolean,
       required: false,
       default: false
     }
   },
   computed: {
-    displayAddress () {
+    displayAddress() {
       if (this.size === 'full') {
         return this.address;
       }
@@ -70,13 +70,13 @@ export default {
       }
       return startAndEnd(this.address);
     },
-    displayName () {
+    displayName() {
       return this.name;
     },
-    textIndentModifier () {
+    textIndentModifier() {
       return `_text-indent_${this.showAvatar}`;
     },
-    chunkModifier () {
+    chunkModifier() {
       return `_chunk-half_${this.chunkHalf}`;
     }
   },

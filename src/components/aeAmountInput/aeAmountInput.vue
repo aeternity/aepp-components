@@ -71,16 +71,16 @@ export default {
   directives: { onClickAway },
   components: { AeInput, AeIcon },
   methods: {
-    handleInput (value) {
+    handleInput(value) {
       this.$emit('input', { ...this.value, ...value });
     },
-    toggleDropDown () {
+    toggleDropDown() {
       if (this.unitsCount > 1) {
         this.dropDownVisible = !this.dropDownVisible;
       }
     }
   },
-  mounted () {
+  mounted() {
     this.value.symbol = this.units[0].symbol;
   },
   computed: {

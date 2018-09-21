@@ -43,7 +43,7 @@ export default {
    * Component Methods
    */
   methods: {
-    handleInput (inputEvent) {
+    handleInput(inputEvent) {
       this.$emit('input', inputEvent.target.value);
     }
   }
