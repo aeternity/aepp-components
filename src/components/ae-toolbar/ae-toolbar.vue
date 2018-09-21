@@ -28,6 +28,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-toolbar {
     // Extend font-type
     @extend %face-uppercase-xs;

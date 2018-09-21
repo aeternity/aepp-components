@@ -44,6 +44,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../../styles/variables/old_vars';
+
   .ae-overlay {
     display: flex;
     padding: 10px;

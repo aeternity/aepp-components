@@ -51,6 +51,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-icon {
     display: inline-flex;
     justify-content: center;

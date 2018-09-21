@@ -58,7 +58,6 @@
     "jest-transform-stub": "^1.0.0",
     "node-sass": "^4.9.2",
     "sass-loader": "^6.0.6",
-    "sass-resources-loader": "^1.3.3",
     "string-loader": "0.0.1",
     "url-loader": "^0.6.2",
     "vue": "^2.5.16",

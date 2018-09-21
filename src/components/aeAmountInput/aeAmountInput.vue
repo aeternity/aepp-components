@@ -96,6 +96,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../../styles/variables/old_vars';
 
   .ae-amount-input {
     position: relative;

@@ -21,6 +21,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-list {
     padding: 0;
     margin: 0;

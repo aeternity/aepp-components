@@ -32,6 +32,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-view {
     display: flex;
     flex-direction: column;

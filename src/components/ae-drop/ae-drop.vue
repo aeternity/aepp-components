@@ -46,6 +46,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-drop {
     position: relative;
     display: inline-block;

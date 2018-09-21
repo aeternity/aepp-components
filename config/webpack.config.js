@@ -46,11 +46,6 @@ module.exports = {
                 options: {
                   sourceMap: true
                 }
-              }, {
-                loader: 'sass-resources-loader',
-                options: {
-                  resources: path.join(__dirname, '../src/styles/globals.scss')
-                }
               }],
               fallback: 'vue-style-loader'
             })
@@ -70,9 +65,6 @@ module.exports = {
             options: {
               sourceMap: true
             }
-          }, {
-            loader: 'sass-resources-loader',
-            options: { resources: path.join(__dirname, '../src/styles/globals.scss') }
           }],
           fallback: 'css-loader'
         })

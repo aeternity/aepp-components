@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../base/variables/old_vars";
+@import "../../styles/variables/old_vars";
 
 .ae-button {
   display: inline-block;

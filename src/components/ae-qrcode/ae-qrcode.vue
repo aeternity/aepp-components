@@ -59,6 +59,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-qrcode {
     display: flex;
     justify-content: center;

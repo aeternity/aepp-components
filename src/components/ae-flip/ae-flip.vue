@@ -67,6 +67,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-flip-touch-container {
     position: relative;
     height: 100%;

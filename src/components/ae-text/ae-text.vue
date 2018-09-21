@@ -75,6 +75,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-text {
     @extend %face-sans-base;
 
