@@ -12,8 +12,8 @@
     "build"
   ],
   "scripts": {
-    "unit": "# jest --config config/jest.config.js",
-    "unit:watch": "# jest --watch",
+    "unit": "jest",
+    "unit:watch": "jest --watch",
     "lint": "eslint --ext .js,.vue src",
     "test": "npm run unit && npm run lint",
     "build": "node config/build.js",
@@ -56,6 +56,8 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "jest": "^21.2.1",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^1.0.0",
     "node-sass": "^4.9.2",
     "sass-loader": "^6.0.6",
     "sass-resources-loader": "^1.3.3",

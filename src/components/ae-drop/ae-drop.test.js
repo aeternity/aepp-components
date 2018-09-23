@@ -1,4 +1,4 @@
-import install from './index';
+import { install } from './index';
 
 describe('ae-drop', () => {
   it('provides an install function', () => {
