@@ -1,3 +1,5 @@
+@import '../variables/old_vars';
+
 @mixin phone {
   @media (max-width: $screen-phone - 1px) {
     @content;

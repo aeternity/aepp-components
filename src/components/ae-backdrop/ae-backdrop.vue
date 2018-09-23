@@ -42,6 +42,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-backdrop {
     display: flex;
     align-items: center;

@@ -70,6 +70,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-button {
     user-select: none;
     position: relative;

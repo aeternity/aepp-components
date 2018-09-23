@@ -40,6 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../../styles/globals/old_mixins';
 
   .ae-header {
     margin-bottom: 20px;

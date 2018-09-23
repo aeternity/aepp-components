@@ -28,6 +28,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-list-item {
     display: flex;
     justify-content: space-between;

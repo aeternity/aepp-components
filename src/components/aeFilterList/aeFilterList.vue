@@ -12,6 +12,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../../styles/globals/old_mixins';
 
   .ae-filter-list {
     margin: 30px 0;

@@ -63,6 +63,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  @import '../../styles/globals';
+
   .ae-address {
     @extend %face-mono-base;
 

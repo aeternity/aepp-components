@@ -22,6 +22,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '../../styles/variables/old_vars';
 
   .ae-textarea {
     display: block;
