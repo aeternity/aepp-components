@@ -27,5 +27,59 @@
     </template>
   </ul>
 </template>
-<style src="./ae-address.scss" lang="scss" scoped />
-<script src="./ae-address.js" />
+<script>
+export default {
+  name: 'ae-address',
+  props: {
+    /**
+     * ae address value to be displayed
+     */
+    value: {
+      type: String,
+      required: true
+    },
+
+    /**
+     * Set the length of the address
+     * valid properties: `medium, short`
+     */
+    length: String,
+
+    /**
+     * Set the grid gab between elements, either px's or rem's
+     */
+    gap: String
+  },
+  computed: {
+    /**
+     * This will chunk the address
+     * into values of 3 and return an array
+     * @return {[]}
+     */
+    chunked: function () {
+      return this.value.match(/.{1,3}/g);
+    }
+  }
+};
+</script>
+<style lang="scss" scoped>
+  .ae-address {
+    @extend %face-mono-base;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: rem(4px);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    > li {
+      list-style: none;
+    }
+  }
+</style>

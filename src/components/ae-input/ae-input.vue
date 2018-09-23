@@ -22,5 +22,138 @@
     <slot name="footer" />
   </div>
 </template>
-<style src="./ae-input.scss" lang="scss" scoped />
-<script src="./ae-input.js" />
+<script>
+import { events } from '../../mixins';
+
+export default {
+  name: 'ae-input',
+  mixins: [events],
+  data: function () {
+    return { focus: false };
+  },
+  props: {
+    /**
+     * ID of the component/input
+     */
+    id: String,
+
+    /**
+     * Temporary text appearing in the input box
+     */
+    placeholder: String,
+
+    /**
+     * Define the type of the input
+     */
+    type: {
+      type: String,
+      default: 'text'
+    },
+
+    /**
+     * Property to define label of input, used to set
+     * label
+     */
+    label: String,
+
+    /**
+     * Activates the amount state of the component
+     */
+    aemount: Boolean,
+
+    /**
+     * Activates the Address state of the component
+     */
+    aeddress: Boolean,
+
+    /**
+     * Activates error state of the input field
+     */
+    error: Boolean
+  }
+};
+</script>
+<style lang="scss" scoped>
+  .ae-input-container {
+    user-select: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all $base-transition-time;
+
+    &.focus, &.error {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &.focus {
+      border-left: 2px solid $color-focus;
+      caret-color: $color-focus;
+    }
+    &.focus .ae-input-label {
+      color: $color-focus;
+    }
+    &.error {
+      border-left: 2px solid $color-error;
+      caret-color: $color-error;
+    }
+    &.error .ae-input-label {
+      color: $color-error;
+    }
+
+    &.focus .ae-input-label:after,
+    &.error .ae-input-label:after {
+      content: '*';
+    }
+  }
+
+  .ae-input-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: $color-neutral-positive-3;
+    min-height: rem(64px);
+  }
+
+  .ae-input-header {
+    position: relative;
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-start;
+    width: 100%;
+    padding: rem(8px) rem(16px) 0 rem(16px);
+  }
+
+  .ae-input-label {
+    @extend %face-sans-xs;
+
+    color: $color-neutral-negative-1;
+  }
+
+  .ae-input {
+    @extend %face-sans-base;
+    @include placeholder-color($color-neutral-negative-1);
+
+    align-self: center;
+    justify-self: center;
+    flex: 0 0 100%;
+    height: 100%;
+    width: 100%;
+    padding: rem(8px) rem(16px);
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .ae-input.aemount {
+    @extend %face-mono-xl;
+
+    text-align: center;
+    font-weight: 300;
+  }
+</style>
