@@ -11,15 +11,17 @@ new Vue({
       >
         You can easily add this aepp again, if you are regretting this action
         <ae-button
-          size="smaller"
+          size="small"
           type="exciting"
+          plain
           uppercase
           @click="modalVisible = false"
           slot="buttons"
         >cancel</ae-button>
         <ae-button
-          size="smaller"
+          size="small"
           type="dramatic"
+          plain
           uppercase
           @click="modalVisible = false"
           slot="buttons"

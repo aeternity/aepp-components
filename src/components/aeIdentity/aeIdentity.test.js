@@ -1,8 +1,7 @@
-import { shallow, mount } from 'vue-test-utils';
-import AeIdentity from './aeIdentity.vue';
-import AeIdentityLight from '../aeIdentityLight/aeIdentityLight.vue';
-import AeIdentityBackground from '../aeIdentityBackground/aeIdentityBackground.vue';
-import BN from 'bn.js';
+import { shallow, mount } from 'vue-test-utils'
+import AeIdentity from './aeIdentity.vue'
+import AeIdentityLight from '../aeIdentityLight/aeIdentityLight.vue'
+import AeIdentityBackground from '../aeIdentityBackground/aeIdentityBackground.vue'
 
 describe('aeIdentity', () => {
   describe('rendering', () => {
@@ -20,9 +19,8 @@ describe('aeIdentity', () => {
       const identity = {
         name: 'test',
         address: '0x03489768758974698',
-        tokenBalance: new BN('0', 10),
-        balance: new BN('0', 10)
-      };
+        balance: 0
+      }
 
       const wrapper = mount(AeIdentity, {
         propsData: identity

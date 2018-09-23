@@ -1,7 +1,6 @@
-import {shallow} from 'vue-test-utils';
-import AeIdentityLight from './aeIdentityLight.vue';
-import BN from 'bn.js';
-import AeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue';
+import {shallow} from 'vue-test-utils'
+import AeIdentityLight from './aeIdentityLight.vue'
+import AeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue'
 
 describe('AeIdentityLight', () => {
   const _shallow = (props) => {
@@ -11,9 +10,8 @@ describe('AeIdentityLight', () => {
   };
   const testIdentity = () => ({
     address: '0x1234' + '123456'.repeat(5),
-    balance: new BN('0', 10),
-    tokenBalance: new BN('0', 10)
-  });
+    balance: 0
+  })
 
   describe('rendering', () => {
     describe('avatar', () => {
@@ -32,19 +30,16 @@ describe('AeIdentityLight', () => {
         const wrapper = _shallow({
           collapsed,
           address: '0x0',
-          balance: new BN('500000000000000000000000000000', 10),
-          tokenBalance: new BN('600000000000000000000000000000', 10)
-        });
+          balance: 600000000000
+        })
 
-        expect(wrapper.find('.balance:not(.token) .amount').text())
-          .toBe('500,000,000,000');
         expect(wrapper.find('.balance.token .amount').text())
-          .toBe('600,000,000,000');
-      };
+          .toBe('600000000000')
+      }
 
-      it('renders the given balance when not collapsed (converted from wei)', genTest(false));
-      it('renders the given balance when collapsed (converted from wei)', genTest(true));
-    });
+      it('renders the given balance when not collapsed', genTest(false))
+      it('renders the given balance when collapsed', genTest(true))
+    })
 
     describe('chunked address', () => {
       const genTest = (collapsed) => () => {

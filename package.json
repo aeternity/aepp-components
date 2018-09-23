@@ -25,9 +25,7 @@
   },
   "dependencies": {
     "@download/blockies": "^1.0.3",
-    "ethjs-unit": "^0.1.6",
     "normalize.css": "^8.0.0",
-    "numeral": "^2.0.6",
     "qrious": "^4.0.2",
     "vue-clickaway": "^2.1.0",
     "vue-touch": "^2.0.0-beta.4"
