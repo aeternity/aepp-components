@@ -1,4 +1,4 @@
-import {TYPE_PROPERTY_VALUES as types} from '../../core/constants';
+import { TYPE_PROPERTY_VALUES as types } from '../../core/constants';
 
 export default {
   name: 'ae-identity-background',
@@ -6,18 +6,18 @@ export default {
     type: {
       type: String,
       default: 'normal',
-      validator: (value) => types.includes(value)
-    }
+      validator: value => types.includes(value),
+    },
   },
   computed: {
-    typeModifier () {
+    typeModifier() {
       return `_type_${this.type}`;
     },
-    cssClasses () {
+    cssClasses() {
       return [
         'ae-identity-background',
-        this.typeModifier
+        this.typeModifier,
       ];
-    }
-  }
+    },
+  },
 };

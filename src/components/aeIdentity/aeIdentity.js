@@ -14,43 +14,44 @@ export default {
      */
     name: {
       type: String,
-      required: false
+      required: false,
     },
     /**
      * An identity address
      */
     address: {
       type: String,
-      required: false
+      required: false,
     },
     /**
      * An identity balance in AE
      */
     balance: {
       type: Number,
-      required: false
+      required: false,
     },
     /**
     * Is this an identity activated/selected (magenta) or not (purple)?
     */
     active: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
-    * Is this the full size identity card or the collapsed one for displaying at the bottom of the screen?
+    * Is this the full size identity card or the collapsed one
+    * for displaying at the bottom of the screen?
     */
     collapsed: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   mixins: [
-    helperMixin
+    helperMixin,
   ],
   computed: {
-    backgroundType () {
+    backgroundType() {
       return this.active ? 'dramatic' : 'exciting';
-    }
-  }
+    },
+  },
 };

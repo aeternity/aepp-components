@@ -1,5 +1,9 @@
 <template>
-  <label :for="id" class="ae-check" :class="{ [fill]: Boolean(fill), [align]: Boolean(align), extend }">
+  <label
+    :for="id"
+    class="ae-check"
+    :class="{ [fill]: Boolean(fill), [align]: Boolean(align), extend }"
+  >
     <input :id="id" :type="type" :name="name" :value="value" :disabled="disabled">
     <span class="ae-check-button">
       <slot />
@@ -31,7 +35,7 @@ export default {
      */
     type: {
       type: String,
-      default: 'checkbox'
+      default: 'checkbox',
     },
 
     /**
@@ -40,11 +44,11 @@ export default {
      */
     align: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
-          'left'
+          'left',
         ].indexOf(value) !== 1;
-      }
+      },
     },
 
     /**
@@ -57,9 +61,9 @@ export default {
      */
     disabled: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

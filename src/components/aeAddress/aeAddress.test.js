@@ -16,8 +16,8 @@ describe('AeAddress', () => {
       const wrapper = shallow(AeAddress, {
         propsData: {
           address,
-          showAvatar: true
-        }
+          showAvatar: true,
+        },
       });
 
       expect(wrapper.contains(AeIdentityAvatar)).toBe(true);
@@ -27,8 +27,8 @@ describe('AeAddress', () => {
       const wrapper = shallow(AeAddress, {
         propsData: {
           address,
-          showAvatar: false
-        }
+          showAvatar: false,
+        },
       });
 
       expect(wrapper.contains(AeIdentityAvatar)).toBe(false);
@@ -38,8 +38,8 @@ describe('AeAddress', () => {
       const wrapper = shallow(AeAddress, {
         propsData: {
           address,
-          showAvatar: true
-        }
+          showAvatar: true,
+        },
       });
 
       const avatar = wrapper.find(AeIdentityAvatar);
@@ -51,8 +51,8 @@ describe('AeAddress', () => {
         propsData: {
           address,
           verified: true,
-          name: 'Test'
-        }
+          name: 'Test',
+        },
       });
 
       const checkMark = wrapper.find(AeIcon);

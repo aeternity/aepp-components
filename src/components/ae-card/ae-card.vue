@@ -29,14 +29,14 @@ export default {
      */
     fill: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
           'neutral',
           'default',
           'alternative',
-          'emphasis'
+          'emphasis',
         ].indexOf(value) !== 1;
-      }
+      },
     },
 
     /**
@@ -45,15 +45,15 @@ export default {
      */
     align: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
           'top',
           'center',
-          'bottom'
+          'bottom',
         ].indexOf(value) !== -1;
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

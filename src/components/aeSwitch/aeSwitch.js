@@ -3,23 +3,23 @@ export default {
   props: {
     name: String,
     choices: Array,
-    default: {}
+    default: {},
   },
-  data () {
+  data() {
     return {
-      selected: null
+      selected: null,
     };
   },
   watch: {
-    selected (newSelected) {
+    selected(newSelected) {
       this.$emit('input', newSelected);
-    }
+    },
   },
-  mounted () {
+  mounted() {
     if (this.default) {
       this.selected = this.default;
     } else if (this.choices.length) {
       this.selected = this.choices[0].value;
     }
-  }
+  },
 };

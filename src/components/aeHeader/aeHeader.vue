@@ -34,8 +34,8 @@ export default {
     /**
      * Name of aepplication
      */
-    name: String
-  }
+    name: String,
+  },
 };
 </script>
 

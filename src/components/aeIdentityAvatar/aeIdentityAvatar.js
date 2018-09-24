@@ -12,20 +12,20 @@ export default {
      */
     address: {
       type: String,
-      default: '0x0'
-    }
+      default: '0x0',
+    },
   },
   watch: {
-    address () {
+    address() {
       this.renderBlockie();
-    }
+    },
   },
-  mounted () {
+  mounted() {
     this.renderBlockie();
   },
   methods: {
-    renderBlockie () {
+    renderBlockie() {
       renderIcon({ seed: this.address }, this.$refs.blockie);
-    }
-  }
+    },
+  },
 };

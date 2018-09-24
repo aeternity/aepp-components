@@ -14,18 +14,10 @@
     "jest": true
   },
   "extends": [
-    "eslint:recommended",
-    "standard",
+    "airbnb-base",
     "plugin:vue/essential"
   ],
   "plugins": [
     "vue"
-  ],
-  "rules": {
-    "quotes": ["error", "single"],
-    "max-len": ["error", 120],
-    "indent": [2, 2],
-    "camelcase": "warn",
-    "semi": "off"
-  }
+  ]
 }

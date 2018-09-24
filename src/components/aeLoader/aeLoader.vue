@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'ae-loader'
+  name: 'ae-loader',
 };
 </script>
 

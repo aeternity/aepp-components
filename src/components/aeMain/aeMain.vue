@@ -10,7 +10,7 @@
  * sets common styles for child components
  */
 export default {
-  name: 'ae-main'
+  name: 'ae-main',
 };
 </script>
 

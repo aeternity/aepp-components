@@ -48,19 +48,19 @@ export default {
     /**
      * This handler is called when the user presses the close button
      */
-    closeHandler: { type: Function, required: false }
+    closeHandler: { type: Function, required: false },
   },
   components: { AeButton, AeIcon, AeLink },
   methods: {
-    progressbarStyle (ratio) {
+    progressbarStyle(ratio) {
       const pc = ratio * 100;
       return {
         display: typeof ratio === 'number' ? 'block' : 'none',
         backgroundImage:
-            `linear-gradient(to right, var(--maegenta) ${pc}%, var(--aubergine) ${pc}%)`
+            `linear-gradient(to right, var(--maegenta) ${pc}%, var(--aubergine) ${pc}%)`,
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

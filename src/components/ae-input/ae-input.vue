@@ -28,7 +28,7 @@ import { events } from '../../mixins';
 export default {
   name: 'ae-input',
   mixins: [events],
-  data: function () {
+  data() {
     return { focus: false };
   },
   props: {
@@ -47,7 +47,7 @@ export default {
      */
     type: {
       type: String,
-      default: 'text'
+      default: 'text',
     },
 
     /**
@@ -69,8 +69,8 @@ export default {
     /**
      * Activates error state of the input field
      */
-    error: Boolean
-  }
+    error: Boolean,
+  },
 };
 </script>
 <style lang="scss" scoped>

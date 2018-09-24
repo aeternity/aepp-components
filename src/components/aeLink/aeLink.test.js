@@ -15,15 +15,15 @@ describe('AeLink', () => {
   });
 
   const testRouterLink = {
-    render (createElement) {
+    render(createElement) {
       return createElement('test-router-link');
-    }
+    },
   };
 
   it('renders as `router-link` if `router-link` is passed in components', () => {
     const wrapper = mount(AeLink, {
       propsData: { to: '/' },
-      components: { 'router-link': testRouterLink }
+      components: { 'router-link': testRouterLink },
     });
     expect(wrapper.find('test-router-link').exists()).toBeTruthy();
   });
@@ -31,7 +31,7 @@ describe('AeLink', () => {
   it('renders as `a` if to is on different domain', () => {
     const wrapper = mount(AeLink, {
       propsData: { to: 'http://example.com/' },
-      components: { 'router-link': testRouterLink }
+      components: { 'router-link': testRouterLink },
     });
     expect(wrapper.find('a').exists()).toBeTruthy();
   });

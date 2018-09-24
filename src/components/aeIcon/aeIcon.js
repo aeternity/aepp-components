@@ -5,7 +5,7 @@ const aeIconTypes = [
   'boring',
   'normal',
   'exciting',
-  'dramatic'
+  'dramatic',
 ];
 
 export default {
@@ -18,52 +18,50 @@ export default {
     name: {
       type: String,
       required: true,
-      validator: (value) => !!iconSvgStrings[value]
+      validator: value => !!iconSvgStrings[value],
     },
     /**
     * Type of icon, possible values: 'plain', 'boring', 'normal', 'exciting', 'dramatic'
     */
     type: {
       type: String,
-      validator: (value) => {
-        return aeIconTypes.find((e) => e === value);
-      },
-      default: 'normal'
+      validator: value => aeIconTypes.find(e => e === value),
+      default: 'normal',
     },
     invert: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * Rotation of icon in degrees
      */
     rotate: {
-      default: 0
+      default: 0,
     },
     /**
      * Size of icon, possible values: 'small'
      */
     size: {
       type: String,
-      validator: (value) => ['small'].includes(value)
-    }
+      validator: value => ['small'].includes(value),
+    },
   },
   computed: {
-    cssClass () {
+    cssClass() {
       return [
         `_name_${this.name}`,
         `_type_${this.type}`,
         `_invert_${this.invert}`,
-        `_size_${this.size}`
+        `_size_${this.size}`,
       ];
     },
-    style () {
+    style() {
       return {
-        ...this.rotate && { transform: `rotate(${this.rotate}deg)` }
+        ...this.rotate && { transform: `rotate(${this.rotate}deg)` },
       };
     },
-    iconSvg () {
+    iconSvg() {
       return iconSvgStrings[this.name];
-    }
-  }
+    },
+  },
 };

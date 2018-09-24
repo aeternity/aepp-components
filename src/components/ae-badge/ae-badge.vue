@@ -10,8 +10,8 @@ export default {
     /**
      * 'disabled' state of the badge
      */
-    disabled: Boolean
-  }
+    disabled: Boolean,
+  },
 };
 </script>
 <style lang="scss" scoped>

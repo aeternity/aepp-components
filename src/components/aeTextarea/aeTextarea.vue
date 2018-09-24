@@ -16,8 +16,8 @@ export default {
     /**
      * Enables monospace font
      */
-    monospace: Boolean
-  }
+    monospace: Boolean,
+  },
 };
 </script>
 

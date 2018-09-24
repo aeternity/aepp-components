@@ -1,7 +1,7 @@
-import { shallow, mount } from 'vue-test-utils'
-import AeIdentity from './aeIdentity.vue'
-import AeIdentityLight from '../aeIdentityLight/aeIdentityLight.vue'
-import AeIdentityBackground from '../aeIdentityBackground/aeIdentityBackground.vue'
+import { shallow, mount } from 'vue-test-utils';
+import AeIdentity from './aeIdentity.vue';
+import AeIdentityLight from '../aeIdentityLight/aeIdentityLight.vue';
+import AeIdentityBackground from '../aeIdentityBackground/aeIdentityBackground.vue';
 
 describe('aeIdentity', () => {
   describe('rendering', () => {
@@ -19,11 +19,11 @@ describe('aeIdentity', () => {
       const identity = {
         name: 'test',
         address: '0x03489768758974698',
-        balance: 0
-      }
+        balance: 0,
+      };
 
       const wrapper = mount(AeIdentity, {
-        propsData: identity
+        propsData: identity,
       });
 
       const main = wrapper.find(AeIdentityLight);
@@ -34,8 +34,8 @@ describe('aeIdentity', () => {
       const test = (collapsed) => {
         const wrapper = mount(AeIdentity, {
           propsData: {
-            collapsed
-          }
+            collapsed,
+          },
         });
 
         const main = wrapper.find(AeIdentityLight);
@@ -49,8 +49,8 @@ describe('aeIdentity', () => {
     it('provides a default slot', () => {
       const wrapper = mount(AeIdentity, {
         slots: {
-          default: '<div data-default-slot></div>'
-        }
+          default: '<div data-default-slot></div>',
+        },
       });
       expect(wrapper.contains('[data-default-slot]')).toBe(true);
     });

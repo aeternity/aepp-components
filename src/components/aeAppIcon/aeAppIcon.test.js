@@ -6,7 +6,7 @@ describe('aeAppIcon', () => {
     it('renders an element with the src property as back ground image', () => {
       const src = 'http:/example.com/someimage.png';
       const wrapper = shallow(AeAppIcon, {
-        propsData: { src }
+        propsData: { src },
       });
 
       const image = wrapper.find('.icon-image').element;
@@ -19,7 +19,7 @@ describe('aeAppIcon', () => {
     describe('click', () => {
       it('emits click when root element is clicked', () => {
         const wrapper = shallow(AeAppIcon, {
-          propsData: { src: '' }
+          propsData: { src: '' },
         });
         wrapper.trigger('click');
         const emittedClick = wrapper.emitted().click;
@@ -30,7 +30,7 @@ describe('aeAppIcon', () => {
 
       it('emits click when icon is clicked', () => {
         const wrapper = shallow(AeAppIcon, {
-          propsData: { src: '' }
+          propsData: { src: '' },
         });
         wrapper.find('.icon-image').trigger('click');
         const emittedClick = wrapper.emitted().click;

@@ -50,7 +50,7 @@ export default {
      */
     value: {
       type: Object,
-      default: () => ({ symbol: this.getUnits })
+      default: () => ({ symbol: this.getUnits }),
     },
     id: undefined,
     placeholder: undefined,
@@ -61,37 +61,37 @@ export default {
       type: Array,
       default: () => [
         { symbol: 'AE', name: 'æternity' },
-        { symbol: 'ETH', name: 'Ethereum' }
-      ]
-    }
+        { symbol: 'ETH', name: 'Ethereum' },
+      ],
+    },
   },
   data: () => ({
-    dropDownVisible: false
+    dropDownVisible: false,
   }),
   directives: { onClickAway },
   components: { AeInput, AeIcon },
   methods: {
-    handleInput (value) {
+    handleInput(value) {
       this.$emit('input', { ...this.value, ...value });
     },
-    toggleDropDown () {
+    toggleDropDown() {
       if (this.unitsCount > 1) {
         this.dropDownVisible = !this.dropDownVisible;
       }
-    }
+    },
   },
-  mounted () {
+  mounted() {
     this.value.symbol = this.units[0].symbol;
   },
   computed: {
-    unitsCount: function () {
-      let count = this.units.length;
+    unitsCount() {
+      const count = this.units.length;
       return count;
     },
-    getUnits: function () {
+    getUnits() {
       return this.units[0].symbol;
-    }
-  }
+    },
+  },
 };
 </script>
 

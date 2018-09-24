@@ -19,8 +19,8 @@ export default {
     /**
      * Mark the filter item as active
      */
-    active: { type: Boolean, required: false }
-  }
+    active: { type: Boolean, required: false },
+  },
 };
 </script>
 

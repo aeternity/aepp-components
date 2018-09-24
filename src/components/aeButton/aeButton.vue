@@ -19,20 +19,20 @@
 </template>
 
 <script>
-import AeLink from '../aeLink/aeLink.vue'
+import AeLink from '../aeLink/aeLink.vue';
 
 const aeButtonTypes = [
   'boring',
   'normal',
   'exciting',
-  'dramatic'
-]
+  'dramatic',
+];
 
 const aeButtonSizes = [
   'small',
   'medium',
-  'large'
-]
+  'large',
+];
 
 export default {
   name: 'ae-button',
@@ -44,7 +44,7 @@ export default {
     type: {
       type: String,
       validator: value => aeButtonTypes.includes(value),
-      default: 'normal'
+      default: 'normal',
     },
     /**
      * Size of button, possible values: 'small', 'medium', 'large'
@@ -52,7 +52,7 @@ export default {
     size: {
       type: String,
       validator: value => aeButtonSizes.includes(value),
-      default: 'medium'
+      default: 'medium',
     },
     disabled: { type: Boolean, default: false },
     invert: { type: Boolean, default: false },
@@ -61,24 +61,24 @@ export default {
     /**
      * Path to go to when clicked
      */
-    to: { type: [String, Object], default: undefined }
+    to: { type: [String, Object], default: undefined },
   },
   computed: {
-    cssClass () {
+    cssClass() {
       const classes = [
         `_size_${this.size}`,
-        `_type_${this.type}`
-      ]
-      if (this.uppercase) classes.push('_uppercase')
-      if (this.invert) classes.push('_invert')
-      if (this.disabled) classes.push('_disabled')
-      if (this.plain) classes.push('_plain')
-      if (this.$slots.icon) classes.push('_has-icon')
-      if (this.$slots.default) classes.push('_has-label')
-      return classes
-    }
-  }
-}
+        `_type_${this.type}`,
+      ];
+      if (this.uppercase) classes.push('_uppercase');
+      if (this.invert) classes.push('_invert');
+      if (this.disabled) classes.push('_disabled');
+      if (this.plain) classes.push('_plain');
+      if (this.$slots.icon) classes.push('_has-icon');
+      if (this.$slots.default) classes.push('_has-label');
+      return classes;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

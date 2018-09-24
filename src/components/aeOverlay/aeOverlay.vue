@@ -7,14 +7,14 @@
 <script>
 export default {
   name: 'ae-overlay',
-  mounted () {
+  mounted() {
     document.body.style.overflow = 'hidden';
   },
-  destroyed () {
+  destroyed() {
     document.body.style.overflow = '';
   },
   methods: {
-    click (e) {
+    click(e) {
       /**
        * Click event
        *
@@ -22,8 +22,8 @@ export default {
        * @type {MouseEvent}
        */
       this.$emit('click', e);
-    }
-  }
+    },
+  },
 };
 </script>
 
