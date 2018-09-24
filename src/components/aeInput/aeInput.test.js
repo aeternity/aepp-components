@@ -1,6 +1,6 @@
 import { shallow } from 'vue-test-utils';
 import AeInput from './aeInput.vue';
-import { install } from './index';
+import install from './index';
 
 describe('AeInput', () => {
   it('provides an install function', () => {
