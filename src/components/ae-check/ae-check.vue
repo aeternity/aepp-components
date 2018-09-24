@@ -14,6 +14,7 @@
     </span>
   </label>
 </template>
+
 <script>
 export default {
   name: 'ae-check',
@@ -26,19 +27,15 @@ export default {
      * ID of the component/input
      */
     id: String,
-
     /**
      * Name of component
      */
     name: String,
-
     /**
      * value of component
      */
     value: { type: [String, Number, Boolean], default: undefined },
-
     checked: { type: [Array, String, Number, Boolean], default: false },
-
     /**
      * Define the type of the input
      */
@@ -46,7 +43,6 @@ export default {
       type: String,
       default: 'checkbox',
     },
-
     /**
      * Puts the component in disabled state
      */
