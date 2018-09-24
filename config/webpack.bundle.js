@@ -21,7 +21,7 @@ module.exports = merge(require('./webpack.config.js'), {
     'aepp.components': './src/index.js'
   },
   output: {
-    path: path.resolve(__dirname, '../build'),
+    path: path.resolve(__dirname, '../dist'),
     filename: '[name].js',
     libraryTarget: 'umd',
     library: '@aeternity/aepp-components',
@@ -45,7 +45,7 @@ if (process.env.NODE_ENV === 'production') {
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     // https://github.com/johnagan/clean-webpack-plugin
-    new CleanWebpackPlugin(['build'], {
+    new CleanWebpackPlugin(['dist'], {
       root: path.resolve(__dirname, '..'),
       exclude: [],
       verbose: true,
