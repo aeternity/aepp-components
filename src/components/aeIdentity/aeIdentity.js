@@ -38,7 +38,8 @@ export default {
       default: false
     },
     /**
-    * Is this the full size identity card or the collapsed one for displaying at the bottom of the screen?
+    * Is this the full size identity card or the collapsed one
+    * for displaying at the bottom of the screen?
     */
     collapsed: {
       type: Boolean,

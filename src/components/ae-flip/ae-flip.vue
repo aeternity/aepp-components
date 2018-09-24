@@ -42,26 +42,22 @@ export default {
   methods: {
     /**
      * Called when the user swipes left
-     * it also throws an event on swipe
-     * @param {{}} ev
-     * @return {*|default.methods}
+     * it also emits an event on swipe
      */
-    left: function (ev) {
+    left: function () {
       if (this.rotation === 180) return;
       this.rotation += 180;
-      return this.$emit('swipeleft');
+      this.$emit('swipeleft');
     },
 
     /**
      * Called when the user swipes right
-     * it also throws an event on swipe
-     * @param {{}} ev
-     * @return {*|default.methods}
+     * it also emits an event on swipe
      */
-    right: function (ev) {
+    right: function () {
       if (this.rotation === 0) return;
       this.rotation -= 180;
-      return this.$emit('swiperight');
+      this.$emit('swiperight');
     }
   }
 };

@@ -53,16 +53,16 @@ export default {
       begin = `ak$${begin}`;
 
       const splitBy = 3;
-      const addSpaces = (address, firstLength) => {
+      const addSpaces = (addressPart, firstLength) => {
         const fl = firstLength || splitBy;
         const res = [];
         let i = -1;
         const group = () => i >= 0
-          ? address.slice(splitBy * i + fl, splitBy * (i + 1) + fl)
-          : address.slice(0, fl);
+          ? addressPart.slice(splitBy * i + fl, splitBy * (i + 1) + fl)
+          : addressPart.slice(0, fl);
         while (group() !== '') {
           res.push(group());
-          i++;
+          i += 1;
         }
         return [res.join(' '), res.length ? res[res.length - 1].length : 0];
       };
