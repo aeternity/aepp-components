@@ -10,8 +10,8 @@ export default {
      * @param {Event} event
      * @return {*|default.methods}
      */
-    propagate: function (event) {
+    propagate(event) {
       return this.$emit(event.type, event);
-    }
-  }
+    },
+  },
 };

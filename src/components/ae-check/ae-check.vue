@@ -35,7 +35,7 @@ export default {
      */
     type: {
       type: String,
-      default: 'checkbox'
+      default: 'checkbox',
     },
 
     /**
@@ -44,11 +44,11 @@ export default {
      */
     align: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
-          'left'
+          'left',
         ].indexOf(value) !== 1;
-      }
+      },
     },
 
     /**
@@ -61,9 +61,9 @@ export default {
      */
     disabled: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

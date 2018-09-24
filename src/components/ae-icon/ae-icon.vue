@@ -21,14 +21,14 @@ export default {
      */
     fill: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
           'neutral',
           'default',
           'alternative',
-          'emphasis'
+          'emphasis',
         ].indexOf(value) !== 1;
-      }
+      },
     },
 
     /**
@@ -38,16 +38,16 @@ export default {
      */
     face: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return ['round'].indexOf(value) !== 1;
-      }
+      },
     },
 
     /**
      * Set manually the size of the font icon
      */
-    size: String
-  }
+    size: String,
+  },
 };
 </script>
 <style lang="scss" scoped>

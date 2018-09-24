@@ -1,5 +1,5 @@
-import aeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue';
-import helperMixin from './../../core/mixins/helper';
+import aeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
+import helperMixin from '../../core/mixins/helper';
 
 /**
  * Displays an Identity with an avatar blockie, the address and an amount of ether
@@ -13,40 +13,40 @@ export default {
      */
     name: {
       type: String,
-      default: ''
+      default: '',
     },
     /**
      * An identity address
      */
     address: {
       type: String,
-      default: '0x0'
+      default: '0x0',
     },
     /**
      * An identity balance in AE
      */
     balance: {
       type: Number,
-      default: 0
+      default: 0,
     },
     collapsed: {
       type: Boolean,
-      default: false
+      default: false,
     },
     invert: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   mixins: [
-    helperMixin
+    helperMixin,
   ],
   computed: {
     classObject() {
       return [
         'ae-identity-light',
         this.collapsedModifier,
-        this.invert ? '_invert' : ''
+        this.invert ? '_invert' : '',
       ];
     },
     chunkAddress() {
@@ -55,9 +55,9 @@ export default {
     },
     collapsedModifier() {
       return this.collapsed ? '_collapsed' : '';
-    }
+    },
   },
   filters: {
-    shorten: value => value.substr(0, 8)
-  }
+    shorten: value => value.substr(0, 8),
+  },
 };

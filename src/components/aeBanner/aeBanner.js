@@ -1,3 +1,3 @@
 export default {
-  name: 'ae-banner'
+  name: 'ae-banner',
 };

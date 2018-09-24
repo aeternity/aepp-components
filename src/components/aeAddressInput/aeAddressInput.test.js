@@ -44,7 +44,7 @@ describe('AeAddressInput', () => {
   it('limits address length', () => {
     const wrapper = mount(AeAddressInput);
     const begin = testAddressFormatted.slice(0, 25);
-    const end = testAddressFormatted.slice(25) + 'test';
+    const end = `${testAddressFormatted.slice(25)}test`;
     wrapper.element.value = begin + end;
     wrapper.element.setSelectionRange(begin.length, begin.length);
     wrapper.trigger('input');

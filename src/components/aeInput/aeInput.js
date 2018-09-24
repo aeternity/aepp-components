@@ -28,15 +28,13 @@ export default {
      */
     type: {
       type: String,
-      validator: (value) => {
-        return ['password', 'number'].includes(value);
-      }
+      validator: value => ['password', 'number'].includes(value),
     },
 
     /**
      * Enables monospace font
      */
-    monospace: Boolean
+    monospace: Boolean,
   },
 
   /**
@@ -45,6 +43,6 @@ export default {
   methods: {
     handleInput(inputEvent) {
       this.$emit('input', inputEvent.target.value);
-    }
-  }
+    },
+  },
 };

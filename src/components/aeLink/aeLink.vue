@@ -14,7 +14,7 @@ export default {
     /**
      * Path to go to when clicked
      */
-    to: { type: [String, Object] }
+    to: { type: [String, Object] },
   },
   computed: {
     isLinkOnSameHost() {
@@ -23,7 +23,7 @@ export default {
     },
     useRouterLink() {
       return this.$options.components['router-link'] && this.isLinkOnSameHost;
-    }
-  }
+    },
+  },
 };
 </script>

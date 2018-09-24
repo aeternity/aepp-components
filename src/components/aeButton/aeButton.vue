@@ -25,13 +25,13 @@ const aeButtonTypes = [
   'boring',
   'normal',
   'exciting',
-  'dramatic'
+  'dramatic',
 ];
 
 const aeButtonSizes = [
   'small',
   'medium',
-  'large'
+  'large',
 ];
 
 export default {
@@ -44,7 +44,7 @@ export default {
     type: {
       type: String,
       validator: value => aeButtonTypes.includes(value),
-      default: 'normal'
+      default: 'normal',
     },
     /**
      * Size of button, possible values: 'small', 'medium', 'large'
@@ -52,7 +52,7 @@ export default {
     size: {
       type: String,
       validator: value => aeButtonSizes.includes(value),
-      default: 'medium'
+      default: 'medium',
     },
     disabled: { type: Boolean, default: false },
     invert: { type: Boolean, default: false },
@@ -61,13 +61,13 @@ export default {
     /**
      * Path to go to when clicked
      */
-    to: { type: [String, Object], default: undefined }
+    to: { type: [String, Object], default: undefined },
   },
   computed: {
     cssClass() {
       const classes = [
         `_size_${this.size}`,
-        `_type_${this.type}`
+        `_type_${this.type}`,
       ];
       if (this.uppercase) classes.push('_uppercase');
       if (this.invert) classes.push('_invert');
@@ -76,8 +76,8 @@ export default {
       if (this.$slots.icon) classes.push('_has-icon');
       if (this.$slots.default) classes.push('_has-label');
       return classes;
-    }
-  }
+    },
+  },
 };
 </script>
 

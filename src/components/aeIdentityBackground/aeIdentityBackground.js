@@ -6,8 +6,8 @@ export default {
     type: {
       type: String,
       default: 'normal',
-      validator: (value) => types.includes(value)
-    }
+      validator: value => types.includes(value),
+    },
   },
   computed: {
     typeModifier() {
@@ -16,8 +16,8 @@ export default {
     cssClasses() {
       return [
         'ae-identity-background',
-        this.typeModifier
+        this.typeModifier,
       ];
-    }
-  }
+    },
+  },
 };

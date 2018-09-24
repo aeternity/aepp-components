@@ -24,14 +24,14 @@ export default {
      */
     fill: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
           'neutral',
           'default',
           'alternative',
-          'emphasis'
+          'emphasis',
         ].indexOf(value) !== 1;
-      }
+      },
     },
 
     /**
@@ -40,14 +40,14 @@ export default {
      */
     color: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
           'neutral',
           'default',
           'alternative',
-          'emphasis'
+          'emphasis',
         ].indexOf(value) !== 1;
-      }
+      },
     },
 
     /**
@@ -57,21 +57,21 @@ export default {
      */
     face: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
           'primary',
           'secondary',
           'icon',
-          'toolbar'
+          'toolbar',
         ].indexOf(value) !== 1;
-      }
+      },
     },
 
     /**
      * Extend the button full width
      */
-    extend: Boolean
-  }
+    extend: Boolean,
+  },
 };
 </script>
 <style lang="scss" scoped>

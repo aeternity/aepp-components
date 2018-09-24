@@ -1,21 +1,19 @@
 import { shallow } from 'vue-test-utils';
 import AeIdentityLight from './aeIdentityLight.vue';
-import AeIdentityAvatar from './../aeIdentityAvatar/aeIdentityAvatar.vue';
+import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
 
 describe('AeIdentityLight', () => {
-  const shallowWrapper = (props) => {
-    return shallow(AeIdentityLight, {
-      propsData: props
-    });
-  };
+  const shallowWrapper = props => shallow(AeIdentityLight, {
+    propsData: props,
+  });
   const testIdentity = () => ({
-    address: '0x1234' + '123456'.repeat(5),
-    balance: 0
+    address: `0x1234${'123456'.repeat(5)}`,
+    balance: 0,
   });
 
   describe('rendering', () => {
     describe('avatar', () => {
-      const genTest = (collapsed) => () => {
+      const genTest = collapsed => () => {
         const wrapper = shallowWrapper({ collapsed });
         const avatar = wrapper.find(AeIdentityAvatar);
         expect(avatar.exists()).toBe(true);
@@ -26,11 +24,11 @@ describe('AeIdentityLight', () => {
     });
 
     describe('balance', () => {
-      const genTest = (collapsed) => () => {
+      const genTest = collapsed => () => {
         const wrapper = shallowWrapper({
           collapsed,
           address: '0x0',
-          balance: 600000000000
+          balance: 600000000000,
         });
 
         expect(wrapper.find('.balance.token .amount').text())
@@ -42,10 +40,10 @@ describe('AeIdentityLight', () => {
     });
 
     describe('chunked address', () => {
-      const genTest = (collapsed) => () => {
+      const genTest = collapsed => () => {
         const wrapper = shallowWrapper({
           collapsed,
-          ...testIdentity()
+          ...testIdentity(),
         });
         const chunks = wrapper.findAll('.chunk');
         expect(chunks.length).toBe(collapsed ? 0 : 6);
@@ -60,7 +58,7 @@ describe('AeIdentityLight', () => {
         const identity = testIdentity();
         const wrapper = shallowWrapper({
           collapsed: true,
-          ...identity
+          ...identity,
         });
         const truncatedAddress = wrapper.find('.truncated-address');
         const expected = identity.address.substr(0, 8);

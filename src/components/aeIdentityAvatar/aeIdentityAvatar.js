@@ -12,13 +12,13 @@ export default {
      */
     address: {
       type: String,
-      default: '0x0'
-    }
+      default: '0x0',
+    },
   },
   watch: {
     address() {
       this.renderBlockie();
-    }
+    },
   },
   mounted() {
     this.renderBlockie();
@@ -26,6 +26,6 @@ export default {
   methods: {
     renderBlockie() {
       renderIcon({ seed: this.address }, this.$refs.blockie);
-    }
-  }
+    },
+  },
 };

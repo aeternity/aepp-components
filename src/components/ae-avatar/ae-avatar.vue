@@ -17,7 +17,7 @@ export default {
     address: {
       default: '0x0',
       type: String,
-      required: true
+      required: true,
     },
 
     /**
@@ -26,19 +26,19 @@ export default {
      */
     size: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return ['small'].indexOf(value) !== -1;
-      }
-    }
+      },
+    },
   },
 
   /**
    * TODO: ae-avatar canvas size: Canvas needs to be rendered depending on user selected size
    * @return {HTMLCanvasElement}
    */
-  mounted: function () {
+  mounted() {
     return renderIcon({ seed: this.address }, this.$refs.blockies);
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>

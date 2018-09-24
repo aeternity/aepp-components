@@ -13,11 +13,11 @@ export default {
      */
     face: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return ['primary'].indexOf(value) !== 1;
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

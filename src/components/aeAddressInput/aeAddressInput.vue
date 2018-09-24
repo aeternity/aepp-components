@@ -17,14 +17,14 @@ export default {
   props: {
     value: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
   components: { AeTextarea },
   computed: {
     formattedValue() {
       return this.formatAddress(this.value).address;
-    }
+    },
   },
   methods: {
     handleInput() {
@@ -57,9 +57,9 @@ export default {
         const fl = firstLength || splitBy;
         const res = [];
         let i = -1;
-        const group = () => i >= 0
+        const group = () => (i >= 0
           ? addressPart.slice(splitBy * i + fl, splitBy * (i + 1) + fl)
-          : addressPart.slice(0, fl);
+          : addressPart.slice(0, fl));
         while (group() !== '') {
           res.push(group());
           i += 1;
@@ -71,11 +71,11 @@ export default {
       [begin, lastLength] = addSpaces(begin);
       [end] = addSpaces(end, splitBy - lastLength);
 
-      let res = `${begin}${end && lastLength === splitBy ? ' ' : ''}${end}`.slice(0, 70);
+      const res = `${begin}${end && lastLength === splitBy ? ' ' : ''}${end}`.slice(0, 70);
 
       return { address: res, cursor: begin.length };
-    }
-  }
+    },
+  },
 };
 </script>
 

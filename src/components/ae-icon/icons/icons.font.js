@@ -9,6 +9,6 @@ module.exports = {
   fileName: 'fonts/aepp-[fontname].[ext]',
   types: ['eot', 'woff', 'woff2', 'ttf', 'svg'],
   files: [
-    './*.svg'
-  ]
+    './*.svg',
+  ],
 };

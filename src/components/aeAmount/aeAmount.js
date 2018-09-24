@@ -9,8 +9,8 @@ export default {
     },
     unit: {
       type: [String, Boolean],
-      default: 'eth'
-    }
+      default: 'eth',
+    },
   },
   computed: {
     sizeModifier() {
@@ -22,8 +22,8 @@ export default {
     cssClass() {
       return [
         this.sizeModifier,
-        this.colorModifier
+        this.colorModifier,
       ];
-    }
-  }
+    },
+  },
 };

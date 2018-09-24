@@ -26,14 +26,14 @@ export default {
     'help-type': {
       type: String,
       default: 'normal',
-      validator: (value) => types.includes(value)
-    }
+      validator: value => types.includes(value),
+    },
   },
   computed: {
     typeModifier() {
       return `_type_${this.helpType}`;
-    }
-  }
+    },
+  },
 };
 </script>
 

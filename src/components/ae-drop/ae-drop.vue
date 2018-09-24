@@ -18,7 +18,7 @@ import { directive as clickaway } from 'vue-clickaway';
 export default {
   name: 'ae-drop',
   directives: { clickaway },
-  data: function () {
+  data() {
     return { active: false };
   },
   props: {
@@ -26,23 +26,23 @@ export default {
      * Direction of the dropped menu
      * `left, right`
      */
-    direction: String
+    direction: String,
   },
   methods: {
     /**
      * Activate Drop
      */
-    activate: function () {
+    activate() {
       this.active = true;
     },
 
     /**
      * Deactivate Drop
      */
-    deactivate: function () {
+    deactivate() {
       this.active = false;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

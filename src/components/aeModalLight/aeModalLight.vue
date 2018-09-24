@@ -26,7 +26,7 @@ export default {
     /**
      * Modal title
      */
-    title: String
+    title: String,
   },
   components: { AeOverlay, AeButton, AeIcon },
   methods: {
@@ -38,8 +38,8 @@ export default {
        * @type {undefined}
        */
       this.$emit('close');
-    }
-  }
+    },
+  },
 };
 </script>
 

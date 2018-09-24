@@ -21,7 +21,7 @@
 <script>
 export default {
   name: 'ae-flip',
-  data: function () {
+  data() {
     return { rotation: 0 };
   },
   computed: {
@@ -29,7 +29,7 @@ export default {
      * Compute the direction of the card
      * @return {String}
      */
-    direction: function () {
+    direction() {
       if (this.rotation === 0) {
         return false;
       }
@@ -37,14 +37,14 @@ export default {
         return 'left';
       }
       return 'right';
-    }
+    },
   },
   methods: {
     /**
      * Called when the user swipes left
      * it also emits an event on swipe
      */
-    left: function () {
+    left() {
       if (this.rotation === 180) return;
       this.rotation += 180;
       this.$emit('swipeleft');
@@ -54,12 +54,12 @@ export default {
      * Called when the user swipes right
      * it also emits an event on swipe
      */
-    right: function () {
+    right() {
       if (this.rotation === 0) return;
       this.rotation -= 180;
       this.$emit('swiperight');
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

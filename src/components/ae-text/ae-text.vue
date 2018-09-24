@@ -26,7 +26,7 @@ export default {
      */
     face: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
           'sans-l',
           'sans-base',
@@ -38,9 +38,9 @@ export default {
           'mono-xs',
           'tracked-base',
           'uppercase-base',
-          'uppercase-xs'
+          'uppercase-xs',
         ].indexOf(value) !== -1;
-      }
+      },
     },
 
     /**
@@ -48,13 +48,13 @@ export default {
      */
     align: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
           'left',
           'right',
-          'center'
+          'center',
         ].indexOf(value) !== 1;
-      }
+      },
     },
 
     /**
@@ -70,8 +70,8 @@ export default {
     /**
      * Disabled state of the element
      */
-    disabled: Boolean
-  }
+    disabled: Boolean,
+  },
 };
 </script>
 <style lang="scss" scoped>

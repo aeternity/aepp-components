@@ -1,9 +1,10 @@
 import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
-import aeIcon from './../aeIcon/aeIcon.vue';
+import aeIcon from '../aeIcon/aeIcon.vue';
+
 function startAndEnd(str, start = 6, end = 6) {
-  return str.substr(0, start + 2)
-    + '…'
-    + str.substr(str.length - end, str.length);
+  return `${str.substr(0, start + 2)
+  }…${
+    str.substr(str.length - end, str.length)}`;
 }
 
 /**
@@ -17,7 +18,7 @@ export default {
      */
     address: {
       type: String,
-      required: true
+      required: true,
     },
 
     /**
@@ -25,7 +26,7 @@ export default {
      */
     'show-avatar': {
       type: Boolean,
-      default: false
+      default: false,
     },
 
     /**
@@ -34,14 +35,14 @@ export default {
      */
     size: {
       type: String,
-      default: 'full'
+      default: 'full',
     },
     /**
      * Show the account name
      */
     name: {
       type: String,
-      required: false
+      required: false,
     },
     /**
      * show verified checkmark if name or address is recognized/registered
@@ -49,7 +50,7 @@ export default {
     verified: {
       type: Boolean,
       required: false,
-      default: false
+      default: false,
     },
     /**
      * show full address splitted into 2 colums
@@ -57,8 +58,8 @@ export default {
     chunkHalf: {
       type: Boolean,
       required: false,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
     displayAddress() {
@@ -78,10 +79,10 @@ export default {
     },
     chunkModifier() {
       return `_chunk-half_${this.chunkHalf}`;
-    }
+    },
   },
   components: {
     AeIdentityAvatar,
-    aeIcon
-  }
+    aeIcon,
+  },
 };

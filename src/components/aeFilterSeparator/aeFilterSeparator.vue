@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'ae-filter-separator'
+  name: 'ae-filter-separator',
 };
 </script>
 

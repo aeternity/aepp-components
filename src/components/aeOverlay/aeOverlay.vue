@@ -22,8 +22,8 @@ export default {
        * @type {MouseEvent}
        */
       this.$emit('click', e);
-    }
-  }
+    },
+  },
 };
 </script>
 

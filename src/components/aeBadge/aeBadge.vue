@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'ae-badge'
+  name: 'ae-badge',
 };
 </script>
 

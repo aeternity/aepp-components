@@ -15,16 +15,16 @@ export default {
     fill: {
       type: String,
       default: 'neutral',
-      validator: function (value) {
+      validator(value) {
         return [
           'neutral',
           'default',
           'alternative',
-          'emphasis'
+          'emphasis',
         ].indexOf(value) !== 1;
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

@@ -23,8 +23,8 @@ export default {
     /**
      * Is Active or Inactive
      */
-    disabled: Boolean
-  }
+    disabled: Boolean,
+  },
 };
 </script>
 <style lang="scss" scoped>

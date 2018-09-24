@@ -36,7 +36,7 @@ export default {
      */
     value: {
       type: String,
-      required: true
+      required: true,
     },
 
     /**
@@ -48,7 +48,7 @@ export default {
     /**
      * Set the grid gab between elements, either px's or rem's
      */
-    gap: String
+    gap: String,
   },
   computed: {
     /**
@@ -56,10 +56,10 @@ export default {
      * into values of 3 and return an array
      * @return {[]}
      */
-    chunked: function () {
+    chunked() {
       return this.value.match(/.{1,3}/g);
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

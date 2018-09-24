@@ -16,19 +16,19 @@ export default {
      */
     face: {
       type: String,
-      validator: function (value) {
+      validator(value) {
         return [
           'base',
-          'frame'
+          'frame',
         ].indexOf(value) !== -1;
-      }
+      },
     },
 
     /**
      * TODO: write doc
      */
-    visible: Boolean
-  }
+    visible: Boolean,
+  },
 };
 </script>
 <style lang="scss" scoped>

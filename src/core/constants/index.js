@@ -5,5 +5,5 @@ export const TYPE_PROPERTY_VALUES = [
   'dramatic',
   'dark',
   'darker',
-  'darkest'
+  'darkest',
 ];

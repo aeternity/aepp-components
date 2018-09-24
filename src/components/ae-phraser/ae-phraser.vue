@@ -6,7 +6,7 @@
 <script>
 export default {
   name: 'ae-phraser',
-  props: {}
+  props: {},
 };
 </script>
 <style lang="scss" scoped>

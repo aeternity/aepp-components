@@ -32,13 +32,13 @@ export default {
     /**
      * Modal title
      */
-    title: String
+    title: String,
   },
   components: {
     AeOverlay,
     AeHeader,
     AeButton,
-    AeIcon
+    AeIcon,
   },
   methods: {
     close() {
@@ -49,8 +49,8 @@ export default {
        * @type {undefined}
        */
       this.$emit('close');
-    }
-  }
+    },
+  },
 };
 </script>
 

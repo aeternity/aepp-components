@@ -10,8 +10,8 @@ describe('AeButton', () => {
   const renderIcon = () => {
     const wrapper = shallow(AeButton, {
       slots: {
-        icon: '<div data-slot="icon"></div>'
-      }
+        icon: '<div data-slot="icon"></div>',
+      },
     });
 
     return wrapper;
@@ -20,8 +20,8 @@ describe('AeButton', () => {
   const renderLabel = () => {
     const wrapper = shallow(AeButton, {
       slots: {
-        default: '<div data-slot="label"></div>'
-      }
+        default: '<div data-slot="label"></div>',
+      },
     });
 
     // unfortunately we have to force the update of the computed prop

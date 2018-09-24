@@ -12,21 +12,21 @@ export default {
      */
     src: {
       required: true,
-      type: String
+      type: String,
     },
     /**
      * removes space between icon and component
      */
     'full-size': {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
     cssStyle() {
       return {
-        'background-image': `url(${this.src})`
+        'background-image': `url(${this.src})`,
       };
-    }
-  }
+    },
+  },
 };
