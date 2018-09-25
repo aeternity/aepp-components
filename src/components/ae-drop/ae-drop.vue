@@ -1,10 +1,8 @@
 <template>
     <div class="ae-drop" :class="{ active }" v-clickaway="deactivate">
-      <v-touch @tap="activate">
-        <button type="button" class="ae-drop-button">
-          <slot name="button" />
-        </button>
-      </v-touch>
+      <button @click="activate" type="button" class="ae-drop-button">
+        <slot name="button" />
+      </button>
       <ul class="ae-drop-menu"
           :class="{ [direction]: Boolean(direction) }"
           @click.capture="deactivate">
