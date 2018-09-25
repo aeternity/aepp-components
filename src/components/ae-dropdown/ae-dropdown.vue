@@ -1,9 +1,9 @@
 <template>
-    <div class="ae-drop" :class="{ active }" v-clickaway="deactivate">
-      <button @click="activate" type="button" class="ae-drop-button">
+    <div class="ae-dropdown" :class="{ active }" v-clickaway="deactivate">
+      <button @click="activate" type="button" class="ae-dropdown-button">
         <slot name="button" />
       </button>
-      <ul class="ae-drop-menu"
+      <ul class="ae-dropdown-menu"
           :class="{ [direction]: Boolean(direction) }"
           @click.capture="deactivate">
         <slot />
@@ -14,7 +14,7 @@
 import { directive as clickaway } from 'vue-clickaway';
 
 export default {
-  name: 'ae-drop',
+  name: 'ae-dropdown',
   directives: { clickaway },
   data() {
     return { active: false };
@@ -46,18 +46,18 @@ export default {
 <style lang="scss" scoped>
   @import '../../styles/globals';
 
-  .ae-drop {
+  .ae-dropdown {
     position: relative;
     display: inline-block;
 
-    &.active > .ae-drop-menu {
+    &.active > .ae-dropdown-menu {
       opacity: 1;
       visibility: visible;
       z-index: $stack-4;
     }
   }
 
-  .ae-drop-button {
+  .ae-dropdown-button {
     @include size(48px);
 
     user-select: none;
@@ -82,7 +82,7 @@ export default {
     }
   }
 
-  .ae-drop-menu {
+  .ae-dropdown-menu {
     opacity: 0;
     visibility: hidden;
     z-index: $stack-4;

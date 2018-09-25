@@ -8,7 +8,7 @@ import AeBadge from './ae-badge';
 import AeButton from './ae-button';
 import AeCard from './ae-card';
 import AeCheck from './ae-check';
-import AeDrop from './ae-drop';
+import AeDropdown from './ae-dropdown';
 import AeFlip from './ae-flip';
 import AeIcon from './ae-icon';
 import AeInput from './ae-input';
@@ -30,7 +30,7 @@ const components = {
   AeButton,
   AeCard,
   AeCheck,
-  AeDrop,
+  AeDropdown,
   AeFlip,
   AeIcon,
   AeInput,

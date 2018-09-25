@@ -1,5 +1,5 @@
 ```jsx
-<ae-drop>
+<ae-dropdown>
   <ae-icon name="list" size="20px" slot="button" />
   <li>
     <ae-icon name="copy" />
@@ -11,12 +11,12 @@
       Delete
     </ae-button>
   </li>
-</ae-drop>
+</ae-dropdown>
 ```
 
 ### prop: direction
 ```jsx
-<ae-drop direction="left">
+<ae-dropdown direction="left">
   <ae-icon name="list" size="20px" slot="button" />
   <li>
     <ae-icon name="copy" />
@@ -28,5 +28,5 @@
       Delete
     </ae-button>
   </li>
-</ae-drop>
+</ae-dropdown>
 ```
