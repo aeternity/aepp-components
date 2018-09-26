@@ -13,14 +13,14 @@
 ``` 
 
 ```jsx
-  <ae-toolbar fill="default">
-    default fill
+  <ae-toolbar fill="secondary">
+    secondary fill
   </ae-toolbar>
 ```
 
 ```jsx
-  <ae-toolbar fill="emphasis">
-    emphasis fill
+  <ae-toolbar fill="primary">
+    primary fill
   </ae-toolbar>
 ```
 
@@ -85,14 +85,14 @@
 ``` 
 
 ```jsx
-  <ae-toolbar fill="default" disabled>
-    default fill
+  <ae-toolbar fill="secondary" disabled>
+    secondary fill
   </ae-toolbar>
 ```
 
 ```jsx
-  <ae-toolbar fill="emphasis" disabled>
-    emphasis fill
+  <ae-toolbar fill="primary" disabled>
+    primary fill
   </ae-toolbar>
 ```
 

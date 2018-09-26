@@ -25,16 +25,16 @@ export default {
     /**
      * Fill property changes the color state
      * of the card select something between:
-     * `neutral, default, emphasis, alternative`
+     * `primary, secondary, neutral, alternative`
      */
     fill: {
       type: String,
       validator(value) {
         return [
+          'primary',
+          'secondary',
           'neutral',
-          'default',
           'alternative',
-          'emphasis',
         ].indexOf(value) !== 1;
       },
     },
@@ -75,19 +75,19 @@ export default {
     box-shadow: 0 0 16px $color-shadow-alpha-15;
   }
 
+  .ae-card.primary {
+    background: $color-primary;
+    color: $color-primary-negative-3;
+  }
+
+  .ae-card.secondary {
+    background: $color-secondary;
+    color: $color-secondary-negative-3;
+  }
+
   .ae-card.neutral {
     background: $color-neutral-negative-3;
     color: $color-white;
-  }
-
-  .ae-card.default {
-    background: $color-default;
-    color: $color-default-negative-3;
-  }
-
-  .ae-card.emphasis {
-    background: $color-emphasis;
-    color: $color-emphasis-negative-3;
   }
 
   .ae-card.alternative {

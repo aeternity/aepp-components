@@ -139,7 +139,7 @@ export default {
       cursor: pointer;
 
       &.active {
-        background: $color-emphasis;
+        background: $color-primary;
       }
     }
   }

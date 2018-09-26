@@ -20,32 +20,32 @@ export default {
   props: {
     /**
      * Fill property changes the color state of the button
-     * select something between: `neutral, default, emphasis, alternative`
+     * select something between: `primary, secondary, neutral, alternative`
      */
     fill: {
       type: String,
       validator(value) {
         return [
+          'primary',
+          'secondary',
           'neutral',
-          'default',
           'alternative',
-          'emphasis',
         ].indexOf(value) !== 1;
       },
     },
 
     /**
      * color property changes the text color of the button
-     * select something between: `neutral, default, emphasis, alternative`
+     * select something between: ` primary, secondary, neutral, alternative`
      */
     color: {
       type: String,
       validator(value) {
         return [
+          'primary',
+          'secondary',
           'neutral',
-          'default',
           'alternative',
-          'emphasis',
         ].indexOf(value) !== 1;
       },
     },
@@ -53,14 +53,14 @@ export default {
     /**
      * Face applies a shape/form to
      * the current button, available options:
-     * `primary, secondary, icon, toolbar`
+     * `round, flat, icon, toolbar`
      */
     face: {
       type: String,
       validator(value) {
         return [
-          'primary',
-          'secondary',
+          'round',
+          'flat',
           'icon',
           'toolbar',
         ].indexOf(value) !== 1;
@@ -107,7 +107,7 @@ export default {
     }
   }
 
-  .ae-button.primary {
+  .ae-button.round {
     @extend %face-uppercase-base;
 
     background: $color-neutral;
@@ -126,7 +126,7 @@ export default {
     }
   }
 
-  .ae-button.secondary {
+  .ae-button.flat {
     @extend %face-uppercase-base;
 
     display: flex;
@@ -148,10 +148,10 @@ export default {
       cursor: not-allowed;
     }
 
-    &.default,
-    &.alternative,
-    &.emphasis,
-    &.neutral {
+    &.primary,
+    &.secondary,
+    &.neutral,
+    &.alternative {
       background: transparent;
 
       &:disabled {
@@ -159,6 +159,22 @@ export default {
       }
     }
 
+    &.primary {
+      color: $color-primary-positive-1;
+      border-color: $color-primary-negative-1;
+
+      &:disabled {
+        color: $color-primary-positive-3;
+      }
+    }
+    &.secondary {
+      color: $color-secondary-positive-1;
+      border-color: $color-secondary-negative-1;
+
+      &:disabled {
+        color: $color-secondary-positive-3;
+      }
+    }
     &.neutral {
       color: $color-neutral-minimum;
       border-color: $color-neutral-positive-2;
@@ -167,28 +183,12 @@ export default {
         color: $color-neutral;
       }
     }
-    &.default {
-      color: $color-default-positive-1;
-      border-color: $color-default-negative-1;
-
-      &:disabled {
-        color: $color-default-positive-3;
-      }
-    }
     &.alternative {
       color: $color-alternative-positive-1;
       border-color: $color-alternative-negative-1;
 
       &:disabled {
         color: $color-alternative-positive-3;
-      }
-    }
-    &.emphasis {
-      color: $color-emphasis-positive-1;
-      border-color: $color-emphasis-negative-1;
-
-      &:disabled {
-        color: $color-emphasis-positive-3;
       }
     }
   }
@@ -232,20 +232,40 @@ export default {
     }
   }
 
-  .ae-button.color-neutral {
-    color: $color-neutral;
+  .ae-button.color-primary {
+    color: $color-primary;
   }
 
-  .ae-button.color-default {
-    color: $color-default;
+  .ae-button.color-secondary {
+    color: $color-secondary;
+  }
+
+  .ae-button.color-neutral {
+    color: $color-neutral;
   }
 
   .ae-button.color-alternative {
     color: $color-alternative;
   }
 
-  .ae-button.color-emphasis {
-    color: $color-emphasis;
+  .ae-button.primary {
+    background: $color-primary;
+    color: $color-white;
+
+    &:disabled {
+      background: $color-primary-negative-1;
+      color: $color-primary-positive-1;
+    }
+  }
+
+  .ae-button.secondary {
+    background: $color-secondary;
+    color: $color-white;
+
+    &:disabled {
+      background: $color-secondary-negative-1;
+      color: $color-secondary-positive-1;
+    }
   }
 
   .ae-button.neutral {
@@ -258,16 +278,6 @@ export default {
     }
   }
 
-  .ae-button.default {
-    background: $color-default;
-    color: $color-white;
-
-    &:disabled {
-      background: $color-default-negative-1;
-      color: $color-default-positive-1;
-    }
-  }
-
   .ae-button.alternative {
     background: $color-alternative;
     color: $color-white;
@@ -275,16 +285,6 @@ export default {
     &:disabled {
       background: $color-alternative-negative-1;
       color: $color-alternative-positive-1;
-    }
-  }
-
-  .ae-button.emphasis {
-    background: $color-emphasis;
-    color: $color-white;
-
-    &:disabled {
-      background: $color-emphasis-negative-1;
-      color: $color-emphasis-positive-1;
     }
   }
 

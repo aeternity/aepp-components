@@ -2,8 +2,7 @@
   <label
     :for="id"
     class="ae-check"
-    :class="{ [fill]: Boolean(fill), [align]: Boolean(align), extend }"
-  >
+    :class="{ [fill]: Boolean(fill), [align]: Boolean(align), extend }">
     <input :id="id" :type="type" :name="name" :value="value" :disabled="disabled">
     <span class="ae-check-button">
       <slot />
@@ -45,9 +44,7 @@ export default {
     align: {
       type: String,
       validator(value) {
-        return [
-          'left',
-        ].indexOf(value) !== 1;
+        return ['left'].indexOf(value) !== 1;
       },
     },
 
@@ -84,8 +81,8 @@ export default {
 
     > input[type="radio"]:checked + .ae-check-button:before,
     > input[type="checkbox"]:checked + .ae-check-button:before {
-      background: $color-emphasis;
-      border-color: $color-emphasis;
+      background: $color-primary;
+      border-color: $color-primary;
     }
 
     > input[type="radio"]:checked + .ae-check-button:after,

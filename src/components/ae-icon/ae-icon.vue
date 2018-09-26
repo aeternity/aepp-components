@@ -17,16 +17,16 @@ export default {
 
     /**
      * Fill property changes the color state of the icon
-     * select something between: `neutral, default, emphasis, alternative`
+     * select something between: `primary, secondary, neutral, alternative`
      */
     fill: {
       type: String,
       validator(value) {
         return [
+          'primary',
+          'secondary',
           'neutral',
-          'default',
           'alternative',
-          'emphasis',
         ].indexOf(value) !== 1;
       },
     },
@@ -58,17 +58,17 @@ export default {
     justify-content: center;
     align-items: center;
 
+    &.primary {
+      color: $color-primary;
+    }
+    &.secondary {
+      color: $color-secondary;
+    }
     &.neutral {
       color: $color-neutral-minimum;
     }
-    &.default {
-      color: $color-default;
-    }
     &.alternative {
       color: $color-alternative;
-    }
-    &.emphasis {
-      color: $color-emphasis;
     }
   }
 
@@ -92,20 +92,20 @@ export default {
     border-radius: 50%;
     box-shadow: 0 0 16px $color-shadow-alpha-15;
 
+    &.primary {
+      background: $color-primary;
+      color: $color-white;
+    }
+    &.secondary {
+      background: $color-secondary;
+      color: $color-white;
+    }
     &.neutral {
       background: $color-neutral-maximum;
       color: $color-neutral-minimum;
     }
-    &.default {
-      background: $color-default;
-      color: $color-white;
-    }
     &.alternative {
       background: $color-alternative;
-      color: $color-white;
-    }
-    &.emphasis {
-      background: $color-emphasis;
       color: $color-white;
     }
   }

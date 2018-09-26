@@ -39,19 +39,19 @@
 ### prop: fill
 ```jsx
   <div>
+    <ae-icon fill="primary" name="delete" />
+    <ae-icon fill="secondary" name="back" />
     <ae-icon fill="neutral" name="active" />
-    <ae-icon fill="default" name="back" />
     <ae-icon fill="alternative" name="copy" />
-    <ae-icon fill="emphasis" name="delete" />
   </div>
 ``` 
 
 ```jsx
   <div>
+    <ae-icon fill="primary" face="round" name="edit" />
+    <ae-icon fill="secondary" face="round" name="device" />
     <ae-icon fill="neutral" face="round" name="active" />
-    <ae-icon fill="default" face="round" name="device" />
     <ae-icon fill="alternative" face="round" name="shield-fill" />
-    <ae-icon fill="emphasis" face="round" name="edit" />
   </div>
 ``` 
 
