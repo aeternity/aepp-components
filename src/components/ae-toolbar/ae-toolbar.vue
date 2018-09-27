@@ -10,7 +10,7 @@ export default {
   props: {
     /**
      * Fill property changes the color state of the toolbar
-     * select something between: `neutral, default, emphasis, alternative`
+     * select something between: `primary, secondary, neutral, alternative`
      */
     fill: String,
 
@@ -52,18 +52,19 @@ export default {
     color: rgba($color-neutral-negative-1, 0.5);
   }
 
+
+  .ae-toolbar.primary {
+    background: $color-primary-negative-2;
+    color: $color-white;
+  }
+
+  .ae-toolbar.secondary {
+    background: $color-secondary-negative-2;
+    color: $color-white;
+  }
+
   .ae-toolbar.neutral {
     background: $color-neutral-minimum;
-    color: $color-white;
-  }
-
-  .ae-toolbar.default {
-    background: $color-default-negative-2;
-    color: $color-white;
-  }
-
-  .ae-toolbar.emphasis {
-    background: $color-emphasis-negative-2;
     color: $color-white;
   }
 
@@ -72,16 +73,16 @@ export default {
     color: $color-white;
   }
 
+  .ae-toolbar.primary,
+  .ae-toolbar.secondary,
   .ae-toolbar.neutral,
-  .ae-toolbar.default,
-  .ae-toolbar.emphasis,
   .ae-toolbar.alternative {
     color: $color-white;
   }
 
+  .ae-toolbar.primary.disabled,
+  .ae-toolbar.secondary.disabled,
   .ae-toolbar.neutral.disabled,
-  .ae-toolbar.default.disabled,
-  .ae-toolbar.emphasis.disabled,
   .ae-toolbar.alternative.disabled {
     color: rgba($color-white, 0.5);
   }

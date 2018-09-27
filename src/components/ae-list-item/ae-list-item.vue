@@ -9,18 +9,18 @@ export default {
   props: {
     /**
      * Fill property changes the color of the borders.
-     * Select something between: `neutral, default, emphasis, alternative`
+     * Select something between: `primary, secondary, neutral, alternative`
      * fallback: `neutral`
      */
     fill: {
       type: String,
-      default: 'neutral',
+      secondary: 'neutral',
       validator(value) {
         return [
+          'primary',
+          'secondary',
           'neutral',
-          'default',
           'alternative',
-          'emphasis',
         ].indexOf(value) !== 1;
       },
     },
@@ -39,19 +39,19 @@ export default {
     padding: rem(12px) 0;
   }
 
+  .ae-list-item.primary {
+    border-color: $color-primary-positive-2;
+  }
+
+  .ae-list-item.secondary {
+    border-color: $color-secondary-positive-2;
+  }
+
   .ae-list-item.neutral {
     border-color: $color-neutral-positive-2;
   }
 
-  .ae-list-item.default {
-    border-color: $color-default-positive-2;
-  }
-
   .ae-list-item.alternative {
     border-color: $color-alternative-positive-2;
-  }
-
-  .ae-list-item.emphasis {
-    border-color: $color-emphasis-positive-2;
   }
 </style>

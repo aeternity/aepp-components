@@ -11,16 +11,17 @@ export default {
   name: 'ae-backdrop',
   props: {
     /**
-     * Select the fill color of the backdrop
+     * Select the fill color of the backdrop, available values:
+     * `primary, secondary, neutral, alternative`
      */
     fill: {
       type: String,
       validator(value) {
         return [
+          'primary',
+          'secondary',
           'neutral',
-          'default',
           'alternative',
-          'emphasis',
         ].indexOf(value) !== -1;
       },
     },
@@ -61,17 +62,20 @@ export default {
     overflow-y: auto;
     z-index: $stack-5;
 
+    /// TODO: Styles need update
+    /// The styles here need update with the style-guide
+    /// these are not the current styles representing the backdrop
+    &.primary {
+      background: rgba($color-primary, 0.5);
+    }
+    &.secondary {
+      background: rgba($color-secondary, 0.5);
+    }
     &.neutral {
       background: rgba($color-neutral-minimum, 0.5);
     }
-    &.default {
-      background: rgba($color-default, 0.5);
-    }
     &.alternative {
       background: rgba($color-alternative, 0.5);
-    }
-    &.emphasis {
-      background: rgba($color-emphasis, 0.5);
     }
 
     &.v-enter-active, &.v-leave-active {

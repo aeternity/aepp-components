@@ -13,7 +13,7 @@ export default {
     /**
      * Fill property changes the color state of the toolbar
      * select something between:
-     * `neutral, default, emphasis, alternative, white, black, inherit`
+     * `primary, secondary, neutral, alternative, white, black, inherit`
      */
     fill: String,
 
@@ -120,27 +120,27 @@ export default {
     }
   }
 
+  .ae-text.primary {
+    color: $color-primary-negative-3;
+
+    &.focus, &:focus {
+      border-color: $color-primary-negative-3;
+    }
+  }
+
+  .ae-text.secondary {
+    color: $color-secondary-negative-3;
+
+    &.focus, &:focus {
+      border-color: $color-secondary-negative-3;
+    }
+  }
+
   .ae-text.neutral {
     color: $color-neutral-minimum;
 
     &.focus, &:focus {
       border-color: $color-neutral-minimum;
-    }
-  }
-
-  .ae-text.default {
-    color: $color-default-negative-3;
-
-    &.focus, &:focus {
-      border-color: $color-default-negative-3;
-    }
-  }
-
-  .ae-text.emphasis {
-    color: $color-emphasis-negative-3;
-
-    &.focus, &:focus {
-      border-color: $color-emphasis-negative-3;
     }
   }
 

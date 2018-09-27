@@ -2,7 +2,7 @@
   <div style="height: 230px">
     <ae-flip>
       <template slot="front">
-        <ae-card fill="emphasis">
+        <ae-card fill="primary">
           <template slot="avatar">
             <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
             <ae-text fill="white" contenteditable>My Account</ae-text>
@@ -12,7 +12,7 @@
           </template>
           <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
           <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
-          <ae-toolbar fill="emphasis" align="justify" slot="footer">
+          <ae-toolbar fill="primary" align="justify" slot="footer">
             <ae-button face="toolbar">
               <ae-icon name="edit" />
               Rename
