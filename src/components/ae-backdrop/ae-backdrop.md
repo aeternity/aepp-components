@@ -3,7 +3,7 @@
     <ae-card>
       <template slot="avatar">
         <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
-        <ae-text contenteditable>My Account</ae-text>
+        <ae-input-plain placeholder="Account name" value="My account" />
       </template>
       <template slot="header">
         <ae-text fill="white" face="mono-base">20.65 AE</ae-text>
@@ -39,7 +39,7 @@
       <ae-card>
         <template slot="avatar">
           <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
-          <ae-text contenteditable>My Account</ae-text>
+          <ae-input-plain placeholder="Account name" value="My account" />
         </template>
         <template slot="header">
           <ae-text fill="white" face="mono-base">20.65 AE</ae-text>

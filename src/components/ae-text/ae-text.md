@@ -2,13 +2,6 @@
   <ae-text>Hello World</ae-text>
 ``` 
 
-### prop: contenteditable
-```jsx
-  <ae-text contenteditable>
-    Hello World
-  </ae-text>
-``` 
-
 ### prop: fill
 ```jsx
   <ae-text>
@@ -100,25 +93,4 @@
   <ae-text weight=700>
     weight: 700
   </ae-text>
-``` 
-
-### prop: focus
-```jsx
-  <ae-text focus>
-    focused state
-  </ae-text>
-``` 
-
-### prop: disabled
-```jsx
-  <ae-text disabled>
-    disabled state
-  </ae-text>
-``` 
-
-### prop: disabled & focused
-```jsx
-  <ae-text focus disabled>
-    disabled state
-  </ae-text>
-``` 
+```

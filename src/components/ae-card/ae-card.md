@@ -7,7 +7,7 @@
 <ae-card>
   <template slot="avatar">
     <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
-    <ae-text contenteditable>My Account</ae-text>
+    <ae-input-plain placeholder="Account name" value="My account" />
   </template>
   <ae-icon name="more" size="20px" slot="header" />
   <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
@@ -33,7 +33,7 @@
 <ae-card fill="primary">
   <template slot="avatar">
     <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
-    <ae-text fill="white" contenteditable>My Account</ae-text>
+    <ae-input-plain fill="white" placeholder="Account name" value="My Account" />
   </template>
   <ae-icon name="more" fill="white" size="20px" slot="header" />
   <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
@@ -59,7 +59,7 @@
 <ae-card fill="secondary">
   <template slot="avatar">
     <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
-    <ae-text fill="white" contenteditable>My Account</ae-text>
+    <ae-input-plain fill="white" placeholder="Account name" value="My Account" />
   </template>
   <ae-icon name="more" fill="white" size="20px" slot="header" />
   <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
@@ -102,7 +102,7 @@
 <ae-card fill="alternative">
   <template slot="avatar">
     <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
-    <ae-text fill="white" contenteditable>My Account</ae-text>
+    <ae-input-plain fill="white" placeholder="Account name" value="My Account" />
   </template>
   <ae-icon name="more" fill="white" size="20px" slot="header" />
   <div>

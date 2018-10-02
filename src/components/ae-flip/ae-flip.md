@@ -5,7 +5,7 @@
         <ae-card fill="primary">
           <template slot="avatar">
             <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
-            <ae-text fill="white" contenteditable>My Account</ae-text>
+            <ae-input-plain fill="white" placeholder="Account name" value="My Account" />
           </template>
           <template slot="header">
             <ae-text fill="white" face="mono-base">20.65 AE</ae-text>

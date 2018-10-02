@@ -1,11 +1,12 @@
 <template>
   <p class="ae-text"
-     :class="{ [fill]: Boolean(fill), [face]: Boolean(face), focus, disabled }"
+     :class="{ [fill]: Boolean(fill), [face]: Boolean(face) }"
      :style="{ fontWeight: weight }" >
     <!-- @slot Default slot -->
     <slot />
   </p>
 </template>
+
 <script>
 export default {
   name: 'ae-text',
@@ -56,96 +57,49 @@ export default {
     /**
      * Sets the Font weight of the text
      */
-    weight: [Number, String],
-
-    /**
-     * Manually enable focus styling on the element
-     */
-    focus: Boolean,
-
-    /**
-     * Disabled state of the element
-     */
-    disabled: Boolean,
+    weight: Number,
   },
 };
 </script>
+
 <style lang="scss" scoped>
 @import '../../styles/globals';
 
 .ae-text {
   @extend %face-sans-base;
-
   transition: $base-transition-time;
   outline: none;
   border-bottom: 1px solid transparent;
   margin: 0;
   padding: 0;
-
-  &.focus, &:focus {
-    border-color: $color-black;
-  }
-
-  &.disabled {
-    opacity: 0.15;
-    cursor: not-allowed;
-  }
 }
 
 .ae-text.inherit {
   color: inherit;
-
-  &:focus {
-    border-color: inherit;
-  }
 }
 
 .ae-text.white {
   color: $color-white;
-
-  &.focus, &:focus {
-    border-color: $color-white;
-  }
 }
 
 .ae-text.black {
   color: $color-black;
-
-  &.focus, &:focus {
-    border-color: $color-black;
-  }
 }
 
 .ae-text.primary {
   color: $color-primary-negative-3;
-
-  &.focus, &:focus {
-    border-color: $color-primary-negative-3;
-  }
 }
 
 .ae-text.secondary {
   color: $color-secondary-negative-3;
-
-  &.focus, &:focus {
-    border-color: $color-secondary-negative-3;
-  }
 }
 
 .ae-text.neutral {
   color: $color-neutral-minimum;
-
-  &.focus, &:focus {
-    border-color: $color-neutral-minimum;
-  }
 }
 
 .ae-text.alternative {
   color: $color-alternative-negative-3;
-
-  &.focus, &:focus {
-    border-color: $color-alternative-negative-3;
-  }
 }
 
 .ae-text.sans-l {
