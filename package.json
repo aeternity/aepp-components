@@ -20,7 +20,7 @@
     "watch": "node config/watch.js",
     "docs": "vue-styleguidist server --verbose --config config/styleguidist.config.js",
     "docs:build": "vue-styleguidist build --verbose --config config/styleguidist.config.js",
-    "prepublish": "# npm test",
+    "prepublish": "npm test",
     "prepare": "npm run build"
   },
   "dependencies": {
@@ -51,6 +51,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "jest": "^21.2.1",
+    "jest-cli": "^23.6.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^1.0.0",
     "node-sass": "^4.9.2",
