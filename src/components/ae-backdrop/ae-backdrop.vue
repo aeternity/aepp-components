@@ -16,14 +16,12 @@ export default {
      */
     fill: {
       type: String,
-      validator(value) {
-        return [
-          'primary',
-          'secondary',
-          'neutral',
-          'alternative',
-        ].indexOf(value) !== -1;
-      },
+      validator: value => [
+        'primary',
+        'secondary',
+        'neutral',
+        'alternative',
+      ].includes(value),
     },
 
     /**
@@ -32,12 +30,7 @@ export default {
      */
     align: {
       type: String,
-      validator(value) {
-        return [
-          'top',
-          'bottom',
-        ].indexOf(value) !== -1;
-      },
+      validator: value => ['top', 'bottom'].includes(value),
     },
   },
 };

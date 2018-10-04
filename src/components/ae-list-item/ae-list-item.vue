@@ -14,15 +14,13 @@ export default {
      */
     fill: {
       type: String,
-      secondary: 'neutral',
-      validator(value) {
-        return [
-          'primary',
-          'secondary',
-          'neutral',
-          'alternative',
-        ].indexOf(value) !== 1;
-      },
+      default: 'neutral',
+      validator: value => [
+        'primary',
+        'secondary',
+        'neutral',
+        'alternative',
+      ].includes(value),
     },
   },
 };

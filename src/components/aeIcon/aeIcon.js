@@ -25,7 +25,7 @@ export default {
     */
     type: {
       type: String,
-      validator: value => aeIconTypes.find(e => e === value),
+      validator: value => aeIconTypes.includes(value),
       default: 'normal',
     },
     invert: {

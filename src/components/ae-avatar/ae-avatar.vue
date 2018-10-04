@@ -26,9 +26,7 @@ export default {
      */
     size: {
       type: String,
-      validator(value) {
-        return ['small'].indexOf(value) !== -1;
-      },
+      validator: value => ['small'].includes(value),
     },
   },
 
