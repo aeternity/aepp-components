@@ -1,7 +1,7 @@
 <template>
   <div @click="forwardEvent" :class="classObject">
     <div class="flex-row">
-      <ae-identity-avatar
+      <ae-avatar
         class="avatar"
         :address='address'
       />

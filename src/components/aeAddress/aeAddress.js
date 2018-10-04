@@ -1,4 +1,4 @@
-import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
+import AeAvatar from '../ae-avatar/ae-avatar.vue';
 import aeIcon from '../aeIcon/aeIcon.vue';
 import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
 
@@ -84,7 +84,7 @@ export default {
     },
   },
   components: {
-    AeIdentityAvatar,
+    AeAvatar,
     aeIcon,
   },
 };
