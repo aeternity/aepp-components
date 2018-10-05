@@ -17,7 +17,7 @@
 
 <script>
 import AeButton from '../aeButton/aeButton.vue';
-import AeIcon from '../aeIcon/aeIcon.vue';
+import AeIcon from '../ae-icon/ae-icon.vue';
 import AeLink from '../aeLink/aeLink.vue';
 /**
  *

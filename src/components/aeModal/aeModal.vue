@@ -24,7 +24,7 @@
 import AeOverlay from '../aeOverlay/aeOverlay.vue';
 import AeHeader from '../aeHeader/aeHeader.vue';
 import AeButton from '../aeButton/aeButton.vue';
-import AeIcon from '../aeIcon/aeIcon.vue';
+import AeIcon from '../ae-icon/ae-icon.vue';
 
 export default {
   name: 'ae-modal',

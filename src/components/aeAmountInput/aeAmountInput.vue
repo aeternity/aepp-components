@@ -37,7 +37,7 @@
 <script>
 import { directive as onClickAway } from 'vue-clickaway';
 import AeInput from '../aeInput/aeInput.vue';
-import AeIcon from '../aeIcon/aeIcon.vue';
+import AeIcon from '../ae-icon/ae-icon.vue';
 
 /**
  * Input of amount with units drop down

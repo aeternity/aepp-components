@@ -10,7 +10,7 @@
         {{displayName}}
         <ae-icon
           name='check'
-          type='dramatic'
+          fill='primary'
           v-if='verified'
           :class="['checkmark', textIndentModifier]"
         />

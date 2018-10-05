@@ -48,13 +48,13 @@
             <ae-input />
             <div style="display: flex; justify-content: flex-end;">
               <ae-button>
-                <ae-icon name="more" size="20px" />
+                <ae-icon name="more" />
               </ae-button>
               <ae-button>
-                <ae-icon name="settings" size="20px" />
+                <ae-icon name="settings" />
               </ae-button>
               <ae-button>
-                <ae-icon name="list" size="20px" />
+                <ae-icon name="list" />
               </ae-button>
             </div>
           </template>
@@ -80,4 +80,10 @@
     }
   }
 </script>
+
+<style scoped>
+.ae-icon {
+  font-size: 20px;
+}
+</style>
 ``` 

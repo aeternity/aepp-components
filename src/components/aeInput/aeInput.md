@@ -16,7 +16,7 @@
     template: ` 
       <ae-input placeholder="With a clear button" v-model="value">
         <ae-button slot="right" type="exciting" size="small" @click="value = ''">
-          <ae-icon slot="icon" type="exciting" invert name="close" />
+          <ae-icon slot="icon" fill="secondary" invert name="close" />
         </ae-button>
       </ae-input> 
     ` 

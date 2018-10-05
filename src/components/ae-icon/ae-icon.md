@@ -62,7 +62,12 @@
   </div>
 ``` 
 
-### prop: size
+### prop: rotate
 ```jsx
-  <ae-icon name="active" size="48px" />
+  <div>
+    <ae-icon name="chevron" />
+    <ae-icon name="chevron" rotate="90" />
+    <ae-icon name="chevron" rotate="180" />
+    <ae-icon name="chevron" rotate="270" />
+  </div>
 ``` 

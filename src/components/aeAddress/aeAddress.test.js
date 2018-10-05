@@ -2,7 +2,7 @@ import { shallow, mount } from 'vue-test-utils';
 import AeAddress from './aeAddress.vue';
 import AeAddressPlugin from './index';
 import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
-import AeIcon from '../aeIcon/aeIcon.vue';
+import AeIcon from '../ae-icon/ae-icon.vue';
 
 const address = '0xfa617481af59ebec80e8d529f1e2d1b3751468f3';
 
@@ -57,9 +57,9 @@ describe('AeAddress', () => {
 
       const checkMark = wrapper.find(AeIcon);
       expect(checkMark.classes()[0].contains('checkmark')).toBe(true);
-      const { name, type } = checkMark.props();
+      const { name, fill } = checkMark.props();
       expect(name).toBe('check');
-      expect(type).toBe('dramatic');
+      expect(fill).toBe('primary');
     });
   });
 });

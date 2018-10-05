@@ -96,7 +96,7 @@ export default {
       opacity: 0.85;
     }
 
-    > i {
+    > .ae-icon {
       margin: 0 rem(4px);
     }
   }
@@ -221,7 +221,7 @@ export default {
       padding-right: 0;
     }
 
-    > i {
+    > .ae-icon {
       font-size: rem(14px);
     }
   }

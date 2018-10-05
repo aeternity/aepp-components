@@ -1,8 +1,10 @@
 <template>
-  <i class="ae-icon"
-     :class="{ [`ae-icon-${name}`]: Boolean(name), [fill]: Boolean(fill), [face]: Boolean(face)  }"
-     :style="{ fontSize: size }" />
+  <span
+    :class="['ae-icon', `ae-icon-${actualName}`, fill, face]"
+    :style="style"
+  />
 </template>
+
 <script>
 import './icons/icons.font';
 
@@ -13,7 +15,10 @@ export default {
      * Name of the icon, please check list of icons in
      * the ./icons folder inside the component
      */
-    name: String,
+    name: {
+      type: String,
+      required: true,
+    },
 
     /**
      * Fill property changes the color state of the icon
@@ -22,11 +27,13 @@ export default {
     fill: {
       type: String,
       validator: value => [
+        '',
         'primary',
         'secondary',
         'neutral',
         'alternative',
       ].includes(value),
+      default: '',
     },
 
     /**
@@ -36,53 +43,74 @@ export default {
      */
     face: {
       type: String,
-      validator: value => ['round'].includes(value),
+      validator: value => ['', 'round'].includes(value),
+      default: '',
     },
 
     /**
-     * Set manually the size of the font icon
+     * Rotation of icon in degrees
      */
-    size: String,
+    rotate: {
+      type: [String, Number],
+      default: 0,
+    },
+  },
+  computed: {
+    style() {
+      return {
+        ...this.rotate && { transform: `rotate(${this.rotate}deg)` },
+      };
+    },
+    actualName() {
+      return {
+        arrow: 'back',
+        burger: 'list',
+        chevron: 'left-more',
+        error: 'close',
+        refresh: 'reload',
+        view: 'eye',
+      }[this.name] || this.name;
+    },
   },
 };
 </script>
+
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/variables/colors';
 
-  .ae-icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+.ae-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-    &.primary {
-      color: $color-primary;
-    }
-    &.secondary {
-      color: $color-secondary;
-    }
-    &.neutral {
-      color: $color-neutral-minimum;
-    }
-    &.alternative {
-      color: $color-alternative;
-    }
-  }
-
-  .ae-icon:before {
+  &:before {
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     speak: none;
 
-    /* Better Font Rendering =========== */
+    /* Better Font Rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .ae-icon.round {
-    @include size(32px);
+  &.primary {
+    color: $color-primary;
+  }
+  &.secondary {
+    color: $color-secondary;
+  }
+  &.neutral {
+    color: $color-neutral-minimum;
+  }
+  &.alternative {
+    color: $color-alternative;
+  }
 
+  &.round {
+    width: 32px;
+    height: 32px;
     color: $color-white;
     background: $color-neutral;
     border-radius: 50%;
@@ -105,4 +133,5 @@ export default {
       color: $color-white;
     }
   }
+}
 </style>

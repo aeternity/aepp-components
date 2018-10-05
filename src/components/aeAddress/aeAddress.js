@@ -1,5 +1,5 @@
 import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
-import aeIcon from '../aeIcon/aeIcon.vue';
+import aeIcon from '../ae-icon/ae-icon.vue';
 
 function startAndEnd(str, start = 6, end = 6) {
   return `${str.substr(0, start + 2)
