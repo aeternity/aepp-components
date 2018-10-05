@@ -54,7 +54,7 @@ export default {
     /**
      * This will chunk the address
      * into values of 3 and return an array
-     * @return {[]}
+     * @return {String[]}
      */
     chunked() {
       return this.value.match(/.{1,3}/g);
