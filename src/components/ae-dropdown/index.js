@@ -1,6 +1,6 @@
 import AeDropdown from './ae-dropdown.vue';
 
-export const install = function (Vue) {
+export const install = (Vue) => {
   Vue.component('ae-dropdown', AeDropdown);
 };
 

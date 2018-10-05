@@ -46,8 +46,8 @@ const components = {
  * @param {Vue} Vue
  * @return {*}
  */
-components.install = function (Vue) {
-  return Object
+components.install = (Vue) => {
+  Object
     .keys(components)
     .filter(component => component !== 'install')
     .map(component => components[component])

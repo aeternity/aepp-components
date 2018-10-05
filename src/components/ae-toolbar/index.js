@@ -1,6 +1,6 @@
 import AeToolbar from './ae-toolbar.vue';
 
-export const install = function (Vue) {
+export const install = (Vue) => {
   Vue.component('ae-toolbar', AeToolbar);
 };
 

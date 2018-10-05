@@ -1,6 +1,6 @@
 import AeQRCode from './ae-qrcode.vue';
 
-export const install = function (Vue) {
+export const install = (Vue) => {
   Vue.component('ae-qrcode', AeQRCode);
 };
 

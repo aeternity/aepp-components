@@ -1,6 +1,6 @@
 import AeListItem from './ae-list-item.vue';
 
-export const install = function (Vue) {
+export const install = (Vue) => {
   Vue.component('ae-list-item', AeListItem);
 };
 

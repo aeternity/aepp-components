@@ -1,6 +1,6 @@
 import AeButton from './ae-button.vue';
 
-export const install = function (Vue) {
+export const install = (Vue) => {
   Vue.component('ae-button', AeButton);
 };
 

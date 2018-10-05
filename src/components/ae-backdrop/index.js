@@ -1,6 +1,6 @@
 import AeBackdrop from './ae-backdrop.vue';
 
-export const install = function (Vue) {
+export const install = (Vue) => {
   Vue.component('ae-backdrop', AeBackdrop);
 };
 
