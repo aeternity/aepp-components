@@ -41,7 +41,7 @@
 ```vue
 <template>
   <div>
-      <ae-button @click="show" face="primary" extend style="margin-bottom: 20px;">Show</ae-button>
+      <ae-button @click="show" face="round" extend style="margin-bottom: 20px;">Show</ae-button>
       <div style="position: relative; width: 375px; height: 667px; border: 1px solid #D3DCE6;">
         <ae-view face="base">
           <template slot="header">

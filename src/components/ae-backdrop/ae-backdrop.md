@@ -62,7 +62,7 @@
         </ae-toolbar>
       </ae-card>
       <br />  
-      <ae-button @click="showBackdrop" face="primary" extend>Show Backdrop</ae-button>
+      <ae-button @click="showBackdrop" face="round" extend>Show Backdrop</ae-button>
       <ae-backdrop align="top" v-if="backDropVisible" @click.native.capture="showBackdrop">
         <ae-text>This text lives inside the backdrop area</ae-text>
       </ae-backdrop>
