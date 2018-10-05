@@ -56,7 +56,7 @@ export default {
     /**
      * Sets the Font weight of the text
      */
-    weight: Number,
+    weight: [Number, String],
 
     /**
      * Manually enable focus styling on the element

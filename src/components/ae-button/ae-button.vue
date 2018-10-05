@@ -54,11 +54,13 @@ export default {
     face: {
       type: String,
       validator: value => [
+        '',
         'round',
         'flat',
         'icon',
         'toolbar',
       ].includes(value),
+      default: '',
     },
 
     /**

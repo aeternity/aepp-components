@@ -32,7 +32,7 @@
       </template>
       <template slot="back">
         <ae-card fill="neutral" align="center">
-          <ae-qrcode :options="{ size: 136 }" />
+          <ae-qrcode value="example" :options="{ size: 136 }" />
           <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" gap=0 />
           <ae-toolbar fill="neutral" align="right" slot="footer">
             <ae-button face="toolbar">
