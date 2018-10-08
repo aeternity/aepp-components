@@ -9,7 +9,25 @@
     <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
     <ae-text contenteditable>My Account</ae-text>
   </template>
-  <ae-icon name="more" size="20px" slot="header" />
+  <template slot="header">
+    <ae-dropdown>
+      <ae-icon name="more" size="20px" slot="button" />
+      <li>
+        <ae-button>
+          <ae-icon name="copy" />
+          Copy Address
+        </ae-button>
+      </li>
+      <li>
+        <ae-button>
+          Share Address
+        </ae-button>
+      </li>
+      <li>
+        Details
+      </li>
+    </ae-dropdown>
+  </template>
   <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
   <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
   <ae-toolbar align="right" slot="footer">
@@ -35,7 +53,25 @@
     <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
     <ae-text fill="white" contenteditable>My Account</ae-text>
   </template>
-  <ae-icon name="more" fill="white" size="20px" slot="header" />
+  <template slot="header">
+    <ae-dropdown>
+      <ae-icon name="more" fill="white" size="20px" slot="button" />
+      <li>
+        <ae-button>
+          <ae-icon name="copy" />
+          Copy Address
+        </ae-button>
+      </li>
+      <li>
+        <ae-button>
+          Share Address
+        </ae-button>
+      </li>
+      <li>
+        Details
+      </li>
+    </ae-dropdown>
+  </template>
   <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
   <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
   <ae-toolbar fill="primary" align="right" slot="footer">
@@ -61,7 +97,25 @@
     <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
     <ae-text fill="white" contenteditable>My Account</ae-text>
   </template>
-  <ae-icon name="more" fill="white" size="20px" slot="header" />
+  <template slot="header">
+    <ae-dropdown>
+      <ae-icon name="more" fill="white" size="20px" slot="button" />
+      <li>
+        <ae-button>
+          <ae-icon name="copy" />
+          Copy Address
+        </ae-button>
+      </li>
+      <li>
+        <ae-button>
+          Share Address
+        </ae-button>
+      </li>
+      <li>
+        Details
+      </li>
+    </ae-dropdown>
+  </template>
   <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
   <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
   <ae-toolbar fill="secondary" align="right" slot="footer">
@@ -104,7 +158,25 @@
     <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
     <ae-text fill="white" contenteditable>My Account</ae-text>
   </template>
-  <ae-icon name="more" fill="white" size="20px" slot="header" />
+  <template slot="header">
+    <ae-dropdown>
+      <ae-icon name="more" fill="white" size="20px" slot="button" />
+      <li>
+        <ae-button>
+          <ae-icon name="copy" />
+          Copy Address
+        </ae-button>
+      </li>
+      <li>
+        <ae-button>
+          Share Address
+        </ae-button>
+      </li>
+      <li>
+        Details
+      </li>
+    </ae-dropdown>
+  </template>
   <div>
     <ae-icon name="shield" />
     <ae-text face="uppercase-xs" weight=600 style="margin: 0">Maximum Secured</ae-text>
