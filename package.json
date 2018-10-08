@@ -9,7 +9,8 @@
   "repository": "https://github.com/aeternity/aepp-components.git",
   "bugs": "https://github.com/aeternity/aepp-components/issues",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "unit": "jest",
@@ -68,5 +69,10 @@
     "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-merge": "^4.1.1"
-  }
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "*.vue"
+  ]
 }
