@@ -6,6 +6,7 @@ require('dotenv').config()
 /**
  * Importing Global Libraries
  */
+const fs = require('fs')
 const path = require('path')
 
 /**
@@ -25,9 +26,11 @@ module.exports = {
 
   /**
    * Components folder
-   * TODO: later remove '-' for folder recognition
    */
-  components: path.resolve(__dirname, '../src/components/**/*-*.vue'),
+  components: fs.readdirSync(path.resolve(__dirname, '../src/components'))
+    .filter(name => !name.includes('.'))
+    .filter(name => !['aeAddress', 'aeBadge', 'aeButton', 'aeIcon', 'aeInput'].includes(name))
+    .map(name => path.resolve(__dirname, `../src/components/${name}/${name}.vue`)),
 
   /**
    * Folder for static HTML style guide generated with styleguidist build command.
