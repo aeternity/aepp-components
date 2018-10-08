@@ -1,7 +1,6 @@
 <template>
   <transition>
-    <div class="ae-backdrop"
-         :class="{ [fill]: Boolean(fill), [align]: Boolean(align) }">
+    <div class="ae-backdrop">
       <slot />
     </div>
   </transition>
@@ -9,30 +8,6 @@
 <script>
 export default {
   name: 'ae-backdrop',
-  props: {
-    /**
-     * Select the fill color of the backdrop, available values:
-     * `primary, secondary, neutral, alternative`
-     */
-    fill: {
-      type: String,
-      validator: value => [
-        'primary',
-        'secondary',
-        'neutral',
-        'alternative',
-      ].includes(value),
-    },
-
-    /**
-     * Align content inside the backdrop, available values are:
-     * `top, bottom, left, right`
-     */
-    align: {
-      type: String,
-      validator: value => ['top', 'bottom'].includes(value),
-    },
-  },
 };
 </script>
 <style lang="scss" scoped>
@@ -55,22 +30,6 @@ export default {
   overflow-y: auto;
   z-index: $stack-5;
 
-  /// TODO: Styles need update
-  /// The styles here need update with the style-guide
-  /// these are not the current styles representing the backdrop
-  &.primary {
-    background: rgba($color-primary, 0.5);
-  }
-  &.secondary {
-    background: rgba($color-secondary, 0.5);
-  }
-  &.neutral {
-    background: rgba($color-neutral-minimum, 0.5);
-  }
-  &.alternative {
-    background: rgba($color-alternative, 0.5);
-  }
-
   &.v-enter-active, &.v-leave-active {
     transition: opacity ease-in-out $base-transition-time;
   }
@@ -78,15 +37,5 @@ export default {
   &.v-enter, &.v-leave-to {
     opacity: 0;
   }
-}
-
-.ae-backdrop.top {
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.ae-backdrop.bottom {
-  align-items: center;
-  justify-content: flex-end;
 }
 </style>
