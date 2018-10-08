@@ -1,6 +1,6 @@
 import AeFlip from './ae-flip.vue';
 
-export const install = function (Vue) {
+export const install = (Vue) => {
   Vue.component('ae-flip', AeFlip);
 };
 

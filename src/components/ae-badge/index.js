@@ -1,6 +1,6 @@
 import AeBadge from './ae-badge.vue';
 
-export const install = function (Vue) {
+export const install = (Vue) => {
   Vue.component('ae-badge', AeBadge);
 };
 

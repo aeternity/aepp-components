@@ -1,6 +1,6 @@
 import AeAddress from './ae-address.vue';
 
-export const install = function (Vue) {
+export const install = (Vue) => {
   Vue.component('ae-address', AeAddress);
 };
 
