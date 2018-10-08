@@ -9,9 +9,7 @@
     <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
     <ae-text contenteditable>My Account</ae-text>
   </template>
-  <template slot="header">
-    <ae-text fill="white" face="mono-base">20.65 AE</ae-text>
-  </template>
+  <ae-icon name="more" size="20px" slot="header" />
   <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
   <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
   <ae-toolbar align="right" slot="footer">
@@ -37,9 +35,7 @@
     <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
     <ae-text fill="white" contenteditable>My Account</ae-text>
   </template>
-  <template slot="header">
-    <ae-text fill="white" face="mono-base">20.65 AE</ae-text>
-  </template>
+  <ae-icon name="more" fill="white" size="20px" slot="header" />
   <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
   <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
   <ae-toolbar fill="primary" align="right" slot="footer">
@@ -65,9 +61,7 @@
     <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
     <ae-text fill="white" contenteditable>My Account</ae-text>
   </template>
-  <template slot="header">
-    <ae-text fill="white" face="mono-base">20.65 AE</ae-text>
-  </template>
+  <ae-icon name="more" fill="white" size="20px" slot="header" />
   <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
   <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
   <ae-toolbar fill="secondary" align="right" slot="footer">
@@ -110,9 +104,7 @@
     <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
     <ae-text fill="white" contenteditable>My Account</ae-text>
   </template>
-  <template slot="header">
-    <ae-text fill="white" face="mono-base">20.65 AE</ae-text>
-  </template>
+  <ae-icon name="more" fill="white" size="20px" slot="header" />
   <div>
     <ae-icon name="shield" />
     <ae-text face="uppercase-xs" weight=600 style="margin: 0">Maximum Secured</ae-text>

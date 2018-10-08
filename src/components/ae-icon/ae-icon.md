@@ -43,6 +43,9 @@
     <ae-icon fill="secondary" name="back" />
     <ae-icon fill="neutral" name="active" />
     <ae-icon fill="alternative" name="copy" />
+    <span style="background: black;">
+      <ae-icon fill="white" name="copy" />
+    </span>
   </div>
 ``` 
 
@@ -52,6 +55,7 @@
     <ae-icon fill="secondary" face="round" name="device" />
     <ae-icon fill="neutral" face="round" name="active" />
     <ae-icon fill="alternative" face="round" name="shield-fill" />
+    <ae-icon fill="white" face="round" name="shield-fill" />
   </div>
 ``` 
 

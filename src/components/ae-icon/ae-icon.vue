@@ -1,6 +1,6 @@
 <template>
   <i class="ae-icon"
-     :class="{ [`ae-icon-${name}`]: Boolean(name), [fill]: Boolean(fill), [face]: Boolean(face)  }"
+     :class="{ [`ae-icon-${name}`]: Boolean(name), [fill]: Boolean(fill), [face]: Boolean(face) }"
      :style="{ fontSize: size }" />
 </template>
 <script>
@@ -26,6 +26,7 @@ export default {
         'secondary',
         'neutral',
         'alternative',
+        'white',
       ].includes(value),
     },
 
@@ -66,6 +67,9 @@ export default {
   &.alternative {
     color: $color-alternative;
   }
+  &.white {
+    color: $color-white;
+  }
 }
 
 .ae-icon:before {
@@ -102,6 +106,10 @@ export default {
   }
   &.alternative {
     background: $color-alternative;
+    color: $color-white;
+  }
+  &.white {
+    background: $color-black;
     color: $color-white;
   }
 }
