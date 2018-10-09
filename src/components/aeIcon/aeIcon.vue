@@ -4,4 +4,4 @@
   </span>
 </template>
 <script src="./aeIcon.js" />
-<style lang='scss' src="./aeIcon.scss" />
+<style scoped lang='scss' src="./aeIcon.scss" />
