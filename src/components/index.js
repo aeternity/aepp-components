@@ -1,60 +1,40 @@
-/**
- * Importing all components
- */
-import AeAddress from './ae-address';
-import AeAvatar from './ae-avatar';
-import AeBackdrop from './ae-backdrop';
-import AeBadge from './ae-badge';
-import AeButton from './ae-button';
-import AeCard from './ae-card';
-import AeCheck from './ae-check';
-import AeDropdown from './ae-dropdown';
-import AeFlip from './ae-flip';
-import AeIcon from './ae-icon';
-import AeInput from './ae-input';
-import AeList from './ae-list';
-import AeListItem from './ae-list-item';
-import AeQRCode from './ae-qrcode';
-import AeText from './ae-text';
-import AeToolbar from './ae-toolbar';
-
-/**
- * Generating an object with references
- * to the components
- */
-const components = {
-  AeAddress,
-  AeAvatar,
-  AeBackdrop,
-  AeBadge,
-  AeButton,
-  AeCard,
-  AeCheck,
-  AeDropdown,
-  AeFlip,
-  AeIcon,
-  AeInput,
-  AeList,
-  AeListItem,
-  AeQRCode,
-  AeText,
-  AeToolbar,
-};
-
-/**
- * Generating install function
- * @param {Vue} Vue
- * @return {*}
- */
-components.install = (Vue) => {
-  Object
-    .keys(components)
-    .filter(component => component !== 'install')
-    .map(component => components[component])
-    .forEach(Vue.use.bind(Vue));
-};
-
-/**
- * Exporting reference list
- */
-export default components;
+export { default as AeAddress } from './ae-address/ae-address.vue';
+export { default as AeAvatar } from './ae-avatar/ae-avatar.vue';
+export { default as AeBackdrop } from './ae-backdrop/ae-backdrop.vue';
+export { default as AeBadge } from './ae-badge/ae-badge.vue';
+export { default as AeButton } from './ae-button/ae-button.vue';
+export { default as AeCard } from './ae-card/ae-card.vue';
+export { default as AeCheck } from './ae-check/ae-check.vue';
+export { default as AeDropdown } from './ae-dropdown/ae-dropdown.vue';
+export { default as AeFlip } from './ae-flip/ae-flip.vue';
+export { default as AeIcon } from './ae-icon/ae-icon.vue';
+export { default as AeInput } from './ae-input/ae-input.vue';
+export { default as AeList } from './ae-list/ae-list.vue';
+export { default as AeListItem } from './ae-list-item/ae-list-item.vue';
+export { default as AeQRCode } from './ae-qrcode/ae-qrcode.vue';
+export { default as AeText } from './ae-text/ae-text.vue';
+export { default as AeToolbar } from './ae-toolbar/ae-toolbar.vue';
+export { default as AeAmount } from './aeAmount/aeAmount.vue';
+export { default as AeAmountInput } from './aeAmountInput/aeAmountInput.vue';
+export { default as AeBanner } from './aeBanner/aeBanner.vue';
+export { default as AeFilterItem } from './aeFilterItem/aeFilterItem.vue';
+export { default as AeFilterList } from './aeFilterList/aeFilterList.vue';
+export { default as AeFilterSeparator } from './aeFilterSeparator/aeFilterSeparator.vue';
+export { default as AeHeader } from './aeHeader/aeHeader.vue';
+export { default as AeIdentity } from './aeIdentity/aeIdentity.vue';
+export { default as AeIdentityLight } from './aeIdentityLight/aeIdentityLight.vue';
+export { default as AeIdentityAvatar } from './aeIdentityAvatar/aeIdentityAvatar.vue';
+export { default as AeIdentityBackground } from './aeIdentityBackground/aeIdentityBackground.vue';
+export { default as AeLabel } from './aeLabel/aeLabel.vue';
+export { default as AeLink } from './aeLink/aeLink.vue';
+export { default as AeLoader } from './aeLoader/aeLoader.vue';
+export { default as AeMain } from './aeMain/aeMain.vue';
+export { default as AeModal } from './aeModal/aeModal.vue';
+export { default as AeModalLight } from './aeModalLight/aeModalLight.vue';
+export { default as AeOverlay } from './aeOverlay/aeOverlay.vue';
+export { default as AePanel } from './aePanel/aePanel.vue';
+export { default as AeSwitch } from './aeSwitch/aeSwitch.vue';
+export { default as AeTextarea } from './aeTextarea/aeTextarea.vue';
+export { default as AeAppIcon } from './aeAppIcon/aeAppIcon.vue';
+export { default as AeAddressInput } from './aeAddressInput/aeAddressInput.vue';
+export { default as AeDivider } from './aeDivider/aeDivider.vue';

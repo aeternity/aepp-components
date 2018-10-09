@@ -1,6 +1,5 @@
 import { shallow } from 'vue-test-utils';
 import AeButton from './aeButton.vue';
-import AeButtonPlugin from './index';
 import AeLink from '../aeLink/aeLink.vue';
 
 describe('AeButton', () => {
@@ -30,10 +29,6 @@ describe('AeButton', () => {
 
     return wrapper;
   };
-
-  it('has an install function', () => {
-    expect(AeButtonPlugin).toBeInstanceOf(Function);
-  });
 
   describe('basic rendering', () => {
     it('is a button when to prop is missing', () => {
