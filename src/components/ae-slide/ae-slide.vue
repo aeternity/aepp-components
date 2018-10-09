@@ -97,11 +97,17 @@ export default {
     height: 100%;
   }
 
+  .ae-slide.fullscreen /deep/ .agile__list,
+  .ae-slide.fullscreen /deep/ .agile__track {
+    height: 100%;
+  }
+
   .ae-slide.fullscreen /deep/ .agile__dots {
     position: absolute;
     right: 0;
     left: 0;
     bottom: 0;
+    height: auto;
     padding: rem(20px) rem(32px);
     z-index: $stack-5;
   }
