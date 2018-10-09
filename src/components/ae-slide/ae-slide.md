@@ -50,7 +50,7 @@
   </div>
 ``` 
 
-
+### prop: fullscreen
 ```jsx
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-slide fullscreen>
