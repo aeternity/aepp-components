@@ -49,3 +49,17 @@
     </ae-slide>
   </div>
 ``` 
+
+
+```jsx
+  <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
+    <ae-slide fullscreen>
+      <div style="width: 100%; height: 100%;">
+        hello
+      </div>
+      <div style="width: 100%; height: 100%;">
+       world
+      </div>
+    </ae-slide>
+  </div>
+``` 

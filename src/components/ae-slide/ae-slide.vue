@@ -1,5 +1,5 @@
 <template>
-  <agile class="ae-slide" :options="defaults">
+  <agile class="ae-slide" :class="{ fullscreen }" :options="defaults">
     <slot />
   </agile>
 </template>
@@ -27,6 +27,13 @@ export default {
      * @link https://github.com/lukaszflorczak/vue-agile#options
      */
     options: Object,
+
+    /**
+     * Creates a full screen slider, where the element tries to go
+     * 100% height and 100% width of the parent element, and places
+     * the round dots inside of the slider
+     */
+    fullscreen: Boolean,
   },
   computed: {
     /**
@@ -52,7 +59,7 @@ export default {
   }
 
   .ae-slide /deep/ .agile__slide {
-    padding: 20px;
+    padding: rem(20px) rem(32px);
   }
 
   .ae-slide /deep/ .agile__dots {
@@ -84,5 +91,17 @@ export default {
     &--current {
       background: $color-primary;
     }
+  }
+
+  .ae-slide.fullscreen {
+    height: 100%;
+  }
+
+  .ae-slide.fullscreen /deep/ .agile__dots {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: rem(20px) rem(32px);
   }
 </style>
