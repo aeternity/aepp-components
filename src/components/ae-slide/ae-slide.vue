@@ -103,5 +103,6 @@ export default {
     left: 0;
     bottom: 0;
     padding: rem(20px) rem(32px);
+    z-index: $stack-5;
   }
 </style>
