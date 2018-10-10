@@ -74,10 +74,6 @@ export default {
     font-variant: normal;
     text-transform: none;
     speak: none;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
   .ae-icon.round {
