@@ -13,12 +13,9 @@
 /// border-boxing fix
 html, body {
   font-size: $base-font-size;
-  font-weight: normal;
   line-height: $base-line-height;
-  box-sizing: border-box;
-  caret-color: $color-error;
 
-  /* Better Font Rendering =========== */
+  /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -26,17 +23,11 @@ html, body {
 * {
   outline: none;
   outline: 0;
-  box-sizing: inherit;
 
   &:hover,
   &:focus,
   &:active {
     outline: none;
     outline: 0;
-  }
-
-  &:before,
-  &:after {
-    box-sizing: inherit;
   }
 }
