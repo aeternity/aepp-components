@@ -20,6 +20,7 @@ export default {
       type: String,
       validator: value => [
         'left',
+        'center',
         'right',
       ].includes(value),
     },
