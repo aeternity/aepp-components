@@ -28,6 +28,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../../styles/variables/typography';
 @import '../../styles/variables/colors';
 @import '../../styles/globals/functions';
 
@@ -35,7 +36,10 @@ export default {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  position: fixed;
+  /**
+   * TODO: Change this to position fixed, element goes to viewport, find a way to replicate without viewport
+   */
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
