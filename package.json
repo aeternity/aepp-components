@@ -1,7 +1,7 @@
 {
   "version": "3.0.0-alpha.1",
   "name": "@aeternity/aepp-components-3",
-  "main": "build/aepp-components.js",
+  "main": "dist/aepp.components.js",
   "description": "Reusable Vue Components for aeternity aepp projects",
   "homepage": "https://github.com/aeternity/aepp-components#readme",
   "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
