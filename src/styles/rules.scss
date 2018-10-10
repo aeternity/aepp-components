@@ -14,7 +14,6 @@
 html, body {
   font-size: $base-font-size;
   line-height: $base-line-height;
-  box-sizing: border-box;
   caret-color: $color-error;
 
   /* Better Font Rendering */
@@ -25,17 +24,11 @@ html, body {
 * {
   outline: none;
   outline: 0;
-  box-sizing: inherit;
 
   &:hover,
   &:focus,
   &:active {
     outline: none;
     outline: 0;
-  }
-
-  &:before,
-  &:after {
-    box-sizing: inherit;
   }
 }
