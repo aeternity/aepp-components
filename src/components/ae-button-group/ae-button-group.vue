@@ -22,10 +22,11 @@ export default {
 
 .ae-button-group {
   display: flex;
+  border-radius: 32px;
+  overflow: hidden;
 
   &.shadow {
     box-shadow: 0 0 16px $color-shadow-alpha-15;
-    border-radius: 32px;
   }
 
   /deep/ .ae-button {
@@ -40,17 +41,11 @@ export default {
       border-style: solid;
 
       &:first-child {
-        @include border-radius-separate(32px, 0, 0, 32px);
-
         border-left-width: 0;
-        border-right-width: 1px;
       }
 
       &:last-child {
-        @include border-radius-separate(0, 32px, 32px, 0);
-
         border-right-width: 0;
-        border-left-width: 1px;
       }
     }
 
