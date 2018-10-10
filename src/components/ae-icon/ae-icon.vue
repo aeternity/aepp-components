@@ -47,62 +47,62 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+.ae-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-    &.primary {
-      color: $color-primary;
-    }
-    &.secondary {
-      color: $color-secondary;
-    }
-    &.neutral {
-      color: $color-neutral-minimum;
-    }
-    &.alternative {
-      color: $color-alternative;
-    }
+  &.primary {
+    color: $color-primary;
   }
-
-  .ae-icon:before {
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    speak: none;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  &.secondary {
+    color: $color-secondary;
   }
+  &.neutral {
+    color: $color-neutral-minimum;
+  }
+  &.alternative {
+    color: $color-alternative;
+  }
+}
 
-  .ae-icon.round {
-    @include size(32px);
+.ae-icon:before {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
 
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ae-icon.round {
+  @include size(32px);
+
+  color: $color-white;
+  background: $color-neutral;
+  border-radius: 50%;
+  box-shadow: 0 0 16px $color-shadow-alpha-15;
+
+  &.primary {
+    background: $color-primary;
     color: $color-white;
-    background: $color-neutral;
-    border-radius: 50%;
-    box-shadow: 0 0 16px $color-shadow-alpha-15;
-
-    &.primary {
-      background: $color-primary;
-      color: $color-white;
-    }
-    &.secondary {
-      background: $color-secondary;
-      color: $color-white;
-    }
-    &.neutral {
-      background: $color-neutral-maximum;
-      color: $color-neutral-minimum;
-    }
-    &.alternative {
-      background: $color-alternative;
-      color: $color-white;
-    }
   }
+  &.secondary {
+    background: $color-secondary;
+    color: $color-white;
+  }
+  &.neutral {
+    background: $color-neutral-maximum;
+    color: $color-neutral-minimum;
+  }
+  &.alternative {
+    background: $color-alternative;
+    color: $color-white;
+  }
+}
 </style>

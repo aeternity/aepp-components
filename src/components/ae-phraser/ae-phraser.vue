@@ -10,10 +10,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-phraser {
-    display: flex;
-    flex-direction: column;
-  }
+.ae-phraser {
+  display: flex;
+  flex-direction: column;
+}
 </style>

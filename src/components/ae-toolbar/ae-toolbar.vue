@@ -28,78 +28,77 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-toolbar {
-    // Extend font-type
-    @extend %face-uppercase-xs;
+.ae-toolbar {
+  // Extend font-type
+  @extend %face-uppercase-xs;
 
-    // include border mixin
-    @include border-radius-separate(0, 0, 4px, 4px);
+  // include border mixin
+  @include border-radius-separate(0, 0, 4px, 4px);
 
-    display: flex;
-    flex-direction: row;
-    height: rem(32px);
-    align-items: center;
-    padding: 0 rem(16px);
-    font-weight: 500;
-    background: $color-neutral-positive-2;
-    color: $color-neutral-negative-1;
-  }
+  display: flex;
+  flex-direction: row;
+  height: rem(32px);
+  align-items: center;
+  padding: 0 rem(16px);
+  font-weight: 500;
+  background: $color-neutral-positive-2;
+  color: $color-neutral-negative-1;
+}
 
-  .ae-toolbar.disabled {
-    cursor: not-allowed;
-    color: rgba($color-neutral-negative-1, 0.5);
-  }
+.ae-toolbar.disabled {
+  cursor: not-allowed;
+  color: rgba($color-neutral-negative-1, 0.5);
+}
 
+.ae-toolbar.primary {
+  background: $color-primary-negative-2;
+  color: $color-white;
+}
 
-  .ae-toolbar.primary {
-    background: $color-primary-negative-2;
-    color: $color-white;
-  }
+.ae-toolbar.secondary {
+  background: $color-secondary-negative-2;
+  color: $color-white;
+}
 
-  .ae-toolbar.secondary {
-    background: $color-secondary-negative-2;
-    color: $color-white;
-  }
+.ae-toolbar.neutral {
+  background: $color-neutral-minimum;
+  color: $color-white;
+}
 
-  .ae-toolbar.neutral {
-    background: $color-neutral-minimum;
-    color: $color-white;
-  }
+.ae-toolbar.alternative {
+  background: $color-alternative-negative-2;
+  color: $color-white;
+}
 
-  .ae-toolbar.alternative {
-    background: $color-alternative-negative-2;
-    color: $color-white;
-  }
+.ae-toolbar.primary,
+.ae-toolbar.secondary,
+.ae-toolbar.neutral,
+.ae-toolbar.alternative {
+  color: $color-white;
+}
 
-  .ae-toolbar.primary,
-  .ae-toolbar.secondary,
-  .ae-toolbar.neutral,
-  .ae-toolbar.alternative {
-    color: $color-white;
-  }
+.ae-toolbar.primary.disabled,
+.ae-toolbar.secondary.disabled,
+.ae-toolbar.neutral.disabled,
+.ae-toolbar.alternative.disabled {
+  color: rgba($color-white, 0.5);
+}
 
-  .ae-toolbar.primary.disabled,
-  .ae-toolbar.secondary.disabled,
-  .ae-toolbar.neutral.disabled,
-  .ae-toolbar.alternative.disabled {
-    color: rgba($color-white, 0.5);
-  }
+.ae-toolbar.left {
+  justify-content: flex-start;
+}
 
-  .ae-toolbar.left {
-    justify-content: flex-start;
-  }
+.ae-toolbar.center {
+  justify-content: center;
+}
 
-  .ae-toolbar.center {
-    justify-content: center;
-  }
+.ae-toolbar.right {
+  justify-content: flex-end;
+}
 
-  .ae-toolbar.right {
-    justify-content: flex-end;
-  }
-
-  .ae-toolbar.justify {
-    justify-content: space-between;
-  }
+.ae-toolbar.justify {
+  justify-content: space-between;
+}
 </style>

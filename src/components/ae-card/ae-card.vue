@@ -53,81 +53,82 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-card {
-    @extend %face-sans-base;
+.ae-card {
+  @extend %face-sans-base;
 
-    user-select: none;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    border-radius: 4px;
-    overflow: hidden;
-    background: $color-neutral-positive-3;
-    color: $color-neutral;
-    box-shadow: 0 0 16px $color-shadow-alpha-15;
+  user-select: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background: $color-neutral-positive-3;
+  color: $color-neutral;
+  box-shadow: 0 0 16px $color-shadow-alpha-15;
+}
+
+.ae-card.primary {
+  background: $color-primary;
+  color: $color-primary-negative-3;
+}
+
+.ae-card.secondary {
+  background: $color-secondary;
+  color: $color-secondary-negative-3;
+}
+
+.ae-card.neutral {
+  background: $color-neutral-negative-3;
+  color: $color-white;
+}
+
+.ae-card.alternative {
+  background: $color-alternative;
+  color: $color-alternative-negative-3;
+}
+
+.ae-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(16px) rem(16px) 0 rem(16px);
+  margin-bottom: rem(16px);
+}
+
+.ae-card-header-avatar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+
+  > .ae-avatar {
+    margin-right: rem(8px);
   }
+}
 
-  .ae-card.primary {
-    background: $color-primary;
-    color: $color-primary-negative-3;
-  }
+.ae-card-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: rem(16px);
+}
 
-  .ae-card.secondary {
-    background: $color-secondary;
-    color: $color-secondary-negative-3;
-  }
+.ae-card-main.top {
+  align-items: flex-start;
+}
 
-  .ae-card.neutral {
-    background: $color-neutral-negative-3;
-    color: $color-white;
-  }
+.ae-card-main.center {
+  align-items: center;
+}
 
-  .ae-card.alternative {
-    background: $color-alternative;
-    color: $color-alternative-negative-3;
-  }
+.ae-card-main.bottom {
+  align-items: flex-end;
+}
 
-  .ae-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: rem(16px) rem(16px) 0 rem(16px);
-    margin-bottom: rem(16px);
-  }
-
-  .ae-card-header-avatar {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: auto;
-
-    > .ae-avatar {
-      margin-right: rem(8px);
-    }
-  }
-
-  .ae-card-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: rem(16px);
-  }
-
-  .ae-card-main.top {
-    align-items: flex-start;
-  }
-
-  .ae-card-main.center {
-    align-items: center;
-  }
-
-  .ae-card-main.bottom {
-    align-items: flex-end;
-  }
-
-  .ae-card-footer {}
+.ae-card-footer {
+}
 </style>
