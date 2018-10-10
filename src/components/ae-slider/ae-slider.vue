@@ -1,5 +1,5 @@
 <template>
-  <agile class="ae-slide" :class="{ fullscreen }" :options="defaults">
+  <agile class="ae-slider" :class="{ fullscreen }" :options="defaults">
     <slot />
   </agile>
 </template>
@@ -7,7 +7,7 @@
 import { Agile } from 'vue-agile';
 
 /**
- * The ae-slide uses vue-agile under the hood: https://github.com/lukaszflorczak/vue-agile
+ * The ae-slider uses vue-agile under the hood: https://github.com/lukaszflorczak/vue-agile
  *
  * The option is the configuration object, where you can modify
  * the behavior of the vue-agile.
@@ -18,7 +18,7 @@ import { Agile } from 'vue-agile';
  * own slider.
  */
 export default {
-  name: 'ae-slide',
+  name: 'ae-slider',
   components: { Agile },
   props: {
     /**
@@ -53,16 +53,16 @@ export default {
 <style lang="scss" scoped>
   @import '../../styles/globals';
 
-  .ae-slide {
+  .ae-slider {
     position: relative;
     width: 100%;
   }
 
-  .ae-slide /deep/ .agile__slide {
+  .ae-slider /deep/ .agile__slide {
     padding: rem(20px) rem(32px);
   }
 
-  .ae-slide /deep/ .agile__dots {
+  .ae-slider /deep/ .agile__dots {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@ export default {
     padding: 0;
   }
 
-  .ae-slide /deep/ .agile__dots > .agile__dot {
+  .ae-slider /deep/ .agile__dots > .agile__dot {
     list-style: none;
     border-radius: 50%;
     background: $color-neutral;
@@ -93,16 +93,16 @@ export default {
     }
   }
 
-  .ae-slide.fullscreen {
+  .ae-slider.fullscreen {
     height: 100%;
   }
 
-  .ae-slide.fullscreen /deep/ .agile__list,
-  .ae-slide.fullscreen /deep/ .agile__track {
+  .ae-slider.fullscreen /deep/ .agile__list,
+  .ae-slider.fullscreen /deep/ .agile__track {
     height: 100%;
   }
 
-  .ae-slide.fullscreen /deep/ .agile__dots {
+  .ae-slider.fullscreen /deep/ .agile__dots {
     position: absolute;
     right: 0;
     left: 0;

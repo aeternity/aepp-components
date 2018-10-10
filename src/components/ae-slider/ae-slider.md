@@ -1,6 +1,6 @@
 ```jsx
   <div>
-    <ae-slide>
+    <ae-slider>
       <div>
         <ae-card fill="primary">
           <template slot="avatar">
@@ -46,20 +46,20 @@
           </ae-toolbar>
         </ae-card>
       </div>
-    </ae-slide>
+    </ae-slider>
   </div>
 ``` 
 
 ### prop: fullscreen
 ```jsx
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
-    <ae-slide fullscreen>
+    <ae-slider fullscreen>
       <div style="width: 100%; height: 100%;">
         hello
       </div>
       <div style="width: 100%; height: 100%;">
        world
       </div>
-    </ae-slide>
+    </ae-slider>
   </div>
 ``` 
