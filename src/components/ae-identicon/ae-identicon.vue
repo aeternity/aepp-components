@@ -1,10 +1,16 @@
 <template>
   <canvas
     :class="['ae-identicon', { shadow }]"
+    :style="{ height: `${({
+      xl: 6,
+      base: 2,
+      s: 1.5,
+      xs: 1.25,
+      xxs: 0.875,
+    })[this.size]}rem`}"
     ref="blockie"
   />
 </template>
-
 <script>
 import { renderIcon } from '@download/blockies';
 
@@ -52,22 +58,11 @@ export default {
   },
   methods: {
     render() {
-      renderIcon({
-        seed: this.address,
-        size: 16,
-        scale: ({
-          xl: 6,
-          base: 2,
-          s: 1.5,
-          xs: 1.25,
-          xxs: 0.875,
-        })[this.size],
-      }, this.$refs.blockie);
+      renderIcon({ seed: this.address }, this.$refs.blockie);
     },
   },
 };
 </script>
-
 <style lang="scss" scoped>
 @import '../../styles/variables/colors';
 
