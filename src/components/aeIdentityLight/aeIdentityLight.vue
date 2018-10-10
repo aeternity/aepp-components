@@ -16,7 +16,13 @@
         </div>
       </div>
     </div>
-    <div v-if="!collapsed" v-for="(chunk, idx) in chunkAddress" :key="idx" class="chunk-row">
+    <div
+      v-if="!collapsed"
+      v-for="(chunk, idx) in chunkAddress"
+      v-remove-spaces-on-copy
+      :key="idx"
+      class="chunk-row"
+    >
       <div v-for="(data, idx) in chunk" :key="idx" class="chunk">
         {{data}}
       </div>

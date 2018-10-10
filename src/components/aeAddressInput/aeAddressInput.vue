@@ -5,12 +5,13 @@
     monospace
     :value="formattedValue"
     @input="handleInput"
-    @copy="handleCopy"
+    v-remove-spaces-on-copy
   />
 </template>
 
 <script>
 import AeTextarea from '../aeTextarea/aeTextarea.vue';
+import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
 
 export default {
   name: 'ae-address-input',
@@ -20,6 +21,7 @@ export default {
       default: '',
     },
   },
+  directives: { removeSpacesOnCopy },
   components: { AeTextarea },
   computed: {
     formattedValue() {
@@ -37,12 +39,6 @@ export default {
         setTimeout(setSelection, 0);
       }
       this.$emit('input', address.replace(/[ \n]/g, ''));
-    },
-    handleCopy(event) {
-      const { selectionStart: s1, selectionEnd: s2, value } = event.target;
-      event.clipboardData.setData('text/plain',
-        value.slice(Math.min(s1, s2), Math.max(s1, s2)).replace(/[ \n]/g, ''));
-      event.preventDefault();
     },
     formatAddress(address, cursor = address.length) {
       if (['', 'a', 'ak'].includes(address)) return { address, cursor };

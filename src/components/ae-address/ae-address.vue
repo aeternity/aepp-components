@@ -1,5 +1,5 @@
 <template>
-  <ul class="ae-address" :style="{ gridGap: gap }">
+  <ul class="ae-address" :style="{ gridGap: gap }" v-remove-spaces-on-copy>
     <template v-if="length === 'medium'">
       <li v-for="chunk in chunked.slice(0, 3)" :key="chunk">
         {{ chunk }}
@@ -28,8 +28,11 @@
   </ul>
 </template>
 <script>
+import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
+
 export default {
   name: 'ae-address',
+  directives: { removeSpacesOnCopy },
   props: {
     /**
      * ae address value to be displayed
