@@ -40,7 +40,7 @@ export default {
   left: 0;
   right: 0;
   padding: 1.25rem 2rem;
-  z-index: 99999;
+  z-index: 5000;
 
   &.left {
     justify-content: flex-start;
