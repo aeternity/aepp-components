@@ -50,8 +50,11 @@ export default {
   }
 
   &.shadow {
-    background: rgb(237,243,247);
-    background: linear-gradient(0deg, rgba(237,243,247,1) 40%, rgba(237,243,247,0) 95%);
+    background: $color-neutral-positive-2;
+    background: linear-gradient(
+        0deg,
+        rgba($color-neutral-positive-2, 1) 40%,
+        rgba($color-neutral-positive-2, 0) 95%);
   }
 }
 </style>
