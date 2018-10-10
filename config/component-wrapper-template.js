@@ -1,6 +1,6 @@
 import Component from 'COMPONENT_PATH';
 
-export const install = function (Vue) {
+export const install = (Vue) => {
   Vue.component(COMPONENT_NAME, Component);
 };
 
