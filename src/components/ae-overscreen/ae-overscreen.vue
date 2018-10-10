@@ -40,18 +40,18 @@ export default {
   right: 0;
   padding: 1.25rem 2rem;
   z-index: 99999;
-}
 
-.ae-overscreen.left {
-  justify-content: flex-start;
-}
+  &.left {
+    justify-content: flex-start;
+  }
 
-.ae-overscreen.right {
-  justify-content: flex-end;
-}
+  &.right {
+    justify-content: flex-end;
+  }
 
-.ae-overscreen.shadow {
-  background: rgb(237,243,247);
-  background: linear-gradient(0deg, rgba(237,243,247,1) 40%, rgba(237,243,247,0) 95%);
+  &.shadow {
+    background: rgb(237,243,247);
+    background: linear-gradient(0deg, rgba(237,243,247,1) 40%, rgba(237,243,247,0) 95%);
+  }
 }
 </style>
