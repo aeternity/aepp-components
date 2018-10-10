@@ -34,7 +34,7 @@ export default {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
