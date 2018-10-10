@@ -58,17 +58,33 @@ export default {
 
   .ae-button-group /deep/ .ae-button.primary {
     border-color: $color-primary-negative-1;
+
+    & ~ :not(.ae-button.primary) {
+      border: none;
+    }
   }
 
   .ae-button-group /deep/ .ae-button.secondary {
     border-color: $color-secondary-negative-1;
+
+    & ~ :not(.ae-button.primary) {
+      border: none;
+    }
   }
 
   .ae-button-group /deep/ .ae-button.neutral {
     border-color: $color-neutral-positive-2;
+
+    & ~ :not(.ae-button.secondary) {
+      border: none;
+    }
   }
 
   .ae-button-group /deep/ .ae-button.alternative {
     border-color: $color-alternative-negative-1;
+
+    & ~ :not(.ae-button.alternative) {
+      border: none;
+    }
   }
 </style>
