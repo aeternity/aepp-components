@@ -28,6 +28,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../../styles/variables/colors';
 @import '../../styles/globals/functions';
 
 .ae-overscreen {
@@ -53,7 +54,8 @@ export default {
     background: linear-gradient(
         0deg,
         rgba($color-neutral-positive-2, 1) 40%,
-        rgba($color-neutral-positive-2, 0) 95%);
+        rgba($color-neutral-positive-2, 0) 95%
+    );
   }
 }
 </style>
