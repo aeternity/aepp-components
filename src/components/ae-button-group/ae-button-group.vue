@@ -22,8 +22,6 @@ export default {
 
 .ae-button-group {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
 
   &.shadow {
     box-shadow: 0 0 16px $color-shadow-alpha-15;
@@ -31,7 +29,6 @@ export default {
   }
 
   /deep/ .ae-button {
-    width: 100%;
     border-radius: 0;
     border: 0;
     box-shadow: none;
