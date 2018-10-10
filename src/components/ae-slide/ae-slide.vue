@@ -72,12 +72,12 @@ export default {
   }
 
   .ae-slide /deep/ .agile__dots > .agile__dot {
-    @include size(10px);
-
     list-style: none;
     border-radius: 50%;
     background: $color-neutral;
     margin: 0 rem(2px);
+    width: 10px;
+    height: 10px;
     transition: all $base-transition-time;
     cursor: pointer;
 
