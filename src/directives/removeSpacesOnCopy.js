@@ -2,7 +2,7 @@
  * A Vue Directive to clean up the empty
  * spaces (whitespace, new line, tabs) on copy event
  *
- * @example <div remove-spaces-on-copy></div>
+ * @example <div v-remove-spaces-on-copy></div>
  */
 export default {
   inserted: el => el.addEventListener('copy', (event) => {
