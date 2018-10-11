@@ -1,13 +1,6 @@
 <template>
   <canvas
-    :class="['ae-identicon', { shadow }]"
-    :style="{ height: `${({
-      xl: 6,
-      base: 2,
-      s: 1.5,
-      xs: 1.25,
-      xxs: 0.875,
-    })[this.size]}rem`}"
+    :class="['ae-identicon', { shadow }, size]"
     ref="blockie"
   />
 </template>
@@ -72,6 +65,26 @@ export default {
 
   &.shadow {
     box-shadow: 0 0 8px $color-shadow-alpha-15;
+  }
+
+  &.xl {
+    height: 6rem;
+  }
+
+  &.base {
+    height: 2rem;
+  }
+
+  &.s {
+    height: 1.5rem;
+  }
+
+  &.xs {
+    height: 1.25rem;
+  }
+
+  &.xxs {
+    height: 0.875rem;
   }
 }
 </style>
