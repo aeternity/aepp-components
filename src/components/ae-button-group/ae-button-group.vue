@@ -31,7 +31,7 @@ export default {
 
   /deep/ .ae-button {
     border-radius: 0;
-    border: 0;
+    border: none;
     box-shadow: none;
     flex-grow: 1;
 
