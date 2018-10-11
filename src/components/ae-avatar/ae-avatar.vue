@@ -40,25 +40,25 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-avatar {
-    @include size(32px);
+.ae-avatar {
+  @include size(32px);
 
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    box-shadow: 0 0 8px $color-shadow-alpha-15;
-    border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0 0 8px $color-shadow-alpha-15;
+  border-radius: 50%;
 
-    > img {
-      @include center-both;
+  > img {
+    @include center-both;
 
-      max-width: 100%;
-    }
+    max-width: 100%;
   }
+}
 
-  .ae-avatar.small {
-    @include size(20px);
-  }
+.ae-avatar.small {
+  @include size(20px);
+}
 </style>

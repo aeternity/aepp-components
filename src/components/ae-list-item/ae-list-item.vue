@@ -26,30 +26,30 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    border-top: 2px solid transparent;
-    padding: rem(12px) 0;
-  }
+.ae-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  border-top: 2px solid transparent;
+  padding: rem(12px) 0;
+}
 
-  .ae-list-item.primary {
-    border-color: $color-primary-positive-2;
-  }
+.ae-list-item.primary {
+  border-color: $color-primary-positive-2;
+}
 
-  .ae-list-item.secondary {
-    border-color: $color-secondary-positive-2;
-  }
+.ae-list-item.secondary {
+  border-color: $color-secondary-positive-2;
+}
 
-  .ae-list-item.neutral {
-    border-color: $color-neutral-positive-2;
-  }
+.ae-list-item.neutral {
+  border-color: $color-neutral-positive-2;
+}
 
-  .ae-list-item.alternative {
-    border-color: $color-alternative-positive-2;
-  }
+.ae-list-item.alternative {
+  border-color: $color-alternative-positive-2;
+}
 </style>

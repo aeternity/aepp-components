@@ -71,136 +71,136 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-text {
-    @extend %face-sans-base;
+.ae-text {
+  @extend %face-sans-base;
 
-    transition: $base-transition-time;
-    outline: none;
-    border-bottom: 1px solid transparent;
-    margin: 0;
-    padding: 0;
+  transition: $base-transition-time;
+  outline: none;
+  border-bottom: 1px solid transparent;
+  margin: 0;
+  padding: 0;
 
-    &.focus, &:focus {
-      border-color: $color-black;
-    }
-
-    &.disabled {
-      opacity: 0.15;
-      cursor: not-allowed;
-    }
+  &.focus, &:focus {
+    border-color: $color-black;
   }
 
-  .ae-text.inherit {
-    color: inherit;
-
-    &:focus {
-      border-color: inherit;
-    }
+  &.disabled {
+    opacity: 0.15;
+    cursor: not-allowed;
   }
+}
 
-  .ae-text.white {
-    color: $color-white;
+.ae-text.inherit {
+  color: inherit;
 
-    &.focus, &:focus {
-      border-color: $color-white;
-    }
+  &:focus {
+    border-color: inherit;
   }
+}
 
-  .ae-text.black {
-    color: $color-black;
+.ae-text.white {
+  color: $color-white;
 
-    &.focus, &:focus {
-      border-color: $color-black;
-    }
+  &.focus, &:focus {
+    border-color: $color-white;
   }
+}
 
-  .ae-text.primary {
-    color: $color-primary-negative-3;
+.ae-text.black {
+  color: $color-black;
 
-    &.focus, &:focus {
-      border-color: $color-primary-negative-3;
-    }
+  &.focus, &:focus {
+    border-color: $color-black;
   }
+}
 
-  .ae-text.secondary {
-    color: $color-secondary-negative-3;
+.ae-text.primary {
+  color: $color-primary-negative-3;
 
-    &.focus, &:focus {
-      border-color: $color-secondary-negative-3;
-    }
+  &.focus, &:focus {
+    border-color: $color-primary-negative-3;
   }
+}
 
-  .ae-text.neutral {
-    color: $color-neutral-minimum;
+.ae-text.secondary {
+  color: $color-secondary-negative-3;
 
-    &.focus, &:focus {
-      border-color: $color-neutral-minimum;
-    }
+  &.focus, &:focus {
+    border-color: $color-secondary-negative-3;
   }
+}
 
-  .ae-text.alternative {
-    color: $color-alternative-negative-3;
+.ae-text.neutral {
+  color: $color-neutral-minimum;
 
-    &.focus, &:focus {
-      border-color: $color-alternative-negative-3;
-    }
+  &.focus, &:focus {
+    border-color: $color-neutral-minimum;
   }
+}
 
-  .ae-text.sans-l {
-    @extend %face-sans-l;
-  }
+.ae-text.alternative {
+  color: $color-alternative-negative-3;
 
-  .ae-text.sans-base {
-    @extend %face-sans-base;
+  &.focus, &:focus {
+    border-color: $color-alternative-negative-3;
   }
+}
 
-  .ae-text.sans-s {
-    @extend %face-sans-s;
-  }
+.ae-text.sans-l {
+  @extend %face-sans-l;
+}
 
-  .ae-text.sans-xs {
-    @extend %face-sans-xs;
-  }
+.ae-text.sans-base {
+  @extend %face-sans-base;
+}
 
-  .ae-text.mono-xl {
-    @extend %face-mono-xl;
-  }
+.ae-text.sans-s {
+  @extend %face-sans-s;
+}
 
-  .ae-text.mono-base {
-    @extend %face-mono-base;
-  }
+.ae-text.sans-xs {
+  @extend %face-sans-xs;
+}
 
-  .ae-text.mono-s {
-    @extend %face-mono-s;
-  }
+.ae-text.mono-xl {
+  @extend %face-mono-xl;
+}
 
-  .ae-text.mono-xs {
-    @extend %face-mono-xs;
-  }
+.ae-text.mono-base {
+  @extend %face-mono-base;
+}
 
-  .ae-text.tracked-base {
-    @extend %face-tracked-base;
-  }
+.ae-text.mono-s {
+  @extend %face-mono-s;
+}
 
-  .ae-text.uppercase-base {
-    @extend %face-uppercase-base;
-  }
+.ae-text.mono-xs {
+  @extend %face-mono-xs;
+}
 
-  .ae-text.uppercase-xs {
-    @extend %face-uppercase-xs;
-  }
+.ae-text.tracked-base {
+  @extend %face-tracked-base;
+}
 
-  .ae-toolbar.left {
-    text-align: left;
-  }
+.ae-text.uppercase-base {
+  @extend %face-uppercase-base;
+}
 
-  .ae-toolbar.center {
-    text-align: center;
-  }
+.ae-text.uppercase-xs {
+  @extend %face-uppercase-xs;
+}
 
-  .ae-toolbar.right {
-    text-align: right;
-  }
+.ae-toolbar.left {
+  text-align: left;
+}
+
+.ae-toolbar.center {
+  text-align: center;
+}
+
+.ae-toolbar.right {
+  text-align: right;
+}
 </style>

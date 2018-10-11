@@ -59,11 +59,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-qrcode {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.ae-qrcode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
