@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
-    <title>atoms/icons/ui/check</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M4.70710678,12.2928932 C4.31658249,11.9023689 3.68341751,11.9023689 3.29289322,12.2928932 C2.90236893,12.6834175 2.90236893,13.3165825 3.29289322,13.7071068 L8.29289322,18.7071068 C8.68341751,19.0976311 9.31658249,19.0976311 9.70710678,18.7071068 L20.7071068,7.70710678 C21.0976311,7.31658249 21.0976311,6.68341751 20.7071068,6.29289322 C20.3165825,5.90236893 19.6834175,5.90236893 19.2928932,6.29289322 L9,16.5857864 L4.70710678,12.2928932 Z" id="path-1"></path>
-    </defs>
-    <g id="atoms/icons/ui/check" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <mask id="mask-2" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-        <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
-    </g>
-</svg>
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M4.707 12.293a1 1 0 1 0-1.414 1.414l5 5a1 1 0 0 0 1.414 0l11-11a1 1 0 1 0-1.414-1.414L9 16.586l-4.293-4.293z" id="a"/></defs><use fill="#000" fill-rule="nonzero" xlink:href="#a"/></svg>

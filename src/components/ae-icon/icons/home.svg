@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
-    <title>home</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M16,21 L19,21 C19.5522847,21 20,20.5522847 20,20 L20,9.48908381 L12,3.26686158 L4,9.48908381 L4,20 C4,20.5522847 4.44771525,21 5,21 L8,21 L8,12 C8,11.4477153 8.44771525,11 9,11 L15,11 C15.5522847,11 16,11.4477153 16,12 L16,21 Z M14,21 L14,13 L10,13 L10,21 L14,21 Z M2.38605939,8.21064778 L11.3860594,1.21064778 C11.7471699,0.929784072 12.2528301,0.929784072 12.6139406,1.21064778 L21.6139406,8.21064778 C21.8575272,8.40010398 22,8.69140957 22,9 L22,20 C22,21.6568542 20.6568542,23 19,23 L5,23 C3.34314575,23 2,21.6568542 2,20 L2,9 C2,8.69140957 2.14247284,8.40010398 2.38605939,8.21064778 Z" id="path-1"></path>
-    </defs>
-    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <mask id="mask-2" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-        <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
-    </g>
-</svg>
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M16 21h3a1 1 0 0 0 1-1V9.49l-8-6.223-8 6.222V20a1 1 0 0 0 1 1h3v-9a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v9zm-2 0v-8h-4v8h4zM2.386 8.21l9-7a1 1 0 0 1 1.228 0l9 7A1 1 0 0 1 22 9v11a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9a1 1 0 0 1 .386-.79z" id="a"/></defs><use fill="#000" fill-rule="nonzero" xlink:href="#a"/></svg>
