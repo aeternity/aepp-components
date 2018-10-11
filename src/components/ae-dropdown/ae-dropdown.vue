@@ -53,7 +53,7 @@ export default {
   &.active > .ae-dropdown-menu {
     opacity: 1;
     visibility: visible;
-    z-index: $stack-4;
+    z-index: 500;
   }
 }
 
@@ -85,7 +85,7 @@ export default {
 .ae-dropdown-menu {
   opacity: 0;
   visibility: hidden;
-  z-index: $stack-4;
+  z-index: 500;
   padding: 0;
   margin: 0;
   position: absolute;
