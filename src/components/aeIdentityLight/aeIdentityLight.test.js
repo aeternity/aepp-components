@@ -1,6 +1,6 @@
 import { shallow } from 'vue-test-utils';
 import AeIdentityLight from './aeIdentityLight.vue';
-import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
+import AeIdenticon from '../ae-identicon/ae-identicon.vue';
 
 describe('AeIdentityLight', () => {
   const shallowWrapper = props => shallow(AeIdentityLight, {
@@ -15,7 +15,7 @@ describe('AeIdentityLight', () => {
     describe('avatar', () => {
       const genTest = collapsed => () => {
         const wrapper = shallowWrapper({ collapsed });
-        const avatar = wrapper.find(AeIdentityAvatar);
+        const avatar = wrapper.find(AeIdenticon);
         expect(avatar.exists()).toBe(true);
       };
 
@@ -108,7 +108,7 @@ describe('AeIdentityLight', () => {
 
     it('forwards click when identity avatar emits click', () => {
       const wrapper = shallowWrapper();
-      const avatar = wrapper.find(AeIdentityAvatar);
+      const avatar = wrapper.find(AeIdenticon);
       avatar.trigger('click');
       const emittedClick = wrapper.emitted('click');
       expect(emittedClick.length).toBe(1);

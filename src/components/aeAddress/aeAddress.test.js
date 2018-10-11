@@ -1,6 +1,6 @@
 import { shallow, mount } from 'vue-test-utils';
 import AeAddress from './aeAddress.vue';
-import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
+import AeIdenticon from '../ae-identicon/ae-identicon.vue';
 import AeIcon from '../aeIcon/aeIcon.vue';
 
 const address = '0xfa617481af59ebec80e8d529f1e2d1b3751468f3';
@@ -15,7 +15,7 @@ describe('AeAddress', () => {
         },
       });
 
-      expect(wrapper.contains(AeIdentityAvatar)).toBe(true);
+      expect(wrapper.contains(AeIdenticon)).toBe(true);
     });
 
     it('does NOT render a aeIdentityAvatar when showAvatar prop is false', () => {
@@ -26,10 +26,10 @@ describe('AeAddress', () => {
         },
       });
 
-      expect(wrapper.contains(AeIdentityAvatar)).toBe(false);
+      expect(wrapper.contains(AeIdenticon)).toBe(false);
     });
 
-    it('forwards address prop to ae-identity-avatar', () => {
+    it('forwards address prop to ae-identicon', () => {
       const wrapper = shallow(AeAddress, {
         propsData: {
           address,
@@ -37,7 +37,7 @@ describe('AeAddress', () => {
         },
       });
 
-      const avatar = wrapper.find(AeIdentityAvatar);
+      const avatar = wrapper.find(AeIdenticon);
       expect(avatar.props().address).toBe(address);
     });
 

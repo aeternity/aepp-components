@@ -105,7 +105,7 @@ export default {
   align-items: center;
   width: auto;
 
-  > .ae-avatar {
+  > .ae-identicon {
     margin-right: rem(8px);
   }
 }

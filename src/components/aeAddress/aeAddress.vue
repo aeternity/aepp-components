@@ -1,6 +1,6 @@
 <template>
   <div class="ae-address">
-    <ae-identity-avatar
+    <ae-identicon
       v-if='showAvatar'
       :address='address'
       class="avatar"
