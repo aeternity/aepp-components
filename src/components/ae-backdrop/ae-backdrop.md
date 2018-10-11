@@ -2,7 +2,7 @@
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-card>
       <template slot="avatar">
-        <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+        <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
         <ae-text contenteditable>My Account</ae-text>
       </template>
       <template slot="header">
@@ -38,7 +38,7 @@
     <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
       <ae-card>
         <template slot="avatar">
-          <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+          <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
           <ae-text contenteditable>My Account</ae-text>
         </template>
         <template slot="header">
@@ -89,7 +89,7 @@
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-card>
       <template slot="avatar">
-        <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+        <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
         <ae-text contenteditable>My Account</ae-text>
       </template>
       <template slot="header">
@@ -122,7 +122,7 @@
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-card>
       <template slot="avatar">
-        <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+        <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
         <ae-text contenteditable>My Account</ae-text>
       </template>
       <template slot="header">
@@ -157,7 +157,7 @@
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-card>
       <template slot="avatar">
-        <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+        <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
         <ae-text contenteditable>My Account</ae-text>
       </template>
       <template slot="header">
@@ -190,7 +190,7 @@
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-card>
       <template slot="avatar">
-        <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+        <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
         <ae-text contenteditable>My Account</ae-text>
       </template>
       <template slot="header">
@@ -223,7 +223,7 @@
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-card>
       <template slot="avatar">
-        <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+        <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
         <ae-text contenteditable>My Account</ae-text>
       </template>
       <template slot="header">
@@ -256,7 +256,7 @@
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-card>
       <template slot="avatar">
-        <ae-avatar address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+        <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
         <ae-text contenteditable>My Account</ae-text>
       </template>
       <template slot="header">

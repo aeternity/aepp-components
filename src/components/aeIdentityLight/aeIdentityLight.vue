@@ -1,10 +1,7 @@
 <template>
   <div @click="forwardEvent" :class="classObject">
     <div class="flex-row">
-      <ae-avatar
-        class="avatar"
-        :address='address'
-      />
+      <ae-identicon class="avatar" :address='address'/>
       <span :class="['identity-name-position', collapsedModifier]">
         <span role="heading" :class="['identity-name', collapsedModifier]">{{name}}</span>
         <small class="truncated-address" v-if="collapsed">{{address | shorten}}  ••••••</small>

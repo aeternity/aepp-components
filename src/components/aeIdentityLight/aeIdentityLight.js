@@ -1,4 +1,4 @@
-import AeAvatar from '../ae-avatar/ae-avatar.vue';
+import AeIdenticon from '../ae-identicon/ae-identicon.vue';
 import helperMixin from '../../core/mixins/helper';
 import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
 
@@ -7,7 +7,7 @@ import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
  */
 export default {
   name: 'ae-identity-light',
-  components: { AeAvatar },
+  components: { AeIdenticon },
   directives: { removeSpacesOnCopy },
   props: {
     /**
