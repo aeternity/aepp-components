@@ -1,3 +1,4 @@
+export { default as AeAccount } from './ae-account/ae-account.vue';
 export { default as AeAddress } from './ae-address/ae-address.vue';
 export { default as AeBackdrop } from './ae-backdrop/ae-backdrop.vue';
 export { default as AeBadge } from './ae-badge/ae-badge.vue';
