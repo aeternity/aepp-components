@@ -1,26 +1,18 @@
 <template>
-  <div class="ae-card" :class="{ [fill]: Boolean(fill) }">
-    <header class="ae-card-header" v-if="$slots.header">
-      <div class="ae-card-header-avatar" v-if="$slots.avatar">
-        <!-- @slot Card header Avatar slot, wraps the avatar and text in a div -->
-        <slot name="avatar" />
-      </div>
-      <!-- @slot Card header slot, full width with bottom padding -->
-      <slot name="header" />
-    </header>
-    <main class="ae-card-main" :class="{ [align]: Boolean(align) }">
-      <!-- @slot default main slot -->
-      <slot />
-    </main>
-    <footer class="ae-card-footer"  v-if="$slots.footer">
-      <!-- @slot Full width slot footer of the card -->
-      <slot name="footer" />
-    </footer>
+  <div :class="['ae-card', fill]">
+    <slot />
+    <ae-toolbar :fill="fill">
+      <slot name="toolbar" />
+    </ae-toolbar>
   </div>
 </template>
+
 <script>
+import AeToolbar from '../ae-toolbar/ae-toolbar.vue';
+
 export default {
   name: 'ae-card',
+  components: { AeToolbar },
   props: {
     /**
      * Fill property changes the color state
@@ -36,99 +28,45 @@ export default {
         'alternative',
       ].includes(value),
     },
-
-    /**
-     * Aligns the items in the main container,
-     * available values: `top, center, bottom`
-     */
-    align: {
-      type: String,
-      validator: value => [
-        'top',
-        'center',
-        'bottom',
-      ].includes(value),
-    },
   },
 };
 </script>
+
 <style lang="scss" scoped>
 @import '../../styles/globals';
 
 .ae-card {
   @extend %face-sans-base;
-
-  user-select: none;
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   border-radius: 4px;
-  overflow: hidden;
   background: $color-neutral-positive-3;
   color: $color-neutral;
   box-shadow: 0 0 16px $color-shadow-alpha-15;
-}
 
-.ae-card.primary {
-  background: $color-primary;
-  color: $color-primary-negative-3;
-}
-
-.ae-card.secondary {
-  background: $color-secondary;
-  color: $color-secondary-negative-3;
-}
-
-.ae-card.neutral {
-  background: $color-neutral-negative-3;
-  color: $color-white;
-}
-
-.ae-card.alternative {
-  background: $color-alternative;
-  color: $color-alternative-negative-3;
-}
-
-.ae-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: rem(16px) rem(16px) 0 rem(16px);
-  margin-bottom: rem(16px);
-}
-
-.ae-card-header-avatar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: auto;
-
-  > .ae-identicon {
-    margin-right: rem(8px);
+  &.primary {
+    background: $color-primary;
+    color: $color-primary-negative-3;
   }
-}
 
-.ae-card-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: rem(16px);
-}
+  &.secondary {
+    background: $color-secondary;
+    color: $color-secondary-negative-3;
+  }
 
-.ae-card-main.top {
-  align-items: flex-start;
-}
+  &.neutral {
+    background: $color-neutral-negative-3;
+    color: $color-white;
+  }
 
-.ae-card-main.center {
-  align-items: center;
-}
+  &.alternative {
+    background: $color-alternative;
+    color: $color-alternative-negative-3;
+  }
 
-.ae-card-main.bottom {
-  align-items: flex-end;
-}
-
-.ae-card-footer {
+  .ae-toolbar {
+    justify-content: space-between;
+  }
 }
 </style>
