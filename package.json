@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0-alpha.3",
+  "version": "3.0.0-alpha.4",
   "name": "@aeternity/aepp-components-3",
   "main": "dist/aepp.components.js",
   "description": "Reusable Vue Components for aeternity aepp projects",
