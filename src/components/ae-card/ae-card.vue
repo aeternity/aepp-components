@@ -53,7 +53,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/globals/functions';
+@import '../../styles/variables/colors';
+@import '../../styles/placeholders/typography';
 
 .ae-card {
   @extend %face-sans-base;

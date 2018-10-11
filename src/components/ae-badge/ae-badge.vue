@@ -15,7 +15,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/variables/colors';
+@import '../../styles/placeholders/typography';
 
 .ae-badge {
   @extend %face-mono-s;

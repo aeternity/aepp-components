@@ -71,7 +71,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/globals/functions';
+@import '../../styles/globals/mixins';
+@import '../../styles/variables/animations';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/typography';
+@import '../../styles/placeholders/typography';
 
 .ae-button {
   user-select: none;

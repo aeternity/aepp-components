@@ -28,7 +28,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/globals/functions';
+@import '../../styles/globals/mixins';
+@import '../../styles/variables/colors';
+@import '../../styles/placeholders/typography';
 
 .ae-toolbar {
   // Extend font-type

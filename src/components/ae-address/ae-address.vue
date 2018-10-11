@@ -74,7 +74,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/placeholders/typography';
 
 .ae-address {
   @extend %face-mono-base;

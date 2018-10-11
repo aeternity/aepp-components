@@ -11,7 +11,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/variables/animations';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/stack';
 
 .ae-backdrop {
   display: flex;
