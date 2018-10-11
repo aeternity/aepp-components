@@ -28,7 +28,7 @@ export default {
   background: rgba($color-neutral-positive-2, 0.5);
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: $stack-5;
+  z-index: 1000;
 
   &.v-enter-active, &.v-leave-active {
     transition: opacity ease-in-out $base-transition-time;

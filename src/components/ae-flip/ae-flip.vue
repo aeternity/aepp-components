@@ -112,7 +112,7 @@ export default {
 }
 
 .ae-flip-front {
-  z-index: $stack-1;
+  z-index: 10;
   transform: rotateY(0deg);
 }
 
