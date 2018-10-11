@@ -66,8 +66,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals/functions';
-@import '../../styles/globals/mixins';
 @import '../../styles/variables/animations';
 @import '../../styles/variables/colors';
 @import '../../styles/variables/stack';
@@ -133,14 +131,14 @@ export default {
   margin: 0;
 
   > li {
-    @include size(10px);
-
     list-style: none;
     border-radius: 50%;
     background: $color-neutral;
-    margin: 0 rem(2px);
+    margin: 0 0.125rem;
     transition: all $base-transition-time;
     cursor: pointer;
+    width: 10px;
+    height: 10px;
 
     &.active {
       background: $color-primary;

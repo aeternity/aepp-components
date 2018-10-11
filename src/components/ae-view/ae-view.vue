@@ -27,7 +27,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals/functions';
 @import '../../styles/variables/colors';
 
 .ae-view {
@@ -61,6 +60,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: rem(68px);
+  height: 4.25rem;
 }
 </style>

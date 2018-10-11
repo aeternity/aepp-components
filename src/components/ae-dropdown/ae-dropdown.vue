@@ -64,8 +64,6 @@ export default {
 }
 
 .ae-dropdown-button {
-  @include size(48px);
-
   user-select: none;
   display: inline-flex;
   justify-content: center;
@@ -77,6 +75,8 @@ export default {
   outline: none;
   text-decoration: none;
   transition: all $base-transition-time;
+  width: 48px;
+  height: 48px;
 
   &:hover,
   &:focus {
@@ -118,13 +118,13 @@ export default {
     align-items: center;
     width: 100%;
     height: 44px;
-    padding: 0 rem(16px);
+    padding: 0 1rem;
     white-space: nowrap;
     cursor: pointer;
   }
 
   > li .ae-icon {
-    margin: 0 rem(4px);
+    margin: 0 0.25rem;
   }
 
   > li .ae-button, > li a {

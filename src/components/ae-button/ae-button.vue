@@ -72,7 +72,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../../styles/globals/functions';
-@import '../../styles/globals/mixins';
 @import '../../styles/variables/animations';
 @import '../../styles/variables/colors';
 @import '../../styles/variables/typography';
@@ -104,7 +103,7 @@ export default {
   }
 
   > i {
-    margin: 0 rem(4px);
+    margin: 0 0.25rem;
   }
 }
 
@@ -118,7 +117,7 @@ export default {
   border-radius: 32px;
   box-shadow: 0 0 16px $color-shadow-alpha-15;
   color: $color-white;
-  padding: 0 rem(16px);
+  padding: 0 1rem;
 
   &:disabled {
     cursor: not-allowed;
@@ -195,14 +194,14 @@ export default {
 }
 
 .ae-button.icon {
-  @include size(56px);
-
   background: $color-neutral;
-  font-size: rem(20px);
+  font-size: 1.25rem;
   border-radius: 50%;
   box-shadow: 0 0 16px $color-shadow-alpha-15;
   color: $color-white;
-  padding: 0 rem(16px);
+  padding: 0 1rem;
+  width: 56px;
+  height: 56px;
 
   &:disabled {
     cursor: not-allowed;
@@ -214,7 +213,7 @@ export default {
 .ae-button.toolbar {
   @extend %face-uppercase-xs;
 
-  padding: 0 rem(8px);
+  padding: 0 0.5rem;
   background: transparent;
   letter-spacing: em(1.1px);
   height: 16px;
@@ -229,7 +228,7 @@ export default {
   }
 
   > i {
-    font-size: rem(14px);
+    font-size: 0.875rem;
   }
 }
 

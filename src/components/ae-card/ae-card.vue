@@ -53,7 +53,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals/functions';
 @import '../../styles/variables/colors';
 @import '../../styles/placeholders/typography';
 
@@ -97,8 +96,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: rem(16px) rem(16px) 0 rem(16px);
-  margin-bottom: rem(16px);
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .ae-card-header-avatar {
@@ -108,7 +107,7 @@ export default {
   width: auto;
 
   > .ae-identicon {
-    margin-right: rem(8px);
+    margin-right: 0.5rem;
   }
 }
 
@@ -116,7 +115,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: rem(16px);
+  padding: 1rem;
 }
 
 .ae-card-main.top {
@@ -131,6 +130,5 @@ export default {
   align-items: flex-end;
 }
 
-.ae-card-footer {
-}
+.ae-card-footer {}
 </style>

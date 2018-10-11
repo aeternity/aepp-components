@@ -83,7 +83,7 @@ export default {
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-gap: rem(4px);
+  grid-gap: 0.25rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   font-weight: 500;

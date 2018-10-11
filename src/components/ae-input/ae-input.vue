@@ -120,7 +120,7 @@ export default {
   justify-content: center;
   flex-direction: column;
   background: $color-neutral-positive-3;
-  min-height: rem(64px);
+  min-height: 4rem;
 }
 
 .ae-input-header {
@@ -131,7 +131,7 @@ export default {
   align-items: center;
   align-self: flex-start;
   width: 100%;
-  padding: rem(8px) rem(16px) 0 rem(16px);
+  padding: 0.5rem 1rem 0 1rem;
 }
 
 .ae-input-label {
@@ -149,7 +149,7 @@ export default {
   flex: 0 0 100%;
   height: 100%;
   width: 100%;
-  padding: rem(8px) rem(16px);
+  padding: 0.5rem 1rem;
   background: transparent;
   border: none;
   outline: none;

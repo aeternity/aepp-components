@@ -48,7 +48,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals/mixins';
 @import '../../styles/variables/colors';
 
 .ae-icon {
@@ -86,12 +85,12 @@ export default {
 }
 
 .ae-icon.round {
-  @include size(32px);
-
   color: $color-white;
   background: $color-neutral;
   border-radius: 50%;
   box-shadow: 0 0 16px $color-shadow-alpha-15;
+  width: 32px;
+  height: 32px;
 
   &.primary {
     background: $color-primary;

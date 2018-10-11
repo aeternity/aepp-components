@@ -19,30 +19,25 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals/functions';
-@import '../../styles/globals/mixins';
-@import '../../styles/variables/animations';
 @import '../../styles/variables/colors';
-@import '../../styles/variables/stack';
-@import '../../styles/placeholders/typography';
 
 .ae-list {
   padding: 0;
   margin: 0;
-}
 
-.ae-list.primary {
-  border-radius: 4px;
-  background: $color-white;
-  box-shadow: 0 0 8px $color-shadow-alpha-15;
-  padding: rem(15px);
-  overflow: hidden;
+  &.primary {
+    border-radius: 4px;
+    background: $color-white;
+    box-shadow: 0 0 8px $color-shadow-alpha-15;
+    padding: 1rem;
+    overflow: hidden;
 
-  > li:first-child {
-    border-top: 0;
-  }
-  > li:last-child {
-    border-bottom: 0;
+    > li:first-child {
+      border-top: 0;
+    }
+    > li:last-child {
+      border-bottom: 0;
+    }
   }
 }
 </style>
