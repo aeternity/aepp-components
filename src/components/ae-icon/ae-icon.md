@@ -6,9 +6,12 @@
 ```jsx
   <div>
     <ae-icon name="active" />
+    <ae-icon name="add-contact" />
     <ae-icon name="back" />
+    <ae-icon name="bold" />
     <ae-icon name="bookmark" />
     <ae-icon name="bookmark-full" />
+    <ae-icon name="burger" />
     <ae-icon name="camera" />
     <ae-icon name="chat" />
     <ae-icon name="close" />
@@ -16,13 +19,21 @@
     <ae-icon name="copy" />
     <ae-icon name="delete" />
     <ae-icon name="device" />
+    <ae-icon name="diagram" />
     <ae-icon name="edit" />
     <ae-icon name="eye" />
+    <ae-icon name="filter" />
+    <ae-icon name="github" />
     <ae-icon name="globe" />
+    <ae-icon name="grid" />
+    <ae-icon name="headline" />
     <ae-icon name="info" />
+    <ae-icon name="italic" />
     <ae-icon name="left-more" />
     <ae-icon name="link" />
+    <ae-icon name="link-alternative" />
     <ae-icon name="list" />
+    <ae-icon name="more" />
     <ae-icon name="paste" />
     <ae-icon name="plus" />
     <ae-icon name="reload" />
@@ -32,7 +43,8 @@
     <ae-icon name="share" />
     <ae-icon name="shield" />
     <ae-icon name="shield-fill" />
-    <ae-icon name="more" />
+    <ae-icon name="underline" />
+    <ae-icon name="vote" />
   </div>
 ``` 
 
