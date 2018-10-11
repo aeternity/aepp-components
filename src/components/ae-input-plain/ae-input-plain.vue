@@ -43,10 +43,9 @@ export default {
   border: none;
   border-bottom: 1px solid transparent;
   background: none;
-  color: $color-neutral-negative-2;
 
   &::placeholder {
-    color: $color-neutral;
+    color: $color-black;
   }
 
   &:focus {
