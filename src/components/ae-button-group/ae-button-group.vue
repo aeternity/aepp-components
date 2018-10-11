@@ -35,20 +35,6 @@ export default {
     box-shadow: none;
     flex-grow: 1;
 
-    &.round {
-      border-left-width: 1px;
-      border-right-width: 1px;
-      border-style: solid;
-
-      &:first-child {
-        border-left-width: 0;
-      }
-
-      &:last-child {
-        border-right-width: 0;
-      }
-    }
-
     &.primary {
       border-color: $color-primary-negative-1;
     }
