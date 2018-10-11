@@ -13,7 +13,9 @@
     <ae-icon name="bookmark-full" />
     <ae-icon name="burger" />
     <ae-icon name="camera" />
+    <ae-icon name="card" />
     <ae-icon name="chat" />
+    <ae-icon name="check" />
     <ae-icon name="close" />
     <ae-icon name="contacts" />
     <ae-icon name="copy" />
@@ -23,10 +25,12 @@
     <ae-icon name="edit" />
     <ae-icon name="eye" />
     <ae-icon name="filter" />
+    <ae-icon name="flip" />
     <ae-icon name="github" />
     <ae-icon name="globe" />
     <ae-icon name="grid" />
     <ae-icon name="headline" />
+    <ae-icon name="home" />
     <ae-icon name="info" />
     <ae-icon name="italic" />
     <ae-icon name="left-more" />
@@ -43,8 +47,11 @@
     <ae-icon name="share" />
     <ae-icon name="shield" />
     <ae-icon name="shield-fill" />
+    <ae-icon name="square" />
+    <ae-icon name="transfer" />
     <ae-icon name="underline" />
     <ae-icon name="vote" />
+    <ae-icon name="x-square" />
   </div>
 ``` 
 
