@@ -4,9 +4,9 @@
   </div>
 ``` 
 
-### prop: 
+### prop: fill
 ```jsx
-  <ae-splash>
-    Hello World
-  </ae-splash>
+  <div style="position: relative; width: 375px; height: 667px; border: 1px solid #D3DCE6;">
+    <ae-splash fill="primary">Hello World</ae-splash>
+  </div>
 ``` 
