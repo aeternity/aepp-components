@@ -1,5 +1,5 @@
 <template>
-  <ul class="ae-address" :style="{ gridGap: gap }">
+  <ul class="ae-address" :style="{ gridGap: gap }" v-remove-spaces-on-copy>
     <template v-if="length === 'medium'">
       <li v-for="chunk in chunked.slice(0, 3)" :key="chunk">
         {{ chunk }}
@@ -28,8 +28,11 @@
   </ul>
 </template>
 <script>
+import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
+
 export default {
   name: 'ae-address',
+  directives: { removeSpacesOnCopy },
   props: {
     /**
      * ae address value to be displayed
@@ -63,25 +66,25 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-address {
-    @extend %face-mono-base;
+.ae-address {
+  @extend %face-mono-base;
 
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    grid-gap: rem(4px);
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    font-weight: 500;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-gap: rem(4px);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 
-    > li {
-      list-style: none;
-    }
+  > li {
+    list-style: none;
   }
+}
 </style>

@@ -1,5 +1,4 @@
 export { default as AeAddress } from './ae-address/ae-address.vue';
-export { default as AeAvatar } from './ae-avatar/ae-avatar.vue';
 export { default as AeBackdrop } from './ae-backdrop/ae-backdrop.vue';
 export { default as AeBadge } from './ae-badge/ae-badge.vue';
 export { default as AeButton } from './ae-button/ae-button.vue';
@@ -8,6 +7,7 @@ export { default as AeCheck } from './ae-check/ae-check.vue';
 export { default as AeDropdown } from './ae-dropdown/ae-dropdown.vue';
 export { default as AeFlip } from './ae-flip/ae-flip.vue';
 export { default as AeIcon } from './ae-icon/ae-icon.vue';
+export { default as AeIdenticon } from './ae-identicon/ae-identicon.vue';
 export { default as AeInput } from './ae-input/ae-input.vue';
 export { default as AeList } from './ae-list/ae-list.vue';
 export { default as AeListItem } from './ae-list-item/ae-list-item.vue';
@@ -23,7 +23,6 @@ export { default as AeFilterSeparator } from './aeFilterSeparator/aeFilterSepara
 export { default as AeHeader } from './aeHeader/aeHeader.vue';
 export { default as AeIdentity } from './aeIdentity/aeIdentity.vue';
 export { default as AeIdentityLight } from './aeIdentityLight/aeIdentityLight.vue';
-export { default as AeIdentityAvatar } from './aeIdentityAvatar/aeIdentityAvatar.vue';
 export { default as AeIdentityBackground } from './aeIdentityBackground/aeIdentityBackground.vue';
 export { default as AeLabel } from './aeLabel/aeLabel.vue';
 export { default as AeLink } from './aeLink/aeLink.vue';

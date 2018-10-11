@@ -1,10 +1,7 @@
 <template>
   <div @click="forwardEvent" :class="classObject">
     <div class="flex-row">
-      <ae-identity-avatar
-        class="avatar"
-        :address='address'
-      />
+      <ae-identicon class="avatar" :address='address'/>
       <span :class="['identity-name-position', collapsedModifier]">
         <span role="heading" :class="['identity-name', collapsedModifier]">{{name}}</span>
         <small class="truncated-address" v-if="collapsed">{{address | shorten}}  ••••••</small>
@@ -16,7 +13,13 @@
         </div>
       </div>
     </div>
-    <div v-if="!collapsed" v-for="(chunk, idx) in chunkAddress" :key="idx" class="chunk-row">
+    <div
+      v-if="!collapsed"
+      v-for="(chunk, idx) in chunkAddress"
+      v-remove-spaces-on-copy
+      :key="idx"
+      class="chunk-row"
+    >
       <div v-for="(data, idx) in chunk" :key="idx" class="chunk">
         {{data}}
       </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="ae-address">
-    <ae-identity-avatar
+    <ae-identicon
       v-if='showAvatar'
       :address='address'
       class="avatar"
@@ -24,6 +24,7 @@
       <div
         v-if="size === 'chunked'"
         :class="['chunked-address', textIndentModifier, chunkModifier]"
+        v-remove-spaces-on-copy
       >
         <div v-for="(chunk, idx) of displayAddress" :key="idx" class="chunk">
           {{chunk}}

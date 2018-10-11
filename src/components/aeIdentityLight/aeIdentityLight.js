@@ -1,12 +1,14 @@
-import aeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
+import AeIdenticon from '../ae-identicon/ae-identicon.vue';
 import helperMixin from '../../core/mixins/helper';
+import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
 
 /**
  * Displays an Identity with an avatar blockie, the address and an amount of ether
  */
 export default {
   name: 'ae-identity-light',
-  components: { aeIdentityAvatar },
+  components: { AeIdenticon },
+  directives: { removeSpacesOnCopy },
   props: {
     /**
      * An identity name

@@ -74,88 +74,88 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-input-container {
-    user-select: none;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-radius: 4px;
-    overflow: hidden;
-    transition: all $base-transition-time;
+.ae-input-container {
+  user-select: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all $base-transition-time;
 
-    &.focus, &.error {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
-    &.focus {
-      border-left: 2px solid $color-focus;
-      caret-color: $color-focus;
-    }
-    &.focus .ae-input-label {
-      color: $color-focus;
-    }
-    &.error {
-      border-left: 2px solid $color-error;
-      caret-color: $color-error;
-    }
-    &.error .ae-input-label {
-      color: $color-error;
-    }
-
-    &.focus .ae-input-label:after,
-    &.error .ae-input-label:after {
-      content: '*';
-    }
+  &.focus, &.error {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
-  .ae-input-box {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background: $color-neutral-positive-3;
-    min-height: rem(64px);
+  &.focus {
+    border-left: 2px solid $color-focus;
+    caret-color: $color-focus;
+  }
+  &.focus .ae-input-label {
+    color: $color-focus;
+  }
+  &.error {
+    border-left: 2px solid $color-error;
+    caret-color: $color-error;
+  }
+  &.error .ae-input-label {
+    color: $color-error;
   }
 
-  .ae-input-header {
-    position: relative;
-    display: flex;
-    flex: 0 0 100%;
-    justify-content: space-between;
-    align-items: center;
-    align-self: flex-start;
-    width: 100%;
-    padding: rem(8px) rem(16px) 0 rem(16px);
+  &.focus .ae-input-label:after,
+  &.error .ae-input-label:after {
+    content: '*';
   }
+}
 
-  .ae-input-label {
-    @extend %face-sans-xs;
+.ae-input-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: $color-neutral-positive-3;
+  min-height: rem(64px);
+}
 
-    color: $color-neutral-negative-1;
-  }
+.ae-input-header {
+  position: relative;
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-start;
+  width: 100%;
+  padding: rem(8px) rem(16px) 0 rem(16px);
+}
 
-  .ae-input {
-    @extend %face-sans-base;
-    @include placeholder-color($color-neutral-negative-1);
+.ae-input-label {
+  @extend %face-sans-xs;
 
-    align-self: center;
-    justify-self: center;
-    flex: 0 0 100%;
-    height: 100%;
-    width: 100%;
-    padding: rem(8px) rem(16px);
-    background: transparent;
-    border: none;
-    outline: none;
-  }
+  color: $color-neutral-negative-1;
+}
 
-  .ae-input.aemount {
-    @extend %face-mono-xl;
+.ae-input {
+  @extend %face-sans-base;
+  @include placeholder-color($color-neutral-negative-1);
 
-    text-align: center;
-    font-weight: 300;
-  }
+  align-self: center;
+  justify-self: center;
+  flex: 0 0 100%;
+  height: 100%;
+  width: 100%;
+  padding: rem(8px) rem(16px);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.ae-input.aemount {
+  @extend %face-mono-xl;
+
+  text-align: center;
+  font-weight: 300;
+}
 </style>

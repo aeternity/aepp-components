@@ -1,5 +1,6 @@
-import AeIdentityAvatar from '../aeIdentityAvatar/aeIdentityAvatar.vue';
+import AeIdenticon from '../ae-identicon/ae-identicon.vue';
 import aeIcon from '../aeIcon/aeIcon.vue';
+import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
 
 function startAndEnd(str, start = 6, end = 6) {
   return `${str.substr(0, start + 2)
@@ -12,6 +13,7 @@ function startAndEnd(str, start = 6, end = 6) {
  */
 export default {
   name: 'ae-address',
+  directives: { removeSpacesOnCopy },
   props: {
     /**
      * The address to display. The validity is checked by a regex
@@ -82,7 +84,7 @@ export default {
     },
   },
   components: {
-    AeIdentityAvatar,
+    AeIdenticon,
     aeIcon,
   },
 };

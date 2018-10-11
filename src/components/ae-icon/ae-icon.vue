@@ -1,6 +1,6 @@
 <template>
   <i class="ae-icon"
-     :class="{ [`ae-icon-${name}`]: Boolean(name), [fill]: Boolean(fill), [face]: Boolean(face)  }"
+     :class="{ [`ae-icon-${name}`]: Boolean(name), [fill]: Boolean(fill), [face]: Boolean(face) }"
      :style="{ fontSize: size }" />
 </template>
 <script>
@@ -26,6 +26,7 @@ export default {
         'secondary',
         'neutral',
         'alternative',
+        'white',
       ].includes(value),
     },
 
@@ -47,58 +48,65 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+@import '../../styles/globals';
 
-  .ae-icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+.ae-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-    &.primary {
-      color: $color-primary;
-    }
-    &.secondary {
-      color: $color-secondary;
-    }
-    &.neutral {
-      color: $color-neutral-minimum;
-    }
-    &.alternative {
-      color: $color-alternative;
-    }
+  &.primary {
+    color: $color-primary;
   }
-
-  .ae-icon:before {
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    speak: none;
+  &.secondary {
+    color: $color-secondary;
   }
-
-  .ae-icon.round {
-    @include size(32px);
-
+  &.neutral {
+    color: $color-neutral-minimum;
+  }
+  &.alternative {
+    color: $color-alternative;
+  }
+  &.white {
     color: $color-white;
-    background: $color-neutral;
-    border-radius: 50%;
-    box-shadow: 0 0 16px $color-shadow-alpha-15;
-
-    &.primary {
-      background: $color-primary;
-      color: $color-white;
-    }
-    &.secondary {
-      background: $color-secondary;
-      color: $color-white;
-    }
-    &.neutral {
-      background: $color-neutral-maximum;
-      color: $color-neutral-minimum;
-    }
-    &.alternative {
-      background: $color-alternative;
-      color: $color-white;
-    }
   }
+}
+
+.ae-icon:before {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+}
+
+.ae-icon.round {
+  @include size(32px);
+
+  color: $color-white;
+  background: $color-neutral;
+  border-radius: 50%;
+  box-shadow: 0 0 16px $color-shadow-alpha-15;
+
+  &.primary {
+    background: $color-primary;
+    color: $color-white;
+  }
+  &.secondary {
+    background: $color-secondary;
+    color: $color-white;
+  }
+  &.neutral {
+    background: $color-neutral-maximum;
+    color: $color-neutral-minimum;
+  }
+  &.alternative {
+    background: $color-alternative;
+    color: $color-white;
+  }
+  &.white {
+    background: $color-black;
+    color: $color-white;
+  }
+}
 </style>
