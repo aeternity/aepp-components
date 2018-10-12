@@ -68,7 +68,6 @@ export default {
 <style lang="scss" scoped>
 @import '../../styles/variables/animations';
 @import '../../styles/variables/colors';
-@import '../../styles/variables/stack';
 
 .ae-flip-touch-container {
   position: relative;

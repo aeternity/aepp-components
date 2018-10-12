@@ -48,7 +48,6 @@ export default {
 @import '../../styles/globals/mixins';
 @import '../../styles/variables/animations';
 @import '../../styles/variables/colors';
-@import '../../styles/variables/stack';
 @import '../../styles/placeholders/typography';
 
 
