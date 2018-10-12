@@ -7,26 +7,30 @@
 <template>
   <div>
     <h2>Radio</h2>
-    <label>
-      <ae-check v-model="singleChoice" value="1" type="radio" />
-      Radio button 1
-    </label>
-    <label>
-      <ae-check v-model="singleChoice" value="2" type="radio" />
-      Radio button 2
-    </label>
-    <label>value: {{ singleChoice }}</label>
+    <div>
+      <ae-check v-model="singleChoice" value="1" type="radio">
+        Radio button 1
+      </ae-check>
+    </div>
+    <div>
+      <ae-check v-model="singleChoice" value="2" type="radio">
+        Radio button 2
+      </ae-check>
+    </div>
+    <div>value: {{ singleChoice }}</div>
 
     <h2>Checkbox</h2>
-    <label>
-      <ae-check v-model="multipleChoices" value="1" type="checkbox" />
-      Checkbox 1
-    </label>
-    <label>
-      <ae-check v-model="multipleChoices" value="2" type="checkbox" />
-      Checkbox 2
-    </label>
-    <label>value: {{ multipleChoices }}</label>
+    <div>
+      <ae-check v-model="multipleChoices" value="1" type="checkbox">
+        Checkbox 1
+      </ae-check>
+    </div>
+    <div>
+      <ae-check v-model="multipleChoices" value="2" type="checkbox">
+        Checkbox 2
+      </ae-check>
+    </div>
+    <div>value: {{ multipleChoices }}</div>
   </div>
 </template>
 

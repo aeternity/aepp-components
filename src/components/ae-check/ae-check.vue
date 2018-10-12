@@ -7,10 +7,9 @@
       :value="value"
       :checked="isChecked"
       :disabled="disabled"
-      @change="change"
-    >
-    <span class="indicator">
-      ✓
+      @change="change">
+    <span class="ae-check-button">
+      <slot />
     </span>
   </label>
 </template>
@@ -74,10 +73,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../../styles/globals/functions';
 @import '../../styles/variables/colors';
 @import '../../styles/variables/animations';
 @import '../../styles/variables/typography';
-@import '../../styles/globals/functions';
+@import '../../styles/placeholders/typography';
 
 .ae-check {
   user-select: none;
@@ -116,11 +116,11 @@ export default {
 }
 
 .ae-check-button {
-  @include size(24px);
   @extend %face-sans-base;
 
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding-left: rem(32px);
   min-width: rem(32px);
   min-height: rem(24px);
@@ -132,25 +132,25 @@ export default {
     content: ' ';
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 4px;
     transition: all $base-transition-time;
   }
 
   &:before {
-    @include size(24px);
-
     background: $color-white;
     border: 2px solid $color-neutral-positive-1;
     border-radius: 50%;
     box-shadow: 0 0 16px $color-shadow-alpha-15;
+    width: 24px;
+    height: 24px;
   }
 
   &:after {
-    @include size(24px);
-
     background: url("./images/check.svg") no-repeat center;
     background-size: rem(12px);
     opacity: 0;
+    width: 24px;
+    height: 24px;
   }
 }
 </style>
