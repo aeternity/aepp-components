@@ -125,8 +125,6 @@ export default {
   min-width: 2rem;
   min-height: 1.5rem;
   transition: all $base-transition-time;
-  width: 24px;
-  height: 24px;
 
   &:before, &:after {
     position: absolute;
