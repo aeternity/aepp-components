@@ -1,34 +1,40 @@
 <template>
-  <label
-    :for="id"
-    class="ae-check"
-    :class="{ [align]: Boolean(align), extend }">
-    <input :id="id" :type="type" :name="name" :value="value" :disabled="disabled">
+  <label class="ae-check">
+    <input
+      :id="id"
+      :type="type"
+      :name="name"
+      :value="value"
+      :checked="isChecked"
+      :disabled="disabled"
+      @change="change">
     <span class="ae-check-button">
       <slot />
     </span>
-    <slot class="ae-check-content" name="content"/>
   </label>
 </template>
+
 <script>
 export default {
   name: 'ae-check',
+  model: {
+    prop: 'checked',
+    event: 'change',
+  },
   props: {
     /**
      * ID of the component/input
      */
     id: String,
-
     /**
      * Name of component
      */
     name: String,
-
     /**
      * value of component
      */
-    value: Boolean,
-
+    value: { type: [String, Number, Boolean], default: undefined },
+    checked: { type: [Array, String, Number, Boolean], default: false },
     /**
      * Define the type of the input
      */
@@ -36,21 +42,6 @@ export default {
       type: String,
       default: 'checkbox',
     },
-
-    /**
-     * Align the content slot:
-     * `left`
-     */
-    align: {
-      type: String,
-      validator: value => ['left'].includes(value),
-    },
-
-    /**
-     * Extend the check component full width
-     */
-    extend: Boolean,
-
     /**
      * Puts the component in disabled state
      */
@@ -59,10 +50,34 @@ export default {
       default: false,
     },
   },
+  computed: {
+    isChecked() {
+      return Array.isArray(this.checked)
+        ? this.checked.includes(this.value)
+        : this.checked === this.value || this.checked === true;
+    },
+  },
+  methods: {
+    change(event) {
+      let newValue;
+      if (this.value === undefined) newValue = event.target.checked;
+      else if (this.type === 'radio' || !Array.isArray(this.checked)) newValue = this.value;
+      else {
+        newValue = event.target.checked
+          ? [...this.checked, this.value]
+          : this.checked.filter(c => c !== this.value);
+      }
+      this.$emit('change', newValue);
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/globals/functions';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/animations';
+@import '../../styles/variables/typography';
+@import '../../styles/placeholders/typography';
 
 .ae-check {
   user-select: none;
@@ -101,11 +116,11 @@ export default {
 }
 
 .ae-check-button {
-  @include size(24px);
   @extend %face-sans-base;
 
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding-left: rem(32px);
   min-width: rem(32px);
   min-height: rem(24px);
@@ -117,43 +132,25 @@ export default {
     content: ' ';
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 4px;
     transition: all $base-transition-time;
   }
 
   &:before {
-    @include size(24px);
-
     background: $color-white;
     border: 2px solid $color-neutral-positive-1;
     border-radius: 50%;
     box-shadow: 0 0 16px $color-shadow-alpha-15;
+    width: 24px;
+    height: 24px;
   }
 
   &:after {
-    @include size(24px);
-
     background: url("./images/check.svg") no-repeat center;
     background-size: rem(12px);
     opacity: 0;
+    width: 24px;
+    height: 24px;
   }
-}
-
-.ae-check-content {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.ae-check.left > .ae-check-button {
-  order: 2;
-}
-
-.ae-check.left > .ae-check-content {
-  order: 1;
-}
-
-.ae-check.extend {
-  width: 100%;
 }
 </style>

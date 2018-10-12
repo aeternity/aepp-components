@@ -1,52 +1,56 @@
-```jsx
-  <ae-check name="hello">
-    <ae-text>Checking</ae-text> 
-  </ae-check>
-``` 
-
-### slot: content
-```jsx
-  <ae-check name="content" extend>
-    <div slot="content">
-      <h1> heading </h1>
-      <span>sub heading </span>
-    </div>
-  </ae-check>
-``` 
-
-### prop: align
-```jsx
-  <ae-check name="align" align="left" extend>
-    <div slot="content">
-      <h1> heading </h1>
-      <span>sub heading </span>
-    </div>
-  </ae-check>
+```vue
+<ae-check />
 ``` 
 
 ### prop: type
-```jsx
-  <ae-list>
-    <ae-list-item>
-        <ae-check name="align" type="radio" align="left" extend>
-          <div slot="content">
-            <h1> radio 1 </h1>
-          </div>
-        </ae-check>
-    </ae-list-item>
-    <ae-list-item>
-        <ae-check name="align" type="radio" align="left" extend>
-          <div slot="content">
-            <h1> radio 2 </h1>
-          </div>
-        </ae-check>
-    </ae-list-item>
-  </ae-list>
+```vue
+<template>
+  <div>
+    <h2>Radio</h2>
+    <div>
+      <ae-check v-model="singleChoice" value="1" type="radio">
+        Radio button 1
+      </ae-check>
+    </div>
+    <div>
+      <ae-check v-model="singleChoice" value="2" type="radio">
+        Radio button 2
+      </ae-check>
+    </div>
+    <div>value: {{ singleChoice }}</div>
+
+    <h2>Checkbox</h2>
+    <div>
+      <ae-check v-model="multipleChoices" value="1" type="checkbox">
+        Checkbox 1
+      </ae-check>
+    </div>
+    <div>
+      <ae-check v-model="multipleChoices" value="2" type="checkbox">
+        Checkbox 2
+      </ae-check>
+    </div>
+    <div>value: {{ multipleChoices }}</div>
+  </div>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    singleChoice: undefined,
+    multipleChoices: ['2'],
+  })
+}
+</script>
+
+<style scoped>
+label:not(.ae-check) {
+  display: block;
+}
+</style>
 ``` 
 
 ### prop: disabled
-```jsx
-  <ae-check name="hello" disabled>
-    <ae-text>Checking</ae-text> 
-  </ae-check>
+```vue
+<ae-check disabled />
 ``` 
