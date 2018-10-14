@@ -2,14 +2,14 @@
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-card>
       <template slot="avatar">
-        <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+        <ae-identicon address="ak_QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
         <ae-input-plain placeholder="Account name" value="My account" />
       </template>
       <template slot="header">
         <ae-text fill="white" face="mono-base">20.65 AE</ae-text>
       </template>
       <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
-      <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
+      <ae-address value="ak_QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
       <ae-toolbar align="right" slot="footer">
         <ae-button face="toolbar">
           <ae-icon name="eye" />
@@ -38,14 +38,14 @@
     <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
       <ae-card>
         <template slot="avatar">
-          <ae-identicon address="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
+          <ae-identicon address="ak_QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
           <ae-input-plain placeholder="Account name" value="My account" />
         </template>
         <template slot="header">
           <ae-text fill="white" face="mono-base">20.65 AE</ae-text>
         </template>
         <ae-text face="uppercase-xs" weight=600 style="margin: 0">Normal Secured</ae-text>
-        <ae-address value="ak$QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
+        <ae-address value="ak_QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" length="medium" gap=0 />
         <ae-toolbar align="right" slot="footer">
           <ae-button face="toolbar">
             <ae-icon name="eye" />
