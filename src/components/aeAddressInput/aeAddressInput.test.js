@@ -1,8 +1,8 @@
 import { mount } from 'vue-test-utils'
 import AeAddressInput from './aeAddressInput.vue'
 
-const testAddress = 'ak$12345678912345678912345678912345678912345678912345'
-const testAddressFormatted = 'ak$ 123 456 789 123 456 789 123 456 789 123 456 789 123 456 789 123 45'
+const testAddress = 'ak_12345678912345678912345678912345678912345678912345'
+const testAddressFormatted = 'ak_ 123 456 789 123 456 789 123 456 789 123 456 789 123 456 789 123 45'
 
 describe('AeAddressInput', () => {
   it('formats passed value', () => {
@@ -16,22 +16,22 @@ describe('AeAddressInput', () => {
     wrapper.trigger('input')
 
     const emittedValue = wrapper.emitted('input')[0][0]
-    expect(emittedValue).toEqual('ak$beef')
+    expect(emittedValue).toEqual('ak_beef')
     wrapper.setProps({ value: emittedValue })
-    expect(wrapper.element.value).toBe('ak$ bee f')
+    expect(wrapper.element.value).toBe('ak_ bee f')
   })
 
   it('removes non-base58 symbols', () => {
     const wrapper = mount(AeAddressInput)
-    const value = 'ak$019AHIJNOPZaklmz'
+    const value = 'ak_019AHIJNOPZaklmz'
     wrapper.element.value = value
     wrapper.element.setSelectionRange(value.length, value.length)
     wrapper.trigger('input')
 
     const emittedValue = wrapper.emitted('input')[0][0]
-    expect(emittedValue).toEqual('ak$19AHJNPZakmz')
+    expect(emittedValue).toEqual('ak_19AHJNPZakmz')
     wrapper.setProps({ value: emittedValue })
-    expect(wrapper.element.value).toBe('ak$ 19A HJN PZa kmz')
+    expect(wrapper.element.value).toBe('ak_ 19A HJN PZa kmz')
   })
 
   it('emitted input event contains address without space symbols', () => {
@@ -56,7 +56,7 @@ describe('AeAddressInput', () => {
   })
 
   it('backspace can remove the whole value', () => {
-    const wrapper = mount(AeAddressInput, { propsData: { value: 'ak$12' } })
+    const wrapper = mount(AeAddressInput, { propsData: { value: 'ak_12' } })
 
     while (wrapper.element.value) {
       const { value } = wrapper.element

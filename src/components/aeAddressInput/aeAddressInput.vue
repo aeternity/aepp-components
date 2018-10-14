@@ -47,10 +47,10 @@ export default {
     formatAddress (address, cursor = address.length) {
       if (['', 'a', 'ak'].includes(address)) return { address, cursor }
 
-      let [begin, end] = [[address.startsWith('ak$') ? 3 : 0, cursor], [cursor]]
+      let [begin, end] = [[address.startsWith('ak_') ? 3 : 0, cursor], [cursor]]
         .map(args => address.slice(...args).replace(/[^1-9A-HJ-NP-Za-km-z]/g, ''))
 
-      begin = `ak$${begin}`
+      begin = `ak_${begin}`
 
       const splitBy = 3
       const addSpaces = (address, firstLength) => {
