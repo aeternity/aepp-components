@@ -63,6 +63,6 @@ export default {}
   verified
   show-avatar
   size='short'
-  address='ak$3K1hfV4j3HdKHyUgyDSTsK9pm1nvBK5V72UYQ41UuRJ7ei1QWskoEPZzpzgk5WJCi4efcRrCvoLHMrE9PBG1WZ1zL8q5Bz'
+  address='ak_3K1hfV4j3HdKHyUgyDSTsK9pm1nvBK5V72UYQ41UuRJ7ei1QWskoEPZzpzgk5WJCi4efcRrCvoLHMrE9PBG1WZ1zL8q5Bz'
 />
 ```
