@@ -1,5 +1,10 @@
 <template>
-  <ul class="ae-address" :style="{ gridGap: gap }" v-remove-spaces-on-copy>
+  <ul
+    class="ae-address"
+    :class="[ length ]"
+    :style="{ gridGap: gap }"
+    v-remove-spaces-on-copy
+  >
     <template v-if="length === 'medium'">
       <li v-for="chunk in chunked.slice(0, 3)" :key="chunk">
         {{ chunk }}
@@ -12,11 +17,11 @@
       </li>
     </template>
     <template v-else-if="length === 'short'">
-      <li v-for="chunk in chunked.slice(0, 1)" :key="chunk">
+      <li v-for="chunk in chunked.slice(0, 2)" :key="chunk">
         {{ chunk }}
       </li>
       <li>...</li>
-      <li v-for="chunk in chunked.slice(17, 18)" :key="chunk">
+      <li v-for="chunk in chunked.slice(16, 18)" :key="chunk">
         {{ chunk }}
       </li>
     </template>
@@ -85,6 +90,10 @@ export default {
 
   > li {
     list-style: none;
+  }
+
+  &.short {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 </style>
