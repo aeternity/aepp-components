@@ -41,9 +41,6 @@ import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
 export default {
   name: 'ae-address',
   directives: { copyToClipboard, removeSpacesOnCopy },
-  data() {
-    return { copied: false };
-  },
   props: {
     /**
      * ae address value to be displayed
