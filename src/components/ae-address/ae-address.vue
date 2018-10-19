@@ -1,8 +1,10 @@
 <template>
   <ul
+    ref="address"
     class="ae-address"
-    :class="[ length ]"
+    :class="[ length, { copied } ]"
     :style="{ gridGap: gap }"
+    v-copy-to-clipboard="value"
     v-remove-spaces-on-copy
   >
     <template v-if="length === 'medium'">
@@ -33,11 +35,15 @@
   </ul>
 </template>
 <script>
+import copyToClipboard from '../../directives/copy-to-clipboard';
 import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
 
 export default {
   name: 'ae-address',
-  directives: { removeSpacesOnCopy },
+  directives: { copyToClipboard, removeSpacesOnCopy },
+  data() {
+    return { copied: false };
+  },
   props: {
     /**
      * ae address value to be displayed
@@ -76,6 +82,7 @@ export default {
 .ae-address {
   @extend %face-mono-base;
 
+  position: relative;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -94,6 +101,28 @@ export default {
 
   &.short {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  &.v-copied-to-clipboard {
+    opacity: 0.4;
+  }
+
+  &.v-copied-to-clipboard:before {
+    @extend %face-mono-base;
+
+    content: 'address copied';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-black;
+    font-weight: bold;
+    font-size: 1.25rem;
+    background: rgba($color-neutral-positive-1, 0.25);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
   }
 }
 </style>
