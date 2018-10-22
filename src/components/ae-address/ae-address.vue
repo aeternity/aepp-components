@@ -2,7 +2,7 @@
   <ul
     ref="address"
     class="ae-address"
-    :class="[ length, { copied } ]"
+    :class="[ length ]"
     :style="{ gridGap: gap }"
     v-copy-to-clipboard="value"
     v-remove-spaces-on-copy
@@ -84,7 +84,7 @@ export default {
   align-items: center;
   justify-items: center;
   grid-gap: rem(4px);
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   font-weight: 500;
   width: 100%;
@@ -97,7 +97,7 @@ export default {
   }
 
   &.short {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
   }
 
   &.v-copied-to-clipboard {
