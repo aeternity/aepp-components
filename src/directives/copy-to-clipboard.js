@@ -7,7 +7,7 @@ import copy from 'clipboard-copy';
  * @return {Object}
  */
 export default {
-  inserted: (el, binding) => el.addEventListener('click', async () => copy(binding.value).then(() => {
+  inserted: (el, binding) => el.addEventListener('click', () => copy(binding.value).then(() => {
     el.classList.add('v-copied-to-clipboard');
     setTimeout(
       () => el.classList.remove('v-copied-to-clipboard'),
