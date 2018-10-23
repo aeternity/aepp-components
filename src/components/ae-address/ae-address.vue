@@ -1,5 +1,12 @@
 <template>
-  <ul class="ae-address" :style="{ gridGap: gap }" v-remove-spaces-on-copy>
+  <ul
+    ref="address"
+    class="ae-address"
+    :class="[ length ]"
+    :style="{ gridGap: gap }"
+    v-copy-to-clipboard="value"
+    v-remove-spaces-on-copy
+  >
     <template v-if="length === 'medium'">
       <li v-for="chunk in chunked.slice(0, 3)" :key="chunk">
         {{ chunk }}
@@ -12,11 +19,11 @@
       </li>
     </template>
     <template v-else-if="length === 'short'">
-      <li v-for="chunk in chunked.slice(0, 1)" :key="chunk">
+      <li v-for="chunk in chunked.slice(0, 2)" :key="chunk">
         {{ chunk }}
       </li>
       <li>...</li>
-      <li v-for="chunk in chunked.slice(17, 18)" :key="chunk">
+      <li v-for="chunk in chunked.slice(16, 18)" :key="chunk">
         {{ chunk }}
       </li>
     </template>
@@ -28,11 +35,12 @@
   </ul>
 </template>
 <script>
+import copyToClipboard from '../../directives/copyToClipboard';
 import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
 
 export default {
   name: 'ae-address',
-  directives: { removeSpacesOnCopy },
+  directives: { copyToClipboard, removeSpacesOnCopy },
   props: {
     /**
      * ae address value to be displayed
@@ -71,11 +79,12 @@ export default {
 .ae-address {
   @extend %face-mono-base;
 
+  position: relative;
   display: grid;
   align-items: center;
   justify-items: center;
   grid-gap: rem(4px);
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   font-weight: 500;
   width: 100%;
@@ -85,6 +94,32 @@ export default {
 
   > li {
     list-style: none;
+  }
+
+  &.short {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &.v-copied-to-clipboard {
+    opacity: 0.4;
+  }
+
+  &.v-copied-to-clipboard:before {
+    @extend %face-mono-base;
+
+    content: 'address copied';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-black;
+    font-weight: bold;
+    font-size: 1.25rem;
+    background: rgba($color-neutral-positive-1, 0.25);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
   }
 }
 </style>
