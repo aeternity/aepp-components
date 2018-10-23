@@ -4,8 +4,8 @@
 // *****************************
 //------------------------------
 
-@import '../variables/typography.scss';
-@import '../globals/functions.scss';
+@import "../globals/functions";
+@import "../variables/typography";
 
 /// Typography Sans
 %face-sans-l {
@@ -34,7 +34,6 @@
   line-height: rem(16px);
 }
 
-/// Typography Mono
 %face-mono-xl {
   font-family: $font-mono;
   font-size: rem(52px);
@@ -61,7 +60,6 @@
   line-height: rem(16px);
 }
 
-/// Extras
 %face-tracked-base {
   font-family: $font-mono;
   font-size: rem(17px);

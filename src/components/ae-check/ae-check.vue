@@ -121,9 +121,9 @@ export default {
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding-left: rem(32px);
-  min-width: rem(32px);
-  min-height: rem(24px);
+  padding-left: 2rem;
+  min-width: 2rem;
+  min-height: 1.5rem;
   transition: all $base-transition-time;
 
   &:before, &:after {
@@ -147,7 +147,7 @@ export default {
 
   &:after {
     background: url("./images/check.svg") no-repeat center;
-    background-size: rem(12px);
+    background-size: 0.75rem;
     opacity: 0;
     width: 24px;
     height: 24px;

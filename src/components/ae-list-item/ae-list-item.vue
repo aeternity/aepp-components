@@ -26,7 +26,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/variables/colors';
 
 .ae-list-item {
   display: flex;
@@ -34,7 +34,7 @@ export default {
   align-items: center;
   list-style: none;
   border-top: 2px solid transparent;
-  padding: rem(12px) 0;
+  padding: 0.75rem 0;
 }
 
 .ae-list-item.primary {

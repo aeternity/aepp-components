@@ -15,14 +15,15 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/variables/colors';
+@import '../../styles/placeholders/typography';
 
 .ae-badge {
   @extend %face-mono-s;
 
   user-select: none;
   display: inline-flex;
-  padding: 0 rem(8px);
+  padding: 0 0.5rem;
   height: 32px;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +31,7 @@ export default {
   border-radius: 4px;
   color: $color-neutral-negative-3;
   font-weight: 400;
-  margin-bottom: rem(4px);
+  margin-bottom: 0.25rem;
 
   &.disabled {
     background: $color-white;

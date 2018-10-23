@@ -28,7 +28,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/globals';
+@import '../../styles/globals/mixins';
+@import '../../styles/variables/colors';
+@import '../../styles/placeholders/typography';
 
 .ae-toolbar {
   // Extend font-type
@@ -39,9 +41,9 @@ export default {
 
   display: flex;
   flex-direction: row;
-  height: rem(32px);
+  height: 2rem;
   align-items: center;
-  padding: 0 rem(16px);
+  padding: 0 1rem;
   font-weight: 500;
   background: $color-neutral-positive-2;
   color: $color-neutral-negative-1;
