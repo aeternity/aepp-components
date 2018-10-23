@@ -74,6 +74,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../../styles/variables/colors';
 @import '../../styles/placeholders/typography';
 
 .ae-address {
