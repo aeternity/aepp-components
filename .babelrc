@@ -18,7 +18,7 @@
       "moduleName": "babel-runtime",
       "polyfill": true,
       "helpers": false,
-      "regenerator": false
+      "regenerator": true
     }],
     ["transform-object-rest-spread", {
       "useBuiltIns": true
