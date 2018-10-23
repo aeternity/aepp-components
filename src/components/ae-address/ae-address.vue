@@ -35,7 +35,7 @@
   </ul>
 </template>
 <script>
-import copyToClipboard from '../../directives/copy-to-clipboard';
+import copyToClipboard from '../../directives/copyToClipboard';
 import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
 
 export default {
