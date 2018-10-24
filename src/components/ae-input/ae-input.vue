@@ -9,14 +9,19 @@
         <slot name="header" />
       </div>
       <!-- Input tag -->
-      <input :type="type"
-             :id="id"
-             :placeholder="placeholder"
-             class="ae-input"
-             :class="{ aemount }"
-             @focus="focus = true"
-             @blur="focus = false"
-             @input="propagate" />
+      <input
+        v-model="value"
+        v-if="!$slots.default"
+        :type="type"
+        :id="id"
+        :placeholder="placeholder"
+        class="ae-input"
+        :class="{ aemount }"
+        @focus="focus = true"
+        @blur="focus = false"
+        @input="propagate"
+      />
+      <slot />
     </div>
     <!-- @slot footer slot, used for adding elements below the input -->
     <slot name="footer" />
@@ -41,6 +46,11 @@ export default {
      * Temporary text appearing in the input box
      */
     placeholder: String,
+
+    /**
+     * Default input element value
+     */
+    value: [String, Number],
 
     /**
      * Define the type of the input
@@ -95,18 +105,18 @@ export default {
   }
 
   &.focus {
-    border-left: 2px solid $color-focus;
-    caret-color: $color-focus;
+    border-left: 2px solid $color-magenta;
+    caret-color: $color-magenta;
   }
   &.focus .ae-input-label {
-    color: $color-focus;
+    color: $color-magenta;
   }
   &.error {
-    border-left: 2px solid $color-error;
-    caret-color: $color-error;
+    border-left: 2px solid $color-red;
+    caret-color: $color-red;
   }
   &.error .ae-input-label {
-    color: $color-error;
+    color: $color-red;
   }
 
   &.focus .ae-input-label:after,
