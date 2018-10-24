@@ -3,13 +3,16 @@
     :class="['ae-input-plain', fill]"
     :placeholder="placeholder"
     :value="value"
-    @input="$emit('input', $event.target.value)"
+    @input="propagate"
   />
 </template>
 
 <script>
+import { events } from '../../mixins';
+
 export default {
   name: 'ae-input-plain',
+  mixins: [events],
   props: {
     /**
      * Fill property changes the color of placeholder and value.
