@@ -51,5 +51,8 @@ $color-shadow-alpha-15: rgba(0, 33, 87, 0.15);
 $color-shadow-alpha-10: rgba(0, 33, 87, 0.15);
 
 // General Colors
-$color-black: #000000 !default;
-$color-white: #ffffff !default;
+$color-black:   #000000 !default;
+$color-white:   #ffffff !default;
+$color-red:     $color-error !default;
+$color-magenta: $color-focus !default;
+$color-cyan:    $color-focus-alt !default;
