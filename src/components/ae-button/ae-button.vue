@@ -7,7 +7,7 @@
             [face]: Boolean(face),
             extend
           }"
-          @click="propagate">
+          @click="propagateEvent">
     <slot />
   </button>
 </template>

@@ -10,16 +10,16 @@
       </div>
       <!-- Input tag -->
       <input
-        v-model="value"
         v-if="!$slots.default"
-        :type="type"
         :id="id"
+        :value="value"
+        :type="type"
         :placeholder="placeholder"
         class="ae-input"
         :class="{ aemount }"
         @focus="focus = true"
         @blur="focus = false"
-        @input="propagate"
+        @input="propagateValue"
       />
       <slot />
     </div>

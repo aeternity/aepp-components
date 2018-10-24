@@ -3,7 +3,7 @@
     :class="['ae-input-plain', fill]"
     :placeholder="placeholder"
     :value="value"
-    @input="propagate"
+    @input="propagateValue"
   />
 </template>
 
