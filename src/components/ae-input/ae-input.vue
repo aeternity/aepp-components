@@ -48,7 +48,7 @@ export default {
     placeholder: String,
 
     /**
-     * Default input element value
+     * Actual input element value
      */
     value: [String, Number],
 
