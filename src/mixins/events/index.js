@@ -27,7 +27,6 @@ export default {
      * Its useful when you have input children components
      * and want to use v-model in the parent component
      * @param {Event} event
-     * @return {*|default.methods}
      */
     propagateEventValue(event) {
       this.$emit(event.type, event.target.value);
