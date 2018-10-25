@@ -19,7 +19,7 @@
         :class="{ aemount }"
         @focus="focus = true"
         @blur="focus = false"
-        @input="propagateValue"
+        @input="propagateEventValue"
       />
       <slot />
     </div>

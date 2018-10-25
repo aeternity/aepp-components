@@ -18,7 +18,7 @@ export default {
        * @event *
        * @type {Event}
        */
-      return this.$emit(event.type, event);
+      this.$emit(event.type, event);
     },
 
     /**
@@ -29,8 +29,8 @@ export default {
      * @param {Event} event
      * @return {*|default.methods}
      */
-    propagateValue(event) {
-      return this.$emit(event.type, event.target.value);
+    propagateEventValue(event) {
+      this.$emit(event.type, event.target.value);
     },
   },
 };
