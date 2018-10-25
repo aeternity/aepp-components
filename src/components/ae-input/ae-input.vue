@@ -105,18 +105,18 @@ export default {
   }
 
   &.focus {
-    border-left: 2px solid $color-magenta;
-    caret-color: $color-magenta;
+    border-left: 2px solid $color-focus;
+    caret-color: $color-focus;
   }
   &.focus .ae-input-label {
-    color: $color-magenta;
+    color: $color-focus;
   }
   &.error {
-    border-left: 2px solid $color-red;
-    caret-color: $color-red;
+    border-left: 2px solid $color-error;
+    caret-color: $color-error;
   }
   &.error .ae-input-label {
-    color: $color-red;
+    color: $color-error;
   }
 
   &.focus .ae-input-label:after,
