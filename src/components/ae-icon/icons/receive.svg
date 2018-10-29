@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>atoms/icons/ui/receive</title>
-    <desc>Created with Sketch.</desc>
-    <g id="atoms/icons/ui/receive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M9.79779943,15.7140452 L14.8570226,15.7140452 C15.3172599,15.7140452 15.6903559,16.0871412 15.6903559,16.5473785 C15.6903559,17.0076158 15.3172599,17.3807119 14.8570226,17.3807119 L7.78595479,17.3807119 C7.3257175,17.3807119 6.95262146,17.0076158 6.95262146,16.5473785 L6.95262146,9.47631073 C6.95262146,9.01607344 7.3257175,8.6429774 7.78595479,8.6429774 C8.24619208,8.6429774 8.61928813,9.01607344 8.61928813,9.47631073 L8.61928813,14.5355339 L16.6247896,6.53003247 C16.9502265,6.20459556 17.4778639,6.20459556 17.8033009,6.53003247 C18.1287378,6.85546938 18.1287378,7.38310687 17.8033009,7.70854378 L9.79779943,15.7140452 Z" id="Path" fill="#000000" fill-rule="nonzero"></path>
-    </g>
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>atoms/icons/ui/receive</title><path d="M9.798 15.714h5.059a.833.833 0 1 1 0 1.667H7.786a.833.833 0 0 1-.833-.834v-7.07a.833.833 0 1 1 1.666 0v5.059l8.006-8.006a.833.833 0 1 1 1.178 1.179l-8.005 8.005z" fill="#000" fill-rule="nonzero"/></svg>
