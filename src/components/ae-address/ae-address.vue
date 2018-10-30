@@ -99,6 +99,10 @@ export default {
 
   &.short {
     grid-template-columns: repeat(5, 1fr);
+
+    &.v-copied-to-clipboard:before {
+      font-size: 0.875rem;
+    }
   }
 
   &.v-copied-to-clipboard {
@@ -112,9 +116,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $color-black;
-    font-weight: bold;
-    font-size: 1.25rem;
+    font-weight: 500;
     background: rgba($color-neutral-positive-1, 0.25);
     position: absolute;
     top: 0;
