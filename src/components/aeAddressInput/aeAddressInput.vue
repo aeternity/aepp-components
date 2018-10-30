@@ -43,10 +43,10 @@ export default {
     formatAddress(address, cursor = address.length) {
       if (['', 'a', 'ak'].includes(address)) return { address, cursor };
 
-      const [beginUnprefixed, end] = [[address.startsWith('ak$') ? 3 : 0, cursor], [cursor]]
+      const [beginUnprefixed, end] = [[address.startsWith('ak_') ? 3 : 0, cursor], [cursor]]
         .map(args => address.slice(...args).replace(/[^1-9A-HJ-NP-Za-km-z]/g, ''));
 
-      const begin = `ak$${beginUnprefixed}`;
+      const begin = `ak_${beginUnprefixed}`;
 
       const splitBy = 3;
       const addSpaces = (addressPart, firstLength) => {

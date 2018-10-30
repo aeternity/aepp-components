@@ -40,6 +40,7 @@
     <ae-icon name="more" />
     <ae-icon name="paste" />
     <ae-icon name="plus" />
+    <ae-icon name="receive" />
     <ae-icon name="reload" />
     <ae-icon name="save" />
     <ae-icon name="search" />
@@ -47,6 +48,7 @@
     <ae-icon name="share" />
     <ae-icon name="shield" />
     <ae-icon name="shield-fill" />
+    <ae-icon name="sign-out" />
     <ae-icon name="square" />
     <ae-icon name="transfer" />
     <ae-icon name="underline" />

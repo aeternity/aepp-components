@@ -9,6 +9,9 @@
 /// @docs https://github.com/JohnAlbin/normalize-scss#how-to-use-it
 @import "~normalize.css/normalize.css";
 
+@import "variables/colors";
+@import "variables/typography";
+
 /// General HTML/Body styles
 /// border-boxing fix
 html, body {

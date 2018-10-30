@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@download/blockies": "^1.0.3",
+    "clipboard-copy": "^2.0.1",
     "normalize.css": "^8.0.0",
     "qrious": "^4.0.2",
     "vue-clickaway": "^2.1.0",
