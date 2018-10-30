@@ -7,10 +7,6 @@
 @import "variables/animations";
 @import "variables/typography";
 
-h1, h2, h3, h4, h5, h6, p {
-  line-height: $base-line-height;
-}
-
 p {
   font-size: $base-font-size;
 }
