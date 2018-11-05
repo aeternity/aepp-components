@@ -51,7 +51,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  @import '../../styles/globals';
+  @import '../../styles/globals/functions';
+  @import '../../styles/variables/animations';
+  @import '../../styles/variables/colors';
 
   .ae-slider {
     position: relative;
@@ -109,6 +111,6 @@ export default {
     bottom: 0;
     height: auto;
     padding: rem(20px) rem(32px);
-    z-index: $stack-5;
+    z-index: 1000;
   }
 </style>
