@@ -117,7 +117,7 @@ export default {
   border-radius: 32px;
   box-shadow: 0 0 16px $color-shadow-alpha-15;
   color: $color-white;
-  padding: 0 1rem;
+  padding: 0 2rem;
 
   &:disabled {
     cursor: not-allowed;
