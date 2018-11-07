@@ -68,7 +68,7 @@ export default {
      * @return {String[]}
      */
     chunked() {
-      return this.value.match(/.{1,3}/g);
+      return this.value.match(/^(\w{2}_)|.{2}(?=.{47,53})|.{2,3}/g);
     },
   },
 };
@@ -105,10 +105,6 @@ export default {
     }
   }
 
-  &.v-copied-to-clipboard {
-    opacity: 0.4;
-  }
-
   &.v-copied-to-clipboard:before {
     @extend %face-mono-base;
 
@@ -117,7 +113,8 @@ export default {
     justify-content: center;
     align-items: center;
     font-weight: 500;
-    background: rgba($color-neutral-positive-1, 0.25);
+    color: $color-neutral-negative-3;
+    background: rgba($color-neutral-positive-1, 0.9);
     position: absolute;
     top: 0;
     right: 0;
