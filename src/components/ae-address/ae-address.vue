@@ -68,7 +68,7 @@ export default {
      * @return {String[]}
      */
     chunked() {
-      return this.value.match(/^(\w{2}_)|.{2}(?=.{47,53})|.{2,3}/g);
+      return this.value.match(/^\w{2}_|.{2}(?=.{47,48}$)|.{2,3}/g);
     },
   },
 };
