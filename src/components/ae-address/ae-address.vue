@@ -4,6 +4,7 @@
     class="ae-address"
     :class="[ length ]"
     :style="{ gridGap: gap }"
+    :title="value"
     v-copy-to-clipboard="value"
     v-remove-spaces-on-copy
   >
@@ -25,6 +26,11 @@
       <li>...</li>
       <li v-for="chunk in chunked.slice(16, 18)" :key="chunk">
         {{ chunk }}
+      </li>
+    </template>
+    <template v-else-if="length === 'flat'">
+      <li>
+        {{ chunked.join('') }}
       </li>
     </template>
     <template v-else>
@@ -52,7 +58,7 @@ export default {
 
     /**
      * Set the length of the address
-     * valid properties: `medium, short`
+     * valid properties: `medium, short, flat`
      */
     length: String,
 
@@ -102,6 +108,14 @@ export default {
 
     &.v-copied-to-clipboard:before {
       font-size: 0.875rem;
+    }
+  }
+
+  &.flat {
+    grid-template-columns: 1fr;
+
+    > li {
+      word-break: break-all;
     }
   }
 
