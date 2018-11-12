@@ -4,6 +4,7 @@
     class="ae-address"
     :class="[ length ]"
     :style="{ gridGap: gap }"
+    :title="value"
     v-copy-to-clipboard="value"
     v-remove-spaces-on-copy
   >
@@ -25,6 +26,11 @@
       <li>...</li>
       <li v-for="chunk in chunked.slice(16, 18)" :key="chunk">
         {{ chunk }}
+      </li>
+    </template>
+    <template v-else-if="length === 'flat'">
+      <li>
+        {{ chunked.join('') }}
       </li>
     </template>
     <template v-else>
@@ -52,7 +58,7 @@ export default {
 
     /**
      * Set the length of the address
-     * valid properties: `medium, short`
+     * valid properties: `medium, short, flat`
      */
     length: String,
 
@@ -68,7 +74,7 @@ export default {
      * @return {String[]}
      */
     chunked() {
-      return this.value.match(/.{1,3}/g);
+      return this.value.match(/^\w{2}_|.{2}(?=.{47,48}$)|.{2,3}/g);
     },
   },
 };
@@ -99,10 +105,18 @@ export default {
 
   &.short {
     grid-template-columns: repeat(5, 1fr);
+
+    &.v-copied-to-clipboard:before {
+      font-size: 0.875rem;
+    }
   }
 
-  &.v-copied-to-clipboard {
-    opacity: 0.4;
+  &.flat {
+    grid-template-columns: 1fr;
+
+    > li {
+      word-break: break-all;
+    }
   }
 
   &.v-copied-to-clipboard:before {
@@ -112,10 +126,9 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $color-black;
-    font-weight: bold;
-    font-size: 1.25rem;
-    background: rgba($color-neutral-positive-1, 0.25);
+    font-weight: 500;
+    color: $color-neutral-negative-3;
+    background: rgba($color-neutral-positive-1, 0.9);
     position: absolute;
     top: 0;
     right: 0;

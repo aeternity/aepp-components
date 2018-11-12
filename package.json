@@ -29,6 +29,7 @@
     "clipboard-copy": "^2.0.1",
     "normalize.css": "^8.0.0",
     "qrious": "^4.0.2",
+    "vue-agile": "^0.3.7",
     "vue-clickaway": "^2.1.0",
     "vue-touch": "^2.0.0-beta.4"
   },
