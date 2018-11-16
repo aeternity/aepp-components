@@ -3,7 +3,6 @@
     <slot />
   </div>
 </template>
-
 <script>
 /**
  * Displays app background, preserves free space for Identity manager UI,
@@ -13,7 +12,6 @@ export default {
   name: 'ae-main',
 };
 </script>
-
 <style lang="scss">
   html {
     height: 100%;
@@ -23,13 +21,12 @@ export default {
     height: 1px;
   }
 </style>
-
 <style lang="scss" scoped>
-  .ae-main {
-    background: fixed linear-gradient(to bottom, white, #f1f4f7);
-    min-height: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    padding-bottom: 80px;
-  }
+.ae-main {
+  background: fixed linear-gradient(to bottom, white, #F1F4F7);
+  min-height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: 80px;
+}
 </style>

@@ -3,7 +3,6 @@
     <slot />
   </div>
 </template>
-
 <script>
 export default {
   name: 'ae-overlay',
@@ -26,17 +25,16 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
-  @import '../../styles/variables/old_vars';
+@import '../../styles/fallback/variables';
 
-  .ae-overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom, rgba($anthracite, 0.9), rgba($aubergine, 0.9));
-    overflow: auto;
-  }
+.ae-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, rgba($anthracite, 0.9), rgba($aubergine, 0.9));
+  overflow: auto;
+}
 </style>

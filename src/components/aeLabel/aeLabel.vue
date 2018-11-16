@@ -9,7 +9,6 @@
     </div>
   </label>
 </template>
-
 <script>
 import { TYPE_PROPERTY_VALUES as types } from '../../core/constants';
 
@@ -36,37 +35,36 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
-  @import '../../styles/variables/old_vars';
+@import '../../styles/fallback/variables';
 
-  .ae-label {
-    display: flex;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    align-items: center;
-    line-height: 28px;
+.ae-label {
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  align-items: center;
+  line-height: 28px;
 
-    .content {
-      flex-grow: 1;
-    }
+  .content {
+    flex-grow: 1;
+  }
 
-    .help {
-      font-size: 13px;
-      text-align: right;
-      text-transform: none;
-      margin-left: 5px;
-      line-height: 14px;
+  .help {
+    font-size: 13px;
+    text-align: right;
+    text-transform: none;
+    margin-left: 5px;
+    line-height: 14px;
 
-      &._type {
-        @each $type in map_keys($type-color-map){
-          &_#{$type}{
-            color: map_get($type-color-map, $type);
-          }
+    &._type {
+      @each $type in map_keys($type-color-map) {
+        &_#{$type} {
+          color: map_get($type-color-map, $type);
         }
       }
     }
   }
+}
 </style>

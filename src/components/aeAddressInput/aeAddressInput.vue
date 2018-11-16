@@ -8,7 +8,6 @@
     v-remove-spaces-on-copy
   />
 </template>
-
 <script>
 import AeTextarea from '../aeTextarea/aeTextarea.vue';
 import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
@@ -73,13 +72,12 @@ export default {
   },
 };
 </script>
-
 <style scoped lang="scss">
-  .ae-address-input.ae-textarea {
-    resize: none;
-    text-align: center;
-    min-height: 0;
-    height: 90px;
-    line-height: 29px;
-  }
+.ae-address-input.ae-textarea {
+  resize: none;
+  text-align: center;
+  min-height: 0;
+  height: 90px;
+  line-height: 29px;
+}
 </style>
