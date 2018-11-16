@@ -45,7 +45,7 @@ export default {
 };
 
 </script>
-<style>
+<style lang="scss" scoped>
 .app-icon {
   background: #FFFFFF;
   box-shadow: 0 0 6px 0 rgba(0,0,0,0.20);

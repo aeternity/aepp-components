@@ -72,7 +72,7 @@ export default {
   },
 };
 </script>
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .ae-address-input.ae-textarea {
   resize: none;
   text-align: center;
