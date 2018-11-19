@@ -1,12 +1,12 @@
 {
-  "version": "3.1.0",
+  "version": "3.0.0",
   "name": "@aeternity/aepp-components",
   "main": "dist/aepp.components.js",
   "description": "Reusable Vue Components for aeternity aepp projects",
   "homepage": "https://github.com/aeternity/aepp-components#readme",
   "contributors": [
     "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
-    "Denis Davidyuk <denis@apeunit.com> (https://github.com/davidyuk",
+    "Denis Davidyuk <denis_davidyuk@hotmail.com> (https://github.com/davidyuk",
     "Sadi Qevani <sadi@apeunit.com> (https://github.com/sadiqevani)"
   ],
   "license": "ISC",
