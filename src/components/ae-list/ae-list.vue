@@ -1,7 +1,7 @@
 <template>
-    <div class="ae-list" :class="{ [face]: Boolean(face) }">
+    <component :is="tag" class="ae-list" :class="{ [face]: Boolean(face) }">
       <slot />
-    </div>
+    </component>
 </template>
 <script>
 export default {
@@ -15,6 +15,18 @@ export default {
       type: String,
       validator: value => ['primary'].includes(value),
     },
+
+    /**
+     * Used for dynamic components and to work
+     * around limitations of in-DOM templates.
+     * See: https://vuejs.org/v2/api/#is
+     *
+     * Default: 'ul'
+     */
+    tag: {
+      type: [Object, String],
+      default: 'ul',
+    },
   },
 };
 </script>
@@ -24,20 +36,20 @@ export default {
 .ae-list {
   padding: 0;
   margin: 0;
+}
 
-  &.primary {
-    border-radius: 4px;
-    background: $color-white;
-    box-shadow: 0 0 8px $color-shadow-alpha-15;
-    padding: 1rem;
-    overflow: hidden;
+.ae-list.primary {
+  border-radius: 4px;
+  background: $color-white;
+  box-shadow: 0 0 8px $color-shadow-alpha-15;
+  padding: 1rem;
+  overflow: hidden;
 
-    > .ae-list-item:first-child {
-      border-top: 0;
-    }
-    > .ae-list-item:last-child {
-      border-bottom: 0;
-    }
+  > *:first-child {
+    border-top: 0;
+  }
+  > *:last-child {
+    border-bottom: 0;
   }
 }
 </style>

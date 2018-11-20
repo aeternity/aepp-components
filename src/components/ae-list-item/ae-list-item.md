@@ -1,7 +1,5 @@
 ```vue
-<ae-list-item>
-  Content
-</ae-list-item>
+<ae-list-item>Content</ae-list-item>
 ```
 
 ```vue
