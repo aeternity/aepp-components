@@ -4,7 +4,11 @@
   "main": "dist/aepp.components.js",
   "description": "Reusable Vue Components for aeternity aepp projects",
   "homepage": "https://github.com/aeternity/aepp-components#readme",
-  "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
+  "contributors": [
+    "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
+    "Denis Davidyuk <denis_davidyuk@hotmail.com> (https://github.com/davidyuk",
+    "Sadi Qevani <sadi@apeunit.com> (https://github.com/sadiqevani)"
+  ],
   "license": "ISC",
   "repository": "https://github.com/aeternity/aepp-components.git",
   "bugs": "https://github.com/aeternity/aepp-components/issues",
