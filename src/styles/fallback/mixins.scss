@@ -1,4 +1,10 @@
-@import '../variables/old_vars';
+//------------------------------
+// *****************************
+// Fallback mixins
+// *****************************
+//------------------------------
+
+@import 'variables';
 
 @mixin phone {
   @media (max-width: $screen-phone - 1px) {

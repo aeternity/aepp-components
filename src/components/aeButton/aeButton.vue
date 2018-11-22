@@ -17,7 +17,6 @@
     </div>
   </component>
 </template>
-
 <script>
 import AeLink from '../aeLink/aeLink.vue';
 
@@ -80,9 +79,8 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
-@import "../../styles/variables/old_vars";
+@import "../../styles/fallback/variables";
 
 .ae-button {
   display: inline-block;

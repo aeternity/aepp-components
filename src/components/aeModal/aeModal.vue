@@ -19,11 +19,10 @@
     </div>
   </ae-overlay>
 </template>
-
 <script>
-import AeOverlay from '../aeOverlay/aeOverlay.vue';
 import AeHeader from '../aeHeader/aeHeader.vue';
 import AeButton from '../aeButton/aeButton.vue';
+import AeOverlay from '../aeOverlay/aeOverlay.vue';
 import AeIcon from '../aeIcon/aeIcon.vue';
 
 export default {
@@ -35,9 +34,9 @@ export default {
     title: String,
   },
   components: {
-    AeOverlay,
     AeHeader,
     AeButton,
+    AeOverlay,
     AeIcon,
   },
   methods: {
@@ -53,61 +52,60 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
-  @import '../../styles/globals/old_mixins';
+@import '../../styles/fallback/mixins';
 
-  .ae-overlay {
+.ae-overlay {
+  .ae-modal {
+    background: linear-gradient(to bottom, white, #F1F4F7);
+  }
+
+  @include abovePhone {
+    $overlay-padding: 10px;
+
+    display: flex;
+    padding: $overlay-padding;
+    box-sizing: border-box;
+
     .ae-modal {
-      background: linear-gradient(to bottom, white, #f1f4f7);
+      margin: auto;
+      min-width: $screen-phone - 2 * $overlay-padding;
+      border-radius: 10px;
     }
 
-    @include abovePhone {
-      $overlay-padding: 10px;
+    .phone {
+      display: none;
+    }
 
-      display: flex;
-      padding: $overlay-padding;
-      box-sizing: border-box;
+    main {
+      header {
+        display: flex;
+        justify-content: space-between;
 
-      .ae-modal {
-        margin: auto;
-        min-width: $screen-phone - 2 * $overlay-padding;
-        border-radius: 10px;
-      }
-
-      .phone {
-        display: none;
-      }
-
-      main {
-        header {
-          display: flex;
-          justify-content: space-between;
-
-          h1 {
-            font-size: 28px;
-            line-height: 50px;
-            font-weight: 500;
-            margin: 0;
-          }
+        h1 {
+          font-size: 28px;
+          line-height: 50px;
+          font-weight: 500;
+          margin: 0;
         }
-
-        padding: 30px;
-      }
-    }
-
-    @include phone {
-      .ae-modal {
-        min-height: 100%;
       }
 
-      .desktop {
-        display: none;
-      }
-
-      main {
-        padding: 0 20px 20px 20px;
-      }
+      padding: 30px;
     }
   }
+
+  @include phone {
+    .ae-modal {
+      min-height: 100%;
+    }
+
+    .desktop {
+      display: none;
+    }
+
+    main {
+      padding: 0 20px 20px 20px;
+    }
+  }
+}
 </style>

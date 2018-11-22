@@ -7,7 +7,6 @@
     @copy="$emit('copy', $event)"
   />
 </template>
-
 <script>
 export default {
   name: 'ae-textarea',
@@ -20,32 +19,31 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+@import '../../styles/fallback/variables';
 
-<style scoped lang="scss">
-  @import '../../styles/variables/old_vars';
+.ae-textarea {
+  display: block;
+  width: 100%;
+  min-height: 110px;
+  max-height: 300px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid 2px $silver;
+  padding: 14px 26px;
+  margin: 10px 0 30px 0;
 
-  .ae-textarea {
-    display: block;
-    width: 100%;
-    min-height: 110px;
-    max-height: 300px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border: solid 2px $silver;
-    padding: 14px 26px;
-    margin: 10px 0 30px 0;
+  font-weight: 500;
+  line-height: 1.63;
+  letter-spacing: 0.2px;
+  color: $anthracite;
 
-    font-weight: 500;
-    line-height: 1.63;
-    letter-spacing: 0.2px;
-    color: $anthracite;
-
-    ::placeholder {
-      color: $grey;
-    }
-
-    &.monospace, &[type=password] {
-      font-family: 'Roboto Mono', monospace;
-    }
+  ::placeholder {
+    color: $grey;
   }
+
+  &.monospace, &[type=password] {
+    font-family: 'Roboto Mono', monospace;
+  }
+}
 </style>

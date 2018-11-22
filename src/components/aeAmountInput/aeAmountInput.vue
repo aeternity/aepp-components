@@ -13,7 +13,8 @@
         slot="right"
         class="side"
         type="button"
-        @click="toggleDropDown() ">
+        @click="toggleDropDown() "
+      >
         {{value.symbol}} <ae-icon name="chevron" rotate="90" v-if="unitsCount > 1" />
       </button>
     </ae-input>
@@ -33,7 +34,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import { directive as onClickAway } from 'vue-clickaway';
 import AeInput from '../aeInput/aeInput.vue';
@@ -87,8 +87,7 @@ export default {
   },
   computed: {
     unitsCount() {
-      const count = this.units.length;
-      return count;
+      return this.units.length;
     },
     getUnits() {
       return this.units[0].symbol;
@@ -96,68 +95,67 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+@import '../../styles/fallback/variables';
 
-<style lang="scss">
-  @import '../../styles/variables/old_vars';
+.ae-amount-input {
+  position: relative;
 
-  .ae-amount-input {
-    position: relative;
+  button {
+    display: block;
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
 
-    button {
-      display: block;
-      border: none;
-      background: transparent;
-      padding: 0;
+  .ae-input {
+    input.monospace {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: normal;
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
 
-    .ae-input {
-      input.monospace {
-        text-align: center;
-        font-size: 40px;
-        font-weight: 300;
-        line-height: normal;
-        padding-top: 8px;
-        padding-bottom: 8px;
-      }
-
-      .side {
-        width: 55px;
-        flex-shrink: 0;
-      }
-
-      button.side {
-        font-size: 14px;
-
-        .ae-icon {
-          vertical-align: middle;
-          width: 20px;
-          height: 20px;
-        }
-      }
+    .side {
+      width: 55px;
+      flex-shrink: 0;
     }
 
-    .drop-down {
-      border-radius: 10px;
-      background-color: $white;
-      box-shadow: 0 2px 8px 0 rgba($dark, 0.1);
-      position: absolute;
-      width: 100%;
-      overflow: hidden;
-      margin-top: -30px;
-      z-index: 1;
+    button.side {
+      font-size: 14px;
 
-      button {
-        width: 100%;
-        text-align: center;
-        height: 50px;
-        line-height: 50px;
-        font-size: 14px;
-        color: $black;
-
-        &:hover {
-          background-color: $smoke;
-        }
+      .ae-icon {
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
       }
     }
   }
+
+  .drop-down {
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0 2px 8px 0 rgba($dark, 0.1);
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -30px;
+    z-index: 1;
+
+    button {
+      width: 100%;
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+      font-size: 14px;
+      color: $black;
+
+      &:hover {
+        background-color: $smoke;
+      }
+    }
+  }
+}
 </style>
