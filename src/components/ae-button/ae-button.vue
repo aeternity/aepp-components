@@ -96,6 +96,7 @@ export default {
   &:hover,
   &:focus {
     text-decoration: none;
+    opacity: 0.85;
   }
 
   &:active:not(:disabled) {
