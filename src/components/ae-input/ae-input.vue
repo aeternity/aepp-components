@@ -161,12 +161,17 @@ export default {
   background: transparent;
   border: none;
   outline: none;
+
+  &:only-child {
+    flex: 1 0;
+  }
 }
 
 .ae-input.aemount {
   @extend %face-mono-xl;
 
   text-align: center;
+  line-height: 1;
   font-weight: 300;
 }
 </style>
