@@ -10,7 +10,6 @@
       </div>
       <!-- Input tag -->
       <input
-        v-if="!$slots.default"
         :id="id"
         :value="value"
         :type="type"
@@ -20,8 +19,12 @@
         @focus="focus = true"
         @blur="focus = false"
         @input="propagateEventValue"
+        v-if="!$slots.default && !$scopedSlots.default"
       />
-      <slot />
+      <slot
+        :context="this"
+        v-else
+      />
     </div>
     <!-- @slot footer slot, used for adding elements below the input -->
     <slot name="footer" />
