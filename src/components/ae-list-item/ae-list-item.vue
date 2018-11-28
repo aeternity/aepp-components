@@ -4,7 +4,7 @@
     :is="tag"
     :class="[fill, disabled]"
     :to="to"
-    @click="propagate"
+    @click="propagateEvent"
   >
     <!-- @slot List item content -->
     <slot />
