@@ -1,4 +1,4 @@
-```jsx
+```vue
   <div style="position: relative; width: 375px; height: 667px; border: 1px solid #D3DCE6;">
     <ae-view>
       
@@ -7,7 +7,7 @@
 ```
 
 ### prop: face
-```jsx
+```vue
   <div style="position: relative; width: 375px; height: 667px; border: 1px solid #D3DCE6;">
     <ae-view face="base">
       
@@ -15,7 +15,7 @@
   </div> 
 ```
 
-```jsx
+```vue
   <div style="position: relative; width: 375px; height: 667px; border: 1px solid #D3DCE6; overflow: hidden;">
     <ae-view face="frame">
       
@@ -23,7 +23,7 @@
   </div> 
 ```
 
-```jsx
+```vue
   <div style="position: relative; width: 375px; height: 667px; border: 1px solid #D3DCE6;">
     <ae-view face="base">
       <template slot="header">

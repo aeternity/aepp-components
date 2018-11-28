@@ -19,7 +19,7 @@
 ```
 
 Rotated
-```jsx
+```vue
 <div>
   <ae-icon name="chevron" />
   <ae-icon name="chevron" rotate="90" />
@@ -29,7 +29,7 @@ Rotated
 ```
 
 Different sizes
-```jsx
+```vue
 <div>
   <ae-icon name="plus" />
   <ae-icon name="plus" size="small" />

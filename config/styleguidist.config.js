@@ -45,9 +45,6 @@ module.exports = {
    */
   showUsage: true,
 
-  /**
-   *
-   */
   theme: {
     fontFamily: {
       base: [

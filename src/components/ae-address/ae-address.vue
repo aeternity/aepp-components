@@ -44,6 +44,11 @@
 import copyToClipboard from '../../directives/copyToClipboard';
 import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
 
+/**
+ * This component renders the aeternity address in
+ * a styled format to be easily accessible, it also
+ * provides click-to-copy functionality.
+ */
 export default {
   name: 'ae-address',
   directives: { copyToClipboard, removeSpacesOnCopy },
@@ -58,19 +63,19 @@ export default {
 
     /**
      * Set the length of the address
-     * valid properties: `medium, short, flat`
+     * `medium, short, flat`
      */
     length: String,
 
     /**
-     * Set the grid gab between elements, either px's or rem's
+     * Set the grid gap between elements,
+     * accepts any valid css value, ex: `10px, 1rem, 50%, 10px 10px`
      */
     gap: String,
   },
   computed: {
     /**
-     * This will chunk the address
-     * into values of 3 and return an array
+     * This will chunk the address into values of 3 and return an array
      * @return {String[]}
      */
     chunked() {

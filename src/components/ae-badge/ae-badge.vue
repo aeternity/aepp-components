@@ -4,6 +4,13 @@
   </div>
 </template>
 <script>
+/**
+ * A simple badge element that renders
+ * a text, in addition another element
+ * can be placed inside (a button or icon)
+ * which with `space-between` will move the
+ * elements apart.
+ */
 export default {
   name: 'ae-badge',
   props: {

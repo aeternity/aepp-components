@@ -6,6 +6,11 @@
   </transition>
 </template>
 <script>
+/**
+ * Backdrop component, applies a hover
+ * on all other elements before it and
+ * brings up forward the child element.
+ */
 export default {
   name: 'ae-backdrop',
 };

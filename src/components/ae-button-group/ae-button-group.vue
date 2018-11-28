@@ -3,8 +3,11 @@
     <slot />
   </div>
 </template>
-
 <script>
+/**
+ * ae-button-group groups ae-button component
+ * with a unified style.
+ */
 export default {
   name: 'ae-button-group',
   props: {
@@ -16,7 +19,6 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
 @import '../../styles/variables/colors';
 

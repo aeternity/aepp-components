@@ -1,4 +1,4 @@
-```jsx
+```vue
 <ae-dropdown>
   <ae-icon name="list" size="20px" slot="button" />
   <li>
@@ -15,7 +15,7 @@
 ```
 
 ### prop: direction
-```jsx
+```vue
 <ae-dropdown direction="left">
   <ae-icon name="list" size="20px" slot="button" />
   <li>

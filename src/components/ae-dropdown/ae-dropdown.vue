@@ -28,14 +28,16 @@ export default {
   },
   methods: {
     /**
-     * Activate Drop
+     * Activates dropdown
+     * @public
      */
     activate() {
       this.active = true;
     },
 
     /**
-     * Deactivate Drop
+     * Deactivates dropdown
+     * @public
      */
     deactivate() {
       this.active = false;

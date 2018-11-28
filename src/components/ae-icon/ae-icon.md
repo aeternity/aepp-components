@@ -1,9 +1,9 @@
-```jsx
+```vue
   <ae-icon name="active"/>
 ``` 
 
 ### prop: name
-```jsx
+```vue
   <div>
     <ae-icon name="active" />
     <ae-icon name="add-contact" />
@@ -58,7 +58,7 @@
 ``` 
 
 ### prop: fill
-```jsx
+```vue
   <div>
     <ae-icon fill="primary" name="delete" />
     <ae-icon fill="secondary" name="back" />
@@ -70,7 +70,7 @@
   </div>
 ``` 
 
-```jsx
+```vue
   <div>
     <ae-icon fill="primary" face="round" name="edit" />
     <ae-icon fill="secondary" face="round" name="device" />
@@ -81,13 +81,13 @@
 ``` 
 
 ### prop: face
-```jsx
+```vue
   <div>
     <ae-icon face="round" name="save" />
   </div>
 ``` 
 
 ### prop: size
-```jsx
+```vue
   <ae-icon name="active" size="48px" />
 ``` 

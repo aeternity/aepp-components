@@ -1,37 +1,37 @@
 ### component
-```jsx
+```vue
   <ae-toolbar>
     Hello world!
   </ae-toolbar>
 ``` 
 
 ### prop: fill
-```jsx
+```vue
   <ae-toolbar fill="neutral">
     neutral fill
   </ae-toolbar>
 ``` 
 
-```jsx
+```vue
   <ae-toolbar fill="secondary">
     secondary fill
   </ae-toolbar>
 ```
 
-```jsx
+```vue
   <ae-toolbar fill="primary">
     primary fill
   </ae-toolbar>
 ```
 
-```jsx
+```vue
   <ae-toolbar fill="alternative">
     alternative fill
   </ae-toolbar>
 ```
 
 ### slot: left, right
-```jsx
+```vue
   <ae-toolbar>
     <span>Left</span>
     center
@@ -39,7 +39,7 @@
   </ae-toolbar>
 ``` 
 
-```jsx
+```vue
   <ae-toolbar align="left">
     <span>Left</span>
     center
@@ -47,7 +47,7 @@
   </ae-toolbar>
 ``` 
 
-```jsx
+```vue
   <ae-toolbar align="center">
     <span>Left</span>
     center
@@ -55,7 +55,7 @@
   </ae-toolbar>
 ``` 
 
-```jsx
+```vue
   <ae-toolbar align="right">
     <span>Left</span>
     center
@@ -63,7 +63,7 @@
   </ae-toolbar>
 ``` 
 
-```jsx
+```vue
   <ae-toolbar align="justify">
     <span>Left</span>
     center
@@ -72,38 +72,38 @@
 ``` 
 
 ### prop: disabled
-```jsx
+```vue
   <ae-toolbar disabled>
     disabled
   </ae-toolbar>
 ``` 
 
-```jsx
+```vue
   <ae-toolbar fill="neutral" disabled>
     neutral fill
   </ae-toolbar>
 ``` 
 
-```jsx
+```vue
   <ae-toolbar fill="secondary" disabled>
     secondary fill
   </ae-toolbar>
 ```
 
-```jsx
+```vue
   <ae-toolbar fill="primary" disabled>
     primary fill
   </ae-toolbar>
 ```
 
-```jsx
+```vue
   <ae-toolbar fill="alternative" disabled>
     alternative fill
   </ae-toolbar>
 ```
 
 ### buttons
-```jsx
+```vue
   <ae-toolbar align="right">
     <ae-button face="toolbar">
       <ae-icon name="eye" />
@@ -120,7 +120,7 @@
   </ae-toolbar>
 ``` 
 
-```jsx
+```vue
   <ae-toolbar align="justify">
     <ae-button face="toolbar">
       <ae-icon name="eye" />
@@ -139,7 +139,7 @@
   </ae-toolbar>
 ``` 
 
-```jsx
+```vue
   <ae-toolbar align="justify">
     <ae-button face="toolbar">
       <ae-icon name="eye" />
@@ -156,7 +156,7 @@
   </ae-toolbar>
 ``` 
 
-```jsx
+```vue
   <ae-toolbar align="right">
     <ae-button face="toolbar">
       <ae-icon name="eye" />

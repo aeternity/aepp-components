@@ -1,4 +1,4 @@
-```jsx
+```vue
   <div style="height: 230px">
     <ae-flip>
       <template slot="front">

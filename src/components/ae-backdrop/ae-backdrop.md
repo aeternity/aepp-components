@@ -1,4 +1,4 @@
-```jsx
+```vue
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-card>
       <template slot="avatar">
@@ -26,8 +26,8 @@
       </ae-toolbar>
     </ae-card>
     <ae-backdrop>
-        <ae-text> This text lives inside the backdrop area</ae-text>
-      </ae-backdrop>
+      <ae-text> This text lives inside the backdrop area</ae-text>
+    </ae-backdrop>
   </div>
 ``` 
 
