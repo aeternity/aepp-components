@@ -1,7 +1,13 @@
 <template>
-  <i class="ae-icon"
-     :class="{ [`ae-icon-${name}`]: Boolean(name), [fill]: Boolean(fill), [face]: Boolean(face) }"
-     :style="{ fontSize: size }" />
+  <i
+    class="ae-icon"
+    :class="{
+      [`ae-icon-${name}`]: Boolean(name),
+      [fill]: Boolean(fill),
+      [face]: Boolean(face)
+    }"
+    :style="{ fontSize: size }"
+  />
 </template>
 <script>
 import './icons/icons.font';
@@ -16,8 +22,8 @@ export default {
     name: String,
 
     /**
-     * Fill property changes the color state of the icon
-     * select something between: `primary, secondary, neutral, alternative`
+     * Fill property changes the color state of the icon.
+     * `primary, secondary, neutral, alternative`
      */
     fill: {
       type: String,
@@ -31,9 +37,8 @@ export default {
     },
 
     /**
-     * Face applies a shape/form to
-     * the current icon, available options:
-     * `round`
+     * Face applies a shape/form to the current icon.
+     * Available options: `round`
      */
     face: {
       type: String,

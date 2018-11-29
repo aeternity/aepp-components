@@ -3,9 +3,11 @@
       <button @click="activate" type="button" class="ae-dropdown-button">
         <slot name="button" />
       </button>
-      <ul class="ae-dropdown-menu"
-          :class="{ [direction]: Boolean(direction) }"
-          @click.capture="deactivate">
+      <ul
+        class="ae-dropdown-menu"
+        :class="{ [direction]: Boolean(direction) }"
+        @click.capture="deactivate"
+      >
         <slot />
       </ul>
     </div>
@@ -51,7 +53,6 @@ export default {
 @import '../../styles/variables/animations';
 @import '../../styles/variables/colors';
 @import '../../styles/placeholders/typography';
-
 
 .ae-dropdown {
   position: relative;

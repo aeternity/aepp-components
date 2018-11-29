@@ -4,7 +4,7 @@
       <div class="ae-flip-flipper">
         <div class="ae-flip-front" v-if="$slots.front">
           <!-- @slot Front side of the container -->
-          <slot name="front"/>
+          <slot name="front" />
         </div>
         <div class="ae-flip-back" v-if="$slots.back">
           <!-- @slot Back side of the container -->
@@ -30,7 +30,7 @@ export default {
   computed: {
     /**
      * Compute the direction of the card
-     * @return {String}
+     * @return {String|Boolean}
      */
     direction() {
       if (this.rotation === 0) {
@@ -50,6 +50,13 @@ export default {
     left() {
       if (this.rotation === 180) return;
       this.rotation += 180;
+
+      /**
+       * Swipe left event
+       *
+       * @event swipeleft
+       * @type {Event}
+       */
       this.$emit('swipeleft');
     },
 
@@ -60,6 +67,13 @@ export default {
     right() {
       if (this.rotation === 0) return;
       this.rotation -= 180;
+
+      /**
+       * Swipe right event
+       *
+       * @event swiperight
+       * @type {Event}
+       */
       this.$emit('swiperight');
     },
   },
@@ -81,7 +95,9 @@ export default {
   width: 100%;
 }
 
-// TODO: Flip 180 or -180 depending on swipe direction
+/**
+ * TODO: Flip 180 or -180 depending on swipe direction
+ */
 .ae-flip-container.left .ae-flip-flipper {
   transform: rotateY(-180deg);
 }
