@@ -1,13 +1,9 @@
 <template>
   <div class="ae-phraser" :class="{ error }">
-    <span
-      class="ae-phraser-error"
-      :class="{ active: Boolean(error) }"
-      v-if="error"
-    >
+    <span class="ae-phraser-error" v-if="typeof error === 'string'">
       {{ error }}
     </span>
-    <div :id="label" class="ae-phraser-container">
+    <div class="ae-phraser-container">
       <slot/>
     </div>
   </div>
@@ -36,6 +32,9 @@ export default {
   &.error {
     border-left-color: $color-error;
   }
+  &.error > .ae-phraser-error {
+    color: $color-error;
+  }
 }
 
 .ae-phraser-error {
@@ -43,10 +42,6 @@ export default {
 
   display: inline-block;
   margin-bottom: 0.5rem;
-
-  &.active {
-    color: $color-error;
-  }
 }
 
 .ae-phraser-container {
