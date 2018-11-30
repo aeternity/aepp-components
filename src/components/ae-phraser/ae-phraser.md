@@ -1,3 +1,3 @@
-```jsx
+```vue
   <ae-phraser> </ae-phraser>
 ```

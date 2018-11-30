@@ -1,10 +1,10 @@
-```jsx
+```vue
   <ae-badge>
     Hello world
   </ae-badge>
 ``` 
 
-```jsx
+```vue
   <div style="width: 290px">
     <ae-badge>
       Hello world
@@ -27,7 +27,7 @@
   </div>
 ``` 
 
-```jsx
+```vue
   <ae-badge>
     Hello world
     <ae-button face="toolbar">
@@ -37,8 +37,7 @@
 ``` 
 
 ### prop: disabled
-
-```jsx
+```vue
   <ae-badge disabled>
     Disabled
   </ae-badge>

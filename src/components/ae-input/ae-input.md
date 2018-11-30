@@ -1,9 +1,9 @@
-```jsx
+```vue
   <ae-input />
 ``` 
 
 ### prop: label
-```jsx
+```vue
   <ae-input label="With Header">
     <template slot="header">
       header
@@ -12,12 +12,12 @@
 ``` 
 
 ### prop: placeholder
-```jsx
+```vue
   <ae-input placeholder="component" />
 ``` 
 
 ### slot: footer
-```jsx
+```vue
   <ae-input label="Component" placeholder="...">
     <template slot="header">
       header
@@ -29,7 +29,7 @@
 ``` 
 
 ### prop: error
-```jsx
+```vue
   <ae-input label="Component" placeholder="..." error>
     <template slot="header">
       header
@@ -41,13 +41,13 @@
 ``` 
 
 ### prop: aemount
-```jsx
+```vue
   <ae-input label="Component" placeholder="0.0" aemount>
     <ae-text slot="header" fill="black">AE</ae-text>
   </ae-input>
 ``` 
 
-```jsx
+```vue
   <ae-input label="Component" placeholder="0.0" aemount error>
     <ae-text slot="header" fill="black">AE</ae-text>
     <ae-toolbar slot="footer">

@@ -9,13 +9,14 @@ import { renderIcon } from '@download/blockies';
 
 /**
  * Displays the representation of an aeternity address as an identicon
- * @see https://npmjs.com/package/@download/blockies
+ * @link https://npmjs.com/package/@download/blockies
  */
 export default {
   name: 'ae-identicon',
   props: {
     /**
-     * Address of the wallet for which the identicon is going to generate a blockies from.
+     * Address of the wallet for which the identicon is
+     * going to generate a blockies from.
      */
     address: {
       type: String,
@@ -36,6 +37,7 @@ export default {
       ].includes(value),
       default: 'base',
     },
+
     /**
      * Apply shadow to the identicon
      */

@@ -1,4 +1,4 @@
-```jsx
+```vue
   <div>
     <ae-slider>
       <div>
@@ -51,7 +51,7 @@
 ``` 
 
 ### prop: fullscreen
-```jsx
+```vue
   <div style="position: relative; width: 375px; height: 667px; padding: 32px;">
     <ae-slider fullscreen>
       <div style="width: 100%; height: 100%;">
