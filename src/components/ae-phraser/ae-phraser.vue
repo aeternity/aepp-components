@@ -22,12 +22,14 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../../styles/variables/animations';
 @import '../../styles/variables/colors';
 @import '../../styles/placeholders/typography';
 
 .ae-phraser {
   padding-left: 1rem;
   border-left: 2px solid transparent;
+  transition: all $base-transition-time;
 
   &.error {
     border-left-color: $color-error;
