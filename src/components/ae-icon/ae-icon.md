@@ -64,6 +64,7 @@
     <ae-icon fill="secondary" name="back" />
     <ae-icon fill="neutral" name="active" />
     <ae-icon fill="alternative" name="copy" />
+    <ae-icon fill="black" name="vote" />
     <span style="background: black;">
       <ae-icon fill="white" name="copy" />
     </span>
@@ -76,6 +77,7 @@
     <ae-icon fill="secondary" face="round" name="device" />
     <ae-icon fill="neutral" face="round" name="active" />
     <ae-icon fill="alternative" face="round" name="shield-fill" />
+    <ae-icon fill="black" face="round" name="transfer" />
     <ae-icon fill="white" face="round" name="shield-fill" />
   </div>
 ``` 
@@ -85,9 +87,4 @@
   <div>
     <ae-icon face="round" name="save" />
   </div>
-``` 
-
-### prop: size
-```vue
-  <ae-icon name="active" size="48px" />
 ``` 

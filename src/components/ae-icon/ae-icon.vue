@@ -6,7 +6,6 @@
       [fill]: Boolean(fill),
       [face]: Boolean(face)
     }"
-    :style="{ fontSize: size }"
   />
 </template>
 <script>
@@ -19,11 +18,14 @@ export default {
      * Name of the icon, please check list of icons in
      * the ./icons folder inside the component
      */
-    name: String,
+    name: {
+      type: String,
+      required: true,
+    },
 
     /**
      * Fill property changes the color state of the icon.
-     * `primary, secondary, neutral, alternative`
+     * `primary, secondary, neutral, alternative, black, white`
      */
     fill: {
       type: String,
@@ -32,6 +34,7 @@ export default {
         'secondary',
         'neutral',
         'alternative',
+        'black',
         'white',
       ].includes(value),
     },
@@ -44,11 +47,6 @@ export default {
       type: String,
       validator: value => ['round'].includes(value),
     },
-
-    /**
-     * Set manually the size of the font icon
-     */
-    size: String,
   },
 };
 </script>
@@ -59,6 +57,7 @@ export default {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  color: inherit;
 
   &.primary {
     color: $color-primary;
@@ -71,6 +70,9 @@ export default {
   }
   &.alternative {
     color: $color-alternative;
+  }
+  &.black {
+    color: $color-black;
   }
   &.white {
     color: $color-white;
@@ -112,6 +114,10 @@ export default {
   &.alternative {
     background: $color-alternative;
     color: $color-white;
+  }
+  &.black {
+    background: $color-white;
+    color: $color-black;
   }
   &.white {
     background: $color-black;
