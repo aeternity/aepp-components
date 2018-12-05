@@ -21,6 +21,13 @@
         @input="propagateEventValue"
         v-if="!$slots.default && !$scopedSlots.default"
       />
+      <!--
+        @slot adds the ability to add your own
+        custom input elements, if used in combination
+        with `scoped slots` (see https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots)
+        gives you the parent `context` as a property where
+        you can access methods / properties
+      -->
       <slot
         :context="this"
         v-else
