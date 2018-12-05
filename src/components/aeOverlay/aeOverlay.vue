@@ -4,8 +4,11 @@
   </div>
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 export default {
   name: 'ae-overlay',
+  mixins: [deprecated],
   mounted() {
     document.body.style.overflow = 'hidden';
   },

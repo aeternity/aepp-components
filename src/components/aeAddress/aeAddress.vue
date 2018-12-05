@@ -37,6 +37,7 @@
 import AeIdenticon from '../ae-identicon/ae-identicon.vue';
 import aeIcon from '../aeIcon/aeIcon.vue';
 import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
+import deprecated from '../../tools/logs/deprecated';
 
 function startAndEnd(str, start = 6, end = 6) {
   return `${str.substr(0, start + 2)}…${str.substr(str.length - end, str.length)}`;
@@ -47,6 +48,7 @@ function startAndEnd(str, start = 6, end = 6) {
  */
 export default {
   name: 'ae-address',
+  mixins: [deprecated],
   directives: { removeSpacesOnCopy },
   props: {
     /**

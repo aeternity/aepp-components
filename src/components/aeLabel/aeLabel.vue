@@ -10,10 +10,12 @@
   </label>
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
 import { TYPE_PROPERTY_VALUES as types } from '../../core/constants';
 
 export default {
   name: 'ae-label',
+  mixins: [deprecated],
   props: {
     /**
      * Text of help field

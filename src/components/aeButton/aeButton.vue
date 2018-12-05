@@ -18,6 +18,8 @@
   </component>
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 import AeLink from '../aeLink/aeLink.vue';
 
 const aeButtonTypes = [
@@ -35,6 +37,7 @@ const aeButtonSizes = [
 
 export default {
   name: 'ae-button',
+  mixins: [deprecated],
   components: { AeLink },
   props: {
     /**

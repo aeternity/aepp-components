@@ -22,12 +22,14 @@
 </template>
 <script>
 import AeLink from '../aeLink/aeLink.vue';
+import deprecated from '../../tools/logs/deprecated';
 
 /**
  * Header of aepplication
  */
 export default {
   name: 'ae-header',
+  mixins: [deprecated],
   components: { AeLink },
   props: {
     /**

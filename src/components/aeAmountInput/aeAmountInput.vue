@@ -38,12 +38,14 @@
 import { directive as onClickAway } from 'vue-clickaway';
 import AeInput from '../aeInput/aeInput.vue';
 import AeIcon from '../aeIcon/aeIcon.vue';
+import deprecated from '../../tools/logs/deprecated';
 
 /**
  * Input of amount with units drop down
  */
 export default {
   name: 'ae-amount-input',
+  mixins: [deprecated],
   props: {
     /**
      * Current value, object containing `amount` and `symbol` keys

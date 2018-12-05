@@ -11,9 +11,11 @@
 <script>
 import AeTextarea from '../aeTextarea/aeTextarea.vue';
 import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
+import deprecated from '../../tools/logs/deprecated';
 
 export default {
   name: 'ae-address-input',
+  mixins: [deprecated],
   props: {
     value: {
       type: String,

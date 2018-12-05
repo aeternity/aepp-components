@@ -18,9 +18,11 @@
 import AeButton from '../aeButton/aeButton.vue';
 import AeOverlay from '../aeOverlay/aeOverlay.vue';
 import AeIcon from '../aeIcon/aeIcon.vue';
+import deprecated from '../../tools/logs/deprecated';
 
 export default {
   name: 'ae-modal-light',
+  mixins: [deprecated],
   props: {
     /**
      * Modal title

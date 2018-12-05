@@ -2,6 +2,8 @@
   <div class="ae-divider" :class="type" />
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 const aeDividerTypes = [
   'boring',
   'exciting',
@@ -10,6 +12,7 @@ const aeDividerTypes = [
 
 export default {
   name: 'ae-divider',
+  mixins: [deprecated],
   props: {
     /**
      * Type of divider, possible values: 'boring', 'exciting', 'dramatic'

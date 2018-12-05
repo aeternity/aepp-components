@@ -18,9 +18,11 @@
 import AeButton from '../aeButton/aeButton.vue';
 import AeIcon from '../aeIcon/aeIcon.vue';
 import AeLink from '../aeLink/aeLink.vue';
+import deprecated from '../../tools/logs/deprecated';
 
 export default {
   name: 'ae-panel',
+  mixins: [deprecated],
   props: {
     /**
      * Where does the Panel link to. its fed to a ae-link.

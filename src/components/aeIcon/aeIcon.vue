@@ -5,6 +5,7 @@
 </template>
 <script>
 import * as iconSvgStrings from '../../assets/icons';
+import deprecated from '../../tools/logs/deprecated';
 
 const aeIconTypes = [
   'plain',
@@ -16,6 +17,7 @@ const aeIconTypes = [
 
 export default {
   name: 'ae-icon',
+  mixins: [deprecated],
   props: {
     /**
      * Name of icon, possible values: 'arrow', 'burger', 'check', 'chevron',

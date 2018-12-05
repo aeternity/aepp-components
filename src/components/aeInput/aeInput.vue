@@ -16,12 +16,14 @@
   </div>
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 export default {
   /**
    * Component NAme
    */
   name: 'ae-input',
-
+  mixins: [deprecated],
   /**
    * Component Props
    */

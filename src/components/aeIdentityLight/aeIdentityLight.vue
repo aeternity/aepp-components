@@ -30,6 +30,7 @@
 import AeIdenticon from '../ae-identicon/ae-identicon.vue';
 import helperMixin from '../../core/mixins/helper';
 import removeSpacesOnCopy from '../../directives/removeSpacesOnCopy';
+import deprecated from '../../tools/logs/deprecated';
 
 /**
  * Displays an Identity with an avatar blockie, the address and an amount of ether
@@ -71,6 +72,7 @@ export default {
   },
   mixins: [
     helperMixin,
+    deprecated,
   ],
   computed: {
     classObject() {

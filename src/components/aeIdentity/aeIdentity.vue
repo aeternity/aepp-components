@@ -20,6 +20,7 @@
 import aeIdentityLight from '../aeIdentityLight/aeIdentityLight.vue';
 import aeIdentityBackground from '../aeIdentityBackground/aeIdentityBackground.vue';
 import helperMixin from '../../core/mixins/helper';
+import deprecated from '../../tools/logs/deprecated';
 
 /**
  * Displays an Identity with an avatar blockie, the address and an amount of ether
@@ -67,6 +68,7 @@ export default {
   },
   mixins: [
     helperMixin,
+    deprecated,
   ],
   computed: {
     backgroundType() {

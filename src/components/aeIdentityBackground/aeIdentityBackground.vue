@@ -4,10 +4,12 @@
   </div>
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
 import { TYPE_PROPERTY_VALUES as types } from '../../core/constants';
 
 export default {
   name: 'ae-identity-background',
+  mixins: [deprecated],
   props: {
     type: {
       type: String,

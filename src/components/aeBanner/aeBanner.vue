@@ -11,8 +11,11 @@
   </div>
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 export default {
   name: 'ae-banner',
+  mixins: [deprecated],
 };
 </script>
 <style lang="scss" scoped>

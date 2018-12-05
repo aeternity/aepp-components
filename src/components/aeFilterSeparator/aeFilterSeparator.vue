@@ -2,8 +2,11 @@
   <span class="ae-filter-separator" />
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 export default {
   name: 'ae-filter-separator',
+  mixins: [deprecated],
 };
 </script>
 <style lang="scss" scoped>

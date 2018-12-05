@@ -12,13 +12,14 @@
 </template>
 <script>
 import mixins from '../../core/mixins/helper';
+import deprecated from '../../tools/logs/deprecated';
 
 /**
  * Displays an App Icon
  */
 export default {
   name: 'ae-app-icon',
-  mixins: [mixins],
+  mixins: [mixins, deprecated],
   props: {
     /**
      * src property, location of the icon

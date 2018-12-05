@@ -5,8 +5,11 @@
   </span>
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 export default {
   name: 'ae-badge',
+  mixins: [deprecated],
 };
 </script>
 <style lang="scss" scoped>

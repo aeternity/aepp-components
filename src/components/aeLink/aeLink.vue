@@ -3,12 +3,15 @@
   <a class="ae-link" v-else :href="to" :target="isLinkOnSameHost ? '_self' : '_blank'"><slot /></a>
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 /**
  * Displays an link using `<a>` or `<router-link>` depending on
  * passed url and availability of router-link
  */
 export default {
   name: 'ae-link',
+  mixins: [deprecated],
   props: {
     /**
      * Path to go to when clicked

@@ -6,9 +6,11 @@
 </template>
 <script>
 import AeLink from '../aeLink/aeLink.vue';
+import deprecated from '../../tools/logs/deprecated';
 
 export default {
   name: 'ae-filter-item',
+  mixins: [deprecated],
   components: { AeLink },
   props: {
     /**

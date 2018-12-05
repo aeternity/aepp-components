@@ -2,8 +2,11 @@
   <span class="ae-loader" />
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 export default {
   name: 'ae-loader',
+  mixins: [deprecated],
 };
 </script>
 <style lang="scss" scoped>

@@ -14,8 +14,11 @@
   </div>
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 export default {
   name: 'ae-switch',
+  mixins: [deprecated],
   props: {
     name: String,
     choices: Array,

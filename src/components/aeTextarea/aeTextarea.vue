@@ -8,8 +8,11 @@
   />
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 export default {
   name: 'ae-textarea',
+  mixins: [deprecated],
   props: {
     value: undefined,
     /**

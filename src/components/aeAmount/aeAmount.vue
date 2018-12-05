@@ -5,8 +5,11 @@
   </div>
 </template>
 <script>
+import deprecated from '../../tools/logs/deprecated';
+
 export default {
   name: 'ae-amount',
+  mixins: [deprecated],
   props: {
     value: {
     },
