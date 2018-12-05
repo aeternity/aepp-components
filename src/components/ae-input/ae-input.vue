@@ -9,14 +9,29 @@
         <slot name="header" />
       </div>
       <!-- Input tag -->
-      <input :type="type"
-             :id="id"
-             :placeholder="placeholder"
-             class="ae-input"
-             :class="{ aemount }"
-             @focus="focus = true"
-             @blur="focus = false"
-             @input="propagate" />
+      <input
+        :id="id"
+        :value="value"
+        :type="type"
+        :placeholder="placeholder"
+        class="ae-input"
+        :class="{ aemount }"
+        @focus="focus = true"
+        @blur="focus = false"
+        @input="propagateEventValue"
+        v-if="!$slots.default && !$scopedSlots.default"
+      />
+      <!--
+        @slot adds the ability to add your own
+        custom input elements, if used in combination
+        with `scoped slots` (see https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots)
+        gives you the parent `context` as a property where
+        you can access methods / properties
+      -->
+      <slot
+        :context="this"
+        v-else
+      />
     </div>
     <!-- @slot footer slot, used for adding elements below the input -->
     <slot name="footer" />
@@ -41,6 +56,11 @@ export default {
      * Temporary text appearing in the input box
      */
     placeholder: String,
+
+    /**
+     * Actual input element value
+     */
+    value: [String, Number],
 
     /**
      * Define the type of the input
@@ -151,12 +171,17 @@ export default {
   background: transparent;
   border: none;
   outline: none;
+
+  &:only-child {
+    flex: 1 0;
+  }
 }
 
 .ae-input.aemount {
   @extend %face-mono-xl;
 
   text-align: center;
+  line-height: 1;
   font-weight: 300;
 }
 </style>

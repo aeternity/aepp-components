@@ -57,7 +57,7 @@ export default {
     /**
      * Sets the Font weight of the text
      */
-    weight: Number,
+    weight: [String, Number],
   },
 };
 </script>
