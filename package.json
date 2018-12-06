@@ -32,7 +32,6 @@
     "@download/blockies": "^1.0.3",
     "clipboard-copy": "^2.0.1",
     "common-tags": "^1.8.0",
-    "log": "^3.2.0",
     "normalize.css": "^8.0.0",
     "qrious": "^4.0.2",
     "vue-agile": "^0.3.7",
