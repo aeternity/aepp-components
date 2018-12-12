@@ -100,9 +100,10 @@ new Vue({
 ## App.vue
 ```vue
 <template>
-  <ae-main id="app">
+  <main id="app">
     <!-- add components here -->
-  </ae-main>
+    <ae-button>BUTTON</ae-button>
+  </main>
 </template>
 <script>
 import { AeButton, mixins } from '@aeternity/aepp-components'
