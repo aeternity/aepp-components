@@ -20,11 +20,10 @@ Full component documentation can be found at [http://aeternity.com/aepp-componen
 
 ## Guide
 
-- [Get Started]()
-- [Components]()
+- [Get Started](./.contributions/GET_STARTED.md)
+- [Components](./.contributions/COMPONENTS.md)
 
 ## Community
 
-- [Code Guidelines]()
-- [Code of Conduct]()
-- [Contributing]()
+- [Code Guidelines](./.contributions/CODE_GUIDELINES.md)
+- [Code of Conduct](./.contributions/CODE_OF_CONDUCT.md)
