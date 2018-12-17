@@ -2,6 +2,7 @@ export { default as AeAddress } from './ae-address/ae-address.vue';
 export { default as AeBackdrop } from './ae-backdrop/ae-backdrop.vue';
 export { default as AeBadge } from './ae-badge/ae-badge.vue';
 export { default as AeButton } from './ae-button/ae-button.vue';
+export { default as AeButtonGroup } from './ae-button-group/ae-button-group.vue';
 export { default as AeCard } from './ae-card/ae-card.vue';
 export { default as AeCheck } from './ae-check/ae-check.vue';
 export { default as AeDropdown } from './ae-dropdown/ae-dropdown.vue';
