@@ -7,13 +7,18 @@
             [face]: Boolean(face),
             extend
           }"
-          @click="propagate">
+          @click="propagateEvent">
     <slot />
   </button>
 </template>
 <script>
-import { events } from '../../mixins';
+// src/mixins/events/index.js
+import events from '../../mixins/events';
 
+/**
+ * Button component that provides
+ * a variety of styles and functionality
+ */
 export default {
   name: 'ae-button',
   mixins: [events],

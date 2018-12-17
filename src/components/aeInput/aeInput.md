@@ -1,12 +1,12 @@
-```jsx
+```vue
   <ae-input placeholder="Placeholder" />
 ``` 
 
-```jsx
+```vue
   <ae-input type="password" value="1234" />
 ```
 
-```jsx
+```vue
   <ae-input type="number" value="1234" />
 ```
 

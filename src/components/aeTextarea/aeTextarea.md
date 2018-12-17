@@ -1,8 +1,8 @@
-```jsx
+```vue
   <ae-textarea placeholder="Textarea" />
 ```
 
 
-```jsx
+```vue
   <ae-textarea monospace placeholder="Monospace" />
 ```

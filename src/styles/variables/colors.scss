@@ -4,6 +4,13 @@
 // *****************************
 //------------------------------
 
+// General Colors
+$color-black:   #000000 !default;
+$color-white:   #ffffff !default;
+$color-red:     #FF0D6A !default;
+$color-magenta: #B300FF !default;
+$color-cyan:    #00E8CC !default;
+
 // Neutral Palette
 $color-neutral-minimum:    #001833;
 $color-neutral-negative-3: #203040;
@@ -43,13 +50,9 @@ $color-alternative-positive-2:  #95E6DC;
 $color-alternative-positive-3:  #CEF2EE;
 
 // Utilities Palette
-$color-error:           #FF0D6A;
-$color-focus:           #B300FF;
-$color-focus-alt:       #00E8CC;
+$color-error:           $color-red;
+$color-focus:           $color-magenta;
+$color-focus-alt:       $color-cyan;
 $color-shadow-alpha-25: rgba(0, 33, 87, 0.25);
 $color-shadow-alpha-15: rgba(0, 33, 87, 0.15);
 $color-shadow-alpha-10: rgba(0, 33, 87, 0.15);
-
-// General Colors
-$color-black: #000000 !default;
-$color-white: #ffffff !default;

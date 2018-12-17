@@ -14,14 +14,11 @@
     <div class="progressbar" :style="progressbarStyle(ratioBottom)" />
   </component>
 </template>
-
 <script>
 import AeButton from '../aeButton/aeButton.vue';
 import AeIcon from '../aeIcon/aeIcon.vue';
 import AeLink from '../aeLink/aeLink.vue';
-/**
- *
- */
+
 export default {
   name: 'ae-panel',
   props: {
@@ -63,62 +60,65 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
-  @import '../../styles/globals/old_mixins';
+@import '../../styles/fallback/mixins';
 
-  .ae-panel {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 2px rgba(60, 60, 60, 0.1); // added 2px spread
-    max-width: $container-width;
-    margin: 20px auto;
-    box-sizing: border-box;
-    overflow: hidden;
+.ae-panel {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 2px rgba(60, 60, 60, 0.1); // added 2px spread
+  max-width: $container-width;
+  margin: 20px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  background-color: $white;
+  color: inherit;
+
+  @include belowDesktop {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @include phone {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .progressbar,
+  .underline {
+    content: "";
     display: block;
-    text-decoration: none;
-    background-color: $white;
-    color: inherit;
-    @include belowDesktop {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
+    width: 100%;
+    height: 4px;
+  }
+
+  .underline {
+    background-color: $maegenta;
+  }
+
+  .content {
+    padding: 30px;
     @include phone {
-      margin-top: 10px;
-      margin-bottom: 10px;
+      padding: 20px;
     }
 
-    .progressbar, .underline {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 4px;
-    }
-    .underline {
-      background-color: $maegenta;
-    }
+    header {
+      position: relative;
 
-    .content {
-      padding: 30px;
-      @include phone {
-        padding: 20px;
+      h1 {
+        font-size: 28px;
+        line-height: 50px;
+        font-weight: 500;
+        margin: 0;
       }
 
-      header {
-        position: relative;
-
-        h1 {
-          font-size: 28px;
-          line-height: 50px;
-          font-weight: 500;
-          margin: 0;
-        }
-
-        .ae-button {
-          position: absolute;
-          top: 0;
-          right: 0;
-        }
+      .ae-button {
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
   }
+}
 </style>

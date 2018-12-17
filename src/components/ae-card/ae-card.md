@@ -1,9 +1,9 @@
-```jsx
+```vue
   <ae-card>Hello world!</ae-card>
 ``` 
 
 ### prop: fill
-```jsx
+```vue
 <ae-card>
   <template slot="avatar">
     <ae-identicon address="ak_QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
@@ -29,7 +29,7 @@
 </ae-card>
 ``` 
 
-```jsx
+```vue
 <ae-card fill="primary">
   <template slot="avatar">
     <ae-identicon address="ak_QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
@@ -55,7 +55,7 @@
 </ae-card>
 ``` 
 
-```jsx
+```vue
 <ae-card fill="secondary">
   <template slot="avatar">
     <ae-identicon address="ak_QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />
@@ -81,7 +81,7 @@
 </ae-card>
 ``` 
 
-```jsx
+```vue
   <ae-card fill="neutral" align="center">
     <ae-qrcode value="example" :options="{ size: 136 }" />
     <ae-address value="ak_QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" gap=0 />
@@ -98,7 +98,7 @@
   </ae-card>
 ``` 
 
-```jsx
+```vue
 <ae-card fill="alternative">
   <template slot="avatar">
     <ae-identicon address="ak_QY8VNEkhj7omMUjAvfVBq2NjTDy895LBYbk7qVxQo1qT8VqfE" />

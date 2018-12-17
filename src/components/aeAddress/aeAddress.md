@@ -1,13 +1,13 @@
-```jsx
+```vue
 <ae-address verified address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
 ```
-```jsx
+```vue
 <ae-address size='chunked' address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
 ```
-```jsx
+```vue
 <ae-address size='chunked' chunkHalf address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'/>
 ```
-```jsx
+```vue
 <ae-address
   name='account'
   verified
@@ -31,7 +31,7 @@ export default {}
 </style>
 ```
 
-```jsx
+```vue
 <ae-address
   name='account'
   verified
@@ -39,7 +39,7 @@ export default {}
   address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'
 />
 ```
-```jsx
+```vue
 <ae-address
   name='account'
   verified
@@ -48,7 +48,7 @@ export default {}
   address='0xfa617481af59ebec80e8d529f1e2d1b3751468f3'
 />
 ```
-```jsx
+```vue
 <ae-address
   name='account'
   show-avatar
@@ -57,7 +57,7 @@ export default {}
 />
 ```
 
-```jsx
+```vue
 <ae-address
   name='account'
   verified

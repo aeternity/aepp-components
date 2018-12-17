@@ -1,8 +1,8 @@
-```jsx
+```vue
   <ae-qrcode value="ae" />
 ``` 
 
 ### prop: options{}
-```jsx
+```vue
   <ae-qrcode value="ae" :options="{ size: 136 }" />
 ``` 

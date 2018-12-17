@@ -1,7 +1,12 @@
 <template>
-  <i class="ae-icon"
-     :class="{ [`ae-icon-${name}`]: Boolean(name), [fill]: Boolean(fill), [face]: Boolean(face) }"
-     :style="{ fontSize: size }" />
+  <i
+    class="ae-icon"
+    :class="{
+      [`ae-icon-${name}`]: Boolean(name),
+      [fill]: Boolean(fill),
+      [face]: Boolean(face)
+    }"
+  />
 </template>
 <script>
 import './icons/icons.font';
@@ -13,11 +18,14 @@ export default {
      * Name of the icon, please check list of icons in
      * the ./icons folder inside the component
      */
-    name: String,
+    name: {
+      type: String,
+      required: true,
+    },
 
     /**
-     * Fill property changes the color state of the icon
-     * select something between: `primary, secondary, neutral, alternative`
+     * Fill property changes the color state of the icon.
+     * `primary, secondary, neutral, alternative, black, white`
      */
     fill: {
       type: String,
@@ -26,24 +34,19 @@ export default {
         'secondary',
         'neutral',
         'alternative',
+        'black',
         'white',
       ].includes(value),
     },
 
     /**
-     * Face applies a shape/form to
-     * the current icon, available options:
-     * `round`
+     * Face applies a shape/form to the current icon.
+     * Available options: `round`
      */
     face: {
       type: String,
       validator: value => ['round'].includes(value),
     },
-
-    /**
-     * Set manually the size of the font icon
-     */
-    size: String,
   },
 };
 </script>
@@ -54,6 +57,7 @@ export default {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  color: inherit;
 
   &.primary {
     color: $color-primary;
@@ -66,6 +70,9 @@ export default {
   }
   &.alternative {
     color: $color-alternative;
+  }
+  &.black {
+    color: $color-black;
   }
   &.white {
     color: $color-white;
@@ -103,6 +110,10 @@ export default {
   &.alternative {
     background: $color-alternative;
     color: $color-white;
+  }
+  &.black {
+    background: $color-white;
+    color: $color-black;
   }
   &.white {
     background: $color-black;

@@ -1,18 +1,18 @@
-```jsx
+```vue
   <ae-list>
-    <ae-list-item>Hello World</ae-list-item>
-    <ae-list-item>Hello World</ae-list-item>
-    <ae-list-item>Hello World</ae-list-item>
-    <ae-list-item>Hello World</ae-list-item>
-    <ae-list-item>Hello World</ae-list-item>
+    <ae-list-item fill="primary">Primary</ae-list-item>
+    <ae-list-item fill="secondary">Secondary</ae-list-item>
+    <ae-list-item fill="neutral">Neutral</ae-list-item>
+    <ae-list-item fill="alternative">Alternative</ae-list-item>
   </ae-list>
 ```
 
 ### prop: face: primary
-```jsx
-  <ae-list face="primary">
-    <ae-list-item>One</ae-list-item>
-    <ae-list-item>Two</ae-list-item>
-    <ae-list-item>Three</ae-list-item>
-  </ae-list>
+```vue
+<ae-list face="primary">
+  <ae-list-item fill="primary">Primary</ae-list-item>
+  <ae-list-item fill="secondary">Secondary</ae-list-item>
+  <ae-list-item fill="neutral">Neutral</ae-list-item>
+  <ae-list-item fill="alternative">Alternative</ae-list-item>
+</ae-list>
 ```

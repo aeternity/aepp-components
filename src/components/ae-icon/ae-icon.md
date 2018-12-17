@@ -1,9 +1,9 @@
-```jsx
+```vue
   <ae-icon name="active"/>
 ``` 
 
 ### prop: name
-```jsx
+```vue
   <div>
     <ae-icon name="active" />
     <ae-icon name="add-contact" />
@@ -58,36 +58,33 @@
 ``` 
 
 ### prop: fill
-```jsx
+```vue
   <div>
     <ae-icon fill="primary" name="delete" />
     <ae-icon fill="secondary" name="back" />
     <ae-icon fill="neutral" name="active" />
     <ae-icon fill="alternative" name="copy" />
+    <ae-icon fill="black" name="vote" />
     <span style="background: black;">
       <ae-icon fill="white" name="copy" />
     </span>
   </div>
 ``` 
 
-```jsx
+```vue
   <div>
     <ae-icon fill="primary" face="round" name="edit" />
     <ae-icon fill="secondary" face="round" name="device" />
     <ae-icon fill="neutral" face="round" name="active" />
     <ae-icon fill="alternative" face="round" name="shield-fill" />
+    <ae-icon fill="black" face="round" name="transfer" />
     <ae-icon fill="white" face="round" name="shield-fill" />
   </div>
 ``` 
 
 ### prop: face
-```jsx
+```vue
   <div>
     <ae-icon face="round" name="save" />
   </div>
-``` 
-
-### prop: size
-```jsx
-  <ae-icon name="active" size="48px" />
 ``` 
