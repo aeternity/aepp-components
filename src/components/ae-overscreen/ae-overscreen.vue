@@ -1,5 +1,5 @@
 <template>
-  <div class="ae-overscreen" :class="[align, { shadow }]">
+  <div class="ae-overscreen" :class="[align, { fixed, shadow }]">
     <slot />
   </div>
 </template>
@@ -8,11 +8,6 @@ export default {
   name: 'ae-overscreen',
   props: {
     /**
-     * Applies a linear shadow gradient to the overscreen
-     */
-    shadow: Boolean,
-
-    /**
      * Align the elements either left or right, default alignment is center.
      * Available values are: `left, right`
      */
@@ -20,15 +15,31 @@ export default {
       type: String,
       validator: value => [
         'left',
-        'center',
         'right',
       ].includes(value),
     },
+
+    /**
+     * Changes element position to `fixed`.
+     *
+     * The default `position: absolute;` will make the
+     * element fit on top of its relative parent. Useful
+     * in some cases.
+     *
+     * This property will change it to `position: fixed;`
+     * will make the element position relative to the viewport
+     * of the browser.
+     */
+    fixed: Boolean,
+
+    /**
+     * Applies a linear shadow gradient to the overscreen
+     */
+    shadow: Boolean,
   },
 };
 </script>
 <style lang="scss" scoped>
-@import '../../styles/variables/typography';
 @import '../../styles/variables/colors';
 @import '../../styles/globals/functions';
 
@@ -36,9 +47,6 @@ export default {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  /**
-   * TODO: Change this to position fixed, element goes to viewport, find a way to replicate without viewport
-   */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -49,9 +57,12 @@ export default {
   &.left {
     justify-content: flex-start;
   }
-
   &.right {
     justify-content: flex-end;
+  }
+
+  &.fixed {
+    position: fixed;
   }
 
   &.shadow {
