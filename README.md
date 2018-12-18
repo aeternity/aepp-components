@@ -19,11 +19,9 @@ but we will be adhering to the Semantic versioning.
 Full component documentation can be found at [http://aeternity.com/aepp-components/](http://aeternity.com/aepp-components/)
 
 ## Guide
-
 - [Get Started](./.contributions/GET_STARTED.md)
+- [Code Guidelines](./.contributions/CODE_GUIDELINES.md)
 - [Components](./.contributions/COMPONENTS.md)
 
 ## Community
-
-- [Code Guidelines](./.contributions/CODE_GUIDELINES.md)
 - [Code of Conduct](./.contributions/CODE_OF_CONDUCT.md)
