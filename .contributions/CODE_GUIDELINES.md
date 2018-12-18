@@ -92,7 +92,7 @@ Components should also not be too simple. No one needs a `<ae-paragraph>` if it 
 than a simple `<p>`.
 
 ### Component dependency
-Your component should be **as _dumb_ as possible**. Complex data should always be passed via prop. 
+Your component should be **as _dumb_ as possible**. Complex data should always be passed via prop / slots. 
 Don't assume there will be a `router` or `store`.
 
 > Every developer wants to be in charge of his own data and state management, let them!
