@@ -29,7 +29,7 @@ Install the æternity æpp components via [npm](https://www.npmjs.com/)
 - Vue
 - @vue/cli
 - NPM
-- Aeternity Aepp components.
+- Aeternity æpp components.
 
 #### 1. Make sure Vue CLI globally installed
 ```bash
@@ -51,7 +51,7 @@ cd project-name
 npm i
 ```
 
-#### 5. Install the components package, currently #develop branch is the most up to date version.
+#### 5. Install the components package, currently `#develop` branch is the most up to date version.
 ```bash
 npm i --save https://github.com/aeternity/aepp-components.git#develop
 ```
@@ -69,8 +69,8 @@ npm run serve
 ```
 
 ### Importing components in your application
-In your new Vue project with the downloaded directory open your Table of Contents and navigate too src --> main.js
-There its the root file of your application, where you can `import` aepp components.
+In your new Vue project with the downloaded directory open your Table of Contents and navigate too `src --> main.js`
+There its the root file of your application, where you can `import` æpp components.
 
 #### Importing styles
 In case you want to include normalize.css, and some style resets, include:
