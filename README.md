@@ -56,7 +56,7 @@ npm i
 npm i --save https://github.com/aeternity/aepp-components.git#develop
 ```
 
-#### 6. Finally run and select the localhost IP:
+#### 6. Finally run your app:
 ```bash
 npm run serve
 ```
@@ -69,9 +69,10 @@ npm run serve
 ```
 
 ### Importing components in your application
-In your new Vue project with the downloaded directory open your Table of Contents and navigate too src--> main.js
-In main.js import the following:
+In your new Vue project with the downloaded directory open your Table of Contents and navigate too src --> main.js
+There its the root file of your application, where you can `import` aepp components.
 
+#### Importing styles
 In case you want to include normalize.css, and some style resets, include:
 _this will include fonts and some small global css styles_
 ```js
@@ -84,19 +85,22 @@ use this import file.
 import '@aeternity/aepp-components/dist/aepp.fonts.css'
 ```
 
-Import the entire components styles (this will include all components css)
+Import the entire components styles (this will include all components css, except fonts and global styles)
 ```js
 import '@aeternity/aepp-components/dist/aepp.components.css'
 ```
 
-### Method 1: global registration of all components
+### Importing components
+Below there's a list of ways in which you can import your components to your application.
+
+#### Method 1: global registration of all components
 ```js
 import Components from '@aeternity/aepp-components'
 
 Vue.use(Components)
 ```
 
-### Method 2: global registration of single components
+#### Method 2: global registration of single components
 ```js
 import { AeButton } from '@aeternity/aepp-components'
 
@@ -105,7 +109,7 @@ Vue.use(AeButton)
 Vue.component('ae-button', AeButton)
 ```
 
-### Method 3: local registration of single components
+#### Method 3: local registration of single components
 ```js
 import { AeButton } from '@aeternity/aepp-components'
 
@@ -116,7 +120,7 @@ new Vue({
 })
 ```
 
-### Method 4: Local registration and import of a single component
+#### Method 4: Local registration and import of a single component
 ```js
 import '@aeternity/aepp-components/dist/ae-button/ae-button.css'
 import AeButton from '@aeternity/aepp-components/dist/ae-button/ae-button.vue'
@@ -172,8 +176,8 @@ export default {
 }
 ```
 
-# How to use components in your æpp: Examples
-Below is example code.
+## How to use components in your æpp: Examples
+Below you'll find some examples how you can import and use the components.
 
 ## main.js
 ```js
