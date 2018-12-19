@@ -1,7 +1,0 @@
-# Components
-
-# HTML
-
-# JavaScript
-
-# CSS
