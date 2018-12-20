@@ -16,6 +16,7 @@ export { default as AeListItem } from './ae-list-item/ae-list-item.vue';
 export { default as AePhraser } from './ae-phraser/ae-phraser.vue';
 export { default as AeQRCode } from './ae-qrcode/ae-qrcode.vue';
 export { default as AeSlider } from './ae-slider/ae-slider.vue';
+export { default as AeSplash } from './ae-splash/ae-splash.vue';
 export { default as AeText } from './ae-text/ae-text.vue';
 export { default as AeToolbar } from './ae-toolbar/ae-toolbar.vue';
 export { default as AeAmount } from './aeAmount/aeAmount.vue';
