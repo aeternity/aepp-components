@@ -1,5 +1,5 @@
 <template>
-  <div class="ae-splash" :class="{ [fill]: Boolean(fill) }">
+  <div class="ae-splash" :class="[fill]">
     <!-- @slot Default slot -->
     <slot />
   </div>
@@ -33,7 +33,6 @@ export default {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
 
   &.primary {
     background: $color-primary;
