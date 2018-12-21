@@ -100,7 +100,8 @@ export default {
 }
 
 .ae-slider.fullscreen /deep/ .agile__list,
-.ae-slider.fullscreen /deep/ .agile__track {
+.ae-slider.fullscreen /deep/ .agile__track,
+.ae-slider.fullscreen /deep/ .agile__slide {
   height: 100%;
 }
 
