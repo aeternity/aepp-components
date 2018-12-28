@@ -12,15 +12,7 @@ export default {
   name: 'ae-main',
 };
 </script>
-<style lang="scss">
-  html {
-    height: 100%;
-  }
-  body {
-    min-height: 100%;
-    height: 1px;
-  }
-</style>
+
 <style lang="scss" scoped>
 .ae-main {
   background: fixed linear-gradient(to bottom, white, #F1F4F7);
