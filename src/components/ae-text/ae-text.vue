@@ -61,7 +61,7 @@ export default {
     /**
      * Sets the Font weight of the text
      */
-    weight: [String, Number],
+    weight: [Number, String],
   },
 };
 </script>
@@ -152,15 +152,15 @@ export default {
   @extend %face-uppercase-xs;
 }
 
-.ae-toolbar.left {
+.ae-text.left {
   text-align: left;
 }
 
-.ae-toolbar.center {
+.ae-text.center {
   text-align: center;
 }
 
-.ae-toolbar.right {
+.ae-text.right {
   text-align: right;
 }
 </style>
