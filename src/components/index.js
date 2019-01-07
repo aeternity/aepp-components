@@ -7,6 +7,7 @@ export { default as AeCard } from './ae-card/ae-card.vue';
 export { default as AeCheck } from './ae-check/ae-check.vue';
 export { default as AeDropdown } from './ae-dropdown/ae-dropdown.vue';
 export { default as AeFlip } from './ae-flip/ae-flip.vue';
+export { default as AeFraction } from './ae-fraction/ae-fraction.vue';
 export { default as AeIcon } from './ae-icon/ae-icon.vue';
 export { default as AeIdenticon } from './ae-identicon/ae-identicon.vue';
 export { default as AeInput } from './ae-input/ae-input.vue';
