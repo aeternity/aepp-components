@@ -81,6 +81,7 @@ export default {
       ];
     },
     chunkAddress() {
+      if (this.address.length === 0) return [];
       const chunks = this.address.match(/.{1,7}/g);
       return [chunks.slice(0, 3), chunks.slice(3)];
     },
