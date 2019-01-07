@@ -1,6 +1,10 @@
 <template>
   <p class="ae-text"
-     :class="{ [fill]: Boolean(fill), [face]: Boolean(face) }"
+     :class="{
+       [fill]: Boolean(fill),
+       [face]: Boolean(face),
+       [align]: Boolean(align)
+     }"
      :style="{ fontWeight: weight }" >
     <!-- @slot Default slot -->
     <slot />
