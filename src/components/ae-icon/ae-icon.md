@@ -24,6 +24,7 @@
     <ae-icon name="diagram" />
     <ae-icon name="edit" />
     <ae-icon name="eye" />
+    <ae-icon name="eye-hide" />
     <ae-icon name="filter" />
     <ae-icon name="flip" />
     <ae-icon name="github" />
