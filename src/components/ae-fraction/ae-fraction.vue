@@ -51,10 +51,9 @@ export default {
 
 .ae-fraction {
   display: inline-block;
+  font-size: $base-font-size;
   font-family: $font-sans;
   font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 0;
   word-spacing: -4px;
   color: inherit;
