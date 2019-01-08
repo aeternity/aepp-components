@@ -76,6 +76,25 @@
   </ae-text>
 ``` 
 
+### prop: align
+```vue
+  <ae-text align="left">
+    align: left
+  </ae-text>
+``` 
+
+```vue
+  <ae-text align="right">
+    align: right
+  </ae-text>
+``` 
+
+```vue
+  <ae-text align="center">
+    align: center
+  </ae-text>
+```
+
 ### prop: weight
 ```vue
   <ae-text weight=400>
