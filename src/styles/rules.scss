@@ -9,15 +9,10 @@
 /// @docs https://github.com/JohnAlbin/normalize-scss#how-to-use-it
 @import "~normalize.css/normalize.css";
 
-@import "variables/colors";
-@import "variables/typography";
-
 /// General HTML/Body styles
 /// border-boxing fix
 html, body {
-  font-size: $base-font-size;
   font-weight: normal;
-  line-height: $base-line-height;
   box-sizing: border-box;
 
   /* Better Font Rendering */
