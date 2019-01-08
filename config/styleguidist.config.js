@@ -29,7 +29,14 @@ module.exports = {
    */
   components: fs.readdirSync(path.resolve(__dirname, '../src/components'))
     .filter(name => !name.includes('.'))
-    .filter(name => !['aeAddress', 'aeBadge', 'aeButton', 'aeIcon', 'aeInput'].includes(name))
+    .filter(name => ![
+      'aeAddress',
+      'aeBadge',
+      'aeButton',
+      'aeIcon',
+      'aeInput',
+      'aePanel'
+    ].includes(name))
     .map(name => path.resolve(__dirname, `../src/components/${name}/${name}.vue`)),
 
   /**
