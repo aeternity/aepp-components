@@ -10,16 +10,15 @@
       </div>
       <!-- Input tag -->
       <input
-        :id="id"
-        :value="value"
-        :type="type"
-        :placeholder="placeholder"
         class="ae-input"
         :class="{ aemount }"
+        :id="id"
+        :value="value"
         @focus="focus = true"
         @blur="focus = false"
         @input="propagateEventValue"
         v-if="!$slots.default && !$scopedSlots.default"
+        v-bind="$attrs"
       />
       <!--
         @slot adds the ability to add your own
@@ -53,22 +52,9 @@ export default {
     id: String,
 
     /**
-     * Temporary text appearing in the input box
-     */
-    placeholder: String,
-
-    /**
      * Actual input element value
      */
     value: [String, Number],
-
-    /**
-     * Define the type of the input
-     */
-    type: {
-      type: String,
-      default: 'text',
-    },
 
     /**
      * Property to define label of input, used to set
