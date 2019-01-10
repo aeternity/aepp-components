@@ -86,7 +86,6 @@ $colors: (
   border: none;
   border-radius: 0;
   cursor: pointer;
-  transition: all $base-transition-time;
 }
 
 .ae-input-range {
