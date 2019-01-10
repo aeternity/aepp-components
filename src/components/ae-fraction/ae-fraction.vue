@@ -55,7 +55,7 @@ export default {
   font-family: $font-sans;
   font-weight: 500;
   line-height: 0;
-  word-spacing: -4px;
+  word-spacing: -0.25rem;
   color: inherit;
 
   &.primary {
