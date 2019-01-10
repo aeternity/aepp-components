@@ -1,7 +1,7 @@
 <template>
-    <component :is="tag" class="ae-list" :class="{ [face]: Boolean(face) }">
-      <slot />
-    </component>
+  <component :is="tag" class="ae-list" :class="{ [face]: Boolean(face) }">
+    <slot/>
+  </component>
 </template>
 <script>
 export default {
