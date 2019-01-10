@@ -77,7 +77,7 @@ export default {
      * When set to `true` enables copy to clipboard
      * when the user clicks/taps the address
      */
-    copyOnClick: Boolean,
+    enableCopyToClipboard: Boolean,
   },
   computed: {
     /**
@@ -86,7 +86,7 @@ export default {
      * @return {String|Boolean}
      */
     copyToClipboard() {
-      return this.copyOnClick ? this.value : false;
+      return this.enableCopyToClipboard ? this.value : false;
     },
 
     /**
