@@ -2,7 +2,7 @@
   <i
     class="ae-icon"
     :class="[`ae-icon-${name}`, fill, face]"
-    :styles="transformRotate"
+    :style="transformRotate"
   />
 </template>
 <script>
