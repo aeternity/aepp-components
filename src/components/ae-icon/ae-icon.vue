@@ -1,11 +1,8 @@
 <template>
   <i
     class="ae-icon"
-    :class="{
-      [`ae-icon-${name}`]: Boolean(name),
-      [fill]: Boolean(fill),
-      [face]: Boolean(face)
-    }"
+    :class="[`ae-icon-${name}`, fill, face]"
+    :style="transformRotate"
   />
 </template>
 <script>
@@ -46,6 +43,24 @@ export default {
     face: {
       type: String,
       validator: value => ['round'].includes(value),
+    },
+
+    /**
+     * Rotation of icon in degrees, takes a number
+     * as input.
+     */
+    rotate: {
+      type: [Number, String],
+      default: 0,
+    },
+  },
+  computed: {
+    transformRotate() {
+      return {
+        ...this.rotate && {
+          transform: `rotate(${this.rotate}deg)`,
+        },
+      };
     },
   },
 };

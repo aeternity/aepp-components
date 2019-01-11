@@ -89,3 +89,10 @@
     <ae-icon face="round" name="save" />
   </div>
 ``` 
+
+### prop: rotate
+```vue
+  <div>
+    <ae-icon face="round" name="save" rotate="90" />
+  </div>
+``` 
