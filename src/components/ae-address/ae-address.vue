@@ -5,7 +5,7 @@
     :class="[ length ]"
     :style="{ gridGap: gap }"
     :title="value"
-    v-copy-to-clipboard="value"
+    v-copy-to-clipboard="copyToClipboard"
     v-remove-spaces-on-copy
   >
     <template v-if="length === 'medium'">
@@ -72,8 +72,23 @@ export default {
      * accepts any valid css value, ex: `10px, 1rem, 50%, 10px 10px`
      */
     gap: String,
+
+    /**
+     * When set to `true` enables copy to clipboard
+     * when the user clicks/taps the address
+     */
+    enableCopyToClipboard: Boolean,
   },
   computed: {
+    /**
+     * Computed method to detect whether,
+     * the copyToClipboard should be enabled or not
+     * @return {String|Boolean}
+     */
+    copyToClipboard() {
+      return this.enableCopyToClipboard ? this.value : false;
+    },
+
     /**
      * This will chunk the address into values of 3 and return an array
      * @return {String[]}
