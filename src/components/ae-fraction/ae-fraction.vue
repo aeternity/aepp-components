@@ -54,7 +54,6 @@ export default {
   font-size: $base-font-size;
   font-family: $font-sans;
   font-weight: 500;
-  line-height: 0;
   word-spacing: -0.25rem;
 
   &.primary {
