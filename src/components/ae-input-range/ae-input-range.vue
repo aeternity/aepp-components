@@ -79,22 +79,21 @@ $colors: (
  * Mixin to set the range track styles
  */
 @mixin range-track($background-color) {
-  height: rem(1.83px);
+  height: rem(2px);
   width: 100%;
   background: $background-color;
-  box-shadow: none;
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
 }
 
 .ae-input-range {
   -webkit-appearance: none;
   width: 100%;
-  background: transparent;
   cursor: pointer;
-  padding: 0;
   margin: 1rem 0;
+  height: rem(2px);
+
+  &:focus {
+    outline: none;
+  }
 
   @each $fill, $colors in $colors {
     &.#{$fill} {
@@ -120,9 +119,9 @@ $colors: (
           height: rem(17px);
           width: rem(17px);
           background: map-get($colors, thumb-color);
+          box-shadow: 0 0 8px map-get($colors, shadow-color);
           border-radius: 50%;
           cursor: pointer;
-          box-shadow: 0 0 8px map-get($colors, shadow-color);
         }
       }
     }
