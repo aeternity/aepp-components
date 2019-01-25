@@ -69,9 +69,6 @@ export default {
 @import '../../styles/variables/colors';
 
 .ae-icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   vertical-align: middle;
 
   &.primary {
@@ -111,6 +108,9 @@ export default {
   background: $color-neutral;
   border-radius: 50%;
   box-shadow: 0 0 16px $color-shadow-alpha-15;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
 
