@@ -73,6 +73,7 @@ export default {
   justify-content: center;
   align-items: center;
   color: inherit;
+  vertical-align: middle;
 
   &.primary {
     color: $color-primary;
