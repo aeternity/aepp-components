@@ -72,7 +72,6 @@ export default {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: inherit;
   vertical-align: middle;
 
   &.primary {
