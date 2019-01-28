@@ -72,6 +72,7 @@ export default {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  vertical-align: middle;
 
   &.primary {
     color: $color-primary;
