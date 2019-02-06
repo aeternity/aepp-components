@@ -5,6 +5,7 @@
 ### prop: name
 ```vue
   <div>
+    <ae-icon name="aeternity" />
     <ae-icon name="active" />
     <ae-icon name="add-contact" />
     <ae-icon name="back" />
