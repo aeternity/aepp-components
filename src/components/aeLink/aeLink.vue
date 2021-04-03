@@ -21,7 +21,8 @@ export default {
           || (new URL(this.to, window.location)).host === window.location.host;
     },
     useRouterLink() {
-      return this.$options.components['router-link'] && this.isLinkOnSameHost;
+      return ['router-link', 'RouterLink'].some(t => this.$options.components[t])
+        && this.isLinkOnSameHost;
     },
   },
 };
