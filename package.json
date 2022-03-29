@@ -60,7 +60,7 @@
     "jest": "^21.2.1",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^1.0.0",
-    "node-sass": "^7.0.0",
+    "node-sass": "^4.12.0",
     "sass-loader": "^6.0.6",
     "string-loader": "0.0.1",
     "string-replace-loader": "^2.1.1",
