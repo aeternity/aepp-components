@@ -11,6 +11,7 @@ export { default as AeIcon } from './ae-icon/ae-icon.vue';
 export { default as AeIdenticon } from './ae-identicon/ae-identicon.vue';
 export { default as AeInput } from './ae-input/ae-input.vue';
 export { default as AeInputPlain } from './ae-input-plain/ae-input-plain.vue';
+export { default as AeInputRange } from './ae-input-range/ae-input-range.vue';
 export { default as AeList } from './ae-list/ae-list.vue';
 export { default as AeListItem } from './ae-list-item/ae-list-item.vue';
 export { default as AePanel } from './ae-panel/ae-panel.vue';
