@@ -72,7 +72,7 @@
     "vue-styleguidist": "^1.7.12",
     "vue-template-compiler": "^2.5.17",
     "vue-test-utils": "^1.0.0-beta.7",
-    "webfonts-loader": "^4.1.0",
+    "webfonts-loader": "^7.5.2",
     "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-merge": "^4.1.1"
